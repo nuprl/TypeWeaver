@@ -6,10 +6,10 @@
 const { inspect } = require('util')
 
 
-module.exports = function sub(pattern: string, ...values: string[]) {
+module.exports = function sub(pattern: string, ...values: any[]) {
     let regex = /%(?:(%)|(-)?(\*)?(?:\((\w+)\))?([A-Za-z]))/g
 
-    let result = pattern.replace(regex, function (_: string, is_literal: boolean, is_left_align: boolean, is_padded: boolean, name: string, format: string) {
+    let result = pattern.replace(regex, function (_: any, is_literal: boolean, is_left_align: boolean, is_padded: boolean, name: string, format: string) {
         if (is_literal) return '%'
 
         let padded_count = 0

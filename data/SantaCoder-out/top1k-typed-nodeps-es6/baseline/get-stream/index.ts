@@ -13,7 +13,7 @@ class MaxBufferError extends Error {
 	}
 }
 
-async function getStream(inputStream: ReadableStream, options: any) {
+async function getStream(inputStream: ReadableStream, options: BufferEncoding) {
 	if (!inputStream) {
 		throw new Error('Expected a stream');
 	}

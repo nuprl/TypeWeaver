@@ -16,7 +16,7 @@
   var toString = Object.prototype.toString;
 
   // eslint-disable-next-line func-names
-  var kindOf = (function(cache: Cache) {
+  var kindOf = (function(cache: Object) {
     // eslint-disable-next-line func-names
     return function(thing: any) {
       var str = toString.call(thing);
@@ -262,7 +262,7 @@
    * @param {Object|Array} obj The object to iterate
    * @param {Function} fn The callback to invoke for each item
    */
-  function forEach(obj: Object, fn: Function) {
+  function forEach(obj: any[], fn: Function) {
     // Don't bother if no value provided
     if (obj === null || typeof obj === 'undefined') {
       return;
@@ -381,7 +381,7 @@
    * @returns {Object}
    */
 
-  function toFlatObject(sourceObj: any, destObj: any, filter: string[], propFilter: string[]) {
+  function toFlatObject(sourceObj: Object, destObj: Object, filter: Function, propFilter: Function) {
     var props;
     var i;
     var prop;
@@ -450,7 +450,7 @@
     };
   })(typeof Uint8Array !== 'undefined' && Object.getPrototypeOf(Uint8Array));
 
-  function forEachEntry(obj: Object, fn: any) {
+  function forEachEntry(obj: Object, fn: Function) {
     var generator = obj && obj[Symbol.iterator];
 
     var iterator = generator.call(obj);
@@ -477,7 +477,7 @@
   var isHTMLForm = kindOfTest('HTMLFormElement');
 
   var hasOwnProperty = (function resolver(_hasOwnProperty: any) {
-    return function(obj: any, prop: string) {
+    return function(obj: any, prop: any) {
       return _hasOwnProperty.call(obj, prop);
     };
   })(Object.prototype.hasOwnProperty);
@@ -529,7 +529,7 @@
    * @param {Object} [response] The response.
    * @returns {Error} The created error.
    */
-  function AxiosError(message: string, code: number, config: AxiosRequestConfig, request: AxiosRequestConfig, response: AxiosResponse) {
+  function AxiosError(message: string, code: string, config: AxiosRequestConfig, request: any, response: any) {
     Error.call(this);
 
     if (Error.captureStackTrace) {
@@ -593,7 +593,7 @@
   Object.defineProperty(prototype$1, 'isAxiosError', {value: true});
 
   // eslint-disable-next-line func-names
-  AxiosError.from = function(error: any, code: number, config: any, request: any, response: any, customProps: any) {
+  AxiosError.from = function(error: Error, code: string, config: AxiosRequestConfig, request: any, response: any, customProps: any) {
     var axiosError = Object.create(prototype$1);
 
     utils.toFlatObject(error, axiosError, function filter(obj: any) {
@@ -627,16 +627,16 @@
     return utils.endsWith(key, '[]') ? key.slice(0, -2) : key;
   }
 
-  function renderKey(path: string, key: string, dots: boolean) {
+  function renderKey(path: string[], key: string, dots: boolean) {
     if (!path) return key;
-    return path.concat(key).map(function each(token: Token, i: number) {
+    return path.concat(key).map(function each(token: string, i: number) {
       // eslint-disable-next-line no-param-reassign
       token = removeBrackets(token);
       return !dots && i ? '[' + token + ']' : token;
     }).join(dots ? '.' : '');
   }
 
-  function isFlatArray(arr: any[]) {
+  function isFlatArray(arr: any) {
     return utils.isArray(arr) && !arr.some(isVisitable);
   }
 
@@ -660,7 +660,7 @@
    * @returns {Object}
    **/
 
-  function toFormData(obj: Object, formData: FormData, options: FormDataOptions) {
+  function toFormData(obj: any, formData: FormData, options: FormDataOptions) {
     if (!utils.isObject(obj)) {
       throw new TypeError('target must be an object');
     }
@@ -673,7 +673,7 @@
       metaTokens: true,
       dots: false,
       indexes: false
-    }, false, function defined(option: string, source: string) {
+    }, false, function defined(option: string, source: any) {
       // eslint-disable-next-line no-eq-null,eqeqeq
       return !utils.isUndefined(source[option]);
     });
@@ -732,7 +732,7 @@
           // eslint-disable-next-line no-param-reassign
           key = removeBrackets(key);
 
-          arr.forEach(function each(el: HTMLElement, index: number) {
+          arr.forEach(function each(el: any, index: number) {
             !utils.isUndefined(el) && formData.append(
               // eslint-disable-next-line no-nested-ternary
               indexes === true ? renderKey([key], index, dots) : (indexes === null ? key : key + '[]'),
@@ -760,7 +760,7 @@
       isVisitable: isVisitable
     });
 
-    function build(value: any, path: string) {
+    function build(value: any, path: string[]) {
       if (utils.isUndefined(value)) return;
 
       if (stack.indexOf(value) !== -1) {
@@ -769,7 +769,7 @@
 
       stack.push(value);
 
-      utils.forEach(value, function each(el: HTMLElement, key: string) {
+      utils.forEach(value, function each(el: any, key: any) {
         var result = !utils.isUndefined(el) && visitor.call(
           formData, el, utils.isString(key) ? key.trim() : key, path, exposedHelpers
         );
@@ -820,8 +820,8 @@
     this._pairs.push([name, value]);
   };
 
-  prototype.toString = function toString(encoder: Encoder) {
-    var _encode = encoder ? function(value: T) {
+  prototype.toString = function toString(encoder: Function) {
+    var _encode = encoder ? function(value: string) {
       return encoder.call(this, value, encode$1);
     } : encode$1;
 
@@ -850,7 +850,7 @@
    * @param {?object} options
    * @returns {string} The formatted url
    */
-  var buildURL = function buildURL(url: string, params: any, options: any) {
+  var buildURL = function buildURL(url: string, params: URLSearchParams, options: RequestInit) {
     /*eslint no-param-reassign:0*/
     if (!params) {
       return url;
@@ -887,7 +887,7 @@
    *
    * @return {Number} An ID used to remove interceptor later
    */
-  InterceptorManager.prototype.use = function use(fulfilled: any, rejected: any, options: any) {
+  InterceptorManager.prototype.use = function use(fulfilled: Function, rejected: Function, options: any) {
     this.handlers.push({
       fulfilled: fulfilled,
       rejected: rejected,
@@ -925,8 +925,8 @@
    *
    * @param {Function} fn The function to call for each interceptor
    */
-  InterceptorManager.prototype.forEach = function forEach(fn: any) {
-    utils.forEach(this.handlers, function forEachHandler(h: Handler) {
+  InterceptorManager.prototype.forEach = function forEach(fn: Function) {
+    utils.forEach(this.handlers, function forEachHandler(h: any) {
       if (h !== null) {
         fn(h);
       }
@@ -966,7 +966,7 @@
 
   var platform = browser;
 
-  var toURLEncodedForm = function toURLEncodedForm(data: any, options: any) {
+  var toURLEncodedForm = function toURLEncodedForm(data: any, options: FormDataOptions) {
     return toFormData_1(data, new platform.classes.URLSearchParams(), Object.assign({
       visitor: function(value: any, key: string, path: string, helpers: any) {
         if (platform.isNode && utils.isBuffer(value)) {
@@ -984,7 +984,7 @@
     // foo.x.y.z
     // foo-x-y-z
     // foo x y z
-    return utils.matchAll(/\w+|\[(\w*)]/g, name).map(function(match: RegExpMatchArray) {
+    return utils.matchAll(/\w+|\[(\w*)]/g, name).map(function(match: string) {
       return match[0] === '[]' ? '' : match[1] || match[0];
     });
   }
@@ -1054,7 +1054,7 @@
    * @param {Function} reject A function that rejects the promise.
    * @param {object} response The response.
    */
-  var settle = function settle(resolve: any, reject: any, response: any) {
+  var settle = function settle(resolve: Function, reject: Function, response: AxiosResponse) {
     var validateStatus = response.config.validateStatus;
     if (!response.status || !validateStatus || validateStatus(response.status)) {
       resolve(response);
@@ -1284,7 +1284,7 @@
    * @param {Object=} config The config.
    * @param {Object=} request The request.
    */
-  function CanceledError(message: string, config: AxiosRequestConfig, request: AxiosRequestConfig) {
+  function CanceledError(message: string, config: AxiosRequestConfig, request: any) {
     // eslint-disable-next-line no-eq-null,eqeqeq
     AxiosError_1.call(this, message == null ? 'canceled' : message, AxiosError_1.ERR_CANCELED, config, request);
     this.name = 'CanceledError';
@@ -1302,7 +1302,7 @@
   };
 
   var xhr = function xhrAdapter(config: AxiosRequestConfig) {
-    return new Promise(function dispatchXhrRequest(resolve: any, reject: any) {
+    return new Promise(function dispatchXhrRequest(resolve: Function, reject: Function) {
       var requestData = config.data;
       var requestHeaders = config.headers;
       var responseType = config.responseType;
@@ -1354,10 +1354,10 @@
           request: request
         };
 
-        settle(function _resolve(value: T) {
+        settle(function _resolve(value: any) {
           resolve(value);
           done();
-        }, function _reject(err: any) {
+        }, function _reject(err: Error) {
           reject(err);
           done();
         }, response);
@@ -1478,7 +1478,7 @@
       if (config.cancelToken || config.signal) {
         // Handle cancellation
         // eslint-disable-next-line func-names
-        onCanceled = function(cancel: boolean) {
+        onCanceled = function(cancel: Canceler) {
           if (!request) {
             return;
           }
@@ -1690,7 +1690,7 @@
   var transformData = function transformData(data: any, headers: any, status: any, fns: any) {
     var context = this || defaults_1;
     /*eslint no-param-reassign:0*/
-    utils.forEach(fns, function transform(fn: any) {
+    utils.forEach(fns, function transform(fn: Function) {
       data = fn.call(context, data, headers, status);
     });
 
@@ -1754,7 +1754,7 @@
 
     var adapter = config.adapter || defaults_1.adapter;
 
-    return adapter(config).then(function onAdapterResolution(response: AdapterResolutionResponse) {
+    return adapter(config).then(function onAdapterResolution(response: AxiosResponse) {
       throwIfCancellationRequested(config);
 
       // Transform response data
@@ -1812,7 +1812,7 @@
     }
 
     // eslint-disable-next-line consistent-return
-    function mergeDeepProperties(prop: any) {
+    function mergeDeepProperties(prop: string) {
       if (!utils.isUndefined(config2[prop])) {
         return getMergedValue(config1[prop], config2[prop]);
       } else if (!utils.isUndefined(config1[prop])) {
@@ -1909,13 +1909,13 @@
    * @param {string?} message - some message with additional info
    * @returns {function}
    */
-  validators$1.transitional = function transitional(validator: Validator, version: string, message: string) {
-    function formatMessage(opt: any, desc: any) {
+  validators$1.transitional = function transitional(validator: boolean, version: string, message: string) {
+    function formatMessage(opt: string, desc: string) {
       return '[Axios v' + VERSION + '] Transitional option \'' + opt + '\'' + desc + (message ? '. ' + message : '');
     }
 
     // eslint-disable-next-line func-names
-    return function(value: any, opt: any, opts: any) {
+    return function(value: string, opt: string, opts: AxiosRequestConfig) {
       if (validator === false) {
         throw new AxiosError_1(
           formatMessage(opt, ' has been removed' + (version ? ' in ' + version : '')),
@@ -1945,7 +1945,7 @@
    * @param {boolean?} allowUnknown
    */
 
-  function assertOptions(options: any, schema: any, allowUnknown: boolean) {
+  function assertOptions(options: any, schema: any, allowUnknown: any) {
     if (typeof options !== 'object') {
       throw new AxiosError_1('options must be an object', AxiosError_1.ERR_BAD_OPTION_VALUE);
     }
@@ -1993,7 +1993,7 @@
    * @param {String|Object} configOrUrl The config specific for this request (merged with this.defaults)
    * @param {?Object} config
    */
-  Axios.prototype.request = function request(configOrUrl: string, config: AxiosRequestConfig) {
+  Axios.prototype.request = function request(configOrUrl: AxiosRequestConfig, config: AxiosRequestConfig) {
     /*eslint no-param-reassign:0*/
     // Allow for axios('example/url'[, config]) a la fetch API
     if (typeof configOrUrl === 'string') {
@@ -2027,7 +2027,7 @@
     // filter out skipped interceptors
     var requestInterceptorChain = [];
     var synchronousRequestInterceptors = true;
-    this.interceptors.request.forEach(function unshiftRequestInterceptors(interceptor: Interceptor) {
+    this.interceptors.request.forEach(function unshiftRequestInterceptors(interceptor: RequestInterceptor) {
       if (typeof interceptor.runWhen === 'function' && interceptor.runWhen(config) === false) {
         return;
       }
@@ -2038,7 +2038,7 @@
     });
 
     var responseInterceptorChain = [];
-    this.interceptors.response.forEach(function pushResponseInterceptors(interceptor: Interceptor) {
+    this.interceptors.response.forEach(function pushResponseInterceptors(interceptor: AxiosInterceptorManager<AxiosResponse>) {
       responseInterceptorChain.push(interceptor.fulfilled, interceptor.rejected);
     });
 
@@ -2084,7 +2084,7 @@
     return promise;
   };
 
-  Axios.prototype.getUri = function getUri(config: Config) {
+  Axios.prototype.getUri = function getUri(config: AxiosRequestConfig) {
     config = mergeConfig(this.defaults, config);
     var fullPath = buildFullPath(config.baseURL, config.url);
     return buildURL(fullPath, config.params, config.paramsSerializer);
@@ -2106,7 +2106,7 @@
     /*eslint func-names:0*/
 
     function generateHTTPMethod(isForm: boolean) {
-      return function httpMethod(url: string, data: any, config: any) {
+      return function httpMethod(url: string, data: any, config: AxiosRequestConfig) {
         return this.request(mergeConfig(config || {}, {
           method: method,
           headers: isForm ? {
@@ -2160,7 +2160,7 @@
     this.promise.then = function(onfulfilled: any) {
       var _resolve;
       // eslint-disable-next-line func-names
-      var promise = new Promise(function(resolve: Function) {
+      var promise = new Promise(function(resolve: any) {
         token.subscribe(resolve);
         _resolve = resolve;
       }).then(onfulfilled);
@@ -2172,7 +2172,7 @@
       return promise;
     };
 
-    executor(function cancel(message: string, config: AxiosRequestConfig, request: AxiosRequestConfig) {
+    executor(function cancel(message: string, config: AxiosRequestConfig, request: AxiosPromise) {
       if (token.reason) {
         // Cancellation has already been requested
         return;
@@ -2196,7 +2196,7 @@
    * Subscribe to the cancel signal
    */
 
-  CancelToken.prototype.subscribe = function subscribe(listener: Listener<T>) {
+  CancelToken.prototype.subscribe = function subscribe(listener: Function) {
     if (this.reason) {
       listener(this.reason);
       return;
@@ -2213,7 +2213,7 @@
    * Unsubscribe from the cancel signal
    */
 
-  CancelToken.prototype.unsubscribe = function unsubscribe(listener: Listener) {
+  CancelToken.prototype.unsubscribe = function unsubscribe(listener: Function) {
     if (!this._listeners) {
       return;
     }
@@ -2246,7 +2246,7 @@
    * Common use case would be to use `Function.prototype.apply`.
    *
    *  ```js
-   *  function f(x: number, y: number, z: number) {}
+   *  function f(x: any, y: any, z: any) {}
    *  var args = [1, 2, 3];
    *  f.apply(null, args);
    *  ```
@@ -2293,7 +2293,7 @@
     utils.extend(instance, context);
 
     // Factory for creating new instances
-    instance.create = function create(instanceConfig: InstanceConfig) {
+    instance.create = function create(instanceConfig: AxiosRequestConfig) {
       return createInstance(mergeConfig(defaultConfig, instanceConfig));
     };
 

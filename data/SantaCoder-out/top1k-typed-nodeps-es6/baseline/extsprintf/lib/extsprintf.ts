@@ -183,7 +183,7 @@ function jsPrintf() {
 	jsFprintf.apply(null, args);
 }
 
-function jsFprintf(stream: TJSFile) {
+function jsFprintf(stream: any) {
 	var args = Array.prototype.slice.call(arguments, 1);
 	return (stream.write(jsSprintf.apply(this, args)));
 }
@@ -206,7 +206,7 @@ function doPad(chr: string, width: number, left: boolean, str: string)
  * This function dumps long stack traces for exceptions having a cause() method.
  * See node-verror for an example.
  */
-function dumpException(ex: any)
+function dumpException(ex: Error)
 {
 	var ret;
 

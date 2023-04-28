@@ -30,7 +30,7 @@ function ECFieldElementFp(q: BigInteger, x: BigInteger) {
   this.q = q;
 }
 
-function feFpEquals(other: feFp) {
+function feFpEquals(other: ECFieldElementFp) {
   if (other == this) return true;
   return this.q.equals(other.q) && this.x.equals(other.x);
 }
@@ -43,7 +43,7 @@ function feFpNegate() {
   return new ECFieldElementFp(this.q, this.x.negate().mod(this.q));
 }
 
-function feFpAdd(b: bigint) {
+function feFpAdd(b: ECFieldElementFp) {
   return new ECFieldElementFp(this.q, this.x.add(b.toBigInteger()).mod(this.q));
 }
 
@@ -80,7 +80,7 @@ ECFieldElementFp.prototype.subtract = feFpSubtract;
 ECFieldElementFp.prototype.multiply = feFpMultiply;
 ECFieldElementFp.prototype.square = feFpSquare;
 ECFieldElementFp.prototype.divide = feFpDivide;
-ECFieldElementFp.prototype.modDouble = function(x: BigNumber) {
+ECFieldElementFp.prototype.modDouble = function(x: BigInteger) {
   let _2x = x.shiftLeft(1);
   if (_2x.compareTo(this.q) >= 0) {
     _2x = _2x.subtract(this.q);
@@ -125,7 +125,7 @@ function pointFpGetY() {
   return this.curve.fromBigInteger(r);
 }
 
-function pointFpEquals(other: PointFp) {
+function pointFpEquals(other: ECPointFp) {
   if (other == this) return true;
   if (this.isInfinity()) return other.isInfinity();
   if (other.isInfinity()) return this.isInfinity();
@@ -276,7 +276,7 @@ function pointFpTwice() {
 
 // Simple NAF (Non-Adjacent Form) multiplication algorithm
 // TODO: modularize the multiplication algorithm
-function pointFpMultiply(k: Fp) {
+function pointFpMultiply(k: BigInteger) {
   if (this.isInfinity()) return this;
   if (k.signum() == 0) return this.curve.getInfinity();
 
@@ -302,7 +302,7 @@ function pointFpMultiply(k: Fp) {
 }
 
 // Compute this*j + x*k (simultaneous multiplication)
-function pointFpMultiplyTwo(j: number, x: number, k: number) {
+function pointFpMultiplyTwo(j: BigInteger, x: ECPointFp, k: BigInteger) {
   var i;
   if (j.bitLength() > k.bitLength()) i = j.bitLength() - 1;
   else i = k.bitLength() - 1;
@@ -362,7 +362,7 @@ function curveFpGetB() {
   return this.b;
 }
 
-function curveFpEquals(other: CurveFp) {
+function curveFpEquals(other: ECFieldElementFp) {
   if (other == this) return true;
   return (
     this.q.equals(other.q) && this.a.equals(other.a) && this.b.equals(other.b)
@@ -377,11 +377,11 @@ function curveFpFromBigInteger(x: BigInteger) {
   return new ECFieldElementFp(this.q, x);
 }
 
-function curveReduce(x: number) {
+function curveReduce(x: BigInteger) {
   this.reducer.reduce(x);
 }
 
-function curveFpEncodePointHex(p: Point) {
+function curveFpEncodePointHex(p: ECPoint) {
   if (p.isInfinity()) return "00";
   var xHex = p
     .getX()
@@ -455,7 +455,7 @@ ECCurveFp.prototype.decodePointHex = function(s: string) {
       return null;
   }
 };
-ECCurveFp.prototype.encodeCompressedPointHex = function(p: BigInteger) {
+ECCurveFp.prototype.encodeCompressedPointHex = function(p: ECPoint) {
   if (p.isInfinity()) return "00";
   var xHex = p
     .getX()
@@ -490,10 +490,10 @@ ECFieldElementFp.prototype.getR = function() {
   }
   return this.r;
 };
-ECFieldElementFp.prototype.modMult = function(x1: BigInteger, x2: BigInteger) {
+ECFieldElementFp.prototype.modMult = function(x1: ECFieldElementFp, x2: ECFieldElementFp) {
   return this.modReduce(x1.multiply(x2));
 };
-ECFieldElementFp.prototype.modReduce = function(x: number) {
+ECFieldElementFp.prototype.modReduce = function(x: BigInteger) {
   if (this.getR() != null) {
     var qLen = this.q.bitLength();
     while (x.bitLength() > qLen + 1) {

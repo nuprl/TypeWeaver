@@ -7,7 +7,7 @@ module.exports = function rand(len: number) {
   return r.generate(len);
 };
 
-function Rand(rand: IRand) {
+function Rand(rand: any) {
   this.rand = rand;
 }
 module.exports.Rand = Rand;

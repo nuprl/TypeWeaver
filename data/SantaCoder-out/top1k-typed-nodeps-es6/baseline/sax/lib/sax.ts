@@ -42,7 +42,7 @@
     'closenamespace'
   ]
 
-  function SAXParser (strict: boolean, opt: Options) {
+  function SAXParser (strict: boolean, opt: sax.SAXOptions) {
     if (!(this instanceof SAXParser)) {
       return new SAXParser(strict, opt)
     }
@@ -96,7 +96,7 @@
     }
   }
 
-  function checkBufferLength (parser: Parser) {
+  function checkBufferLength (parser: sax.SAXParser) {
     var maxAllowed = Math.max(sax.MAX_BUFFER_LENGTH, 10)
     var maxActual = 0
     for (var i = 0, l = buffers.length; i < l; i++) {
@@ -138,7 +138,7 @@
     }
   }
 
-  function flushBuffers (parser: Parser) {
+  function flushBuffers (parser: SAXParser) {
     closeText(parser)
     if (parser.cdata !== '') {
       emitNode(parser, 'oncdata', parser.cdata)
@@ -169,11 +169,11 @@
     return ev !== 'error' && ev !== 'end'
   })
 
-  function createStream (strict: boolean, opt: any) {
+  function createStream (strict: boolean, opt: ParserOptions) {
     return new SAXStream(strict, opt)
   }
 
-  function SAXStream (strict: boolean, opt: Options) {
+  function SAXStream (strict: boolean, opt: ParserOptions) {
     if (!(this instanceof SAXStream)) {
       return new SAXStream(strict, opt)
     }
@@ -200,7 +200,7 @@
 
     this._decoder = null
 
-    streamWraps.forEach(function (ev: any) {
+    streamWraps.forEach(function (ev: string) {
       Object.defineProperty(me, 'on' + ev, {
         get: function () {
           return me._parser['on' + ev]
@@ -241,7 +241,7 @@
     return true
   }
 
-  SAXStream.prototype.end = function (chunk: Buffer) {
+  SAXStream.prototype.end = function (chunk: any) {
     if (chunk && chunk.length) {
       this.write(chunk)
     }
@@ -249,7 +249,7 @@
     return true
   }
 
-  SAXStream.prototype.on = function (ev: Event, handler: Function) {
+  SAXStream.prototype.on = function (ev: string, handler: Function) {
     var me = this
     if (!me._parser['on' + ev] && streamWraps.indexOf(ev) !== -1) {
       me._parser['on' + ev] = function () {
@@ -635,7 +635,7 @@
     parser.textNode = ''
   }
 
-  function textopts (opt: string, text: string) {
+  function textopts (opt: TextOptions, text: string) {
     if (opt.trim) text = text.trim()
     if (opt.normalize) text = text.replace(/\s+/g, ' ')
     return text
@@ -669,7 +669,7 @@
     return parser
   }
 
-  function strictFail (parser: Parser, message: string) {
+  function strictFail (parser: SAXParser, message: string) {
     if (typeof parser !== 'object' || !(parser instanceof SAXParser)) {
       throw new Error('bad call to strictFail')
     }
@@ -691,7 +691,7 @@
     emitNode(parser, 'onopentagstart', tag)
   }
 
-  function qname (name: string, attribute: string) {
+  function qname (name: string, attribute: boolean) {
     var i = name.indexOf(':')
     var qualName = i < 0 ? [ '', name ] : name.split(':')
     var prefix = qualName[0]
@@ -777,7 +777,7 @@
 
       var parent = parser.tags[parser.tags.length - 1] || parser
       if (tag.ns && parent.ns !== tag.ns) {
-        Object.keys(tag.ns).forEach(function (p: Parser) {
+        Object.keys(tag.ns).forEach(function (p: string) {
           emitNode(parser, 'onopennamespace', {
             prefix: p,
             uri: tag.ns[p]
@@ -941,7 +941,7 @@
     return String.fromCodePoint(num)
   }
 
-  function beginWhiteSpace (parser: Parser, c: string) {
+  function beginWhiteSpace (parser: HTMLParser, c: string) {
     if (c === '<') {
       parser.state = S.OPEN_WAKA
       parser.startTagPosition = parser.position
@@ -962,7 +962,7 @@
     return result
   }
 
-  function write (chunk: Buffer) {
+  function write (chunk: any) {
     var parser = this
     if (this.error) {
       throw this.error

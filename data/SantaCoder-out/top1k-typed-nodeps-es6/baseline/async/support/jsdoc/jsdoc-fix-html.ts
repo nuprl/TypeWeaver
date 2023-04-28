@@ -15,7 +15,7 @@ var HTMLFileBegin = '<!DOCTYPE html>\n<html lang="en">\n<head>\n';
 var HTMLFileHeadBodyJoin = '</head>\n<body>';
 var HTMLFileEnd = '</body>';
 
-function generateHTMLFile(filename: string, $page: CheerioStatic, callback: any) {
+function generateHTMLFile(filename: string, $page: CheerioStatic, callback: Function) {
     var methodName = filename.match(/\/(\w+)\.js\.html$/);
     if (methodName) {
         var $thisMethodDocLink = $page.find('#toc').find('a[href="'+docFilename+'#'+methodName[1]+'"]');

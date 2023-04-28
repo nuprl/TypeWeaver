@@ -4,7 +4,7 @@ var Promise = require('./core.js');
 
 module.exports = Promise;
 Promise.prototype.finally = function (f: any) {
-  return this.then(function (value: string) {
+  return this.then(function (value: T) {
     return Promise.resolve(f()).then(function () {
       return value;
     });

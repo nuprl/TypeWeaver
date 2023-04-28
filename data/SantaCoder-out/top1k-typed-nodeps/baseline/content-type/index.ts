@@ -62,7 +62,7 @@ exports.parse = parse
  * @public
  */
 
-function format (obj: any) {
+function format (obj: FormatObject) {
   if (!obj || typeof obj !== 'object') {
     throw new TypeError('argument obj is required')
   }
@@ -197,7 +197,7 @@ function getcontenttype (obj: any) {
  * @private
  */
 
-function qstring (val: any) {
+function qstring (val: string) {
   var str = String(val)
 
   // no need to quote tokens

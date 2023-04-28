@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function unique(init: any[]) {
+module.exports = function unique(init: Array<any>) {
   var args = [].slice.call(arguments);
   var len = args.length;
 

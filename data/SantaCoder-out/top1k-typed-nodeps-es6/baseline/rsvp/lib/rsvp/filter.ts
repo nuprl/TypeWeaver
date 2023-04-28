@@ -61,7 +61,7 @@ class FilterEnumerator extends MapEnumerator {
     return item > 1;
   };
 
-  filter(promises, filterFn).then(function(result: number[]){
+  filter(promises, filterFn).then(function(result: any){
     // result is [ 2, 3 ]
   });
   ```
@@ -78,11 +78,11 @@ class FilterEnumerator extends MapEnumerator {
   let promise3 = reject(new Error('3'));
   let promises = [ promise1, promise2, promise3 ];
 
-  let filterFn = function(item: number){
+  let filterFn = function(item: any){
     return item > 1;
   };
 
-  filter(promises, filterFn).then(function(array: any){
+  filter(promises, filterFn).then(function(array: Array<any>){
     // Code here never runs because there are rejected promises!
   }, function(reason: any) {
     // reason.message === '2'
@@ -106,11 +106,11 @@ class FilterEnumerator extends MapEnumerator {
 
   let filterFn = function(user: User){
     // Here, Alice has permissions to create a blog post, but Bob does not.
-    return getPrivilegesForUser(user).then(function(privs: any){
+    return getPrivilegesForUser(user).then(function(privs: UserPrivileges){
       return privs.can_create_blog_post === true;
     });
   };
-  filter(promises, filterFn).then(function(users: User[]){
+  filter(promises, filterFn).then(function(users: Array<RSVP.Promise<T>>){
     // true, because the server told us only Alice can create a blog post.
     users.length === 1;
     // false, because Alice is the only user present in `users`
@@ -130,13 +130,13 @@ class FilterEnumerator extends MapEnumerator {
   @return {Promise}
 */
 
-export default function filter(promises: Promise<any>[], filterFn: any, label: string) {
+export default function filter(promises: Promise[], filterFn: Function, label: string) {
   if (typeof filterFn !== 'function') {
     return Promise.reject(new TypeError("filter expects function as a second argument"), label);
   }
 
   return Promise.resolve(promises, label)
-    .then(function(promises: Array<Promise<any>>) {
+    .then(function(promises: Promise<T>[]) {
       if (!Array.isArray(promises)) {
         throw new TypeError("filter must be called with an array");
       }

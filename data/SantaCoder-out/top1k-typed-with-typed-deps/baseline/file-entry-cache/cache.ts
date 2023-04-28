@@ -53,7 +53,7 @@ module.exports = {
        * @param  {String}  file  the filepath to check
        * @return {Boolean}       wheter or not the file has changed
        */
-      hasFileChanged: function (file: File) {
+      hasFileChanged: function (file: string) {
         return this.getFileDescriptor(file).changed;
       },
 
@@ -66,7 +66,7 @@ module.exports = {
        * @param  {Array} files the files to analyze and compare to the previous seen files
        * @return {[type]}       [description]
        */
-      analyzeFiles: function (files: any) {
+      analyzeFiles: function (files: Array<string>) {
         var me = this;
         files = files || [];
 
@@ -90,7 +90,7 @@ module.exports = {
         return res;
       },
 
-      getFileDescriptor: function (file: File) {
+      getFileDescriptor: function (file: string) {
         var fstat;
 
         try {
@@ -170,7 +170,7 @@ module.exports = {
        * @param files {Array} the array of files to compare against the ones in the cache
        * @returns {Array}
        */
-      getUpdatedFiles: function (files: any) {
+      getUpdatedFiles: function (files: Array<string>) {
         var me = this;
         files = files || [];
 
@@ -190,11 +190,11 @@ module.exports = {
        * @param files
        * @returns {*}
        */
-      normalizeEntries: function (files: string[]) {
+      normalizeEntries: function (files: Array<File>) {
         files = files || [];
 
         var me = this;
-        var nEntries = files.map(function (file: File) {
+        var nEntries = files.map(function (file: FileEntry) {
           return me.getFileDescriptor(file);
         });
 

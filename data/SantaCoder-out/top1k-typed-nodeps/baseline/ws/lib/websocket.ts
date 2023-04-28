@@ -634,7 +634,7 @@ module.exports = WebSocket;
  *     not to skip UTF-8 validation for text and close messages
  * @private
  */
-function initAsClient(websocket: WebSocket, address: string, protocols: string[], options: Options) {
+function initAsClient(websocket: WebSocket, address: string, protocols: string[], options: ClientOptions) {
   const opts = {
     protocolVersion: protocolVersions[1],
     maxPayload: 100 * 1024 * 1024,
@@ -1010,7 +1010,7 @@ function emitErrorAndClose(websocket: WebSocket, err: Error) {
  * @return {net.Socket} The newly created socket used to start the connection
  * @private
  */
-function netConnect(options: net.NetConnectOpts) {
+function netConnect(options: any) {
   options.path = options.socketPath;
   return net.connect(options);
 }
@@ -1022,7 +1022,7 @@ function netConnect(options: net.NetConnectOpts) {
  * @return {tls.TLSSocket} The newly created socket used to start the connection
  * @private
  */
-function tlsConnect(options: ClientOptions) {
+function tlsConnect(options: tls.ConnectionOptions) {
   options.path = undefined;
 
   if (!options.servername && options.servername !== '') {
@@ -1041,7 +1041,7 @@ function tlsConnect(options: ClientOptions) {
  * @param {String} message The error message
  * @private
  */
-function abortHandshake(websocket: WebSocket, stream: Duplex, message: Message) {
+function abortHandshake(websocket: WebSocket, stream: Duplex, message: string) {
   websocket._readyState = WebSocket.CLOSING;
 
   const err = new Error(message);
@@ -1140,7 +1140,7 @@ function receiverOnDrain() {
  * @param {(RangeError|Error)} err The emitted error
  * @private
  */
-function receiverOnError(err: any) {
+function receiverOnError(err: Error) {
   const websocket = this[kWebSocket];
 
   if (websocket._socket[kWebSocket] !== undefined) {
@@ -1184,7 +1184,7 @@ function receiverOnMessage(data: any, isBinary: boolean) {
  * @param {Buffer} data The data included in the ping frame
  * @private
  */
-function receiverOnPing(data: any) {
+function receiverOnPing(data: Buffer) {
   const websocket = this[kWebSocket];
 
   websocket.pong(data, !websocket._isServer, NOOP);
@@ -1197,7 +1197,7 @@ function receiverOnPing(data: any) {
  * @param {Buffer} data The data included in the pong frame
  * @private
  */
-function receiverOnPong(data: any) {
+function receiverOnPong(data: Buffer) {
   this[kWebSocket].emit('pong', data);
 }
 
@@ -1207,7 +1207,7 @@ function receiverOnPong(data: any) {
  * @param {Readable} stream The readable stream
  * @private
  */
-function resume(stream: Readable) {
+function resume(stream: Duplex) {
   stream.resume();
 }
 
@@ -1268,7 +1268,7 @@ function socketOnClose() {
  * @param {Buffer} chunk A chunk of data
  * @private
  */
-function socketOnData(chunk: Buffer) {
+function socketOnData(chunk: Uint8Array) {
   if (!this[kWebSocket]._receiver.write(chunk)) {
     this.pause();
   }

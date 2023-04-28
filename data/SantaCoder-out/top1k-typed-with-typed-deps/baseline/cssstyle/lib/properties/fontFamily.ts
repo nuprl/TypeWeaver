@@ -4,7 +4,7 @@ var TYPES = require('../parsers').TYPES;
 var valueType = require('../parsers').valueType;
 
 var partsRegEx = /\s*,\s*/;
-module.exports.isValid = function isValid(v: string) {
+module.exports.isValid = function isValid(v: any) {
   if (v === '' || v === null) {
     return true;
   }

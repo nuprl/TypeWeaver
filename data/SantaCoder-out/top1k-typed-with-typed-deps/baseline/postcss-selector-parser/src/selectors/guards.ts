@@ -28,11 +28,11 @@ const IS_TYPE = {
     [UNIVERSAL]: true,
 };
 
-export function isNode (node: Node) {
+export function isNode (node: any) {
     return (typeof node === "object" && IS_TYPE[node.type]);
 }
 
-function isNodeType (type: string, node: Node) {
+function isNodeType (type: NodeType, node: Node) {
     return isNode(node) && node.type === type;
 }
 
@@ -64,7 +64,7 @@ export function isPseudoClass (node: Node) {
     return isPseudo(node) && !isPseudoElement(node);
 }
 
-export function isContainer (node: Node) {
+export function isContainer (node: any) {
     return !!(isNode(node) && node.walk);
 }
 

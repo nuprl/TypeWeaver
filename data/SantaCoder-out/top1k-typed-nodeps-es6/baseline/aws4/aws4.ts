@@ -16,7 +16,7 @@ function hash(string: string, encoding: string) {
 
 // This function assumes the string has already been percent encoded
 function encodeRfc3986(urlEncodedString: string) {
-  return urlEncodedString.replace(/[!'()*]/g, function(c: number) {
+  return urlEncodedString.replace(/[!'()*]/g, function(c: string) {
     return '%' + c.charCodeAt(0).toString(16).toUpperCase()
   })
 }

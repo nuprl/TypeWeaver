@@ -444,7 +444,7 @@ module.exports = WebSocketServer;
  *     called
  * @private
  */
-function addListeners(server: Server, map: any) {
+function addListeners(server: EventEmitter, map: any) {
   for (const event of Object.keys(map)) server.on(event, map[event]);
 
   return function removeListeners() {

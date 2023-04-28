@@ -19,7 +19,7 @@ import wrapAsync from './internal/wrapAsync.js'
  * @param {Function} callback - see [async.map]{@link module:Collections.map}.
  * @returns {Promise} a promise, if no callback is provided
  */
-export default function timesLimit(count: number, limit: number, iteratee: Function, callback: Function) {
+export default function timesLimit(count: number, limit: number, iteratee: AsyncFunction, callback: AsyncResultCallback<any[]>) {
     var _iteratee = wrapAsync(iteratee);
     return mapLimit(range(count), limit, _iteratee, callback);
 }

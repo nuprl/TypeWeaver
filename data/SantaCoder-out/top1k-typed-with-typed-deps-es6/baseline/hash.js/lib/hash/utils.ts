@@ -62,7 +62,7 @@ function toArray(msg: any, enc: any) {
 }
 exports.toArray = toArray;
 
-function toHex(msg: string) {
+function toHex(msg: Buffer) {
   var res = '';
   for (var i = 0; i < msg.length; i++)
     res += zero2(msg[i].toString(16));
@@ -79,7 +79,7 @@ function htonl(w: number) {
 }
 exports.htonl = htonl;
 
-function toHex32(msg: string, endian: string) {
+function toHex32(msg: Buffer, endian: 'big') {
   var res = '';
   for (var i = 0; i < msg.length; i++) {
     var w = msg[i];
@@ -119,7 +119,7 @@ function zero8(word: string) {
 }
 exports.zero8 = zero8;
 
-function join32(msg: Uint8Array, start: number, end: number, endian: Endian) {
+function join32(msg: Uint8Array, start: number, end: number, endian: string) {
   var len = end - start;
   assert(len % 4 === 0);
   var res = new Array(len / 4);
@@ -135,7 +135,7 @@ function join32(msg: Uint8Array, start: number, end: number, endian: Endian) {
 }
 exports.join32 = join32;
 
-function split32(msg: string, endian: string) {
+function split32(msg: Uint8Array, endian: 'big') {
   var res = new Array(msg.length * 4);
   for (var i = 0, k = 0; i < msg.length; i++, k += 4) {
     var m = msg[i];
@@ -185,7 +185,7 @@ function sum32_5(a: number, b: number, c: number, d: number, e: number) {
 }
 exports.sum32_5 = sum32_5;
 
-function sum64(buf: Uint8Array, pos: number, ah: number, al: number) {
+function sum64(buf: Buffer, pos: number, ah: number, al: number) {
   var bh = buf[pos];
   var bl = buf[pos + 1];
 

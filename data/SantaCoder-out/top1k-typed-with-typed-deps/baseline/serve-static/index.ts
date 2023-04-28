@@ -112,7 +112,7 @@ function serveStatic (root: string, options: ServeStaticOptions) {
     }
 
     // forward errors
-    stream.on('error', function error (err: any) {
+    stream.on('error', function error (err: Error) {
       if (forwardError || !(err.statusCode < 500)) {
         next(err)
         return

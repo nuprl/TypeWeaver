@@ -55,11 +55,11 @@ function makeReleaseCopies( Release : Release) {
 	} );
 }
 
-function makeArchives( Release: Release, callback : any) {
+function makeArchives( Release: any, callback : Function) {
 
 	Release.chdir( Release.dir.repo );
 
-	function makeArchive( cdn: string, files: string[], callback : any) {
+	function makeArchive( cdn: string, files: string[], callback : Function) {
 		if ( Release.preRelease ) {
 			console.log( "Skipping archive creation for " + cdn + "; this is a beta release." );
 			callback();
@@ -78,13 +78,13 @@ function makeArchives( Release: Release, callback : any) {
 
 		output.on( "close", callback );
 
-		output.on( "error", function( err : Error) {
+		output.on( "error", function( err : any) {
 			throw err;
 		} );
 
 		archiver.pipe( output );
 
-		files = files.map( function( item : any) {
+		files = files.map( function( item : string) {
 			return "dist" + ( rver.test( item ) ? "/cdn" : "" ) + "/" +
 				item.replace( rver, Release.newVersion );
 		} );
@@ -105,7 +105,7 @@ function makeArchives( Release: Release, callback : any) {
 		makeArchive( "googlecdn", googleFilesCDN, callback );
 	}
 
-	function buildMicrosoftCDN( callback : Function) {
+	function buildMicrosoftCDN( callback : any) {
 		makeArchive( "mscdn", msFilesCDN, callback );
 	}
 

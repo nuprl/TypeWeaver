@@ -7,7 +7,7 @@
  * @param {Function} comparator The comparator invoked per element.
  * @returns {boolean} Returns `true` if `target` is found, else `false`.
  */
-function arrayIncludesWith(array: any[], target: any, comparator: any) {
+function arrayIncludesWith(array: any[], target: any, comparator: Comparator) {
   if (array == null) {
     return false
   }

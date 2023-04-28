@@ -33,7 +33,7 @@ class SourceListMap {
 		} else if(generatedCode.getMappings && generatedCode.getGeneratedCode) {
 			this.children.push(generatedCode);
 		} else if(generatedCode.children) {
-			generatedCode.children.forEach(function(sln: Solution) {
+			generatedCode.children.forEach(function(sln: SourceListMap) {
 				this.children.push(sln);
 			}, this);
 		} else {
@@ -53,7 +53,7 @@ class SourceListMap {
 		} else if(generatedCode.getMappings && generatedCode.getGeneratedCode) {
 			this.children.unshift(generatedCode);
 		} else if(generatedCode.children) {
-			generatedCode.children.slice().reverse().forEach(function(sln: Solution) {
+			generatedCode.children.slice().reverse().forEach(function(sln: SourceListMap) {
 				this.children.unshift(sln);
 			}, this);
 		} else {
@@ -63,13 +63,13 @@ class SourceListMap {
 
 	mapGeneratedCode(fn) {
 		const normalizedNodes = [];
-		this.children.forEach(function(sln: string) {
+		this.children.forEach(function(sln: SolutionNode) {
 			sln.getNormalizedNodes().forEach(function(newNode: Node) {
 				normalizedNodes.push(newNode);
 			});
 		});
 		const optimizedNodes = [];
-		normalizedNodes.forEach(function(sln: Solution) {
+		normalizedNodes.forEach(function(sln: SolutionNode) {
 			sln = sln.mapGeneratedCode(fn);
 			if(optimizedNodes.length === 0) {
 				optimizedNodes.push(sln);
@@ -97,7 +97,7 @@ class SourceListMap {
 		const source = this.children.map(function(sln: Solution) {
 			return sln.getGeneratedCode();
 		}).join("");
-		const mappings = this.children.map(function(sln: Solution) {
+		const mappings = this.children.map(function(sln: SourceMapConsumer) {
 			return sln.getMappings(mappingsContext);
 		}).join("");
 		const arrays = mappingsContext.getArrays();

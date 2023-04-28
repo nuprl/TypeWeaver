@@ -43,7 +43,7 @@ import { isAsync } from './internal/wrapAsync.js'
  *     async.asyncify(function (contents: any) {
  *         return db.model.create(contents);
  *     }),
- *     function (model: Model, next: Function) {
+ *     function (model: any, next: Function) {
  *         // `model` is the instantiated model object.
  *         // If there was an error, this function would be skipped.
  *     }
@@ -51,7 +51,7 @@ import { isAsync } from './internal/wrapAsync.js'
  *
  * // es2017 example, though `asyncify` is not needed if your JS environment
  * // supports async functions out of the box
- * var q = async.queue(async.asyncify(async function(file: string) {
+ * var q = async.queue(async.asyncify(async function(file: T) {
  *     var intermediateStep = await processFile(file);
  *     return await somePromise(intermediateStep)
  * }));
@@ -67,7 +67,7 @@ export default function asyncify(func: Function) {
         }
     }
 
-    return initialParams(function (args: any[], callback: Function) {
+    return initialParams(function (args: any[], callback: any) {
         var result;
         try {
             result = func.apply(this, args);
@@ -91,7 +91,7 @@ function handlePromise(promise: Promise<any>, callback: Function) {
     });
 }
 
-function invokeCallback(callback: Function, error: any, value: any) {
+function invokeCallback(callback: any, error: any, value: any) {
     try {
         callback(error, value);
     } catch (err) {

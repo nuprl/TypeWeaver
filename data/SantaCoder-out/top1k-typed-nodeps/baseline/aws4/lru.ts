@@ -48,7 +48,7 @@ function DoublyLinkedList() {
   this.lastNode = null
 }
 
-DoublyLinkedList.prototype.moveToFront = function(node: Node) {
+DoublyLinkedList.prototype.moveToFront = function(node: DoublyLinkedListNode) {
   if (this.firstNode == node) return
 
   this.remove(node)
@@ -74,7 +74,7 @@ DoublyLinkedList.prototype.pop = function() {
   return lastNode
 }
 
-DoublyLinkedList.prototype.remove = function(node: Node) {
+DoublyLinkedList.prototype.remove = function(node: DoublyLinkedNode) {
   if (this.firstNode == node) {
     this.firstNode = node.next
   } else if (node.prev != null) {

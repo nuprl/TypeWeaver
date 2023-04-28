@@ -68,7 +68,7 @@ function getTokenSource (token: Token) {
     );
 }
 
-function getTokenSourceSpan (startToken: ts.Node, endToken: ts.Node) {
+function getTokenSourceSpan (startToken: Token, endToken: Token) {
     if (!startToken) {
         return undefined;
     }

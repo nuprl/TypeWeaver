@@ -21,7 +21,7 @@ function scheduleFlush() {
   }, 50);
 }
 
-export default function instrument(eventName: string, promise: Promise<any>, child: any) {
+export default function instrument(eventName: string, promise: Promise<any>, child: Promise<any>) {
   if (1 === queue.push({
     name: eventName,
     payload: {

@@ -6,11 +6,11 @@ import {
     addSelectors
 } from './utils.js';
 
-function calcSelectorLength(list: string[]) {
+function calcSelectorLength(list: Array<any>) {
     return list.reduce((res, data) => res + data.id.length + 1, 0) - 1;
 }
 
-function calcDeclarationsLength(tokens: Token[]) {
+function calcDeclarationsLength(tokens: Array<Token>) {
     let length = 0;
 
     for (const token of tokens) {
@@ -23,7 +23,7 @@ function calcDeclarationsLength(tokens: Token[]) {
     );
 }
 
-function processRule(node: Node, item: Node, list: Node) {
+function processRule(node: Node, item: Item, list: List) {
     const avoidRulesMerge = this.block !== null ? this.block.avoidRulesMerge : false;
     const selectors = node.prelude.children;
     const block = node.block;
@@ -31,7 +31,7 @@ function processRule(node: Node, item: Node, list: Node) {
     let allowMergeUp = true;
     let allowMergeDown = true;
 
-    list.prevUntil(item.prev, function(prev: Block, prevItem: BlockItem) {
+    list.prevUntil(item.prev, function(prev: Node, prevItem: Node) {
         const prevBlock = prev.block;
         const prevType = prev.type;
 

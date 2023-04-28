@@ -56,7 +56,7 @@ SHA256.outSize = 256;
 SHA256.hmacStrength = 192;
 SHA256.padLength = 64;
 
-SHA256.prototype._update = function _update(msg: any, start: number) {
+SHA256.prototype._update = function _update(msg: Uint8Array, start: number) {
   var W = this.W;
 
   for (var i = 0; i < 16; i++)

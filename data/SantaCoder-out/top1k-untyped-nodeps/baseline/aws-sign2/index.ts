@@ -53,7 +53,7 @@ var keys =
  * @api private
  */
 
-function authorization (options: AuthorizationOptions) {
+function authorization (options: Object) {
   return 'AWS ' + options.key + ':' + sign(options)
 }
 
@@ -68,7 +68,7 @@ module.exports.authorization = authorization
  * @api private
  */ 
 
-function hmacSha1 (options: HmacOptions) {
+function hmacSha1 (options: Object) {
   return crypto.createHmac('sha1', options.secret).update(options.message).digest('base64')
 }
 
@@ -82,7 +82,7 @@ module.exports.hmacSha1 = hmacSha1
  * @api private
  */
 
-function sign (options: SignOptions) {
+function sign (options: Object) {
   options.message = stringToSign(options)
   return hmacSha1(options)
 }
@@ -98,7 +98,7 @@ module.exports.sign = sign
  * @api private
  */
 
-function signQuery (options: SignQueryOptions) {
+function signQuery (options: any) {
   options.message = queryStringToSign(options)
   return hmacSha1(options)
 }
@@ -149,7 +149,7 @@ module.exports.stringToSign = stringToSign
  * @api private
  */
 
-function queryStringToSign (options: any){
+function queryStringToSign (options: Object){
   return 'GET\n\n\n' + options.date + '\n' + options.resource
 }
 module.exports.queryStringToSign = queryStringToSign

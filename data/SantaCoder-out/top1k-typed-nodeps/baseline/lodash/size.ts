@@ -26,7 +26,7 @@ const setTag = '[object Set]'
  * size('pebbles')
  * // => 7
  */
-function size(collection: any[]) {
+function size(collection: any) {
   if (collection == null) {
     return 0
   }

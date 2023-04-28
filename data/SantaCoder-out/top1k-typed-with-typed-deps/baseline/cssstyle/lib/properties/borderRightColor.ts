@@ -3,7 +3,7 @@
 var isValid = (module.exports.isValid = require('./borderColor').isValid);
 
 module.exports.definition = {
-  set: function(v: T) {
+  set: function(v: string) {
     if (isValid(v)) {
       this._setProperty('border-right-color', v);
     }

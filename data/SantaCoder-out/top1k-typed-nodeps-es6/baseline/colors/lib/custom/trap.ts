@@ -1,4 +1,4 @@
-module['exports'] = function runTheTrap(text: string, options: Options) {
+module['exports'] = function runTheTrap(text: string, options: any) {
   var result = '';
   text = text || 'Run the trap, drop the bass';
   text = text.split('');

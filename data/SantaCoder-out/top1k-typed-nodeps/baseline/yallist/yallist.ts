@@ -27,7 +27,7 @@ function Yallist (list: Array<any>) {
   return self
 }
 
-Yallist.prototype.removeNode = function (node: Node) {
+Yallist.prototype.removeNode = function (node: ListNode<T>) {
   if (node.list !== this) {
     throw new Error('removing node which does not belong to this list')
   }
@@ -196,7 +196,7 @@ Yallist.prototype.map = function (fn: Function, thisp: any) {
   return res
 }
 
-Yallist.prototype.mapReverse = function (fn: Function, thisp: any) {
+Yallist.prototype.mapReverse = function (fn: any, thisp: any) {
   thisp = thisp || this
   var res = new Yallist()
   for (var walker = this.tail; walker !== null;) {
@@ -364,7 +364,7 @@ Yallist.prototype.reverse = function () {
   return this
 }
 
-function insert (self: Trie, node: TrieNode, value: string) {
+function insert (self: LinkedList, node: Node, value: any) {
   var inserted = node === self.head ?
     new Node(value, null, node, self) :
     new Node(value, node, node.next, self)
@@ -381,7 +381,7 @@ function insert (self: Trie, node: TrieNode, value: string) {
   return inserted
 }
 
-function push (self: T, item: T) {
+function push (self: List, item: any) {
   self.tail = new Node(item, self.tail, null, self)
   if (!self.head) {
     self.head = self.tail
@@ -389,7 +389,7 @@ function push (self: T, item: T) {
   self.length++
 }
 
-function unshift (self: List<T>, item: T) {
+function unshift (self: LinkedList, item: any) {
   self.head = new Node(item, null, self.head, self)
   if (!self.tail) {
     self.tail = self.head

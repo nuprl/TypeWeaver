@@ -6,7 +6,7 @@ var core = require('../'),
     isObjectLike = require('lodash/isObjectLike');
 
 
-module.exports = function (options: any) {
+module.exports = function (options: Options) {
 
     var errorText = 'Please verify options'; // For better minification because this string is repeating
 

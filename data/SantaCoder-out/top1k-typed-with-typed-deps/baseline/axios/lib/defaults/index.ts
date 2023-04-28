@@ -62,7 +62,7 @@ const defaults = {
 
   adapter: getDefaultAdapter(),
 
-  transformRequest: [function transformRequest(data: any, headers: any) {
+  transformRequest: [function transformRequest(data: any, headers: Headers) {
     const contentType = headers.getContentType() || '';
     const hasJSONContentType = contentType.indexOf('application/json') > -1;
     const isObjectPayload = utils.isObject(data);

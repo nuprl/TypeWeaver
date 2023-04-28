@@ -44,8 +44,8 @@ import awaitify from './internal/awaitify.js'
  * const withMissingFileList = ['file1.txt','file2.txt','file4.txt'];
  *
  * // asynchronous function that returns the file size in bytes
- * function getFileSizeInBytes(file: File, callback: any) {
- *     fs.stat(file, function(err: Error, stat: Stats) {
+ * function getFileSizeInBytes(file: string, callback: any) {
+ *     fs.stat(file, function(err: any, stat: any) {
  *         if (err) {
  *             return callback(err);
  *         }
@@ -54,7 +54,7 @@ import awaitify from './internal/awaitify.js'
  * }
  *
  * // Using callbacks
- * async.map(fileList, getFileSizeInBytes, function(err: Error, results: any) {
+ * async.map(fileList, getFileSizeInBytes, function(err: Error, results: number[]) {
  *     if (err) {
  *         console.log(err);
  *     } else {
@@ -65,7 +65,7 @@ import awaitify from './internal/awaitify.js'
  * });
  *
  * // Error Handling
- * async.map(withMissingFileList, getFileSizeInBytes, function(err: Error, results: any) {
+ * async.map(withMissingFileList, getFileSizeInBytes, function(err: Error, results: number[]) {
  *     if (err) {
  *         console.log(err);
  *         // [ Error: ENOENT: no such file or directory ]
@@ -119,7 +119,7 @@ import awaitify from './internal/awaitify.js'
  * }
  *
  */
-function map (coll: any[], iteratee: any, callback: any) {
+function map (coll: any[], iteratee: Function, callback: Function) {
     return _map(eachOf, coll, iteratee, callback)
 }
 export default awaitify(map, 3);

@@ -7,7 +7,7 @@ try {
 const universalify = require('universalify')
 const { stringify, stripBom } = require('./utils')
 
-async function _readFile (file: string, options = {}: Object) {
+async function _readFile (file: string, options = {}: ReadFileOptions) {
   if (typeof options === 'string') {
     options = { encoding: options }
   }
@@ -60,7 +60,7 @@ function readFileSync (file: string, options = {}: Options) {
   }
 }
 
-async function _writeFile (file: string, obj: any, options = {}: any) {
+async function _writeFile (file: string, obj: any, options = {}: WriteFileOptions) {
   const fs = options.fs || _fs
 
   const str = stringify(obj, options)

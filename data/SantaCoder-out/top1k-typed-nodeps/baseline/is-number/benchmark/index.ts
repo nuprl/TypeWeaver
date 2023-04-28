@@ -12,7 +12,7 @@ const cycle = (e, nl) => {
 function bench(name: string) {
   const suite = new Suite()
     .on('start', () => console.log(`# ${name}`))
-    .on('complete', function(e: Event) {
+    .on('complete', function(e: any) {
       const fastest = this.filter('fastest').map('name').toString();
       console.log(`fastest is '${fastest}'`);
       console.log();
@@ -32,7 +32,7 @@ function bench(name: string) {
   return res;
 }
 
-function run(fn: Function, prop = 'all': string) {
+function run(fn: any, prop = 'all': string) {
   [].concat(fixtures[prop]).forEach(val => fn(val));
 }
 
@@ -54,7 +54,7 @@ bench('number')
   .add('parseFloat', () => run(isNumberParseFloat, 'number'))
   .run()
 
-function isNumberParseFloat(n: string) {
+function isNumberParseFloat(n: any) {
   if (typeof num === 'number') {
     return num - num === 0;
   }

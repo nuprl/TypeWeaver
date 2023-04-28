@@ -1,6 +1,6 @@
 import RetryOperation from './retry_operation';
 
-export const operation = function(options: TimeoutsOptions) {
+export const operation = function(options: RetryOptions) {
   var timeouts = timeouts(options);
   return new RetryOperation(timeouts, {
       forever: options && (options.forever || options.retries === Infinity),
@@ -9,7 +9,7 @@ export const operation = function(options: TimeoutsOptions) {
   });
 };
 
-export const timeouts = function(options: Array<string>) {
+export const timeouts = function(options: RetryOptions) {
   if (options instanceof Array) {
     return [].concat(options);
   }
@@ -57,7 +57,7 @@ export const createTimeout = function(attempt: number, opts: any) {
   return timeout;
 };
 
-export const wrap = function(obj: any, options: any, methods: any) {
+export const wrap = function(obj: Object, options: Object, methods: Array) {
   if (options instanceof Array) {
     methods = options;
     options = null;
@@ -81,7 +81,7 @@ export const wrap = function(obj: any, options: any, methods: any) {
       var args     = Array.prototype.slice.call(arguments, 1);
       var callback = args.pop();
 
-      args.push(function(err: Error) {
+      args.push(function(err: any) {
         if (op.retry(err)) {
           return;
         }

@@ -12,7 +12,7 @@ import baseMean from './meanBy.js'
  * mean([4, 2, 8, 6])
  * // => 5
  */
-function mean(array: number[]) {
+function mean(array: Array<number>) {
   return baseMean(array, (value) => value)
 }
 

@@ -55,7 +55,7 @@ function is_FLOW_INDICATOR(c: number) {
          c === 0x7D/* } */;
 }
 
-function fromHexCode(c: string) {
+function fromHexCode(c: number) {
   var lc;
 
   if ((0x30/* 0 */ <= c) && (c <= 0x39/* 9 */)) {
@@ -79,7 +79,7 @@ function escapedHexLen(c: number) {
   return 0;
 }
 
-function fromDecimalCode(c: string) {
+function fromDecimalCode(c: number) {
   if ((0x30/* 0 */ <= c) && (c <= 0x39/* 9 */)) {
     return c - 0x30;
   }
@@ -87,7 +87,7 @@ function fromDecimalCode(c: string) {
   return -1;
 }
 
-function simpleEscapeSequence(c: string) {
+function simpleEscapeSequence(c: number) {
   /* eslint-disable indent */
   return (c === 0x30/* 0 */) ? '\x00' :
         (c === 0x61/* a */) ? '\x07' :
@@ -170,7 +170,7 @@ function State(input: string, options: any) {
 }
 
 
-function generateError(state: any, message: string) {
+function generateError(state: State, message: string) {
   var mark = {
     name:     state.filename,
     buffer:   state.input.slice(0, -1), // omit trailing \0
@@ -197,7 +197,7 @@ function throwWarning(state: State, message: string) {
 
 var directiveHandlers = {
 
-  YAML: function handleYamlDirective(state: State, name: string, args: string[]) {
+  YAML: function handleYamlDirective(state: ParserState, name: string, args: string[]) {
 
     var match, major, minor;
 
@@ -286,7 +286,7 @@ function captureSegment(state: State, start: number, end: number, checkJson: boo
   }
 }
 
-function mergeMappings(state: any, destination: any, source: any, overridableKeys: any) {
+function mergeMappings(state: State, destination: any, source: any, overridableKeys: any) {
   var sourceKeys, key, index, quantity;
 
   if (!common.isObject(source)) {
@@ -625,7 +625,7 @@ function readSingleQuotedScalar(state: ParserState, nodeIndent: number) {
   throwError(state, 'unexpected end of the stream within a single quoted scalar');
 }
 
-function readDoubleQuotedScalar(state: State, nodeIndent: number) {
+function readDoubleQuotedScalar(state: ParserState, nodeIndent: number) {
   var captureStart,
       captureEnd,
       hexLength,
@@ -704,7 +704,7 @@ function readDoubleQuotedScalar(state: State, nodeIndent: number) {
   throwError(state, 'unexpected end of the stream within a double quoted scalar');
 }
 
-function readFlowCollection(state: State, nodeIndent: number) {
+function readFlowCollection(state: ParserState, nodeIndent: number) {
   var readNext = true,
       _line,
       _lineStart,
@@ -1206,7 +1206,7 @@ function readBlockMapping(state: ParserState, nodeIndent: number, flowIndent: nu
   return detected;
 }
 
-function readTagProperty(state: State) {
+function readTagProperty(state: ParserState) {
   var _position,
       isVerbatim = false,
       isNamed    = false,
@@ -1363,7 +1363,7 @@ function readAlias(state: State) {
   return true;
 }
 
-function composeNode(state: State, parentIndent: number, nodeContext: NodeContext, allowToSeek: Boolean, allowCompact: Boolean) {
+function composeNode(state: State, parentIndent: number, nodeContext: NodeContext, allowToSeek: boolean, allowCompact: boolean) {
   var allowBlockStyles,
       allowBlockScalars,
       allowBlockCollections,
@@ -1650,7 +1650,7 @@ function readDocument(state: State) {
 }
 
 
-function loadDocuments(input: string, options: Options) {
+function loadDocuments(input: string, options: YAMLOptions) {
   input = String(input);
   options = options || {};
 
@@ -1693,7 +1693,7 @@ function loadDocuments(input: string, options: Options) {
 }
 
 
-function loadAll(input: any, iterator: any, options: any) {
+function loadAll(input: string, iterator: Function, options: any) {
   if (iterator !== null && typeof iterator === 'object' && typeof options === 'undefined') {
     options = iterator;
     iterator = null;
@@ -1711,7 +1711,7 @@ function loadAll(input: any, iterator: any, options: any) {
 }
 
 
-function load(input: string, options: Options) {
+function load(input: string, options: LoadOptions) {
   var documents = loadDocuments(input, options);
 
   if (documents.length === 0) {

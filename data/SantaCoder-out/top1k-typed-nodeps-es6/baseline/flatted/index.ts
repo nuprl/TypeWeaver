@@ -34,7 +34,7 @@ self.Flatted = (function (exports: any) {
     return _typeof(value) === primitive ? new Primitive(value) : value;
   };
 
-  var revive = function revive(input: string, parsed: any, output: string, $: CheerioStatic) {
+  var revive = function revive(input: any, parsed: Set<any>, output: any, $: any) {
     var lazy = [];
 
     for (var ke = keys(output), length = ke.length, y = 0; y < length; y++) {
@@ -65,7 +65,7 @@ self.Flatted = (function (exports: any) {
     return output;
   };
 
-  var set = function set(known: string[], input: string, value: string) {
+  var set = function set(known: Set<any>, input: any, value: any) {
     var index = Primitive(input.push(value) - 1);
     known.set(value, index);
     return index;
@@ -121,7 +121,7 @@ self.Flatted = (function (exports: any) {
   var toJSON = function toJSON(any: any) {
     return $parse(stringify(any));
   };
-  var fromJSON = function fromJSON(any: any) {
+  var fromJSON = function fromJSON(any: unknown) {
     return parse($stringify(any));
   };
 

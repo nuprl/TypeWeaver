@@ -23,7 +23,7 @@ import toInteger from './toInteger.js'
  * findLastIndex(users, ({ user }) => user == 'pebbles')
  * // => 2
  */
-function findLastIndex(array: any[], predicate: any, fromIndex: number) {
+function findLastIndex(array: any[], predicate: any, fromIndex: any) {
   const length = array == null ? 0 : array.length
   if (!length) {
     return -1

@@ -20,7 +20,7 @@ function createES2015Iterator(iterator: Iterator<any>) {
     }
 }
 
-function createObjectIterator(obj: any) {
+function createObjectIterator(obj: Object) {
     var okeys = obj ? Object.keys(obj) : [];
     var i = -1;
     var len = okeys.length;

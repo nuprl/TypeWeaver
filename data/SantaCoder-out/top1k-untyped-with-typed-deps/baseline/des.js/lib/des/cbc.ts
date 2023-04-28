@@ -5,7 +5,7 @@ var inherits = require('inherits');
 
 var proto = {};
 
-function CBCState(iv: Uint8Array) {
+function CBCState(iv: Buffer) {
   assert.equal(iv.length, 8, 'Invalid IV length');
 
   this.iv = new Array(8);
@@ -26,7 +26,7 @@ function instantiate(Base: any) {
     CBC.prototype[key] = proto[key];
   }
 
-  CBC.create = function create(options: CBCOptions) {
+  CBC.create = function create(options: Options) {
     return new CBC(options);
   };
 

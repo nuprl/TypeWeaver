@@ -22,7 +22,7 @@ module.exports = {
 
 //------------------------------------------------------------------------------
 
-function InternalCodec(codecOptions: any, iconv: any) {
+function InternalCodec(codecOptions: CodecOptions, iconv: Iconv) {
     this.enc = codecOptions.encodingName;
     this.bomAware = codecOptions.bomAware;
 

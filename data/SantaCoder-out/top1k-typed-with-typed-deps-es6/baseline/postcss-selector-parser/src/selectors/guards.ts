@@ -28,11 +28,11 @@ const IS_TYPE = {
     [UNIVERSAL]: true,
 };
 
-export function isNode (node: Node) {
+export function isNode (node: any) {
     return (typeof node === "object" && IS_TYPE[node.type]);
 }
 
-function isNodeType (type: string, node: Node) {
+function isNodeType (type: NodeType, node: Node) {
     return isNode(node) && node.type === type;
 }
 

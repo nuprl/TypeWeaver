@@ -2,7 +2,7 @@
 
 const inherits = require('inherits');
 
-function Reporter(options: ReporterOptions) {
+function Reporter(options: any) {
   this._reporterState = {
     obj: null,
     path: [],
@@ -39,7 +39,7 @@ Reporter.prototype.exitKey = function exitKey(index: number) {
   state.path = state.path.slice(0, index - 1);
 };
 
-Reporter.prototype.leaveKey = function leaveKey(index: number, key: string, value: string) {
+Reporter.prototype.leaveKey = function leaveKey(index: number, key: string, value: any) {
   const state = this._reporterState;
 
   this.exitKey(index);
@@ -67,7 +67,7 @@ Reporter.prototype.leaveObject = function leaveObject(prev: Object) {
   return now;
 };
 
-Reporter.prototype.error = function error(msg: string) {
+Reporter.prototype.error = function error(msg: any) {
   let err;
   const state = this._reporterState;
 

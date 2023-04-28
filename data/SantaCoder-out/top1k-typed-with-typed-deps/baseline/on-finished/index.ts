@@ -43,7 +43,7 @@ var defer = typeof setImmediate === 'function'
  * @public
  */
 
-function onFinished (msg: string, listener: any) {
+function onFinished (msg: Message, listener: Function) {
   if (isFinished(msg) !== false) {
     defer(listener, null, msg)
     return msg
@@ -63,7 +63,7 @@ function onFinished (msg: string, listener: any) {
  * @public
  */
 
-function isFinished (msg: any) {
+function isFinished (msg: IncomingMessage) {
   var socket = msg.socket
 
   if (typeof msg.finished === 'boolean') {
@@ -88,7 +88,7 @@ function isFinished (msg: any) {
  * @private
  */
 
-function attachFinishedListener (msg: Message, callback: Function) {
+function attachFinishedListener (msg: Message, callback: any) {
   var eeMsg
   var eeSocket
   var finished = false
@@ -104,7 +104,7 @@ function attachFinishedListener (msg: Message, callback: Function) {
   // finished on first message event
   eeMsg = eeSocket = first([[msg, 'end', 'finish']], onFinish)
 
-  function onSocket (socket: Socket) {
+  function onSocket (socket: net.Socket) {
     // remove listener
     msg.removeListener('socket', onSocket)
 
@@ -138,7 +138,7 @@ function attachFinishedListener (msg: Message, callback: Function) {
  * @private
  */
 
-function attachListener (msg: string, listener: Listener) {
+function attachListener (msg: object, listener: Function) {
   var attached = msg.__onFinished
 
   // create a private single listener with queue
@@ -158,7 +158,7 @@ function attachListener (msg: string, listener: Listener) {
  * @private
  */
 
-function createListener (msg: string) {
+function createListener (msg: Message) {
   function listener (err: Error) {
     if (msg.__onFinished === listener) msg.__onFinished = null
     if (!listener.queue) return

@@ -5,7 +5,7 @@ import { every } from './prototypes/array';
 /**
  * @private
  */
-function hasCallsLeft(callMap: SpyMap, spy: Spy) {
+function hasCallsLeft(callMap: any, spy: Spy) {
     if (callMap[spy.id] === undefined) {
         callMap[spy.id] = 0;
     }
@@ -16,7 +16,7 @@ function hasCallsLeft(callMap: SpyMap, spy: Spy) {
 /**
  * @private
  */
-function checkAdjacentCalls(callMap: SpyMap, spy: Spy, index: number, spies: Spy[]) {
+function checkAdjacentCalls(callMap: SpyCallMap, spy: SinonSpy, index: number, spies: SinonSpy[]) {
     var calledBeforeNext = true;
 
     if (index !== spies.length - 1) {

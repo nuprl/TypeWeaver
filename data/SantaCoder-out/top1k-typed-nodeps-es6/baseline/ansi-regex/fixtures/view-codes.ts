@@ -5,7 +5,7 @@ const allCodes = {};
 const supported = [];
 const unsupported = [];
 
-function addCodesToTest(codes: string[]) {
+function addCodesToTest(codes: any) {
 	for (const [key, value] of Object.entries(codes)) {
 		allCodes[key] = value;
 	}

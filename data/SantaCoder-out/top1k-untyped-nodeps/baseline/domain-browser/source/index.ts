@@ -32,7 +32,7 @@ module.exports = function() {
 			};
 		};
 		d.intercept = function(fn: Function) {
-			return function(err: Error) {
+			return function(err: any) {
 				if (err) {
 					emitError(err);
 				} else {
@@ -45,7 +45,7 @@ module.exports = function() {
 				}
 			};
 		};
-		d.run = function(fn: Function) {
+		d.run = function(fn: any) {
 			try {
 				fn();
 			} catch (err) {

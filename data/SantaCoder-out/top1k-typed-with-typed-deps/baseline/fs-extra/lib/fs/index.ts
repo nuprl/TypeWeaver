@@ -68,7 +68,7 @@ exports.exists = function (filename: string, callback: any) {
 
 // fs.read(), fs.write(), & fs.writev() need special treatment due to multiple callback args
 
-exports.read = function (fd: number, buffer: Buffer, offset: number, length: number, position: number, callback: Function) {
+exports.read = function (fd: number, buffer: Buffer, offset: number, length: number, position: number, callback: any) {
   if (typeof callback === 'function') {
     return fs.read(fd, buffer, offset, length, position, callback)
   }

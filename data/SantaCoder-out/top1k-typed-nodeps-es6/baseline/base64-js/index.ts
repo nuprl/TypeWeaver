@@ -103,7 +103,7 @@ function tripletToBase64 (num: number) {
     lookup[num & 0x3F]
 }
 
-function encodeChunk (uint8: Uint8Array, start: number, end: number) {
+function encodeChunk (uint8: Array<number>, start: number, end: number) {
   var tmp
   var output = []
   for (var i = start; i < end; i += 3) {

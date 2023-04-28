@@ -134,7 +134,7 @@ require.alias = function (from: string, to: string) {
     }
 };
 
-require.define = function (filename: string, fn: any) {
+require.define = function (filename: string, fn: Function) {
     var dirname = require._core[filename]
         ? ''
         : require.modules.path().dirname(filename)
@@ -174,7 +174,7 @@ if (!process.nextTick) process.nextTick = (function () {
     ;
     
     if (canPost) {
-        window.addEventListener('message', function (ev: Event) {
+        window.addEventListener('message', function (ev: MessageEvent) {
             if (ev.source === window && ev.data === 'browserify-tick') {
                 ev.stopPropagation();
                 if (queue.length > 0) {

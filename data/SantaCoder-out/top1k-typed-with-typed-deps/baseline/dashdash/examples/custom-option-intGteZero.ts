@@ -11,7 +11,7 @@ var format = require('util').format;
 var dashdash = require('../lib/dashdash');
 
 
-function parseIntGteZero(option: string, optstr: string, arg: string) {
+function parseIntGteZero(option: any, optstr: string, arg: string) {
     var num = Number(arg);
     if (!/^[0-9]+$/.test(arg) || isNaN(num)) {
         throw new Error(format('arg for "%s" is not an integer >=0: "%s"',

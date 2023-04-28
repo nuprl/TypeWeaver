@@ -46,7 +46,7 @@ module.exports = function( Release : any) {
 		 * committed before creating the tag.
 		 * @param {Function} callback
 		 */
-		generateArtifacts: function( callback : Function) {
+		generateArtifacts: function( callback : any) {
 			Release.exec( "npx grunt", "Grunt command failed" );
 			Release.exec(
 				"npx grunt custom:slim --filename=jquery.slim.js && " +

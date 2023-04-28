@@ -7,7 +7,7 @@ const pathExists = require('../path-exists').pathExists
 const utimesMillis = require('../util/utimes').utimesMillis
 const stat = require('../util/stat')
 
-function copy (src: string, dest: string, opts: Object, cb: Function) {
+function copy (src: string, dest: string, opts: any, cb: Function) {
   if (typeof opts === 'function' && !cb) {
     cb = opts
     opts = {}
@@ -41,7 +41,7 @@ function copy (src: string, dest: string, opts: Object, cb: Function) {
   })
 }
 
-function checkParentDir (destStat: fs.Stats, src: string, dest: string, opts: any, cb: Function) {
+function checkParentDir (destStat: Stats, src: string, dest: string, opts: Object, cb: Function) {
   const destParent = path.dirname(dest)
   pathExists(destParent, (err, dirExists) => {
     if (err) return cb(err)
@@ -53,19 +53,19 @@ function checkParentDir (destStat: fs.Stats, src: string, dest: string, opts: an
   })
 }
 
-function handleFilter (onInclude: any, destStat: any, src: any, dest: any, opts: any, cb: any) {
+function handleFilter (onInclude: Function, destStat: Stats, src: string, dest: string, opts: Object, cb: Function) {
   Promise.resolve(opts.filter(src, dest)).then(include => {
     if (include) return onInclude(destStat, src, dest, opts, cb)
     return cb()
   }, error => cb(error))
 }
 
-function startCopy (destStat: Stats, src: string, dest: string, opts: any, cb: Function) {
+function startCopy (destStat: any, src: any, dest: any, opts: any, cb: any) {
   if (opts.filter) return handleFilter(getStats, destStat, src, dest, opts, cb)
   return getStats(destStat, src, dest, opts, cb)
 }
 
-function getStats (destStat: Stats, src: string, dest: string, opts: cb, cb: cb) {
+function getStats (destStat: fs.Stats, src: string, dest: string, opts: any, cb: Function) {
   const stat = opts.dereference ? fs.stat : fs.lstat
   stat(src, (err, srcStat) => {
     if (err) return cb(err)
@@ -81,12 +81,12 @@ function getStats (destStat: Stats, src: string, dest: string, opts: cb, cb: cb)
   })
 }
 
-function onFile (srcStat: fs.Stats, destStat: fs.Stats, src: string, dest: string, opts: any, cb: Function) {
+function onFile (srcStat: fs.Stats, destStat: fs.Stats, src: string, dest: string, opts: Object, cb: Function) {
   if (!destStat) return copyFile(srcStat, src, dest, opts, cb)
   return mayCopyFile(srcStat, src, dest, opts, cb)
 }
 
-function mayCopyFile (srcStat: fs.Stats, src: string, dest: string, opts: any, cb: Function) {
+function mayCopyFile (srcStat: fs.Stats, src: string, dest: string, opts: CopyOptions, cb: Function) {
   if (opts.overwrite) {
     fs.unlink(dest, err => {
       if (err) return cb(err)
@@ -97,7 +97,7 @@ function mayCopyFile (srcStat: fs.Stats, src: string, dest: string, opts: any, c
   } else return cb()
 }
 
-function copyFile (srcStat: fs.Stats, src: string, dest: string, opts: any, cb: Function) {
+function copyFile (srcStat: fs.Stats, src: string, dest: string, opts: Object, cb: Function) {
   fs.copyFile(src, dest, err => {
     if (err) return cb(err)
     if (opts.preserveTimestamps) return handleTimestampsAndMode(srcStat.mode, src, dest, cb)
@@ -122,7 +122,7 @@ function fileIsNotWritable (srcMode: number) {
   return (srcMode & 0o200) === 0
 }
 
-function makeFileWritable (dest: string, srcMode: number, cb: any) {
+function makeFileWritable (dest: string, srcMode: number, cb: Function) {
   return setDestMode(dest, srcMode | 0o200, cb)
 }
 
@@ -147,7 +147,7 @@ function setDestTimestamps (src: string, dest: string, cb: Function) {
   })
 }
 
-function onDir (srcStat: fs.Stats, destStat: fs.Stats, src: string, dest: string, opts: any, cb: Function) {
+function onDir (srcStat: fs.Stats, destStat: fs.Stats, src: string, dest: string, opts: any, cb: any) {
   if (!destStat) return mkDirAndCopy(srcStat.mode, src, dest, opts, cb)
   return copyDir(src, dest, opts, cb)
 }
@@ -169,13 +169,13 @@ function copyDir (src: string, dest: string, opts: any, cb: any) {
   })
 }
 
-function copyDirItems (items: any[], src: string, dest: string, opts: any, cb: any) {
+function copyDirItems (items: string[], src: string, dest: string, opts: Object, cb: Function) {
   const item = items.pop()
   if (!item) return cb()
   return copyDirItem(items, item, src, dest, opts, cb)
 }
 
-function copyDirItem (items: any, item: any, src: string, dest: string, opts: any, cb: Function) {
+function copyDirItem (items: string[], item: string, src: string, dest: string, opts: CopyOptions, cb: Callback) {
   const srcItem = path.join(src, item)
   const destItem = path.join(dest, item)
   stat.checkPaths(srcItem, destItem, 'copy', opts, (err, stats) => {
@@ -188,7 +188,7 @@ function copyDirItem (items: any, item: any, src: string, dest: string, opts: an
   })
 }
 
-function onLink (destStat: Stats, src: string, dest: string, opts: any, cb: Function) {
+function onLink (destStat: fs.Stats, src: string, dest: string, opts: LinkOptions, cb: Callback) {
   fs.readlink(src, (err, resolvedSrc) => {
     if (err) return cb(err)
     if (opts.dereference) {

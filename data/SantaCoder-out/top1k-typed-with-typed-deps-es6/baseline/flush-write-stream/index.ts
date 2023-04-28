@@ -7,7 +7,7 @@ var SIGNAL_FLUSH =(Buffer.from && Buffer.from !== Uint8Array.from)
 
 export default WriteStream;
 
-function WriteStream (opts: Object, write: Function, flush: Function) {
+function WriteStream (opts: any, write: Function, flush: Function) {
   if (!(this instanceof WriteStream)) return new WriteStream(opts, write, flush)
 
   if (typeof opts === 'function') {
@@ -32,12 +32,12 @@ WriteStream.obj = function (opts: any, worker: any, flush: any) {
   return new WriteStream(opts, worker, flush)
 }
 
-WriteStream.prototype._write = function (data: any, enc: string, cb: Function) {
+WriteStream.prototype._write = function (data: any, enc: any, cb: any) {
   if (SIGNAL_FLUSH === data) this._flush(cb)
   else this._worker(data, enc, cb)
 }
 
-WriteStream.prototype.end = function (data: any, enc: string, cb: any) {
+WriteStream.prototype.end = function (data: any, enc: any, cb: any) {
   if (!this._flush) return stream.Writable.prototype.end.apply(this, arguments)
   if (typeof data === 'function') return this.end(null, null, data)
   if (typeof enc === 'function') return this.end(data, null, enc)

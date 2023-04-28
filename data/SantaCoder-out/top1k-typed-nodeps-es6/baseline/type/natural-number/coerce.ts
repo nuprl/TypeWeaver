@@ -2,7 +2,7 @@
 
 import coerceToInteger from '../integer/coerce';
 
-export default function (value: number) {
+export default function (value: any) {
 	value = coerceToInteger(value);
 	if (!value) return value;
 	if (value < 0) return null;

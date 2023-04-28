@@ -33,7 +33,7 @@ import queue from './internal/queue.js'
  * @example
  *
  * // create a cargoQueue object with payload 2 and concurrency 2
- * var cargoQueue = async.cargoQueue(function(tasks: Array<Task>, callback: Function) {
+ * var cargoQueue = async.cargoQueue(function(tasks: Array<T>, callback: any) {
  *     for (var i=0; i<tasks.length; i++) {
  *         console.log('hello ' + tasks[i].name);
  *     }
@@ -54,6 +54,6 @@ import queue from './internal/queue.js'
  *     console.log('finished processing boo');
  * });
  */
-export default function cargo(worker: Worker, concurrency: number, payload: any) {
+export default function cargo(worker: Function, concurrency: number, payload: number) {
     return queue(worker, concurrency, payload);
 }

@@ -6,7 +6,7 @@
  * @param  {*} value
  * @returns {string}
  */
-function valueToString(value: any) {
+function valueToString(value: unknown) {
     if (value && value.toString) {
         // eslint-disable-next-line @sinonjs/no-prototype-methods/no-prototype-methods
         return value.toString();

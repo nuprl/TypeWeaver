@@ -82,7 +82,7 @@ class FiggyPudding {
 }
 try {
   const util = require('util')
-  FiggyPudding.prototype[util.inspect.custom] = function (depth: number, opts: any) {
+  FiggyPudding.prototype[util.inspect.custom] = function (depth: number, opts: util.InspectOptionsStylized) {
     return (
       this[Symbol.toStringTag] + ' '
     ) + util.inspect(this.toJSON(), opts)
@@ -175,7 +175,7 @@ const proxyHandler = {
 }
 
 module.exports = figgyPudding
-function figgyPudding (specs: any, opts: any) {
+function figgyPudding (specs: Object, opts: Object) {
   function factory (...providers: Provider[]) {
     return new Proxy(new FiggyPudding(
       specs,
@@ -192,6 +192,6 @@ function reverse (arr: any[]) {
   return ret
 }
 
-function entries (obj: any) {
+function entries (obj: Object) {
   return Object.keys(obj).map(k => [k, obj[k]])
 }

@@ -49,7 +49,7 @@ export function DuplexWrapper(options: DuplexOptions, writable: Writable, readab
 
 DuplexWrapper.prototype = Object.create(stream.Duplex.prototype, {constructor: {value: DuplexWrapper}});
 
-DuplexWrapper.prototype._write = function (input: string, encoding: string, done: any) {
+DuplexWrapper.prototype._write = function (input: any, encoding: any, done: any) {
 	this._writable.write(input, encoding, done);
 };
 
@@ -66,6 +66,6 @@ DuplexWrapper.prototype._read = function () {
 	}
 };
 
-export default function duplexer(options: DuplexOptions, writable: Writable, readable: true) {
+export default function duplexer(options: DuplexOptions, writable: Writable, readable: Readable) {
 	return new DuplexWrapper(options, writable, readable);
 }

@@ -49,7 +49,7 @@ try {
  *    should be cloned as well. Non-enumerable properties on the prototype
  *    chain will be ignored. (optional - false by default)
 */
-function clone(parent: any, circular: any, depth: any, prototype: any, includeNonEnumerable: boolean) {
+function clone(parent: any, circular: any, depth: any, prototype: any, includeNonEnumerable: any) {
   if (typeof circular === 'object') {
     depth = circular.depth;
     prototype = circular.prototype;
@@ -137,14 +137,14 @@ function clone(parent: any, circular: any, depth: any, prototype: any, includeNo
     }
 
     if (_instanceof(parent, nativeMap)) {
-      parent.forEach(function(value: any, key: string) {
+      parent.forEach(function(value: any, key: any) {
         var keyChild = _clone(key, depth - 1);
         var valueChild = _clone(value, depth - 1);
         child.set(keyChild, valueChild);
       });
     }
     if (_instanceof(parent, nativeSet)) {
-      parent.forEach(function(value: string) {
+      parent.forEach(function(value: any) {
         var entryChild = _clone(value, depth - 1);
         child.add(entryChild);
       });

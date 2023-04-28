@@ -69,7 +69,7 @@ var utilInspect = require('./util.inspect');
 var inspectCustom = utilInspect.custom;
 var inspectSymbol = isSymbol(inspectCustom) ? inspectCustom : null;
 
-module.exports = function inspect_(obj: any, options: any, depth: any, seen: any) {
+module.exports = function inspect_(obj: any, options: InspectOptions, depth: number, seen: any[]) {
     var opts = options || {};
 
     if (has(opts, 'quoteStyle') && (opts.quoteStyle !== 'single' && opts.quoteStyle !== 'double')) {
@@ -140,7 +140,7 @@ module.exports = function inspect_(obj: any, options: any, depth: any, seen: any
         return '[Circular]';
     }
 
-    function inspect(value: any, from: any, noIndent: boolean) {
+    function inspect(value: any, from: any, noIndent: any) {
         if (from) {
             seen = $arrSlice.call(seen);
             seen.push(from);
@@ -202,7 +202,7 @@ module.exports = function inspect_(obj: any, options: any, depth: any, seen: any
     }
     if (isMap(obj)) {
         var mapParts = [];
-        mapForEach.call(obj, function (value: any, key: string) {
+        mapForEach.call(obj, function (value: any, key: any) {
             mapParts.push(inspect(key, obj, true) + ' => ' + inspect(value, obj));
         });
         return collectionOf('Map', mapSize.call(obj), mapParts, indent);
@@ -313,7 +313,7 @@ function nameOf(f: Function) {
     return null;
 }
 
-function indexOf(xs: Array<any>, x: any) {
+function indexOf(xs: any[], x: any) {
     if (xs.indexOf) { return xs.indexOf(x); }
     for (var i = 0, l = xs.length; i < l; i++) {
         if (xs[i] === x) { return i; }
@@ -436,7 +436,7 @@ function weakCollectionOf(type: string) {
     return type + ' { ? }';
 }
 
-function collectionOf(type: string, size: number, entries: any[], indent: string) {
+function collectionOf(type: string, size: number, entries: any[], indent: number) {
     var joinedEntries = indent ? indentedJoin(entries, indent) : $join.call(entries, ', ');
     return type + ' (' + size + ') {' + joinedEntries + '}';
 }
@@ -465,13 +465,13 @@ function getIndent(opts: Options, depth: number) {
     };
 }
 
-function indentedJoin(xs: string[], indent: number) {
+function indentedJoin(xs: Array<any>, indent: string) {
     if (xs.length === 0) { return ''; }
     var lineJoiner = '\n' + indent.prev + indent.base;
     return lineJoiner + $join.call(xs, ',' + lineJoiner) + '\n' + indent.prev;
 }
 
-function arrObjKeys(obj: any, inspect: boolean) {
+function arrObjKeys(obj: any, inspect: any) {
     var isArr = isArray(obj);
     var xs = [];
     if (isArr) {

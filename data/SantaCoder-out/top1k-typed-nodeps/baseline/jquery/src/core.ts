@@ -18,7 +18,7 @@ var version = "@VERSION",
 	rhtmlSuffix = /HTML$/i,
 
 	// Define a local copy of jQuery
-	jQuery = function( selector: string, context : Element) {
+	jQuery = function( selector: any, context : any) {
 
 		// The jQuery object is actually just the init constructor 'enhanced'
 		// Need init if jQuery is called (just allow error to be thrown if not included)
@@ -71,7 +71,7 @@ jQuery.fn = jQuery.prototype = {
 		return jQuery.each( this, callback );
 	},
 
-	map: function( callback : Function) {
+	map: function( callback : any) {
 		return this.pushStack( jQuery.map( this, function( elem: T, i : number) {
 			return callback.call( elem, i, elem );
 		} ) );
@@ -96,7 +96,7 @@ jQuery.fn = jQuery.prototype = {
 	},
 
 	odd: function() {
-		return this.pushStack( jQuery.grep( this, function( _elem: any, i : number) {
+		return this.pushStack( jQuery.grep( this, function( _elem: HTMLElement, i : number) {
 			return i % 2;
 		} ) );
 	},
@@ -198,7 +198,7 @@ jQuery.extend( {
 
 	noop: function() {},
 
-	isPlainObject: function( obj : Object) {
+	isPlainObject: function( obj : any) {
 		var proto, Ctor;
 
 		// Detect obvious negatives
@@ -230,7 +230,7 @@ jQuery.extend( {
 
 	// Evaluates a script in a provided context; falls back to the global one
 	// if not specified.
-	globalEval: function( code: string, options: any, doc : any) {
+	globalEval: function( code: string, options: Partial<IOptions>, doc : Document) {
 		DOMEval( code, { nonce: options && options.nonce }, doc );
 	},
 
@@ -257,7 +257,7 @@ jQuery.extend( {
 
 
 	// Retrieve the text value of an array of DOM nodes
-	text: function( elem : HTMLElement) {
+	text: function( elem : Element) {
 		var node,
 			ret = "",
 			i = 0,
@@ -284,7 +284,7 @@ jQuery.extend( {
 
 
 	// results is for internal usage only
-	makeArray: function( arr: Array<any>, results : Array<any>) {
+	makeArray: function( arr: any[], results : any[]) {
 		var ret = results || [];
 
 		if ( arr != null ) {
@@ -301,7 +301,7 @@ jQuery.extend( {
 		return ret;
 	},
 
-	inArray: function( elem: JQuery, arr: Array<JQuery>, i : number) {
+	inArray: function( elem: any, arr: any[], i : any) {
 		return arr == null ? -1 : indexOf.call( arr, elem, i );
 	},
 
@@ -314,7 +314,7 @@ jQuery.extend( {
 		return !rhtmlSuffix.test( namespace || docElem && docElem.nodeName || "HTML" );
 	},
 
-	merge: function( first: string, second : string) {
+	merge: function( first: any[], second : any[]) {
 		var len = +second.length,
 			j = 0,
 			i = first.length;
@@ -348,7 +348,7 @@ jQuery.extend( {
 	},
 
 	// arg is for internal usage only
-	map: function( elems: JQuery, callback: any, arg : any) {
+	map: function( elems: any[], callback: Function, arg : any) {
 		var length, value,
 			i = 0,
 			ret = [];

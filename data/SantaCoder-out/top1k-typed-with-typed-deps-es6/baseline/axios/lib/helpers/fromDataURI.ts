@@ -16,7 +16,7 @@ const DATA_URL_PATTERN = /^(?:([^;]+);)?(?:[^;]+;)?(base64|),([\s\S]*)$/;
  *
  * @returns {Buffer|Blob}
  */
-export default function fromDataURI(uri: string, asBlob: boolean, options: any) {
+export default function fromDataURI(uri: string, asBlob: boolean, options: Options) {
   const _Blob = options && options.Blob || platform.classes.Blob;
   const protocol = parseProtocol(uri);
 

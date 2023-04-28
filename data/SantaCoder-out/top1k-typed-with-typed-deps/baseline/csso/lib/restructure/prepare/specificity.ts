@@ -8,7 +8,7 @@ function ensureSelectorList(node: Node) {
     return node;
 }
 
-function maxSpecificity(a: string, b: string) {
+function maxSpecificity(a: number[], b: number[]) {
     for (let i = 0; i < 3; i++) {
         if (a[i] !== b[i]) {
             return a[i] > b[i] ? a : b;

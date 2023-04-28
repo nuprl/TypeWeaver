@@ -1,6 +1,6 @@
 var RetryOperation = require('./retry_operation');
 
-exports.operation = function(options: any) {
+exports.operation = function(options: RetryOptions) {
   var timeouts = exports.timeouts(options);
   return new RetryOperation(timeouts, {
       forever: options && (options.forever || options.retries === Infinity),
@@ -9,7 +9,7 @@ exports.operation = function(options: any) {
   });
 };
 
-exports.timeouts = function(options: Array<string>) {
+exports.timeouts = function(options: any) {
   if (options instanceof Array) {
     return [].concat(options);
   }
@@ -46,7 +46,7 @@ exports.timeouts = function(options: Array<string>) {
   return timeouts;
 };
 
-exports.createTimeout = function(attempt: number, opts: any) {
+exports.createTimeout = function(attempt: number, opts: BackoffOptions) {
   var random = (opts.randomize)
     ? (Math.random() + 1)
     : 1;
@@ -57,7 +57,7 @@ exports.createTimeout = function(attempt: number, opts: any) {
   return timeout;
 };
 
-exports.wrap = function(obj: any, options: any, methods: any) {
+exports.wrap = function(obj: Object, options: Object, methods: Array) {
   if (options instanceof Array) {
     methods = options;
     options = null;

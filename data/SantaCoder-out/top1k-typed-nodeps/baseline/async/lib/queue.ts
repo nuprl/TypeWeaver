@@ -36,7 +36,7 @@ import wrapAsync from './internal/wrapAsync.js'
  * and a `priority` property, if this is a
  * [priorityQueue]{@link module:ControlFlow.priorityQueue} object.
  * Invoked with `queue.remove(testFn)`, where `testFn` is of the form
- * `function ({data: any, priority}: any) {}` and returns a Boolean.
+ * `function ({data: task, priority}: Task) {}` and returns a Boolean.
  * @property {Function} saturated - a function that sets a callback that is
  * called when the number of running workers hits the `concurrency` limit, and
  * further tasks will be queued.  If the callback is omitted, `q.saturated()`
@@ -122,28 +122,28 @@ import wrapAsync from './internal/wrapAsync.js'
  * await q.drain()
  *
  * // assign an error callback
- * q.error(function(err: any, task: any) {
+ * q.error(function(err: Error, task: Task) {
  *     console.error('task experienced an error');
  * });
  *
  * // add some items to the queue
- * q.push({name: 'foo'}, function(err: any) {
+ * q.push({name: 'foo'}, function(err: Error) {
  *     console.log('finished processing foo');
  * });
  * // callback is optional
  * q.push({name: 'bar'});
  *
  * // add some items to the queue (batch-wise)
- * q.push([{name: 'baz'},{name: 'bay'},{name: 'bax'}], function(err: any) {
+ * q.push([{name: 'baz'},{name: 'bay'},{name: 'bax'}], function(err: Error) {
  *     console.log('finished processing item');
  * });
  *
  * // add some items to the front of the queue
- * q.unshift({name: 'bar'}, function (err: Error) {
+ * q.unshift({name: 'bar'}, function (err: any) {
  *     console.log('finished processing bar');
  * });
  */
-export default function (worker: Worker, concurrency: number) {
+export default function (worker: Function, concurrency: number) {
     var _worker = wrapAsync(worker);
     return queue((items, cb) => {
         _worker(items[0], cb);

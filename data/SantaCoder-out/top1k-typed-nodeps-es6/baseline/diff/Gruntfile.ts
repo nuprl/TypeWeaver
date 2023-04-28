@@ -92,7 +92,7 @@ export default function(grunt: any) {
           expand: true,
           src: ['*.js', '!*.min.js'],
           dest: 'dist/',
-          rename: function(dest: any, src: any) {
+          rename: function(dest: string, src: string) {
             return dest + src.replace(/\.js$/, '.min.js');
           }
         }]

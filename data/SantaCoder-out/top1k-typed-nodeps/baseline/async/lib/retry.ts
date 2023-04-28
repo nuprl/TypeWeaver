@@ -47,12 +47,12 @@ function constant(value: any) {
  * // a callback, as shown below:
  *
  * // try calling apiMethod 3 times
- * async.retry(3, apiMethod, function(err: Error, result: any) {
+ * async.retry(3, apiMethod, function(err: any, result: any) {
  *     // do something with the result
  * });
  *
  * // try calling apiMethod 3 times, waiting 200 ms between each retry
- * async.retry({times: 3, interval: 200}, apiMethod, function(err: Error, result: any) {
+ * async.retry({times: 3, interval: 200}, apiMethod, function(err: any, result: any) {
  *     // do something with the result
  * });
  *
@@ -63,7 +63,7 @@ function constant(value: any) {
  *   interval: function(retryCount: number) {
  *     return 50 * Math.pow(2, retryCount);
  *   }
- * }, apiMethod, function(err: Error, result: any) {
+ * }, apiMethod, function(err: any, result: any) {
  *     // do something with the result
  * });
  *
@@ -75,10 +75,10 @@ function constant(value: any) {
  * // try calling apiMethod only when error condition satisfies, all other
  * // errors will abort the retry control flow and return to final callback
  * async.retry({
- *   errorFilter: function(err: any) {
+ *   errorFilter: function(err: Error) {
  *     return err.message === 'Temporary error'; // only retry on a specific error
  *   }
- * }, apiMethod, function(err: Error, result: any) {
+ * }, apiMethod, function(err: any, result: any) {
  *     // do something with the result
  * });
  *
@@ -87,7 +87,7 @@ function constant(value: any) {
  * async.auto({
  *     users: api.getUsers.bind(api),
  *     payments: async.retryable(3, api.getPayments.bind(api))
- * }, function(err: Error, results: any) {
+ * }, function(err: any, results: any) {
  *     // do something with the results
  * });
  *
@@ -95,7 +95,7 @@ function constant(value: any) {
 const DEFAULT_TIMES = 5;
 const DEFAULT_INTERVAL = 0;
 
-export default function retry(opts: RetryOptions, task: Task, callback: Callback) {
+export default function retry(opts: Options, task: Function, callback: Function) {
     var options = {
         times: DEFAULT_TIMES,
         intervalFunc: constant(DEFAULT_INTERVAL)
@@ -133,7 +133,7 @@ export default function retry(opts: RetryOptions, task: Task, callback: Callback
     return callback[PROMISE_SYMBOL]
 }
 
-function parseTimes(acc: any, t: string) {
+function parseTimes(acc: any, t: any) {
     if (typeof t === 'object') {
         acc.times = +t.times || DEFAULT_TIMES;
 

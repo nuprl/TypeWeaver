@@ -53,7 +53,7 @@ function validate(/*Any*/instance: Object,/*Object*/schema: Object) {
 		//
 		return validate(instance, schema, {changing: false});//, coerce: false, existingOnly: false});
 	};
-exports.checkPropertyChange = function(/*Any*/value: /*Object*/value,/*Object*/schema: /*Object*/schema, /*String*/property: String) {
+exports.checkPropertyChange = function(/*Any*/value: Object,/*Object*/schema: Object, /*String*/property: String) {
 		// Summary:
 		// 		The checkPropertyChange method will check to see if an value can legally be in property with the given schema
 		// 		This is slightly different than the validate method in that it will fail if the schema is readonly and it will
@@ -63,17 +63,17 @@ exports.checkPropertyChange = function(/*Any*/value: /*Object*/value,/*Object*/s
 		//
 		return validate(value, schema, {changing: property || "property"});
 	};
-var validate = exports._validate = function(/*Any*/instance: any,/*Object*/schema: any,/*Object*/options: any) {
+var validate = exports._validate = function(/*Any*/instance: Object,/*Object*/schema: Object,/*Object*/options: Object) {
 
 	if (!options) options = {};
 	var _changing = options.changing;
 
-	function getType(schema: any){
+	function getType(schema: Schema){
 		return schema.type || (primitiveConstructors[schema.name] == schema && schema.name.toLowerCase());
 	}
 	var errors = [];
 	// validate a value against a property definition
-	function checkProp(value: any, schema: any, path: string,i: number){
+	function checkProp(value: any, schema: any, path: string,i: any){
 
 		var l;
 		path += path ? typeof i == 'number' ? '[' + i + ']' : typeof i == 'undefined' ? '' : '.' + i : i;
@@ -199,7 +199,7 @@ var validate = exports._validate = function(/*Any*/instance: any,/*Object*/schem
 		return null;
 	}
 	// validate an object against a schema
-	function checkObj(instance: any,objTypeDef: any,path: string,additionalProp: any){
+	function checkObj(instance: any,objTypeDef: any,path: string,additionalProp: boolean){
 
 		if(typeof objTypeDef =='object'){
 			if(typeof instance != 'object' || instance instanceof Array){
@@ -258,7 +258,7 @@ var validate = exports._validate = function(/*Any*/instance: any,/*Object*/schem
 	}
 	return {valid:!errors.length,errors:errors};
 };
-exports.mustBeValid = function(result: any){
+exports.mustBeValid = function(result: IResult){
 	//	summary:
 	//		This checks to ensure that the result is valid and will throw an appropriate error message if it is not
 	// result: the result returned from checkPropertyChange or validate

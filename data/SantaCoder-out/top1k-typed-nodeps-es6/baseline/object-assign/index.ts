@@ -38,7 +38,7 @@ function shouldUseNative() {
 		for (var i = 0; i < 10; i++) {
 			test2['_' + String.fromCharCode(i)] = i;
 		}
-		var order2 = Object.getOwnPropertyNames(test2).map(function (n: number) {
+		var order2 = Object.getOwnPropertyNames(test2).map(function (n: string) {
 			return test2[n];
 		});
 		if (order2.join('') !== '0123456789') {

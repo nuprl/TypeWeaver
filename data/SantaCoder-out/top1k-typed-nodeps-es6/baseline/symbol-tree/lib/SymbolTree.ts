@@ -14,7 +14,7 @@ function returnTrue() {
         return true;
 }
 
-function reverseArrayIndex(array: any[], reverseIndex: number) {
+function reverseArrayIndex(array: Array<any>, reverseIndex: number) {
         return array[array.length - 1 - reverseIndex]; // no need to check `index >= 0`
 }
 
@@ -30,7 +30,7 @@ class SymbolTree {
         }
 
         /**
-         * You can use this function to (optionally: any) initialize an object right after its creation,
+         * You can use this function to (optionally: as) initialize an object right after its creation,
          * to take advantage of V8's fast properties. Also useful if you would like to
          * freeze your object.
          *

@@ -31,7 +31,7 @@ const WHITESPACE_EQUIV_TOKENS = {
     [tokens.comment]: true,
 };
 
-function tokenStart (token: Token) {
+function tokenStart (token: any) {
     return {
         line: token[TOKEN.START_LINE],
         column: token[TOKEN.START_COL],
@@ -68,7 +68,7 @@ function getTokenSource (token: Token) {
     );
 }
 
-function getTokenSourceSpan (startToken: ts.Node, endToken: ts.Node) {
+function getTokenSourceSpan (startToken: Token, endToken: Token) {
     if (!startToken) {
         return undefined;
     }

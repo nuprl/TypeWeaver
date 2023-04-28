@@ -16,14 +16,14 @@ var autoDestroy = function (self: Duplex, err: any) {
   if (self._autoDestroy) self.destroy(err)
 }
 
-var destroyer = function(self: Function, end: Function) {
-  return function(err: any) {
+var destroyer = function(self: Duplex, end: boolean) {
+  return function(err: Error) {
     if (err) autoDestroy(self, err.message === 'premature close' ? null : err)
     else if (end && !self._ended) self.end()
   }
 }
 
-var end = function(ws: WebSocket, fn: Function) {
+var end = function(ws: stream.Writable, fn: Function) {
   if (!ws) return fn()
   if (ws._writableState && ws._writableState.finished) return fn()
   if (ws._writableState) return ws.end(fn)
@@ -33,11 +33,11 @@ var end = function(ws: WebSocket, fn: Function) {
 
 var noop = function() {}
 
-var toStreams2 = function(rs: any) {
+var toStreams2 = function(rs: ReadableStream) {
   return new (stream.Readable)({objectMode:true, highWaterMark:16}).wrap(rs)
 }
 
-var Duplexify = function(writable: Writable, readable: Readable, opts: any) {
+var Duplexify = function(writable: stream.Writable, readable: stream.Readable, opts: DuplexifyOptions) {
   if (!(this instanceof Duplexify)) return new Duplexify(writable, readable, opts)
   stream.Duplex.call(this, opts)
 
@@ -64,7 +64,7 @@ var Duplexify = function(writable: Writable, readable: Readable, opts: any) {
 
 inherits(Duplexify, stream.Duplex)
 
-Duplexify.obj = function(writable: Writable, readable: Readable, opts: any) {
+Duplexify.obj = function(writable: Writable, readable: Readable, opts: DuplexOptions) {
   if (!opts) opts = {}
   opts.objectMode = true
   opts.highWaterMark = 16
@@ -175,7 +175,7 @@ Duplexify.prototype._forward = function() {
   this._forwarding = false
 }
 
-Duplexify.prototype.destroy = function(err: any, cb: any) {
+Duplexify.prototype.destroy = function(err: Error, cb: Function) {
   if (!cb) cb = noop
   if (this.destroyed) return cb(null)
   this.destroyed = true
@@ -203,7 +203,7 @@ Duplexify.prototype._destroy = function(err: Error) {
   this.emit('close')
 }
 
-Duplexify.prototype._write = function(data: Buffer, enc: string, cb: Function) {
+Duplexify.prototype._write = function(data: any, enc: any, cb: any) {
   if (this.destroyed) return
   if (this._corked) return onuncork(this, this._write.bind(this, data, enc, cb))
   if (data === SIGNAL_FLUSH) return this._finish(cb)
@@ -226,7 +226,7 @@ Duplexify.prototype._finish = function(cb: Function) {
   })
 }
 
-Duplexify.prototype.end = function(data: any, enc: string, cb: any) {
+Duplexify.prototype.end = function(data: any, enc: any, cb: any) {
   if (typeof data === 'function') return this.end(null, null, data)
   if (typeof enc === 'function') return this.end(data, null, enc)
   this._ended = true

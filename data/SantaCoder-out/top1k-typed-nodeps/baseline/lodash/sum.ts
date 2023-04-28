@@ -12,7 +12,7 @@ import baseSum from './.internal/baseSum.js'
  * sum([4, 2, 8, 6])
  * // => 20
  */
-function sum(array: number[]) {
+function sum(array: any[]) {
   return (array != null && array.length)
     ? baseSum(array, (value) => value)
     : 0

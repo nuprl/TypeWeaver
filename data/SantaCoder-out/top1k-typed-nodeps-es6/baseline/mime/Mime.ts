@@ -36,7 +36,7 @@ function Mime() {
  * @param map (Object) type definitions
  * @param force (Boolean) if true, force overriding of existing definitions
  */
-Mime.prototype.define = function(typeMap: any, force: boolean) {
+Mime.prototype.define = function(typeMap: TypeMap, force: boolean) {
   for (let type in typeMap) {
     let extensions = typeMap[type].map(function(t: string) {
       return t.toLowerCase();

@@ -11,7 +11,7 @@ import castPath from './castPath.js'
  * @param {Function} predicate The function invoked per property.
  * @returns {Object} Returns the new object.
  */
-function basePickBy(object: any, paths: string[], predicate: any) {
+function basePickBy(object: any, paths: string[], predicate: Function) {
   let index = -1
   const length = paths.length
   const result = {}

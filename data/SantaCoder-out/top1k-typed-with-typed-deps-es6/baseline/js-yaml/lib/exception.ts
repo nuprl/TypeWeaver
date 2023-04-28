@@ -3,7 +3,7 @@
 'use strict';
 
 
-function formatError(exception: Error, compact: boolean) {
+function formatError(exception: YAMLException, compact: boolean) {
   var where = '', message = exception.reason || '(unknown reason)';
 
   if (!exception.mark) return message;

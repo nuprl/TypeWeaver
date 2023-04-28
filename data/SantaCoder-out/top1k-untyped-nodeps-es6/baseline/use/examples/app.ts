@@ -2,7 +2,7 @@
 import util from 'util';
 import plugins from 'base-plugins';
 
-function Factory(config: Config) {
+function Factory(config: Object) {
   this.use = function(fn: Function) {
     fn.call(this, this);
     return this;

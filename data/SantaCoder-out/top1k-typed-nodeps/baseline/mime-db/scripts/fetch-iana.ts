@@ -245,7 +245,7 @@ function * get (type, options) {
   var reduceRows = generateRowMapper(headers)
   var templates = Object.create(null)
 
-  return mimes.map(function (row: any) {
+  return mimes.map(function (row: any[]) {
     var data = row.reduce(reduceRows, { type: type })
 
     if (data.template) {
@@ -312,7 +312,7 @@ function * getTemplateBody (res) {
   }, []).join('\n')
 }
 
-function addSource (data: string, url: string) {
+function addSource (data: Object, url: string) {
   var sources = data.sources || (data.sources = [])
 
   if (sources.indexOf(url) === -1) {
@@ -328,7 +328,7 @@ function appendToLine (line: string, str: string) {
   return trimmed + append
 }
 
-function concat (a: any[], b: any[]) {
+function concat (a: string[], b: string[]) {
   return a.concat(b.filter(Boolean))
 }
 
@@ -391,7 +391,7 @@ function normalizeHeader (val: string) {
 }
 
 function parseReferences (reference: string) {
-  return getUrlReferences(reference).concat(getRfcReferences(reference).map(function (rfc: RFC) {
+  return getUrlReferences(reference).concat(getRfcReferences(reference).map(function (rfc: string) {
     return 'https://tools.ietf.org/rfc/' + rfc.toLowerCase() + '.txt'
   }))
 }

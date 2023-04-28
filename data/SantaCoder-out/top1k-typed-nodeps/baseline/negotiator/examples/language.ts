@@ -20,7 +20,7 @@
     return _results;
   })();
 
-  server = http.createServer(function(req: express.Request, res: express.Response) {
+  server = http.createServer(function(req: Request, res: Response) {
     var language, negotiator;
     negotiator = new Negotiator(req);
     console.log("Accept-Language: " + req.headers['accept-language']);

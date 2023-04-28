@@ -20,7 +20,7 @@
  * findKey(users, ({ age }) => age < 40)
  * // => 'barney' (iteration order is not guaranteed)
  */
-function findKey(object: Object, predicate: any) {
+function findKey(object: any, predicate: any) {
   let result
   if (object == null) {
     return result

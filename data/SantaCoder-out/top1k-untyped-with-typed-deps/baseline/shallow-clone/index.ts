@@ -55,7 +55,7 @@ function cloneRegExp(val: RegExp) {
   return re;
 }
 
-function cloneArrayBuffer(val: ArrayBuffer) {
+function cloneArrayBuffer(val: any) {
   const res = new val.constructor(val.byteLength);
   new Uint8Array(res).set(new Uint8Array(val));
   return res;

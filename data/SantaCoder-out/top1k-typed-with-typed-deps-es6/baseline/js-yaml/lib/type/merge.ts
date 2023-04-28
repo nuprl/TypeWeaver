@@ -2,7 +2,7 @@
 
 import Type from '../type';
 
-function resolveYamlMerge(data: any) {
+function resolveYamlMerge(data: unknown) {
   return data === '<<' || data === null;
 }
 

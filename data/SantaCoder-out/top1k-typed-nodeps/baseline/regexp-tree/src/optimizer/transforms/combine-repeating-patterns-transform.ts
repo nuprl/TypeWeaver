@@ -47,7 +47,7 @@ module.exports = {
 };
 
 // abcabc -> (?:abc){2}
-function combineRepeatingPatternLeft(alternative: string, child: string, index: number) {
+function combineRepeatingPatternLeft(alternative: NodePath<T>, child: NodePath<T>, index: number) {
   const {node} = alternative;
 
   const nbPossibleLengths = Math.ceil(index / 2);
@@ -105,7 +105,7 @@ function combineRepeatingPatternLeft(alternative: string, child: string, index: 
 }
 
 // (?:abc){2}abc -> (?:abc){3}
-function combineWithPreviousRepetition(alternative: Alternative, child: React.ReactNode, index: number) {
+function combineWithPreviousRepetition(alternative: Alternative, child: Node, index: number) {
   const {node} = alternative;
 
   let i = 0;

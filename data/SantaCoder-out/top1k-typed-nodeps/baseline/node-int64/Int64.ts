@@ -50,7 +50,7 @@ for (var i = 0; i < 256; i++) {
  * new Int64(number)             - Number (throws if n is outside int64 range)
  * new Int64(hi, lo)             - Raw bits as two 32-bit values
  */
-var Int64 = module.exports = function(a1: Buffer, a2: Buffer) {
+var Int64 = module.exports = function(a1: any, a2: any) {
   if (a1 instanceof Buffer) {
     this.buffer = a1;
     this.offset = a2 || 0;
@@ -234,7 +234,7 @@ Int64.prototype = {
    *
    * @param {Int64} other  Other Int64 to compare.
    */
-  compare: function(other: BigInt) {
+  compare: function(other: Int64) {
 
     // If sign bits differ ...
     if ((this.buffer[this.offset] & 0x80) != (other.buffer[other.offset] & 0x80)) {
@@ -255,7 +255,7 @@ Int64.prototype = {
    *
    * @param {Int64} other  Other Int64 to compare.
    */
-  equals: function(other: T) {
+  equals: function(other: Int64) {
     return this.compare(other) === 0;
   },
 

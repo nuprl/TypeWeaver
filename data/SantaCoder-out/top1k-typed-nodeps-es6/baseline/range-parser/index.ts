@@ -123,7 +123,7 @@ function combineRanges (ranges: Range[]) {
  * @private
  */
 
-function mapWithIndex (range: number, index: number) {
+function mapWithIndex (range: Range, index: number) {
   return {
     start: range.start,
     end: range.end,

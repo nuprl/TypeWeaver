@@ -40,7 +40,7 @@ co.wrap = function (fn: Function) {
  * @api public
  */
 
-function co(gen: Generator) {
+function co(gen: Function) {
   var ctx = this;
   var args = slice.call(arguments, 1);
 
@@ -95,7 +95,7 @@ function co(gen: Generator) {
      * @api private
      */
 
-    function next(ret: IteratorResult<T>) {
+    function next(ret: any) {
       if (ret.done) return resolve(ret.value);
       var value = toPromise.call(ctx, ret.value);
       if (value && isPromise(value)) return value.then(onFulfilled, onRejected);

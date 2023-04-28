@@ -15,7 +15,7 @@ module.exports.descending = serialOrdered.descending;
  * @param   {function} callback - invoked when all elements processed
  * @returns {stream.Readable#}
  */
-function ReadableSerialOrdered(list: Array<any>, iterator: any, sortMethod: any, callback: any)
+function ReadableSerialOrdered(list: Array<any>, iterator: Function, sortMethod: Function, callback: Function)
 {
   if (!(this instanceof ReadableSerialOrdered))
   {

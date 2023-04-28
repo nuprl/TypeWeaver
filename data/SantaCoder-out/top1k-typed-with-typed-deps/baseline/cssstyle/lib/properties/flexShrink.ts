@@ -3,12 +3,12 @@
 var parseNumber = require('../parsers').parseNumber;
 var POSITION_AT_SHORTHAND = require('../constants').POSITION_AT_SHORTHAND;
 
-module.exports.isValid = function isValid(v: string, positionAtFlexShorthand: boolean) {
+module.exports.isValid = function isValid(v: string, positionAtFlexShorthand: number) {
   return parseNumber(v) !== undefined && positionAtFlexShorthand === POSITION_AT_SHORTHAND.second;
 };
 
 module.exports.definition = {
-  set: function(v: string) {
+  set: function(v: number) {
     this._setProperty('flex-shrink', parseNumber(v));
   },
   get: function() {

@@ -21,7 +21,7 @@ function asciiCaseInsensitiveMatch(a: string, b: string) {
   return true;
 }
 
-function recordNamespaceInformation(element: Element, map: NamespaceMap, prefixMap: NamespaceMap) {
+function recordNamespaceInformation(element: Element, map: NamespaceMap, prefixMap: PrefixMap) {
   let defaultNamespaceAttrValue = null;
   for (let i = 0; i < element.attributes.length; ++i) {
     const attr = element.attributes[i];
@@ -57,7 +57,7 @@ function recordNamespaceInformation(element: Element, map: NamespaceMap, prefixM
   return defaultNamespaceAttrValue;
 }
 
-function serializeDocumentType(node: DocumentType, namespace: string, prefixMap: any, requireWellFormed: boolean) {
+function serializeDocumentType(node: DocumentType, namespace: string, prefixMap: PrefixMap, requireWellFormed: boolean) {
   if (requireWellFormed && !PUBID_CHAR.test(node.publicId)) {
     throw new Error("Failed to serialize XML: document type node publicId is not well-formed.");
   }
@@ -146,7 +146,7 @@ function serializeDocumentFragment(
   return markup;
 }
 
-function serializeText(node: Node, namespace: string, prefixMap: PrefixMap, requireWellFormed: Boolean) {
+function serializeText(node: Text, namespace: string, prefixMap: PrefixMap, requireWellFormed: boolean) {
   if (requireWellFormed && !XML_CHAR.test(node.data)) {
     throw new Error("Failed to serialize XML: text node data is not well-formed.");
   }
@@ -157,7 +157,7 @@ function serializeText(node: Node, namespace: string, prefixMap: PrefixMap, requ
     .replace(/>/ug, "&gt;");
 }
 
-function serializeComment(node: Node, namespace: string, prefixMap: PrefixMap, requireWellFormed: Boolean) {
+function serializeComment(node: Comment, namespace: string, prefixMap: PrefixMap, requireWellFormed: boolean) {
   if (requireWellFormed && !XML_CHAR.test(node.data)) {
     throw new Error("Failed to serialize XML: comment node data is not well-formed.");
   }
@@ -171,7 +171,7 @@ function serializeComment(node: Node, namespace: string, prefixMap: PrefixMap, r
   return `<!--${node.data}-->`;
 }
 
-function serializeElement(node: Element, namespace: string, prefixMap: any, requireWellFormed: any, refs: any) {
+function serializeElement(node: Element, namespace: string, prefixMap: PrefixMap, requireWellFormed: boolean, refs: RefMap) {
   if (
     requireWellFormed &&
     (node.localName.includes(":") || !xnv.name(node.localName))
@@ -302,7 +302,7 @@ function serializeCDATASection(node: CDATASection) {
 /**
  * @param {{prefixIndex: number}} refs
  */
-function xmlSerialization(node: Node, namespace: string, prefixMap: PrefixMap, requireWellFormed: Boolean, refs: any) {
+function xmlSerialization(node: Node, namespace: string, prefixMap: PrefixMap, requireWellFormed: boolean, refs: Refs) {
   switch (node.nodeType) {
     case NODE_TYPES.ELEMENT_NODE:
       return serializeElement(

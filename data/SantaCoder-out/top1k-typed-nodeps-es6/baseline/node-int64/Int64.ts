@@ -237,7 +237,7 @@ Int64.prototype = {
    *
    * @param {Int64} other  Other Int64 to compare.
    */
-  compare: function(other: BigRational) {
+  compare: function(other: Long) {
 
     // If sign bits differ ...
     if ((this.buffer[this.offset] & 0x80) != (other.buffer[other.offset] & 0x80)) {
@@ -258,7 +258,7 @@ Int64.prototype = {
    *
    * @param {Int64} other  Other Int64 to compare.
    */
-  equals: function(other: T) {
+  equals: function(other: Int64) {
     return this.compare(other) === 0;
   },
 

@@ -5,23 +5,23 @@ import rneedsContext from "./var/rneedsContext.js";
 import "../selector.js";
 
 // Implement the identical functionality for filter and not
-function winnow( elements: Array<Element>, qualifier: string, not : boolean) {
+function winnow( elements: ArrayLike<Element>, qualifier: string, not : boolean) {
 	if ( typeof qualifier === "function" ) {
-		return jQuery.grep( elements, function( elem: JQuery, i : number) {
+		return jQuery.grep( elements, function( elem: Element, i : number) {
 			return !!qualifier.call( elem, i, elem ) !== not;
 		} );
 	}
 
 	// Single element
 	if ( qualifier.nodeType ) {
-		return jQuery.grep( elements, function( elem : HTMLElement) {
+		return jQuery.grep( elements, function( elem : Element) {
 			return ( elem === qualifier ) !== not;
 		} );
 	}
 
 	// Arraylike of elements (jQuery, arguments, Array)
 	if ( typeof qualifier !== "string" ) {
-		return jQuery.grep( elements, function( elem : HTMLElement) {
+		return jQuery.grep( elements, function( elem : Element) {
 			return ( indexOf.call( qualifier, elem ) > -1 ) !== not;
 		} );
 	}
@@ -30,7 +30,7 @@ function winnow( elements: Array<Element>, qualifier: string, not : boolean) {
 	return jQuery.filter( qualifier, elements, not );
 }
 
-jQuery.filter = function( expr: string, elems: JQuery, not : boolean) {
+jQuery.filter = function( expr: string, elems: Array<Element>, not : boolean) {
 	var elem = elems[ 0 ];
 
 	if ( not ) {
@@ -41,13 +41,13 @@ jQuery.filter = function( expr: string, elems: JQuery, not : boolean) {
 		return jQuery.find.matchesSelector( elem, expr ) ? [ elem ] : [];
 	}
 
-	return jQuery.find.matches( expr, jQuery.grep( elems, function( elem : Node) {
+	return jQuery.find.matches( expr, jQuery.grep( elems, function( elem : Element) {
 		return elem.nodeType === 1;
 	} ) );
 };
 
 jQuery.fn.extend( {
-	find: function( selector : string) {
+	find: function( selector : any) {
 		var i, ret,
 			len = this.length,
 			self = this;
@@ -76,7 +76,7 @@ jQuery.fn.extend( {
 	not: function( selector : string) {
 		return this.pushStack( winnow( this, selector || [], true ) );
 	},
-	is: function( selector : string) {
+	is: function( selector : any) {
 		return !!winnow(
 			this,
 

@@ -3,7 +3,7 @@
 import Iteration from './iteration';
 
 export default ArrayIterator;
-function ArrayIterator(iterable: Iterable<T>, start: number, stop: number, step: number) {
+function ArrayIterator(iterable: Array, start: number, stop: number, step: number) {
     this.array = iterable;
     this.start = start || 0;
     this.stop = stop || Infinity;

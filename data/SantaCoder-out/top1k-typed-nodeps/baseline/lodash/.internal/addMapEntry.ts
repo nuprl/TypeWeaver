@@ -6,7 +6,7 @@
  * @param {Array} pair The key-value pair to add.
  * @returns {Object} Returns `map`.
  */
-function addMapEntry(map: any, pair: any) {
+function addMapEntry(map: any, pair: any[]) {
   // Don't return `map.set` because it's not chainable in IE 11.
   map.set(pair[0], pair[1])
   return map

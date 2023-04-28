@@ -125,7 +125,7 @@ function merge2 () {
 }
 
 // check and pause streams for pipe.
-function pauseStreams (streams: Array<Stream>, options: Object) {
+function pauseStreams (streams: ReadableStream[], options: ReadableOptions) {
   if (!Array.isArray(streams)) {
     // Backwards-compat with old-style streams
     if (!streams._readableState && streams.pipe) {

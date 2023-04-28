@@ -21,7 +21,7 @@ import awaitify from './internal/awaitify.js'
  * (err, results).
  * @returns A Promise, if no callback is passed
  */
-function concatSeries(coll: any[], iteratee: any, callback: any) {
+function concatSeries(coll: any[], iteratee: Function, callback: Function) {
     return concatLimit(coll, 1, iteratee, callback)
 }
 export default awaitify(concatSeries, 3);

@@ -27,11 +27,11 @@ function returnFalse() {
 // and blur to be synchronous when the element is not already active.
 // (focus and blur are always synchronous in other supported browsers,
 // this just defines when we can count on it).
-function expectSync( elem: HTMLElement, type : string) {
+function expectSync( elem: HTMLElement, type : "focus") {
 	return ( elem === document.activeElement ) === ( type === "focus" );
 }
 
-function on( elem: HTMLElement, types: string, selector: string, data: any, fn: any, one : any) {
+function on( elem: Element, types: string, selector: string, data: any, fn: Function, one : boolean) {
 	var origFn, type;
 
 	// Types can be a map of types/handlers
@@ -98,7 +98,7 @@ function on( elem: HTMLElement, types: string, selector: string, data: any, fn: 
  */
 jQuery.event = {
 
-	add: function( elem: HTMLElement, types: string, handler: Function, data: any, selector : string) {
+	add: function( elem: Element, types: string, handler: Function, data: any, selector : any) {
 
 		var handleObjIn, eventHandle, tmp,
 			events, t, handleObj,
@@ -133,7 +133,7 @@ jQuery.event = {
 			events = elemData.events = Object.create( null );
 		}
 		if ( !( eventHandle = elemData.handle ) ) {
-			eventHandle = elemData.handle = function( e : Event) {
+			eventHandle = elemData.handle = function( e : JQuery.TriggeredEvent) {
 
 				// Discard the second event of a jQuery.event.trigger() and
 				// when an event is called after a page has unloaded
@@ -210,7 +210,7 @@ jQuery.event = {
 	},
 
 	// Detach an event or set of events from an element
-	remove: function( elem: HTMLElement, types: string, handler: Function, selector: string, mappedTypes : any[]) {
+	remove: function( elem: HTMLElement, types: string, handler: Function, selector: string, mappedTypes : string[]) {
 
 		var j, origCount, tmp,
 			events, t, handleObj,
@@ -283,7 +283,7 @@ jQuery.event = {
 		}
 	},
 
-	dispatch: function( nativeEvent : MouseEvent) {
+	dispatch: function( nativeEvent : Event) {
 
 		var i, j, ret, matched, handleObj, handlerQueue,
 			args = new Array( arguments.length ),
@@ -351,7 +351,7 @@ jQuery.event = {
 		return event.result;
 	},
 
-	handlers: function( event: Event, handlers : Array<Function>) {
+	handlers: function( event: JQuery.TriggeredEvent, handlers : JQuery.EventHandler<TElement>) {
 		var i, handleObj, sel, matchedHandlers, matchedSelectors,
 			handlerQueue = [],
 			delegateCount = handlers.delegateCount,
@@ -433,7 +433,7 @@ jQuery.event = {
 		} );
 	},
 
-	fix: function( originalEvent : JQueryEventObject) {
+	fix: function( originalEvent : Event) {
 		return originalEvent[ jQuery.expando ] ?
 			originalEvent :
 			new jQuery.Event( originalEvent );
@@ -448,7 +448,7 @@ jQuery.event = {
 		click: {
 
 			// Utilize native event to ensure correct state for checkable inputs
-			setup: function( data : any) {
+			setup: function( data : Event) {
 
 				// For mutual compressibility with _default, replace `this` access with a local var.
 				// `|| data` is dead code meant only to preserve the variable through minification.
@@ -511,7 +511,7 @@ jQuery.event = {
 // synthetic events by interrupting progress until reinvoked in response to
 // *native* events that it fires directly, ensuring that state changes have
 // already occurred before other listeners are invoked.
-function leverageNative( el: HTMLElement, type: string, expectSync : boolean) {
+function leverageNative( el: Element, type: string, expectSync : boolean) {
 
 	// Missing expectSync indicates a trigger call, which must force setup through jQuery.event.add
 	if ( !expectSync ) {
@@ -608,7 +608,7 @@ jQuery.removeEvent = function( elem: HTMLElement, type: string, handle : EventLi
 	}
 };
 
-jQuery.Event = function( src: string, props : any) {
+jQuery.Event = function( src: Event, props : any) {
 
 	// Allow instantiation without the 'new' keyword
 	if ( !( this instanceof jQuery.Event ) ) {
@@ -789,13 +789,13 @@ jQuery.each( {
 
 jQuery.fn.extend( {
 
-	on: function( types: string, selector: string, data: any, fn : any) {
+	on: function( types: string, selector: string, data: any, fn : Function) {
 		return on( this, types, selector, data, fn );
 	},
-	one: function( types: string, selector: string, data: any, fn : Function) {
+	one: function( types: string, selector: string, data: any, fn : any) {
 		return on( this, types, selector, data, fn, 1 );
 	},
-	off: function( types: string, selector: string, fn : Function) {
+	off: function( types: JQuery.TypeEventHandler<TElement>, selector: JQuery.Selector, fn : JQuery.TypeEventHandler<TElement>) {
 		var handleObj, type;
 		if ( types && types.preventDefault && types.handleObj ) {
 

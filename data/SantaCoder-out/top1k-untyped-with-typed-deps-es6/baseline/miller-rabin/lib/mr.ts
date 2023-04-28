@@ -1,7 +1,7 @@
 import bn from 'bn.js';
 import brorand from 'brorand';
 
-function MillerRabin(rand: IRandom) {
+function MillerRabin(rand: brorand.Rand) {
   this.rand = rand || new brorand.Rand();
 }
 export default MillerRabin;
@@ -10,7 +10,7 @@ MillerRabin.create = function create(rand: Random) {
   return new MillerRabin(rand);
 };
 
-MillerRabin.prototype._randbelow = function _randbelow(n: bigint) {
+MillerRabin.prototype._randbelow = function _randbelow(n: number) {
   var len = n.bitLength();
   var min_bytes = Math.ceil(len / 8);
 
@@ -23,13 +23,13 @@ MillerRabin.prototype._randbelow = function _randbelow(n: bigint) {
   return a;
 };
 
-MillerRabin.prototype._randrange = function _randrange(start: number, stop: number) {
+MillerRabin.prototype._randrange = function _randrange(start: BN, stop: BN) {
   // Generate a random number greater than or equal to start and less than stop.
   var size = stop.sub(start);
   return start.add(this._randbelow(size));
 };
 
-MillerRabin.prototype.test = function test(n: BigInteger, k: number, cb: any) {
+MillerRabin.prototype.test = function test(n: bn, k: number, cb: Function) {
   var len = n.bitLength();
   var red = bn.mont(n);
   var rone = new bn(1).toRed(red);
@@ -70,7 +70,7 @@ MillerRabin.prototype.test = function test(n: BigInteger, k: number, cb: any) {
   return prime;
 };
 
-MillerRabin.prototype.getDivisor = function getDivisor(n: BigInteger, k: number) {
+MillerRabin.prototype.getDivisor = function getDivisor(n: bn, k: number) {
   var len = n.bitLength();
   var red = bn.mont(n);
   var rone = new bn(1).toRed(red);

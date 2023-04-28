@@ -22,7 +22,7 @@ var unilateralTags = ['subscription', 'log'];
  *     If not provided, the Client locates the binary using the PATH specified
  *     by the node child_process's default env.
  */
-function Client(options: any) {
+function Client(options: Object) {
   var self = this;
   EE.call(this);
 
@@ -78,7 +78,7 @@ Client.prototype.connect = function() {
     // bunser will decode the watchman BSER protocol for us
     self.bunser = new bser.BunserBuf();
     // For each decoded line:
-    self.bunser.on('value', function(obj: any) {
+    self.bunser.on('value', function(obj: Object) {
       // Figure out if this is a unliteral response or if it is the
       // response portion of a request-response sequence.  At the time
       // of writing, there are only two possible unilateral responses.
@@ -117,7 +117,7 @@ Client.prototype.connect = function() {
       self.emit('connect');
       self.sendNextCommand();
     });
-    self.socket.on('error', function(err: any) {
+    self.socket.on('error', function(err: Error) {
       self.connecting = false;
       self.emit('error', err);
     });
@@ -220,7 +220,7 @@ Client.prototype.connect = function() {
   });
 }
 
-Client.prototype.command = function(args: any, done: any) {
+Client.prototype.command = function(args: Array<any>, done: Function) {
   done = done || function() {};
 
   // Queue up the command
@@ -288,7 +288,7 @@ Client.prototype._synthesizeCapabilityCheck = function(
   return resp;
 }
 
-Client.prototype.capabilityCheck = function(caps: any, done: Function) {
+Client.prototype.capabilityCheck = function(caps: Capabilities, done: Function) {
   var optional = caps.optional || [];
   var required = caps.required || [];
   var self = this;

@@ -57,7 +57,7 @@ colors.stripColors = colors.strip = function(str: string) {
 };
 
 // eslint-disable-next-line no-unused-vars
-var stylize = colors.stylize = function stylize(str: string, style: Style) {
+var stylize = colors.stylize = function stylize(str: string, style: string) {
   if (!colors.enabled) {
     return str+'';
   }

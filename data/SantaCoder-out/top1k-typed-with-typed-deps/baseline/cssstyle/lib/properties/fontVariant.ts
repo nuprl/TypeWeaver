@@ -2,7 +2,7 @@
 
 var valid_variants = ['normal', 'small-caps', 'inherit'];
 
-module.exports.isValid = function isValid(v: any) {
+module.exports.isValid = function isValid(v: string) {
   return valid_variants.indexOf(v.toLowerCase()) !== -1;
 };
 

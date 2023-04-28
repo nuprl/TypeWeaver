@@ -27,7 +27,7 @@ import { promiseCallback, PROMISE_SYMBOL } from './internal/promiseCallback.js'
  *     var User = request.models.User;
  *     async.seq(
  *         User.get.bind(User),  // 'User.get' has signature (id, callback(err, data))
- *         function(user: User, fn: Function) {
+ *         function(user: User, fn: any) {
  *             user.getCats(fn);      // 'getCats' has signature (callback(err, data))
  *         }
  *     )(req.session.user_id, function (err: Error, cats: Cat[]) {
@@ -40,7 +40,7 @@ import { promiseCallback, PROMISE_SYMBOL } from './internal/promiseCallback.js'
  *     });
  * });
  */
-export default function seq(...functions: any) {
+export default function seq(...functions: Array<Function>) {
     var _functions = functions.map(wrapAsync);
     return function (...args: any[]) {
         var that = this;

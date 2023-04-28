@@ -3,7 +3,7 @@
 import Module from 'module';
 import path from 'path';
 
-export default function requireFromString(code: string, filename: string, opts: any) {
+export default function requireFromString(code: string, filename: string, opts: Options) {
 	if (typeof filename === 'object') {
 		opts = filename;
 		filename = undefined;

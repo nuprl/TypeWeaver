@@ -19,7 +19,7 @@ export function calcLineCount(hunk: Hunk) {
   }
 }
 
-export function merge(mine: any, theirs: any, base: any) {
+export function merge(mine: string, theirs: string, base: string) {
   mine = loadPatch(mine, base);
   theirs = loadPatch(theirs, base);
 
@@ -114,7 +114,7 @@ function fileNameChanged(patch: Patch) {
   return patch.newFileName && patch.newFileName !== patch.oldFileName;
 }
 
-function selectField(index: number, mine: boolean, theirs: boolean) {
+function selectField(index: number, mine: any, theirs: any) {
   if (mine === theirs) {
     return mine;
   } else {
@@ -123,7 +123,7 @@ function selectField(index: number, mine: boolean, theirs: boolean) {
   }
 }
 
-function hunkBefore(test: string, check: string) {
+function hunkBefore(test: Hunk, check: Hunk) {
   return test.oldStart < check.oldStart
     && (test.oldStart + test.oldLines) < check.oldStart;
 }
@@ -185,7 +185,7 @@ function mergeLines(hunk: Hunk, mineOffset: number, mineLines: string[], theirOf
   calcLineCount(hunk);
 }
 
-function mutualChange(hunk: Hunk, mine: string, their: string) {
+function mutualChange(hunk: Hunk, mine: Hunk, their: Hunk) {
   let myChanges = collectChange(mine),
       theirChanges = collectChange(their);
 
@@ -208,7 +208,7 @@ function mutualChange(hunk: Hunk, mine: string, their: string) {
   conflict(hunk, myChanges, theirChanges);
 }
 
-function removal(hunk: Hunk, mine: Hunk, their: Hunk, swap: boolean) {
+function removal(hunk: Hunk, mine: boolean, their: boolean, swap: boolean) {
   let myChanges = collectChange(mine),
       theirChanges = collectContext(their, myChanges);
   if (theirChanges.merged) {
@@ -227,14 +227,14 @@ function conflict(hunk: Hunk, mine: Hunk, their: Hunk) {
   });
 }
 
-function insertLeading(hunk: Hunk, insert: string, their: string) {
+function insertLeading(hunk: Hunk, insert: Hunk, their: Hunk) {
   while (insert.offset < their.offset && insert.index < insert.lines.length) {
     let line = insert.lines[insert.index++];
     hunk.lines.push(line);
     insert.offset++;
   }
 }
-function insertTrailing(hunk: Hunk, insert: string) {
+function insertTrailing(hunk: Hunk, insert: Insert) {
   while (insert.index < insert.lines.length) {
     let line = insert.lines[insert.index++];
     hunk.lines.push(line);
@@ -262,7 +262,7 @@ function collectChange(state: State) {
 
   return ret;
 }
-function collectContext(state: State, matchChanges: boolean) {
+function collectContext(state: State, matchChanges: MatchChange[]) {
   let changes = [],
       merged = [],
       matchIndex = 0,
@@ -321,12 +321,12 @@ function collectContext(state: State, matchChanges: boolean) {
   };
 }
 
-function allRemoves(changes: Change[]) {
-  return changes.reduce(function(prev: boolean, change: boolean) {
+function allRemoves(changes: string[]) {
+  return changes.reduce(function(prev: boolean, change: string) {
     return prev && change[0] === '-';
   }, true);
 }
-function skipRemoveSuperset(state: State, removeChanges: Change[], delta: number) {
+function skipRemoveSuperset(state: State, removeChanges: string[], delta: number) {
   for (let i = 0; i < delta; i++) {
     let changeContent = removeChanges[removeChanges.length - delta + i].substr(1);
     if (state.lines[state.index + i] !== ' ' + changeContent) {
@@ -342,7 +342,7 @@ function calcOldNewLineCount(lines: string[]) {
   let oldLines = 0;
   let newLines = 0;
 
-  lines.forEach(function(line: string) {
+  lines.forEach(function(line: any) {
     if (typeof line !== 'string') {
       let myCount = calcOldNewLineCount(line.mine);
       let theirCount = calcOldNewLineCount(line.theirs);

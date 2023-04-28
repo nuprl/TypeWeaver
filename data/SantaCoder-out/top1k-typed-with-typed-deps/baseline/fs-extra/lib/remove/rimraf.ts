@@ -24,7 +24,7 @@ function defaults (options: Options) {
   options.maxBusyTries = options.maxBusyTries || 3
 }
 
-function rimraf (p: string, options: any, cb: Function) {
+function rimraf (p: string, options: rimraf.Options, cb: rimraf.Callback) {
   let busyTries = 0
 
   if (typeof options === 'function') {
@@ -109,7 +109,7 @@ function rimraf_ (p: string, options: rimraf.Options, cb: rimraf.Callback) {
   })
 }
 
-function fixWinEPERM (p: string, options: FixWinEPERMOpts, er: any, cb: any) {
+function fixWinEPERM (p: string, options: MakeDirectoryOptions, er: any, cb: Function) {
   assert(p)
   assert(options)
   assert(typeof cb === 'function')
@@ -183,7 +183,7 @@ function rmdir (p: string, options: RmDirOptions, originalEr: any, cb: Function)
   })
 }
 
-function rmkids (p: string, options: RmOptions, cb: RmCallback) {
+function rmkids (p: string, options: RimrafOptions, cb: Function) {
   assert(p)
   assert(options)
   assert(typeof cb === 'function')
@@ -213,7 +213,7 @@ function rmkids (p: string, options: RmOptions, cb: RmCallback) {
 // this looks simpler, and is strictly *faster*, but will
 // tie up the JavaScript thread and fail on excessively
 // deep directory trees.
-function rimrafSync (p: string, options: any) {
+function rimrafSync (p: string, options: Options) {
   let st
 
   options = options || {}

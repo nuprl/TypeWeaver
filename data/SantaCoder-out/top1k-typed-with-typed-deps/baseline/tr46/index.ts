@@ -9,7 +9,7 @@ function containsNonASCII(str: string) {
   return /[^\x00-\x7F]/u.test(str);
 }
 
-function findStatus(val: string, { useSTD3ASCIIRules }: Options) {
+function findStatus(val: number, { useSTD3ASCIIRules }: Options) {
   let start = 0;
   let end = mappingTable.length - 1;
 
@@ -41,7 +41,7 @@ function findStatus(val: string, { useSTD3ASCIIRules }: Options) {
   return null;
 }
 
-function mapChars(domainName: string, { useSTD3ASCIIRules: useSTD3ASCIIRules, processingOption }: IOptions) {
+function mapChars(domainName: string, { useSTD3ASCIIRules: useSTD3ASCIIRules, processingOption }: Options) {
   let hasError = false;
   let processed = "";
 
@@ -172,7 +172,7 @@ function isBidiDomain(labels: string[]) {
   return regexes.bidiDomain.test(domain);
 }
 
-function processing(domainName: string, options: Options) {
+function processing(domainName: string, options: ProcessingOptions) {
   const { processingOption } = options;
 
   // 1. Map.

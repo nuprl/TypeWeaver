@@ -8,7 +8,7 @@ import "./css.js";
 import "./selector.js"; // contains
 
 jQuery.offset = {
-	setOffset: function( elem: HTMLElement, options: any, i : number) {
+	setOffset: function( elem: HTMLElement, options: JQueryUI.PositionOptions, i : number) {
 		var curPosition, curLeft, curCSSTop, curTop, curOffset, curCSSLeft, calculatePosition,
 			position = jQuery.css( elem, "position" ),
 			curElem = jQuery( elem ),
@@ -62,7 +62,7 @@ jQuery.offset = {
 jQuery.fn.extend( {
 
 	// offset() relates an element's border box to the document origin
-	offset: function( options : any) {
+	offset: function( options : JQueryOffsetSetOptions) {
 
 		// Preserve chaining for setter
 		if ( arguments.length ) {
@@ -171,7 +171,7 @@ jQuery.each( { scrollLeft: "pageXOffset", scrollTop: "pageYOffset" }, function( 
 	var top = "pageYOffset" === prop;
 
 	jQuery.fn[ method ] = function( val : any) {
-		return access( this, function( elem: HTMLElement, method: string, val : any) {
+		return access( this, function( elem: Element, method: string, val : any) {
 
 			// Coalesce documents and windows
 			var win;

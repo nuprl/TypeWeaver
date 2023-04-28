@@ -23,7 +23,7 @@ import awaitify from './internal/awaitify.js'
  * (err, result).
  * @returns {Promise} a promise, if a callback is omitted
  */
-function detectSeries(coll: any[], iteratee: any, callback: any) {
+function detectSeries(coll: any[], iteratee: Function, callback: Function) {
     return createTester(bool => bool, (res, item) => item)(eachOfLimit(1), coll, iteratee, callback)
 }
 

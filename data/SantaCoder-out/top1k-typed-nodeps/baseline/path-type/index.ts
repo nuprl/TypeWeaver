@@ -17,7 +17,7 @@ async function isType(fsStatType: string, statsMethodName: string, filePath: str
 	}
 }
 
-function isTypeSync(fsStatType: number, statsMethodName: string, filePath: string) {
+function isTypeSync(fsStatType: string, statsMethodName: string, filePath: string) {
 	if (typeof filePath !== 'string') {
 		throw new TypeError(`Expected a string, got ${typeof filePath}`);
 	}

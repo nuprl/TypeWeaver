@@ -120,7 +120,7 @@ function hasbody (req: IncomingMessage) {
  * @public
  */
 
-function typeofrequest (req: any, types_: any) {
+function typeofrequest (req: IncomingMessage, types_: string[]) {
   var types = types_
 
   // no body

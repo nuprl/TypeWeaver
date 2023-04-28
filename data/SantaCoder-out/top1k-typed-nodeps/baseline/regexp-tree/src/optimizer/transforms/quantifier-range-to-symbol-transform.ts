@@ -36,7 +36,7 @@ module.exports = {
   }
 };
 
-function rewriteOpenZero(path: NodePath<t.Expression>) {
+function rewriteOpenZero(path: NodePath<t.NumericLiteral>) {
   const {node} = path;
 
   if (node.from !== 0 || node.to) {
@@ -47,7 +47,7 @@ function rewriteOpenZero(path: NodePath<t.Expression>) {
   delete node.from;
 }
 
-function rewriteOpenOne(path: NodePath<t.CallExpression>) {
+function rewriteOpenOne(path: NodePath<t.SequenceExpression>) {
   const {node} = path;
 
   if (node.from !== 1 || node.to) {
@@ -58,7 +58,7 @@ function rewriteOpenOne(path: NodePath<t.CallExpression>) {
   delete node.from;
 }
 
-function rewriteExactOne(path: NodePath<t.Expression>) {
+function rewriteExactOne(path: NodePath<t.SequenceExpression>) {
   const {node} = path;
 
   if (node.from !== 1 || node.to !== 1) {

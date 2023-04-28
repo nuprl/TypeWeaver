@@ -10,7 +10,7 @@ import { ECCurveFp } from './ec.js';
 // X9ECParameters
 
 // constructor
-function X9ECParameters(curve: ECCurve, g: ECPoint, n: BigInteger, h: BigInteger) {
+function X9ECParameters(curve: ECPublicKeyParameters, g: ECPublicKeyParameters, n: BigInteger, h: BigInteger) {
   this.curve = curve;
   this.g = g;
   this.n = n;

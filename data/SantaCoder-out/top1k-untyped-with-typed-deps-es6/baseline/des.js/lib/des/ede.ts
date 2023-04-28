@@ -5,7 +5,7 @@ import inherits from 'inherits';
 import Cipher from './cipher';
 import DES from './des';
 
-function EDEState(type: string, key: string) {
+function EDEState(type: string, key: Buffer) {
   assert.equal(key.length, 24, 'Invalid key length');
 
   var k1 = key.slice(0, 8);
@@ -37,7 +37,7 @@ inherits(EDE, Cipher);
 
 export default EDE;
 
-EDE.create = function create(options: EDEOptions) {
+EDE.create = function create(options: any) {
   return new EDE(options);
 };
 

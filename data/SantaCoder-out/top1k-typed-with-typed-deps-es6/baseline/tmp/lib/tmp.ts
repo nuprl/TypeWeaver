@@ -56,7 +56,7 @@ let
  * @param {(Options|tmpNameCallback)} options options or callback
  * @param {?tmpNameCallback} callback the callback function
  */
-function tmpName(options: Options, callback: any) {
+function tmpName(options: Options, callback: Callback) {
   const
     args = _parseArguments(options, callback),
     opts = args[0],
@@ -124,19 +124,19 @@ function tmpNameSync(options: Options) {
  * @param {(Options|null|undefined|fileCallback)} options the config options or the callback function or null or undefined
  * @param {?fileCallback} callback
  */
-function file(options: FileOptions, callback: any) {
+function file(options: Options, callback: Callback<string>) {
   const
     args = _parseArguments(options, callback),
     opts = args[0],
     cb = args[1];
 
   // gets a temporary filename
-  tmpName(opts, function _tmpNameCreated(err: any, name: string) {
+  tmpName(opts, function _tmpNameCreated(err: Error, name: string) {
     /* istanbul ignore else */
     if (err) return cb(err);
 
     // create and open the file
-    fs.open(name, CREATE_FLAGS, opts.mode || FILE_MODE, function _fileCreated(err: any, fd: number) {
+    fs.open(name, CREATE_FLAGS, opts.mode || FILE_MODE, function _fileCreated(err: ErrnoException, fd: number) {
       /* istanbu ignore else */
       if (err) return cb(err);
 
@@ -162,7 +162,7 @@ function file(options: FileOptions, callback: any) {
  * @returns {FileSyncObject} object consists of name, fd and removeCallback
  * @throws {Error} if cannot create a file
  */
-function fileSync(options: FileOptions) {
+function fileSync(options: Options) {
   const
     args = _parseArguments(options),
     opts = args[0];
@@ -189,19 +189,19 @@ function fileSync(options: FileOptions) {
  * @param {(Options|dirCallback)} options the options or the callback function
  * @param {?dirCallback} callback
  */
-function dir(options: Options, callback: any) {
+function dir(options: Options, callback: Callback) {
   const
     args = _parseArguments(options, callback),
     opts = args[0],
     cb = args[1];
 
   // gets a temporary filename
-  tmpName(opts, function _tmpNameCreated(err: Error, name: string) {
+  tmpName(opts, function _tmpNameCreated(err: any, name: string) {
     /* istanbul ignore else */
     if (err) return cb(err);
 
     // create the directory
-    fs.mkdir(name, opts.mode || DIR_MODE, function _dirCreated(err: Error) {
+    fs.mkdir(name, opts.mode || DIR_MODE, function _dirCreated(err: any) {
       /* istanbul ignore else */
       if (err) return cb(err);
 
@@ -217,7 +217,7 @@ function dir(options: Options, callback: any) {
  * @returns {DirSyncObject} object consists of name and removeCallback
  * @throws {Error} if it cannot create a directory
  */
-function dirSync(options: DirSyncOptions) {
+function dirSync(options: Options) {
   const
     args = _parseArguments(options),
     opts = args[0];
@@ -238,7 +238,7 @@ function dirSync(options: DirSyncOptions) {
  * @param {Function} next
  * @private
  */
-function _removeFileAsync(fdPath: string, next: any) {
+function _removeFileAsync(fdPath: string[], next: Function) {
   const _handler = function (err: any) {
     if (err && !_isENOENT(err)) {
       // reraise any unanticipated error
@@ -260,7 +260,7 @@ function _removeFileAsync(fdPath: string, next: any) {
  * @param {Object} fdPath
  * @private
  */
-function _removeFileSync(fdPath: string) {
+function _removeFileSync(fdPath: any) {
   let rethrownException = null;
   try {
     if (0 <= fdPath[0]) fs.closeSync(fdPath[0]);
@@ -294,7 +294,7 @@ function _removeFileSync(fdPath: string) {
  * @returns {fileCallback | fileCallbackSync}
  * @private
  */
-function _prepareTmpFileRemoveCallback(name: string, fd: number, opts: any, sync: boolean) {
+function _prepareTmpFileRemoveCallback(name: string, fd: number, opts: Options, sync: boolean) {
   const removeCallbackSync = _prepareRemoveCallback(_removeFileSync, [fd, name], sync);
   const removeCallback = _prepareRemoveCallback(_removeFileAsync, [fd, name], sync, removeCallbackSync);
 
@@ -315,7 +315,7 @@ function _prepareTmpFileRemoveCallback(name: string, fd: number, opts: any, sync
  * @returns {Function} the callback
  * @private
  */
-function _prepareTmpDirRemoveCallback(name: string, opts: any, sync: boolean) {
+function _prepareTmpDirRemoveCallback(name: string, opts: Options, sync: boolean) {
   const removeFunction = opts.unsafeCleanup ? rimraf : fs.rmdir.bind(fs);
   const removeFunctionSync = opts.unsafeCleanup ? FN_RIMRAF_SYNC : FN_RMDIR_SYNC;
   const removeCallbackSync = _prepareRemoveCallback(removeFunctionSync, name, sync);
@@ -338,7 +338,7 @@ function _prepareTmpDirRemoveCallback(name: string, opts: any, sync: boolean) {
  * @returns {cleanupCallback | cleanupCallbackSync}
  * @private
  */
-function _prepareRemoveCallback(removeFunction: any, fileOrDirName: string, sync: boolean, cleanupCallbackSync: any) {
+function _prepareRemoveCallback(removeFunction: Function, fileOrDirName: string, sync: boolean, cleanupCallbackSync: Function) {
   let called = false;
 
   // if sync is true, the next parameter will be ignored
@@ -441,7 +441,7 @@ function _isUndefined(obj: any) {
  * @returns {Array} parsed arguments
  * @private
  */
-function _parseArguments(options: any, callback: any) {
+function _parseArguments(options: Options, callback: Callback) {
   /* istanbul ignore else */
   if (typeof options === 'function') {
     return [{}, options];
@@ -468,7 +468,7 @@ function _parseArguments(options: any, callback: any) {
  * @returns {string} the new random name according to opts
  * @private
  */
-function _generateTmpName(opts: any) {
+function _generateTmpName(opts: ITmpNameOpts) {
 
   const tmpDir = opts.tmpdir;
 
@@ -626,7 +626,7 @@ function _isENOENT(error: any) {
  * @param {string} code
  * @private
  */
-function _isExpectedError(error: Error, errno: number, code: string) {
+function _isExpectedError(error: any, errno: number, code: string) {
   return IS_WIN32 ? error.code === code : error.code === code && error.errno === errno;
 }
 

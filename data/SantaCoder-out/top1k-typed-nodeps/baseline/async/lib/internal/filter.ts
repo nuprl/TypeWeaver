@@ -1,7 +1,7 @@
 import isArrayLike from './isArrayLike.js'
 import wrapAsync from './wrapAsync.js'
 
-function filterArray(eachfn: Function, arr: any[], iteratee: Function, callback: Function) {
+function filterArray(eachfn: EachFunction, arr: any[], iteratee: Function, callback: Function) {
     var truthValues = new Array(arr.length);
     eachfn(arr, (x, index, iterCb) => {
         iteratee(x, (err, v) => {
@@ -18,7 +18,7 @@ function filterArray(eachfn: Function, arr: any[], iteratee: Function, callback:
     });
 }
 
-function filterGeneric(eachfn: Function, coll: any, iteratee: Function, callback: Function) {
+function filterGeneric(eachfn: EachOfIterator, coll: any, iteratee: Function, callback: Function) {
     var results = [];
     eachfn(coll, (x, index, iterCb) => {
         iteratee(x, (err, v) => {

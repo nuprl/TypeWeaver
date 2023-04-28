@@ -14,7 +14,7 @@ iconv.defaultCharUnicode = '�';
 iconv.defaultCharSingleByte = '?';
 
 // Public API.
-iconv.encode = function encode(str: string, encoding: string, options: EncodeOptions) {
+iconv.encode = function encode(str: string, encoding: string, options: any) {
     str = "" + (str || ""); // Ensure string.
 
     var encoder = iconv.getEncoder(encoding, options);
@@ -121,7 +121,7 @@ iconv.getEncoder = function getEncoder(encoding: string, options: any) {
     return encoder;
 }
 
-iconv.getDecoder = function getDecoder(encoding: string, options: Options) {
+iconv.getDecoder = function getDecoder(encoding: string, options: any) {
     var codec = iconv.getCodec(encoding),
         decoder = new codec.decoder(options, codec);
 
@@ -148,7 +148,7 @@ iconv.enableStreamingAPI = function enableStreamingAPI(stream_module: any) {
     iconv.IconvLiteDecoderStream = streams.IconvLiteDecoderStream;
 
     // Streaming API.
-    iconv.encodeStream = function encodeStream(encoding: string, options: EncodeOptions) {
+    iconv.encodeStream = function encodeStream(encoding: string, options: any) {
         return new iconv.IconvLiteEncoderStream(iconv.getEncoder(encoding, options), options);
     }
 

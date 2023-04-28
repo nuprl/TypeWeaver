@@ -51,7 +51,7 @@ var parseRegExp = /^((-|\+)?(\d+(?:\.\d+)?)) *(kb|mb|gb|tb|pb)$/i;
  * @returns {string|number|null}
  */
 
-function bytes(value: any, options: any) {
+function bytes(value: number, options: Options) {
   if (typeof value === 'string') {
     return parse(value);
   }
@@ -81,7 +81,7 @@ function bytes(value: any, options: any) {
  * @public
  */
 
-function format(value: number, options: NumberFormatOptions) {
+function format(value: number, options: FormatOptions) {
   if (!Number.isFinite(value)) {
     return null;
   }

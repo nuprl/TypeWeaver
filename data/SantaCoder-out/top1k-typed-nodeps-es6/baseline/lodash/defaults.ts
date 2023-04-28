@@ -25,7 +25,7 @@ const hasOwnProperty = objectProto.hasOwnProperty
  * defaults({ 'a': 1 }, { 'b': 2 }, { 'a': 3 })
  * // => { 'a': 1, 'b': 2 }
  */
-function defaults(object: any, ...sources: any[]) {
+function defaults(object: Object, ...sources: Object[]) {
   object = Object(object)
   sources.forEach((source) => {
     if (source != null) {

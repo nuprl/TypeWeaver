@@ -46,7 +46,7 @@
 		return destination;
 	};
 
-	var forEach = function(array: Array<T>, callback: any) {
+	var forEach = function(array: Array<any>, callback: Function) {
 		var index = -1;
 		var length = array.length;
 		while (++index < length) {
@@ -117,7 +117,7 @@
 		return result;
 	};
 
-	var dataRemove = function(data: string, codePoint: number) {
+	var dataRemove = function(data: number[], codePoint: number) {
 		// Iterate over the data per `(start, end)` pair.
 		var index = 0;
 		var start;
@@ -153,7 +153,7 @@
 		return data;
 	};
 
-	var dataRemoveRange = function(data: any, rangeStart: number, rangeEnd: number) {
+	var dataRemoveRange = function(data: number[], rangeStart: number, rangeEnd: number) {
 		if (rangeEnd < rangeStart) {
 			throw Error(ERRORS.rangeOrder);
 		}
@@ -219,7 +219,7 @@
 		return data;
 	};
 
-	 var dataAdd = function(data: string, codePoint: number) {
+	 var dataAdd = function(data: number[], codePoint: number) {
 		// Iterate over the data per `(start, end)` pair.
 		var index = 0;
 		var start;
@@ -276,7 +276,7 @@
 		return data;
 	};
 
-	var dataAddData = function(dataA: any, dataB: any) {
+	var dataAddData = function(dataA: number[], dataB: number[]) {
 		// Iterate over the data per `(start, end)` pair.
 		var index = 0;
 		var start;
@@ -296,7 +296,7 @@
 		return data;
 	};
 
-	var dataRemoveData = function(dataA: any, dataB: any) {
+	var dataRemoveData = function(dataA: number[], dataB: number[]) {
 		// Iterate over the data per `(start, end)` pair.
 		var index = 0;
 		var start;
@@ -316,7 +316,7 @@
 		return data;
 	};
 
-	var dataAddRange = function(data: any, rangeStart: number, rangeEnd: number) {
+	var dataAddRange = function(data: string, rangeStart: number, rangeEnd: number) {
 		if (rangeEnd < rangeStart) {
 			throw Error(ERRORS.rangeOrder);
 		}
@@ -426,7 +426,7 @@
 		return data;
 	};
 
-	var dataContains = function(data: string, codePoint: number) {
+	var dataContains = function(data: number[], codePoint: number) {
 		var index = 0;
 		var length = data.length;
 		// Exit early if `codePoint` is not within `data`’s overall range.
@@ -449,7 +449,7 @@
 		return false;
 	};
 
-	var dataIntersection = function(data: string, codePoints: number[]) {
+	var dataIntersection = function(data: number[], codePoints: number[]) {
 		var index = 0;
 		var length = codePoints.length;
 		var codePoint;
@@ -464,16 +464,16 @@
 		return dataFromCodePoints(result);
 	};
 
-	var dataIsEmpty = function(data: any) {
+	var dataIsEmpty = function(data: number[]) {
 		return !data.length;
 	};
 
-	var dataIsSingleton = function(data: any) {
+	var dataIsSingleton = function(data: number[]) {
 		// Check if the set only represents a single code point.
 		return data.length == 2 && data[0] + 1 == data[1];
 	};
 
-	var dataToArray = function(data: any) {
+	var dataToArray = function(data: number[]) {
 		// Iterate over the data per `(start, end)` pair.
 		var index = 0;
 		var start;
@@ -614,7 +614,7 @@
 		return first;
 	};
 
-	var createBMPCharacterClasses = function(data: any) {
+	var createBMPCharacterClasses = function(data: number[]) {
 		// Iterate over the data per `(start, end)` pair.
 		var result = '';
 		var index = 0;
@@ -639,7 +639,7 @@
 		return '[' + result + ']';
 	};
 
-	var createUnicodeCharacterClasses = function(data: any) {
+	var createUnicodeCharacterClasses = function(data: number[]) {
 		// Iterate over the data per `(start, end)` pair.
 		var result = '';
 		var index = 0;
@@ -664,7 +664,7 @@
 		return '[' + result + ']';
 	};
 
-	var splitAtBMP = function(data: any) {
+	var splitAtBMP = function(data: number[]) {
 		// Iterate over the data per `(start, end)` pair.
 		var loneHighSurrogates = [];
 		var loneLowSurrogates = [];
@@ -791,7 +791,7 @@
 		};
 	};
 
-	var optimizeSurrogateMappings = function(surrogateMappings: any) {
+	var optimizeSurrogateMappings = function(surrogateMappings: Array<SurrogateMapping>) {
 		var result = [];
 		var tmpLow = [];
 		var addLow = false;
@@ -850,7 +850,7 @@
 		return optimizeByLowSurrogates(result);
 	};
 
-	var optimizeByLowSurrogates = function(surrogateMappings: any) {
+	var optimizeByLowSurrogates = function(surrogateMappings: Array<Array<number>>) {
 		if (surrogateMappings.length == 1) {
 			return surrogateMappings;
 		}
@@ -891,7 +891,7 @@
 		return surrogateMappings;
 	};
 
-	var surrogateSet = function(data: any) {
+	var surrogateSet = function(data: number[]) {
 		// Exit early if `data` is an empty set.
 		if (!data.length) {
 			return [];
@@ -980,7 +980,7 @@
 		return optimizeSurrogateMappings(surrogateMappings);
 	};
 
-	var createSurrogateCharacterClasses = function(surrogateMappings: Array<Mapping>) {
+	var createSurrogateCharacterClasses = function(surrogateMappings: Array<Array<number>>) {
 		var result = [];
 		forEach(surrogateMappings, function(surrogateMapping: SurrogateMapping) {
 			var highSurrogates = surrogateMapping[0];
@@ -1066,7 +1066,7 @@
 
 	var proto = regenerate.prototype;
 	extend(proto, {
-		'add': function(value: any) {
+		'add': function(value: regenerate) {
 			var $this = this;
 			if (value == null) {
 				return $this;
@@ -1080,7 +1080,7 @@
 				value = slice.call(arguments);
 			}
 			if (isArray(value)) {
-				forEach(value, function(item: T) {
+				forEach(value, function(item: number) {
 					$this.add(item);
 				});
 				return $this;
@@ -1105,7 +1105,7 @@
 				value = slice.call(arguments);
 			}
 			if (isArray(value)) {
-				forEach(value, function(item: T) {
+				forEach(value, function(item: number) {
 					$this.remove(item);
 				});
 				return $this;
@@ -1116,7 +1116,7 @@
 			);
 			return $this;
 		},
-		'addRange': function(start: Date, end: Date) {
+		'addRange': function(start: number, end: number) {
 			var $this = this;
 			$this.data = dataAddRange($this.data,
 				isNumber(start) ? start : symbolToCodePoint(start),
@@ -1135,7 +1135,7 @@
 			);
 			return $this;
 		},
-		'intersection': function(argument: any) {
+		'intersection': function(argument: regenerate) {
 			var $this = this;
 			// Allow passing other Regenerate instances.
 			// TODO: Optimize this by writing and using `dataIntersectionData()`.
@@ -1156,7 +1156,7 @@
 			set.data = this.data.slice(0);
 			return set;
 		},
-		'toString': function(options: any) {
+		'toString': function(options: ICreateCharacterClassesFromDataOptions) {
 			var result = createCharacterClassesFromData(
 				this.data,
 				options ? options.bmpOnly : false,
@@ -1171,7 +1171,7 @@
 			// Use `\0` instead of `\x00` where possible.
 			return result.replace(regexNull, '\\0$1');
 		},
-		'toRegExp': function(flags: number) {
+		'toRegExp': function(flags: string) {
 			var pattern = this.toString(
 				flags && flags.indexOf('u') != -1 ?
 					{ 'hasUnicodeFlag': true } :

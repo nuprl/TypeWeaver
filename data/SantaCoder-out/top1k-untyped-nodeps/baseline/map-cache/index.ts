@@ -95,6 +95,6 @@ MapCache.prototype.has = function mapHas(key: string) {
  * @api public
  */
 
-MapCache.prototype.del = function mapDelete(key: string) {
+MapCache.prototype.del = function mapDelete(key: K) {
   return this.has(key) && delete this.__data__[key];
 };

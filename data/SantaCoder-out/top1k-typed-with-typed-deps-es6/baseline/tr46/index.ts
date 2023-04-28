@@ -9,7 +9,7 @@ function containsNonASCII(str: string) {
   return /[^\x00-\x7F]/u.test(str);
 }
 
-function findStatus(val: string, { useSTD3ASCIIRules }: Options) {
+function findStatus(val: number, { useSTD3ASCIIRules }: Options) {
   let start = 0;
   let end = mappingTable.length - 1;
 
@@ -77,7 +77,7 @@ function mapChars(domainName: string, { useSTD3ASCIIRules: useSTD3ASCIIRules, pr
   };
 }
 
-function validateLabel(label: string, { checkHyphens: checkHyphen, checkBidi: checkBidi, checkJoiners: checkJoiners, processingOption: processingOption, useSTD3ASCIIRules }: Options) {
+function validateLabel(label: string, { checkHyphens: checkHyphens, checkBidi: checkBidi, checkJoiners: checkJoiners, processingOption: processingOption, useSTD3ASCIIRules }: Options) {
   if (label.normalize("NFC") !== label) {
     return false;
   }

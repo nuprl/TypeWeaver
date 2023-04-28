@@ -11,11 +11,11 @@ function throatInternal(size: number) {
         resolve(fn.apply(self, args));
       }).then(onFulfill, onReject);
     }
-    return new Promise(function (resolve: Function) {
+    return new Promise(function (resolve: any) {
       queue.push(new Delayed(resolve, fn, self, args));
     }).then(runDelayed);
   }
-  function runDelayed(d: number) {
+  function runDelayed(d: Delayed) {
     try {
       return Promise.resolve(d.fn.apply(d.self, d.args)).then(
         onFulfill,
@@ -25,7 +25,7 @@ function throatInternal(size: number) {
       onReject(ex);
     }
   }
-  function onFulfill(result: T) {
+  function onFulfill(result: any) {
     release();
     return result;
   }

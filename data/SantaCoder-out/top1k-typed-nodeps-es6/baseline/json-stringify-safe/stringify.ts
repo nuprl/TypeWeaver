@@ -13,7 +13,7 @@ function serializer(replacer: any, cycleReplacer: any) {
     return "[Circular ~." + keys.slice(0, stack.indexOf(value)).join(".") + "]"
   }
 
-  return function(key: string, value: any) {
+  return function(key: any, value: any) {
     if (stack.length > 0) {
       var thisPos = stack.indexOf(this)
       ~thisPos ? stack.splice(thisPos + 1) : stack.push(this)

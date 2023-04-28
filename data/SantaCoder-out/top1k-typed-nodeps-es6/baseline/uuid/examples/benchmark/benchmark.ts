@@ -20,7 +20,7 @@ export default function benchmark(uuid: string, Benchmark: any) {
       .add('uuid.parse()', function () {
         uuid.parse('0f5abcd1-c194-47f3-905b-2df7263a084b');
       })
-      .on('cycle', function (event: MouseEvent) {
+      .on('cycle', function (event: any) {
         console.log(event.target.toString());
       })
       .on('complete', function () {

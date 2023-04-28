@@ -13,7 +13,7 @@ module.exports = function () {
   }
 }
 
-function makeTypoWarning (providedName: string, probableName: string, field: Field) {
+function makeTypoWarning (providedName: string, probableName: string, field: string) {
   if (field) {
     providedName = field + "['" + providedName + "']"
     probableName = field + "['" + probableName + "']"

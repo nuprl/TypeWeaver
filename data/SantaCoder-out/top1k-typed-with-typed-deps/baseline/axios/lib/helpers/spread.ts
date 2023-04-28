@@ -21,7 +21,7 @@
  *
  * @returns {Function}
  */
-export default function spread(callback: SpreadCallback) {
+export default function spread(callback: Function) {
   return function wrap(arr: any[]) {
     return callback.apply(null, arr);
   };

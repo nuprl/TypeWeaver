@@ -7,7 +7,7 @@ var notifications = [
     muffinopts = { label: 'muffin', icon: 'muffin.png' },
     cakeopts = { label: 'cake', title: 'Cake is ready!', icon: 'cake.png', sticky: true };
 
-growly.register('Bakery', 'muffin.png', notifications, function(err: any) {
+growly.register('Bakery', 'muffin.png', notifications, function(err: Error) {
     if (err) { 
         console.log(err);
         return;
@@ -15,7 +15,7 @@ growly.register('Bakery', 'muffin.png', notifications, function(err: any) {
 
     growly.notify('Looks like it is half past muffin time!', muffinopts);
 
-    growly.notify('Click to deliver', cakeopts, function(err: any, action: any) {
+    growly.notify('Click to deliver', cakeopts, function(err: any, action: string) {
         console.log('You', action, 'the notification, so the cake is on its way!');
     });
 });

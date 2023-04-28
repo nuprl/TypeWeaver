@@ -10,7 +10,7 @@ export default state;
  *                                     or `null` to keep them as is
  * @returns {object} - initial state object
  */
-function state(list: any[], sortMethod: string)
+function state(list: Array<any>, sortMethod: Function)
 {
   var isNamedList = !Array.isArray(list)
     , initState =

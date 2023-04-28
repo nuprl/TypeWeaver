@@ -50,7 +50,7 @@ import _parallel from './internal/parallel.js'
  *             callback(null, 'two');
  *         }, 100);
  *     }
- * ], function(err: Error, results: any) {
+ * ], function(err: any, results: any) {
  *     console.log(results);
  *     // results is equal to ['one','two'] even though
  *     // the second function had a shorter timeout.
@@ -68,14 +68,14 @@ import _parallel from './internal/parallel.js'
  *             callback(null, 2);
  *         }, 100);
  *     }
- * }, function(err: Error, results: any) {
+ * }, function(err: any, results: any) {
  *     console.log(results);
  *     // results is equal to: { one: 1, two: 2 }
  * });
  *
  * //Using Promises
  * async.parallel([
- *     function(callback: Function) {
+ *     function(callback: any) {
  *         setTimeout(function() {
  *             callback(null, 'one');
  *         }, 200);
@@ -116,7 +116,7 @@ import _parallel from './internal/parallel.js'
  * async () => {
  *     try {
  *         let results = await async.parallel([
- *             function(callback: Function) {
+ *             function(callback: any) {
  *                 setTimeout(function() {
  *                     callback(null, 'one');
  *                 }, 200);
@@ -145,7 +145,7 @@ import _parallel from './internal/parallel.js'
  *                     callback(null, 1);
  *                 }, 200);
  *             },
- *            two: function(callback: Function) {
+ *            two: function(callback: any) {
  *                 setTimeout(function() {
  *                     callback(null, 2);
  *                 }, 100);
@@ -160,6 +160,6 @@ import _parallel from './internal/parallel.js'
  * }
  *
  */
-export default function parallel(tasks: Array<Function>, callback: Function) {
+export default function parallel(tasks: Array<any>, callback: Function) {
     return _parallel(eachOf, tasks, callback);
 }

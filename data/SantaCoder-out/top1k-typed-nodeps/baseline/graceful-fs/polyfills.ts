@@ -96,7 +96,7 @@ function patch (fs: any) {
   if (platform === "win32") {
     fs.rename = typeof fs.rename !== 'function' ? fs.rename
     : (function (fs$rename: any) {
-      function rename (from: string, to: string, cb: any) {
+      function rename (from: string, to: string, cb: Function) {
         var start = Date.now()
         var backoff = 0;
         fs$rename(from, to, function CB (er: Error) {
@@ -104,7 +104,7 @@ function patch (fs: any) {
               && (er.code === "EACCES" || er.code === "EPERM")
               && Date.now() - start < 60000) {
             setTimeout(function() {
-              fs.stat(to, function (stater: State, st: State) {
+              fs.stat(to, function (stater: any, st: any) {
                 if (stater && stater.code === "ENOENT")
                   fs$rename(from, to, CB);
                 else
@@ -126,7 +126,7 @@ function patch (fs: any) {
   // if read() returns EAGAIN, then just try it again.
   fs.read = typeof fs.read !== 'function' ? fs.read
   : (function (fs$read: any) {
-    function read (fd: number, buffer: Buffer, offset: number, length: number, position: number, callback_: any) {
+    function read (fd: number, buffer: Buffer, offset: number, length: number, position: number, callback_: Function) {
       var callback
       if (callback_ && typeof callback_ === 'function') {
         var eagCounter = 0
@@ -163,11 +163,11 @@ function patch (fs: any) {
   }})(fs.readSync)
 
   function patchLchmod (fs: any) {
-    fs.lchmod = function (path: string, mode: number, callback: Function) {
+    fs.lchmod = function (path: string, mode: number, callback: any) {
       fs.open( path
              , constants.O_WRONLY | constants.O_SYMLINK
              , mode
-             , function (err: any, fd: number) {
+             , function (err: any, fd: any) {
         if (err) {
           if (callback) callback(err)
           return
@@ -207,8 +207,8 @@ function patch (fs: any) {
 
   function patchLutimes (fs: any) {
     if (constants.hasOwnProperty("O_SYMLINK") && fs.futimes) {
-      fs.lutimes = function (path: string, at: number, mt: number, cb: any) {
-        fs.open(path, constants.O_SYMLINK, function (er: Error, fd: number) {
+      fs.lutimes = function (path: string, at: Date, mt: Date, cb: Function) {
+        fs.open(path, constants.O_SYMLINK, function (er: any, fd: number) {
           if (er) {
             if (cb) cb(er)
             return
@@ -221,7 +221,7 @@ function patch (fs: any) {
         })
       }
 
-      fs.lutimesSync = function (path: string, at: number, mt: number) {
+      fs.lutimesSync = function (path: string, at: Date, mt: Date) {
         var fd = fs.openSync(path, constants.O_SYMLINK)
         var ret
         var threw = true
@@ -256,9 +256,9 @@ function patch (fs: any) {
     }
   }
 
-  function chmodFixSync (orig: Function) {
+  function chmodFixSync (orig: any) {
     if (!orig) return orig
-    return function (target: HTMLElement, mode: string) {
+    return function (target: string, mode: number) {
       try {
         return orig.call(fs, target, mode)
       } catch (er) {
@@ -278,7 +278,7 @@ function patch (fs: any) {
     }
   }
 
-  function chownFixSync (orig: Function) {
+  function chownFixSync (orig: any) {
     if (!orig) return orig
     return function (target: string, uid: number, gid: number) {
       try {
@@ -298,7 +298,7 @@ function patch (fs: any) {
         cb = options
         options = null
       }
-      function callback (er: Error, stats: Stats) {
+      function callback (er: any, stats: any) {
         if (stats) {
           if (stats.uid < 0) stats.uid += 0x100000000
           if (stats.gid < 0) stats.gid += 0x100000000
@@ -310,11 +310,11 @@ function patch (fs: any) {
     }
   }
 
-  function statFixSync (orig: Function) {
+  function statFixSync (orig: any) {
     if (!orig) return orig
     // Older versions of Node erroneously returned signed integers for
     // uid + gid.
-    return function (target: HTMLElement, options: any) {
+    return function (target: string, options: any) {
       var stats = options ? orig.call(fs, target, options)
         : orig.call(fs, target)
       if (stats) {

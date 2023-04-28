@@ -38,7 +38,7 @@ function doWhilst(iteratee: Function, test: Function, callback: Function) {
         _test(...args, check);
     }
 
-    function check(err: Error, truth: boolean) {
+    function check(err: any, truth: boolean) {
         if (err) return callback(err);
         if (err === false) return;
         if (!truth) return callback(null, ...results);

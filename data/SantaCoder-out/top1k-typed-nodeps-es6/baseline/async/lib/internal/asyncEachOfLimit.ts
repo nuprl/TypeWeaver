@@ -32,7 +32,7 @@ export default function asyncEachOfLimit(generator: any, limit: any, iteratee: a
         }).catch(handleError)
     }
 
-    function iterateeCallback(err: Error, result: any) {
+    function iterateeCallback(err: any, result: any) {
         //console.log('iterateeCallback')
         running -= 1;
         if (canceled) return
@@ -52,7 +52,7 @@ export default function asyncEachOfLimit(generator: any, limit: any, iteratee: a
         replenish()
     }
 
-    function handleError(err: any) {
+    function handleError(err: Error) {
         if (canceled) return
         awaiting = false
         done = true

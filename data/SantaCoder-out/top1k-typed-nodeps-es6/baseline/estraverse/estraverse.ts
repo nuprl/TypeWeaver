@@ -53,7 +53,7 @@
     // based on LLVM libc++ upper_bound / lower_bound
     // MIT License
 
-    function upperBound(array: any[], func: any) {
+    function upperBound(array: Array<any>, func: Function) {
         var diff, len, i, current;
 
         len = array.length;
@@ -258,7 +258,7 @@
         }
     };
 
-    function Element(node: Node, path: string, wrap: boolean, ref: any) {
+    function Element(node: Node, path: Array<string>, wrap: Function, ref: Function) {
         this.node = node;
         this.path = path;
         this.wrap = wrap;
@@ -272,7 +272,7 @@
     Controller.prototype.path = function path() {
         var i, iz, j, jz, result, element;
 
-        function addToPath(result: string, path: string) {
+        function addToPath(result: string[], path: string) {
             if (Array.isArray(path)) {
                 for (j = 0, jz = path.length; j < jz; ++j) {
                     result.push(path[j]);
@@ -324,7 +324,7 @@
         return this.__current.node;
     };
 
-    Controller.prototype.__execute = function __execute(callback: Function, element: HTMLElement) {
+    Controller.prototype.__execute = function __execute(callback: Function, element: Element) {
         var previous, result;
 
         result = undefined;
@@ -342,7 +342,7 @@
 
     // API:
     // notify control skip / break
-    Controller.prototype.notify = function notify(flag: boolean) {
+    Controller.prototype.notify = function notify(flag: number) {
         this.__state = flag;
     };
 
@@ -384,18 +384,18 @@
         }
     };
 
-    function isNode(node: Node) {
+    function isNode(node: any) {
         if (node == null) {
             return false;
         }
         return typeof node === 'object' && typeof node.type === 'string';
     }
 
-    function isProperty(nodeType: string, key: string) {
+    function isProperty(nodeType: NodeType, key: string) {
         return (nodeType === Syntax.ObjectExpression || nodeType === Syntax.ObjectPattern) && 'properties' === key;
     }
   
-    function candidateExistsInLeaveList(leavelist: Array<string>, candidate: string) {
+    function candidateExistsInLeaveList(leavelist: Array<any>, candidate: any) {
         for (var i = leavelist.length - 1; i >= 0; --i) {
             if (leavelist[i].node === candidate) {
                 return true;
@@ -525,7 +525,7 @@
             outer,
             key;
 
-        function removeElem(element: HTMLElement) {
+        function removeElem(element: Element) {
             var i,
                 key,
                 nextElem,
@@ -675,7 +675,7 @@
         return controller.replace(root, visitor);
     }
 
-    function extendCommentRange(comment: CommentRange, tokens: Token[]) {
+    function extendCommentRange(comment: Comment, tokens: Token[]) {
         var target;
 
         target = upperBound(tokens, function search(token: string) {
@@ -724,7 +724,7 @@
         // This is based on John Freeman's implementation.
         cursor = 0;
         traverse(tree, {
-            enter: function (node: any) {
+            enter: function (node: Node) {
                 var comment;
 
                 while (cursor < comments.length) {
@@ -757,7 +757,7 @@
 
         cursor = 0;
         traverse(tree, {
-            leave: function (node: ts.Node) {
+            leave: function (node: Node) {
                 var comment;
 
                 while (cursor < comments.length) {

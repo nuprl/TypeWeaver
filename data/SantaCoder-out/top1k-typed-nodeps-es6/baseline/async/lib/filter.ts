@@ -36,7 +36,7 @@ import awaitify from './internal/awaitify.js'
  * }
  *
  * // Using callbacks
- * async.filter(files, fileExists, function(err: Error, results: any) {
+ * async.filter(files, fileExists, function(err: any, results: string[]) {
  *    if(err) {
  *        console.log(err);
  *    } else {
@@ -70,7 +70,7 @@ import awaitify from './internal/awaitify.js'
  * }
  *
  */
-function filter (coll: Array<any>, iteratee: Function, callback: Function) {
+function filter (coll: any[], iteratee: Function, callback: Function) {
     return _filter(eachOf, coll, iteratee, callback)
 }
 export default awaitify(filter, 3);

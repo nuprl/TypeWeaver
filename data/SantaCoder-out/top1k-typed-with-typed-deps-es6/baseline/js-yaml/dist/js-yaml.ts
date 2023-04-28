@@ -75,7 +75,7 @@
   // YAML error class. http://stackoverflow.com/questions/8458984
 
 
-  function formatError(exception: any, compact: boolean) {
+  function formatError(exception: YAMLException, compact: boolean) {
     var where = '', message = exception.reason || '(unknown reason)';
 
     if (!exception.mark) return message;
@@ -94,7 +94,7 @@
   }
 
 
-  function YAMLException$1(reason: string, mark: any) {
+  function YAMLException$1(reason: string, mark: YAMLMark) {
     // Super constructor
     Error.call(this);
 
@@ -154,7 +154,7 @@
   }
 
 
-  function makeSnippet(mark: any, options: any) {
+  function makeSnippet(mark: Mark, options: SnippetOptions) {
     options = Object.create(options || null);
 
     if (!mark.buffer) return null;
@@ -297,7 +297,7 @@
     schema[name].forEach(function (currentType: any) {
       var newIndex = result.length;
 
-      result.forEach(function (previousType: string, previousIndex: number) {
+      result.forEach(function (previousType: any, previousIndex: number) {
         if (previousType.tag === currentType.tag &&
             previousType.kind === currentType.kind &&
             previousType.multi === currentType.multi) {
@@ -313,7 +313,7 @@
   }
 
 
-  function compileMap(/* lists... */: Array<Array<any>>) {
+  function compileMap(/* lists... */: Array<any>) {
     var result = {
           scalar: {},
           sequence: {},
@@ -327,7 +327,7 @@
           }
         }, index, length;
 
-    function collectType(type: Type) {
+    function collectType(type: YAMLType) {
       if (type.multi) {
         result.multi[type.kind].push(type);
         result.multi['fallback'].push(type);
@@ -343,12 +343,12 @@
   }
 
 
-  function Schema$1(definition: SchemaDefinition) {
+  function Schema$1(definition: any) {
     return this.extend(definition);
   }
 
 
-  Schema$1.prototype.extend = function extend(definition: any) {
+  Schema$1.prototype.extend = function extend(definition: SchemaDefinition) {
     var implicit = [];
     var explicit = [];
 
@@ -370,7 +370,7 @@
         'or a schema definition ({ implicit: [...], explicit: [...] })');
     }
 
-    implicit.forEach(function (type$1: any) {
+    implicit.forEach(function (type$1: Type) {
       if (!(type$1 instanceof type)) {
         throw new exception('Specified list of YAML types (or a single Type object) contains a non-Type object.');
       }
@@ -428,7 +428,7 @@
     ]
   });
 
-  function resolveYamlNull(data: any) {
+  function resolveYamlNull(data: string) {
     if (data === null) return true;
 
     var max = data.length;
@@ -441,7 +441,7 @@
     return null;
   }
 
-  function isNull(object: unknown) {
+  function isNull(object: any) {
     return object === null;
   }
 
@@ -460,7 +460,7 @@
     defaultStyle: 'lowercase'
   });
 
-  function resolveYamlBoolean(data: any) {
+  function resolveYamlBoolean(data: string) {
     if (data === null) return false;
 
     var max = data.length;
@@ -485,8 +485,8 @@
     construct: constructYamlBoolean,
     predicate: isBoolean,
     represent: {
-      lowercase: function (object: boolean) { return object ? 'true' : 'false'; },
-      uppercase: function (object: boolean) { return object ? 'TRUE' : 'FALSE'; },
+      lowercase: function (object: any) { return object ? 'true' : 'false'; },
+      uppercase: function (object: any) { return object ? 'TRUE' : 'FALSE'; },
       camelcase: function (object: boolean) { return object ? 'True' : 'False'; }
     },
     defaultStyle: 'lowercase'
@@ -498,7 +498,7 @@
            ((0x61/* a */ <= c) && (c <= 0x66/* f */));
   }
 
-  function isOctCode(c: number) {
+  function isOctCode(c: any) {
     return ((0x30/* 0 */ <= c) && (c <= 0x37/* 7 */));
   }
 
@@ -631,9 +631,9 @@
     represent: {
       binary:      function (obj: number) { return obj >= 0 ? '0b' + obj.toString(2) : '-0b' + obj.toString(2).slice(1); },
       octal:       function (obj: number) { return obj >= 0 ? '0o'  + obj.toString(8) : '-0o'  + obj.toString(8).slice(1); },
-      decimal:     function (obj: any) { return obj.toString(10); },
+      decimal:     function (obj: number) { return obj.toString(10); },
       /* eslint-disable max-len */
-      hexadecimal: function (obj: number) { return obj >= 0 ? '0x' + obj.toString(16).toUpperCase() :  '-0x' + obj.toString(16).toUpperCase().slice(1); }
+      hexadecimal: function (obj: any) { return obj >= 0 ? '0x' + obj.toString(16).toUpperCase() :  '-0x' + obj.toString(16).toUpperCase().slice(1); }
     },
     defaultStyle: 'decimal',
     styleAliases: {
@@ -821,7 +821,7 @@
     return date;
   }
 
-  function representYamlTimestamp(object /*: Timestamp, style*/: string) {
+  function representYamlTimestamp(object /*: Date, style*/: string) {
     return object.toISOString();
   }
 
@@ -874,7 +874,7 @@
     return (bitlen % 8) === 0;
   }
 
-  function constructYamlBinary(data: any) {
+  function constructYamlBinary(data: string) {
     var idx, tailbits,
         input = data.replace(/[\r\n=]/g, ''), // remove CR/LF & padding to simplify scan
         max = input.length,
@@ -912,7 +912,7 @@
     return new Uint8Array(result);
   }
 
-  function representYamlBinary(object /*: any, style*/: any) {
+  function representYamlBinary(object /*: Uint8Array, style*/: string) {
     var result = '', bits = 0, idx, tail,
         max = object.length,
         map = BASE64_MAP;
@@ -969,7 +969,7 @@
   var _hasOwnProperty$3 = Object.prototype.hasOwnProperty;
   var _toString$2       = Object.prototype.toString;
 
-  function resolveYamlOmap(data: string) {
+  function resolveYamlOmap(data: any) {
     if (data === null) return true;
 
     var objectKeys = [], index, length, pair, pairKey, pairHasKey,
@@ -1127,11 +1127,11 @@
 
   function _class(obj: any) { return Object.prototype.toString.call(obj); }
 
-  function is_EOL(c: string) {
+  function is_EOL(c: number) {
     return (c === 0x0A/* LF */) || (c === 0x0D/* CR */);
   }
 
-  function is_WHITE_SPACE(c: string) {
+  function is_WHITE_SPACE(c: number) {
     return (c === 0x09/* Tab */) || (c === 0x20/* Space */);
   }
 
@@ -1150,7 +1150,7 @@
            c === 0x7D/* } */;
   }
 
-  function fromHexCode(c: string) {
+  function fromHexCode(c: number) {
     var lc;
 
     if ((0x30/* 0 */ <= c) && (c <= 0x39/* 9 */)) {
@@ -1167,7 +1167,7 @@
     return -1;
   }
 
-  function escapedHexLen(c: string) {
+  function escapedHexLen(c: number) {
     if (c === 0x78/* x */) { return 2; }
     if (c === 0x75/* u */) { return 4; }
     if (c === 0x55/* U */) { return 8; }
@@ -1182,7 +1182,7 @@
     return -1;
   }
 
-  function simpleEscapeSequence(c: string) {
+  function simpleEscapeSequence(c: number) {
     /* eslint-disable indent */
     return (c === 0x30/* 0 */) ? '\x00' :
           (c === 0x61/* a */) ? '\x07' :
@@ -1224,7 +1224,7 @@
   }
 
 
-  function State$1(input: string, options: Options) {
+  function State$1(input: string, options: LoaderOptions) {
     this.input = input;
 
     this.filename  = options['filename']  || null;
@@ -1292,7 +1292,7 @@
 
   var directiveHandlers = {
 
-    YAML: function handleYamlDirective(state: State, name: string, args: string) {
+    YAML: function handleYamlDirective(state: ParserState, name: string, args: string[]) {
 
       var match, major, minor;
 
@@ -1381,7 +1381,7 @@
     }
   }
 
-  function mergeMappings(state: any, destination: any, source: any, overridableKeys: any) {
+  function mergeMappings(state: State, destination: any, source: any, overridableKeys: any[]) {
     var sourceKeys, key, index, quantity;
 
     if (!common.isObject(source)) {
@@ -1492,7 +1492,7 @@
     state.firstTabInLine = -1;
   }
 
-  function skipSeparationSpace(state: ParserState, allowComments: boolean, checkIndent: boolean) {
+  function skipSeparationSpace(state: State, allowComments: boolean, checkIndent: boolean) {
     var lineBreaks = 0,
         ch = state.input.charCodeAt(state.position);
 
@@ -1557,7 +1557,7 @@
     return false;
   }
 
-  function writeFoldedLines(state: FoldingState, count: number) {
+  function writeFoldedLines(state: State, count: number) {
     if (count === 1) {
       state.result += ' ';
     } else if (count > 1) {
@@ -2054,7 +2054,7 @@
     return true;
   }
 
-  function readBlockSequence(state: State, nodeIndent: number) {
+  function readBlockSequence(state: ParserState, nodeIndent: number) {
     var _line,
         _tag      = state.tag,
         _anchor   = state.anchor,
@@ -2401,7 +2401,7 @@
     return true;
   }
 
-  function readAnchorProperty(state: State) {
+  function readAnchorProperty(state: ParserState) {
     var _position,
         ch;
 
@@ -2458,7 +2458,7 @@
     return true;
   }
 
-  function composeNode(state: State, parentIndent: number, nodeContext: NodeContext, allowToSeek: Boolean, allowCompact: Boolean) {
+  function composeNode(state: State, parentIndent: number, nodeContext: NodeContext, allowToSeek: boolean, allowCompact: boolean) {
     var allowBlockStyles,
         allowBlockScalars,
         allowBlockCollections,
@@ -2745,7 +2745,7 @@
   }
 
 
-  function loadDocuments(input: string, options: LoadOptions) {
+  function loadDocuments(input: string, options: LoadDocumentsOptions) {
     input = String(input);
     options = options || {};
 
@@ -2788,7 +2788,7 @@
   }
 
 
-  function loadAll$1(input: any, iterator: any, options: any) {
+  function loadAll$1(input: string, iterator: Function, options: LoaderOptions) {
     if (iterator !== null && typeof iterator === 'object' && typeof options === 'undefined') {
       options = iterator;
       iterator = null;
@@ -2806,7 +2806,7 @@
   }
 
 
-  function load$1(input: string, options: Options) {
+  function load$1(input: string, options: LoaderOptions) {
     var documents = loadDocuments(input, options);
 
     if (documents.length === 0) {
@@ -2887,7 +2887,7 @@
 
   var DEPRECATED_BASE60_SYNTAX = /^[-+]?[0-9_]+(?::[0-9_]+)+(?:\.[0-9_]*)?$/;
 
-  function compileStyleMap(schema: Schema, map: StyleMap) {
+  function compileStyleMap(schema: Schema, map: Object) {
     var result, keys, index, length, tag, style, type;
 
     if (map === null) return {};
@@ -2914,7 +2914,7 @@
     return result;
   }
 
-  function encodeHex(character: string) {
+  function encodeHex(character: number) {
     var string, handle, length;
 
     string = character.toString(16).toUpperCase();
@@ -3048,7 +3048,7 @@
   // [130]  ns-plain-char(c) ::=  ( ns-plain-safe(c) - “:” - “#” )
   //                            | ( /* An ns-char preceding */ “#” )
   //                            | ( “:” /* Followed by an ns-plain-safe(c) */ )
-  function isPlainSafe(c: string, prev: string, inblock: boolean) {
+  function isPlainSafe(c: string, prev: boolean, inblock: boolean) {
     var cIsNsCharOrWhitespace = isNsCharOrWhitespace(c);
     var cIsNsChar = cIsNsCharOrWhitespace && !isWhitespace(c);
     return (
@@ -3071,7 +3071,7 @@
   }
 
   // Simplified test for values allowed as the first character in plain style.
-  function isPlainSafeFirst(c: string) {
+  function isPlainSafeFirst(c: number) {
     // Uses a subset of ns-char - c-indicator
     // where ns-char = nb-char - s-white.
     // No support of ( ( “?” | “:” | “-” ) /* Followed by an ns-plain-safe(c)) */ ) part
@@ -3386,7 +3386,7 @@
     return result;
   }
 
-  function writeFlowSequence(state: State, level: number, object: any) {
+  function writeFlowSequence(state: State, level: number, object: any[]) {
     var _result = '',
         _tag    = state.tag,
         index,
@@ -3451,7 +3451,7 @@
     state.dump = _result || '[]'; // Empty sequence if no valid values.
   }
 
-  function writeFlowMapping(state: State, level: number, object: FlowMapping) {
+  function writeFlowMapping(state: State, level: number, object: any) {
     var _result       = '',
         _tag          = state.tag,
         objectKeyList = Object.keys(object),
@@ -3497,7 +3497,7 @@
     state.dump = '{' + _result + '}';
   }
 
-  function writeBlockMapping(state: any, level: any, object: any, compact: any) {
+  function writeBlockMapping(state: State, level: number, object: any, compact: boolean) {
     var _result       = '',
         _tag          = state.tag,
         objectKeyList = Object.keys(object),
@@ -3621,7 +3621,7 @@
   // Serializes `object` and writes it to global `result`.
   // Returns true on success, or false on invalid object.
   //
-  function writeNode(state: State, level: number, object: any, block: boolean, compact: boolean, iskey: boolean, isblockseq: boolean) {
+  function writeNode(state: DumperState, level: number, object: any, block: boolean, compact: boolean, iskey: boolean, isblockseq: boolean) {
     state.tag = null;
     state.dump = object;
 
@@ -3728,7 +3728,7 @@
     return true;
   }
 
-  function getDuplicateReferences(object: any, state: any) {
+  function getDuplicateReferences(object: Object, state: State) {
     var objects = [],
         duplicatesIndexes = [],
         index,
@@ -3771,7 +3771,7 @@
     }
   }
 
-  function dump$1(input: any, options: any) {
+  function dump$1(input: any, options: Options) {
     options = options || {};
 
     var state = new State(options);

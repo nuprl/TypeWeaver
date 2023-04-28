@@ -24,7 +24,7 @@ import NodePath from './node-path';
  *   - `post`(node, parent, prop, index) - a hook called on node exit
  *   - `skipProperty(prop)` - a predicated whether a property should be skipped
  */
-function astTraverse(root: Node, options = {}: Options) {
+function astTraverse(root: Node, options = {}: Object) {
   const pre = options.pre;
   const post = options.post;
   const skipProperty = options.skipProperty;

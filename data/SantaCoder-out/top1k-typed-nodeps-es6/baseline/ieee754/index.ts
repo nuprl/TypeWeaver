@@ -40,7 +40,7 @@ export const read = function (buffer: Buffer, offset: number, isLE: boolean, mLe
   return (s ? -1 : 1) * m * Math.pow(2, e - mLen)
 };
 
-export const write = function (buffer: Buffer, value: number, offset: number, isLE: mLen, mLen: number, nBytes: number) {
+export const write = function (buffer: Buffer, value: number, offset: number, isLE: boolean, mLen: number, nBytes: number) {
   let e, m, c
   let eLen = (nBytes * 8) - mLen - 1
   const eMax = (1 << eLen) - 1

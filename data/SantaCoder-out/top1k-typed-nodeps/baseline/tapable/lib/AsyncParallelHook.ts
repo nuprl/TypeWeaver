@@ -18,7 +18,7 @@ class AsyncParallelHookCodeFactory extends HookCodeFactory {
 
 const factory = new AsyncParallelHookCodeFactory();
 
-const COMPILE = function(options: any) {
+const COMPILE = function(options: HookCompileOptions) {
 	factory.setup(this, options);
 	return factory.create(options);
 };

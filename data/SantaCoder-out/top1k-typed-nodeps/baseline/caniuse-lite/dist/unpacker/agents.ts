@@ -4,7 +4,7 @@ const browsers = require('./browsers').browsers
 const versions = require('./browserVersions').browserVersions
 const agentsData = require('../../data/agents')
 
-function unpackBrowserVersions(versionsData: BrowserVersionsData) {
+function unpackBrowserVersions(versionsData: any) {
   return Object.keys(versionsData).reduce((usage, version) => {
     usage[versions[version]] = versionsData[version]
     return usage

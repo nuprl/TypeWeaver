@@ -12,7 +12,7 @@ function debugOutput(name: string, options: any, startTime: number, data: any) {
     return data;
 }
 
-function createDefaultLogger(level: string) {
+function createDefaultLogger(level: number) {
     let lastDebug;
 
     return function logger(title: string, ast: AST) {
@@ -38,7 +38,7 @@ function createDefaultLogger(level: string) {
     };
 }
 
-function buildCompressOptions(options: CompressOptions) {
+function buildCompressOptions(options: any) {
     options = { ...options };
 
     if (typeof options.logger !== 'function' && options.debug) {
@@ -48,7 +48,7 @@ function buildCompressOptions(options: CompressOptions) {
     return options;
 }
 
-function runHandler(ast: AST, options: Options, handlers: Handlers) {
+function runHandler(ast: Node, options: Options, handlers: Handler) {
     if (!Array.isArray(handlers)) {
         handlers = [handlers];
     }
@@ -56,7 +56,7 @@ function runHandler(ast: AST, options: Options, handlers: Handlers) {
     handlers.forEach(fn => fn(ast, options));
 }
 
-function minify(context: any, source: string, options: any) {
+function minify(context: string, source: string, options: Options) {
     options = options || {};
 
     const filename = options.filename || '<unknown>';
@@ -114,7 +114,7 @@ function minifyStylesheet(source: string, options: Options) {
     return minify('stylesheet', source, options);
 }
 
-function minifyBlock(source: string, options: Options) {
+function minifyBlock(source: string, options: MinifyOptions) {
     return minify('declarationList', source, options);
 }
 

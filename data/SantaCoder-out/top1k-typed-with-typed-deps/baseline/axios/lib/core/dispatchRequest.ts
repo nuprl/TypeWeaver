@@ -43,7 +43,7 @@ export default function dispatchRequest(config: AxiosRequestConfig) {
 
   const adapter = config.adapter || defaults.adapter;
 
-  return adapter(config).then(function onAdapterResolution(response: AdapterResolutionResponse) {
+  return adapter(config).then(function onAdapterResolution(response: AxiosResponse) {
     throwIfCancellationRequested(config);
 
     // Transform response data
@@ -56,7 +56,7 @@ export default function dispatchRequest(config: AxiosRequestConfig) {
     response.headers = AxiosHeaders.from(response.headers);
 
     return response;
-  }, function onAdapterRejection(reason: unknown) {
+  }, function onAdapterRejection(reason: any) {
     if (!isCancel(reason)) {
       throwIfCancellationRequested(config);
 

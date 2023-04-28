@@ -2,7 +2,7 @@
 
 module.exports = function (arr: any[]) {
   var stack = [];
-  return arr.filter(function (ele: any) {
+  return arr.filter(function (ele: T) {
     if (stack.indexOf(ele) > -1) {
       return false;
     }

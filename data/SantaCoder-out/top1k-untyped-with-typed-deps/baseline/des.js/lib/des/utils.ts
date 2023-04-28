@@ -8,7 +8,7 @@ exports.readUInt32BE = function readUInt32BE(bytes: Buffer, off: number) {
   return res >>> 0;
 };
 
-exports.writeUInt32BE = function writeUInt32BE(bytes: any, value: number, off: number) {
+exports.writeUInt32BE = function writeUInt32BE(bytes: Uint8Array, value: number, off: number) {
   bytes[0 + off] = value >>> 24;
   bytes[1 + off] = (value >>> 16) & 0xff;
   bytes[2 + off] = (value >>> 8) & 0xff;
@@ -70,7 +70,7 @@ exports.rip = function rip(inL: number, inR: number, out: number, off: number) {
   out[off + 1] = outR >>> 0;
 };
 
-exports.pc1 = function pc1(inL: Uint8Array, inR: Uint8Array, out: Uint8Array, off: number) {
+exports.pc1 = function pc1(inL: number, inR: number, out: number, off: number) {
   var outL = 0;
   var outR = 0;
 
@@ -132,7 +132,7 @@ var pc2table = [
   22, 3, 10, 14, 6, 20, 27, 24
 ];
 
-exports.pc2 = function pc2(inL: number, inR: number, out: number, off: number) {
+exports.pc2 = function pc2(inL: number, inR: number, out: number[], off: number) {
   var outL = 0;
   var outR = 0;
 
@@ -244,7 +244,7 @@ exports.permute = function permute(num: number) {
   return out >>> 0;
 };
 
-exports.padSplit = function padSplit(num: number, size: number, group: string) {
+exports.padSplit = function padSplit(num: number, size: number, group: number) {
   var str = num.toString(2);
   while (str.length < size)
     str = '0' + str;

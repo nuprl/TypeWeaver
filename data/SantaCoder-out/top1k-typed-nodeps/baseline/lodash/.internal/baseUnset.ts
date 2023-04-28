@@ -11,7 +11,7 @@ import toKey from './toKey.js'
  * @param {Array|string} path The property path to unset.
  * @returns {boolean} Returns `true` if the property is deleted, else `false`.
  */
-function baseUnset(object: any, path: string[]) {
+function baseUnset(object: any, path: any) {
   path = castPath(path, object)
   object = parent(object, path)
   return object == null || delete object[toKey(last(path))]

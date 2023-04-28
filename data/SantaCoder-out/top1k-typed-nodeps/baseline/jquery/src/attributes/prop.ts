@@ -20,7 +20,7 @@ jQuery.fn.extend( {
 } );
 
 jQuery.extend( {
-	prop: function( elem: JQuery, name: string, value : any) {
+	prop: function( elem: Element, name: string, value : any) {
 		var ret, hooks,
 			nType = elem.nodeType;
 
@@ -54,7 +54,7 @@ jQuery.extend( {
 
 	propHooks: {
 		tabIndex: {
-			get: function( elem : Element) {
+			get: function( elem : HTMLElement) {
 
 				// Support: IE <=9 - 11+
 				// elem.tabIndex doesn't always return the

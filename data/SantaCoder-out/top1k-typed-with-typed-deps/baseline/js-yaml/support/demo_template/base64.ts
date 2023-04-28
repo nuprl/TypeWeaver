@@ -80,7 +80,7 @@ function utf8Encode(str: string) {
   return bytes;
 }
 
-function utf8Decode(bytes: Uint8Array) {
+function utf8Decode(bytes: Array<number>) {
   var chars = [], offset = 0, length = bytes.length, c1, c2, c3;
 
   while (offset < length) {

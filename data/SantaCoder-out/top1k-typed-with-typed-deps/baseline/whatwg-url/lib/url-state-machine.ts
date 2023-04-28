@@ -31,7 +31,7 @@ function at(input: string, idx: number) {
   return isNaN(c) ? undefined : String.fromCodePoint(c);
 }
 
-function isSingleDot(buffer: Buffer) {
+function isSingleDot(buffer: string) {
   return buffer === "." || buffer.toLowerCase() === "%2e";
 }
 
@@ -152,7 +152,7 @@ function parseIPv4(input: string) {
   return ipv4;
 }
 
-function serializeIPv4(address: string) {
+function serializeIPv4(address: number) {
   let output = "";
   let n = address;
 
@@ -296,7 +296,7 @@ function parseIPv6(input: string) {
   return address;
 }
 
-function serializeIPv6(address: string) {
+function serializeIPv6(address: IPv6Address) {
   let output = "";
   const compress = findLongestZeroSequence(address);
   let ignore0 = false;
@@ -462,15 +462,15 @@ function shortenPath(url: URL) {
   path.pop();
 }
 
-function includesCredentials(url: string) {
+function includesCredentials(url: URL) {
   return url.username !== "" || url.password !== "";
 }
 
-function cannotHaveAUsernamePasswordPort(url: string) {
+function cannotHaveAUsernamePasswordPort(url: URL) {
   return url.host === null || url.host === "" || url.scheme === "file";
 }
 
-function hasAnOpaquePath(url: string) {
+function hasAnOpaquePath(url: URL) {
   return typeof url.path === "string";
 }
 
@@ -478,7 +478,7 @@ function isNormalizedWindowsDriveLetter(string: string) {
   return /^[A-Za-z]:$/u.test(string);
 }
 
-function URLStateMachine(input: string, base: string, encodingOverride: string, url: string, stateOverride: any) {
+function URLStateMachine(input: string, base: string, encodingOverride: string, url: URL, stateOverride: URLStateMachineState) {
   this.pointer = 0;
   this.input = input;
   this.base = base || null;
@@ -653,7 +653,7 @@ URLStateMachine.prototype["parse path or authority"] = function parsePathOrAutho
   return true;
 };
 
-URLStateMachine.prototype["parse relative"] = function parseRelative(c: Context) {
+URLStateMachine.prototype["parse relative"] = function parseRelative(c: string) {
   this.url.scheme = this.base.scheme;
   if (c === p("/")) {
     this.state = "relative slash";
@@ -684,7 +684,7 @@ URLStateMachine.prototype["parse relative"] = function parseRelative(c: Context)
   return true;
 };
 
-URLStateMachine.prototype["parse relative slash"] = function parseRelativeSlash(c: string) {
+URLStateMachine.prototype["parse relative slash"] = function parseRelativeSlash(c: number) {
   if (isSpecial(this.url) && (c === p("/") || c === p("\\"))) {
     if (c === p("\\")) {
       this.parseError = true;
@@ -827,7 +827,7 @@ URLStateMachine.prototype["parse host"] = function parseHostName(c: string, cStr
   return true;
 };
 
-URLStateMachine.prototype["parse port"] = function parsePort(c: string, cStr: string) {
+URLStateMachine.prototype["parse port"] = function parsePort(c: number, cStr: string) {
   if (infra.isASCIIDigit(c)) {
     this.buffer += cStr;
   } else if (isNaN(c) || c === p("/") || c === p("?") || c === p("#") ||
@@ -864,7 +864,7 @@ function startsWithWindowsDriveLetter(input: string, pointer: number) {
     (length === 2 || fileOtherwiseCodePoints.has(input[pointer + 2]));
 }
 
-URLStateMachine.prototype["parse file"] = function parseFile(c: Context) {
+URLStateMachine.prototype["parse file"] = function parseFile(c: string) {
   this.url.scheme = "file";
   this.url.host = "";
 
@@ -903,7 +903,7 @@ URLStateMachine.prototype["parse file"] = function parseFile(c: Context) {
   return true;
 };
 
-URLStateMachine.prototype["parse file slash"] = function parseFileSlash(c: string) {
+URLStateMachine.prototype["parse file slash"] = function parseFileSlash(c: number) {
   if (c === p("/") || c === p("\\")) {
     if (c === p("\\")) {
       this.parseError = true;
@@ -1033,7 +1033,7 @@ URLStateMachine.prototype["parse path"] = function parsePath(c: string) {
   return true;
 };
 
-URLStateMachine.prototype["parse opaque path"] = function parseOpaquePath(c: string) {
+URLStateMachine.prototype["parse opaque path"] = function parseOpaquePath(c: number) {
   if (c === p("?")) {
     this.url.query = "";
     this.state = "query";
@@ -1060,7 +1060,7 @@ URLStateMachine.prototype["parse opaque path"] = function parseOpaquePath(c: str
   return true;
 };
 
-URLStateMachine.prototype["parse query"] = function parseQuery(c: string, cStr: string) {
+URLStateMachine.prototype["parse query"] = function parseQuery(c: number, cStr: string) {
   if (!isSpecial(this.url) || this.url.scheme === "ws" || this.url.scheme === "wss") {
     this.encodingOverride = "utf-8";
   }
@@ -1090,7 +1090,7 @@ URLStateMachine.prototype["parse query"] = function parseQuery(c: string, cStr: 
   return true;
 };
 
-URLStateMachine.prototype["parse fragment"] = function parseFragment(c: string) {
+URLStateMachine.prototype["parse fragment"] = function parseFragment(c: number) {
   if (!isNaN(c)) {
     // TODO: If c is not a URL code point and not "%", parse error.
     if (c === p("%") &&
@@ -1105,7 +1105,7 @@ URLStateMachine.prototype["parse fragment"] = function parseFragment(c: string) 
   return true;
 };
 
-function serializeURL(url: string, excludeFragment: boolean) {
+function serializeURL(url: URL, excludeFragment: boolean) {
   let output = `${url.scheme}:`;
   if (url.host !== null) {
     output += "//";
@@ -1168,7 +1168,7 @@ module.exports.serializeURL = serializeURL;
 
 module.exports.serializePath = serializePath;
 
-module.exports.serializeURLOrigin = function (url: string) {
+module.exports.serializeURLOrigin = function (url: URL) {
   // https://url.spec.whatwg.org/#concept-url-origin
   switch (url.scheme) {
     case "blob":
@@ -1203,7 +1203,7 @@ module.exports.serializeURLOrigin = function (url: string) {
   }
 };
 
-module.exports.basicURLParse = function (input: string, options: Options) {
+module.exports.basicURLParse = function (input: string, options: URLStateMachineOptions) {
   if (options === undefined) {
     options = {};
   }
@@ -1216,11 +1216,11 @@ module.exports.basicURLParse = function (input: string, options: Options) {
   return usm.url;
 };
 
-module.exports.setTheUsername = function (url: string, username: string) {
+module.exports.setTheUsername = function (url: URL, username: string) {
   url.username = utf8PercentEncodeString(username, isUserinfoPercentEncode);
 };
 
-module.exports.setThePassword = function (url: string, password: string) {
+module.exports.setThePassword = function (url: URL, password: string) {
   url.password = utf8PercentEncodeString(password, isUserinfoPercentEncode);
 };
 
@@ -1234,7 +1234,7 @@ module.exports.serializeInteger = function (integer: number) {
   return String(integer);
 };
 
-module.exports.parseURL = function (input: string, options: Options) {
+module.exports.parseURL = function (input: string, options: URLParseOptions) {
   if (options === undefined) {
     options = {};
   }

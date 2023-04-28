@@ -97,7 +97,7 @@ export default function xhrAdapter(config: AxiosRequestConfig) {
         request
       };
 
-      settle(function _resolve(value: T) {
+      settle(function _resolve(value: any) {
         resolve(value);
         done();
       }, function _reject(err: any) {

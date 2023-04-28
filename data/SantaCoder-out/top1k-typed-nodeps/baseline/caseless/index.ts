@@ -1,7 +1,7 @@
 function Caseless (dict: Object) {
   this.dict = dict || {}
 }
-Caseless.prototype.set = function (name: string, value: any, clobber: boolean) {
+Caseless.prototype.set = function (name: string, value: string, clobber: boolean) {
   if (typeof name === 'object') {
     for (var i in name) {
       this.set(i, name[i], value)
@@ -56,9 +56,9 @@ Caseless.prototype.del = function (name: string) {
 }
 
 module.exports = function (dict: Object) {return new Caseless(dict)}
-module.exports.httpify = function (resp: any, headers: any) {
+module.exports.httpify = function (resp: http.ServerResponse, headers: http.IncomingHttpHeaders) {
   var c = new Caseless(headers)
-  resp.setHeader = function (key: string, value: any, clobber: boolean) {
+  resp.setHeader = function (key: string, value: string, clobber: boolean) {
     if (typeof value === 'undefined') return
     return c.set(key, value, clobber)
   }

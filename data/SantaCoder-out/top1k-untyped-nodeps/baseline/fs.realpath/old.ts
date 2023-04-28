@@ -40,7 +40,7 @@ function rethrow() {
 
   return callback;
 
-  function debugCallback(err: Error) {
+  function debugCallback(err: any) {
     if (err) {
       backtrace.message = err.message;
       err = backtrace;
@@ -84,7 +84,7 @@ if (isWindows) {
   var splitRootRe = /^[\/]*/;
 }
 
-exports.realpathSync = function realpathSync(p: string, cache: any) {
+exports.realpathSync = function realpathSync(p: string, cache: Object) {
   // make p is absolute
   p = pathModule.resolve(p);
 
@@ -181,7 +181,7 @@ exports.realpathSync = function realpathSync(p: string, cache: any) {
 };
 
 
-exports.realpath = function realpath(p: string, cache: any, cb: any) {
+exports.realpath = function realpath(p: string, cache: Object, cb: Function) {
   if (typeof cb !== 'function') {
     cb = maybeCallback(cache);
     cache = null;
@@ -288,7 +288,7 @@ exports.realpath = function realpath(p: string, cache: any, cb: any) {
     });
   }
 
-  function gotTarget(err: any, target: any, base: any) {
+  function gotTarget(err: any, target: string, base: string) {
     if (err) return cb(err);
 
     var resolvedLink = pathModule.resolve(previous, target);

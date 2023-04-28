@@ -18,7 +18,7 @@ function getConnectionName(host: string, port: number) {
   return name
 }
 
-function ForeverAgent(options: any) {
+function ForeverAgent(options: ForeverAgentOptions) {
   var self = this
   self.options = options || {}
   self.requests = {}
@@ -58,7 +58,7 @@ ForeverAgent.defaultMinSockets = 5
 
 ForeverAgent.prototype.createConnection = net.createConnection
 ForeverAgent.prototype.addRequestNoreuse = Agent.prototype.addRequest
-ForeverAgent.prototype.addRequest = function(req: http.IncomingMessage, host: string, port: number) {
+ForeverAgent.prototype.addRequest = function(req: http.ClientRequest, host: string, port: number) {
   var name = getConnectionName(host, port)
   
   if (typeof host !== 'string') {
@@ -78,7 +78,7 @@ ForeverAgent.prototype.addRequest = function(req: http.IncomingMessage, host: st
   }
 }
 
-ForeverAgent.prototype.removeSocket = function(s: string, name: string, host: string, port: number) {
+ForeverAgent.prototype.removeSocket = function(s: Socket, name: string, host: string, port: number) {
   if (this.sockets[name]) {
     var index = this.sockets[name].indexOf(s)
     if (index !== -1) {

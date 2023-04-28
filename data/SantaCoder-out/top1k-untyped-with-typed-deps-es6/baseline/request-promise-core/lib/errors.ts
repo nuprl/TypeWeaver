@@ -37,7 +37,7 @@ StatusCodeError.prototype = Object.create(Error.prototype);
 StatusCodeError.prototype.constructor = StatusCodeError;
 
 
-function TransformError(cause: Error, options: any, response: any) {
+function TransformError(cause: Error, options: TransformOptions, response: Response) {
 
     this.name = 'TransformError';
     this.message = String(cause);

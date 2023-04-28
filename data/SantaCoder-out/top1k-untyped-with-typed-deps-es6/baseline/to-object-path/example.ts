@@ -3,7 +3,7 @@
 import Base from 'base';
 import toPath from './';
 
-function App(options: AppOptions) {
+function App(options: any) {
   Base.call(this);
   this.options = options || {};
 }

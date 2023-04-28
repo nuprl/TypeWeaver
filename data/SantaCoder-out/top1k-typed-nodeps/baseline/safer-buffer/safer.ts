@@ -37,7 +37,7 @@ if (!Safer.from || Safer.from === Uint8Array.from) {
 }
 
 if (!Safer.alloc) {
-  Safer.alloc = function (size: number, fill: string, encoding: string) {
+  Safer.alloc = function (size: number, fill: any, encoding: string) {
     if (typeof size !== 'number') {
       throw new TypeError('The "size" argument must be of type number. Received type ' + typeof size)
     }

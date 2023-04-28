@@ -23,7 +23,7 @@ import toKey from './.internal/toKey.js'
  * map(sortBy(objects, property(['a', 'b'])), 'a.b')
  * // => [1, 2]
  */
-function property(path: string) {
+function property(path: PropertyPath) {
   return isKey(path) ? baseProperty(toKey(path)) : basePropertyDeep(path)
 }
 

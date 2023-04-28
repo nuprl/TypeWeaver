@@ -2,7 +2,7 @@
 
 var isNative = /\.node$/;
 
-function forEach(obj: Object, callback: Function) {
+function forEach(obj: any, callback: Function) {
     for ( var key in obj ) {
         if (!Object.prototype.hasOwnProperty.call(obj, key)) {
             continue;

@@ -30,7 +30,7 @@ var TYPE_LINE_REGEXP = /^\s*([\w-]+\/[\w+.-]+)((?:\s+[\w-]+)*);\s*$/gm
  */
 var URL = 'https://raw.githubusercontent.com/nginx/nginx/master/conf/mime.types'
 
-get(URL, function onResponse (err: any, body: any) {
+get(URL, function onResponse (err: Error, body: string) {
   if (err) throw err
 
   var json = {}
@@ -57,7 +57,7 @@ get(URL, function onResponse (err: any, body: any) {
 /**
  * Append an extension to an object.
  */
-function appendExtension (obj: any, extension: string) {
+function appendExtension (obj: Object, extension: Object) {
   if (!obj.extensions) {
     obj.extensions = []
   }
@@ -70,7 +70,7 @@ function appendExtension (obj: any, extension: string) {
 /**
  * Append extensions to an object.
  */
-function appendExtensions (obj: Object, extensions: Object) {
+function appendExtensions (obj: Object, extensions: Array<Object>) {
   if (extensions.length === 0) {
     return
   }
@@ -87,7 +87,7 @@ function appendExtensions (obj: Object, extensions: Object) {
  * Get HTTPS resource.
  */
 function get (url: string, callback: any) {
-  https.get(url, function onResponse (res: http.IncomingMessage) {
+  https.get(url, function onResponse (res: IncomingMessage) {
     if (res.statusCode !== 200) {
       callback(new Error('got status code ' + res.statusCode + ' from ' + URL))
     } else {

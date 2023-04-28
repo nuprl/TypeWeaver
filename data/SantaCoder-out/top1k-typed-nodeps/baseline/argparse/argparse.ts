@@ -103,11 +103,11 @@ function hasattr(object: Object, name: string) {
     return Object.prototype.hasOwnProperty.call(object, name)
 }
 
-function getattr(object: Object, name: string, value: any) {
+function getattr(object: Object, name: String, value: Any) {
     return hasattr(object, name) ? object[name] : value
 }
 
-function setattr(object: any, name: string, value: any) {
+function setattr(object: Object, name: string, value: any) {
     object[name] = value
 }
 
@@ -116,7 +116,7 @@ function setdefault(object: any, name: string, value: any) {
     return object[name]
 }
 
-function delattr(object: any, name: string) {
+function delattr(object: Object, name: string) {
     delete object[name]
 }
 
@@ -174,7 +174,7 @@ function _array_equal(array1: any[], array2: any[]) {
     return true
 }
 
-function _array_remove(array: any[], item: any) {
+function _array_remove(array: Array<any>, item: any) {
     let idx = array.indexOf(item)
     if (idx === -1) throw new TypeError(sub('%r not in list', item))
     array.splice(idx, 1)
@@ -183,7 +183,7 @@ function _array_remove(array: any[], item: any) {
 // normalize choices to array;
 // this isn't required in python because `in` and `map` operators work with anything,
 // but in js dealing with multiple types here is too clunky
-function _choices_to_array(choices: Array<Choice>) {
+function _choices_to_array(choices: any) {
     if (choices === undefined) {
         return []
     } else if (Array.isArray(choices)) {
@@ -198,7 +198,7 @@ function _choices_to_array(choices: Array<Choice>) {
 }
 
 // decorator that allows a class to be called without new
-function _callable(cls: any) {
+function _callable(cls: Function) {
     let result = { // object is needed for inferred class name
         [cls.name]: function (...args: any[]) {
             let this_class = new.target === result || !new.target
@@ -223,7 +223,7 @@ function _alias(object: any, from: string, to: string) {
 }
 
 // decorator that allows snake_case class methods to be called with camelCase and vice versa
-function _camelcase_alias(_class: any) {
+function _camelcase_alias(_class: Function) {
     for (let name of Object.getOwnPropertyNames(_class.prototype)) {
         let camelcase = name.replace(/\w_[a-z]/g, s => s[0] + s[2].toUpperCase())
         if (camelcase !== name) _alias(_class.prototype, camelcase, name)
@@ -247,7 +247,7 @@ function _to_new_name(key: string) {
 
 // parse options
 let no_default = Symbol('no_default_value')
-function _parse_opts(args: string[], descriptor: CommandDescriptor) {
+function _parse_opts(args: string[], descriptor: Descriptor) {
     function get_name() {
         let stack = new Error().stack.split('\n')
             .map(x => x.match(/^    at (.*) \(.*\)$/))
@@ -895,7 +895,7 @@ const HelpFormatter = _camelcase_alias(_callable(class HelpFormatter {
             result = default_metavar
         }
 
-        function format(tuple_size: usize) {
+        function format(tuple_size: number) {
             if (Array.isArray(result)) {
                 return result
             } else {
@@ -1116,7 +1116,7 @@ const MetavarTypeHelpFormatter = _camelcase_alias(_callable(class MetavarTypeHel
 // =====================
 // Options and Arguments
 // =====================
-function _get_action_name(argument: string) {
+function _get_action_name(argument: Argument) {
     if (argument === undefined) {
         return undefined
     } else if (argument.option_strings.length) {
@@ -2606,14 +2606,14 @@ const ArgumentParser = _camelcase_alias(_callable(class ArgumentParser extends _
         this.register('type', undefined, identity)
         this.register('type', null, identity)
         this.register('type', 'auto', identity)
-        this.register('type', 'int', function (x: string) {
+        this.register('type', 'int', function (x: any) {
             let result = Number(x)
             if (!Number.isInteger(result)) {
                 throw new TypeError(sub('could not convert string to int: %r', x))
             }
             return result
         })
-        this.register('type', 'float', function (x: any) {
+        this.register('type', 'float', function (x: string) {
             let result = Number(x)
             if (isNaN(result)) {
                 throw new TypeError(sub('could not convert string to float: %r', x))

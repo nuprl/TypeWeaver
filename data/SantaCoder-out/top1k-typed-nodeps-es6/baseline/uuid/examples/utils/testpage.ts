@@ -1,4 +1,4 @@
-export default function test(callback: Function) {
+export default function test(callback: any) {
   const style = document.createElement('style');
   style.appendChild(
     document.createTextNode(
@@ -11,7 +11,7 @@ export default function test(callback: Function) {
   );
   document.body.appendChild(style);
 
-  function addTest(title: string, result: boolean) {
+  function addTest(title: string, result: Uint8Array) {
     // join() result if it's  array-like
     if (result instanceof Uint8Array || Array.isArray(result)) {
       result = Array.prototype.join.apply(result);

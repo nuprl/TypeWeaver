@@ -16,7 +16,7 @@ const INFINITY = 1 / 0
  * @see flatMap, flatMapDepth, flatten, flattenDeep, flattenDepth, map, mapKeys, mapValues
  * @example
  *
- * function duplicate(n: number) {
+ * function duplicate(n: any) {
  *   return [[[n, n]]]
  * }
  *

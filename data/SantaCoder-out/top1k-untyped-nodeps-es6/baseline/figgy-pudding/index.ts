@@ -82,7 +82,7 @@ class FiggyPudding {
 }
 try {
   const util = require('util')
-  FiggyPudding.prototype[util.inspect.custom] = function (depth: number, opts: any) {
+  FiggyPudding.prototype[util.inspect.custom] = function (depth: number, opts: util.InspectOptionsStylized) {
     return (
       this[Symbol.toStringTag] + ' '
     ) + util.inspect(this.toJSON(), opts)
@@ -95,7 +95,7 @@ function BadKeyError (key: string) {
   ), {code: 'EBADKEY'})
 }
 
-function pudGet (pud: any, key: string, validate: any) {
+function pudGet (pud: Pud, key: string, validate: boolean) {
   let spec = pud.__specs[key]
   if (validate && !spec && (!pud.__opts.other || !pud.__opts.other(key))) {
     BadKeyError(key)
@@ -186,12 +186,12 @@ function figgyPudding (specs: Object, opts: Object) {
   return factory
 }
 
-function reverse (arr: Array<any>) {
+function reverse (arr: any[]) {
   const ret = []
   arr.forEach(x => ret.unshift(x))
   return ret
 }
 
-function entries (obj: any) {
+function entries (obj: Object) {
   return Object.keys(obj).map(k => [k, obj[k]])
 }

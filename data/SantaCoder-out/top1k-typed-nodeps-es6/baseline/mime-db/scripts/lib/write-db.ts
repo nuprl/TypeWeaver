@@ -7,7 +7,7 @@
 
 import fs from 'fs';
 
-export default function writeDatabaseSync (fileName: string, obj: any) {
+export default function writeDatabaseSync (fileName: string, obj: Object) {
   var fd = fs.openSync(fileName, 'w')
   var keys = Object.keys(obj).sort()
 

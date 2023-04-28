@@ -1,7 +1,7 @@
 const PERMANENT_MARKER = 2;
 const TEMPORARY_MARKER = 1;
 
-function createError(node: Node, graph: Graph) {
+function createError(node: string, graph: Graph) {
   const er = new Error("Nondeterministic import's order");
 
   const related = graph[node];
@@ -14,7 +14,7 @@ function createError(node: Node, graph: Graph) {
   return er;
 }
 
-function walkGraph(node: Node, graph: Graph, state: State, result: Result, strict: Boolean) {
+function walkGraph(node: string, graph: Graph, state: State, result: Result, strict: boolean) {
   if (state[node] === PERMANENT_MARKER) {
     return;
   }

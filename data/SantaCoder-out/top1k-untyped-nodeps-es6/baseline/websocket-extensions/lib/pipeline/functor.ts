@@ -12,7 +12,7 @@ var Functor = function(session: Session, method: string) {
 
 Functor.QUEUE_SIZE = 8;
 
-Functor.prototype.call = function(error: any, message: any, callback: any, context: any) {
+Functor.prototype.call = function(error: Error, message: any, callback: Function, context: any) {
   if (this._stopped) return;
 
   var record = { error: error, message: message, callback: callback, context: context, done: false },
@@ -27,7 +27,7 @@ Functor.prototype.call = function(error: any, message: any, callback: any, conte
     return this._flushQueue();
   }
 
-  var handler = function(err: any, msg: any) {
+  var handler = function(err: Error, msg: string) {
     if (!(called ^ (called = true))) return;
 
     if (err) {

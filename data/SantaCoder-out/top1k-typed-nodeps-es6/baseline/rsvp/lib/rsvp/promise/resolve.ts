@@ -14,7 +14,7 @@ import {
     resolve(1);
   });
 
-  promise.then(function(value: number){
+  promise.then(function(value: any){
     // value === 1
   });
   ```
@@ -40,7 +40,7 @@ import {
   @return {Promise} a promise that will become fulfilled with the given
   `value`
 */
-export default function resolve(object: any, label: string) {
+export default function resolve(object: any, label: any) {
   /*jshint validthis:true */
   let Constructor = this;
 

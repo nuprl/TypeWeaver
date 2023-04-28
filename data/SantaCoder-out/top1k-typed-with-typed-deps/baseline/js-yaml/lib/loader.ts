@@ -31,7 +31,7 @@ var PATTERN_TAG_URI               = /^(?:!|[^,\[\]\{\}])(?:%[0-9a-f]{2}|[0-9a-z\
 
 function _class(obj: any) { return Object.prototype.toString.call(obj); }
 
-function is_EOL(c: string) {
+function is_EOL(c: number) {
   return (c === 0x0A/* LF */) || (c === 0x0D/* CR */);
 }
 
@@ -54,7 +54,7 @@ function is_FLOW_INDICATOR(c: number) {
          c === 0x7D/* } */;
 }
 
-function fromHexCode(c: string) {
+function fromHexCode(c: number) {
   var lc;
 
   if ((0x30/* 0 */ <= c) && (c <= 0x39/* 9 */)) {
@@ -86,7 +86,7 @@ function fromDecimalCode(c: number) {
   return -1;
 }
 
-function simpleEscapeSequence(c: string) {
+function simpleEscapeSequence(c: number) {
   /* eslint-disable indent */
   return (c === 0x30/* 0 */) ? '\x00' :
         (c === 0x61/* a */) ? '\x07' :
@@ -128,7 +128,7 @@ for (var i = 0; i < 256; i++) {
 }
 
 
-function State(input: string, options: any) {
+function State(input: string, options: LoaderOptions) {
   this.input = input;
 
   this.filename  = options['filename']  || null;
@@ -169,7 +169,7 @@ function State(input: string, options: any) {
 }
 
 
-function generateError(state: any, message: string) {
+function generateError(state: ParserState, message: string) {
   var mark = {
     name:     state.filename,
     buffer:   state.input.slice(0, -1), // omit trailing \0
@@ -183,7 +183,7 @@ function generateError(state: any, message: string) {
   return new YAMLException(message, mark);
 }
 
-function throwError(state: State, message: string) {
+function throwError(state: ParserState, message: string) {
   throw generateError(state, message);
 }
 
@@ -196,7 +196,7 @@ function throwWarning(state: State, message: string) {
 
 var directiveHandlers = {
 
-  YAML: function handleYamlDirective(state: State, name: string, args: string) {
+  YAML: function handleYamlDirective(state: ParserState, name: string, args: string[]) {
 
     var match, major, minor;
 
@@ -285,7 +285,7 @@ function captureSegment(state: State, start: number, end: number, checkJson: boo
   }
 }
 
-function mergeMappings(state: any, destination: any, source: any, overridableKeys: any) {
+function mergeMappings(state: State, destination: any, source: any, overridableKeys: any[]) {
   var sourceKeys, key, index, quantity;
 
   if (!common.isObject(source)) {
@@ -1362,7 +1362,7 @@ function readAlias(state: State) {
   return true;
 }
 
-function composeNode(state: State, parentIndent: number, nodeContext: NodeContext, allowToSeek: Boolean, allowCompact: Boolean) {
+function composeNode(state: State, parentIndent: number, nodeContext: NodeContext, allowToSeek: boolean, allowCompact: boolean) {
   var allowBlockStyles,
       allowBlockScalars,
       allowBlockCollections,
@@ -1649,7 +1649,7 @@ function readDocument(state: State) {
 }
 
 
-function loadDocuments(input: string, options: LoadDocumentsOptions) {
+function loadDocuments(input: string, options: YAML.LoadOptions) {
   input = String(input);
   options = options || {};
 
@@ -1692,7 +1692,7 @@ function loadDocuments(input: string, options: LoadDocumentsOptions) {
 }
 
 
-function loadAll(input: string, iterator: Function, options: any) {
+function loadAll(input: string, iterator: Function, options: Object) {
   if (iterator !== null && typeof iterator === 'object' && typeof options === 'undefined') {
     options = iterator;
     iterator = null;
@@ -1710,7 +1710,7 @@ function loadAll(input: string, iterator: Function, options: any) {
 }
 
 
-function load(input: string, options: Options) {
+function load(input: string, options: LoadOptions) {
   var documents = loadDocuments(input, options);
 
   if (documents.length === 0) {

@@ -36,7 +36,7 @@ const symIterator = Symbol.iterator
  * toArray(null)
  * // => []
  */
-function toArray(value: any[]) {
+function toArray(value: any) {
   if (!value) {
     return []
   }

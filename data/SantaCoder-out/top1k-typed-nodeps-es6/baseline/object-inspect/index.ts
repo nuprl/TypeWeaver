@@ -69,7 +69,7 @@ import utilInspect from './util.inspect';
 var inspectCustom = utilInspect.custom;
 var inspectSymbol = isSymbol(inspectCustom) ? inspectCustom : null;
 
-export default function inspect_(obj: any, options: any, depth: any, seen: any) {
+export default function inspect_(obj: any, options: Options, depth: number, seen: any[]) {
     var opts = options || {};
 
     if (has(opts, 'quoteStyle') && (opts.quoteStyle !== 'single' && opts.quoteStyle !== 'double')) {
@@ -140,7 +140,7 @@ export default function inspect_(obj: any, options: any, depth: any, seen: any) 
         return '[Circular]';
     }
 
-    function inspect(value: any, from: any, noIndent: boolean) {
+    function inspect(value: any, from: any, noIndent: any) {
         if (from) {
             seen = $arrSlice.call(seen);
             seen.push(from);
@@ -202,7 +202,7 @@ export default function inspect_(obj: any, options: any, depth: any, seen: any) 
     }
     if (isMap(obj)) {
         var mapParts = [];
-        mapForEach.call(obj, function (value: any, key: string) {
+        mapForEach.call(obj, function (value: any, key: any) {
             mapParts.push(inspect(key, obj, true) + ' => ' + inspect(value, obj));
         });
         return collectionOf('Map', mapSize.call(obj), mapParts, indent);
@@ -353,7 +353,7 @@ function isWeakMap(x: any) {
     return false;
 }
 
-function isWeakRef(x: unknown) {
+function isWeakRef(x: any) {
     if (!weakRefDeref || !x || typeof x !== 'object') {
         return false;
     }
@@ -436,7 +436,7 @@ function weakCollectionOf(type: string) {
     return type + ' { ? }';
 }
 
-function collectionOf(type: string, size: number, entries: any[], indent: string) {
+function collectionOf(type: string, size: number, entries: any[], indent: number) {
     var joinedEntries = indent ? indentedJoin(entries, indent) : $join.call(entries, ', ');
     return type + ' (' + size + ') {' + joinedEntries + '}';
 }
@@ -465,13 +465,13 @@ function getIndent(opts: Options, depth: number) {
     };
 }
 
-function indentedJoin(xs: string[], indent: string) {
+function indentedJoin(xs: any[], indent: string) {
     if (xs.length === 0) { return ''; }
     var lineJoiner = '\n' + indent.prev + indent.base;
     return lineJoiner + $join.call(xs, ',' + lineJoiner) + '\n' + indent.prev;
 }
 
-function arrObjKeys(obj: any, inspect: boolean) {
+function arrObjKeys(obj: any, inspect: any) {
     var isArr = isArray(obj);
     var xs = [];
     if (isArr) {

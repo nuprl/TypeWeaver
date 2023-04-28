@@ -3,7 +3,7 @@
  * used to emulate Prototype up/down/previous/next methods
  */
 
-(function(D: any){
+(function(D: Document){
 
   // TODO: all of this needs tests
   var match = D.match, select = D.select, root = document.documentElement,
@@ -18,7 +18,7 @@
   if (!(previousElement in root)) previousElement = 'previousSibling';
   if (!(parentElement in root)) parentElement = 'parentNode';
 
-  function walkElements(property: string, element: Element, expr: string) {
+  function walkElements(property: string, element: Element, expr: any) {
     var i = 0, isIndex = typeof expr == 'number';
     if (typeof expr == 'undefined') {
       isIndex = true;
@@ -51,7 +51,7 @@
    * @param {String | Number} expr CSS expression or an index
    * @return {HTMLElement | null}
    */
-  function next(element: Element, expr: string) {
+  function next(element: HTMLElement, expr: string) {
     return walkElements(nextElement, element, expr);
   }
   /**

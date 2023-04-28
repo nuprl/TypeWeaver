@@ -43,7 +43,7 @@ suite
 }, {'defer': true})
 
 
-.add('asynckit.parallel', function(deferred: asynckit.Deferred<any>)
+.add('asynckit.parallel', function(deferred: asynckit.Deferred)
 {
   var total = 0;
 
@@ -66,7 +66,7 @@ suite
 
 
 // add listeners
-.on('cycle', function(ev: Event)
+.on('cycle', function(ev: any)
 {
   console.log(String(ev.target));
 })

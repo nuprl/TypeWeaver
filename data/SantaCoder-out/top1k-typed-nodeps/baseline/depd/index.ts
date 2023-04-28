@@ -53,7 +53,7 @@ function convertDataDescriptorToAccessor (obj: Object, prop: string, message: st
   descriptor.get = function getter () { return value }
 
   if (descriptor.writable) {
-    descriptor.set = function setter (val: T) { return (value = val) }
+    descriptor.set = function setter (val: any) { return (value = val) }
   }
 
   delete descriptor.value
@@ -82,7 +82,7 @@ function createArgumentsString (arity: number) {
  * Create stack string from stack.
  */
 
-function createStackString (stack: string[]) {
+function createStackString (stack: Array<Function>) {
   var str = this.name + ': ' + this.namespace
 
   if (this.message) {
@@ -264,7 +264,7 @@ function log (message: string, site: string) {
  * Get call site location as array.
  */
 
-function callSiteLocation (callSite: NodeCallSite) {
+function callSiteLocation (callSite: CallSite) {
   var file = callSite.getFileName() || '<anonymous>'
   var line = callSite.getLineNumber()
   var colm = callSite.getColumnNumber()
@@ -316,7 +316,7 @@ function defaultMessage (site: Site) {
  * Format deprecation message without color.
  */
 
-function formatPlain (msg: string, caller: string, stack: string) {
+function formatPlain (msg: string, caller: Function, stack: Array<Function>) {
   var timestamp = new Date().toUTCString()
 
   var formatted = timestamp +
@@ -343,7 +343,7 @@ function formatPlain (msg: string, caller: string, stack: string) {
  * Format deprecation message with color.
  */
 
-function formatColor (msg: string, caller: string, stack: string) {
+function formatColor (msg: string, caller: string, stack: any[]) {
   var formatted = '\x1b[36;1m' + this._namespace + '\x1b[22;39m' + // bold cyan
     ' \x1b[33;1mdeprecated\x1b[22;39m' + // bold yellow
     ' \x1b[0m' + msg + '\x1b[39m' // reset
@@ -368,7 +368,7 @@ function formatColor (msg: string, caller: string, stack: string) {
  * Format call site location.
  */
 
-function formatLocation (callSite: NodeCallSite) {
+function formatLocation (callSite: any) {
   return relative(basePath, callSite[0]) +
     ':' + callSite[1] +
     ':' + callSite[2]
@@ -402,7 +402,7 @@ function getStack () {
  * Capture call site stack from v8.
  */
 
-function prepareObjectStackTrace (obj: any, stack: string[]) {
+function prepareObjectStackTrace (obj: Object, stack: string[]) {
   return stack
 }
 

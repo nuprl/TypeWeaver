@@ -33,7 +33,7 @@ var SAMPLES_DIRECTORY = path.join(__dirname, 'samples');
 var SAMPLES = [];
 
 
-fs.readdirSync(SAMPLES_DIRECTORY).sort().forEach(function (sample: any) {
+fs.readdirSync(SAMPLES_DIRECTORY).sort().forEach(function (sample: string) {
   var filepath = path.join(SAMPLES_DIRECTORY, sample),
       extname  = path.extname(filepath),
       basename = path.basename(filepath, extname),
@@ -55,7 +55,7 @@ fs.readdirSync(SAMPLES_DIRECTORY).sort().forEach(function (sample: any) {
   });
 
 
-  IMPLS.forEach(function (impl: TestImpl) {
+  IMPLS.forEach(function (impl: BenchmarkImpl) {
     suite.add(impl.name, {
 
       onCycle: function onCycle(event: any) {
@@ -80,7 +80,7 @@ fs.readdirSync(SAMPLES_DIRECTORY).sort().forEach(function (sample: any) {
 });
 
 
-function select(patterns: string[]) {
+function select(patterns: Array<RegExp>) {
   var result = [];
 
   if (!(patterns instanceof Array)) patterns = [ patterns ];

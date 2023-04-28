@@ -95,16 +95,16 @@ function optionKeyFromName(name: string) {
 
 // ---- Option types
 
-function parseBool(option: string, optstr: string, arg: string) {
+function parseBool(option: Option, optstr: string, arg: any) {
     return Boolean(arg);
 }
 
-function parseString(option: string, optstr: string, arg: string) {
+function parseString(option: Option, optstr: string, arg: string) {
     assert.string(arg, 'arg');
     return arg;
 }
 
-function parseNumber(option: Option, optstr: string, arg: string) {
+function parseNumber(option: any, optstr: string, arg: any) {
     assert.string(arg, 'arg');
     var num = Number(arg);
     if (isNaN(num)) {
@@ -126,7 +126,7 @@ function parseInteger(option: string, optstr: string, arg: string) {
     return num;
 }
 
-function parsePositiveInteger(option: Option, optstr: string, arg: string) {
+function parsePositiveInteger(option: string, optstr: string, arg: string) {
     assert.string(arg, 'arg');
     var num = Number(arg);
     if (!/^[0-9]+$/.test(arg) || isNaN(num) || num === 0) {
@@ -147,7 +147,7 @@ function parsePositiveInteger(option: Option, optstr: string, arg: string) {
  *      2014-03-28T18:35:01
  *      2014-03-28
  */
-function parseDate(option: string, optstr: string, arg: string) {
+function parseDate(option: string, optstr: string, arg: any) {
     assert.string(arg, 'arg');
     var date;
     if (/^\d+$/.test(arg)) {
@@ -256,7 +256,7 @@ var optionTypes = {
  *        the presence of '--' will stop option parsing, as all good
  *        option parsers should.
  */
-function Parser(config: any) {
+function Parser(config: ParserConfig) {
     assert.object(config, 'config');
     assert.arrayOfObject(config.options, 'config.options');
     assert.optionalBool(config.interspersed, 'config.interspersed');
@@ -270,7 +270,7 @@ function Parser(config: any) {
     this.allowUnknown =
         config.allowUnknown !== undefined ? config.allowUnknown : false;
 
-    this.options = config.options.map(function onOpt(o: any) {
+    this.options = config.options.map(function onOpt(o: ConfigOption) {
         return shallowCopy(o);
     });
     this.optionFromName = {};
@@ -369,7 +369,7 @@ Parser.prototype.optionTakesArg = function optionTakesArg(option: Option) {
  *      remaining args from `argv`) and `_order` (gives the order that
  *      options were specified).
  */
-Parser.prototype.parse = function parse(inputs: Array<any>) {
+Parser.prototype.parse = function parse(inputs: ParseInputs) {
     var self = this;
 
     // Old API was `parse([argv, [slice]])`
@@ -390,7 +390,7 @@ Parser.prototype.parse = function parse(inputs: Array<any>) {
     var opts = {};
     var _order = [];
 
-    function addOpt(option: string, optstr: string, key: string, val: string, from: number) {
+    function addOpt(option: Option, optstr: string, key: string, val: string, from: string) {
         var type = optionTypes[option.type];
         var parsedVal = type.parseArg(option, optstr, val);
         if (type.array) {
@@ -622,7 +622,7 @@ Parser.prototype.parse = function parse(inputs: Array<any>) {
  *        bounds.
  * @returns {String}
  */
-Parser.prototype.help = function help(config: Config) {
+Parser.prototype.help = function help(config: HelpConfig) {
     config = config || {};
     assert.object(config, 'config');
 
@@ -751,7 +751,7 @@ Parser.prototype.help = function help(config: Config) {
             var type = optionTypes[o.type];
             var arg = o.helpArg || type.helpArg || 'ARG';
             var envs = (Array.isArray(o.env) ? o.env : [o.env]).map(
-                function onE(e: Event) {
+                function onE(e: string) {
                     if (type.takesArg) {
                         return e + '=' + arg;
                     } else {
@@ -821,7 +821,7 @@ Parser.prototype.help = function help(config: Config) {
  *      See `specExtra` for providing Bash `complete_TYPE` functions, e.g.
  *      `complete_fruit` and `complete_veggie` in this example.
  */
-Parser.prototype.bashCompletion = function bashCompletion(args: any) {
+Parser.prototype.bashCompletion = function bashCompletion(args: BashCompletionArgs) {
     assert.object(args, 'args');
     assert.string(args.name, 'args.name');
     assert.optionalString(args.specExtra, 'args.specExtra');
@@ -873,7 +873,7 @@ const BASH_COMPLETION_TEMPLATE_PATH = path.join(
  *      See `specExtra` for providing Bash `complete_TYPE` functions, e.g.
  *      `complete_fruit` and `complete_veggie` in this example.
  */
-function bashCompletionSpecFromOptions(args: string[]) {
+function bashCompletionSpecFromOptions(args: any) {
     assert.object(args, 'args');
     assert.object(args.options, 'args.options');
     assert.optionalString(args.context, 'args.context');
@@ -888,7 +888,7 @@ function bashCompletionSpecFromOptions(args: string[]) {
     var shortopts = [];
     var longopts = [];
     var optargs = [];
-    (args.options || []).forEach(function onOpt(o: string) {
+    (args.options || []).forEach(function onOpt(o: Option) {
         if (o.group !== undefined && o.group !== null) {
             // Skip group headers.
             return;
@@ -970,7 +970,7 @@ function bashCompletionSpecFromOptions(args: string[]) {
  *      See `specExtra` for providing Bash `complete_TYPE` functions, e.g.
  *      `complete_fruit` and `complete_veggie` in this example.
  */
-function bashCompletionFromOptions(args: string[]) {
+function bashCompletionFromOptions(args: BashCompletionFromOptionsArgs) {
     assert.object(args, 'args');
     assert.object(args.options, 'args.options');
     assert.string(args.name, 'args.name');
@@ -1033,7 +1033,7 @@ function parse(config_: Config) {
  *        "bool" type.
  *      - helpArg {String} Required iff `takesArg === true`. The string to
  *        show in generated help for options of this type.
- *      - parseArg {Function} Require. `function (option: string, optstr: string, arg: string)` parser
+ *      - parseArg {Function} Require. `function (option: Option, optstr: string, arg: string)` parser
  *        that takes a string argument and returns an instance of the
  *        appropriate type, or throws an error if the arg is invalid.
  *      - array {Boolean} Optional. Set to true if this is an 'arrayOf' type
@@ -1078,7 +1078,7 @@ function getOptionType(name: string) {
  *      > synopsisFromOpt({name: 'file', type: 'string', helpArg: 'FILE'});
  *      '[ --file=FILE ]'
  */
-function synopsisFromOpt(o: any) {
+function synopsisFromOpt(o: OptionSpec) {
     assert.object(o, 'o');
 
     if (Object.prototype.hasOwnProperty.call(o, 'group')) {

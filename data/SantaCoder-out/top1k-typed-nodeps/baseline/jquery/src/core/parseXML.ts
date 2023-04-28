@@ -1,7 +1,7 @@
 import jQuery from "../core.js";
 
 // Cross-browser xml parsing
-jQuery.parseXML = function( data : any) {
+jQuery.parseXML = function( data : string) {
 	var xml, parserErrorElem;
 	if ( !data || typeof data !== "string" ) {
 		return null;
@@ -17,7 +17,7 @@ jQuery.parseXML = function( data : any) {
 	if ( !xml || parserErrorElem ) {
 		jQuery.error( "Invalid XML: " + (
 			parserErrorElem ?
-				jQuery.map( parserErrorElem.childNodes, function( el : HTMLElement) {
+				jQuery.map( parserErrorElem.childNodes, function( el : Node) {
 					return el.textContent;
 				} ).join( "\n" ) :
 				data

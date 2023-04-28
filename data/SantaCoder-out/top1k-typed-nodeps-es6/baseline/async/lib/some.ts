@@ -39,7 +39,7 @@ import awaitify from './internal/awaitify.js'
  *
  * // Using callbacks
  * async.some(['dir1/missing.txt','dir2/missing.txt','dir3/file5.txt'], fileExists,
- *    function(err: any, result: any) {
+ *    function(err: Error, result: boolean) {
  *        console.log(result);
  *        // true
  *        // result is true since some file in the list exists
@@ -47,7 +47,7 @@ import awaitify from './internal/awaitify.js'
  *);
  *
  * async.some(['dir1/missing.txt','dir2/missing.txt','dir4/missing.txt'], fileExists,
- *    function(err: any, result: any) {
+ *    function(err: any, result: boolean) {
  *        console.log(result);
  *        // false
  *        // result is false since none of the files exists

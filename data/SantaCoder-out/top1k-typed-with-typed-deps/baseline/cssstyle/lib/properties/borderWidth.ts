@@ -6,7 +6,7 @@ var implicitSetter = require('../parsers').implicitSetter;
 // the valid border-widths:
 var widths = ['thin', 'medium', 'thick'];
 
-module.exports.isValid = function parse(v: string) {
+module.exports.isValid = function parse(v: any) {
   var length = parsers.parseLength(v);
   if (length !== undefined) {
     return true;

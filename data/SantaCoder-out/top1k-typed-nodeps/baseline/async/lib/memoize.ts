@@ -42,7 +42,7 @@ import wrapAsync from './internal/wrapAsync.js'
  *     // callback
  * });
  */
-export default function memoize(fn: Function, hasher = v => v: any) {
+export default function memoize(fn: AsyncFunction, hasher = v => v: any) {
     var memo = Object.create(null);
     var queues = Object.create(null);
     var _fn = wrapAsync(fn);

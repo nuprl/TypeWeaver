@@ -39,7 +39,7 @@ module.exports = function bind(that: any) {
         boundArgs.push('$' + i);
     }
 
-    bound = Function('binder', 'return function (' + boundArgs.join(': any,': boundArgs.join) + '){ return binder.apply(this,arguments); }')(binder);
+    bound = Function('binder', 'return function (' + boundArgs.join(': any,': '') + '){ return binder.apply(this,arguments); }')(binder);
 
     if (target.prototype) {
         var Empty = function Empty() {};

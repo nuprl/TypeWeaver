@@ -65,7 +65,7 @@ function newEmptyBuffer(length: number) {
   return buffer;
 }
 
-function ensureBuffer(input: Buffer) {
+function ensureBuffer(input: any) {
   if (Buffer.isBuffer(input)) {
     return input;
   }

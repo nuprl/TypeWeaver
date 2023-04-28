@@ -31,7 +31,7 @@ export default WriteStreamAtomic;
 //   3. If there's an error, removes the temp file.
 
 util.inherits(WriteStreamAtomic, Writable)
-function WriteStreamAtomic (path: string, options: WriteStreamOptions) {
+function WriteStreamAtomic (path: string, options: any) {
   if (!(this instanceof WriteStreamAtomic)) {
     return new WriteStreamAtomic(path, options)
   }
@@ -58,7 +58,7 @@ function WriteStreamAtomic (path: string, options: WriteStreamOptions) {
 // data has been written to our target stream. So we suppress
 // finish from being emitted here, and only emit it after our
 // target stream is closed and we've moved everything around.
-WriteStreamAtomic.prototype.emit = function (event: Event) {
+WriteStreamAtomic.prototype.emit = function (event: string) {
   if (event === 'finish') return this.__atomicStream.end()
   return Writable.prototype.emit.apply(this, arguments)
 }
@@ -69,13 +69,13 @@ WriteStreamAtomic.prototype._write = function (buffer: Buffer, encoding: string,
   this.__atomicStream.once('drain', cb)
 }
 
-function handleOpen (writeStream: Writable) {
+function handleOpen (writeStream: AtomicWriteStream) {
   return function (fd: number) {
     writeStream.emit('open', fd)
   }
 }
 
-function handleClose (writeStream: Writable) {
+function handleClose (writeStream: WriteStream) {
   return function () {
     if (writeStream.__atomicClosed) return
     writeStream.__atomicClosed = true
@@ -92,7 +92,7 @@ function handleClose (writeStream: Writable) {
     fs.rename(writeStream.__atomicTmp, writeStream.__atomicTarget, iferr(trapWindowsEPERM, end))
   }
 
-  function trapWindowsEPERM (err: any) {
+  function trapWindowsEPERM (err: Error) {
     if (writeStream.__isWin &&
         err.syscall && err.syscall === 'rename' &&
         err.code && err.code === 'EPERM'
@@ -109,11 +109,11 @@ function handleClose (writeStream: Writable) {
     var targetFileHash = crypto.createHash('sha512')
 
     fs.createReadStream(writeStream.__atomicTmp)
-      .on('data', function (data: Buffer, enc: string) { tmpFileHash.update(data, enc) })
+      .on('data', function (data: any, enc: string) { tmpFileHash.update(data, enc) })
       .on('error', fileHashError)
       .on('end', fileHashComplete)
     fs.createReadStream(writeStream.__atomicTarget)
-      .on('data', function (data: any, enc: string) { targetFileHash.update(data, enc) })
+      .on('data', function (data: Buffer, enc: string) { targetFileHash.update(data, enc) })
       .on('error', fileHashError)
       .on('end', fileHashComplete)
 
@@ -159,8 +159,8 @@ function handleClose (writeStream: Writable) {
   }
 }
 
-function handleError (writeStream: Writable) {
-  return function (er: Error) {
+function handleError (writeStream: AtomicWriteStream) {
+  return function (er: any) {
     cleanupSync()
     writeStream.emit('error', er)
     writeStream.__atomicClosed = true

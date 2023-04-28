@@ -2,7 +2,7 @@
 
 var resolveException = require("../resolve-exception");
 
-module.exports = function (value: any, coerced: any, options: any) {
+module.exports = function (value: any, coerced: number, options: Options) {
 	if (coerced >= options.min) return coerced;
 	var errorMessage =
 		options && options.name

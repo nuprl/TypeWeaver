@@ -26,7 +26,7 @@ import Heap from './internal/Heap.js'
  *   except this returns a promise that rejects if an error occurs.
  * * The `unshift` and `unshiftAsync` methods were removed.
  */
-export default function(worker: Worker, concurrency: number) {
+export default function(worker: Function, concurrency: number) {
     // Start with a normal queue
     var q = queue(worker, concurrency);
 
@@ -44,7 +44,7 @@ export default function(worker: Worker, concurrency: number) {
         };
     };
 
-    function createDataItems(tasks: Task[], priority: number) {
+    function createDataItems(tasks: any, priority: number) {
         if (!Array.isArray(tasks)) {
             return {data: tasks, priority};
         }
@@ -52,7 +52,7 @@ export default function(worker: Worker, concurrency: number) {
     }
 
     // Override push to accept second parameter representing priority
-    q.push = function(data: any, priority = 0: number, callback: Function) {
+    q.push = function(data: any, priority = 0: any, callback: any) {
         return push(createDataItems(data, priority), callback);
     };
 

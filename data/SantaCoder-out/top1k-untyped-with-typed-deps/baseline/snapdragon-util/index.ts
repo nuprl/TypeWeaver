@@ -81,7 +81,7 @@ utils.identity = function(node: Node) {
  *
  * ```js
  * snapdragon.compiler
- *   .set('i', function(node: ASTNode) {
+ *   .set('i', function(node: Node) {
  *     this.mapVisit(node);
  *   })
  *   .set('i.open', utils.append('<i>'))
@@ -92,7 +92,7 @@ utils.identity = function(node: Node) {
  * @api public
  */
 
-utils.append = function(value: string) {
+utils.append = function(value: any) {
   return function(node: Node) {
     append(this, value, node);
   };
@@ -131,7 +131,7 @@ utils.toNoop = function(node: Node, nodes: Node[]) {
  * function.
  *
  * ```js
- * snapdragon.compiler.set('i', function(node: Node) {
+ * snapdragon.compiler.set('i', function(node: Object) {
  *   utils.visit(node, function(childNode: Node) {
  *     // do stuff with "childNode"
  *     return childNode;
@@ -210,7 +210,7 @@ utils.mapVisit = function(node: Node, fn: Function) {
  * @api public
  */
 
-utils.addOpen = function(node: Node, Node: Node, value: any, filter: any) {
+utils.addOpen = function(node: Node, Node: Function, value: string, filter: Function) {
   expect(node, 'node');
   assert(isFunction(Node), 'expected Node to be a constructor function');
 
@@ -260,7 +260,7 @@ utils.addOpen = function(node: Node, Node: Node, value: any, filter: any) {
  * @api public
  */
 
-utils.addClose = function(node: Node, Node: Node, value: any, filter: any) {
+utils.addClose = function(node: Node, Node: Node, value: string, filter: Filter) {
   assert(isFunction(Node), 'expected Node to be a constructor function');
   expect(node, 'node', Node);
 
@@ -290,7 +290,7 @@ utils.addClose = function(node: Node, Node: Node, value: any, filter: any) {
  * @api public
  */
 
-utils.wrapNodes = function(node: Node, Node: Node, filter: NodeFilter) {
+utils.wrapNodes = function(node: Node, Node: Function, filter: Function) {
   assert(utils.isNode(node), 'expected node to be an instance of Node');
   assert(isFunction(Node), 'expected Node to be a constructor function');
 
@@ -808,7 +808,7 @@ utils.hasOpenAndClose = function(node: Node) {
  * @api public
  */
 
-utils.addType = function(state: any, node: any) {
+utils.addType = function(state: Object, node: Node) {
   assert(utils.isNode(node), 'expected node to be an instance of Node');
   assert(isObject(state), 'expected state to be an object');
 
@@ -848,7 +848,7 @@ utils.addType = function(state: any, node: any) {
  * @api public
  */
 
-utils.removeType = function(state: any, node: any) {
+utils.removeType = function(state: Object, node: Node) {
   assert(utils.isNode(node), 'expected node to be an instance of Node');
   assert(isObject(state), 'expected state to be an object');
 
@@ -919,7 +919,7 @@ utils.isEmpty = function(node: Node, fn: Function) {
  * @api public
  */
 
-utils.isInsideType = function(state: any, type: string) {
+utils.isInsideType = function(state: Object, type: string) {
   assert(isObject(state), 'expected state to be an object');
   assert(isString(type), 'expected type to be a string');
 
@@ -953,7 +953,7 @@ utils.isInsideType = function(state: any, type: string) {
  * @api public
  */
 
-utils.isInside = function(state: any, node: any, type: any) {
+utils.isInside = function(state: Object, node: Node, type: string) {
   assert(utils.isNode(node), 'expected node to be an instance of Node');
   assert(isObject(state), 'expected state to be an object');
 
@@ -1001,7 +1001,7 @@ utils.isInside = function(state: any, node: any, type: any) {
  * @api public
  */
 
-utils.last = function(arr: any[], n: number) {
+utils.last = function(arr: Array<any>, n: number) {
   return Array.isArray(arr) ? arr[arr.length - (n || 1)] : null;
 };
 
@@ -1044,7 +1044,7 @@ utils.arrayify = function(value: any) {
  * @api public
  */
 
-utils.stringify = function(value: string) {
+utils.stringify = function(value: any) {
   return utils.arrayify(value).join(',');
 };
 
@@ -1065,7 +1065,7 @@ utils.trim = function(str: string) {
  * Return true if value is an object
  */
 
-function isObject(value: unknown) {
+function isObject(value: any) {
   return typeOf(value) === 'object';
 }
 
@@ -1089,7 +1089,7 @@ function isFunction(value: any) {
  * Return true if value is an array
  */
 
-function isArray(value: unknown) {
+function isArray(value: any) {
   return Array.isArray(value);
 }
 
@@ -1097,7 +1097,7 @@ function isArray(value: unknown) {
  * Shim to ensure the `.append` methods work with any version of snapdragon
  */
 
-function append(compiler: any, value: string, node: any) {
+function append(compiler: Compiler, value: string, node: Node) {
   if (typeof compiler.append !== 'function') {
     return compiler.emit(value, node);
   }
@@ -1111,7 +1111,7 @@ function append(compiler: any, value: string, node: any) {
 function assert(value: any, message: string) {
   if (!value) throw new Error(message);
 }
-function expect(node: Node, name: string, Node: any) {
+function expect(node: any, name: string, Node: any) {
   const isNode = (Node && Node.isNode) ? Node.isNode : utils.isNode;
   assert(isNode(node), `expected ${name} to be an instance of Node`);
 }

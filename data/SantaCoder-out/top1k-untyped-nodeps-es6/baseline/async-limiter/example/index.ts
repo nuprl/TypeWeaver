@@ -18,13 +18,13 @@ function random(upperBound: number, lowerBound = 0: number) {
   return Math.floor(Math.random() * 200) + lowerBound;
 }
 
-function done(result: any) {
+function done(result: string) {
   results.push(result);
   console.log(new Date().toISOString() + ' ' + result);
 }
 
 // add jobs using the familiar Array API
-t.push(async function(cb: Function) {
+t.push(async function(cb: any) {
   await delay(random(200));
   done('two');
   cb();
@@ -36,14 +36,14 @@ t.push(
     done('four');
     cb();
   },
-  async function(cb: Function) {
+  async function(cb: any) {
     await delay(random(200));
     done('five');
     cb();
   }
 );
 
-t.unshift(async function(cb: Function) {
+t.unshift(async function(cb: any) {
   await delay(random(200));
   done('one');
   cb();

@@ -21,7 +21,7 @@ import reflect from './reflect.js'
  *             callback(null, 'one');
  *         }, 200);
  *     },
- *     function(callback: Function) {
+ *     function(callback: any) {
  *         // do some more stuff but error ...
  *         callback(new Error('bad stuff happened'));
  *     },
@@ -34,7 +34,7 @@ import reflect from './reflect.js'
  *
  * async.parallel(async.reflectAll(tasks),
  * // optional callback
- * function(err: Error, results: any) {
+ * function(err: Error, results: Array<any>) {
  *     // values
  *     // results[0].value = 'one'
  *     // results[1].error = Error('bad stuff happened')
@@ -60,14 +60,14 @@ import reflect from './reflect.js'
  *
  * async.parallel(async.reflectAll(tasks),
  * // optional callback
- * function(err: Error, results: any) {
+ * function(err: any, results: any) {
  *     // values
  *     // results.one.value = 'one'
  *     // results.two.error = 'two'
  *     // results.three.value = 'three'
  * });
  */
-export default function reflectAll(tasks: any) {
+export default function reflectAll(tasks: ITasks) {
     var results;
     if (Array.isArray(tasks)) {
         results = tasks.map(reflect);

@@ -1,4 +1,4 @@
-module['exports'] = function(colors: string[]) {
+module['exports'] = function(colors: any) {
   // RoY G BiV
   var rainbowColors = ['red', 'yellow', 'green', 'blue', 'magenta'];
   return function(letter: string, i: number, exploded: string[]) {

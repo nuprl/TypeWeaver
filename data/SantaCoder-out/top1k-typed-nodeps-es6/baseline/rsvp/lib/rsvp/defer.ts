@@ -20,7 +20,7 @@ import Promise from "./promise";
 
    deferred.resolve("Success!");
 
-   deferred.promise.then(function(value: string){
+   deferred.promise.then(function(value: any){
      // value here is "Success!"
    });
    ```

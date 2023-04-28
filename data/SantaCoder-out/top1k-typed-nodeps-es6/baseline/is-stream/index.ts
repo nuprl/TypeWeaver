@@ -11,7 +11,7 @@ export function isWritableStream(stream: any) {
 		&& typeof stream._writableState === 'object';
 }
 
-export function isReadableStream(stream: unknown) {
+export function isReadableStream(stream: any) {
 	return isStream(stream)
 		&& stream.readable !== false
 		&& typeof stream._read === 'function'

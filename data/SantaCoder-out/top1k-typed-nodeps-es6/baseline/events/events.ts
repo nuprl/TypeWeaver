@@ -67,7 +67,7 @@ EventEmitter.prototype._maxListeners = undefined;
 // added to it. This is a useful default which helps finding memory leaks.
 var defaultMaxListeners = 10;
 
-function checkListener(listener: Listener) {
+function checkListener(listener: Function) {
   if (typeof listener !== 'function') {
     throw new TypeError('The "listener" argument must be of type Function. Received type ' + typeof listener);
   }
@@ -161,7 +161,7 @@ EventEmitter.prototype.emit = function emit(type: string) {
   return true;
 };
 
-function _addListener(target: HTMLElement, type: string, listener: EventListenerOrEventListenerObject, prepend: boolean) {
+function _addListener(target: EventTarget, type: string, listener: EventListenerOrEventListenerObject, prepend: boolean) {
   var m;
   var events;
   var existing;
@@ -223,14 +223,14 @@ function _addListener(target: HTMLElement, type: string, listener: EventListener
   return target;
 }
 
-EventEmitter.prototype.addListener = function addListener(type: string, listener: EventListenerOrEventListenerObject) {
+EventEmitter.prototype.addListener = function addListener(type: string, listener: Function) {
   return _addListener(this, type, listener, false);
 };
 
 EventEmitter.prototype.on = EventEmitter.prototype.addListener;
 
 EventEmitter.prototype.prependListener =
-    function prependListener(type: string, listener: Listener) {
+    function prependListener(type: string, listener: Function) {
       return _addListener(this, type, listener, true);
     };
 
@@ -244,7 +244,7 @@ function onceWrapper() {
   }
 }
 
-function _onceWrap(target: any, type: string, listener: any) {
+function _onceWrap(target: EventEmitter, type: string, listener: Function) {
   var state = { fired: false, wrapFn: undefined, target: target, type: type, listener: listener };
   var wrapped = onceWrapper.bind(state);
   wrapped.listener = listener;
@@ -252,7 +252,7 @@ function _onceWrap(target: any, type: string, listener: any) {
   return wrapped;
 }
 
-EventEmitter.prototype.once = function once(type: string, listener: Listener) {
+EventEmitter.prototype.once = function once(type: string, listener: Function) {
   checkListener(listener);
   this.on(type, _onceWrap(this, type, listener));
   return this;
@@ -371,7 +371,7 @@ EventEmitter.prototype.removeAllListeners =
       return this;
     };
 
-function _listeners(target: EventTarget, type: string, unwrap: boolean) {
+function _listeners(target: EventEmitter, type: string, unwrap: boolean) {
   var events = target._events;
 
   if (events === undefined)
@@ -396,7 +396,7 @@ EventEmitter.prototype.rawListeners = function rawListeners(type: string) {
   return _listeners(this, type, false);
 };
 
-EventEmitter.listenerCount = function(emitter: Emitter, type: string) {
+EventEmitter.listenerCount = function(emitter: EventEmitter, type: string) {
   if (typeof emitter.listenerCount === 'function') {
     return emitter.listenerCount(type);
   } else {
@@ -447,8 +447,8 @@ function unwrapListeners(arr: Array<any>) {
 }
 
 function once(emitter: EventEmitter, name: string) {
-  return new Promise(function (resolve: any, reject: any) {
-    function errorListener(err: any) {
+  return new Promise(function (resolve: Function, reject: Function) {
+    function errorListener(err: Error) {
       emitter.removeListener(name, resolver);
       reject(err);
     }
@@ -467,13 +467,13 @@ function once(emitter: EventEmitter, name: string) {
   });
 }
 
-function addErrorHandlerIfEventEmitter(emitter: EventEmitter, handler: Function, flags: number) {
+function addErrorHandlerIfEventEmitter(emitter: EventEmitter, handler: Function, flags: any) {
   if (typeof emitter.on === 'function') {
     eventTargetAgnosticAddListener(emitter, 'error', handler, flags);
   }
 }
 
-function eventTargetAgnosticAddListener(emitter: EventEmitter, name: string, listener: Function, flags: number) {
+function eventTargetAgnosticAddListener(emitter: EventEmitter, name: string, listener: Function, flags: ListenerFlags) {
   if (typeof emitter.on === 'function') {
     if (flags.once) {
       emitter.once(name, listener);

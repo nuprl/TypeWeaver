@@ -3,7 +3,7 @@ import shift from 'stream-shift';
 
 export default each;
 
-function each (stream: Readable, fn: any, cb: any) {
+function each (stream: Readable, fn: Function, cb: Function) {
   var want = true
   var error = null
   var ended = false

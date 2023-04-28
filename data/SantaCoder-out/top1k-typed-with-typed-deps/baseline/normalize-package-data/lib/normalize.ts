@@ -17,7 +17,7 @@ var thingsToFix = fieldsToFix.map(function (fieldName: string) {
 // thingsToFix = (ucFirst(name) + "Field" for name in fieldsToFix)
 thingsToFix = thingsToFix.concat(otherThingsToFix)
 
-function normalize (data: any, warn: any, strict: any) {
+function normalize (data: PackageData, warn: Function, strict: boolean) {
   if (warn === true) {
     warn = null
     strict = true

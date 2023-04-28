@@ -106,8 +106,8 @@ function logError(id: string, error: any) {
   });
 }
 
-function matchWhitelist(error: any, list: string[]) {
-  return list.some(function (cls: any) {
+function matchWhitelist(error: Error, list: Array<Function>) {
+  return list.some(function (cls: Function) {
     return error instanceof cls;
   });
 }

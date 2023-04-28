@@ -5,7 +5,7 @@ var isValue = require("../value/is");
 // Sanity BigInt support check
 BigInt(0);
 
-module.exports = function (value: any) {
+module.exports = function (value: unknown) {
 	if (!isValue(value)) return null;
 	if (typeof value === "bigint") return value;
 	try { return BigInt(value); }

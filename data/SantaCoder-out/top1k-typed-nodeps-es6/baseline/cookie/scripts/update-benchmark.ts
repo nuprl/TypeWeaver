@@ -25,7 +25,7 @@ function get (href: string, callback: any) {
 
   proto.get(href)
     .on('error', callback)
-    .on('response', function (res: any) {
+    .on('response', function (res: http.IncomingMessage) {
       if (res.headers.location && res.statusCode >= 300 && res.statusCode < 400) {
         get(url.resolve(href, res.headers.location), callback)
       } else {
@@ -34,12 +34,12 @@ function get (href: string, callback: any) {
     })
 }
 
-function getAllCookies (sites: string[], callback: any) {
+function getAllCookies (sites: Site[], callback: any) {
   var all = Object.create(null)
   var wait = sites.length
 
-  sites.forEach(function (site: string) {
-    getCookies(site, function (err: Error, cookies: string[]) {
+  sites.forEach(function (site: Site) {
+    getCookies(site, function (err: Error, cookies: Array<string>) {
       if (!err && cookies.length) {
         all[site.rootDomain] = cookies.map(obfuscate).join('; ')
       }
@@ -50,7 +50,7 @@ function getAllCookies (sites: string[], callback: any) {
   })
 }
 
-function getCookies (site: string, callback: any) {
+function getCookies (site: Site, callback: any) {
   var href = url.format({ hostname: site.rootDomain, protocol: 'http' })
   get(href, function (err: any, res: any) {
     if (err) return callback(err)

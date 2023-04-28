@@ -222,7 +222,7 @@
    * max {number|string|Decimal}
    *
    */
-  P.clampedTo = P.clamp = function (min: number, max: number) {
+  P.clampedTo = P.clamp = function (min: BigNumber, max: BigNumber) {
     var k,
       x = this,
       Ctor = x.constructor;
@@ -243,7 +243,7 @@
    *   NaN  if the value of either Decimal is NaN.
    *
    */
-  P.comparedTo = P.cmp = function (y: number) {
+  P.comparedTo = P.cmp = function (y: BigNumber) {
     var i, j, xdL, ydL,
       x = this,
       xd = x.d,
@@ -465,7 +465,7 @@
    * `precision` significant digits using rounding mode `rounding`.
    *
    */
-  P.dividedBy = P.div = function (y: number) {
+  P.dividedBy = P.div = function (y: Decimal) {
     return divide(this, new this.constructor(y));
   };
 
@@ -475,7 +475,7 @@
    * by the value of `y`, rounded to `precision` significant digits using rounding mode `rounding`.
    *
    */
-  P.dividedToIntegerBy = P.divToInt = function (y: any) {
+  P.dividedToIntegerBy = P.divToInt = function (y: Decimal) {
     var x = this,
       Ctor = x.constructor;
     return finalise(divide(x, new Ctor(y), 0, 1, 1), Ctor.precision, Ctor.rounding);
@@ -486,7 +486,7 @@
    * Return true if the value of this Decimal is equal to the value of `y`, otherwise return false.
    *
    */
-  P.equals = P.eq = function (y: T) {
+  P.equals = P.eq = function (y: Decimal) {
     return this.cmp(y) === 0;
   };
 
@@ -506,7 +506,7 @@
    * false.
    *
    */
-  P.greaterThan = P.gt = function (y: T) {
+  P.greaterThan = P.gt = function (y: Decimal) {
     return this.cmp(y) > 0;
   };
 
@@ -516,7 +516,7 @@
    * otherwise return false.
    *
    */
-  P.greaterThanOrEqualTo = P.gte = function (y: T) {
+  P.greaterThanOrEqualTo = P.gte = function (y: Decimal) {
     var k = this.cmp(y);
     return k == 1 || k === 0;
   };
@@ -1084,7 +1084,7 @@
    * Return true if the value of this Decimal is less than `y`, otherwise return false.
    *
    */
-  P.lessThan = P.lt = function (y: T) {
+  P.lessThan = P.lt = function (y: Decimal) {
     return this.cmp(y) < 0;
   };
 
@@ -1093,7 +1093,7 @@
    * Return true if the value of this Decimal is less than or equal to `y`, otherwise return false.
    *
    */
-  P.lessThanOrEqualTo = P.lte = function (y: T) {
+  P.lessThanOrEqualTo = P.lte = function (y: Decimal) {
     return this.cmp(y) < 1;
   };
 
@@ -1128,7 +1128,7 @@
    * [base] {number|string|Decimal} The base of the logarithm.
    *
    */
-  P.logarithm = P.log = function (base: any) {
+  P.logarithm = P.log = function (base: BigNumber) {
     var isBase10, d, denominator, k, inf, num, sd, r,
       arg = this,
       Ctor = arg.constructor,
@@ -1261,7 +1261,7 @@
    * significant digits using rounding mode `rounding`.
    *
    */
-  P.minus = P.sub = function (y: number) {
+  P.minus = P.sub = function (y: BigNumber) {
     var d, e, i, j, k, len, pr, rm, xd, xe, xLTy, yd,
       x = this,
       Ctor = x.constructor;
@@ -1435,7 +1435,7 @@
    * The result depends on the modulo mode.
    *
    */
-  P.modulo = P.mod = function (y: number) {
+  P.modulo = P.mod = function (y: BigNumber) {
     var q,
       x = this,
       Ctor = x.constructor;
@@ -1525,7 +1525,7 @@
    * significant digits using rounding mode `rounding`.
    *
    */
-  P.plus = P.add = function (y: number) {
+  P.plus = P.add = function (y: BigNumber) {
     var carry, d, e, i, k, len, pr, rm, xd, yd,
       x = this,
       Ctor = x.constructor;
@@ -1870,7 +1870,7 @@
    * digits using rounding mode `rounding`.
    *
    */
-  P.times = P.mul = function (y: number) {
+  P.times = P.mul = function (y: any) {
     var carry, e, i, k, r, rL, t, xdL, ydL,
       x = this,
       Ctor = x.constructor,
@@ -1947,7 +1947,7 @@
    * [rm] {number} Rounding mode. Integer, 0 to 8 inclusive.
    *
    */
-  P.toBinary = function (sd: number, rm: number) {
+  P.toBinary = function (sd: number, rm: RoundingMode) {
     return toStringBinary(this, 2, sd, rm);
   };
 
@@ -1962,7 +1962,7 @@
    * [rm] {number} Rounding mode. Integer, 0 to 8 inclusive.
    *
    */
-  P.toDecimalPlaces = P.toDP = function (dp: any, rm: any) {
+  P.toDecimalPlaces = P.toDP = function (dp: number, rm: number) {
     var x = this,
       Ctor = x.constructor;
 
@@ -1986,7 +1986,7 @@
    * [rm] {number} Rounding mode. Integer, 0 to 8 inclusive.
    *
    */
-  P.toExponential = function (dp: any, rm: any) {
+  P.toExponential = function (dp: number, rm: number) {
     var str,
       x = this,
       Ctor = x.constructor;
@@ -2023,7 +2023,7 @@
    * (-0.5).toFixed(0) is '-0'.
    *
    */
-  P.toFixed = function (dp: any, rm: any) {
+  P.toFixed = function (dp: number, rm: number) {
     var str, y,
       x = this,
       Ctor = x.constructor;
@@ -2149,7 +2149,7 @@
    * 'toNearest() rounding mode out of range: {rm}'
    *
    */
-  P.toNearest = function (y: any, rm: any) {
+  P.toNearest = function (y: BigNumber, rm: RoundingMode) {
     var x = this,
       Ctor = x.constructor;
 
@@ -2217,7 +2217,7 @@
    * [rm] {number} Rounding mode. Integer, 0 to 8 inclusive.
    *
    */
-  P.toOctal = function (sd: number, rm: number) {
+  P.toOctal = function (sd: number, rm: RoundingMode) {
     return toStringBinary(this, 8, sd, rm);
   };
 
@@ -2265,7 +2265,7 @@
    * y {number|string|Decimal} The power to which to raise this Decimal.
    *
    */
-  P.toPower = P.pow = function (y: number) {
+  P.toPower = P.pow = function (y: BigNumber) {
     var e, k, pr, r, rm, s,
       x = this,
       Ctor = x.constructor,
@@ -2376,7 +2376,7 @@
    * [rm] {number} Rounding mode. Integer, 0 to 8 inclusive.
    *
    */
-  P.toPrecision = function (sd: string, rm: string) {
+  P.toPrecision = function (sd: number, rm: number) {
     var str,
       x = this,
       Ctor = x.constructor;
@@ -2411,7 +2411,7 @@
    * 'toSD() rounding mode out of range: {rm}'
    *
    */
-  P.toSignificantDigits = P.toSD = function (sd: any, rm: any) {
+  P.toSignificantDigits = P.toSD = function (sd: number, rm: number) {
     var x = this,
       Ctor = x.constructor;
 
@@ -2559,7 +2559,7 @@
    * `repeating == null` if caller is `log` or `pow`,
    * `repeating != null` if caller is `naturalLogarithm` or `naturalExponential`.
    */
-  function checkRoundingDigits(d: number, i: number, rm: number, repeating: boolean) {
+  function checkRoundingDigits(d: number[], i: number, rm: RoundingMode, repeating: boolean) {
     var di, k, r, rd;
 
     // Get the length of the first word of the array d.
@@ -2638,7 +2638,7 @@
    * |x| < pi/2
    *
    */
-  function cosine(Ctor: Function, x: number) {
+  function cosine(Ctor: Function, x: BigNumber) {
     var k, len, y;
 
     if (x.isZero()) return x;
@@ -2711,7 +2711,7 @@
       return r;
     }
 
-    function subtract(a: number, b: number, aL: number, base: number) {
+    function subtract(a: number[], b: number[], aL: number, base: number) {
       var i = 0;
 
       // Subtract b from a.
@@ -2725,7 +2725,7 @@
       for (; !a[0] && a.length > 1;) a.shift();
     }
 
-    return function (x: number, y: number, pr: number, rm: number, dp: number, base: number) {
+    return function (x: BigJS, y: BigJS, pr: number, rm: number, dp: number, base: number) {
       var cmp, e, i, k, logBase, more, prod, prodL, q, qd, rem, remL, rem0, sd, t, xi, xL, yd0,
         yL, yz,
         Ctor = x.constructor,
@@ -2943,7 +2943,7 @@
    * Round `x` to `sd` significant digits using rounding mode `rm`.
    * Check for over/under-flow.
    */
-   function finalise(x: number, sd: number, rm: number, isTruncated: boolean) {
+   function finalise(x: BigNumber, sd: number, rm: RoundingMode, isTruncated: boolean) {
     var digits, i, j, k, rd, roundUp, w, xd, xdi,
       Ctor = x.constructor;
 
@@ -3110,7 +3110,7 @@
   }
 
 
-  function finiteToString(x: number, isExp: boolean, sd: number) {
+  function finiteToString(x: BigNumber, isExp: boolean, sd: number) {
     if (!x.isFinite()) return nonFiniteToString(x);
     var k,
       e = x.e,
@@ -3165,7 +3165,7 @@
   }
 
 
-  function getPi(Ctor: Function, sd: number, rm: number) {
+  function getPi(Ctor: any, sd: number, rm: number) {
     if (sd > PI_PRECISION) throw Error(precisionLimitExceeded);
     return finalise(new Ctor(PI), sd, rm, true);
   }
@@ -3205,7 +3205,7 @@
    * Implements 'exponentiation by squaring'. Called by `pow` and `parseOther`.
    *
    */
-  function intPow(Ctor: any, x: number, n: mcl.Int, pr: mcl.CurveFp) {
+  function intPow(Ctor: any, x: any, n: any, pr: any) {
     var isTruncated,
       r = new Ctor(1),
 
@@ -3240,7 +3240,7 @@
   }
 
 
-  function isOdd(n: number) {
+  function isOdd(n: Decimal) {
     return n.d[n.d.length - 1] & 1;
   }
 
@@ -3248,7 +3248,7 @@
   /*
    * Handle `max` and `min`. `ltgt` is 'lt' or 'gt'.
    */
-  function maxOrMin(Ctor: Function, args: any[], ltgt: any) {
+  function maxOrMin(Ctor: any, args: any[], ltgt: any) {
     var y,
       x = new Ctor(args[0]),
       i = 0;
@@ -3298,7 +3298,7 @@
    *  The result will always be correctly rounded.
    *
    */
-  function naturalExponential(x: number, sd: number) {
+  function naturalExponential(x: BigJS, sd: number) {
     var denominator, guard, j, pow, sum, t, wpr,
       rep = 0,
       i = 0,
@@ -3389,7 +3389,7 @@
    *  ln(n) (n != 1) is non-terminating.
    *
    */
-  function naturalLogarithm(y: number, sd: number) {
+  function naturalLogarithm(y: BigNumber, sd: number) {
     var c, c0, denominator, e, numerator, rep, sum, t, wpr, x1, x2,
       n = 1,
       guard = 10,
@@ -3505,7 +3505,7 @@
 
 
   // ±Infinity, NaN.
-  function nonFiniteToString(x: number) {
+  function nonFiniteToString(x: Decimal) {
     // Unsigned.
     return String(x.s * x.s / 0);
   }
@@ -3596,7 +3596,7 @@
   /*
    * Parse the value of a new Decimal `x` from a string `str`, which is not a decimal value.
    */
-  function parseOther(x: string, str: string) {
+  function parseOther(x: BigJS, str: string) {
     var base, Ctor, divisor, i, isFloat, len, p, xd, xe;
 
     if (str.indexOf('_') > -1) {
@@ -3676,7 +3676,7 @@
    * |x| < pi/2
    *
    */
-  function sine(Ctor: Function, x: number) {
+  function sine(Ctor: any, x: any) {
     var k,
       len = x.d.length;
 
@@ -3710,7 +3710,7 @@
 
 
   // Calculate Taylor series for `cos`, `cosh`, `sin` and `sinh`.
-  function taylorSeries(Ctor: Function, n: number, x: number, y: number, isHyperbolic: boolean) {
+  function taylorSeries(Ctor: any, n: number, x: any, y: any, isHyperbolic: boolean) {
     var j, t, u, x2,
       i = 1,
       pr = Ctor.precision,
@@ -3754,7 +3754,7 @@
 
 
   // Return the absolute value of `x` reduced to less than or equal to half pi.
-  function toLessThanHalfPi(Ctor: Function, x: number) {
+  function toLessThanHalfPi(Ctor: any, x: any) {
     var t,
       isNeg = x.s < 0,
       pi = getPi(Ctor, Ctor.precision, 1),
@@ -3792,7 +3792,7 @@
    *
    * If the optional `sd` argument is present include a binary exponent suffix.
    */
-  function toStringBinary(x: number, baseOut: number, sd: number, rm: number) {
+  function toStringBinary(x: Big, baseOut: number, sd: number, rm: number) {
     var base, e, i, k, len, roundUp, str, xd, y,
       Ctor = x.constructor,
       isExp = sd !== void 0;
@@ -3925,7 +3925,7 @@
 
 
   // Does not strip trailing zeros.
-  function truncate(arr: any[], len: number) {
+  function truncate(arr: number[], len: number) {
     if (arr.length > len) {
       arr.length = len;
       return true;
@@ -3987,7 +3987,7 @@
    * x {number|string|Decimal}
    *
    */
-  function abs(x: number) {
+  function abs(x: Decimal) {
     return new this(x).abs();
   }
 
@@ -4010,7 +4010,7 @@
    * x {number|string|Decimal} A value in radians.
    *
    */
-  function acosh(x: number) {
+  function acosh(x: Decimal) {
     return new this(x).acosh();
   }
 
@@ -4023,7 +4023,7 @@
    * y {number|string|Decimal}
    *
    */
-  function add(x: number, y: number) {
+  function add(x: number|string|Decimal, y: number|string|Decimal) {
     return new this(x).plus(y);
   }
 
@@ -4059,7 +4059,7 @@
    * x {number|string|Decimal}
    *
    */
-  function atan(x: number) {
+  function atan(x: number|string|Decimal) {
     return new this(x).atan();
   }
 
@@ -4071,7 +4071,7 @@
    * x {number|string|Decimal} A value in radians.
    *
    */
-  function atanh(x: number) {
+  function atanh(x: DecimalSource) {
     return new this(x).atanh();
   }
 
@@ -4152,7 +4152,7 @@
    * x {number|string|Decimal}
    *
    */
-  function cbrt(x: number) {
+  function cbrt(x: Decimal) {
     return new this(x).cbrt();
   }
 
@@ -4163,7 +4163,7 @@
    * x {number|string|Decimal}
    *
    */
-  function ceil(x: number) {
+  function ceil(x: Decimal) {
     return finalise(x = new this(x), x.e + 1, 2);
   }
 
@@ -4176,7 +4176,7 @@
    * max {number|string|Decimal}
    *
    */
-  function clamp(x: number, min: number, max: number) {
+  function clamp(x: Decimal, min: Decimal, max: Decimal) {
     return new this(x).clamp(min, max);
   }
 
@@ -4262,7 +4262,7 @@
    * x {number|string|Decimal} A value in radians.
    *
    */
-  function cosh(x: number) {
+  function cosh(x: Decimal) {
     return new this(x).cosh();
   }
 
@@ -4282,7 +4282,7 @@
      * v {number|string|Decimal} A numeric value.
      *
      */
-    function Decimal(v: number) {
+    function Decimal(v: any) {
       var e, i, t,
         x = this;
 
@@ -4464,7 +4464,7 @@
    * y {number|string|Decimal}
    *
    */
-  function div(x: number, y: number) {
+  function div(x: number|string|Decimal, y: number|string|Decimal) {
     return new this(x).div(y);
   }
 
@@ -4476,7 +4476,7 @@
    * x {number|string|Decimal} The power to which to raise the base of the natural log.
    *
    */
-  function exp(x: number) {
+  function exp(x: Decimal) {
     return new this(x).exp();
   }
 
@@ -4487,7 +4487,7 @@
    * x {number|string|Decimal}
    *
    */
-  function floor(x: number) {
+  function floor(x: Decimal) {
     return finalise(x = new this(x), x.e + 1, 3);
   }
 
@@ -4543,7 +4543,7 @@
    * x {number|string|Decimal}
    *
    */
-  function ln(x: number) {
+  function ln(x: Decimal) {
     return new this(x).ln();
   }
 
@@ -4582,7 +4582,7 @@
    * x {number|string|Decimal}
    *
    */
-  function log10(x: number) {
+  function log10(x: Decimal) {
     return new this(x).log(10);
   }
 
@@ -4630,7 +4630,7 @@
    * y {number|string|Decimal}
    *
    */
-  function mul(x: number, y: number) {
+  function mul(x: Decimal, y: Decimal) {
     return new this(x).mul(y);
   }
 
@@ -4643,7 +4643,7 @@
    * y {number|string|Decimal} The exponent.
    *
    */
-  function pow(x: number, y: number) {
+  function pow(x: Decimal, y: Decimal) {
     return new this(x).pow(y);
   }
 
@@ -4761,7 +4761,7 @@
    * x {number|string|Decimal}
    *
    */
-  function round(x: number) {
+  function round(x: Decimal) {
     return finalise(x = new this(x), x.e + 1, this.rounding);
   }
 
@@ -4777,7 +4777,7 @@
    * x {number|string|Decimal}
    *
    */
-  function sign(x: bigint) {
+  function sign(x: Decimal) {
     x = new this(x);
     return x.d ? (x.d[0] ? x.s : 0 * x.s) : x.s || NaN;
   }
@@ -4814,7 +4814,7 @@
    * x {number|string|Decimal}
    *
    */
-  function sqrt(x: number) {
+  function sqrt(x: number|string|Decimal) {
     return new this(x).sqrt();
   }
 
@@ -4827,7 +4827,7 @@
    * y {number|string|Decimal}
    *
    */
-  function sub(x: number, y: number) {
+  function sub(x: Decimal, y: Decimal) {
     return new this(x).sub(y);
   }
 
@@ -4884,7 +4884,7 @@
    * x {number|string|Decimal}
    *
    */
-  function trunc(x: number) {
+  function trunc(x: Decimal) {
     return finalise(x = new this(x), x.e + 1, 1);
   }
 

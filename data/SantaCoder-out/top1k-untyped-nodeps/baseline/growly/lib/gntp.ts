@@ -12,7 +12,7 @@ var nl = '\r\n';
  * @api private
  */
 
-function GNTP(type: string, opts: GNTPOpts) {
+function GNTP(type: string, opts: GNTPOptions) {
     opts = opts || {};
     this.type = type;
     this.host = opts.host || 'localhost';
@@ -44,7 +44,7 @@ function GNTP(type: string, opts: GNTPOpts) {
  * @api private
  */
 
-GNTP.prototype.parseResp = function(resp: any) {
+GNTP.prototype.parseResp = function(resp: string) {
     var parsed = {}, head, body;
     resp = resp.slice(0, resp.indexOf(nl + nl)).split(nl);
     head = resp[0];
@@ -82,7 +82,7 @@ GNTP.prototype.retry = function() {
  * @api private
  */
 
-GNTP.prototype.addResource = function(file: string) {
+GNTP.prototype.addResource = function(file: Buffer) {
     var id = crypto.createHash('md5').update(file).digest('hex'),
         header = 'Identifier: ' + id + nl + 'Length: ' + file.length + nl + nl;
     this.resources.push({ header: header, file: file });
@@ -98,7 +98,7 @@ GNTP.prototype.addResource = function(file: string) {
  * @api public
  */
 
-GNTP.prototype.add = function(name: string, val: any) {
+GNTP.prototype.add = function(name: string, val: string) {
     if (val === undefined) 
         return;
 
@@ -154,7 +154,7 @@ GNTP.prototype.send = function(callback: Function) {
     socket.on('connect', function() {
         socket.write(self.request);
 
-        self.resources.forEach(function(res: Response) {
+        self.resources.forEach(function(res: any) {
             socket.write(res.header);
             socket.write(res.file);
             socket.write(nl + nl);

@@ -71,7 +71,7 @@ const NEEDLESS_TABLE = {
     'list-style-image': ['list-style']
 };
 
-function getPropertyFingerprint(propertyName: string, declaration: ts.Declaration, fingerprints: string[]) {
+function getPropertyFingerprint(propertyName: string, declaration: Declaration, fingerprints: Fingerprints) {
     const realName = resolveProperty(propertyName).basename;
 
     if (realName === 'background') {
@@ -200,7 +200,7 @@ function getPropertyFingerprint(propertyName: string, declaration: ts.Declaratio
     return propertyName + fingerprint;
 }
 
-function needless(props: Object, declaration: Object, fingerprints: Object) {
+function needless(props: Property, declaration: Declaration, fingerprints: Fingerprints) {
     const property = resolveProperty(declaration.property);
 
     if (NEEDLESS_TABLE.hasOwnProperty(property.basename)) {
@@ -217,10 +217,10 @@ function needless(props: Object, declaration: Object, fingerprints: Object) {
     }
 }
 
-function processRule(rule: Rule, item: Item, list: Item[], props: Props, fingerprints: Fingerprints) {
+function processRule(rule: Rule, item: Item, list: List, props: Props, fingerprints: Fingerprints) {
     const declarations = rule.block.children;
 
-    declarations.forEachRight(function(declaration: any, declarationItem: any) {
+    declarations.forEachRight(function(declaration: CSSProperty, declarationItem: CSSPropertyItem) {
         const { property } = declaration;
         const fingerprint = getPropertyFingerprint(property, declaration, fingerprints);
         const prev = props[fingerprint];
@@ -275,7 +275,7 @@ function processRule(rule: Rule, item: Item, list: Item[], props: Props, fingerp
     }
 }
 
-export default function restructBlock(ast: AST) {
+export default function restructBlock(ast: Node) {
     const stylesheetMap = {};
     const fingerprints = Object.create(null);
 

@@ -8,7 +8,7 @@ function legacy (fs: any) {
     WriteStream: WriteStream
   }
 
-  function ReadStream (path: string, options: ReadStreamOptions) {
+  function ReadStream (path: string, options: any) {
     if (!(this instanceof ReadStream)) return new ReadStream(path, options);
 
     Stream.call(this);
@@ -72,7 +72,7 @@ function legacy (fs: any) {
     })
   }
 
-  function WriteStream (path: string, options: WriteStreamOptions) {
+  function WriteStream (path: string, options: Object) {
     if (!(this instanceof WriteStream)) return new WriteStream(path, options);
 
     Stream.call(this);

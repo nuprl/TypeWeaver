@@ -1,4 +1,4 @@
-export default function( n: number, elem : any) {
+export default function( n: Node, elem : Node) {
 	var matched = [];
 
 	for ( ; n; n = n.nextSibling ) {

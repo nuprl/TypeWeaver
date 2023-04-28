@@ -16,7 +16,7 @@ const benchmark = function (loopCount: number, objectSize: number, predicateSize
 	console.timeEnd();
 };
 
-const getObjectKeyPair = function (_: any, index: number) {
+const getObjectKeyPair = function (_: unknown, index: number) {
 	return [`a${index}`, index];
 };
 

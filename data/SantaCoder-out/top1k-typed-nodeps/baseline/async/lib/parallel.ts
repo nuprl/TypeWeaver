@@ -50,7 +50,7 @@ import _parallel from './internal/parallel.js'
  *             callback(null, 'two');
  *         }, 100);
  *     }
- * ], function(err: Error, results: any) {
+ * ], function(err: any, results: any) {
  *     console.log(results);
  *     // results is equal to ['one','two'] even though
  *     // the second function had a shorter timeout.
@@ -68,7 +68,7 @@ import _parallel from './internal/parallel.js'
  *             callback(null, 2);
  *         }, 100);
  *     }
- * }, function(err: Error, results: any) {
+ * }, function(err: any, results: any) {
  *     console.log(results);
  *     // results is equal to: { one: 1, two: 2 }
  * });
@@ -116,7 +116,7 @@ import _parallel from './internal/parallel.js'
  * async () => {
  *     try {
  *         let results = await async.parallel([
- *             function(callback: Function) {
+ *             function(callback: any) {
  *                 setTimeout(function() {
  *                     callback(null, 'one');
  *                 }, 200);
@@ -140,7 +140,7 @@ import _parallel from './internal/parallel.js'
  * async () => {
  *     try {
  *         let results = await async.parallel({
- *             one: function(callback: Function) {
+ *             one: function(callback: any) {
  *                 setTimeout(function() {
  *                     callback(null, 1);
  *                 }, 200);

@@ -3,7 +3,7 @@
 var parseColor = require('../parsers').parseColor;
 
 module.exports.definition = {
-  set: function(v: any) {
+  set: function(v: string) {
     this._setProperty('-webkit-text-fill-color', parseColor(v));
   },
   get: function() {

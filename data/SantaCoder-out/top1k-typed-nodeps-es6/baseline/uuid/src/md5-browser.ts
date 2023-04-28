@@ -18,7 +18,7 @@
  * Distributed under the BSD License
  * See http://pajhome.org.uk/crypt/md5 for more info.
  */
-function md5(bytes: string) {
+function md5(bytes: Uint8Array) {
   if (typeof bytes === 'string') {
     const msg = unescape(encodeURIComponent(bytes)); // UTF8 escape
 
@@ -61,7 +61,7 @@ function getOutputLength(inputLength8: number) {
 /*
  * Calculate the MD5 of an array of little-endian words, and a bit length.
  */
-function wordsToMd5(x: string, len: number) {
+function wordsToMd5(x: number[], len: number) {
   /* append padding */
   x[len >> 5] |= 0x80 << len % 32;
   x[getOutputLength(len) - 1] = len;

@@ -32,7 +32,7 @@ function resolveYamlBinary(data: string) {
   return (bitlen % 8) === 0;
 }
 
-function constructYamlBinary(data: any) {
+function constructYamlBinary(data: string) {
   var idx, tailbits,
       input = data.replace(/[\r\n=]/g, ''), // remove CR/LF & padding to simplify scan
       max = input.length,
@@ -70,7 +70,7 @@ function constructYamlBinary(data: any) {
   return new Uint8Array(result);
 }
 
-function representYamlBinary(object /*: Uint8Array, style*/: any) {
+function representYamlBinary(object /*: Uint8Array, style*/: string) {
   var result = '', bits = 0, idx, tail,
       max = object.length,
       map = BASE64_MAP;

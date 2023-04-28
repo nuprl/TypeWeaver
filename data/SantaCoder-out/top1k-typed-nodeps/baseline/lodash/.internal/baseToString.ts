@@ -14,7 +14,7 @@ const symbolToString = Symbol.prototype.toString
  * @param {*} value The value to process.
  * @returns {string} Returns the string.
  */
-function baseToString(value: any) {
+function baseToString(value: unknown) {
   // Exit early for strings to avoid a performance hit in some environments.
   if (typeof value === 'string') {
     return value

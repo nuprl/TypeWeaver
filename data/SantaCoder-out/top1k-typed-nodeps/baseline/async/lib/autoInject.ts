@@ -94,7 +94,7 @@ function parseParams(func: Function) {
  *         // this is run at the same time as getting the data
  *         callback(null, 'folder');
  *     },
- *     write_file: function(get_data: Function, make_folder: Function, callback: Function) {
+ *     write_file: function(get_data: any, make_folder: any, callback: any) {
  *         // once there is some data and the directory exists,
  *         // write the data to a file in the directory
  *         callback(null, 'filename');
@@ -122,7 +122,7 @@ function parseParams(func: Function) {
  *     write_file: ['get_data', 'make_folder', function(get_data: any, make_folder: any, callback: any) {
  *         callback(null, 'filename');
  *     }],
- *     email_link: ['write_file', function(write_file: any, callback: any) {
+ *     email_link: ['write_file', function(write_file: string, callback: Function) {
  *         callback(null, {'file':write_file, 'email':'user@example.com'});
  *     }]
  *     //...

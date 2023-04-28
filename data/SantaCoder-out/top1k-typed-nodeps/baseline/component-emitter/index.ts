@@ -83,7 +83,7 @@ Emitter.prototype.once = function(event: string, fn: Function){
 Emitter.prototype.off =
 Emitter.prototype.removeListener =
 Emitter.prototype.removeAllListeners =
-Emitter.prototype.removeEventListener = function(event: any, fn: any){
+Emitter.prototype.removeEventListener = function(event: string, fn: Function){
   this._callbacks = this._callbacks || {};
 
   // all
@@ -129,7 +129,7 @@ Emitter.prototype.removeEventListener = function(event: any, fn: any){
  * @return {Emitter}
  */
 
-Emitter.prototype.emit = function(event: Event){
+Emitter.prototype.emit = function(event: string){
   this._callbacks = this._callbacks || {};
 
   var args = new Array(arguments.length - 1)
@@ -157,7 +157,7 @@ Emitter.prototype.emit = function(event: Event){
  * @api public
  */
 
-Emitter.prototype.listeners = function(event: Event){
+Emitter.prototype.listeners = function(event: string){
   this._callbacks = this._callbacks || {};
   return this._callbacks['$' + event] || [];
 };

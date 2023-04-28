@@ -16,7 +16,7 @@ map = curry$(function(f: Function, xs: Array<any>){
   }
   return results$;
 });
-compact = function(xs: any[]){
+compact = function(xs: Array<any>){
   var i$, len$, x, results$ = [];
   for (i$ = 0, len$ = xs.length; i$ < len$; ++i$) {
     x = xs[i$];
@@ -83,7 +83,7 @@ tail = function(xs: Array<T>){
   }
   return xs.slice(1);
 };
-last = function(xs: number[]){
+last = function(xs: Array<T>){
   return xs[xs.length - 1];
 };
 initial = function(xs: Array<T>){
@@ -92,13 +92,13 @@ initial = function(xs: Array<T>){
   }
   return xs.slice(0, -1);
 };
-empty = function(xs: Array<T>){
+empty = function(xs: Array<any>){
   return !xs.length;
 };
-reverse = function(xs: Array<T>){
+reverse = function(xs: Array<any>){
   return xs.concat().reverse();
 };
-unique = function(xs: any[]){
+unique = function(xs: Array<any>){
   var result, i$, len$, x;
   result = [];
   for (i$ = 0, len$ = xs.length; i$ < len$; ++i$) {
@@ -134,7 +134,7 @@ fold = foldl = curry$(function(f: Function, memo: any, xs: Array<any>){
 fold1 = foldl1 = curry$(function(f: Function, xs: Array<any>){
   return fold(f, xs[0], xs.slice(1));
 });
-foldr = curry$(function(f: (a), memo: (b), xs: (c)){
+foldr = curry$(function(f: Function, memo: any, xs: Array<any>){
   var i$, x;
   for (i$ = xs.length - 1; i$ >= 0; --i$) {
     x = xs[i$];
@@ -142,10 +142,10 @@ foldr = curry$(function(f: (a), memo: (b), xs: (c)){
   }
   return memo;
 });
-foldr1 = curry$(function(f: A, xs: List[A]){
+foldr1 = curry$(function(f: Function, xs: Array<any>){
   return foldr(f, xs[xs.length - 1], xs.slice(0, -1));
 });
-unfoldr = curry$(function(f: any, b: any){
+unfoldr = curry$(function(f: Function, b: any){
   var result, x, that;
   result = [];
   x = b;
@@ -155,10 +155,10 @@ unfoldr = curry$(function(f: any, b: any){
   }
   return result;
 });
-concat = function(xss: any[][]){
+concat = function(xss: any){
   return [].concat.apply([], xss);
 };
-concatMap = curry$(function(f: any, xs: any){
+concatMap = curry$(function(f: Function, xs: Array<any>){
   var x;
   return [].concat.apply([], (function(){
     var i$, ref$, len$, results$ = [];
@@ -169,7 +169,7 @@ concatMap = curry$(function(f: any, xs: any){
     return results$;
   }()));
 });
-flatten = function(xs: Array<T>){
+flatten = function(xs: Array<any>){
   var x;
   return [].concat.apply([], (function(){
     var i$, ref$, len$, results$ = [];
@@ -184,7 +184,7 @@ flatten = function(xs: Array<T>){
     return results$;
   }()));
 };
-difference = function(xs: List[A]){
+difference = function(xs: Array<T>){
   var yss, res$, i$, to$, results, len$, x, j$, len1$, ys;
   res$ = [];
   for (i$ = 1, to$ = arguments.length; i$ < to$; ++i$) {
@@ -204,7 +204,7 @@ difference = function(xs: List[A]){
   }
   return results;
 };
-intersection = function(xs: List[Int]){
+intersection = function(xs: Array<T>){
   var yss, res$, i$, to$, results, len$, x, j$, len1$, ys;
   res$ = [];
   for (i$ = 1, to$ = arguments.length; i$ < to$; ++i$) {
@@ -271,7 +271,7 @@ groupBy = curry$(function(f: Function, xs: Array<any>){
   }
   return results;
 });
-andList = function(xs: Array<T>){
+andList = function(xs: any[]){
   var i$, len$, x;
   for (i$ = 0, len$ = xs.length; i$ < len$; ++i$) {
     x = xs[i$];
@@ -281,7 +281,7 @@ andList = function(xs: Array<T>){
   }
   return true;
 };
-orList = function(xs: any[]){
+orList = function(xs: Array<any>){
   var i$, len$, x;
   for (i$ = 0, len$ = xs.length; i$ < len$; ++i$) {
     x = xs[i$];
@@ -311,8 +311,8 @@ all = curry$(function(f: Function, xs: Array<any>){
   }
   return true;
 });
-sort = function(xs: Array<T>){
-  return xs.concat().sort(function(x: number, y: number){
+sort = function(xs: Array<any>){
+  return xs.concat().sort(function(x: any, y: any){
     if (x > y) {
       return 1;
     } else if (x < y) {
@@ -325,8 +325,8 @@ sort = function(xs: Array<T>){
 sortWith = curry$(function(f: Function, xs: Array<any>){
   return xs.concat().sort(f);
 });
-sortBy = curry$(function(f: any, xs: any){
-  return xs.concat().sort(function(x: T, y: T){
+sortBy = curry$(function(f: Function, xs: Array<any>){
+  return xs.concat().sort(function(x: number, y: number){
     if (f(x) > f(y)) {
       return 1;
     } else if (f(x) < f(y)) {
@@ -336,7 +336,7 @@ sortBy = curry$(function(f: any, xs: any){
     }
   });
 });
-sum = function(xs: any[]){
+sum = function(xs: Array<number>){
   var result, i$, len$, x;
   result = 0;
   for (i$ = 0, len$ = xs.length; i$ < len$; ++i$) {
@@ -354,7 +354,7 @@ product = function(xs: Array<number>){
   }
   return result;
 };
-mean = average = function(xs: number[]){
+mean = average = function(xs: Array<number>){
   var sum, i$, len$, x;
   sum = 0;
   for (i$ = 0, len$ = xs.length; i$ < len$; ++i$) {
@@ -419,13 +419,13 @@ scan = scanl = curry$(function(f: Function, memo: any, xs: Array<any>){
     return results$;
   }()));
 });
-scan1 = scanl1 = curry$(function(f: any, xs: any){
+scan1 = scanl1 = curry$(function(f: Function, xs: Array<any>){
   if (!xs.length) {
     return;
   }
   return scan(f, xs[0], xs.slice(1));
 });
-scanr = curry$(function(f: Function, memo: any, xs: any){
+scanr = curry$(function(f: Function, memo: any, xs: Array<any>){
   xs = xs.concat().reverse();
   return scan(f, memo, xs).reverse();
 });
@@ -436,24 +436,24 @@ scanr1 = curry$(function(f: Function, xs: Array<any>){
   xs = xs.concat().reverse();
   return scan(f, xs[0], xs.slice(1)).reverse();
 });
-slice = curry$(function(x: number, y: number, xs: number[]){
+slice = curry$(function(x: number, y: number, xs: Array<any>){
   return xs.slice(x, y);
 });
-take = curry$(function(n: number, xs: Array<T>){
+take = curry$(function(n: number, xs: Array<any>){
   if (n <= 0) {
     return xs.slice(0, 0);
   } else {
     return xs.slice(0, n);
   }
 });
-drop = curry$(function(n: number, xs: T[]){
+drop = curry$(function(n: number, xs: Array<any>){
   if (n <= 0) {
     return xs;
   } else {
     return xs.slice(n);
   }
 });
-splitAt = curry$(function(n: number, xs: any[]){
+splitAt = curry$(function(n: number, xs: Array<any>){
   return [take(n, xs), drop(n, xs)];
 });
 takeWhile = curry$(function(p: any, xs: any){
@@ -486,7 +486,7 @@ span = curry$(function(p: any, xs: any){
 breakList = curry$(function(p: any, xs: any){
   return span(compose$(p, not$), xs);
 });
-zip = curry$(function(xs: Array<T>, ys: Array<T>){
+zip = curry$(function(xs: Array<any>, ys: Array<any>){
   var result, len, i$, len$, i, x;
   result = [];
   len = ys.length;
@@ -500,7 +500,7 @@ zip = curry$(function(xs: Array<T>, ys: Array<T>){
   }
   return result;
 });
-zipWith = curry$(function(f: any, xs: any, ys: any){
+zipWith = curry$(function(f: Function, xs: Array, ys: Array){
   var result, len, i$, len$, i, x;
   result = [];
   len = ys.length;
@@ -563,14 +563,14 @@ zipAllWith = function(f: Function){
     return results$;
   }
 };
-at = curry$(function(n: number, xs: Array<T>){
+at = curry$(function(n: number, xs: Array<any>){
   if (n < 0) {
     return xs[xs.length + n];
   } else {
     return xs[n];
   }
 });
-elemIndex = curry$(function(el: HTMLElement, xs: any[]){
+elemIndex = curry$(function(el: any, xs: any){
   var i$, len$, i, x;
   for (i$ = 0, len$ = xs.length; i$ < len$; ++i$) {
     i = i$;
@@ -580,7 +580,7 @@ elemIndex = curry$(function(el: HTMLElement, xs: any[]){
     }
   }
 });
-elemIndices = curry$(function(el: HTMLElement, xs: any[]){
+elemIndices = curry$(function(el: any, xs: any){
   var i$, len$, i, x, results$ = [];
   for (i$ = 0, len$ = xs.length; i$ < len$; ++i$) {
     i = i$;
@@ -684,7 +684,7 @@ module.exports = {
   findIndex: findIndex,
   findIndices: findIndices
 };
-function curry$(f: Function, bound: Array<any>){
+function curry$(f: Function, bound: Object){
   var context,
   _curry = function(args: any[]) {
     return f.length > 1 ? function(){
@@ -713,4 +713,4 @@ function compose$() {
     return result;
   };
 }
-function not$(x: any){ return !x; }
+function not$(x: boolean){ return !x; }

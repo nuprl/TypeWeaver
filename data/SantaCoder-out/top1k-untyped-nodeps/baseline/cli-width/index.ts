@@ -2,7 +2,7 @@
 
 module.exports = cliWidth;
 
-function normalizeOpts(options: Options) {
+function normalizeOpts(options: any) {
   const defaultOpts = {
     defaultWidth: 0,
     output: process.stdout,

@@ -9,8 +9,8 @@ var write = require('./lib/write')
 var URL = 'https://www.iana.org/assignments/http-status-codes/http-status-codes-1.csv'
 var HEADERS = { 'User-Agent': 'nodejs/' + process.version + ' (' + process.platform + ', npm:statuses)' }
 
-https.get(URL, { headers: HEADERS }, function onResponse (res: IncomingMessage) {
-  toArray(res.pipe(parser()), function (err: any, rows: any) {
+https.get(URL, { headers: HEADERS }, function onResponse (res: ReadableStream) {
+  toArray(res.pipe(parser()), function (err: Error, rows: any[]) {
     if (err) throw err
 
     var codes = {}
@@ -38,7 +38,7 @@ https.get(URL, { headers: HEADERS }, function onResponse (res: IncomingMessage) 
 })
 
 function generateRowMapper (headers: string[]) {
-  return function reduceRows (obj: any, val: any, index: number) {
+  return function reduceRows (obj: Object, val: string, index: number) {
     if (val !== '') {
       obj[headers[index]] = val
     }

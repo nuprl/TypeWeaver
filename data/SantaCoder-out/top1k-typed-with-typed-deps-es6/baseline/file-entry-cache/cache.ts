@@ -53,7 +53,7 @@ export default {
        * @param  {String}  file  the filepath to check
        * @return {Boolean}       wheter or not the file has changed
        */
-      hasFileChanged: function (file: File) {
+      hasFileChanged: function (file: string) {
         return this.getFileDescriptor(file).changed;
       },
 
@@ -66,7 +66,7 @@ export default {
        * @param  {Array} files the files to analyze and compare to the previous seen files
        * @return {[type]}       [description]
        */
-      analyzeFiles: function (files: any) {
+      analyzeFiles: function (files: Array<string>) {
         var me = this;
         files = files || [];
 
@@ -170,7 +170,7 @@ export default {
        * @param files {Array} the array of files to compare against the ones in the cache
        * @returns {Array}
        */
-      getUpdatedFiles: function (files: Array<File>) {
+      getUpdatedFiles: function (files: Array<string>) {
         var me = this;
         files = files || [];
 
@@ -190,7 +190,7 @@ export default {
        * @param files
        * @returns {*}
        */
-      normalizeEntries: function (files: string[]) {
+      normalizeEntries: function (files: FileEntry[]) {
         files = files || [];
 
         var me = this;

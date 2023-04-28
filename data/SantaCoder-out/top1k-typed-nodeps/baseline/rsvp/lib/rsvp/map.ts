@@ -56,7 +56,7 @@ export class MapEnumerator extends Enumerator {
     return item + 1;
   };
 
-  map(promises, mapFn).then(function(result: number[]){
+  map(promises, mapFn).then(function(result: any){
     // result is [ 2, 3, 4 ]
   });
   ```
@@ -73,11 +73,11 @@ export class MapEnumerator extends Enumerator {
   let promise3 = reject(new Error('3'));
   let promises = [ promise1, promise2, promise3 ];
 
-  let mapFn = function(item: number){
+  let mapFn = function(item: any){
     return item + 1;
   };
 
-  map(promises, mapFn).then(function(array: any){
+  map(promises, mapFn).then(function(array: Array<T>){
     // Code here never runs because there are rejected promises!
   }, function(reason: any) {
     // reason.message === '2'
@@ -99,7 +99,7 @@ export class MapEnumerator extends Enumerator {
 
   // getBlogPosts does some ajax and returns an Promise that is fulfilled
   // with some blog post data
-  map(getBlogPosts(), mapFn).then(function(comments: Comment[]){
+  map(getBlogPosts(), mapFn).then(function(comments: Array<any>){
     // comments is the result of asking the server for the comments
     // of all blog posts returned from getBlogPosts()
   });
@@ -117,13 +117,13 @@ export class MapEnumerator extends Enumerator {
   `mapFn` on each fulfilled promise or value when they become fulfilled.
    The promise will be rejected if any of the given `promises` become rejected.
 */
-export default function map(promises: Array<Promise<any>>, mapFn: any, label: string) {
+export default function map(promises: Promise<any>[], mapFn: any, label: string) {
   if (typeof mapFn !== 'function') {
     return Promise.reject(new TypeError("map expects a function as a second argument"), label);
   }
 
   return Promise.resolve(promises, label)
-    .then(function(promises: Array<Promise<any>>) {
+    .then(function(promises: Promise<T>[]) {
       if (!Array.isArray(promises)) {
         throw new TypeError("map must be called with an array");
       }

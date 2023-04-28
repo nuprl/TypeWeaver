@@ -203,7 +203,7 @@ export default [{
     ],
     setup(num) {
         tasks = _.range(num).map(() => {
-            return function(cb: Function) {
+            return function(cb: void) {
                 setImmediate(cb);
             };
         });
@@ -220,7 +220,7 @@ export default [{
     ],
     setup(num) {
         tasks = _.range(num).map(() => {
-            return function(cb: any) {
+            return function(cb: Function) {
                 setImmediate(cb);
             };
         });
@@ -237,11 +237,11 @@ export default [{
     ],
     setup(num) {
         tasks = [
-            function(cb: Function) {
+            function(cb: any) {
                 return cb(null, 1);
             }
         ].concat(_.range(num).map((i) => {
-            return function(arg: any, cb: Function) {
+            return function(arg: number, cb: any) {
                 setImmediate(() => {
                     cb(null, i);
                 });
@@ -263,7 +263,7 @@ export default [{
             dep1 (cb) { cb(null, 1); }
         };
         _.times(num, (n) => {
-            var task = ['dep' + (n+1), function(results: number, cb: Function) {
+            var task = ['dep' + (n+1), function(results: any, cb: any) {
                 setImmediate(cb, null, n);
             }];
             if (n > 2) task.unshift('dep' + n);

@@ -20,8 +20,8 @@ function isexe (path: string, options: Options, cb: any) {
       throw new TypeError('callback not provided')
     }
 
-    return new Promise(function (resolve: Function, reject: Function) {
-      isexe(path, options || {}, function (er: Error, is: boolean) {
+    return new Promise(function (resolve: any, reject: any) {
+      isexe(path, options || {}, function (er: any, is: boolean) {
         if (er) {
           reject(er)
         } else {
@@ -31,7 +31,7 @@ function isexe (path: string, options: Options, cb: any) {
     })
   }
 
-  core(path, options || {}, function (er: Error, is: boolean) {
+  core(path, options || {}, function (er: any, is: boolean) {
     // ignore EACCES because that just means we aren't allowed to run it
     if (er) {
       if (er.code === 'EACCES' || options && options.ignoreErrors) {

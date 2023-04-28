@@ -52,7 +52,7 @@ export function __rest(s: any, e: any) {
     return t;
 }
 
-export function __decorate(decorators: any[], target: any, key: any, desc: any) {
+export function __decorate(decorators: Array<Function>, target: Object, key: string, desc: any) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
@@ -72,7 +72,7 @@ export function __awaiter(thisArg: any, _arguments: any, P: any, generator: any)
     return new (P || (P = Promise))(function (resolve: any, reject: any) {
         function fulfilled(value: T) { try { step(generator.next(value)); } catch (e) { reject(e); } }
         function rejected(value: T) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result: IteratorResult<T>) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        function step(result: any) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 }
@@ -80,7 +80,7 @@ export function __awaiter(thisArg: any, _arguments: any, P: any, generator: any)
 export function __generator(thisArg: any, body: any) {
     var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
     return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-    function verb(n) { return function (v: any) { return step([n, v]); }; }
+    function verb(n) { return function (v: T) { return step([n, v]); }; }
     function step(op: any) {
         if (f) throw new TypeError("Generator is already executing.");
         while (_) try {
@@ -166,7 +166,7 @@ export function __spreadArrays() {
     return r;
 }
 
-export function __spreadArray(to: any[], from: any[], pack: any) {
+export function __spreadArray(to: any[], from: any[], pack: boolean) {
     if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
         if (ar || !(i in from)) {
             if (!ar) ar = Array.prototype.slice.call(from, 0, i);
@@ -195,7 +195,7 @@ export function __asyncGenerator(thisArg: any, _arguments: any, generator: any) 
 export function __asyncDelegator(o: any) {
     var i, p;
     return i = {}, verb("next"), verb("throw", function (e) { throw e; }), verb("return"), i[Symbol.iterator] = function () { return this; }, i;
-    function verb(n, f) { i[n] = o[n] ? function (v: any) { return (p = !p) ? { value: __await(o[n](v)), done: n === "return" } : f ? f(v) : v; } : f; }
+    function verb(n, f) { i[n] = o[n] ? function (v: T) { return (p = !p) ? { value: __await(o[n](v)), done: n === "return" } : f ? f(v) : v; } : f; }
 }
 
 export function __asyncValues(o: any) {
@@ -206,7 +206,7 @@ export function __asyncValues(o: any) {
     function settle(resolve, reject, d, v) { Promise.resolve(v).then(function(v: T) { resolve({ value: v, done: d }); }, reject); }
 }
 
-export function __makeTemplateObject(cooked: string[], raw: string[]) {
+export function __makeTemplateObject(cooked: any[], raw: any[]) {
     if (Object.defineProperty) { Object.defineProperty(cooked, "raw", { value: raw }); } else { cooked.raw = raw; }
     return cooked;
 };

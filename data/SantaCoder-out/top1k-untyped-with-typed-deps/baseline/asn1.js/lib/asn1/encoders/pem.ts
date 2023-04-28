@@ -4,7 +4,7 @@ const inherits = require('inherits');
 
 const DEREncoder = require('./der');
 
-function PEMEncoder(entity: PEMEntity) {
+function PEMEncoder(entity: any) {
   DEREncoder.call(this, entity);
   this.enc = 'pem';
 }

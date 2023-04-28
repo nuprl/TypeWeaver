@@ -10,11 +10,11 @@
                 return sprintf.apply(null, arguments)
             }
         }).
-        filter('fmt', ['$filter', function($filter: sprintf) {
+        filter('fmt', ['$filter', function($filter: '$filter') {
             return $filter('sprintf')
         }]).
         filter('vsprintf', function() {
-            return function(format: string, argv: string[]) {
+            return function(format: string, argv: Array<any>) {
                 return vsprintf(format, argv)
             }
         }).

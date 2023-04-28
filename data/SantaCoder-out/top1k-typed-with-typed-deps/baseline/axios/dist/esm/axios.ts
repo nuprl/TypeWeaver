@@ -10,7 +10,7 @@ var bind = function bind(fn: Function, thisArg: any) {
 var toString = Object.prototype.toString;
 
 // eslint-disable-next-line func-names
-var kindOf = (function(cache: Cache) {
+var kindOf = (function(cache: any) {
   // eslint-disable-next-line func-names
   return function(thing: any) {
     var str = toString.call(thing);
@@ -256,7 +256,7 @@ function isStandardBrowserEnv() {
  * @param {Object|Array} obj The object to iterate
  * @param {Function} fn The callback to invoke for each item
  */
-function forEach(obj: any, fn: Function) {
+function forEach(obj: any[], fn: Function) {
   // Don't bother if no value provided
   if (obj === null || typeof obj === 'undefined') {
     return;
@@ -444,7 +444,7 @@ var isTypedArray = (function(TypedArray: any) {
   };
 })(typeof Uint8Array !== 'undefined' && Object.getPrototypeOf(Uint8Array));
 
-function forEachEntry(obj: Object, fn: any) {
+function forEachEntry(obj: any, fn: any) {
   var generator = obj && obj[Symbol.iterator];
 
   var iterator = generator.call(obj);
@@ -470,7 +470,7 @@ function matchAll(regExp: RegExp, str: string) {
 
 var isHTMLForm = kindOfTest('HTMLFormElement');
 
-var hasOwnProperty = (function resolver(_hasOwnProperty: Function) {
+var hasOwnProperty = (function resolver(_hasOwnProperty: any) {
   return function(obj: any, prop: string) {
     return _hasOwnProperty.call(obj, prop);
   };
@@ -523,7 +523,7 @@ var utils = {
  * @param {Object} [response] The response.
  * @returns {Error} The created error.
  */
-function AxiosError(message: string, code: number, config: AxiosRequestConfig, request: AxiosRequestConfig, response: AxiosResponse) {
+function AxiosError(message: string, code: string, config: AxiosRequestConfig, request: any, response: any) {
   Error.call(this);
 
   if (Error.captureStackTrace) {
@@ -579,7 +579,7 @@ var descriptors = {};
   'ERR_NOT_SUPPORT',
   'ERR_INVALID_URL'
 // eslint-disable-next-line func-names
-].forEach(function(code: number) {
+].forEach(function(code: string) {
   descriptors[code] = {value: code};
 });
 
@@ -587,7 +587,7 @@ Object.defineProperties(AxiosError, descriptors);
 Object.defineProperty(prototype$1, 'isAxiosError', {value: true});
 
 // eslint-disable-next-line func-names
-AxiosError.from = function(error: any, code: number, config: any, request: any, response: any, customProps: any) {
+AxiosError.from = function(error: Error, code: string, config: AxiosRequestConfig, request: any, response: any, customProps: any) {
   var axiosError = Object.create(prototype$1);
 
   utils.toFlatObject(error, axiosError, function filter(obj: any) {
@@ -621,9 +621,9 @@ function removeBrackets(key: string) {
   return utils.endsWith(key, '[]') ? key.slice(0, -2) : key;
 }
 
-function renderKey(path: string, key: string, dots: boolean) {
+function renderKey(path: string[], key: string, dots: boolean) {
   if (!path) return key;
-  return path.concat(key).map(function each(token: Token, i: number) {
+  return path.concat(key).map(function each(token: any, i: number) {
     // eslint-disable-next-line no-param-reassign
     token = removeBrackets(token);
     return !dots && i ? '[' + token + ']' : token;
@@ -710,7 +710,7 @@ function toFormData(obj: any, formData: FormData, options: any) {
    * @this {FormData}
    * @returns {boolean} return true to visit the each prop of the value recursively
    */
-  function defaultVisitor(value: any, key: string, path: string) {
+  function defaultVisitor(value: any, key: string, path: string[]) {
     var arr = value;
 
     if (value && !path && typeof value === 'object') {
@@ -726,7 +726,7 @@ function toFormData(obj: any, formData: FormData, options: any) {
         // eslint-disable-next-line no-param-reassign
         key = removeBrackets(key);
 
-        arr.forEach(function each(el: HTMLElement, index: number) {
+        arr.forEach(function each(el: any, index: number) {
           !utils.isUndefined(el) && formData.append(
             // eslint-disable-next-line no-nested-ternary
             indexes === true ? renderKey([key], index, dots) : (indexes === null ? key : key + '[]'),
@@ -763,7 +763,7 @@ function toFormData(obj: any, formData: FormData, options: any) {
 
     stack.push(value);
 
-    utils.forEach(value, function each(el: HTMLElement, key: string) {
+    utils.forEach(value, function each(el: any, key: any) {
       var result = !utils.isUndefined(el) && visitor.call(
         formData, el, utils.isString(key) ? key.trim() : key, path, exposedHelpers
       );
@@ -814,7 +814,7 @@ prototype.append = function append(name: string, value: string) {
   this._pairs.push([name, value]);
 };
 
-prototype.toString = function toString(encoder: Encoder<any>) {
+prototype.toString = function toString(encoder: Function) {
   var _encode = encoder ? function(value: any) {
     return encoder.call(this, value, encode$1);
   } : encode$1;
@@ -844,7 +844,7 @@ function encode(val: string) {
  * @param {?object} options
  * @returns {string} The formatted url
  */
-var buildURL = function buildURL(url: string, params: any, options: any) {
+var buildURL = function buildURL(url: string, params: URLSearchParams, options: RequestInit) {
   /*eslint no-param-reassign:0*/
   if (!params) {
     return url;
@@ -881,7 +881,7 @@ function InterceptorManager() {
  *
  * @return {Number} An ID used to remove interceptor later
  */
-InterceptorManager.prototype.use = function use(fulfilled: Function, rejected: Function, options: any) {
+InterceptorManager.prototype.use = function use(fulfilled: Function, rejected: Function, options: Object) {
   this.handlers.push({
     fulfilled: fulfilled,
     rejected: rejected,
@@ -896,7 +896,7 @@ InterceptorManager.prototype.use = function use(fulfilled: Function, rejected: F
  *
  * @param {Number} id The ID that was returned by `use`
  */
-InterceptorManager.prototype.eject = function eject(id: string) {
+InterceptorManager.prototype.eject = function eject(id: number) {
   if (this.handlers[id]) {
     this.handlers[id] = null;
   }
@@ -919,8 +919,8 @@ InterceptorManager.prototype.clear = function clear() {
  *
  * @param {Function} fn The function to call for each interceptor
  */
-InterceptorManager.prototype.forEach = function forEach(fn: any) {
-  utils.forEach(this.handlers, function forEachHandler(h: Handler) {
+InterceptorManager.prototype.forEach = function forEach(fn: Function) {
+  utils.forEach(this.handlers, function forEachHandler(h: any) {
     if (h !== null) {
       fn(h);
     }
@@ -978,7 +978,7 @@ function parsePropPath(name: string) {
   // foo.x.y.z
   // foo-x-y-z
   // foo x y z
-  return utils.matchAll(/\w+|\[(\w*)]/g, name).map(function(match: RegExpMatchArray) {
+  return utils.matchAll(/\w+|\[(\w*)]/g, name).map(function(match: string) {
     return match[0] === '[]' ? '' : match[1] || match[0];
   });
 }
@@ -997,7 +997,7 @@ function arrayToObject(arr: any[]) {
 }
 
 function formDataToJSON(formData: FormData) {
-  function buildPath(path: string, value: any, target: any, index: number) {
+  function buildPath(path: string[], value: any, target: any, index: number) {
     var name = path[index++];
     var isNumericKey = Number.isFinite(+name);
     var isLast = index >= path.length;
@@ -1048,7 +1048,7 @@ var formDataToJSON_1 = formDataToJSON;
  * @param {Function} reject A function that rejects the promise.
  * @param {object} response The response.
  */
-var settle = function settle(resolve: any, reject: any, response: any) {
+var settle = function settle(resolve: Function, reject: Function, response: AxiosResponse) {
   var validateStatus = response.config.validateStatus;
   if (!response.status || !validateStatus || validateStatus(response.status)) {
     resolve(response);
@@ -1278,7 +1278,7 @@ var isURLSameOrigin = (
  * @param {Object=} config The config.
  * @param {Object=} request The request.
  */
-function CanceledError(message: string, config: AxiosRequestConfig, request: AxiosRequestConfig) {
+function CanceledError(message: string, config: AxiosRequestConfig, request: any) {
   // eslint-disable-next-line no-eq-null,eqeqeq
   AxiosError_1.call(this, message == null ? 'canceled' : message, AxiosError_1.ERR_CANCELED, config, request);
   this.name = 'CanceledError';
@@ -1296,7 +1296,7 @@ var parseProtocol = function parseProtocol(url: string) {
 };
 
 var xhr = function xhrAdapter(config: AxiosRequestConfig) {
-  return new Promise(function dispatchXhrRequest(resolve: any, reject: any) {
+  return new Promise(function dispatchXhrRequest(resolve: Function, reject: Function) {
     var requestData = config.data;
     var requestHeaders = config.headers;
     var responseType = config.responseType;
@@ -1472,7 +1472,7 @@ var xhr = function xhrAdapter(config: AxiosRequestConfig) {
     if (config.cancelToken || config.signal) {
       // Handle cancellation
       // eslint-disable-next-line func-names
-      onCanceled = function(cancel: boolean) {
+      onCanceled = function(cancel: Canceler) {
         if (!request) {
           return;
         }
@@ -1684,7 +1684,7 @@ var defaults_1 = defaults;
 var transformData = function transformData(data: any, headers: any, status: any, fns: any) {
   var context = this || defaults_1;
   /*eslint no-param-reassign:0*/
-  utils.forEach(fns, function transform(fn: any) {
+  utils.forEach(fns, function transform(fn: Function) {
     data = fn.call(context, data, headers, status);
   });
 
@@ -1748,7 +1748,7 @@ var dispatchRequest = function dispatchRequest(config: AxiosRequestConfig) {
 
   var adapter = config.adapter || defaults_1.adapter;
 
-  return adapter(config).then(function onAdapterResolution(response: any) {
+  return adapter(config).then(function onAdapterResolution(response: AxiosResponse) {
     throwIfCancellationRequested(config);
 
     // Transform response data
@@ -1806,7 +1806,7 @@ var mergeConfig = function mergeConfig(config1: any, config2: any) {
   }
 
   // eslint-disable-next-line consistent-return
-  function mergeDeepProperties(prop: any) {
+  function mergeDeepProperties(prop: string) {
     if (!utils.isUndefined(config2[prop])) {
       return getMergedValue(config1[prop], config2[prop]);
     } else if (!utils.isUndefined(config1[prop])) {
@@ -1903,8 +1903,8 @@ var deprecatedWarnings = {};
  * @param {string?} message - some message with additional info
  * @returns {function}
  */
-validators$1.transitional = function transitional(validator: Validator, version: string, message: string) {
-  function formatMessage(opt: any, desc: any) {
+validators$1.transitional = function transitional(validator: boolean, version: string, message: string) {
+  function formatMessage(opt: string, desc: string) {
     return '[Axios v' + VERSION + '] Transitional option \'' + opt + '\'' + desc + (message ? '. ' + message : '');
   }
 
@@ -1987,7 +1987,7 @@ function Axios(instanceConfig: AxiosRequestConfig) {
  * @param {String|Object} configOrUrl The config specific for this request (merged with this.defaults)
  * @param {?Object} config
  */
-Axios.prototype.request = function request(configOrUrl: string, config: AxiosRequestConfig) {
+Axios.prototype.request = function request(configOrUrl: AxiosRequestConfig, config: AxiosRequestConfig) {
   /*eslint no-param-reassign:0*/
   // Allow for axios('example/url'[, config]) a la fetch API
   if (typeof configOrUrl === 'string') {
@@ -2021,7 +2021,7 @@ Axios.prototype.request = function request(configOrUrl: string, config: AxiosReq
   // filter out skipped interceptors
   var requestInterceptorChain = [];
   var synchronousRequestInterceptors = true;
-  this.interceptors.request.forEach(function unshiftRequestInterceptors(interceptor: Interceptor) {
+  this.interceptors.request.forEach(function unshiftRequestInterceptors(interceptor: RequestInterceptor) {
     if (typeof interceptor.runWhen === 'function' && interceptor.runWhen(config) === false) {
       return;
     }
@@ -2032,7 +2032,7 @@ Axios.prototype.request = function request(configOrUrl: string, config: AxiosReq
   });
 
   var responseInterceptorChain = [];
-  this.interceptors.response.forEach(function pushResponseInterceptors(interceptor: Interceptor) {
+  this.interceptors.response.forEach(function pushResponseInterceptors(interceptor: Interceptor<any>) {
     responseInterceptorChain.push(interceptor.fulfilled, interceptor.rejected);
   });
 
@@ -2078,7 +2078,7 @@ Axios.prototype.request = function request(configOrUrl: string, config: AxiosReq
   return promise;
 };
 
-Axios.prototype.getUri = function getUri(config: Config) {
+Axios.prototype.getUri = function getUri(config: AxiosRequestConfig) {
   config = mergeConfig(this.defaults, config);
   var fullPath = buildFullPath(config.baseURL, config.url);
   return buildURL(fullPath, config.params, config.paramsSerializer);
@@ -2154,7 +2154,7 @@ function CancelToken(executor: Function) {
   this.promise.then = function(onfulfilled: any) {
     var _resolve;
     // eslint-disable-next-line func-names
-    var promise = new Promise(function(resolve: Function) {
+    var promise = new Promise(function(resolve: any) {
       token.subscribe(resolve);
       _resolve = resolve;
     }).then(onfulfilled);
@@ -2166,7 +2166,7 @@ function CancelToken(executor: Function) {
     return promise;
   };
 
-  executor(function cancel(message: string, config: AxiosRequestConfig, request: AxiosRequestConfig) {
+  executor(function cancel(message: string, config: AxiosRequestConfig, request: any) {
     if (token.reason) {
       // Cancellation has already been requested
       return;
@@ -2190,7 +2190,7 @@ CancelToken.prototype.throwIfRequested = function throwIfRequested() {
  * Subscribe to the cancel signal
  */
 
-CancelToken.prototype.subscribe = function subscribe(listener: Listener<T>) {
+CancelToken.prototype.subscribe = function subscribe(listener: Function) {
   if (this.reason) {
     listener(this.reason);
     return;
@@ -2207,7 +2207,7 @@ CancelToken.prototype.subscribe = function subscribe(listener: Listener<T>) {
  * Unsubscribe from the cancel signal
  */
 
-CancelToken.prototype.unsubscribe = function unsubscribe(listener: Listener) {
+CancelToken.prototype.unsubscribe = function unsubscribe(listener: Function) {
   if (!this._listeners) {
     return;
   }
@@ -2223,7 +2223,7 @@ CancelToken.prototype.unsubscribe = function unsubscribe(listener: Listener) {
  */
 CancelToken.source = function source() {
   var cancel;
-  var token = new CancelToken(function executor(c: any) {
+  var token = new CancelToken(function executor(c: CancelExecutor) {
     cancel = c;
   });
   return {
@@ -2240,7 +2240,7 @@ var CancelToken_1 = CancelToken;
  * Common use case would be to use `Function.prototype.apply`.
  *
  *  ```js
- *  function f(x: number, y: number, z: number) {}
+ *  function f(x: any, y: any, z: any) {}
  *  var args = [1, 2, 3];
  *  f.apply(null, args);
  *  ```
@@ -2276,7 +2276,7 @@ var isAxiosError = function isAxiosError(payload: any) {
  * @param {Object} defaultConfig The default config for the instance
  * @return {Axios} A new instance of Axios
  */
-function createInstance(defaultConfig: Config) {
+function createInstance(defaultConfig: AxiosRequestConfig) {
   var context = new Axios_1(defaultConfig);
   var instance = bind(Axios_1.prototype.request, context);
 
@@ -2287,7 +2287,7 @@ function createInstance(defaultConfig: Config) {
   utils.extend(instance, context);
 
   // Factory for creating new instances
-  instance.create = function create(instanceConfig: Config) {
+  instance.create = function create(instanceConfig: AxiosRequestConfig) {
     return createInstance(mergeConfig(defaultConfig, instanceConfig));
   };
 
@@ -2314,7 +2314,7 @@ axios.AxiosError = AxiosError_1;
 axios.Cancel = axios.CanceledError;
 
 // Expose all/spread
-axios.all = function all(promises: Promise<any>[]) {
+axios.all = function all(promises: Array<any>) {
   return Promise.all(promises);
 };
 axios.spread = spread;

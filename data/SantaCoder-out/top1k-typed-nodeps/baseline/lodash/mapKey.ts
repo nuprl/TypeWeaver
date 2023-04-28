@@ -17,7 +17,7 @@
  * })
  * // => { 'a1': 1, 'b2': 2 }
  */
-function mapKey(object: Object, iteratee: Function) {
+function mapKey(object: any, iteratee: Function) {
   object = Object(object)
   const result = {}
 

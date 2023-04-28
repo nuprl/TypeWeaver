@@ -1,7 +1,7 @@
 import dns from 'dns';
 import retry from '../lib/retry';
 
-function faultTolerantResolve(address: string, cb: any) {
+function faultTolerantResolve(address: string, cb: Function) {
   var opts = {
     retries: 2,
     factor: 2,
@@ -11,8 +11,8 @@ function faultTolerantResolve(address: string, cb: any) {
   };
   var operation = retry.operation(opts);
 
-  operation.attempt(function(currentAttempt: number) {
-    dns.resolve(address, function(err: any, addresses: any) {
+  operation.attempt(function(currentAttempt: Operation<any>) {
+    dns.resolve(address, function(err: Error, addresses: string[]) {
       if (operation.retry(err)) {
         return;
       }
@@ -22,7 +22,7 @@ function faultTolerantResolve(address: string, cb: any) {
   });
 }
 
-faultTolerantResolve('nodejs.org', function(err: Error, errors: any, addresses: any) {
+faultTolerantResolve('nodejs.org', function(err: any, errors: any, addresses: any) {
   console.warn('err:');
   console.log(err);
 

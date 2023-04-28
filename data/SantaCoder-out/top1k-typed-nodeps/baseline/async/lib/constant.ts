@@ -16,7 +16,7 @@
  *
  * async.waterfall([
  *     async.constant(42),
- *     function (value: number, next: Function) {
+ *     function (value: any, next: Function) {
  *         // value === 42
  *     },
  *     //...
@@ -25,7 +25,7 @@
  * async.waterfall([
  *     async.constant(filename, "utf8"),
  *     fs.readFile,
- *     function (fileData: FileData, next: Function) {
+ *     function (fileData: any, next: any) {
  *         //...
  *     }
  *     //...
@@ -41,7 +41,7 @@
  * }, callback);
  */
 export default function(...args: any[]) {
-    return function (...ignoredArgs/*: any[], callback*/: any) {
+    return function (...ignoredArgs/*: any[], callback*/: Function) {
         var callback = ignoredArgs.pop();
         return callback(null, ...args);
     };

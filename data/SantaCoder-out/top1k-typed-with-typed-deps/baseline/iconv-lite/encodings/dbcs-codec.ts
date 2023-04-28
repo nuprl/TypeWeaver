@@ -165,7 +165,7 @@ DBCSCodec.prototype._getDecodeTrieNode = function(addr: number) {
 }
 
 
-DBCSCodec.prototype._addDecodeChunk = function(chunk: Buffer) {
+DBCSCodec.prototype._addDecodeChunk = function(chunk: string[]) {
     // First element of chunk is the hex mbcs code where we start.
     var curAddr = parseInt(chunk[0], 16);
 
@@ -265,7 +265,7 @@ DBCSCodec.prototype._setEncodeSequence = function(seq: string, dbcsCode: number)
     node[uCode] = dbcsCode;
 }
 
-DBCSCodec.prototype._fillEncodeTable = function(nodeIdx: number, prefix: string, skipEncodeChars: string) {
+DBCSCodec.prototype._fillEncodeTable = function(nodeIdx: number, prefix: string, skipEncodeChars: any) {
     var node = this.decodeTables[nodeIdx];
     var hasValues = false;
     var subNodeEmpty = {};

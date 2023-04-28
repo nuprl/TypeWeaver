@@ -39,8 +39,8 @@ import { promiseCallback, PROMISE_SYMBOL } from './internal/promiseCallback.js'
  *
  * // asynchronous function that returns the file size, transformed to human-readable format
  * // e.g. 1024 bytes = 1KB, 1234 bytes = 1.21 KB, 1048576 bytes = 1MB, etc.
- * function transformFileSize(acc: number, value: number, key: string, callback: Function) {
- *     fs.stat(value, function(err: Error, stat: fs.Stats) {
+ * function transformFileSize(acc: any, value: any, key: any, callback: any) {
+ *     fs.stat(value, function(err: any, stat: any) {
  *         if (err) {
  *             return callback(err);
  *         }
@@ -50,7 +50,7 @@ import { promiseCallback, PROMISE_SYMBOL } from './internal/promiseCallback.js'
  * }
  *
  * // Using callbacks
- * async.transform(fileList, transformFileSize, function(err: Error, result: any) {
+ * async.transform(fileList, transformFileSize, function(err: any, result: any) {
  *     if(err) {
  *         console.log(err);
  *     } else {
@@ -96,8 +96,8 @@ import { promiseCallback, PROMISE_SYMBOL } from './internal/promiseCallback.js'
  *
  * // asynchronous function that returns the file size, transformed to human-readable format
  * // e.g. 1024 bytes = 1KB, 1234 bytes = 1.21 KB, 1048576 bytes = 1MB, etc.
- * function transformFileSize(acc: number, value: number, key: string, callback: Function) {
- *     fs.stat(value, function(err: Error, stat: Stats) {
+ * function transformFileSize(acc: any, value: any, key: any, callback: any) {
+ *     fs.stat(value, function(err: any, stat: any) {
  *         if (err) {
  *             return callback(err);
  *         }
@@ -107,7 +107,7 @@ import { promiseCallback, PROMISE_SYMBOL } from './internal/promiseCallback.js'
  * }
  *
  * // Using callbacks
- * async.transform(fileMap, transformFileSize, function(err: Error, result: any) {
+ * async.transform(fileMap, transformFileSize, function(err: any, result: any) {
  *     if(err) {
  *         console.log(err);
  *     } else {
@@ -138,7 +138,7 @@ import { promiseCallback, PROMISE_SYMBOL } from './internal/promiseCallback.js'
  * }
  *
  */
-export default function transform (coll: any[], accumulator: any, iteratee: any, callback: any) {
+export default function transform (coll: any[], accumulator: any, iteratee: Function, callback: Function) {
     if (arguments.length <= 3 && typeof accumulator === 'function') {
         callback = iteratee;
         iteratee = accumulator;

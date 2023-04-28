@@ -29,7 +29,7 @@ function filterKey(key: string) {
  * @param {object} node The AST node to get keys.
  * @returns {readonly string[]} Visitor keys of the node.
  */
-export function getKeys(node: Node) {
+export function getKeys(node: TSESTree.Node) {
     return Object.keys(node).filter(filterKey);
 }
 
@@ -40,7 +40,7 @@ export function getKeys(node: Node) {
  * @param {VisitorKeys} additionalKeys The additional keys.
  * @returns {VisitorKeys} The union set.
  */
-export function unionWith(additionalKeys: string[]) {
+export function unionWith(additionalKeys: any) {
     const retv = /** @type {{
         [type: string]: ReadonlyArray<string>
     }} */ (Object.assign({}, KEYS));

@@ -27,7 +27,7 @@
     },
     Date: {
       typeOf: 'Date',
-      validate: function(it: Date){
+      validate: function(it: any){
         return !isItNaN(it.getTime());
       }
     }
@@ -36,7 +36,7 @@
     array: 'Array',
     tuple: 'Array'
   };
-  function checkArray(input: any, type: string, options: any){
+  function checkArray(input: any[], type: any, options: any){
     return all(function(it: any){
       return checkMultiple(it, type.of, options);
     }, input);
@@ -53,7 +53,7 @@
     }
     return input.length <= i;
   }
-  function checkFields(input: string, type: string, options: any){
+  function checkFields(input: Object, type: Object, options: Object){
     var inputKeys, numInputKeys, k, numOfKeys, key, ref$, types;
     inputKeys = {};
     numInputKeys = 0;
@@ -73,7 +73,7 @@
     }
     return type.subset || numInputKeys === numOfKeys;
   }
-  function checkStructure(input: any, type: string, options: any){
+  function checkStructure(input: Object, type: Type, options: Options){
     if (!(input instanceof Object)) {
       return false;
     }
@@ -110,15 +110,15 @@
       throw new Error("No type defined. Input: " + input + ".");
     }
   }
-  function checkMultiple(input: string, types: string[], options: any){
+  function checkMultiple(input: any, types: any, options: any){
     if (toString$.call(types).slice(8, -1) !== 'Array') {
       throw new Error("Types must be in an array. Input: " + input + ".");
     }
-    return any(function(it: string){
+    return any(function(it: any){
       return check(input, it, options);
     }, types);
   }
-  module.exports = function(parsedType: any, input: any, options: any){
+  module.exports = function(parsedType: ParsedType, input: any, options: CheckOptions){
     options == null && (options = {});
     if (options.customTypes == null) {
       options.customTypes = {};

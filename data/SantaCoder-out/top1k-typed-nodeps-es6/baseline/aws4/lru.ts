@@ -15,7 +15,7 @@ LruCache.prototype.get = function(key: string) {
   return node.val
 }
 
-LruCache.prototype.set = function(key: string, val: any) {
+LruCache.prototype.set = function(key: K, val: V) {
   var node = this.map[key]
   if (node != null) {
     node.val = val
@@ -48,7 +48,7 @@ function DoublyLinkedList() {
   this.lastNode = null
 }
 
-DoublyLinkedList.prototype.moveToFront = function(node: Node) {
+DoublyLinkedList.prototype.moveToFront = function(node: DoublyLinkedListNode<T>) {
   if (this.firstNode == node) return
 
   this.remove(node)
@@ -74,7 +74,7 @@ DoublyLinkedList.prototype.pop = function() {
   return lastNode
 }
 
-DoublyLinkedList.prototype.remove = function(node: Node) {
+DoublyLinkedList.prototype.remove = function(node: DoublyLinkedNode) {
   if (this.firstNode == node) {
     this.firstNode = node.next
   } else if (node.prev != null) {

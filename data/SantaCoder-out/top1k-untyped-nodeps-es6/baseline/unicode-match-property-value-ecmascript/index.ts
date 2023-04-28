@@ -2,7 +2,7 @@
 
 import propertyToValueAliases from './data/mappings.js';
 
-const matchPropertyValue = function(property: string, value: any) {
+const matchPropertyValue = function(property: string, value: string) {
 	const aliasToValue = propertyToValueAliases.get(property);
 	if (!aliasToValue) {
 		throw new Error(`Unknown property \`${ property }\`.`);

@@ -6,7 +6,7 @@ import { slice } from './prototypes/array';
 /**
  * @private
  */
-function comparator(a: any, b: any) {
+function comparator(a: SinonSpy, b: SinonSpy) {
     // uuid, won't ever be equal
     var aCall = a.getCall(0);
     var bCall = b.getCall(0);

@@ -14,7 +14,7 @@ function waterfallTest(done: Function) {
         functions.push((next) => {
             function func1(cb: Function) {return cb(); }
 
-            function func2(callback: any) {
+            function func2(callback: Function) {
                 callback();
                 //return next();  // Should be callback here.
             }

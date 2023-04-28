@@ -9,7 +9,7 @@ var URL = 'https://raw.githubusercontent.com/nodejs/node/master/lib/_http_server
 var HEADERS = { 'User-Agent': 'nodejs/' + process.version + ' (' + process.platform + ', npm:statuses)' }
 
 https.get(URL, { headers: HEADERS }, function onResponse (res: IncomingMessage) {
-  getBody(res, true, function (err: any, body: any) {
+  getBody(res, true, function (err: any, body: string) {
     if (err) throw err
 
     var block = /STATUS_CODES\s*=\s*{([^}]+)};/m.exec(body)[1]

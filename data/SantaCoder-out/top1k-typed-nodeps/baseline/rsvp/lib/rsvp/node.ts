@@ -5,7 +5,7 @@ import {
   reject,
 } from './-internal';
 
-function makeObject(_: string, argumentNames: string[]) {
+function makeObject(_: any, argumentNames: string[]) {
   let obj = {};
 
   for (let i = 0; i < argumentNames.length; i++) {
@@ -16,7 +16,7 @@ function makeObject(_: string, argumentNames: string[]) {
   return obj;
 }
 
-function arrayResult(_: any[]) {
+function arrayResult(_: any) {
   let length = _.length;
   let args = new Array(length - 1);
 
@@ -27,7 +27,7 @@ function arrayResult(_: any[]) {
   return args;
 }
 
-function wrapThenable(then: any, promise: any) {
+function wrapThenable(then: Function, promise: Promise<any>) {
   return {
     then(onFulFillment, onRejection) {
       return then.call(promise, onFulFillment, onRejection);
@@ -44,7 +44,7 @@ function wrapThenable(then: any, promise: any) {
   ```javascript
   let fs = require('fs');
 
-  fs.readFile('myfile.txt', function(err: Error, data: any){
+  fs.readFile('myfile.txt', function(err: Error, data: Buffer){
     if (err) return handleError(err);
     handleData(data);
   });
@@ -121,9 +121,9 @@ function wrapThenable(then: any, promise: any) {
   ```javascript
   let fs = require('fs');
 
-  fs.readFile('myfile.txt', function(err: Error, data: any){
+  fs.readFile('myfile.txt', function(err: Error, data: Buffer){
     if (err) { ... } // Handle error
-    fs.writeFile('myfile2.txt', data, function(err: Error){
+    fs.writeFile('myfile2.txt', data, function(err: any){
       if (err) { ... } // Handle error
       console.log('done')
     });
@@ -153,7 +153,7 @@ function wrapThenable(then: any, promise: any) {
   @param {Function} nodeFunc a 'node-style' function that takes a callback as
   its last argument. The callback expects an error to be passed as its first
   argument (if an error occurred, otherwise null), and the value from the
-  operation as its second argument ('function(err: any, value: any){ }').
+  operation as its second argument ('function(err: Error, value: T){ }').
   @param {Boolean|Array} [options] An optional paramter that if set
   to `true` causes the promise to fulfill with the callback's success arguments
   as an array. This is useful if the node function has multiple success
@@ -162,7 +162,7 @@ function wrapThenable(then: any, promise: any) {
   values.
   @return {Function} a function that wraps `nodeFunc` to return a `Promise`
 */
-export default function denodeify(nodeFunc: Function, options: Options) {
+export default function denodeify(nodeFunc: Function, options: any) {
   let fn = function() {
     let l = arguments.length;
     let args = new Array(l + 1);

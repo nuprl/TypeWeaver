@@ -303,7 +303,7 @@ BunserBuf.prototype.process = function(synchronous: boolean) {
   }
 }
 
-BunserBuf.prototype.raise = function(reason: any) {
+BunserBuf.prototype.raise = function(reason: string) {
   throw new Error(reason + ", in Buffer of length " +
       this.buf.buf.length + " (" + this.buf.readAvail() +
       " readable) at offset " + this.buf.readOffset + " buffer: " +
@@ -462,7 +462,7 @@ function byteswap64(buf: Buffer) {
   return swap;
 }
 
-function dump_int64(buf: Uint8Array, val: number) {
+function dump_int64(buf: BserBuf, val: Int64) {
   // Get the raw bytes.  The Int64 buffer is big endian
   var be = val.toBuffer();
 
@@ -479,7 +479,7 @@ function dump_int64(buf: Uint8Array, val: number) {
   buf.append(le);
 }
 
-function dump_int(buf: Uint8Array, val: number) {
+function dump_int(buf: Buffer, val: number) {
   var abs = Math.abs(val);
   if (abs <= MAX_INT8) {
     buf.writeByte(BSER_INT8);
@@ -495,7 +495,7 @@ function dump_int(buf: Uint8Array, val: number) {
   }
 }
 
-function dump_any(buf: Buffer, val: any) {
+function dump_any(buf: BserBuf, val: any) {
   switch (typeof(val)) {
     case 'number':
       // check if it is an integer or a float

@@ -11,7 +11,7 @@ var symToStr = callBound('Symbol.prototype.toString', true);
 import getInferredName from './getInferredName';
 
 /* eslint-disable consistent-return */
-export default callBound('%Symbol.prototype.description%', true) || function getSymbolDescription(symbol: Symbol) {
+export default callBound('%Symbol.prototype.description%', true) || function getSymbolDescription(symbol: symbol) {
 	if (!thisSymbolValue) {
 		throw new $SyntaxError('Symbols are not supported in this environment');
 	}

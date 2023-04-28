@@ -2,7 +2,7 @@ export default function (arr: any[]) {
   return flatten(arr, []);
 };
 
-function flatten(arr: Array<any>, res: Array<any>) {
+function flatten(arr: any[], res: any[]) {
   var len = arr.length;
   var num = 0;
 

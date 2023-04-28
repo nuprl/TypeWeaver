@@ -74,7 +74,7 @@ export const stringify = (value, replacer, space) => {
     output[i] = $stringify(input[i++], replace, space);
   }
   return '[' + output.join(',') + ']';
-  function replace(key: string, value: any) {
+  function replace(key: string, value: unknown) {
     if (firstRun) {
       firstRun = !firstRun;
       return value;

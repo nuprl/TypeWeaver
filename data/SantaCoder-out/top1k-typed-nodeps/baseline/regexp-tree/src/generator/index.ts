@@ -8,7 +8,7 @@
 /**
  * Helper `gen` function calls node type handler.
  */
-function gen(node: Node) {
+function gen(node: RegExpTree) {
   return node ? generator[node.type](node) : '';
 }
 

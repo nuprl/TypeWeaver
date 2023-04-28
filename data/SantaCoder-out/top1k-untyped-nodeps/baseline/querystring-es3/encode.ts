@@ -37,7 +37,7 @@ var stringifyPrimitive = function(v: any) {
   }
 };
 
-module.exports = function(obj: any, sep: string, eq: string, name: string) {
+module.exports = function(obj: Object, sep: string, eq: string, name: string) {
   sep = sep || '&';
   eq = eq || '=';
   if (obj === null) {
@@ -48,7 +48,7 @@ module.exports = function(obj: any, sep: string, eq: string, name: string) {
     return map(objectKeys(obj), function(k: string) {
       var ks = encodeURIComponent(stringifyPrimitive(k)) + eq;
       if (isArray(obj[k])) {
-        return map(obj[k], function(v: number) {
+        return map(obj[k], function(v: any) {
           return ks + encodeURIComponent(stringifyPrimitive(v));
         }).join(sep);
       } else {
@@ -63,11 +63,11 @@ module.exports = function(obj: any, sep: string, eq: string, name: string) {
          encodeURIComponent(stringifyPrimitive(obj));
 };
 
-var isArray = Array.isArray || function (xs: List<A>) {
+var isArray = Array.isArray || function (xs: any) {
   return Object.prototype.toString.call(xs) === '[object Array]';
 };
 
-function map (xs: Array<T>, f: any) {
+function map (xs: Array<any>, f: Function) {
   if (xs.map) return xs.map(f);
   var res = [];
   for (var i = 0; i < xs.length; i++) {

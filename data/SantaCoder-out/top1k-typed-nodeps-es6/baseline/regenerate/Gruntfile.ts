@@ -1,4 +1,4 @@
-export default function(grunt: any) {
+export default function(grunt: grunt.ITask) {
 
 	grunt.initConfig({
 		'shell': {

@@ -25,7 +25,7 @@ function withoutCase(str: string) {
 	return str.toLowerCase();
 }
 
-function needCalls(times: number, callback: Function) {
+function needCalls(times: number, callback: any) {
 	return function() {
 		if (--times === 0) {
 			return callback();
@@ -770,14 +770,14 @@ class DirectoryWatcher extends EventEmitter {
 module.exports = DirectoryWatcher;
 module.exports.EXISTANCE_ONLY_TIME_ENTRY = EXISTANCE_ONLY_TIME_ENTRY;
 
-function fixupEntryAccuracy(entry: Entry) {
+function fixupEntryAccuracy(entry: FSEntry) {
 	if (entry.accuracy > FS_ACCURACY) {
 		entry.safeTime = entry.safeTime - entry.accuracy + FS_ACCURACY;
 		entry.accuracy = FS_ACCURACY;
 	}
 }
 
-function ensureFsAccuracy(mtime: Date) {
+function ensureFsAccuracy(mtime: number) {
 	if (!mtime) return;
 	if (FS_ACCURACY > 1 && mtime % 1 !== 0) FS_ACCURACY = 1;
 	else if (FS_ACCURACY > 10 && mtime % 10 !== 0) FS_ACCURACY = 10;

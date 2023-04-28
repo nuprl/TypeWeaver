@@ -166,7 +166,7 @@ convert.rgb.cmyk = function (rgb: number[]) {
 	return [c * 100, m * 100, y * 100, k * 100];
 };
 
-function comparativeDistance(x: number, y: number) {
+function comparativeDistance(x: number[], y: number[]) {
 	/*
 		See https://en.m.wikipedia.org/wiki/Euclidean_distance#Squared_Euclidean_distance
 	*/
@@ -177,7 +177,7 @@ function comparativeDistance(x: number, y: number) {
 	);
 }
 
-convert.rgb.keyword = function (rgb: string) {
+convert.rgb.keyword = function (rgb: RGB) {
 	const reversed = reverseKeywords[rgb];
 	if (reversed) {
 		return reversed;
@@ -223,7 +223,7 @@ convert.rgb.xyz = function (rgb: number[]) {
 	return [x * 100, y * 100, z * 100];
 };
 
-convert.rgb.lab = function (rgb: Color) {
+convert.rgb.lab = function (rgb: ColorRGB) {
 	const xyz = convert.rgb.xyz(rgb);
 	let x = xyz[0];
 	let y = xyz[1];
@@ -292,7 +292,7 @@ convert.hsl.rgb = function (hsl: HSL) {
 	return rgb;
 };
 
-convert.hsl.hsv = function (hsl: HSL) {
+convert.hsl.hsv = function (hsl: number[]) {
 	const h = hsl[0];
 	let s = hsl[1] / 100;
 	let l = hsl[2] / 100;
@@ -336,7 +336,7 @@ convert.hsv.rgb = function (hsv: HSV) {
 	}
 };
 
-convert.hsv.hsl = function (hsv: HSV) {
+convert.hsv.hsl = function (hsv: number[]) {
 	const h = hsv[0];
 	const s = hsv[1] / 100;
 	const v = hsv[2] / 100;
@@ -355,7 +355,7 @@ convert.hsv.hsl = function (hsv: HSV) {
 };
 
 // http://dev.w3.org/csswg/css-color/#hwb-to-rgb
-convert.hwb.rgb = function (hwb: HWBColor) {
+convert.hwb.rgb = function (hwb: HWB) {
 	const h = hwb[0] / 360;
 	let wh = hwb[1] / 100;
 	let bl = hwb[2] / 100;
@@ -410,7 +410,7 @@ convert.cmyk.rgb = function (cmyk: number[]) {
 	return [r * 255, g * 255, b * 255];
 };
 
-convert.xyz.rgb = function (xyz: XYZ) {
+convert.xyz.rgb = function (xyz: number[]) {
 	const x = xyz[0] / 100;
 	const y = xyz[1] / 100;
 	const z = xyz[2] / 100;
@@ -490,7 +490,7 @@ convert.lab.xyz = function (lab: Lab) {
 	return [x, y, z];
 };
 
-convert.lab.lch = function (lab: number[]) {
+convert.lab.lch = function (lab: number) {
 	const l = lab[0];
 	const a = lab[1];
 	const b = lab[2];
@@ -508,7 +508,7 @@ convert.lab.lch = function (lab: number[]) {
 	return [l, c, h];
 };
 
-convert.lch.lab = function (lch: LCHColor) {
+convert.lch.lab = function (lch: number[]) {
 	const l = lch[0];
 	const c = lch[1];
 	const h = lch[2];
@@ -542,7 +542,7 @@ convert.rgb.ansi16 = function (args: number[], saturation = null: number) {
 	return ansi;
 };
 
-convert.hsv.ansi16 = function (args: any) {
+convert.hsv.ansi16 = function (args: any[]) {
 	// Optimization here; we already know the value and don't need to get
 	// it converted for us.
 	return convert.rgb.ansi16(convert.hsv.rgb(args), args[2]);
@@ -575,7 +575,7 @@ convert.rgb.ansi256 = function (args: number[]) {
 	return ansi;
 };
 
-convert.ansi16.rgb = function (args: any[]) {
+convert.ansi16.rgb = function (args: number[]) {
 	args = args[0];
 
 	let color = args % 10;
@@ -599,7 +599,7 @@ convert.ansi16.rgb = function (args: any[]) {
 	return [r, g, b];
 };
 
-convert.ansi256.rgb = function (args: any) {
+convert.ansi256.rgb = function (args: number[]) {
 	args = args[0];
 
 	// Handle greyscale
@@ -618,7 +618,7 @@ convert.ansi256.rgb = function (args: any) {
 	return [r, g, b];
 };
 
-convert.rgb.hex = function (args: any) {
+convert.rgb.hex = function (args: number[]) {
 	const integer = ((Math.round(args[0]) & 0xFF) << 16)
 		+ ((Math.round(args[1]) & 0xFF) << 8)
 		+ (Math.round(args[2]) & 0xFF);
@@ -627,7 +627,7 @@ convert.rgb.hex = function (args: any) {
 	return '000000'.substring(string.length) + string;
 };
 
-convert.hex.rgb = function (args: any) {
+convert.hex.rgb = function (args: any[]) {
 	const match = args.toString(16).match(/[a-f0-9]{6}|[a-f0-9]{3}/i);
 	if (!match) {
 		return [0, 0, 0];
@@ -683,7 +683,7 @@ convert.rgb.hcg = function (rgb: number[]) {
 	return [hue * 360, chroma * 100, grayscale * 100];
 };
 
-convert.hsl.hcg = function (hsl: HSL) {
+convert.hsl.hcg = function (hsl: number[]) {
 	const s = hsl[1] / 100;
 	const l = hsl[2] / 100;
 
@@ -697,7 +697,7 @@ convert.hsl.hcg = function (hsl: HSL) {
 	return [hsl[0], c * 100, f * 100];
 };
 
-convert.hsv.hcg = function (hsv: HSV) {
+convert.hsv.hcg = function (hsv: number[]) {
 	const s = hsv[1] / 100;
 	const v = hsv[2] / 100;
 
@@ -752,7 +752,7 @@ convert.hcg.rgb = function (hcg: HcgColor) {
 	];
 };
 
-convert.hcg.hsv = function (hcg: HcgColor) {
+convert.hcg.hsv = function (hcg: number[]) {
 	const c = hcg[1] / 100;
 	const g = hcg[2] / 100;
 
@@ -766,7 +766,7 @@ convert.hcg.hsv = function (hcg: HcgColor) {
 	return [hcg[0], f * 100, v * 100];
 };
 
-convert.hcg.hsl = function (hcg: HcgColor) {
+convert.hcg.hsl = function (hcg: Array<number>) {
 	const c = hcg[1] / 100;
 	const g = hcg[2] / 100;
 
@@ -783,7 +783,7 @@ convert.hcg.hsl = function (hcg: HcgColor) {
 	return [hcg[0], s * 100, l * 100];
 };
 
-convert.hcg.hwb = function (hcg: HcgColor) {
+convert.hcg.hwb = function (hcg: number[]) {
 	const c = hcg[1] / 100;
 	const g = hcg[2] / 100;
 	const v = c + g * (1.0 - c);
@@ -804,11 +804,11 @@ convert.hwb.hcg = function (hwb: HWBColor) {
 	return [hwb[0], c * 100, g * 100];
 };
 
-convert.apple.rgb = function (apple: Apple) {
+convert.apple.rgb = function (apple: number[]) {
 	return [(apple[0] / 65535) * 255, (apple[1] / 65535) * 255, (apple[2] / 65535) * 255];
 };
 
-convert.rgb.apple = function (rgb: string) {
+convert.rgb.apple = function (rgb: number[]) {
 	return [(rgb[0] / 255) * 65535, (rgb[1] / 255) * 65535, (rgb[2] / 255) * 65535];
 };
 
@@ -816,7 +816,7 @@ convert.gray.rgb = function (args: any[]) {
 	return [args[0] / 100 * 255, args[0] / 100 * 255, args[0] / 100 * 255];
 };
 
-convert.gray.hsl = function (args: number[]) {
+convert.gray.hsl = function (args: any[]) {
 	return [0, 0, args[0]];
 };
 
@@ -830,11 +830,11 @@ convert.gray.cmyk = function (gray: number[]) {
 	return [0, 0, 0, gray[0]];
 };
 
-convert.gray.lab = function (gray: Color) {
+convert.gray.lab = function (gray: number[]) {
 	return [gray[0], 0, 0];
 };
 
-convert.gray.hex = function (gray: number) {
+convert.gray.hex = function (gray: number[]) {
 	const val = Math.round(gray[0] / 100 * 255) & 0xFF;
 	const integer = (val << 16) + (val << 8) + val;
 

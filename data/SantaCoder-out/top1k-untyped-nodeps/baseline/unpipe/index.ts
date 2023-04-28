@@ -18,7 +18,7 @@ module.exports = unpipe
  * @private
  */
 
-function hasPipeDataListeners (stream: Readable) {
+function hasPipeDataListeners (stream: Stream) {
   var listeners = stream.listeners('data')
 
   for (var i = 0; i < listeners.length; i++) {

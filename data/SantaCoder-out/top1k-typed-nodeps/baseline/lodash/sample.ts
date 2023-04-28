@@ -10,7 +10,7 @@
  * sample([1, 2, 3, 4])
  * // => 2
  */
-function sample(array: Array<T>) {
+function sample(array: any[]) {
   const length = array == null ? 0 : array.length
   return length ? array[Math.floor(Math.random() * length)] : undefined
 }

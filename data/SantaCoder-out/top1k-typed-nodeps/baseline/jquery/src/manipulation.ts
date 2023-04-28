@@ -28,7 +28,7 @@ var
 	rnoInnerhtml = /<script|<style|<link/i;
 
 // Prefer a tbody over its parent table for containing new rows
-function manipulationTarget( elem: HTMLElement, content : string) {
+function manipulationTarget( elem: Element, content : Element) {
 	if ( nodeName( elem, "table" ) &&
 		nodeName( content.nodeType !== 11 ? content : content.firstChild, "tr" ) ) {
 
@@ -43,7 +43,7 @@ function disableScript( elem : HTMLElement) {
 	elem.type = ( elem.getAttribute( "type" ) !== null ) + "/" + elem.type;
 	return elem;
 }
-function restoreScript( elem : HTMLElement) {
+function restoreScript( elem : Element) {
 	if ( ( elem.type || "" ).slice( 0, 5 ) === "true/" ) {
 		elem.type = elem.type.slice( 5 );
 	} else {
@@ -53,7 +53,7 @@ function restoreScript( elem : HTMLElement) {
 	return elem;
 }
 
-function cloneCopyEvent( src: any, dest : any) {
+function cloneCopyEvent( src: Node, dest : Node) {
 	var i, l, type, pdataOld, udataOld, udataCur, events;
 
 	if ( dest.nodeType !== 1 ) {
@@ -85,7 +85,7 @@ function cloneCopyEvent( src: any, dest : any) {
 	}
 }
 
-function domManip( collection: any, args: any, callback: any, ignored : any) {
+function domManip( collection: JQuery, args: any[], callback: any, ignored : any[]) {
 
 	// Flatten any nested arrays
 	args = flat( args );
@@ -196,7 +196,7 @@ jQuery.extend( {
 		return html;
 	},
 
-	clone: function( elem: HTMLElement, dataAndEvents: any, deepDataAndEvents : any) {
+	clone: function( elem: Element, dataAndEvents: any, deepDataAndEvents : any) {
 		var i, l, srcElements, destElements,
 			clone = elem.cloneNode( true ),
 			inPage = isAttached( elem );
@@ -245,7 +245,7 @@ jQuery.extend( {
 		return clone;
 	},
 
-	cleanData: function( elems : Array<Element>) {
+	cleanData: function( elems : HTMLElement[]) {
 		var data, elem, type,
 			special = jQuery.event.special,
 			i = 0;
@@ -289,8 +289,8 @@ jQuery.fn.extend( {
 		return remove( this, selector );
 	},
 
-	text: function( value : any) {
-		return access( this, function( value : any) {
+	text: function( value : string) {
+		return access( this, function( value : string) {
 			return value === undefined ?
 				jQuery.text( this ) :
 				this.empty().each( function() {
@@ -302,7 +302,7 @@ jQuery.fn.extend( {
 	},
 
 	append: function() {
-		return domManip( this, arguments, function( elem : HTMLElement) {
+		return domManip( this, arguments, function( elem : Element) {
 			if ( this.nodeType === 1 || this.nodeType === 11 || this.nodeType === 9 ) {
 				var target = manipulationTarget( this, elem );
 				target.appendChild( elem );
@@ -311,7 +311,7 @@ jQuery.fn.extend( {
 	},
 
 	prepend: function() {
-		return domManip( this, arguments, function( elem : HTMLElement) {
+		return domManip( this, arguments, function( elem : Element) {
 			if ( this.nodeType === 1 || this.nodeType === 11 || this.nodeType === 9 ) {
 				var target = manipulationTarget( this, elem );
 				target.insertBefore( elem, target.firstChild );
@@ -362,8 +362,8 @@ jQuery.fn.extend( {
 		} );
 	},
 
-	html: function( value : T) {
-		return access( this, function( value : any) {
+	html: function( value : any) {
+		return access( this, function( value : string) {
 			var elem = this[ 0 ] || {},
 				i = 0,
 				l = this.length;
@@ -405,7 +405,7 @@ jQuery.fn.extend( {
 		var ignored = [];
 
 		// Make the changes, replacing each non-ignored context element with the new content
-		return domManip( this, arguments, function( elem : HTMLElement) {
+		return domManip( this, arguments, function( elem : Element) {
 			var parent = this.parentNode;
 
 			if ( jQuery.inArray( this, ignored ) < 0 ) {
@@ -426,7 +426,7 @@ jQuery.each( {
 	insertBefore: "before",
 	insertAfter: "after",
 	replaceAll: "replaceWith"
-}, function( name: string, original : Function) {
+}, function( name: string, original : string) {
 	jQuery.fn[ name ] = function( selector : string) {
 		var elems,
 			ret = [],

@@ -75,7 +75,7 @@ function constructYamlTimestamp(data: string) {
   return date;
 }
 
-function representYamlTimestamp(object /*: Timestamp, style*/: string) {
+function representYamlTimestamp(object /*: Date, style*/: string) {
   return object.toISOString();
 }
 

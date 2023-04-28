@@ -19,10 +19,10 @@ const tags = [ 'scalar', 'sequence', 'mapping' ].map(function (kind: string) {
   return new yaml.Type('!', {
     kind: kind,
     multi: true,
-    representName: function (object: any) {
+    representName: function (object: unknown) {
       return object.type;
     },
-    represent: function (object: any) {
+    represent: function (object: unknown) {
       return object.data;
     },
     instanceOf: CustomTag,

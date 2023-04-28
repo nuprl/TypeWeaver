@@ -63,7 +63,7 @@
 
   // Ensures that nodes have the correct types.
   var assertTypeRegexMap = {};
-  function assertType(type: string, expected: any) {
+  function assertType(type: string, expected: string) {
     if (expected.indexOf('|') == -1) {
       if (type == expected) {
         return;
@@ -97,7 +97,7 @@
   }
 
   // Constructs a string by concatentating the output of each term.
-  function generateSequence(generator: Generator<number>, terms: number, /* optional */  separator: string) {
+  function generateSequence(generator: Generator, terms: string[], /* optional */  separator: string) {
     var i = -1,
         length = terms.length,
         result = '',
@@ -162,7 +162,7 @@
     return generate(node);
   }
 
-  function generateCharacterClass(node: Node) {
+  function generateCharacterClass(node: CharacterClass) {
     assertType(node.type, 'characterClass');
 
     var kind = node.kind;
@@ -180,7 +180,7 @@
     return '\\' + node.value;
   }
 
-  function generateCharacterClassRange(node: Node) {
+  function generateCharacterClassRange(node: CharacterClassRangeNode) {
     assertType(node.type, 'characterClassRange');
 
     var min = node.min,
@@ -193,7 +193,7 @@
     return generateClassAtom(min) + '-' + generateClassAtom(max);
   }
 
-  function generateClassAtom(node: t.ClassDeclaration) {
+  function generateClassAtom(node: Node) {
     assertType(node.type, 'anchor|characterClass|characterClassEscape|characterClassRange|dot|value|unicodePropertyEscape|classStrings');
 
     return generate(node);
@@ -265,7 +265,7 @@
     return node.value;
   }
 
-  function generateQuantifier(node: Node) {
+  function generateQuantifier(node: QuantifierNode) {
     assertType(node.type, 'quantifier');
 
     var quantifier = '',
@@ -295,7 +295,7 @@
     return generateAtom(node.body[0]) + quantifier;
   }
 
-  function generateReference(node: Node) {
+  function generateReference(node: ReferenceNode) {
     assertType(node.type, 'reference');
 
     if (node.matchIndex) {
@@ -314,7 +314,7 @@
     return generate(node);
   }
 
-  function generateUnicodePropertyEscape(node: t.Node) {
+  function generateUnicodePropertyEscape(node: UnicodePropertyEscape) {
     assertType(node.type, 'unicodePropertyEscape');
 
     return '\\' + (node.negative ? 'P' : 'p') + '{' + node.value + '}';

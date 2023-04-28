@@ -75,7 +75,7 @@ function isChownErrOk (err: any) {
   return false
 }
 
-async function writeFileAsync (filename: string, data: string, options = {}: Promise<any>) {
+async function writeFileAsync (filename: string, data: string, options = {}: WriteFileOptions) {
   if (typeof options === 'string') {
     options = { encoding: options }
   }
@@ -158,7 +158,7 @@ async function writeFileAsync (filename: string, data: string, options = {}: Pro
   }
 }
 
-async function writeFile (filename: string, data: string, options: WriteFileOptions, callback: any) {
+async function writeFile (filename: string, data: string, options: WriteFileOptions, callback: WriteFileCallback) {
   if (options instanceof Function) {
     callback = options
     options = {}
@@ -177,7 +177,7 @@ async function writeFile (filename: string, data: string, options: WriteFileOpti
   return promise
 }
 
-function writeFileSync (filename: string, data: string, options: any) {
+function writeFileSync (filename: string, data: string, options: WriteOptions) {
   if (typeof options === 'string') {
     options = { encoding: options }
   } else if (!options) {

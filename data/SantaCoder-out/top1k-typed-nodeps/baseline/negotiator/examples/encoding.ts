@@ -11,7 +11,7 @@
     identity: 'Hello World'
   };
 
-  gbuf.gzip(messages.identity, function(zipped: Array<any>) {
+  gbuf.gzip(messages.identity, function(zipped: boolean) {
     var availableEncodings, key, server, val;
     messages.gzip = zipped;
     availableEncodings = (function() {

@@ -35,7 +35,7 @@ function disjunctionToList(node: Node) {
  *
  * [a, b, c, d] -> {{{a, b}, c}, d}
  */
-function listToDisjunction(list: string[]) {
+function listToDisjunction(list: Array<Node>) {
   return list.reduce((left, right) => {
     return {
       type: 'Disjunction',

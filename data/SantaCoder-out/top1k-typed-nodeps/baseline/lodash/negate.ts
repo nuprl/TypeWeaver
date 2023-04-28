@@ -16,7 +16,7 @@
  * filter([1, 2, 3, 4, 5, 6], negate(isEven))
  * // => [1, 3, 5]
  */
-function negate(predicate: Predicate<T>) {
+function negate(predicate: Function) {
   if (typeof predicate !== 'function') {
     throw new TypeError('Expected a function')
   }

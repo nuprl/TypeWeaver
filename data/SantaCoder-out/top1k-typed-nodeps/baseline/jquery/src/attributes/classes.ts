@@ -4,11 +4,11 @@ import rnothtmlwhite from "../var/rnothtmlwhite.js";
 
 import "../core/init.js";
 
-function getClass( elem : HTMLElement) {
+function getClass( elem : Element) {
 	return elem.getAttribute && elem.getAttribute( "class" ) || "";
 }
 
-function classesToArray( value : any) {
+function classesToArray( value : string) {
 	if ( Array.isArray( value ) ) {
 		return value;
 	}
@@ -19,7 +19,7 @@ function classesToArray( value : any) {
 }
 
 jQuery.fn.extend( {
-	addClass: function( value : any) {
+	addClass: function( value : string) {
 		var classNames, cur, curValue, className, i, finalValue;
 
 		if ( typeof value === "function" ) {
@@ -55,7 +55,7 @@ jQuery.fn.extend( {
 		return this;
 	},
 
-	removeClass: function( value : any) {
+	removeClass: function( value : string) {
 		var classNames, cur, curValue, className, i, finalValue;
 
 		if ( typeof value === "function" ) {
@@ -99,7 +99,7 @@ jQuery.fn.extend( {
 		return this;
 	},
 
-	toggleClass: function( value: any, stateVal : any) {
+	toggleClass: function( value: string, stateVal : boolean) {
 		var classNames, className, i, self;
 
 		if ( typeof value === "function" ) {

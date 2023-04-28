@@ -14,7 +14,7 @@ var rfocusMorph = /^(?:focusinfocus|focusoutblur)$/,
 
 jQuery.extend( jQuery.event, {
 
-	trigger: function( event: Event, data: any, elem: JQuery, onlyHandlers : boolean) {
+	trigger: function( event: Event, data: any, elem: Element, onlyHandlers : boolean) {
 
 		var i, cur, tmp, bubbleType, ontype, handle, special, lastElement,
 			eventPath = [ elem || document ],
@@ -161,7 +161,7 @@ jQuery.extend( jQuery.event, {
 
 	// Piggyback on a donor event to simulate a different one
 	// Used only for `focus(in | out)` events
-	simulate: function( type: string, elem: HTMLElement, event : Event) {
+	simulate: function( type: string, elem: Element, event : Event) {
 		var e = jQuery.extend(
 			new jQuery.Event(),
 			event,

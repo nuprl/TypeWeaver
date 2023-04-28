@@ -46,11 +46,11 @@ suite.add({
   fn: 'var obj = parseurl(createReq(url));' + assertValues
 })
 
-suite.on('start', function onCycle (event: Event) {
+suite.on('start', function onCycle (event: any) {
   process.stdout.write('  Parsing URL ' + JSON.stringify(global.url) + '\n\n')
 })
 
-suite.on('cycle', function onCycle (event: Event) {
+suite.on('cycle', function onCycle (event: any) {
   benchmarks.add(event.target)
 })
 

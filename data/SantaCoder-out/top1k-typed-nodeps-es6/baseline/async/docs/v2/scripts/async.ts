@@ -61,14 +61,14 @@ function slice(arrayLike: any[], start: number) {
  */
 var apply = function(fn/*: Function, ...args*/: any[]) {
     var args = slice(arguments, 1);
-    return function(/*callArgs*/: any[]) {
+    return function(/*callArgs*/: Array<any>) {
         var callArgs = slice(arguments);
         return fn.apply(null, args.concat(callArgs));
     };
 };
 
 var initialParams = function (fn: Function) {
-    return function (/*...args: any[], callback*/: any[]) {
+    return function (/*...args: any[], callback*/: any) {
         var args = slice(arguments);
         var callback = args.pop();
         fn.call(this, args, callback);
@@ -108,7 +108,7 @@ function isObject(value: any) {
 var hasSetImmediate = typeof setImmediate === 'function' && setImmediate;
 var hasNextTick = typeof process === 'object' && typeof process.nextTick === 'function';
 
-function fallback(fn: any) {
+function fallback(fn: Function) {
     setTimeout(fn, 0);
 }
 
@@ -162,7 +162,7 @@ var setImmediate$1 = wrap(_defer);
  * async.waterfall([
  *     async.apply(fs.readFile, filename, "utf8"),
  *     async.asyncify(JSON.parse),
- *     function (data: any, next: any) {
+ *     function (data: any, next: Function) {
  *         // data is the result of parsing the text.
  *         // If there was a parsing error, it would have been caught.
  *     }
@@ -174,7 +174,7 @@ var setImmediate$1 = wrap(_defer);
  *     async.asyncify(function (contents: any) {
  *         return db.model.create(contents);
  *     }),
- *     function (model: Model, next: Function) {
+ *     function (model: any, next: Function) {
  *         // `model` is the instantiated model object.
  *         // If there was an error, this function would be skipped.
  *     }
@@ -182,7 +182,7 @@ var setImmediate$1 = wrap(_defer);
  *
  * // es2017 example, though `asyncify` is not needed if your JS environment
  * // supports async functions out of the box
- * var q = async.queue(async.asyncify(async function(file: string) {
+ * var q = async.queue(async.asyncify(async function(file: File) {
  *     var intermediateStep = await processFile(file);
  *     return await somePromise(intermediateStep)
  * }));
@@ -199,7 +199,7 @@ function asyncify(func: Function) {
         }
         // if result is Promise object
         if (isObject(result) && typeof result.then === 'function') {
-            result.then(function(value: string) {
+            result.then(function(value: any) {
                 invokeCallback(callback, null, value);
             }, function(err: any) {
                 invokeCallback(callback, err.message ? err : new Error(err));
@@ -224,7 +224,7 @@ function rethrow(error: any) {
 
 var supportsSymbol = typeof Symbol === 'function';
 
-function isAsync(fn: Function) {
+function isAsync(fn: any) {
     return supportsSymbol && fn[Symbol.toStringTag] === 'AsyncFunction';
 }
 
@@ -723,7 +723,7 @@ typedArrayTags[weakMapTag] = false;
  * @param {*} value The value to check.
  * @returns {boolean} Returns `true` if `value` is a typed array, else `false`.
  */
-function baseIsTypedArray(value: unknown) {
+function baseIsTypedArray(value: any) {
   return isObjectLike(value) &&
     isLength(value.length) && !!typedArrayTags[baseGetTag(value)];
 }
@@ -942,7 +942,7 @@ function createES2015Iterator(iterator: Iterator<any>) {
     }
 }
 
-function createObjectIterator(obj: any) {
+function createObjectIterator(obj: Object) {
     var okeys = keys(obj);
     var i = -1;
     var len = okeys.length;
@@ -971,7 +971,7 @@ function onlyOnce(fn: Function) {
 }
 
 function _eachOfLimit(limit: number) {
-    return function (obj: any, iteratee: any, callback: any) {
+    return function (obj: Object, iteratee: Function, callback: Function) {
         callback = once(callback || noop);
         if (limit <= 0 || !obj) {
             return callback(null);
@@ -981,7 +981,7 @@ function _eachOfLimit(limit: number) {
         var running = 0;
         var looping = false;
 
-        function iterateeCallback(err: Error, value: any) {
+        function iterateeCallback(err: any, value: any) {
             running -= 1;
             if (err) {
                 done = true;
@@ -1037,18 +1037,18 @@ function _eachOfLimit(limit: number) {
  * @param {Function} [callback] - A callback which is called when all
  * `iteratee` functions have finished, or an error occurs. Invoked with (err).
  */
-function eachOfLimit(coll: any, limit: number, iteratee: any, callback: any) {
+function eachOfLimit(coll: any[], limit: number, iteratee: Function, callback: Function) {
     _eachOfLimit(limit)(coll, wrapAsync(iteratee), callback);
 }
 
 function doLimit(fn: Function, limit: number) {
-    return function (iterable: any[], iteratee: any, callback: any) {
+    return function (iterable: any, iteratee: Function, callback: Function) {
         return fn(iterable, limit, iteratee, callback);
     };
 }
 
 // eachOf implementation optimized for array-likes
-function eachOfArrayLike(coll: any[], iteratee: Function, callback: Function) {
+function eachOfArrayLike(coll: ArrayLike<any>, iteratee: Function, callback: Function) {
     callback = once(callback || noop);
     var index = 0,
         completed = 0,
@@ -1057,7 +1057,7 @@ function eachOfArrayLike(coll: any[], iteratee: Function, callback: Function) {
         callback(null);
     }
 
-    function iteratorCallback(err: Error, value: T) {
+    function iteratorCallback(err: any, value: any) {
         if (err) {
             callback(err);
         } else if ((++completed === length) || value === breakLoop) {
@@ -1096,8 +1096,8 @@ var eachOfGeneric = doLimit(eachOfLimit, Infinity);
  * var obj = {dev: "/dev.json", test: "/test.json", prod: "/prod.json"};
  * var configs = {};
  *
- * async.forEachOf(obj, function (value: any, key: string, callback: Function) {
- *     fs.readFile(__dirname + value, "utf8", function (err: Error, data: any) {
+ * async.forEachOf(obj, function (value: string, key: string, callback: any) {
+ *     fs.readFile(__dirname + value, "utf8", function (err: Error, data: string) {
  *         if (err) return callback(err);
  *         try {
  *             configs[key] = JSON.parse(data);
@@ -1106,13 +1106,13 @@ var eachOfGeneric = doLimit(eachOfLimit, Infinity);
  *         }
  *         callback();
  *     });
- * }, function (err: Error) {
+ * }, function (err: any) {
  *     if (err) console.error(err.message);
  *     // configs is now a map of JSON data
  *     doSomethingWith(configs);
  * });
  */
-var eachOf = function(coll: Collection, iteratee: Function, callback: Function) {
+var eachOf = function(coll: any[], iteratee: Function, callback: Function) {
     var eachOfImplementation = isArrayLike(coll) ? eachOfArrayLike : eachOfGeneric;
     eachOfImplementation(coll, wrapAsync(iteratee), callback);
 };
@@ -1123,14 +1123,14 @@ function doParallel(fn: Function) {
     };
 }
 
-function _asyncMap(eachfn: Function, arr: Array<any>, iteratee: Function, callback: Function) {
+function _asyncMap(eachfn: EachOfFunction, arr: any[], iteratee: AsyncFunction, callback: AsyncResultCallback) {
     callback = callback || noop;
     arr = arr || [];
     var results = [];
     var counter = 0;
     var _iteratee = wrapAsync(iteratee);
 
-    eachfn(arr, function (value: any, _: number, callback: any) {
+    eachfn(arr, function (value: T, _: number, callback: any) {
         var index = counter++;
         _iteratee(value, function (err: any, v: any) {
             results[index] = v;
@@ -1173,7 +1173,7 @@ function _asyncMap(eachfn: Function, arr: Array<any>, iteratee: Function, callba
  * transformed items from the `coll`. Invoked with (err, results).
  * @example
  *
- * async.map(['file1','file2','file3'], fs.stat, function(err: Error, results: any) {
+ * async.map(['file1','file2','file3'], fs.stat, function(err: any, results: any[]) {
  *     // results is now an array of stats for each file
  * });
  */
@@ -1215,7 +1215,7 @@ var map = doParallel(_asyncMap);
 var applyEach = applyEach$1(map);
 
 function doParallelLimit(fn: Function) {
-    return function (obj: any, limit: number, iteratee: any, callback: any) {
+    return function (obj: Object, limit: number, iteratee: Function, callback: Function) {
         return fn(_eachOfLimit(limit), obj, wrapAsync(iteratee), callback);
     };
 }
@@ -1348,7 +1348,7 @@ var baseFor = createBaseFor();
  * @param {Function} iteratee The function invoked per iteration.
  * @returns {Object} Returns `object`.
  */
-function baseForOwn(object: Object, iteratee: Function) {
+function baseForOwn(object: any, iteratee: Function) {
   return object && baseFor(object, iteratee, keys);
 }
 
@@ -1363,7 +1363,7 @@ function baseForOwn(object: Object, iteratee: Function) {
  * @param {boolean} [fromRight] Specify iterating from right to left.
  * @returns {number} Returns the index of the matched value, else `-1`.
  */
-function baseFindIndex(array: any[], predicate: any, fromIndex: any, fromRight: any) {
+function baseFindIndex(array: any[], predicate: Function, fromIndex: number, fromRight: boolean) {
   var length = array.length,
       index = fromIndex + (fromRight ? 1 : -1);
 
@@ -1467,7 +1467,7 @@ function baseIndexOf(array: any[], value: any, fromIndex: number) {
  * async.auto({
  *     // this function will just be passed a callback
  *     readData: async.apply(fs.readFile, 'data.txt', 'utf-8'),
- *     showData: ['readData', function(results: any, cb: Function) {
+ *     showData: ['readData', function(results: any, cb: any) {
  *         // results.readData is the file's contents
  *         // ...
  *     }]
@@ -1497,12 +1497,12 @@ function baseIndexOf(array: any[], value: any, fromIndex: number) {
  *         // results.write_file contains the filename returned by write_file.
  *         callback(null, {'file':results.write_file, 'email':'user@example.com'});
  *     }]
- * }, function(err: Error, results: any) {
+ * }, function(err: any, results: any) {
  *     console.log('err = ', err);
  *     console.log('results = ', results);
  * });
  */
-var auto = function (tasks: Task[], concurrency: number, callback: any) {
+var auto = function (tasks: any, concurrency: any, callback: any) {
     if (typeof concurrency === 'function') {
         // concurrency is optional, shift the args.
         callback = concurrency;
@@ -1567,7 +1567,7 @@ var auto = function (tasks: Task[], concurrency: number, callback: any) {
     checkForDeadlocks();
     processQueue();
 
-    function enqueueTask(key: string, task: Task) {
+    function enqueueTask(key: string, task: Function) {
         readyTasks.push(function () {
             runTask(key, task);
         });
@@ -1584,7 +1584,7 @@ var auto = function (tasks: Task[], concurrency: number, callback: any) {
 
     }
 
-    function addListener(taskName: string, fn: Function) {
+    function addListener(taskName: string, fn: any) {
         var taskListeners = listeners[taskName];
         if (!taskListeners) {
             taskListeners = listeners[taskName] = [];
@@ -1602,7 +1602,7 @@ var auto = function (tasks: Task[], concurrency: number, callback: any) {
     }
 
 
-    function runTask(key: string, task: Task) {
+    function runTask(key: string, task: Function) {
         if (hasError) return;
 
         var taskCallback = onlyOnce(function(err: any, result: any) {
@@ -1612,7 +1612,7 @@ var auto = function (tasks: Task[], concurrency: number, callback: any) {
             }
             if (err) {
                 var safeResults = {};
-                baseForOwn(results, function(val: any, rkey: any) {
+                baseForOwn(results, function(val: any, rkey: string) {
                     safeResults[rkey] = val;
                 });
                 safeResults[key] = result;
@@ -1644,7 +1644,7 @@ var auto = function (tasks: Task[], concurrency: number, callback: any) {
         while (readyToCheck.length) {
             currentTask = readyToCheck.pop();
             counter++;
-            arrayEach(getDependents(currentTask), function (dependent: any) {
+            arrayEach(getDependents(currentTask), function (dependent: string) {
                 if (--uncheckedDependencies[dependent] === 0) {
                     readyToCheck.push(dependent);
                 }
@@ -1678,7 +1678,7 @@ var auto = function (tasks: Task[], concurrency: number, callback: any) {
  * @param {Function} iteratee The function invoked per iteration.
  * @returns {Array} Returns the new mapped array.
  */
-function arrayMap(array: any[], iteratee: Function) {
+function arrayMap(array: ArrayLike<any>, iteratee: Function) {
   var index = -1,
       length = array == null ? 0 : array.length,
       result = Array(length);
@@ -2032,12 +2032,12 @@ function parseParams(func: Function) {
  *         // async code to get some data
  *         callback(null, 'data', 'converted to array');
  *     },
- *     make_folder: function(callback: Function) {
+ *     make_folder: function(callback: any) {
  *         // async code to create a directory to store a file in
  *         // this is run at the same time as getting the data
  *         callback(null, 'folder');
  *     },
- *     write_file: function(get_data: Function, make_folder: Function, callback: Function) {
+ *     write_file: function(get_data: any, make_folder: any, callback: any) {
  *         // once there is some data and the directory exists,
  *         // write the data to a file in the directory
  *         callback(null, 'filename');
@@ -2065,19 +2065,19 @@ function parseParams(func: Function) {
  *     write_file: ['get_data', 'make_folder', function(get_data: any, make_folder: any, callback: any) {
  *         callback(null, 'filename');
  *     }],
- *     email_link: ['write_file', function(write_file: any, callback: any) {
+ *     email_link: ['write_file', function(write_file: string, callback: Function) {
  *         callback(null, {'file':write_file, 'email':'user@example.com'});
  *     }]
  *     //...
- * }, function(err: any, results: any) {
+ * }, function(err: Error, results: any) {
  *     console.log('err = ', err);
  *     console.log('email_link = ', results.email_link);
  * });
  */
-function autoInject(tasks: any, callback: any) {
+function autoInject(tasks: Object, callback: Function) {
     var newTasks = {};
 
-    baseForOwn(tasks, function (taskFn: Function, key: string) {
+    baseForOwn(tasks, function (taskFn: TaskFunction, key: string) {
         var params;
         var fnIsAsync = isAsync(taskFn);
         var hasNoDeps =
@@ -2125,7 +2125,7 @@ function DLL() {
     this.length = 0;
 }
 
-function setInitial(dll: any[], node: any) {
+function setInitial(dll: DLL, node: Node) {
     dll.length = 1;
     dll.head = dll.tail = node;
 }
@@ -2146,7 +2146,7 @@ DLL.prototype.empty = function () {
     return this;
 };
 
-DLL.prototype.insertAfter = function(node: Node, newNode: Node) {
+DLL.prototype.insertAfter = function(node: Node<T>, newNode: Node<T>) {
     newNode.prev = node;
     newNode.next = node.next;
     if (node.next) node.next.prev = newNode;
@@ -2164,12 +2164,12 @@ DLL.prototype.insertBefore = function(node: Node, newNode: Node) {
     this.length += 1;
 };
 
-DLL.prototype.unshift = function(node: Node) {
+DLL.prototype.unshift = function(node: T) {
     if (this.head) this.insertBefore(this.head, node);
     else setInitial(this, node);
 };
 
-DLL.prototype.push = function(node: Node) {
+DLL.prototype.push = function(node: T) {
     if (this.tail) this.insertAfter(this.tail, node);
     else setInitial(this, node);
 };
@@ -2192,7 +2192,7 @@ DLL.prototype.toArray = function () {
     return arr;
 };
 
-DLL.prototype.remove = function (testFn: Function) {
+DLL.prototype.remove = function (testFn: any) {
     var curr = this.head;
     while(!!curr) {
         var next = curr.next;
@@ -2204,7 +2204,7 @@ DLL.prototype.remove = function (testFn: Function) {
     return this;
 };
 
-function queue(worker: Function, concurrency: number, payload: any[]) {
+function queue(worker: AsyncWorker, concurrency: number, payload: any) {
     if (concurrency == null) {
         concurrency = 1;
     }
@@ -2217,7 +2217,7 @@ function queue(worker: Function, concurrency: number, payload: any[]) {
     var workersList = [];
 
     var processingScheduled = false;
-    function _insert(data: any, insertAtFront: boolean, callback: any) {
+    function _insert(data: any[], insertAtFront: boolean, callback: Function) {
         if (callback != null && typeof callback !== 'function') {
             throw new Error('task callback must be a function');
         }
@@ -2309,7 +2309,7 @@ function queue(worker: Function, concurrency: number, payload: any[]) {
         unshift: function (data: any, callback: Function) {
             _insert(data, true, callback);
         },
-        remove: function (testFn: Function) {
+        remove: function (testFn: any) {
             q._tasks.remove(testFn);
         },
         process: function () {
@@ -2428,7 +2428,7 @@ function queue(worker: Function, concurrency: number, payload: any[]) {
  * @example
  *
  * // create a cargo object with payload 2
- * var cargo = async.cargo(function(tasks: Array<Task>, callback: Function) {
+ * var cargo = async.cargo(function(tasks: Array<T>, callback: Function) {
  *     for (var i=0; i<tasks.length; i++) {
  *         console.log('hello ' + tasks[i].name);
  *     }
@@ -2439,14 +2439,14 @@ function queue(worker: Function, concurrency: number, payload: any[]) {
  * cargo.push({name: 'foo'}, function(err: Error) {
  *     console.log('finished processing foo');
  * });
- * cargo.push({name: 'bar'}, function(err: any) {
+ * cargo.push({name: 'bar'}, function(err: Error) {
  *     console.log('finished processing bar');
  * });
  * cargo.push({name: 'baz'}, function(err: Error) {
  *     console.log('finished processing baz');
  * });
  */
-function cargo(worker: Worker, payload: any) {
+function cargo(worker: Function, payload: any) {
     return queue(worker, 1, payload);
 }
 
@@ -2505,14 +2505,14 @@ var eachOfSeries = doLimit(eachOfLimit, 1);
  *     process.nextTick(function() {
  *         callback(null, memo + item)
  *     });
- * }, function(err: Error, result: any) {
+ * }, function(err: any, result: any) {
  *     // result is now equal to the last value of memo, which is 6
  * });
  */
 function reduce(coll: any[], memo: any, iteratee: Function, callback: Function) {
     callback = once(callback || noop);
     var _iteratee = wrapAsync(iteratee);
-    eachOfSeries(coll, function(x: any, i: number, callback: any) {
+    eachOfSeries(coll, function(x: any, i: number, callback: Function) {
         _iteratee(memo, x, function(err: any, v: any) {
             memo = v;
             callback(err);
@@ -2543,11 +2543,11 @@ function reduce(coll: any[], memo: any, iteratee: Function, callback: Function) 
  * // Part of an app, that fetches cats of the logged user.
  * // This example uses `seq` function to avoid overnesting and error
  * // handling clutter.
- * app.get('/cats', function(request: http.IncomingMessage, response: http.ServerResponse) {
+ * app.get('/cats', function(request: Request, response: Response) {
  *     var User = request.models.User;
  *     async.seq(
  *         _.bind(User.get, User),  // 'User.get' has signature (id, callback(err, data))
- *         function(user: User, fn: Function) {
+ *         function(user: User, fn: any) {
  *             user.getCats(fn);      // 'getCats' has signature (callback(err, data))
  *         }
  *     )(req.session.user_id, function (err: Error, cats: Cat[]) {
@@ -2560,7 +2560,7 @@ function reduce(coll: any[], memo: any, iteratee: Function, callback: Function) 
  *     });
  * });
  */
-function seq(/*...functions*/: any) {
+function seq(/*...functions*/: functions) {
     var _functions = arrayMap(arguments, wrapAsync);
     return function(/*...args*/: any[]) {
         var args = slice(arguments);
@@ -2579,7 +2579,7 @@ function seq(/*...functions*/: any) {
                 cb(err, nextargs);
             }));
         },
-        function(err: Error, results: any) {
+        function(err: Error, results: any[]) {
             cb.apply(that, [err].concat(results));
         });
     };
@@ -2609,14 +2609,14 @@ function seq(/*...functions*/: any) {
  *     }, 10);
  * }
  *
- * function mul3(n: number, callback: any) {
+ * function mul3(n: number, callback: Function) {
  *     setTimeout(function () {
  *         callback(null, n * 3);
  *     }, 10);
  * }
  *
  * var add1mul3 = async.compose(mul3, add1);
- * add1mul3(4, function (err: any, result: number) {
+ * add1mul3(4, function (err: any, result: any) {
  *     // result now equals 15
  * });
  */
@@ -2644,7 +2644,7 @@ var _concat = Array.prototype.concat;
  * containing the concatenated results of the `iteratee` function. Invoked with
  * (err, results).
  */
-var concatLimit = function(coll: string, limit: number, iteratee: Function, callback: Function) {
+var concatLimit = function(coll: Array<any>, limit: number, iteratee: Function, callback: Function) {
     callback = callback || noop;
     var _iteratee = wrapAsync(iteratee);
     mapLimit(coll, limit, function(val: any, callback: Function) {
@@ -2729,7 +2729,7 @@ var concatSeries = doLimit(concatLimit, 1);
  *
  * async.waterfall([
  *     async.constant(42),
- *     function (value: number, next: Function) {
+ *     function (value: any, next: Function) {
  *         // value === 42
  *     },
  *     //...
@@ -2738,7 +2738,7 @@ var concatSeries = doLimit(concatLimit, 1);
  * async.waterfall([
  *     async.constant(filename, "utf8"),
  *     fs.readFile,
- *     function (fileData: FileData, next: Function) {
+ *     function (fileData: any, next: Function) {
  *         //...
  *     }
  *     //...
@@ -2747,7 +2747,7 @@ var concatSeries = doLimit(concatLimit, 1);
  * async.auto({
  *     hostname: async.constant("https://server.net/"),
  *     port: findFreePort,
- *     launchServer: ["hostname", "port", function (options: any, cb: any) {
+ *     launchServer: ["hostname", "port", function (options: Object, cb: Function) {
  *         startServer(options, cb);
  *     }],
  *     //...
@@ -2782,12 +2782,12 @@ function identity(value: any) {
   return value;
 }
 
-function _createTester(check: any, getResult: any) {
-    return function(eachfn: Function, arr: Array, iteratee: Function, cb: Function) {
+function _createTester(check: Function, getResult: Function) {
+    return function(eachfn: EachFunction<T>, arr: Array<T>, iteratee: Function, cb: Callback<T>) {
         cb = cb || noop;
         var testPassed = false;
         var testResult;
-        eachfn(arr, function(value: string, _: string, callback: any) {
+        eachfn(arr, function(value: T, _: number, callback: any) {
             iteratee(value, function(err: any, result: any) {
                 if (err) {
                     callback(err);
@@ -2840,7 +2840,7 @@ function _findGetResult(v: any, x: any) {
  * (err, result).
  * @example
  *
- * async.detect(['file1','file2','file3'], function(filePath: string, callback: any) {
+ * async.detect(['file1','file2','file3'], function(filePath: string, callback: Function) {
  *     fs.access(filePath, function(err: any) {
  *         callback(null, !err)
  *     });
@@ -2980,7 +2980,7 @@ function doDuring(fn: Function, test: Function, callback: Function) {
         _test.apply(this, args);
     }
 
-    function check(err: Error, truth: boolean) {
+    function check(err: Error, truth: any) {
         if (err) return callback(err);
         if (!truth) return callback(null);
         _fn(next);
@@ -3052,7 +3052,7 @@ function doUntil(iteratee: Function, test: Function, callback: Function) {
 
 /**
  * Like [`whilst`]{@link module:ControlFlow.whilst}, except the `test` is an asynchronous function that
- * is passed a callback in the form of `function (err: Error, truth: boolean)`. If error is
+ * is passed a callback in the form of `function (err: any, truth: any)`. If error is
  * passed to `test` or `fn`, the main callback is immediately called with the
  * value of the error.
  *
@@ -3074,7 +3074,7 @@ function doUntil(iteratee: Function, test: Function, callback: Function) {
  * var count = 0;
  *
  * async.during(
- *     function (callback: any) {
+ *     function (callback: Function) {
  *         return callback(null, count < 5);
  *     },
  *     function (callback: Function) {
@@ -3086,7 +3086,7 @@ function doUntil(iteratee: Function, test: Function, callback: Function) {
  *     }
  * );
  */
-function during(test: Function, fn: Function, callback: Function) {
+function during(test: AsyncFunction, fn: AsyncFunction, callback: Function) {
     callback = onlyOnce(callback || noop);
     var _fn = wrapAsync(fn);
     var _test = wrapAsync(test);
@@ -3105,8 +3105,8 @@ function during(test: Function, fn: Function, callback: Function) {
     _test(check);
 }
 
-function _withoutIndex(iteratee: any) {
-    return function (value: any, index: number, callback: Function) {
+function _withoutIndex(iteratee: Function) {
+    return function (value: T, index: number, callback: any) {
         return iteratee(value, callback);
     };
 }
@@ -3144,7 +3144,7 @@ function _withoutIndex(iteratee: any) {
  * });
  *
  * // assuming openFiles is an array of file names
- * async.each(openFiles, function(file: string, callback: Function) {
+ * async.each(openFiles, function(file: string, callback: any) {
  *
  *     // Perform operation on file here.
  *     console.log('Processing file ' + file);
@@ -3157,7 +3157,7 @@ function _withoutIndex(iteratee: any) {
  *       console.log('File processed');
  *       callback();
  *     }
- * }, function(err: any) {
+ * }, function(err: Error) {
  *     // if any of the file processing produced an error, err would equal that error
  *     if( err ) {
  *       // One of the iterations produced an error.
@@ -3168,7 +3168,7 @@ function _withoutIndex(iteratee: any) {
  *     }
  * });
  */
-function eachLimit(coll: any[], iteratee: any, callback: any) {
+function eachLimit(coll: any[], iteratee: Function, callback: Function) {
     eachOf(coll, _withoutIndex(wrapAsync(iteratee)), callback);
 }
 
@@ -3192,7 +3192,7 @@ function eachLimit(coll: any[], iteratee: any, callback: any) {
  * @param {Function} [callback] - A callback which is called when all
  * `iteratee` functions have finished, or an error occurs. Invoked with (err).
  */
-function eachLimit$1(coll: any, limit: number, iteratee: any, callback: any) {
+function eachLimit$1(coll: any, limit: number, iteratee: Function, callback: Callback<any>) {
     _eachOfLimit(limit)(coll, _withoutIndex(wrapAsync(iteratee)), callback);
 }
 
@@ -3237,7 +3237,7 @@ var eachSeries = doLimit(eachLimit$1, 1);
  * signature as the function passed in.
  * @example
  *
- * function sometimesAsync(arg: any, callback: Function) {
+ * function sometimesAsync(arg: any, callback: any) {
  *     if (cache[arg]) {
  *         return callback(null, cache[arg]); // this would be synchronous!!
  *     } else {
@@ -3295,7 +3295,7 @@ function notId(v: any) {
  * depending on the values of the async tests. Invoked with (err, result).
  * @example
  *
- * async.every(['file1','file2','file3'], function(filePath: string, callback: any) {
+ * async.every(['file1','file2','file3'], function(filePath: string, callback: Function) {
  *     fs.access(filePath, function(err: Error) {
  *         callback(null, !err)
  *     });
@@ -3363,7 +3363,7 @@ function baseProperty(key: string) {
 
 function filterArray(eachfn: Function, arr: any[], iteratee: Function, callback: Function) {
     var truthValues = new Array(arr.length);
-    eachfn(arr, function (x: any, index: number, callback: Function) {
+    eachfn(arr, function (x: T, index: number, callback: any) {
         iteratee(x, function (err: any, v: any) {
             truthValues[index] = !!v;
             callback(err);
@@ -3378,10 +3378,10 @@ function filterArray(eachfn: Function, arr: any[], iteratee: Function, callback:
     });
 }
 
-function filterGeneric(eachfn: Function, coll: any, iteratee: Function, callback: Function) {
+function filterGeneric(eachfn: any, coll: any, iteratee: any, callback: any) {
     var results = [];
-    eachfn(coll, function (x: any, index: number, callback: any) {
-        iteratee(x, function (err: Error, v: any) {
+    eachfn(coll, function (x: T, index: number, callback: any) {
+        iteratee(x, function (err: any, v: any) {
             if (err) {
                 callback(err);
             } else {
@@ -3402,7 +3402,7 @@ function filterGeneric(eachfn: Function, coll: any, iteratee: Function, callback
     });
 }
 
-function _filter(eachfn: Function, coll: any, iteratee: Function, callback: Function) {
+function _filter(eachfn: Function, coll: any[], iteratee: Function, callback: Function) {
     var filter = isArrayLike(coll) ? filterArray : filterGeneric;
     filter(eachfn, coll, wrapAsync(iteratee), callback || noop);
 }
@@ -3427,10 +3427,10 @@ function _filter(eachfn: Function, coll: any, iteratee: Function, callback: Func
  * @example
  *
  * async.filter(['file1','file2','file3'], function(filePath: string, callback: any) {
- *     fs.access(filePath, function(err: Error) {
+ *     fs.access(filePath, function(err: any) {
  *         callback(null, !err)
  *     });
- * }, function(err: Error, results: any) {
+ * }, function(err: any, results: any[]) {
  *     // results now equals an array of the existing files
  * });
  */
@@ -3535,7 +3535,7 @@ function forever(fn: Function, errback: Function) {
  * functions have finished, or an error occurs. Result is an `Object` whose
  * properties are arrays of values which returned the corresponding key.
  */
-var groupByLimit = function(coll: string, limit: number, iteratee: Function, callback: Function) {
+var groupByLimit = function(coll: Array<any>, limit: number, iteratee: Function, callback: Function) {
     callback = callback || noop;
     var _iteratee = wrapAsync(iteratee);
     mapLimit(coll, limit, function(val: any, callback: Function) {
@@ -3591,12 +3591,12 @@ var groupByLimit = function(coll: string, limit: number, iteratee: Function, cal
  * properties are arrays of values which returned the corresponding key.
  * @example
  *
- * async.groupBy(['userId1', 'userId2', 'userId3'], function(userId: string, callback: Function) {
- *     db.findById(userId, function(err: Error, user: User) {
+ * async.groupBy(['userId1', 'userId2', 'userId3'], function(userId: number, callback: Function) {
+ *     db.findById(userId, function(err: any, user: any) {
  *         if (err) return callback(err);
  *         return callback(null, user.age);
  *     });
- * }, function(err: Error, result: any) {
+ * }, function(err: any, result: any) {
  *     // result is object containing the userIds grouped by age
  *     // e.g. { 30: ['userId1', 'userId3'], 42: ['userId2']};
  * });
@@ -3674,12 +3674,12 @@ var log = consoleFunc('log');
  * of each key from `obj`, with each transformed value on the right-hand side.
  * Invoked with (err, result).
  */
-function mapValuesLimit(obj: any, limit: number, iteratee: any, callback: any) {
+function mapValuesLimit(obj: Object, limit: number, iteratee: Function, callback: Function) {
     callback = once(callback || noop);
     var newObj = {};
     var _iteratee = wrapAsync(iteratee);
     eachOfLimit(obj, limit, function(val: any, key: string, next: Function) {
-        _iteratee(val, key, function (err: Error, result: any) {
+        _iteratee(val, key, function (err: any, result: any) {
             if (err) return next(err);
             newObj[key] = result;
             next();
@@ -3724,7 +3724,7 @@ function mapValuesLimit(obj: any, limit: number, iteratee: any, callback: any) {
  *     f3: 'file3'
  * }, function (file: string, key: string, callback: Function) {
  *   fs.stat(file, callback);
- * }, function(err: Error, result: any) {
+ * }, function(err: any, result: any) {
  *     // result is now a map of stats for each file, e.g.
  *     // {
  *     //     f1: [stats for file1],
@@ -3856,7 +3856,7 @@ function memoize(fn: Function, hasher: Function) {
  * });
  * call_order.push('one');
  *
- * async.setImmediate(function (a: number, b: number, c: number) {
+ * async.setImmediate(function (a: any, b: any, c: any) {
  *     // a, b, and c equal 1, 2, and 3
  * }, 1, 2, 3);
  */
@@ -3872,11 +3872,11 @@ if (hasNextTick) {
 
 var nextTick = wrap(_defer$1);
 
-function _parallel(eachfn: Function, tasks: Array<Function>, callback: Function) {
+function _parallel(eachfn: Function, tasks: Object, callback: Function) {
     callback = callback || noop;
     var results = isArrayLike(tasks) ? [] : {};
 
-    eachfn(tasks, function (task: any, key: any, callback: any) {
+    eachfn(tasks, function (task: any, key: string, callback: any) {
         wrapAsync(task)(function (err: any, result: any) {
             if (arguments.length > 2) {
                 result = slice(arguments, 1);
@@ -3937,14 +3937,14 @@ function _parallel(eachfn: Function, tasks: Array<Function>, callback: Function)
  *     }
  * ],
  * // optional callback
- * function(err: Error, results: any) {
+ * function(err: any, results: any[]) {
  *     // the results array will equal ['one','two'] even though
  *     // the second function had a shorter timeout.
  * });
  *
  * // an example using an object instead of an array
  * async.parallel({
- *     one: function(callback: Function) {
+ *     one: function(callback: any) {
  *         setTimeout(function() {
  *             callback(null, 1);
  *         }, 200);
@@ -3954,11 +3954,11 @@ function _parallel(eachfn: Function, tasks: Array<Function>, callback: Function)
  *             callback(null, 2);
  *         }, 100);
  *     }
- * }, function(err: Error, results: any) {
+ * }, function(err: any, results: any) {
  *     // results is now equals to: {one: 1, two: 2}
  * });
  */
-function parallelLimit(tasks: Array<any>, callback: Function) {
+function parallelLimit(tasks: Array<Function>, callback: Function) {
     _parallel(eachOf, tasks, callback);
 }
 
@@ -4013,7 +4013,7 @@ function parallelLimit$1(tasks: Array<Function>, limit: number, callback: Functi
  * and a `priority` property, if this is a
  * [priorityQueue]{@link module:ControlFlow.priorityQueue} object.
  * Invoked with `queue.remove(testFn)`, where `testFn` is of the form
- * `function ({data: any, priority}: any) {}` and returns a Boolean.
+ * `function ({data: task, priority}: Task) {}` and returns a Boolean.
  * @property {Function} saturated - a callback that is called when the number of
  * running workers hits the `concurrency` limit, and further tasks will be
  * queued.
@@ -4027,7 +4027,7 @@ function parallelLimit$1(tasks: Array<Function>, limit: number, callback: Functi
  * @property {Function} drain - a callback that is called when the last item
  * from the `queue` has returned from the `worker`.
  * @property {Function} error - a callback that is called when a task errors.
- * Has the signature `function(error: Error, task: Task)`.
+ * Has the signature `function(error: any, task: any)`.
  * @property {boolean} paused - a boolean for determining whether the queue is
  * in a paused state.
  * @property {Function} pause - a function that pauses the processing of tasks
@@ -4062,7 +4062,7 @@ function parallelLimit$1(tasks: Array<Function>, limit: number, callback: Functi
  * @example
  *
  * // create a queue object with concurrency 2
- * var q = async.queue(function(task: Task, callback: Function) {
+ * var q = async.queue(function(task: any, callback: any) {
  *     console.log('hello ' + task.name);
  *     callback();
  * }, 2);
@@ -4081,18 +4081,18 @@ function parallelLimit$1(tasks: Array<Function>, limit: number, callback: Functi
  * });
  *
  * // add some items to the queue (batch-wise)
- * q.push([{name: 'baz'},{name: 'bay'},{name: 'bax'}], function(err: Error) {
+ * q.push([{name: 'baz'},{name: 'bay'},{name: 'bax'}], function(err: any) {
  *     console.log('finished processing item');
  * });
  *
  * // add some items to the front of the queue
- * q.unshift({name: 'bar'}, function (err: Error) {
+ * q.unshift({name: 'bar'}, function (err: any) {
  *     console.log('finished processing bar');
  * });
  */
-var queue$1 = function (worker: Worker, concurrency: number) {
+var queue$1 = function (worker: any, concurrency: any) {
     var _worker = wrapAsync(worker);
-    return queue(function (items: any[], cb: Function) {
+    return queue(function (items: any[], cb: any) {
         _worker(items[0], cb);
     }, concurrency, 1);
 };
@@ -4120,7 +4120,7 @@ var queue$1 = function (worker: Worker, concurrency: number) {
  *   array of `tasks` is given, all tasks will be assigned the same priority.
  * * The `unshift` method was removed.
  */
-var priorityQueue = function(worker: Worker, concurrency: number) {
+var priorityQueue = function(worker: Function, concurrency: number) {
     // Start with a normal queue
     var q = queue$1(worker, concurrency);
 
@@ -4201,11 +4201,11 @@ var priorityQueue = function(worker: Worker, concurrency: number) {
  *     }
  * ],
  * // main callback
- * function(err: Error, result: any) {
+ * function(err: any, result: any) {
  *     // the result will be equal to 'two' as it finishes earlier
  * });
  */
-function race(tasks: Array<Function>, callback: Function) {
+function race(tasks: Function[], callback: Function) {
     callback = once(callback || noop);
     if (!isArray(tasks)) return callback(new TypeError('First argument to race must be an array of functions'));
     if (!tasks.length) return callback();
@@ -4259,7 +4259,7 @@ function reduceRight (array: Array<any>, memo: any, iteratee: Function, callback
  * @example
  *
  * async.parallel([
- *     async.reflect(function(callback: Function) {
+ *     async.reflect(function(callback: any) {
  *         // do some stuff ...
  *         callback(null, 'one');
  *     }),
@@ -4273,7 +4273,7 @@ function reduceRight (array: Array<any>, memo: any, iteratee: Function, callback
  *     })
  * ],
  * // optional callback
- * function(err: Error, results: any) {
+ * function(err: any, results: any[]) {
  *     // values
  *     // results[0].value = 'one'
  *     // results[1].error = 'bad stuff happened'
@@ -4282,8 +4282,8 @@ function reduceRight (array: Array<any>, memo: any, iteratee: Function, callback
  */
 function reflect(fn: Function) {
     var _fn = wrapAsync(fn);
-    return initialParams(function reflectOn(args: any[], reflectCallback: Function) {
-        args.push(function callback(error: Error, cbArg: any) {
+    return initialParams(function reflectOn(args: any[], reflectCallback: any) {
+        args.push(function callback(error: any, cbArg: any) {
             if (error) {
                 reflectCallback(null, { error: error });
             } else {
@@ -4335,7 +4335,7 @@ function reflect(fn: Function) {
  *
  * async.parallel(async.reflectAll(tasks),
  * // optional callback
- * function(err: Error, results: any) {
+ * function(err: Error, results: any[]) {
  *     // values
  *     // results[0].value = 'one'
  *     // results[1].error = Error('bad stuff happened')
@@ -4349,7 +4349,7 @@ function reflect(fn: Function) {
  *             callback(null, 'one');
  *         }, 200);
  *     },
- *     two: function(callback: any) {
+ *     two: function(callback: Function) {
  *         callback('two');
  *     },
  *     three: function(callback: Function) {
@@ -4361,29 +4361,29 @@ function reflect(fn: Function) {
  *
  * async.parallel(async.reflectAll(tasks),
  * // optional callback
- * function(err: Error, results: any) {
+ * function(err: any, results: any) {
  *     // values
  *     // results.one.value = 'one'
  *     // results.two.error = 'two'
  *     // results.three.value = 'three'
  * });
  */
-function reflectAll(tasks: Array<Task>) {
+function reflectAll(tasks: any) {
     var results;
     if (isArray(tasks)) {
         results = arrayMap(tasks, reflect);
     } else {
         results = {};
-        baseForOwn(tasks, function(task: Task, key: string) {
+        baseForOwn(tasks, function(task: any, key: any) {
             results[key] = reflect.call(this, task);
         });
     }
     return results;
 }
 
-function reject$1(eachfn: Function, arr: any[], iteratee: Function, callback: Function) {
-    _filter(eachfn, arr, function(value: any, cb: Function) {
-        iteratee(value, function(err: any, v: any) {
+function reject$1(eachfn: Function, arr: Array<any>, iteratee: Function, callback: Callback<any[]>) {
+    _filter(eachfn, arr, function(value: T, cb: Callback<boolean>) {
+        iteratee(value, function(err: Error, v: T) {
             cb(err, !v);
         });
     }, callback);
@@ -4407,11 +4407,11 @@ function reject$1(eachfn: Function, arr: any[], iteratee: Function, callback: Fu
  * `iteratee` functions have finished. Invoked with (err, results).
  * @example
  *
- * async.reject(['file1','file2','file3'], function(filePath: string, callback: any) {
+ * async.reject(['file1','file2','file3'], function(filePath: string, callback: Function) {
  *     fs.access(filePath, function(err: any) {
  *         callback(null, !err)
  *     });
- * }, function(err: Error, results: any) {
+ * }, function(err: any, results: any) {
  *     // results now equals an array of missing files
  *     createFiles(results);
  * });
@@ -4527,7 +4527,7 @@ function constant$1(value: any) {
  * });
  *
  * // try calling apiMethod 3 times, waiting 200 ms between each retry
- * async.retry({times: 3, interval: 200}, apiMethod, function(err: Error, result: any) {
+ * async.retry({times: 3, interval: 200}, apiMethod, function(err: any, result: any) {
  *     // do something with the result
  * });
  *
@@ -4543,17 +4543,17 @@ function constant$1(value: any) {
  * });
  *
  * // try calling apiMethod the default 5 times no delay between each retry
- * async.retry(apiMethod, function(err: Error, result: any) {
+ * async.retry(apiMethod, function(err: any, result: any) {
  *     // do something with the result
  * });
  *
  * // try calling apiMethod only when error condition satisfies, all other
  * // errors will abort the retry control flow and return to final callback
  * async.retry({
- *   errorFilter: function(err: any) {
+ *   errorFilter: function(err: Error) {
  *     return err.message === 'Temporary error'; // only retry on a specific error
  *   }
- * }, apiMethod, function(err: any, result: any) {
+ * }, apiMethod, function(err: Error, result: any) {
  *     // do something with the result
  * });
  *
@@ -4562,7 +4562,7 @@ function constant$1(value: any) {
  * async.auto({
  *     users: api.getUsers.bind(api),
  *     payments: async.retryable(3, api.getPayments.bind(api))
- * }, function(err: Error, results: any) {
+ * }, function(err: any, results: any) {
  *     // do something with the results
  * });
  *
@@ -4576,7 +4576,7 @@ function retry(opts: any, task: any, callback: any) {
         intervalFunc: constant$1(DEFAULT_INTERVAL)
     };
 
-    function parseTimes(acc: any, t: string) {
+    function parseTimes(acc: any, t: any) {
         if (typeof t === 'object') {
             acc.times = +t.times || DEFAULT_TIMES;
 
@@ -4650,13 +4650,13 @@ function retry(opts: any, task: any, callback: any) {
  *     })]
  * }, callback);
  */
-var retryable = function (opts: any, task: any) {
+var retryable = function (opts: RetryOptions, task: Function) {
     if (!task) {
         task = opts;
         opts = null;
     }
     var _task = wrapAsync(task);
-    return initialParams(function (args: any, callback: any) {
+    return initialParams(function (args: any[], callback: Function) {
         function taskFn(cb: Function) {
             _task.apply(null, args.concat(cb));
         }
@@ -4712,7 +4712,7 @@ var retryable = function (opts: any, task: any) {
  *     }
  * ],
  * // optional callback
- * function(err: Error, results: any) {
+ * function(err: any, results: any) {
  *     // results is now equal to ['one', 'two']
  * });
  *
@@ -4757,11 +4757,11 @@ function series(tasks: Array<Function>, callback: Function) {
  * tests. Invoked with (err, result).
  * @example
  *
- * async.some(['file1','file2','file3'], function(filePath: string, callback: any) {
- *     fs.access(filePath, function(err: any) {
+ * async.some(['file1','file2','file3'], function(filePath: string, callback: Function) {
+ *     fs.access(filePath, function(err: Error) {
  *         callback(null, !err)
  *     });
- * }, function(err: Error, result: any) {
+ * }, function(err: Error, result: boolean) {
  *     // if result is true then at least one of the files exists
  * });
  */
@@ -4833,11 +4833,11 @@ var someSeries = doLimit(someLimit, 1);
  * calls. Invoked with (err, results).
  * @example
  *
- * async.sortBy(['file1','file2','file3'], function(file: string, callback: any) {
- *     fs.stat(file, function(err: Error, stats: Stats) {
+ * async.sortBy(['file1','file2','file3'], function(file: string, callback: Function) {
+ *     fs.stat(file, function(err: Error, stats: fs.Stats) {
  *         callback(err, stats.mtime);
  *     });
- * }, function(err: any, results: any) {
+ * }, function(err: Error, results: any) {
  *     // results is now the original array of files sorted by
  *     // modified date
  * });
@@ -4846,7 +4846,7 @@ var someSeries = doLimit(someLimit, 1);
  * // sorting order can be influenced:
  *
  * // ascending order
- * async.sortBy([1,9,3,5], function(x: number, callback: any) {
+ * async.sortBy([1,9,3,5], function(x: any, callback: Function) {
  *     callback(null, x);
  * }, function(err: any,result: any) {
  *     // result callback
@@ -4855,18 +4855,18 @@ var someSeries = doLimit(someLimit, 1);
  * // descending order
  * async.sortBy([1,9,3,5], function(x: any, callback: Function) {
  *     callback(null, x*-1);    //<- x*-1 instead of x, turns the order around
- * }, function(err: Error,result: any) {
+ * }, function(err: any,result: any) {
  *     // result callback
  * });
  */
-function sortBy (coll: any[], iteratee: any, callback: any) {
+function sortBy (coll: any[], iteratee: Function, callback: Function) {
     var _iteratee = wrapAsync(iteratee);
-    map(coll, function (x: any, callback: Function) {
-        _iteratee(x, function (err: Error, criteria: any) {
+    map(coll, function (x: any, callback: any) {
+        _iteratee(x, function (err: any, criteria: any) {
             if (err) return callback(err);
             callback(null, {value: x, criteria: criteria});
         });
-    }, function (err: Error, results: any) {
+    }, function (err: any, results: any) {
         if (err) return callback(err);
         callback(null, arrayMap(results.sort(comparator), baseProperty('value')));
     });
@@ -4897,7 +4897,7 @@ function sortBy (coll: any[], iteratee: any, callback: any) {
  * @example
  *
  * function myFunction(foo: string, callback: any) {
- *     doAsyncTask(foo, function(err: any, data: any) {
+ *     doAsyncTask(foo, function(err: Error, data: any) {
  *         // handle errors
  *         if (err) return callback(err);
  *
@@ -4911,7 +4911,7 @@ function sortBy (coll: any[], iteratee: any, callback: any) {
  * var wrapped = async.timeout(myFunction, 1000);
  *
  * // call `wrapped` as you would `myFunction`
- * wrapped({ bar: 'bar' }, function(err: any, data: any) {
+ * wrapped({ bar: 'bar' }, function(err: Error, data: any) {
  *     // if `myFunction` takes < 1000 ms to execute, `err`
  *     // and `data` will have their expected values
  *
@@ -4921,7 +4921,7 @@ function sortBy (coll: any[], iteratee: any, callback: any) {
 function timeout(asyncFn: Function, milliseconds: number, info: string) {
     var fn = wrapAsync(asyncFn);
 
-    return initialParams(function (args: any, callback: any) {
+    return initialParams(function (args: any[], callback: Function) {
         var timedOut = false;
         var timer;
 
@@ -5025,7 +5025,7 @@ function timeLimit(count: number, limit: number, iteratee: Function, callback: F
  *     createUser(n, function(err: Error, user: User) {
  *         next(err, user);
  *     });
- * }, function(err: Error, users: User[]) {
+ * }, function(err: any, users: any[]) {
  *     // we should now have 5 users
  * });
  */
@@ -5068,19 +5068,19 @@ var timesSeries = doLimit(timeLimit, 1);
  * Invoked with (err, result).
  * @example
  *
- * async.transform([1,2,3], function(acc: any, item: any, index: number, callback: any) {
+ * async.transform([1,2,3], function(acc: any, item: any, index: number, callback: Function) {
  *     // pointless async:
  *     process.nextTick(function() {
  *         acc.push(item * 2)
  *         callback(null)
  *     });
- * }, function(err: Error, result: any) {
+ * }, function(err: any, result: any) {
  *     // result is now equal to [2, 4, 6]
  * });
  *
  * @example
  *
- * async.transform({a: 1, b: 2, c: 3}, function (obj: any, val: any, key: string, callback: Function) {
+ * async.transform({a: 1, b: 2, c: 3}, function (obj: Object, val: any, key: string, callback: Function) {
  *     setImmediate(function () {
  *         obj[key] = val * 2;
  *         callback();
@@ -5089,7 +5089,7 @@ var timesSeries = doLimit(timeLimit, 1);
  *     // result is equal to {a: 2, b: 4, c: 6}
  * })
  */
-function transform (coll: Array<any>, accumulator: any, iteratee: Function, callback: Function) {
+function transform (coll: any[], accumulator: any, iteratee: Function, callback: Function) {
     if (arguments.length <= 3) {
         callback = iteratee;
         iteratee = accumulator;
@@ -5130,14 +5130,14 @@ function transform (coll: Array<any>, accumulator: any, iteratee: Function, call
  *         // Try getting the data from the first website
  *         callback(err, data);
  *     },
- *     function getDataFromSecondWebsite(callback: any) {
+ *     function getDataFromSecondWebsite(callback: Function) {
  *         // First website failed,
  *         // Try getting the data from the backup website
  *         callback(err, data);
  *     }
  * ],
  * // optional callback
- * function(err: Error, results: any) {
+ * function(err: any, results: any[]) {
  *     Now do something with the data.
  * });
  *
@@ -5146,7 +5146,7 @@ function tryEach(tasks: Array<Function>, callback: Function) {
     var error = null;
     var result;
     callback = callback || noop;
-    eachSeries(tasks, function(task: Task, callback: Function) {
+    eachSeries(tasks, function(task: Function, callback: Function) {
         wrapAsync(task)(function (err: any, res/*: any, ...args*/: any[]) {
             if (arguments.length > 2) {
                 result = slice(arguments, 1);
@@ -5209,12 +5209,12 @@ function unmemoize(fn: Function) {
  *             callback(null, count);
  *         }, 1000);
  *     },
- *     function (err: Error, n: number) {
+ *     function (err: any, n: number) {
  *         // 5 seconds have passed, n = 5
  *     }
  * );
  */
-function whilst(test: Function, iteratee: Function, callback: Function) {
+function whilst(test: AsyncBooleanResultIterator<T>, iteratee: AsyncFunction<T>, callback: AsyncResultIterator<T>) {
     callback = onlyOnce(callback || noop);
     var _iteratee = wrapAsync(iteratee);
     if (!test()) return callback(null);
@@ -5284,7 +5284,7 @@ function until(test: Function, iteratee: Function, callback: Function) {
  *         // arg1 now equals 'one' and arg2 now equals 'two'
  *         callback(null, 'three');
  *     },
- *     function(arg1: string, callback: Function) {
+ *     function(arg1: any, callback: Function) {
  *         // arg1 now equals 'three'
  *         callback(null, 'done');
  *     }
@@ -5297,7 +5297,7 @@ function until(test: Function, iteratee: Function, callback: Function) {
  *     myFirstFunction,
  *     mySecondFunction,
  *     myLastFunction,
- * ], function (err: Error, result: string) {
+ * ], function (err: any, result: any) {
  *     // result now equals 'done'
  * });
  * function myFirstFunction(callback: Function) {
@@ -5307,12 +5307,12 @@ function until(test: Function, iteratee: Function, callback: Function) {
  *     // arg1 now equals 'one' and arg2 now equals 'two'
  *     callback(null, 'three');
  * }
- * function myLastFunction(arg1: any, callback: Function) {
+ * function myLastFunction(arg1: string, callback: Function) {
  *     // arg1 now equals 'three'
  *     callback(null, 'done');
  * }
  */
-var waterfall = function(tasks: Array<Task>, callback: Function) {
+var waterfall = function(tasks: Function[], callback: Function) {
     callback = once(callback || noop);
     if (!isArray(tasks)) return callback(new Error('First argument to waterfall must be an array of functions'));
     if (!tasks.length) return callback();
@@ -5324,7 +5324,7 @@ var waterfall = function(tasks: Array<Task>, callback: Function) {
         task.apply(null, args);
     }
 
-    function next(err/*: Error|null, ...args*/: any[]) {
+    function next(err/*: Error, ...args*/: any[]) {
         if (err || taskIndex === tasks.length) {
             return callback.apply(null, arguments);
         }
@@ -5337,7 +5337,7 @@ var waterfall = function(tasks: Array<Task>, callback: Function) {
 /**
  * An "async function" in the context of Async is an asynchronous function with
  * a variable number of parameters, with the final parameter being a callback.
- * (`function (arg1: number, arg2: number, ...: any[], callback: Function) {}`)
+ * (`function (arg1: any, arg2: any, ...: any[], callback: any) {}`)
  * The final callback is of the form `callback(err, results...)`, which must be
  * called once the function is completed.  The callback should be called with a
  * Error as its first argument to signal that an error occurred.

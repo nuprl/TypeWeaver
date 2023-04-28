@@ -9,7 +9,7 @@ var debug = require("./debug");
 // Create handlers that pass events from native requests
 var events = ["abort", "aborted", "connect", "error", "socket", "timeout"];
 var eventHandlers = Object.create(null);
-events.forEach(function (event: MouseEvent) {
+events.forEach(function (event: string) {
   eventHandlers[event] = function (arg1: any, arg2: any, arg3: any) {
     this._redirectable.emit(event, arg1, arg2, arg3);
   };
@@ -39,7 +39,7 @@ var WriteAfterEndError = createErrorType(
 );
 
 // An HTTP(S) request that can be redirected
-function RedirectableRequest(options: Options, responseCallback: any) {
+function RedirectableRequest(options: Options, responseCallback: Function) {
   // Initialize the request
   Writable.call(this);
   this._sanitizeOptions(options);
@@ -58,7 +58,7 @@ function RedirectableRequest(options: Options, responseCallback: any) {
 
   // React to responses of native requests
   var self = this;
-  this._onNativeResponse = function (response: any) {
+  this._onNativeResponse = function (response: IncomingMessage) {
     self._processResponse(response);
   };
 
@@ -73,7 +73,7 @@ RedirectableRequest.prototype.abort = function () {
 };
 
 // Writes buffered data to the current native request
-RedirectableRequest.prototype.write = function (data: any, encoding: string, callback: Function) {
+RedirectableRequest.prototype.write = function (data: string, encoding: string, callback: any) {
   // Writing is not allowed if end has been called
   if (this._ending) {
     throw new WriteAfterEndError();
@@ -110,7 +110,7 @@ RedirectableRequest.prototype.write = function (data: any, encoding: string, cal
 };
 
 // Ends the current native request
-RedirectableRequest.prototype.end = function (data: string, encoding: string, callback: Function) {
+RedirectableRequest.prototype.end = function (data: any, encoding: string, callback: Function) {
   // Shift parameters if necessary
   if (isFunction(data)) {
     callback = data;
@@ -138,7 +138,7 @@ RedirectableRequest.prototype.end = function (data: string, encoding: string, ca
 };
 
 // Sets a header value on the current native request
-RedirectableRequest.prototype.setHeader = function (name: string, value: any) {
+RedirectableRequest.prototype.setHeader = function (name: string, value: string) {
   this._options.headers[name] = value;
   this._currentRequest.setHeader(name, value);
 };
@@ -231,7 +231,7 @@ RedirectableRequest.prototype.setTimeout = function (msecs: number, callback: Fu
   });
 });
 
-RedirectableRequest.prototype._sanitizeOptions = function (options: any) {
+RedirectableRequest.prototype._sanitizeOptions = function (options: RequestOptions) {
   // Ensure headers are always present
   if (!options.headers) {
     options.headers = {};
@@ -329,7 +329,7 @@ RedirectableRequest.prototype._performRequest = function () {
 };
 
 // Processes a response from the current native request
-RedirectableRequest.prototype._processResponse = function (response: Response) {
+RedirectableRequest.prototype._processResponse = function (response: IncomingMessage) {
   // Store the redirected response
   var statusCode = response.statusCode;
   if (this._options.trackRedirects) {
@@ -464,7 +464,7 @@ RedirectableRequest.prototype._processResponse = function (response: Response) {
 };
 
 // Wraps the key/value object of protocols with redirect functionality
-function wrap(protocols: Protocol[]) {
+function wrap(protocols: ProtocolMap) {
   // Default settings
   var exports = {
     maxRedirects: 21,
@@ -479,7 +479,7 @@ function wrap(protocols: Protocol[]) {
     var wrappedProtocol = exports[scheme] = Object.create(nativeProtocol);
 
     // Executes a request, following redirects
-    function request(input: RequestInfo, options: RequestInit, callback: any) {
+    function request(input: string, options: Options, callback: Callback) {
       // Parse parameters
       if (isString(input)) {
         var parsed;
@@ -562,7 +562,7 @@ function urlToOptions(urlObject: URL) {
   return options;
 }
 
-function removeMatchingHeaders(regex: RegExp, headers: IncomingHttpHeaders) {
+function removeMatchingHeaders(regex: RegExp, headers: Headers) {
   var lastValue;
   for (var header in headers) {
     if (regex.test(header)) {
@@ -574,9 +574,9 @@ function removeMatchingHeaders(regex: RegExp, headers: IncomingHttpHeaders) {
     undefined : String(lastValue).trim();
 }
 
-function createErrorType(code: number, message: string, baseClass: ErrorConstructor) {
+function createErrorType(code: string, message: string, baseClass: any) {
   // Create constructor
-  function CustomError(properties: CustomErrorProperties) {
+  function CustomError(properties: any) {
     Error.captureStackTrace(this, this.constructor);
     Object.assign(this, properties || {});
     this.code = code;
@@ -590,7 +590,7 @@ function createErrorType(code: number, message: string, baseClass: ErrorConstruc
   return CustomError;
 }
 
-function abortRequest(request: Request) {
+function abortRequest(request: ClientRequest) {
   for (var event of events) {
     request.removeListener(event, eventHandlers[event]);
   }

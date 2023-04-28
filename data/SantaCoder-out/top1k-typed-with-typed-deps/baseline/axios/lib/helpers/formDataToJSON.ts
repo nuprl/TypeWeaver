@@ -47,7 +47,7 @@ function arrayToObject(arr: any[]) {
  * @returns {Object<string, any> | null} The converted object.
  */
 function formDataToJSON(formData: FormData) {
-  function buildPath(path: string, value: any, target: any, index: number) {
+  function buildPath(path: string[], value: any, target: any, index: number) {
     let name = path[index++];
     const isNumericKey = Number.isFinite(+name);
     const isLast = index >= path.length;

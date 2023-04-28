@@ -72,7 +72,7 @@ function querystring(query: string) {
  * @returns {String}
  * @api public
  */
-function querystringify(obj: any, prefix: string) {
+function querystringify(obj: Object, prefix: string) {
   prefix = prefix || '';
 
   var pairs = []

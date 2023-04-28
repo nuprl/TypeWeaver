@@ -29,18 +29,18 @@ import wrapAsync from './internal/wrapAsync.js'
  * let finished = false
  * async.until(function test(cb: any) {
  *     cb(null, finished)
- * }, function iter(next: any) {
+ * }, function iter(next: Function) {
  *     fetchPage(url, (err, body) => {
  *         if (err) return next(err)
  *         results = results.concat(body.objects)
  *         finished = !!body.next
  *         next(err)
  *     })
- * }, function done (err: Error) {
+ * }, function done (err: any) {
  *     // all pages have been fetched
  * })
  */
-export default function until(test: Function, iteratee: Function, callback: Function) {
+export default function until(test: AsyncFunction<boolean>, iteratee: AsyncFunction<void>, callback: AsyncFunction<void>) {
     const _test = wrapAsync(test)
     return whilst((cb) => _test((err, truth) => cb (err, !truth)), iteratee, callback);
 }

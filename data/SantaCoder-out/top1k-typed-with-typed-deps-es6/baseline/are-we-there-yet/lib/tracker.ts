@@ -2,7 +2,7 @@
 import util from 'util';
 import TrackerBase from './tracker-base.js';
 
-var Tracker = function (name: string, todo: Todo) {
+var Tracker = function (name: string, todo: number) {
   TrackerBase.call(this, name)
   this.workDone = 0
   this.workTodo = todo || 0

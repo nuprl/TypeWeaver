@@ -1,13 +1,13 @@
 var LoaderLoadingError = require("./LoaderLoadingError");
 var url;
 
-module.exports = function loadLoader(loader: string, callback: Function) {
+module.exports = function loadLoader(loader: Loader, callback: LoaderCallback) {
 	if(loader.type === "module") {
 		try {
 			if(url === undefined) url = require("url");
 			var loaderUrl = url.pathToFileURL(loader.path);
 			var modulePromise = eval("import(" + JSON.stringify(loaderUrl.toString()) + ")");
-			modulePromise.then(function(module: Module) {
+			modulePromise.then(function(module: any) {
 				handleResult(loader, module, callback);
 			}, callback);
 			return;
@@ -36,7 +36,7 @@ module.exports = function loadLoader(loader: string, callback: Function) {
 	}
 };
 
-function handleResult(loader: LoaderContext, module: any, callback: Function) {
+function handleResult(loader: Loader, module: any, callback: any) {
 	if(typeof module !== "function" && typeof module !== "object") {
 		return callback(new LoaderLoadingError(
 			"Module '" + loader.path + "' is not a loader (export function or es6 module)"

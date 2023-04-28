@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function repeat(val: any, amount: number) {
+module.exports = function repeat(val: string, amount: number) {
   var res = [];
 
   while (amount--) {

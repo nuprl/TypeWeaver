@@ -9,7 +9,7 @@ var URL = 'https://hg.nginx.org/nginx/raw-file/default/src/http/ngx_http_header_
 var HEADERS = { 'User-Agent': 'nodejs/' + process.version + ' (' + process.platform + ', npm:statuses)' }
 
 https.get(URL, { headers: HEADERS }, function onResponse (res: IncomingMessage) {
-  getBody(res, true, function (err: any, body: any) {
+  getBody(res, true, function (err: any, body: string) {
     if (err) throw err
 
     var block = /ngx_http_status_lines\[] = {([^}]+)};/m.exec(body)[1]

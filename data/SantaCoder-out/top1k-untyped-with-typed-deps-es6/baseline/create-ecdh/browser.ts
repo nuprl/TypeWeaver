@@ -84,7 +84,7 @@ ECDH.prototype.getPrivateKey = function (enc: string) {
   return formatReturnValue(this.keys.getPrivate(), enc)
 }
 
-ECDH.prototype.setPublicKey = function (pub: any, enc: any) {
+ECDH.prototype.setPublicKey = function (pub: Buffer, enc: string) {
   enc = enc || 'utf8'
   if (!Buffer.isBuffer(pub)) {
     pub = new Buffer(pub, enc)
@@ -93,7 +93,7 @@ ECDH.prototype.setPublicKey = function (pub: any, enc: any) {
   return this
 }
 
-ECDH.prototype.setPrivateKey = function (priv: any, enc: any) {
+ECDH.prototype.setPrivateKey = function (priv: Buffer, enc: string) {
   enc = enc || 'utf8'
   if (!Buffer.isBuffer(priv)) {
     priv = new Buffer(priv, enc)
@@ -106,7 +106,7 @@ ECDH.prototype.setPrivateKey = function (priv: any, enc: any) {
   return this
 }
 
-function formatReturnValue (bn: BN, enc: string, len: number) {
+function formatReturnValue (bn: Buffer, enc: string, len: number) {
   if (!Array.isArray(bn)) {
     bn = bn.toArray()
   }

@@ -100,11 +100,11 @@ function leftChi(i: number) {
     return (i<<1)+1;
 }
 
-function parent(i: i32) {
+function parent(i: number) {
     return ((i+1)>>1)-1;
 }
 
-function smaller(x: Task, y: Task) {
+function smaller(x: any, y: any) {
     if (x.priority !== y.priority) {
         return x.priority < y.priority;
     }

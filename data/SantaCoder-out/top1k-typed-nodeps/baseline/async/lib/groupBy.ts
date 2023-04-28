@@ -36,7 +36,7 @@ import groupByLimit from './groupByLimit.js'
  *
  * // asynchronous function that detects file type as none, file, or directory
  * function detectFile(file: string, callback: any) {
- *     fs.stat(file, function(err: Error, stat: fs.Stats) {
+ *     fs.stat(file, function(err: any, stat: fs.Stats) {
  *         if (err) {
  *             return callback(null, 'none');
  *         }
@@ -45,7 +45,7 @@ import groupByLimit from './groupByLimit.js'
  * }
  *
  * //Using callbacks
- * async.groupBy(files, detectFile, function(err: Error, result: any) {
+ * async.groupBy(files, detectFile, function(err: Error, result: Object) {
  *     if(err) {
  *         console.log(err);
  *     } else {
@@ -91,6 +91,6 @@ import groupByLimit from './groupByLimit.js'
  * }
  *
  */
-export default function groupBy (coll: any[], iteratee: any, callback: any) {
+export default function groupBy (coll: any[], iteratee: Function, callback: Function) {
     return groupByLimit(coll, Infinity, iteratee, callback)
 }

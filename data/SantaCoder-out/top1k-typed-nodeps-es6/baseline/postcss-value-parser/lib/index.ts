@@ -2,7 +2,7 @@ import parse from './parse';
 import walk from './walk';
 import stringify from './stringify';
 
-function ValueParser(value: any) {
+function ValueParser(value: string) {
   if (this instanceof ValueParser) {
     this.nodes = parse(value);
     return this;

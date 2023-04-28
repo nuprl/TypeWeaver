@@ -1,6 +1,6 @@
 'use strict';
 
-export default function repeat(ele: HTMLElement, num: number) {
+export default function repeat(ele: any, num: number) {
   var arr = [];
 
   while (num--) {

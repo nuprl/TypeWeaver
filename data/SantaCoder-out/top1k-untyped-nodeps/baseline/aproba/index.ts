@@ -17,12 +17,12 @@ const types = {
   Z: {label: 'null', check: _ => _ == null}
 }
 
-function addSchema (schema: Schema, arity: number) {
+function addSchema (schema: string, arity: Arity) {
   const group = arity[schema.length] = arity[schema.length] || []
   if (group.indexOf(schema) === -1) group.push(schema)
 }
 
-function validate (rawSchemas: any, args: any) {
+function validate (rawSchemas: string, args: any[]) {
   if (arguments.length !== 2) throw wrongNumberOfArgs(['SA'], arguments.length)
   if (!rawSchemas) throw missingRequiredArg(0, 'rawSchemas')
   if (!args) throw missingRequiredArg(1, 'args')
@@ -70,7 +70,7 @@ function unknownType (num: number, type: string) {
   return newException('EUNKNOWNTYPE', 'Unknown type ' + type + ' in argument #' + (num + 1))
 }
 
-function invalidType (num: number, expectedTypes: string[], value: any) {
+function invalidType (num: number, expectedTypes: Object, value: any) {
   let valueType
   Object.keys(types).forEach(typeCode => {
     if (types[typeCode].check(value)) valueType = types[typeCode].label
@@ -83,7 +83,7 @@ function englishList (list: string[]) {
   return list.join(', ').replace(/, ([^,]+)$/, ' or $1')
 }
 
-function wrongNumberOfArgs (expected: number, got: number) {
+function wrongNumberOfArgs (expected: Array<string>, got: number) {
   const english = englishList(expected)
   const args = expected.every(ex => ex.length === 1)
     ? 'argument'
@@ -91,12 +91,12 @@ function wrongNumberOfArgs (expected: number, got: number) {
   return newException('EWRONGARGCOUNT', 'Expected ' + english + ' ' + args + ' but got ' + got)
 }
 
-function moreThanOneError (schema: Schema) {
+function moreThanOneError (schema: string) {
   return newException('ETOOMANYERRORTYPES',
     'Only one error type per argument signature is allowed, more than one found in "' + schema + '"')
 }
 
-function newException (code: number, msg: string) {
+function newException (code: string, msg: string) {
   const err = new Error(msg)
   err.code = code
   /* istanbul ignore else */

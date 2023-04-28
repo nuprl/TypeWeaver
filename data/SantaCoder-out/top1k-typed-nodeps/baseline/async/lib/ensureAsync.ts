@@ -21,7 +21,7 @@ import { isAsync } from './internal/wrapAsync.js'
  * signature as the function passed in.
  * @example
  *
- * function sometimesAsync(arg: any, callback: Function) {
+ * function sometimesAsync(arg: any, callback: any) {
  *     if (cache[arg]) {
  *         return callback(null, cache[arg]); // this would be synchronous!!
  *     } else {
@@ -38,7 +38,7 @@ import { isAsync } from './internal/wrapAsync.js'
  */
 export default function ensureAsync(fn: Function) {
     if (isAsync(fn)) return fn;
-    return function (...args/*: any[], callback*/: any) {
+    return function (...args/*: any[], callback*/: Function) {
         var callback = args.pop()
         var sync = true;
         args.push((...innerArgs) => {

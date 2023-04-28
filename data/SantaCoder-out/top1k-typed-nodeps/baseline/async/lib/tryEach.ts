@@ -28,14 +28,14 @@ import awaitify from './internal/awaitify.js'
  *         // Try getting the data from the first website
  *         callback(err, data);
  *     },
- *     function getDataFromSecondWebsite(callback: any) {
+ *     function getDataFromSecondWebsite(callback: Function) {
  *         // First website failed,
  *         // Try getting the data from the backup website
  *         callback(err, data);
  *     }
  * ],
  * // optional callback
- * function(err: Error, results: any) {
+ * function(err: any, results: any[]) {
  *     Now do something with the data.
  * });
  *

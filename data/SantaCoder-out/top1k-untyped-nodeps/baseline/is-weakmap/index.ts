@@ -17,13 +17,13 @@ var $mapHas = $WeakMap ? $WeakMap.prototype.has : null;
 var $setHas = $WeakSet ? $WeakSet.prototype.has : null;
 if (!exported && !$mapHas) {
 	// eslint-disable-next-line no-unused-vars
-	exported = function isWeakMap(x: unknown) {
+	exported = function isWeakMap(x: any) {
 		// `WeakMap` does not have a `has` method
 		return false;
 	};
 }
 
-module.exports = exported || function isWeakMap(x: unknown) {
+module.exports = exported || function isWeakMap(x: any) {
 	if (!x || typeof x !== 'object') {
 		return false;
 	}

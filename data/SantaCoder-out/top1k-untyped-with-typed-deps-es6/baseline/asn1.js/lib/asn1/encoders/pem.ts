@@ -3,14 +3,14 @@
 import inherits from 'inherits';
 import DEREncoder from './der';
 
-function PEMEncoder(entity: PEM) {
+function PEMEncoder(entity: any) {
   DEREncoder.call(this, entity);
   this.enc = 'pem';
 }
 inherits(PEMEncoder, DEREncoder);
 export default PEMEncoder;
 
-PEMEncoder.prototype.encode = function encode(data: any, options: any) {
+PEMEncoder.prototype.encode = function encode(data: any, options: PEMEncoderOptions) {
   const buf = DEREncoder.prototype.encode.call(this, data);
 
   const p = buf.toString('base64');

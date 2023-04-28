@@ -17,7 +17,7 @@
           Object.defineProperty(obj, key, options)
           return obj
         }
-      : function (obj: any, key: string, options: any) { // < es5
+      : function (obj: Object, key: string, options: any) { // < es5
           obj[key] = options.value
           return obj
         }
@@ -25,7 +25,7 @@
     , makeOptions = function (value: any, options: any) {
         var oo = typeof options == 'object'
           , os = !oo && typeof options == 'string'
-          , op = function (p: any) {
+          , op = function (p: string) {
               return oo
                 ? !!options[p]
                 : os

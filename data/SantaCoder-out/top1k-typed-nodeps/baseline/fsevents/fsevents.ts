@@ -68,7 +68,7 @@ function getEventType(flags: number) {
   if (anyIsTrue(flags)) return "modified";
   return "unknown";
 }
-function getFileChanges(flags: any) {
+function getFileChanges(flags: number) {
   return {
     inode: !!(events.ItemInodeMetaMod & flags),
     finder: !!(events.ItemFinderInfoMod & flags),

@@ -51,7 +51,7 @@ import eachOfSeries from './eachOfSeries.js'
  *             callback(null, 'two');
  *         }, 100);
  *     }
- * ], function(err: Error, results: any) {
+ * ], function(err: any, results: any) {
  *     console.log(results);
  *     // results is equal to ['one','two']
  * });
@@ -70,7 +70,7 @@ import eachOfSeries from './eachOfSeries.js'
  *             callback(null, 2);
  *         }, 100);
  *     }
- * }, function(err: Error, results: any) {
+ * }, function(err: any, results: any) {
  *     console.log(results);
  *     // results is equal to: { one: 1, two: 2 }
  * });
@@ -82,7 +82,7 @@ import eachOfSeries from './eachOfSeries.js'
  *             callback(null, 'one');
  *         }, 200);
  *     },
- *     function(callback: Function) {
+ *     function(callback: any) {
  *         setTimeout(function() {
  *             callback(null, 'two');
  *         }, 100);
@@ -96,13 +96,13 @@ import eachOfSeries from './eachOfSeries.js'
  *
  * // an example using an object instead of an array
  * async.series({
- *     one: function(callback: Function) {
+ *     one: function(callback: any) {
  *         setTimeout(function() {
  *             // do some async task
  *             callback(null, 1);
  *         }, 200);
  *     },
- *     two: function(callback: Function) {
+ *     two: function(callback: any) {
  *         setTimeout(function() {
  *             // then do another async task
  *             callback(null, 2);

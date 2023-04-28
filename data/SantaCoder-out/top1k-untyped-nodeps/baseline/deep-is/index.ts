@@ -52,7 +52,7 @@ function isNumberNaN(value: any) {
   return typeof value == 'number' && value !== value;
 }
 
-function areZerosEqual(zeroA: number, zeroB: number) {
+function areZerosEqual(zeroA: any, zeroB: any) {
   // (1 / +0|0) -> Infinity, but (1 / -0) -> -Infinity and (Infinity !== -Infinity)
   return (1 / zeroA) === (1 / zeroB);
 }

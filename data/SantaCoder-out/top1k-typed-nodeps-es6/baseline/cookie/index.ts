@@ -108,7 +108,7 @@ function parse(str: string, options: Options) {
  * @public
  */
 
-function serialize(name: string, val: any, options: any) {
+function serialize(name: string, val: any, options: Options) {
   var opt = options || {};
   var enc = opt.encode || encode;
 
@@ -237,7 +237,7 @@ function decode (str: string) {
  * @returns {string}
  */
 
-function encode (val: string) {
+function encode (val: any) {
   return encodeURIComponent(val)
 }
 

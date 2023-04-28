@@ -4,7 +4,7 @@ import { hasNoChildren } from './utils.js';
 const { hasOwnProperty } = Object.prototype;
 const skipUsageFilteringAtrule = new Set(['keyframes']);
 
-function cleanUnused(selectorList: string[], usageData: UsageData) {
+function cleanUnused(selectorList: SelectorList, usageData: UsageData) {
     selectorList.children.forEach((selector, item, list) => {
         let shouldRemove = false;
 
@@ -76,7 +76,7 @@ function cleanUnused(selectorList: string[], usageData: UsageData) {
     return selectorList.children.isEmpty;
 }
 
-export default function cleanRule(node: Node, item: Node, list: Node, options: Options) {
+export default function cleanRule(node: Node, item: Node, list: List, options: CleanOptions) {
     if (hasNoChildren(node.prelude) || hasNoChildren(node.block)) {
         list.remove(item);
         return;

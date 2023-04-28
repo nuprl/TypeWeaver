@@ -169,7 +169,7 @@ class AxiosTransformStream extends stream.Transform{
       } : _callback);
     };
 
-    transformChunk(chunk, function transformNextChunk(err: Error, _chunk: string) {
+    transformChunk(chunk, function transformNextChunk(err: Error, _chunk: Uint8Array) {
       if (err) {
         return callback(err);
       }

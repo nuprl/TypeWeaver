@@ -7,7 +7,7 @@ module.exports = function (obj: any, opts: any) {
     var replacer = opts.replacer || function(key: string, value: any) { return value; };
 
     var cmp = opts.cmp && (function (f: any) {
-        return function (node: Node) {
+        return function (node: any) {
             return function (a: any, b: any) {
                 var aobj = { key: a, value: node[a] };
                 var bobj = { key: b, value: node[b] };
@@ -17,7 +17,7 @@ module.exports = function (obj: any, opts: any) {
     })(opts.cmp);
 
     var seen = [];
-    return (function stringify (parent: Node, key: string, node: Node, level: number) {
+    return (function stringify (parent: any, key: string, node: any, level: number) {
         var indent = space ? ('\n' + new Array(level + 1).join(space)) : '';
         var colonSeparator = space ? ': ' : ':';
 

@@ -14,7 +14,7 @@ RingBuffer.prototype.clear = function() {
   this.length      = 0;
 };
 
-RingBuffer.prototype.push = function(value: any) {
+RingBuffer.prototype.push = function(value: T) {
   var expandBuffer = false,
       expandRing   = false;
 

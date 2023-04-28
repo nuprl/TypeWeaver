@@ -7,7 +7,7 @@
 
 'use strict';
 
-module.exports = function unique(arr: any[]) {
+module.exports = function unique(arr: Array<any>) {
   if (!Array.isArray(arr)) {
     throw new TypeError('array-unique expects an array.');
   }

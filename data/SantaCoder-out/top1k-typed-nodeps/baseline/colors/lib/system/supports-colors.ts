@@ -139,7 +139,7 @@ function supportsColor(stream: NodeJS.WriteStream) {
   return min;
 }
 
-function getSupportLevel(stream: ReadableStream) {
+function getSupportLevel(stream: NodeJS.WriteStream) {
   var level = supportsColor(stream);
   return translateLevel(level);
 }

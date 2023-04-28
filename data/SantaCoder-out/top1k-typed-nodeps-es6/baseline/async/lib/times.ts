@@ -26,7 +26,7 @@ import timesLimit from './timesLimit.js'
  *
  * // generate 5 users
  * async.times(5, function(n: number, next: Function) {
- *     createUser(n, function(err: Error, user: User) {
+ *     createUser(n, function(err: Error, user: any) {
  *         next(err, user);
  *     });
  * }, function(err: Error, users: User[]) {

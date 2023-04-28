@@ -6,7 +6,7 @@ function shift (stream: Readable) {
   return (rs.objectMode || typeof stream._duplexState === 'number') ? stream.read() : stream.read(getStateLength(rs))
 }
 
-function getStateLength (state: State) {
+function getStateLength (state: ReadableState) {
   if (state.buffer.length) {
     // Since node 6.3.0 state.buffer is a BufferList not an array
     if (state.buffer.head) {

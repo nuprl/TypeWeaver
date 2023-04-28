@@ -21,7 +21,7 @@ import last from './last.js'
  * unionBy([2.1], [1.2, 2.3], Math.floor)
  * // => [2.1, 1.2]
  */
-function unionBy(...arrays: any[]) {
+function unionBy(...arrays: Array<any>[]) {
   let iteratee = last(arrays)
   if (isArrayLikeObject(iteratee)) {
     iteratee = undefined

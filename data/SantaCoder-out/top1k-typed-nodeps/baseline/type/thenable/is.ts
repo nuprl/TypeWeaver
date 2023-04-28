@@ -2,7 +2,7 @@
 
 var isObject = require("../object/is");
 
-module.exports = function (value: any) {
+module.exports = function (value: unknown) {
 	if (!isObject(value)) return false;
 	try { return typeof value.then === "function"; }
 	catch (error) { return false; }

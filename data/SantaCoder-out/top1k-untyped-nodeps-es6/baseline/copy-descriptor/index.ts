@@ -47,7 +47,7 @@
  * @api public
  */
 
-export default function copyDescriptor(receiver: any, provider: any, from: string, to: string) {
+export default function copyDescriptor(receiver: any, provider: any, from: any, to: any) {
   if (!isObject(provider) && typeof provider !== 'function') {
     to = from;
     from = provider;

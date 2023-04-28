@@ -11,7 +11,7 @@
     var doc = global.document;
     var registerImmediate;
 
-    function setImmediate(callback: any) {
+    function setImmediate(callback: Function) {
       // Callback can either be a function or a string
       if (typeof callback !== "function") {
         callback = new Function("" + callback);
@@ -76,7 +76,7 @@
     }
 
     function installNextTickImplementation() {
-        registerImmediate = function(handle: number) {
+        registerImmediate = function(handle: any) {
             process.nextTick(function () { runIfPresent(handle); });
         };
     }
@@ -102,7 +102,7 @@
         // * http://www.whatwg.org/specs/web-apps/current-work/multipage/comms.html#crossDocumentMessages
 
         var messagePrefix = "setImmediate$" + Math.random() + "$";
-        var onGlobalMessage = function(event: Event) {
+        var onGlobalMessage = function(event: MessageEvent) {
             if (event.source === global &&
                 typeof event.data === "string" &&
                 event.data.indexOf(messagePrefix) === 0) {
@@ -150,7 +150,7 @@
     }
 
     function installSetTimeoutImplementation() {
-        registerImmediate = function(handle: number) {
+        registerImmediate = function(handle: any) {
             setTimeout(runIfPresent, 0, handle);
         };
     }

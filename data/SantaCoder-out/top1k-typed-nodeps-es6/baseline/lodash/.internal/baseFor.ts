@@ -9,7 +9,7 @@
  * @param {Function} keysFunc The function to get the keys of `object`.
  * @returns {Object} Returns `object`.
  */
-function baseFor(object: any, iteratee: Function, keysFunc: Function) {
+function baseFor(object: any, iteratee: any, keysFunc: any) {
   const iterable = Object(object)
   const props = keysFunc(object)
   let { length } = props

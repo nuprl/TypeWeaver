@@ -11,7 +11,7 @@
     var doc = global.document;
     var registerImmediate;
 
-    function setImmediate(callback: any) {
+    function setImmediate(callback: Function) {
       // Callback can either be a function or a string
       if (typeof callback !== "function") {
         callback = new Function("" + callback);
@@ -54,7 +54,7 @@
         }
     }
 
-    function runIfPresent(handle: number) {
+    function runIfPresent(handle: any) {
         // From the spec: "Wait until any invocations of this algorithm started before this one have completed."
         // So if we're currently running a task, we'll need to delay this invocation.
         if (currentlyRunningATask) {
@@ -76,7 +76,7 @@
     }
 
     function installNextTickImplementation() {
-        registerImmediate = function(handle: number) {
+        registerImmediate = function(handle: any) {
             process.nextTick(function () { runIfPresent(handle); });
         };
     }

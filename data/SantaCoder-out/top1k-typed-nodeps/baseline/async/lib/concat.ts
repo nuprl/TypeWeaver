@@ -32,7 +32,7 @@ import awaitify from './internal/awaitify.js'
  * let withMissingDirectoryList = ['dir1','dir2','dir3', 'dir4'];
  *
  * // Using callbacks
- * async.concat(directoryList, fs.readdir, function(err: Error, results: any) {
+ * async.concat(directoryList, fs.readdir, function(err: Error, results: string[]) {
  *    if (err) {
  *        console.log(err);
  *    } else {
@@ -42,7 +42,7 @@ import awaitify from './internal/awaitify.js'
  * });
  *
  * // Error Handling
- * async.concat(withMissingDirectoryList, fs.readdir, function(err: Error, results: any) {
+ * async.concat(withMissingDirectoryList, fs.readdir, function(err: Error, results: string[]) {
  *    if (err) {
  *        console.log(err);
  *        // [ Error: ENOENT: no such file or directory ]
@@ -95,7 +95,7 @@ import awaitify from './internal/awaitify.js'
  * }
  *
  */
-function concat(coll: any[], iteratee: Function, callback: Function) {
+function concat(coll: any[], iteratee: any, callback: any) {
     return concatLimit(coll, Infinity, iteratee, callback)
 }
 export default awaitify(concat, 3);

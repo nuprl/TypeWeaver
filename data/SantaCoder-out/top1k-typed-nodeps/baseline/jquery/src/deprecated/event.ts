@@ -15,7 +15,7 @@ jQuery.fn.extend( {
 	delegate: function( selector: string, types: string, data: any, fn : any) {
 		return this.on( types, selector, data, fn );
 	},
-	undelegate: function( selector: string, types: string, fn : Function) {
+	undelegate: function( selector: string, types: string, fn : EventListenerOrEventListenerObject) {
 
 		// ( namespace ) or ( selector, types [, fn] )
 		return arguments.length === 1 ?
@@ -23,7 +23,7 @@ jQuery.fn.extend( {
 			this.off( types, selector || "**", fn );
 	},
 
-	hover: function( fnOver: any, fnOut : any) {
+	hover: function( fnOver: Function, fnOut : Function) {
 		return this.mouseenter( fnOver ).mouseleave( fnOut || fnOver );
 	}
 } );
@@ -35,7 +35,7 @@ jQuery.each(
 	function( _i: number, name : string) {
 
 		// Handle event binding
-		jQuery.fn[ name ] = function( data: any, fn : Function) {
+		jQuery.fn[ name ] = function( data: any, fn : any) {
 			return arguments.length > 0 ?
 				this.on( name, null, data, fn ) :
 				this.trigger( name );

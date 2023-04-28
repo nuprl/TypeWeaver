@@ -3,7 +3,7 @@
 var parsers = require('../parsers');
 
 module.exports.definition = {
-  set: function(v: any) {
+  set: function(v: string) {
     var valueType = parsers.valueType(v);
     if (valueType === parsers.TYPES.ANGLE) {
       return this._setProperty('azimuth', parsers.parseAngle(v));

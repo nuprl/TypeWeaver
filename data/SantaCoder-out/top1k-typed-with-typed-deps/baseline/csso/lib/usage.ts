@@ -1,6 +1,6 @@
 const { hasOwnProperty } = Object.prototype;
 
-function buildMap(list: Array<string>, caseInsensitive: boolean) {
+function buildMap(list: string[], caseInsensitive: boolean) {
     const map = Object.create(null);
 
     if (!Array.isArray(list)) {
@@ -40,7 +40,7 @@ function buildList(data: any) {
     };
 }
 
-export function buildIndex(data: any) {
+export function buildIndex(data: IndexData) {
     let scopes = false;
 
     if (data.scopes && Array.isArray(data.scopes)) {

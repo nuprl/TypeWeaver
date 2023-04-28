@@ -1,4 +1,4 @@
-module.exports = function(grunt: grunt.ITask) {
+module.exports = function(grunt: any) {
 
 	grunt.initConfig({
 		'template': {

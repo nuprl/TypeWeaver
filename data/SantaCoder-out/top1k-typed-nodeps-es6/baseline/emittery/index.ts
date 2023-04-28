@@ -16,13 +16,13 @@ function assertEventName(eventName: string) {
 	}
 }
 
-function assertListener(listener: Listener) {
+function assertListener(listener: Function) {
 	if (typeof listener !== 'function') {
 		throw new TypeError('listener must be a function');
 	}
 }
 
-function getListeners(instance: EventEmitter, eventName: string) {
+function getListeners(instance: any, eventName: string) {
 	const events = eventsMap.get(instance);
 	if (!events.has(eventName)) {
 		return;
@@ -57,7 +57,7 @@ function enqueueProducers(instance: any, eventName: string, eventData: any) {
 	}
 }
 
-function iterator(instance: any, eventNames: string) {
+function iterator(instance: AsyncIterator<T>, eventNames: string) {
 	eventNames = Array.isArray(eventNames) ? eventNames : [eventNames];
 
 	let isFinished = false;
@@ -162,7 +162,7 @@ function defaultMethodNamesOrAssert(methodNames: string[]) {
 
 const isMetaEvent = eventName => eventName === listenerAdded || eventName === listenerRemoved;
 
-function emitMetaEvent(emitter: EventEmitter, eventName: string, eventData: any) {
+function emitMetaEvent(emitter: Emittery, eventName: string, eventData: any) {
 	if (isMetaEvent(eventName)) {
 		try {
 			canEmitMetaEvents = true;

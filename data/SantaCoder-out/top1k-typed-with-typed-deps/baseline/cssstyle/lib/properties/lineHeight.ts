@@ -3,7 +3,7 @@
 var TYPES = require('../parsers').TYPES;
 var valueType = require('../parsers').valueType;
 
-module.exports.isValid = function isValid(v: any) {
+module.exports.isValid = function isValid(v: string) {
   var type = valueType(v);
   return (
     (type === TYPES.KEYWORD && v.toLowerCase() === 'normal') ||

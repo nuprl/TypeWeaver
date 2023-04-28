@@ -1,6 +1,6 @@
 var retry = require('../lib/retry');
 
-function attemptAsyncOperation(someInput: any, cb: any) {
+function attemptAsyncOperation(someInput: string, cb: any) {
   var opts = {
     retries: 2,
     factor: 2,
@@ -11,7 +11,7 @@ function attemptAsyncOperation(someInput: any, cb: any) {
   var operation = retry.operation(opts);
 
   operation.attempt(function(currentAttempt: number) {
-    failingAsyncOperation(someInput, function(err: Error, result: any) {
+    failingAsyncOperation(someInput, function(err: any, result: any) {
 
       if (err && err.message === 'A fatal error') {
         operation.stop();
@@ -27,7 +27,7 @@ function attemptAsyncOperation(someInput: any, cb: any) {
   });
 }
 
-attemptAsyncOperation('test input', function(err: any, errors: any, result: any) {
+attemptAsyncOperation('test input', function(err: Error, errors: any, result: any) {
   console.warn('err:');
   console.log(err);
 

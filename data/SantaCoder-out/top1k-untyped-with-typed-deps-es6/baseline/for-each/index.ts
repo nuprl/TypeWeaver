@@ -17,7 +17,7 @@ var forEachArray = function forEachArray(array: any[], iterator: Function, recei
     }
 };
 
-var forEachString = function forEachString(string: string, iterator: any, receiver: any) {
+var forEachString = function forEachString(string: string, iterator: Function, receiver: any) {
     for (var i = 0, len = string.length; i < len; i++) {
         // no such thing as a sparse string.
         if (receiver == null) {
@@ -28,7 +28,7 @@ var forEachString = function forEachString(string: string, iterator: any, receiv
     }
 };
 
-var forEachObject = function forEachObject(object: any, iterator: Function, receiver: any) {
+var forEachObject = function forEachObject(object: Object, iterator: Function, receiver: any) {
     for (var k in object) {
         if (hasOwnProperty.call(object, k)) {
             if (receiver == null) {

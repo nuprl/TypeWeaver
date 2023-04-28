@@ -1,3 +1,3 @@
-export default function _withoutIndex(iteratee: any) {
+export default function _withoutIndex(iteratee: Iteratee<any>) {
     return (value, index, callback) => iteratee(value, callback);
 }

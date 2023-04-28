@@ -32,7 +32,7 @@ module.exports = destroy
  * @public
  */
 
-function destroy (stream: ReadableStream, suppress: boolean) {
+function destroy (stream: any, suppress: boolean) {
   if (isFsReadStream(stream)) {
     destroyReadStream(stream)
   } else if (isZlibStream(stream)) {
@@ -56,7 +56,7 @@ function destroy (stream: ReadableStream, suppress: boolean) {
  * @private
  */
 
-function destroyReadStream (stream: Readable) {
+function destroyReadStream (stream: any) {
   stream.destroy()
 
   if (typeof stream.close === 'function') {
@@ -75,7 +75,7 @@ function destroyReadStream (stream: Readable) {
  * @private
  */
 
-function closeZlibStream (stream: Zlib.Gunzip) {
+function closeZlibStream (stream: Zlib) {
   if (stream._hadError === true) {
     var prop = stream._binding === null
       ? '_binding'

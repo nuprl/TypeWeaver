@@ -104,7 +104,7 @@
     }
 
     // A generic CIDR (Classless Inter-Domain Routing) RFC1518 range matcher.
-    function matchCIDR (first: string, second: string, partSize: number, cidrBits: number) {
+    function matchCIDR (first: number[], second: number[], partSize: number, cidrBits: number) {
         if (first.length !== second.length) {
             throw new Error('ipaddr: cannot match CIDR for objects with different lengths');
         }
@@ -216,7 +216,7 @@
         };
 
         // Checks if this address matches other one within given CIDR range.
-        IPv4.prototype.match = function (other: string, cidrRange: string) {
+        IPv4.prototype.match = function (other: IPv4, cidrRange: number) {
             let ref;
             if (cidrRange === undefined) {
                 ref = other;
@@ -475,7 +475,7 @@
     };
 
     // A utility function to return subnet mask in IPv4 format given the prefix length
-    ipaddr.IPv4.subnetMaskFromPrefixLength = function (prefix: string) {
+    ipaddr.IPv4.subnetMaskFromPrefixLength = function (prefix: number) {
         prefix = parseInt(prefix);
         if (prefix < 0 || prefix > 32) {
             throw new Error('ipaddr: invalid IPv4 prefix length');
@@ -502,7 +502,7 @@
         // Constructs an IPv6 address from an array of eight 16 - bit parts
         // or sixteen 8 - bit parts in network order(MSB first).
         // Throws an error if the input is invalid.
-        function IPv6 (parts: string[], zoneId: number) {
+        function IPv6 (parts: number[], zoneId: string) {
             let i, part;
 
             if (parts.length === 16) {
@@ -565,7 +565,7 @@
         };
 
         // Checks if this address matches other one within given CIDR range.
-        IPv6.prototype.match = function (other: any, cidrRange: string) {
+        IPv6.prototype.match = function (other: IPv6, cidrRange: number) {
             let ref;
 
             if (cidrRange === undefined) {
@@ -881,7 +881,7 @@
     };
 
     // A utility function to return subnet mask in IPv6 format given the prefix length
-    ipaddr.IPv6.subnetMaskFromPrefixLength = function (prefix: string) {
+    ipaddr.IPv6.subnetMaskFromPrefixLength = function (prefix: number) {
         prefix = parseInt(prefix);
         if (prefix < 0 || prefix > 128) {
             throw new Error('ipaddr: invalid IPv6 prefix length');
@@ -904,7 +904,7 @@
     };
 
     // Try to parse an array in network order (MSB first) for IPv4 and IPv6
-    ipaddr.fromByteArray = function (bytes: Uint8Array) {
+    ipaddr.fromByteArray = function (bytes: Buffer) {
         const length = bytes.length;
 
         if (length === 4) {
@@ -962,7 +962,7 @@
     // An utility function to ease named range matching. See examples below.
     // rangeList can contain both IPv4 and IPv6 subnet entries and will not throw errors
     // on matching IPv4 addresses to IPv6 ranges or vice versa.
-    ipaddr.subnetMatch = function (address: string, rangeList: string[], defaultName: string) {
+    ipaddr.subnetMatch = function (address: string, rangeList: any, defaultName: string) {
         let i, rangeName, rangeSubnets, subnet;
 
         if (defaultName === undefined || defaultName === null) {

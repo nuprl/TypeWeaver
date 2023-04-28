@@ -1,7 +1,7 @@
-function Caseless (dict: any) {
+function Caseless (dict: Object) {
   this.dict = dict || {}
 }
-Caseless.prototype.set = function (name: string, value: any, clobber: boolean) {
+Caseless.prototype.set = function (name: string, value: string, clobber: boolean) {
   if (typeof name === 'object') {
     for (var i in name) {
       this.set(i, name[i], value)
@@ -55,15 +55,15 @@ Caseless.prototype.del = function (name: string) {
   return changed === 0 ? true : deleted
 }
 
-export default function (dict: any) {return new Caseless(dict)};
+export default function (dict: Object) {return new Caseless(dict)};
 
-export const httpify = function (resp: any, headers: any) {
+export const httpify = function (resp: http.ServerResponse, headers: http.IncomingHttpHeaders) {
   var c = new Caseless(headers)
-  resp.setHeader = function (key: string, value: any, clobber: boolean) {
+  resp.setHeader = function (key: string, value: string, clobber: boolean) {
     if (typeof value === 'undefined') return
     return c.set(key, value, clobber)
   }
-  resp.hasHeader = function (key: K) {
+  resp.hasHeader = function (key: string) {
     return c.has(key)
   }
   resp.getHeader = function (key: string) {

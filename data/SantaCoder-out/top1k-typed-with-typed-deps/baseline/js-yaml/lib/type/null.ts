@@ -2,7 +2,7 @@
 
 var Type = require('../type');
 
-function resolveYamlNull(data: unknown) {
+function resolveYamlNull(data: any) {
   if (data === null) return true;
 
   var max = data.length;

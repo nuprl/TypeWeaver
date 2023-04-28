@@ -298,7 +298,7 @@ function isValidName(name: string) {
   );
 }
 
-function isValidValue(name: string, value: any) {
+function isValidValue(name: string, value: string) {
   if (isGeneralCategoryName(name)) {
     return isGeneralCategoryValue(value);
   }

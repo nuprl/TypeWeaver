@@ -60,7 +60,7 @@ function trim(str: string) {
 var rules = [
   ['#', 'hash'],                        // Extract from the back.
   ['?', 'query'],                       // Extract from the back.
-  function sanitize(address: string, url: string) {     // Sanitize what is left of the address
+  function sanitize(address: string, url: URL) {     // Sanitize what is left of the address
     return isSpecial(url.protocol) ? address.replace(/\\/g, '/') : address;
   },
   ['/', 'pathname'],                    // Extract from the back.
@@ -92,7 +92,7 @@ var ignore = { hash: 1, query: 1 };
  * @returns {Object} lolcation object.
  * @public
  */
-function lolcation(loc: string) {
+function lolcation(loc: any) {
   var globalVar;
 
   if (typeof window !== 'undefined') globalVar = window;
@@ -261,7 +261,7 @@ function resolve(relative: string, base: string) {
  * @param {Boolean|Function} [parser] Parser for the query string.
  * @private
  */
-function Url(address: string, location: Location, parser: Parser) {
+function Url(address: string, location: Location, parser: UrlParser) {
   if (!(this instanceof Url)) {
     return new Url(address, location, parser);
   }
@@ -554,7 +554,7 @@ function set(part: string, value: any, fn: Function) {
  * @returns {String} Compiled version of the URL.
  * @public
  */
-function toString(stringify: boolean) {
+function toString(stringify: Function) {
   if (!stringify || 'function' !== typeof stringify) stringify = qs.stringify;
 
   var query

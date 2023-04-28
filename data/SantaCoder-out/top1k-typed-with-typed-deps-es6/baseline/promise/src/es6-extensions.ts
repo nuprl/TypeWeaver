@@ -15,7 +15,7 @@ var UNDEFINED = valuePromise(undefined);
 var ZERO = valuePromise(0);
 var EMPTYSTRING = valuePromise('');
 
-function valuePromise(value: T) {
+function valuePromise(value: any) {
   var p = new Promise(Promise._noop);
   p._state = 1;
   p._value = value;
@@ -98,7 +98,7 @@ Promise.all = function (arr: any[]) {
   });
 };
 
-function onSettledFulfill(value: T) {
+function onSettledFulfill(value: any) {
   return { status: 'fulfilled', value: value };
 }
 function onSettledReject(reason: any) {
@@ -117,7 +117,7 @@ function mapAllSettled(item: any) {
 
   return onSettledFulfill(item);
 }
-Promise.allSettled = function (iterable: Iterable<T>) {
+Promise.allSettled = function (iterable: Iterable<any>) {
   return Promise.all(iterableToArray(iterable).map(mapAllSettled));
 };
 
@@ -127,9 +127,9 @@ Promise.reject = function (value: any) {
   });
 };
 
-Promise.race = function (values: any[]) {
-  return new Promise(function (resolve: any, reject: any) {
-    iterableToArray(values).forEach(function(value: any){
+Promise.race = function (values: Iterable<T>) {
+  return new Promise(function (resolve: Function, reject: Function) {
+    iterableToArray(values).forEach(function(value: T){
       Promise.resolve(value).then(resolve, reject);
     });
   });

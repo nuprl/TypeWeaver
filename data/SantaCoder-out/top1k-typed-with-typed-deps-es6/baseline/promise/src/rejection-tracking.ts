@@ -17,7 +17,7 @@ function disable() {
 }
 
 exports.enable = enable;
-function enable(options: Options) {
+function enable(options: any) {
   options = options || {};
   if (enabled) disable();
   enabled = true;
@@ -37,7 +37,7 @@ function enable(options: Options) {
       delete rejections[promise._rejectionId];
     }
   };
-  Promise._onReject = function (promise: any, err: any) {
+  Promise._onReject = function (promise: Promise<any>, err: any) {
     if (promise._deferredState === 0) { // not yet handled
       promise._rejectionId = id++;
       rejections[promise._rejectionId] = {
@@ -57,7 +57,7 @@ function enable(options: Options) {
       };
     }
   };
-  function onUnhandled(id: string) {
+  function onUnhandled(id: number) {
     if (
       options.allRejections ||
       matchWhitelist(
@@ -98,7 +98,7 @@ function enable(options: Options) {
   }
 }
 
-function logError(id: string, error: Error) {
+function logError(id: number, error: Error) {
   console.warn('Possible Unhandled Promise Rejection (id: ' + id + '):');
   var errStr = (error && (error.stack || error)) + '';
   errStr.split('\n').forEach(function (line: string) {
@@ -106,7 +106,7 @@ function logError(id: string, error: Error) {
   });
 }
 
-function matchWhitelist(error: Error, list: string[]) {
+function matchWhitelist(error: Error, list: Array<any>) {
   return list.some(function (cls: any) {
     return error instanceof cls;
   });

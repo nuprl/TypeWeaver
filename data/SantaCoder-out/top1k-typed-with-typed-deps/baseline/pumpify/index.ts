@@ -7,7 +7,7 @@ var toArray = function(args: any[]) {
   return Array.isArray(args[0]) ? args[0] : Array.prototype.slice.call(args)
 }
 
-var define = function(opts: any) {
+var define = function(opts: DuplexifyOpts) {
   var Pumpify = function() {
     var streams = toArray(arguments)
     if (!(this instanceof Pumpify)) return new Pumpify(streams)

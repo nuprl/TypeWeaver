@@ -23,7 +23,7 @@ const deprecatedWarnings = {};
  *
  * @returns {function}
  */
-validators.transitional = function transitional(validator: Validator, version: string, message: string) {
+validators.transitional = function transitional(validator: boolean, version: string, message: string) {
   function formatMessage(opt: string, desc: string) {
     return '[Axios v' + VERSION + '] Transitional option \'' + opt + '\'' + desc + (message ? '. ' + message : '');
   }

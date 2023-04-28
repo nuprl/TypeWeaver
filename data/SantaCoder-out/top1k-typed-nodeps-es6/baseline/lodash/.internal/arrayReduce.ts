@@ -9,7 +9,7 @@
  *  the initial value.
  * @returns {*} Returns the accumulated value.
  */
-function arrayReduce(array: any[], iteratee: any, accumulator: any, initAccum: any) {
+function arrayReduce(array: any[], iteratee: Function, accumulator: any, initAccum: boolean) {
   let index = -1
   const length = array == null ? 0 : array.length
 

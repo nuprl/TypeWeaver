@@ -63,7 +63,7 @@ export default function benchmark(uuid: string, Benchmark: any) {
       .add('uuid.v5()', function () {
         uuid.v5('hello.example.com', uuid.v5.DNS);
       })
-      .on('cycle', function (event: Event) {
+      .on('cycle', function (event: any) {
         console.log(event.target.toString());
       })
       .on('complete', function () {

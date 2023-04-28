@@ -65,7 +65,7 @@ module.exports = {
  * @param {Object} b - Right Char or ClassRange node
  * @returns {number}
  */
-function sortCharClass(a: string, b: string) {
+function sortCharClass(a: CharClass, b: CharClass) {
   const aValue = getSortValue(a);
   const bValue = getSortValue(b);
 
@@ -92,7 +92,7 @@ function sortCharClass(a: string, b: string) {
  * @param {Object} expression - Char or ClassRange node
  * @returns {number}
  */
-function getSortValue(expression: string) {
+function getSortValue(expression: CharExpression) {
   if (expression.type === 'Char') {
     if (expression.value === '-') {
       return Infinity;
@@ -115,7 +115,7 @@ function getSortValue(expression: string) {
  * @param {?string} value
  * @returns {boolean}
  */
-function isMeta(expression: any, value = null: any) {
+function isMeta(expression: Object, value = null: string) {
   return (
     expression.type === 'Char' &&
     expression.kind === 'meta' &&
@@ -127,7 +127,7 @@ function isMeta(expression: any, value = null: any) {
  * @param {Object} expression - Char or ClassRange node
  * @returns {boolean}
  */
-function isControl(expression: Expression) {
+function isControl(expression: Node) {
   return expression.type === 'Char' && expression.kind === 'control';
 }
 
@@ -137,7 +137,7 @@ function isControl(expression: Expression) {
  * @param {boolean} hasIUFlags
  * @returns {boolean}
  */
-function fitsInMetas(expression: string, metas: string[], hasIUFlags: boolean) {
+function fitsInMetas(expression: Object, metas: string[], hasIUFlags: boolean) {
   for (let i = 0; i < metas.length; i++) {
     if (fitsInMeta(expression, metas[i], hasIUFlags)) {
       return true;
@@ -152,7 +152,7 @@ function fitsInMetas(expression: string, metas: string[], hasIUFlags: boolean) {
  * @param {boolean} hasIUFlags
  * @returns {boolean}
  */
-function fitsInMeta(expression: string, meta: Meta, hasIUFlags: boolean) {
+function fitsInMeta(expression: Expression, meta: string, hasIUFlags: boolean) {
   if (expression.type === 'ClassRange') {
     return (
       fitsInMeta(expression.from, meta, hasIUFlags) &&
@@ -213,7 +213,7 @@ function fitsInMeta(expression: string, meta: Meta, hasIUFlags: boolean) {
  * @param {Object} expression - Char node with codePoint
  * @returns {boolean}
  */
-function fitsInMetaS(expression: string) {
+function fitsInMetaS(expression: Expression) {
   return (
     expression.codePoint === 0x0009 || // \t
     expression.codePoint === 0x000a || // \n
@@ -237,7 +237,7 @@ function fitsInMetaS(expression: string) {
  * @param {Object} expression - Char node with codePoint
  * @returns {boolean}
  */
-function fitsInMetaD(expression: string) {
+function fitsInMetaD(expression: Object) {
   return expression.codePoint >= 0x30 && expression.codePoint <= 0x39; // 0-9
 }
 
@@ -246,7 +246,7 @@ function fitsInMetaD(expression: string) {
  * @param {boolean} hasIUFlags
  * @returns {boolean}
  */
-function fitsInMetaW(expression: string, hasIUFlags: boolean) {
+function fitsInMetaW(expression: Expression, hasIUFlags: boolean) {
   return (
     fitsInMetaD(expression) ||
     (expression.codePoint >= 0x41 && expression.codePoint <= 0x5a) || // A-Z
@@ -262,7 +262,7 @@ function fitsInMetaW(expression: string, hasIUFlags: boolean) {
  * @param {Object} classRange - Char or ClassRange node
  * @returns {boolean}
  */
-function combinesWithPrecedingClassRange(expression: ts.Expression, classRange: ts.TextRange) {
+function combinesWithPrecedingClassRange(expression: string, classRange: ClassRange) {
   if (classRange && classRange.type === 'ClassRange') {
     if (fitsInClassRange(expression, classRange)) {
       // [a-gc] -> [a-g]
@@ -301,7 +301,7 @@ function combinesWithPrecedingClassRange(expression: ts.Expression, classRange: 
  * @param {Object} classRange - Char or ClassRange node
  * @returns {boolean}
  */
-function combinesWithFollowingClassRange(expression: Expression, classRange: PsiElementRange) {
+function combinesWithFollowingClassRange(expression: string, classRange: ClassRange) {
   if (classRange && classRange.type === 'ClassRange') {
     // Considering the elements were ordered alphabetically,
     // there is only one case to handle
@@ -324,7 +324,7 @@ function combinesWithFollowingClassRange(expression: Expression, classRange: Psi
  * @param {Object} classRange - ClassRange node
  * @returns {boolean}
  */
-function fitsInClassRange(expression: string, classRange: ClassRange) {
+function fitsInClassRange(expression: Expression, classRange: ClassRange) {
   if (expression.type === 'Char' && isNaN(expression.codePoint)) {
     return false;
   }

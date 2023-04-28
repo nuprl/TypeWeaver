@@ -19,7 +19,7 @@ function tryReadingCustomSymbolFromUtilInspect(options: Options) {
   return util ? util.inspect.custom : null;
 }
 
-exports.getUtilInspect = function getUtilInspect(fallback: any, options = {}: InspectOptions) {
+exports.getUtilInspect = function getUtilInspect(fallback: Function, options = {}: Object) {
   const _requireUtil = options.requireUtil || requireUtil;
   const util = _requireUtil();
   return function inspect(value: any, showHidden: boolean, depth: number) {

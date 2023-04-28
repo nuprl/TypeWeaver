@@ -15,7 +15,7 @@ var UNDEFINED = valuePromise(undefined);
 var ZERO = valuePromise(0);
 var EMPTYSTRING = valuePromise('');
 
-function valuePromise(value: T) {
+function valuePromise(value: any) {
   var p = new Promise(Promise._noop);
   p._state = 1;
   p._value = value;
@@ -46,7 +46,7 @@ Promise.resolve = function (value: any) {
   return valuePromise(value);
 };
 
-var iterableToArray = function (iterable: any) {
+var iterableToArray = function (iterable: Iterable<T>) {
   if (typeof Array.from === 'function') {
     // ES2015+, iterables exist
     iterableToArray = Array.from;
@@ -64,7 +64,7 @@ Promise.all = function (arr: any[]) {
   return new Promise(function (resolve: Function, reject: Function) {
     if (args.length === 0) return resolve([]);
     var remaining = args.length;
-    function res(i: number, val: number) {
+    function res(i: number, val: any) {
       if (val && (typeof val === 'object' || typeof val === 'function')) {
         if (val instanceof Promise && val.then === Promise.prototype.then) {
           while (val._state === 3) {
@@ -98,7 +98,7 @@ Promise.all = function (arr: any[]) {
   });
 };
 
-function onSettledFulfill(value: T) {
+function onSettledFulfill(value: any) {
   return { status: 'fulfilled', value: value };
 }
 function onSettledReject(reason: any) {
@@ -127,9 +127,9 @@ Promise.reject = function (value: any) {
   });
 };
 
-Promise.race = function (values: any) {
-  return new Promise(function (resolve: any, reject: any) {
-    iterableToArray(values).forEach(function(value: number){
+Promise.race = function (values: Iterable<any>) {
+  return new Promise(function (resolve: Function, reject: Function) {
+    iterableToArray(values).forEach(function(value: T){
       Promise.resolve(value).then(resolve, reject);
     });
   });

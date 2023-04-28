@@ -74,11 +74,11 @@
         EOF: 21
     };
 
-    function isTypeName(ch: string) {
+    function isTypeName(ch: number) {
         return '><(){}[],:*|?!='.indexOf(String.fromCharCode(ch)) === -1 && !esutils.code.isWhiteSpace(ch) && !esutils.code.isLineTerminator(ch);
     }
 
-    function Context(previous: Context, index: number, token: Token, value: string) {
+    function Context(previous: Context, index: number, token: Token, value: any) {
         this._previous = previous;
         this._index = index;
         this._token = token;
@@ -96,7 +96,7 @@
         return new Context(previous, index, token, value);
     };
 
-    function maybeAddRange(node: Node, range: Range) {
+    function maybeAddRange(node: Node, range: any) {
         if (addRange) {
             node.range = [range[0] + rangeOffset, range[1] + rangeOffset];
         }
@@ -495,7 +495,7 @@
         }
     }
 
-    function consume(target: string, text: string) {
+    function consume(target: Token, text: string) {
         utility.assert(token === target, text || 'consumed token not matched');
         next();
     }
@@ -1067,7 +1067,7 @@
         return expr;
     }
 
-    function parseType(src: string, opt: any) {
+    function parseType(src: string, opt: ParseOptions) {
         var expr;
 
         source = src;

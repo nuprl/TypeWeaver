@@ -32,7 +32,7 @@ suite
       cb(null, total);
     });
   },
-  function(err: Error, result: any)
+  function(err: any, result: any)
   {
     assert.ifError(err);
     assert.equal(result[result.length - 1], expected);
@@ -41,7 +41,7 @@ suite
 }, {'defer': true})
 
 
-.add('asynckit.parallel', function(deferred: asynckit.Deferred<number>)
+.add('asynckit.parallel', function(deferred: asynckit.Deferred)
 {
   var total = 0;
 
@@ -64,7 +64,7 @@ suite
 
 
 // add listeners
-.on('cycle', function(ev: Event)
+.on('cycle', function(ev: any)
 {
   console.log(String(ev.target));
 })

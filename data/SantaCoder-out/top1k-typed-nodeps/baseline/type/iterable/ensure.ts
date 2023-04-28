@@ -8,7 +8,7 @@ var resolveException    = require("../lib/resolve-exception")
 
 var invalidItemsLimit = 3;
 
-module.exports = function (value/*: any, options*/: any) {
+module.exports = function (value/*: any, options*/: Options) {
 	var options = arguments[1];
 	var mainErrorMessage =
 		options && options.name

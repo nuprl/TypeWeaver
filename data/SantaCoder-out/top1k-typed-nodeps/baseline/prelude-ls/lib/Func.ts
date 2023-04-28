@@ -9,12 +9,12 @@ curry = function(f: Function){
 flip = curry$(function(f: Function, x: any, y: any){
   return f(y, x);
 });
-fix = function(f: any){
-  return function(g: Graph){
+fix = function(f: Function){
+  return function(g: Function){
     return function(){
       return f(g(g)).apply(null, arguments);
     };
-  }(function(g: Graph){
+  }(function(g: Function){
     return function(){
       return f(g(g)).apply(null, arguments);
     };
@@ -54,7 +54,7 @@ module.exports = {
   over: over,
   memoize: memoize
 };
-function curry$(f: Function, bound: Array){
+function curry$(f: Function, bound: Object){
   var context,
   _curry = function(args: any[]) {
     return f.length > 1 ? function(){

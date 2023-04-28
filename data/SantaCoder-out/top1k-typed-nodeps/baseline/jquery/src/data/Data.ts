@@ -44,7 +44,7 @@ Data.prototype = {
 
 		return value;
 	},
-	set: function( owner: string, data: string, value : any) {
+	set: function( owner: any, data: any, value : any) {
 		var prop,
 			cache = this.cache( owner );
 
@@ -101,7 +101,7 @@ Data.prototype = {
 		// return the expected data based on which path was taken[*]
 		return value !== undefined ? value : key;
 	},
-	remove: function( owner: T, key : K) {
+	remove: function( owner: T, key : string) {
 		var i,
 			cache = owner[ this.expando ];
 
@@ -148,7 +148,7 @@ Data.prototype = {
 			}
 		}
 	},
-	hasData: function( owner : Object) {
+	hasData: function( owner : any) {
 		var cache = owner[ this.expando ];
 		return cache !== undefined && !jQuery.isEmptyObject( cache );
 	}

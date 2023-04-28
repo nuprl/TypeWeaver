@@ -17,7 +17,7 @@ client.on('error', function(error: any) {
   console.error('Error while talking to watchman: ', error);
 });
 
-client.capabilityCheck({required:['relative_root']}, function (error: any, resp: any) {
+client.capabilityCheck({required:['relative_root']}, function (error: Error, resp: any) {
   if (error) {
     console.error('Error checking capabilities:', error);
     return;

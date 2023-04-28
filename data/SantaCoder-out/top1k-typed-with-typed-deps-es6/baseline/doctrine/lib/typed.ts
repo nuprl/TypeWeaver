@@ -74,11 +74,11 @@
         EOF: 21
     };
 
-    function isTypeName(ch: string) {
+    function isTypeName(ch: number) {
         return '><(){}[],:*|?!='.indexOf(String.fromCharCode(ch)) === -1 && !esutils.code.isWhiteSpace(ch) && !esutils.code.isLineTerminator(ch);
     }
 
-    function Context(previous: Context, index: number, token: Token, value: string) {
+    function Context(previous: Context, index: number, token: Token, value: any) {
         this._previous = previous;
         this._index = index;
         this._token = token;
@@ -495,12 +495,12 @@
         }
     }
 
-    function consume(target: string, text: string) {
+    function consume(target: Token, text: string) {
         utility.assert(token === target, text || 'consumed token not matched');
         next();
     }
 
-    function expect(target: any, message: string) {
+    function expect(target: string, message: string) {
         if (token !== target) {
             utility.throwError(message || 'unexpected token');
         }

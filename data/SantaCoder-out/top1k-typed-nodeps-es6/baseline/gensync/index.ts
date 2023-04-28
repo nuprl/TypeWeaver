@@ -12,7 +12,7 @@ const GENSYNC_RACE_NONEMPTY = "GENSYNC_RACE_NONEMPTY";
 const GENSYNC_ERRBACK_NO_CALLBACK = "GENSYNC_ERRBACK_NO_CALLBACK";
 
 export default Object.assign(
-  function gensync(optsOrFn: GeneratorFunction) {
+  function gensync(optsOrFn: GeneratorOptions) {
     let genFn = optsOrFn;
     if (typeof optsOrFn !== "function") {
       genFn = newGenerator(optsOrFn);
@@ -30,7 +30,7 @@ export default Object.assign(
         const items = Array.from(args[0]);
         return items.map(item => evaluateSync(item));
       },
-      async: function(args: any, resolve: Function, reject: Function) {
+      async: function(args: any[], resolve: any, reject: any) {
         const items = Array.from(args[0]);
 
         if (items.length === 0) {
@@ -65,7 +65,7 @@ export default Object.assign(
 
         return evaluateSync(items[0]);
       },
-      async: function(args: any, resolve: Function, reject: Function) {
+      async: function(args: any[], resolve: any, reject: any) {
         const items = Array.from(args[0]);
         if (items.length === 0) {
           throw makeError("Must race at least 1 item", GENSYNC_RACE_NONEMPTY);
@@ -83,7 +83,7 @@ export default Object.assign(
  * Given a generator function, return the standard API object that executes
  * the generator and calls the callbacks.
  */
-function makeFunctionAPI(genFn: Function) {
+function makeFunctionAPI(genFn: GeneratorFunction) {
   const fns = {
     sync: function(...args: any[]) {
       return evaluateSync(genFn.apply(this, args));
@@ -133,7 +133,7 @@ function assertTypeof(type: string, name: string, value: any, allowUndefined: bo
 
   throw makeError(msg, GENSYNC_OPTIONS_ERROR);
 }
-function makeError(msg: string, code: number) {
+function makeError(msg: string, code: string) {
   return Object.assign(new Error(msg), { code });
 }
 
@@ -141,7 +141,7 @@ function makeError(msg: string, code: number) {
  * Given an options object, return a new generator that dispatches the
  * correct handler based on sync or async execution.
  */
-function newGenerator({ name: name, arity: arity, sync: sync, async: async, errback }: IOptions) {
+function newGenerator({ name: name, arity: arity, sync: sync, async: async, errback }: GeneratorOptions) {
   assertTypeof("string", "name", name, true /* allowUndefined */);
   assertTypeof("number", "arity", arity, true /* allowUndefined */);
   assertTypeof("function", "sync", sync);
@@ -202,7 +202,7 @@ function wrapGenerator(genFn: Function) {
   });
 }
 
-function buildOperation({ name: operationName, arity: operationArity, sync: sync, async }: SyncAsync) {
+function buildOperation({ name: name, arity: arity, sync: sync, async }: Function) {
   return setFunctionMetadata(name, arity, function*(...args) {
     const resume = yield GENSYNC_START;
     if (!resume) {
@@ -291,7 +291,7 @@ function evaluateAsync(gen: any, resolve: any, reject: any) {
   })();
 }
 
-function assertStart(value: any, gen: any) {
+function assertStart(value: any, gen: Generator) {
   if (value === GENSYNC_START) return;
 
   throwError(

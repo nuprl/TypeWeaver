@@ -22,7 +22,7 @@ import awaitify from './internal/awaitify.js'
  * @example
  *
  * async.race([
- *     function(callback: Function) {
+ *     function(callback: any) {
  *         setTimeout(function() {
  *             callback(null, 'one');
  *         }, 200);
@@ -34,11 +34,11 @@ import awaitify from './internal/awaitify.js'
  *     }
  * ],
  * // main callback
- * function(err: Error, result: any) {
+ * function(err: any, result: any) {
  *     // the result will be equal to 'two' as it finishes earlier
  * });
  */
-function race(tasks: Array<Function>, callback: Function) {
+function race(tasks: Function[], callback: Function) {
     callback = once(callback);
     if (!Array.isArray(tasks)) return callback(new TypeError('First argument to race must be an array of functions'));
     if (!tasks.length) return callback();

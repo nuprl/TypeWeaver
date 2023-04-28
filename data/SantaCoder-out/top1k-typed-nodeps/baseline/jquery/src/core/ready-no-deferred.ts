@@ -28,7 +28,7 @@ jQuery.extend( {
 	// the ready event fires. See trac-6781
 	readyWait: 1,
 
-	ready: function( wait : number) {
+	ready: function( wait : boolean) {
 
 		// Abort if there are pending holds or we're already ready
 		if ( wait === true ? --jQuery.readyWait : jQuery.isReady ) {
@@ -43,7 +43,7 @@ jQuery.extend( {
 			return;
 		}
 
-		whenReady = function( fn : Function) {
+		whenReady = function( fn : any) {
 			readyCallbacks.push( fn );
 
 			while ( readyCallbacks.length ) {

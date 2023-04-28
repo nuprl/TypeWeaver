@@ -15,7 +15,7 @@ module.exports = function( grunt : any) {
 	// Support: Node.js <12
 	// Skip running tasks that dropped support for Node.js 10
 	// in this Node version.
-	function runIfNewNode( task : any) {
+	function runIfNewNode( task : string) {
 		return oldNode ? "print_old_node_message:" + task : task;
 	}
 

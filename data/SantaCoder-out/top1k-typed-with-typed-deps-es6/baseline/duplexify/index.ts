@@ -12,18 +12,18 @@ var onuncork = function(self: Writable, fn: Function) {
   else fn()
 }
 
-var autoDestroy = function (self: Duplex, err: any) {
+var autoDestroy = function (self: Writable, err: any) {
   if (self._autoDestroy) self.destroy(err)
 }
 
-var destroyer = function(self: Function, end: Function) {
-  return function(err: any) {
+var destroyer = function(self: Duplex, end: boolean) {
+  return function(err: Error) {
     if (err) autoDestroy(self, err.message === 'premature close' ? null : err)
     else if (end && !self._ended) self.end()
   }
 }
 
-var end = function(ws: WebSocket, fn: Function) {
+var end = function(ws: stream.Writable, fn: Function) {
   if (!ws) return fn()
   if (ws._writableState && ws._writableState.finished) return fn()
   if (ws._writableState) return ws.end(fn)
@@ -33,11 +33,11 @@ var end = function(ws: WebSocket, fn: Function) {
 
 var noop = function() {}
 
-var toStreams2 = function(rs: any) {
+var toStreams2 = function(rs: ReadableStream) {
   return new (stream.Readable)({objectMode:true, highWaterMark:16}).wrap(rs)
 }
 
-var Duplexify = function(writable: Writable, readable: Readable, opts: any) {
+var Duplexify = function(writable: stream.Writable, readable: stream.Readable, opts: DuplexifyOptions) {
   if (!(this instanceof Duplexify)) return new Duplexify(writable, readable, opts)
   stream.Duplex.call(this, opts)
 
@@ -64,7 +64,7 @@ var Duplexify = function(writable: Writable, readable: Readable, opts: any) {
 
 inherits(Duplexify, stream.Duplex)
 
-Duplexify.obj = function(writable: Writable, readable: Readable, opts: DuplexOptions) {
+Duplexify.obj = function(writable: Writable, readable: Readable, opts: DuplexifyOptions) {
   if (!opts) opts = {}
   opts.objectMode = true
   opts.highWaterMark = 16
@@ -187,7 +187,7 @@ Duplexify.prototype.destroy = function(err: Error, cb: Function) {
   })
 }
 
-Duplexify.prototype._destroy = function(err: any) {
+Duplexify.prototype._destroy = function(err: Error) {
   if (err) {
     var ondrain = this._ondrain
     this._ondrain = null
@@ -203,7 +203,7 @@ Duplexify.prototype._destroy = function(err: any) {
   this.emit('close')
 }
 
-Duplexify.prototype._write = function(data: string, enc: string, cb: Function) {
+Duplexify.prototype._write = function(data: any, enc: any, cb: any) {
   if (this.destroyed) return
   if (this._corked) return onuncork(this, this._write.bind(this, data, enc, cb))
   if (data === SIGNAL_FLUSH) return this._finish(cb)
@@ -226,7 +226,7 @@ Duplexify.prototype._finish = function(cb: Function) {
   })
 }
 
-Duplexify.prototype.end = function(data: Buffer, enc: string, cb: Function) {
+Duplexify.prototype.end = function(data: any, enc: any, cb: any) {
   if (typeof data === 'function') return this.end(null, null, data)
   if (typeof enc === 'function') return this.end(data, null, enc)
   this._ended = true

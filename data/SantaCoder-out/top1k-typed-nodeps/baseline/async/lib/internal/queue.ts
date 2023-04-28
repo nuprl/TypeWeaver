@@ -3,7 +3,7 @@ import setImmediate from './setImmediate.js'
 import DLL from './DoublyLinkedList.js'
 import wrapAsync from './wrapAsync.js'
 
-export default function queue(worker: Function, concurrency: number, payload: any) {
+export default function queue(worker: AsyncWorker<T>, concurrency: number, payload: T) {
     if (concurrency == null) {
         concurrency = 1;
     }
@@ -45,14 +45,14 @@ export default function queue(worker: Function, concurrency: number, payload: an
     }
 
     var processingScheduled = false;
-    function _insert(data: any, insertAtFront: boolean, rejectOnError: boolean, callback: any) {
+    function _insert(data: any, insertAtFront: boolean, rejectOnError: boolean, callback: Function) {
         if (callback != null && typeof callback !== 'function') {
             throw new Error('task callback must be a function');
         }
         q.started = true;
 
         var res, rej;
-        function promiseCallback (err: Error, ...args: any[]) {
+        function promiseCallback (err: any, ...args: any[]) {
             // we don't care about the error, let the global error handler
             // deal with it
             if (err) return rejectOnError ? rej(err) : res()
@@ -88,7 +88,7 @@ export default function queue(worker: Function, concurrency: number, payload: an
         }
     }
 
-    function _createCB(tasks: Array<Function>) {
+    function _createCB(tasks: Array<any>) {
         return function (err: any, ...args: any[]) {
             numRunning -= 1;
 
@@ -120,7 +120,7 @@ export default function queue(worker: Function, concurrency: number, payload: an
         };
     }
 
-    function _maybeDrain(data: any) {
+    function _maybeDrain(data: any[]) {
         if (data.length === 0 && q.idle()) {
             // call drain immediately if there are no tasks
             setImmediate(() => trigger('drain'));

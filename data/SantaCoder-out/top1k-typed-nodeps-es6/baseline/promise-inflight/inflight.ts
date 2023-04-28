@@ -15,7 +15,7 @@ function inflight (unique: string, doFly: Function) {
     const unique = args[0]
     const doFly = args[1]
     if (Array.isArray(unique)) {
-      return Bluebird.all(unique).then(function (uniqueArr: any[]) {
+      return Bluebird.all(unique).then(function (uniqueArr: string[]) {
         return _inflight(uniqueArr.join(''), doFly)
       })
     } else {
@@ -23,7 +23,7 @@ function inflight (unique: string, doFly: Function) {
     }
   })
 
-  function _inflight (unique: string, doFly: Function) {
+  function _inflight (unique: string, doFly: any) {
     if (!active[unique]) {
       active[unique] = (new Bluebird(function (resolve: any) {
         return resolve(doFly())

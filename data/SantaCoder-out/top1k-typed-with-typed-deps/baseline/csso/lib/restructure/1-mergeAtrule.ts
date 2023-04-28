@@ -2,7 +2,7 @@ import { List, walk, keyword as resolveKeyword } from 'css-tree';
 
 const { hasOwnProperty } = Object.prototype;
 
-function addRuleToMap(map: any, item: any, list: any, single: any) {
+function addRuleToMap(map: RuleMap, item: Rule, list: Rule[], single: boolean) {
     const node = item.data;
     const name = resolveKeyword(node.name).basename;
     const id = node.name.toLowerCase() + '/' + (node.prelude ? node.prelude.id : null);
@@ -22,11 +22,11 @@ function addRuleToMap(map: any, item: any, list: any, single: any) {
     map[name][id].append(list.remove(item));
 }
 
-function relocateAtrules(ast: Object, options: Object) {
+function relocateAtrules(ast: Root, options: Options) {
     const collected = Object.create(null);
     let topInjectPoint = null;
 
-    ast.children.forEach(function(node: Node, item: Node, list: Node) {
+    ast.children.forEach(function(node: Node, item: Rule, list: Rule[]) {
         if (node.type === 'Atrule') {
             const name = resolveKeyword(node.name).basename;
 
@@ -65,11 +65,11 @@ function relocateAtrules(ast: Object, options: Object) {
     }
 };
 
-function isMediaRule(node: Rule) {
+function isMediaRule(node: Node) {
     return node.type === 'Atrule' && node.name === 'media';
 }
 
-function processAtrule(node: Node, item: Node, list: Node) {
+function processAtrule(node: Node, item: Item, list: List) {
     if (!isMediaRule(node)) {
         return;
     }

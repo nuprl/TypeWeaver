@@ -4,7 +4,7 @@
  * implementations of `debug()`.
  */
 
-function setup(env: string) {
+function setup(env: any) {
 	createDebug.debug = createDebug;
 	createDebug.default = createDebug;
 	createDebug.coerce = coerce;

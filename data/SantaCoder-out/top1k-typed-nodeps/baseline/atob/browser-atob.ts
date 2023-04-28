@@ -1,4 +1,4 @@
-(function (w: Window) {
+(function (w: any) {
   "use strict";
 
   function findBest(atobNative: any) {

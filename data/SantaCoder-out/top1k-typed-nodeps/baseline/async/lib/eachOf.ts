@@ -7,7 +7,7 @@ import wrapAsync from './internal/wrapAsync.js'
 import awaitify from './internal/awaitify.js'
 
 // eachOf implementation optimized for array-likes
-function eachOfArrayLike(coll: any[], iteratee: Function, callback: Function) {
+function eachOfArrayLike(coll: ArrayLike<any>, iteratee: Function, callback: Function) {
     callback = once(callback);
     var index = 0,
         completed = 0,
@@ -17,7 +17,7 @@ function eachOfArrayLike(coll: any[], iteratee: Function, callback: Function) {
         callback(null);
     }
 
-    function iteratorCallback(err: Error, value: any) {
+    function iteratorCallback(err: any, value: any) {
         if (err === false) {
             canceled = true
         }
@@ -35,7 +35,7 @@ function eachOfArrayLike(coll: any[], iteratee: Function, callback: Function) {
 }
 
 // a generic version of eachOf which can handle array, object, and iterator cases.
-function eachOfGeneric (coll: any, iteratee: any, callback: any) {
+function eachOfGeneric (coll: any, iteratee: Function, callback: Function) {
     return eachOfLimit(coll, Infinity, iteratee, callback);
 }
 
@@ -71,7 +71,7 @@ function eachOfGeneric (coll: any, iteratee: any, callback: any) {
  *
  * // asynchronous function that reads a json file and parses the contents as json object
  * function parseFile(file: string, key: string, callback: any) {
- *     fs.readFile(file, "utf8", function(err: Error, data: any) {
+ *     fs.readFile(file, "utf8", function(err: any, data: any) {
  *         if (err) return calback(err);
  *         try {
  *             configs[key] = JSON.parse(data);
@@ -148,7 +148,7 @@ function eachOfGeneric (coll: any, iteratee: any, callback: any) {
  * }
  *
  */
-function eachOf(coll: any, iteratee: any, callback: any) {
+function eachOf(coll: any[], iteratee: Function, callback: Function) {
     var eachOfImplementation = isArrayLike(coll) ? eachOfArrayLike : eachOfGeneric;
     return eachOfImplementation(coll, wrapAsync(iteratee), callback);
 }

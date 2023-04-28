@@ -49,7 +49,7 @@ var
 originAnchor.href = location.href;
 
 // Base "constructor" for jQuery.ajaxPrefilter and jQuery.ajaxTransport
-function addToPrefiltersOrTransports( structure : Structure) {
+function addToPrefiltersOrTransports( structure : JQuery.Ajax.PrefiltersOrTransports) {
 
 	// dataTypeExpression is optional and defaults to "*"
 	return function( dataTypeExpression: string, func : Function) {
@@ -91,7 +91,7 @@ function inspectPrefiltersOrTransports( structure: any, options: any, originalOp
 	function inspect( dataType : string) {
 		var selected;
 		inspected[ dataType ] = true;
-		jQuery.each( structure[ dataType ] || [], function( _: any, prefilterOrFactory : PrefilterOrFactory<T>) {
+		jQuery.each( structure[ dataType ] || [], function( _: any, prefilterOrFactory : PrefilterOrFactory) {
 			var dataTypeOrTransport = prefilterOrFactory( options, originalOptions, jqXHR );
 			if ( typeof dataTypeOrTransport === "string" &&
 				!seekingTransport && !inspected[ dataTypeOrTransport ] ) {
@@ -132,7 +132,7 @@ function ajaxExtend( target: any, src : any) {
  * - finds the right dataType (mediates between content-type and expected dataType)
  * - returns the corresponding response
  */
-function ajaxHandleResponses( s: string, jqXHR: JQueryXHR, responses : any) {
+function ajaxHandleResponses( s: jqXHR, jqXHR: jqXHR, responses : any) {
 
 	var ct, type, finalDataType, firstDataType,
 		contents = s.contents,
@@ -190,7 +190,7 @@ function ajaxHandleResponses( s: string, jqXHR: JQueryXHR, responses : any) {
 /* Chain conversions given the request and the original response
  * Also sets the responseXXX fields on the jqXHR instance
  */
-function ajaxConvert( s: string, response: any, jqXHR: JQueryXHR, isSuccess : boolean) {
+function ajaxConvert( s: JQuery.AjaxSettings, response: any, jqXHR: JQuery.jqXHR, isSuccess : boolean) {
 	var conv2, current, conv, tmp, prev,
 		converters = {},
 
@@ -366,7 +366,7 @@ jQuery.extend( {
 	// Creates a full fledged settings object into target
 	// with both ajaxSettings and settings fields.
 	// If target is omitted, writes into ajaxSettings.
-	ajaxSetup: function( target: JQuery, settings : any) {
+	ajaxSetup: function( target: any, settings : any) {
 		return settings ?
 
 			// Building a settings object
@@ -380,7 +380,7 @@ jQuery.extend( {
 	ajaxTransport: addToPrefiltersOrTransports( transports ),
 
 	// Main method
-	ajax: function( url: string, options : any) {
+	ajax: function( url: string, options : JQueryAjaxSettings) {
 
 		// If url is an object, simulate pre-1.5 signature
 		if ( typeof url === "object" ) {
@@ -834,16 +834,16 @@ jQuery.extend( {
 		return jqXHR;
 	},
 
-	getJSON: function( url: string, data: any, callback : Function) {
+	getJSON: function( url: string, data: any, callback : any) {
 		return jQuery.get( url, data, callback, "json" );
 	},
 
-	getScript: function( url: string, callback : any) {
+	getScript: function( url: string, callback : Function) {
 		return jQuery.get( url, undefined, callback, "script" );
 	}
 } );
 
-jQuery.each( [ "get", "post" ], function( _i: number, method : any) {
+jQuery.each( [ "get", "post" ], function( _i: number, method : string) {
 	jQuery[ method ] = function( url: string, data: any, callback: any, type : string) {
 
 		// Shift arguments if data argument was omitted

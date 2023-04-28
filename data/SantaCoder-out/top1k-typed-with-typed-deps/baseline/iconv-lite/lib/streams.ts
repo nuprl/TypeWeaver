@@ -4,12 +4,12 @@ var Buffer = require("safer-buffer").Buffer;
 
 // NOTE: Due to 'stream' module being pretty large (~100Kb, significant in browser environments), 
 // we opt to dependency-inject it instead of creating a hard dependency.
-module.exports = function(stream_module: StreamModule) {
+module.exports = function(stream_module: any) {
     var Transform = stream_module.Transform;
 
     // == Encoder stream =======================================================
 
-    function IconvLiteEncoderStream(conv: IconvLiteEncoder, options: any) {
+    function IconvLiteEncoderStream(conv: IconvLite, options: any) {
         this.conv = conv;
         options = options || {};
         options.decodeStrings = false; // We accept only strings, so we don't need to decode them.
@@ -20,7 +20,7 @@ module.exports = function(stream_module: StreamModule) {
         constructor: { value: IconvLiteEncoderStream }
     });
 
-    IconvLiteEncoderStream.prototype._transform = function(chunk: Buffer, encoding: string, done: Function) {
+    IconvLiteEncoderStream.prototype._transform = function(chunk: string, encoding: string, done: Function) {
         if (typeof chunk != 'string')
             return done(new Error("Iconv encoding stream needs strings as its input."));
         try {
@@ -44,10 +44,10 @@ module.exports = function(stream_module: StreamModule) {
         }
     }
 
-    IconvLiteEncoderStream.prototype.collect = function(cb: Function) {
+    IconvLiteEncoderStream.prototype.collect = function(cb: any) {
         var chunks = [];
         this.on('error', cb);
-        this.on('data', function(chunk: string) { chunks.push(chunk); });
+        this.on('data', function(chunk: Buffer) { chunks.push(chunk); });
         this.on('end', function() {
             cb(null, Buffer.concat(chunks));
         });
@@ -57,7 +57,7 @@ module.exports = function(stream_module: StreamModule) {
 
     // == Decoder stream =======================================================
 
-    function IconvLiteDecoderStream(conv: IconvLiteDecoder, options: any) {
+    function IconvLiteDecoderStream(conv: IconvLite, options: any) {
         this.conv = conv;
         options = options || {};
         options.encoding = this.encoding = 'utf8'; // We output strings.
@@ -92,7 +92,7 @@ module.exports = function(stream_module: StreamModule) {
         }
     }
 
-    IconvLiteDecoderStream.prototype.collect = function(cb: Function) {
+    IconvLiteDecoderStream.prototype.collect = function(cb: any) {
         var res = '';
         this.on('error', cb);
         this.on('data', function(chunk: string) { res += chunk; });

@@ -41,7 +41,7 @@
     updateFragmentForSharing();
   }
 
-  function setResult(kind: string, result: any, mismatchedComponents: any) {
+  function setResult(kind: string, result: Result, mismatchedComponents: string[]) {
     const output = document.querySelector(`#${kind}-output`);
     const error = document.querySelector(`#${kind}-error`);
 
@@ -75,7 +75,7 @@
     componentEl.classList.toggle("fail", isMismatched);
   }
 
-  function getMismatchedComponents(result1: ComponentResult, result2: ComponentResult) {
+  function getMismatchedComponents(result1: any, result2: any) {
     const mismatched = new Set();
     for (const component of components) {
       if (result1[component] !== result2[component]) {

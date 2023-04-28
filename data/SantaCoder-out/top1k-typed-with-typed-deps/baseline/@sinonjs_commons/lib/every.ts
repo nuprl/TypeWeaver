@@ -8,7 +8,7 @@
  * @param  {Function} fn
  * @returns {boolean}
  */
-module.exports = function every(obj: Object, fn: Function) {
+module.exports = function every(obj: Array<any>, fn: Function) {
     var pass = true;
 
     try {

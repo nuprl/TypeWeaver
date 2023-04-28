@@ -1,5 +1,5 @@
 
-function callbacksFor(object: any) {
+function callbacksFor(object: EventTarget) {
   let callbacks = object._promiseCallbacks;
 
   if (!callbacks) {
@@ -45,11 +45,11 @@ export default {
     let yehuda = new Person();
     let tom = new Person();
 
-    yehuda.on('poke', function(event: Event) {
+    yehuda.on('poke', function(event: any) {
       console.log('Yehuda says OW');
     });
 
-    tom.on('poke', function(event: any) {
+    tom.on('poke', function(event: string) {
       console.log('Tom says OW');
     });
 

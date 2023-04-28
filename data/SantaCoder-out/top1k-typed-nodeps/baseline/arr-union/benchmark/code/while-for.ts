@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function union(init: T) {
+module.exports = function union(init: any[]) {
   var len = arguments.length, i = 0;
 
   while (++i < len) {

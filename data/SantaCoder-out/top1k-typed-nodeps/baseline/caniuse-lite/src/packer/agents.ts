@@ -48,7 +48,7 @@ function relevantKeys(agents: Agents, versions: Versions, fullAgents: FullAgents
   )
 }
 
-function packBrowserVersions(agents: string[]) {
+function packBrowserVersions(agents: AgentMap) {
   let browserVersions = Object.values(agents)
     .reduce((map, agent) => {
       let versions = Object.keys(agent.usage_global)

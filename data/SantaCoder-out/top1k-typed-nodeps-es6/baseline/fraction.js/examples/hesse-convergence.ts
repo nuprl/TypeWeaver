@@ -29,7 +29,7 @@ We now want to find lim ->oo x[n], with the starting element of (3 2)^T
 */
 
 // Get the Hesse Matrix
-function H(x: number) {
+function H(x: Fraction[]) {
 
   var z = new Fraction(1).sub(new Fraction(4).mul(x[0]));
 
@@ -42,7 +42,7 @@ function H(x: number) {
 }
 
 // Get the gradient of f(x)
-function grad(x: number) {
+function grad(x: number[]) {
 
   return [
   new Fraction(x[0]).mul(x[0]).add(x[1]),
@@ -60,7 +60,7 @@ function matrMult(m: number[][], v: number[]) {
 }
 
 // A simple vector subtraction helper
-function vecSub(a: Fraction[], b: Fraction[]) {
+function vecSub(a: any, b: any) {
 
   return [
   new Fraction(a[0]).sub(b[0]),
@@ -69,7 +69,7 @@ function vecSub(a: Fraction[], b: Fraction[]) {
 }
 
 // Main function, gets a vector and the actual index
-function run(V: number, j: number) {
+function run(V: Array<number>, j: number) {
 
   var t = H(V);
   //console.log("H(X)");

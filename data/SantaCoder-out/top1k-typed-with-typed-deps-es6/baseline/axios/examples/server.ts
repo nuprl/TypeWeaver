@@ -52,21 +52,21 @@ function getIndexTemplate() {
   );
 }
 
-function sendResponse(res: Response, statusCode: number, body: any) {
+function sendResponse(res: ServerResponse, statusCode: number, body: string) {
   res.writeHead(statusCode);
   res.write(body);
   res.end();
 }
 
-function send200(res: Response, body: any) {
+function send200(res: ServerResponse, body: string) {
   sendResponse(res, 200, body || '<h1>OK</h1>');
 }
 
-function send404(res: Response, body: string) {
+function send404(res: http.ServerResponse, body: string) {
   sendResponse(res, 404, body || '<h1>Not Found</h1>');
 }
 
-function pipeFileToResponse(res: Response, file: string, type: string) {
+function pipeFileToResponse(res: http.ServerResponse, file: string, type: string) {
   if (type) {
     res.writeHead(200, {
       'Content-Type': type
@@ -78,7 +78,7 @@ function pipeFileToResponse(res: Response, file: string, type: string) {
 
 dirs = listDirs(__dirname);
 
-server = http.createServer(function (req: Request, res: Response) {
+server = http.createServer(function (req: http.IncomingMessage, res: http.ServerResponse) {
   let url = req.url;
 
   // Process axios itself

@@ -2,7 +2,7 @@
 var util = require('util')
 var TrackerBase = require('./tracker-base.js')
 
-var Tracker = module.exports = function (name: string, todo: Todo) {
+var Tracker = module.exports = function (name: string, todo: number) {
   TrackerBase.call(this, name)
   this.workDone = 0
   this.workTodo = todo || 0

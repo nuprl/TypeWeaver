@@ -26,7 +26,7 @@ class AsyncSeriesWaterfallHookCodeFactory extends HookCodeFactory {
 
 const factory = new AsyncSeriesWaterfallHookCodeFactory();
 
-const COMPILE = function(options: any) {
+const COMPILE = function(options: HookMapOptions) {
 	factory.setup(this, options);
 	return factory.create(options);
 };

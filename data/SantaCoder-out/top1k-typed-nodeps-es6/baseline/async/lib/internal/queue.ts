@@ -3,7 +3,7 @@ import setImmediate from './setImmediate.js'
 import DLL from './DoublyLinkedList.js'
 import wrapAsync from './wrapAsync.js'
 
-export default function queue(worker: Function, concurrency: number, payload: any[]) {
+export default function queue(worker: AsyncWorker<T>, concurrency: number, payload: T) {
     if (concurrency == null) {
         concurrency = 1;
     }
@@ -88,7 +88,7 @@ export default function queue(worker: Function, concurrency: number, payload: an
         }
     }
 
-    function _createCB(tasks: Task[]) {
+    function _createCB(tasks: any[]) {
         return function (err: any, ...args: any[]) {
             numRunning -= 1;
 
@@ -120,7 +120,7 @@ export default function queue(worker: Function, concurrency: number, payload: an
         };
     }
 
-    function _maybeDrain(data: any) {
+    function _maybeDrain(data: any[]) {
         if (data.length === 0 && q.idle()) {
             // call drain immediately if there are no tasks
             setImmediate(() => trigger('drain'));

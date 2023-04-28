@@ -33,7 +33,7 @@ module.exports = function (options: Options) {
 
     var originalInit = options.request.Request.prototype.init;
 
-    options.request.Request.prototype.init = function RP$initInterceptor(requestOptions: RP$RequestOptions) {
+    options.request.Request.prototype.init = function RP$initInterceptor(requestOptions: RequestInit) {
 
         // Init may be called again - currently in case of redirects
         if (isObjectLike(requestOptions) && !this._callback && !this._rp_promise) {

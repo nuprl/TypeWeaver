@@ -37,7 +37,7 @@ export function unescapeValue (value: string) {
     };
 }
 
-function handleDeprecatedContructorOpts (opts: any) {
+function handleDeprecatedContructorOpts (opts: NodeOptions) {
     if (opts.quoteMark !== undefined) {
         return opts;
     }
@@ -399,6 +399,6 @@ const CSSESC_QUOTE_OPTIONS = {
     [null]: {isIdentifier: true},
 };
 
-function defaultAttrConcat (attrValue: string, attrSpaces: string) {
+function defaultAttrConcat (attrValue: string, attrSpaces: AttrSpaces) {
     return `${attrSpaces.before}${attrValue}${attrSpaces.after}`;
 }

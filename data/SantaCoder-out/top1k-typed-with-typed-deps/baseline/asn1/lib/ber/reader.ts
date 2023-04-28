@@ -53,7 +53,7 @@ Object.defineProperty(Reader.prototype, 'buffer', {
  * @param {Boolean} peek true means don't move offset.
  * @return {Number} the next byte, null if not enough data.
  */
-Reader.prototype.readByte = function (peek: any) {
+Reader.prototype.readByte = function (peek: boolean) {
   if (this._size - this._offset < 1)
     return null;
 
@@ -125,7 +125,7 @@ Reader.prototype.readLength = function (offset: number) {
  *
  * @return {Number} the sequence's tag.
  */
-Reader.prototype.readSequence = function (tag: string) {
+Reader.prototype.readSequence = function (tag: number) {
   var seq = this.peek();
   if (seq === null)
     return null;
@@ -157,7 +157,7 @@ Reader.prototype.readEnumeration = function () {
 };
 
 
-Reader.prototype.readString = function (tag: ASN1Tag, retbuf: Buffer) {
+Reader.prototype.readString = function (tag: ASN1, retbuf: Buffer) {
   if (!tag)
     tag = ASN1.OctetString;
 
@@ -188,7 +188,7 @@ Reader.prototype.readString = function (tag: ASN1Tag, retbuf: Buffer) {
   return retbuf ? str : str.toString('utf8');
 };
 
-Reader.prototype.readOID = function (tag: string) {
+Reader.prototype.readOID = function (tag: number) {
   if (!tag)
     tag = ASN1.OID;
 
@@ -218,7 +218,7 @@ Reader.prototype.readOID = function (tag: string) {
 };
 
 
-Reader.prototype._readTag = function (tag: string) {
+Reader.prototype._readTag = function (tag: number) {
   assert.ok(tag !== undefined);
 
   var b = this.peek();

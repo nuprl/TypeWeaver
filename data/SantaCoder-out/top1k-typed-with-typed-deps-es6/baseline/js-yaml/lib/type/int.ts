@@ -3,13 +3,13 @@
 import common from '../common';
 import Type from '../type';
 
-function isHexCode(c: string) {
+function isHexCode(c: any) {
   return ((0x30/* 0 */ <= c) && (c <= 0x39/* 9 */)) ||
          ((0x41/* A */ <= c) && (c <= 0x46/* F */)) ||
          ((0x61/* a */ <= c) && (c <= 0x66/* f */));
 }
 
-function isOctCode(c: number) {
+function isOctCode(c: any) {
   return ((0x30/* 0 */ <= c) && (c <= 0x37/* 7 */));
 }
 
@@ -142,7 +142,7 @@ export default new Type('tag:yaml.org,2002:int', {
   represent: {
     binary:      function (obj: number) { return obj >= 0 ? '0b' + obj.toString(2) : '-0b' + obj.toString(2).slice(1); },
     octal:       function (obj: number) { return obj >= 0 ? '0o'  + obj.toString(8) : '-0o'  + obj.toString(8).slice(1); },
-    decimal:     function (obj: any) { return obj.toString(10); },
+    decimal:     function (obj: number) { return obj.toString(10); },
     /* eslint-disable max-len */
     hexadecimal: function (obj: number) { return obj >= 0 ? '0x' + obj.toString(16).toUpperCase() :  '-0x' + obj.toString(16).toUpperCase().slice(1); }
   },

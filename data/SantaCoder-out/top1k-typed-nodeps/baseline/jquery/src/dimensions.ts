@@ -10,14 +10,14 @@ jQuery.each( { Height: "height", Width: "width" }, function( name: string, type 
 		padding: "inner" + name,
 		content: type,
 		"": "outer" + name
-	}, function( defaultExtra: any, funcName : string) {
+	}, function( defaultExtra: boolean, funcName : string) {
 
 		// Margin is only for outerHeight, outerWidth
-		jQuery.fn[ funcName ] = function( margin: number, value : number) {
+		jQuery.fn[ funcName ] = function( margin: boolean, value : boolean) {
 			var chainable = arguments.length && ( defaultExtra || typeof margin !== "boolean" ),
 				extra = defaultExtra || ( margin === true || value === true ? "margin" : "border" );
 
-			return access( this, function( elem: HTMLElement, type: string, value : any) {
+			return access( this, function( elem: Element, type: string, value : any) {
 				var doc;
 
 				if ( isWindow( elem ) ) {

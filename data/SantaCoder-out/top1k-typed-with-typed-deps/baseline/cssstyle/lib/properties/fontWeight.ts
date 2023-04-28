@@ -17,7 +17,7 @@ var valid_weights = [
   'inherit',
 ];
 
-module.exports.isValid = function isValid(v: any) {
+module.exports.isValid = function isValid(v: string) {
   return valid_weights.indexOf(v.toLowerCase()) !== -1;
 };
 

@@ -30,7 +30,7 @@
  * circle instanceof Shape
  * // => true
  */
-function create(prototype: any, properties: any) {
+function create(prototype: Object, properties: Object) {
   prototype = prototype === null ? null : Object(prototype)
   const result = Object.create(prototype)
   return properties == null ? result : Object.assign(result, properties)

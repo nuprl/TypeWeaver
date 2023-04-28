@@ -14,7 +14,7 @@ fs.readdirSync(__dirname + '/code').forEach(function (fp: string) {
   var name = path.basename(fp, path.extname(fp));
 
   if (/./.test(name)) {
-    fs.readdirSync(__dirname + '/fixtures').forEach(function (fixture: any) {
+    fs.readdirSync(__dirname + '/fixtures').forEach(function (fixture: string) {
       fixture = path.resolve(__dirname, 'fixtures', fixture);
       if (/\.js$/.test(fixture)) {
         console.log(bold(name) + ':', fn.apply(null, require(fixture)));

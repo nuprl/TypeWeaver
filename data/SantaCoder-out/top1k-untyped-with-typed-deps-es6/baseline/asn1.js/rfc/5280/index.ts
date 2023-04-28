@@ -183,7 +183,7 @@ const Extension = asn1.define('Extension', function() {
   this.seq().obj(
     this.key('extnID').objid(x509OIDs),
     this.key('critical').bool().def(false),
-    this.key('extnValue').octstr().contains(function(obj: X509Extension) {
+    this.key('extnValue').octstr().contains(function(obj: any) {
       const out = x509Extensions[obj.extnID];
       // Cope with unknown extensions
       return out ? out : asn1.define('OctString', function() { this.any(); });

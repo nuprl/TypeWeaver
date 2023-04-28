@@ -20,7 +20,7 @@ function _capitalize(str: string) {
     return (str.charAt(0).toUpperCase() + str.slice(1));
 }
 
-function _toss(name: string, expected: string, oper: string, arg: any, actual: any) {
+function _toss(name: string, expected: string, oper: string, arg: Function, actual: Function) {
     throw new assert.AssertionError({
         message: util.format('%s (%s) is required', name, expected),
         actual: (actual === undefined) ? typeof (arg) : actual(arg),

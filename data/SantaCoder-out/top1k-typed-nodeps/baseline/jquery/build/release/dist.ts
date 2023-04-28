@@ -1,6 +1,6 @@
 "use strict";
 
-module.exports = function( Release: Release, files: Array<string>, complete : Function) {
+module.exports = function( Release: any, files: any, complete : any) {
 
 	const fs = require( "fs" ).promises;
 	const shell = require( "shelljs" );
@@ -89,12 +89,12 @@ module.exports = function( Release: Release, files: Array<string>, complete : Fu
 		shell.rm( "-rf", `${ Release.dir.dist }/**/*` );
 
 		shell.mkdir( "-p", distFolder );
-		files.forEach( function( file : File) {
+		files.forEach( function( file : string) {
 			shell.cp( "-f", `${ Release.dir.repo }/${ file }`, distFolder );
 		} );
 
 		// Copy other files
-		extras.forEach( function( file : File) {
+		extras.forEach( function( file : string) {
 			shell.cp( "-rf", `${ Release.dir.repo }/${ file }`, Release.dir.dist );
 		} );
 

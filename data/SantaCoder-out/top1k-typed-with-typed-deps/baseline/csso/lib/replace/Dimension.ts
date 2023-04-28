@@ -29,7 +29,7 @@ const LENGTH_UNIT = new Set([
     'vm'
 ]);
 
-export default function compressDimension(node: Node, item: Item) {
+export default function compressDimension(node: Dimension, item: Item) {
     const value = packNumber(node.value);
 
     node.value = value;

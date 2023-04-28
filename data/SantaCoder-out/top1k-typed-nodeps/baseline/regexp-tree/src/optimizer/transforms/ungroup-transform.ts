@@ -62,7 +62,7 @@ module.exports = {
   },
 };
 
-function hasAppropriateSiblings(path: NodePath<t.Node>) {
+function hasAppropriateSiblings(path: Path<Node>) {
   const {parent, index} = path;
 
   if (parent.type !== 'Alternative') {

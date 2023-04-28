@@ -129,7 +129,7 @@ class CacheBackend {
 		this._provider = provider;
 		this._syncProvider = syncProvider;
 		this._providerContext = providerContext;
-		/** @type {Map<string, (function(Error: any, any: any): void)[]>} */
+		/** @type {Map<string, (function(Error: any, any: void): void)[]>} */
 		this._activeAsyncOperations = new Map();
 		/** @type {Map<string, { err: Error, result: any, level: Set<string> }>} */
 		this._data = new Map();

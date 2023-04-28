@@ -1,5 +1,5 @@
 /* istanbul ignore next  */
-function insertStyleElement(options: StyleOptions) {
+function insertStyleElement(options: StyleElementOptions) {
   const element = document.createElement("style");
 
   options.setAttributes(element, options.attributes);

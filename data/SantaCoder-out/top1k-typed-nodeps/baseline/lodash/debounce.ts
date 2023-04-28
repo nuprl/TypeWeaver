@@ -181,7 +181,7 @@ function debounce(func: Function, wait: number, options: any) {
     return timerId !== undefined
   }
 
-  function debounced(...args: any[]) {
+  function debounced(...args: A) {
     const time = Date.now()
     const isInvoking = shouldInvoke(time)
 

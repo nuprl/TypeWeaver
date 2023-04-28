@@ -135,7 +135,7 @@ function loadDescriptionFile(
  * @param {string|string[]} field field
  * @returns {object|string|number|boolean|undefined} field data
  */
-function getField(content: string, field: string) {
+function getField(content: any, field: string) {
 	if (!content) return undefined;
 	if (Array.isArray(field)) {
 		let current = content;

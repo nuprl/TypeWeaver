@@ -43,7 +43,7 @@ export default {
   },
 
   fixTypos: function (data: any) {
-    Object.keys(typos.topLevel).forEach(function (d: any) {
+    Object.keys(typos.topLevel).forEach(function (d: string) {
       if (Object.prototype.hasOwnProperty.call(data, d)) {
         this.warn('typo', d, typos.topLevel[d])
       }
@@ -121,7 +121,7 @@ export default {
       this.warn('nonArrayBundleDependencies')
       delete data[bd]
     } else if (data[bd]) {
-      data[bd] = data[bd].filter(function (filtered: any) {
+      data[bd] = data[bd].filter(function (filtered: string) {
         if (!filtered || typeof filtered !== 'string') {
           this.warn('nonStringBundleDependency', filtered)
           return false
@@ -144,7 +144,7 @@ export default {
     addOptionalDepsToDeps(data, this.warn)
     this.fixBundleDependenciesField(data)
 
-    ;['dependencies', 'devDependencies'].forEach(function (deps: string[]) {
+    ;['dependencies', 'devDependencies'].forEach(function (deps: any) {
       if (!(deps in data)) {
         return
       }
@@ -208,7 +208,7 @@ export default {
     return true
   },
 
-  fixPeople: function (data: Person) {
+  fixPeople: function (data: any) {
     modifyPeople(data, unParsePerson)
     modifyPeople(data, parsePerson)
   },
@@ -236,7 +236,7 @@ export default {
     }
   },
 
-  fixDescriptionField: function (data: any) {
+  fixDescriptionField: function (data: PackageJson) {
     if (data.description && typeof data.description !== 'string') {
       this.warn('nonStringDescription')
       delete data.description
@@ -302,7 +302,7 @@ export default {
     }
   },
 
-  fixHomepageField: function (data: any) {
+  fixHomepageField: function (data: PackageJson) {
     if (!data.homepage && data.repository && data.repository.url) {
       var hosted = hostedGitInfo.fromUrl(data.repository.url)
       if (hosted && hosted.docs()) {
@@ -323,7 +323,7 @@ export default {
     }
   },
 
-  fixLicenseField: function (data: any) {
+  fixLicenseField: function (data: PackageJson) {
     const license = data.license || data.licence
     if (!license) {
       return this.warn('missingLicense')
@@ -356,7 +356,7 @@ function isValidScopedPackageName (spec: string) {
     rest[1] === encodeURIComponent(rest[1])
 }
 
-function isCorrectlyEncodedName (spec: Spec) {
+function isCorrectlyEncodedName (spec: string) {
   return !spec.match(/[/@\s+%:]/) &&
     spec === encodeURIComponent(spec)
 }
@@ -371,7 +371,7 @@ function ensureValidName (name: string, strict: boolean, allowLegacyCase: boolea
   }
 }
 
-function modifyPeople (data: any, fn: Function) {
+function modifyPeople (data: any, fn: any) {
   if (data.author) {
     data.author = fn(data.author)
   }['maintainers', 'contributors'].forEach(function (set: string) {
@@ -415,7 +415,7 @@ function parsePerson (person: string) {
   return obj
 }
 
-function addOptionalDepsToDeps (data: any, warn: any) {
+function addOptionalDepsToDeps (data: PackageData, warn: Function) {
   var o = data.optionalDependencies
   if (!o) {
     return
@@ -427,7 +427,7 @@ function addOptionalDepsToDeps (data: any, warn: any) {
   data.dependencies = d
 }
 
-function depObjectify (deps: string[], type: string, warn: boolean) {
+function depObjectify (deps: string, type: string, warn: Function) {
   if (!deps) {
     return {}
   }
@@ -439,7 +439,7 @@ function depObjectify (deps: string[], type: string, warn: boolean) {
   }
   warn('deprecatedArrayDependencies', type)
   var o = {}
-  deps.filter(function (d: any) {
+  deps.filter(function (d: string) {
     return typeof d === 'string'
   }).forEach(function (d: string) {
     d = d.trim().split(/(:?[@\s><=])/)
@@ -452,7 +452,7 @@ function depObjectify (deps: string[], type: string, warn: boolean) {
   return o
 }
 
-function objectifyDeps (data: string, warn: Function) {
+function objectifyDeps (data: any, warn: Function) {
   depTypes.forEach(function (type: string) {
     if (!data[type]) {
       return
@@ -461,7 +461,7 @@ function objectifyDeps (data: string, warn: Function) {
   })
 }
 
-function bugsTypos (bugs: string[], warn: boolean) {
+function bugsTypos (bugs: Bugs, warn: WarnFunction) {
   if (!bugs) {
     return
   }

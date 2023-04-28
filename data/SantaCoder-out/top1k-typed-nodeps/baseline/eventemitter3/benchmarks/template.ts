@@ -15,7 +15,7 @@ var benchmark = require('benchmark');
 
 }).add('<test2>', function() {
 
-}).on('cycle', function cycle(e: Event) {
+}).on('cycle', function cycle(e: any) {
   console.log(e.target.toString());
 }).on('complete', function completed() {
   console.log('Fastest is %s', this.filter('fastest').map('name'));

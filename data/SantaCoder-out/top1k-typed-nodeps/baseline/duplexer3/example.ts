@@ -5,7 +5,7 @@ import duplexer from './index.js';
 const writable = new stream.Writable({objectMode: true});
 const readable = new stream.Readable({objectMode: true});
 
-writable._write = function (input: string, encoding: string, done: Function) {
+writable._write = function (input: string, encoding: string, done: any) {
 	if (readable.push(input)) {
 		return done();
 	}

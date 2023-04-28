@@ -88,7 +88,7 @@ export function handleMaybeThenable(promise: Promise<any>, maybeThenable: any, t
   }
 }
 
-export function resolve(promise: Promise<any>, value: any) {
+export function resolve(promise: Promise, value: any) {
   if (promise === value) {
     fulfill(promise, value);
   } else if (objectOrFunction(value)) {
@@ -105,7 +105,7 @@ export function resolve(promise: Promise<any>, value: any) {
   }
 }
 
-export function publishRejection(promise: Promise<any>) {
+export function publishRejection(promise: Promise) {
   if (promise._onError) {
     promise._onError(promise._result);
   }
@@ -113,7 +113,7 @@ export function publishRejection(promise: Promise<any>) {
   publish(promise);
 }
 
-export function fulfill(promise: Promise<any>, value: any) {
+export function fulfill(promise: Promise, value: any) {
   if (promise._state !== PENDING) { return; }
 
   promise._result = value;
@@ -128,14 +128,14 @@ export function fulfill(promise: Promise<any>, value: any) {
   }
 }
 
-export function reject(promise: Promise<any>, reason: any) {
+export function reject(promise: Promise, reason: any) {
   if (promise._state !== PENDING) { return; }
   promise._state = REJECTED;
   promise._result = reason;
   config.async(publishRejection, promise);
 }
 
-export function subscribe(parent: any, child: any, onFulfillment: any, onRejection: any) {
+export function subscribe(parent: Observable, child: Observable, onFulfillment: Function, onRejection: Function) {
   let subscribers = parent._subscribers;
   let length = subscribers.length;
 
@@ -176,7 +176,7 @@ export function publish(promise: Promise<any>) {
   promise._subscribers.length = 0;
 }
 
-export function invokeCallback(state: any, promise: any, callback: any, result: any) {
+export function invokeCallback(state: PromiseState, promise: Promise, callback: Function, result: any) {
   let hasCallback = typeof callback === 'function';
   let value, succeeded = true, error;
 

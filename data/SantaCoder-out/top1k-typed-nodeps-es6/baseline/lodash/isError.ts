@@ -18,7 +18,7 @@ import isPlainObject from './isPlainObject.js'
  * isError(Error)
  * // => false
  */
-function isError(value: any) {
+function isError(value: unknown) {
   if (!isObjectLike(value)) {
     return false
   }

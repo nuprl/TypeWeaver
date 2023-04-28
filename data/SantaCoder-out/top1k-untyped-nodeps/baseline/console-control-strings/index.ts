@@ -112,7 +112,7 @@ var colors = {
   bgBrightWhite: 107
 }
 
-exports.color = function color (colorWith: string) {
+exports.color = function color (colorWith: Array<string>) {
   if (arguments.length !== 1 || !Array.isArray(colorWith)) {
     colorWith = Array.prototype.slice.call(arguments)
   }

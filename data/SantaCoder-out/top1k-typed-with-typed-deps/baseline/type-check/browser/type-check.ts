@@ -34,7 +34,7 @@ require=(function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c=
     },
     Date: {
       typeOf: 'Date',
-      validate: function(it: Date){
+      validate: function(it: any){
         return !isItNaN(it.getTime());
       }
     }
@@ -43,7 +43,7 @@ require=(function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c=
     array: 'Array',
     tuple: 'Array'
   };
-  function checkArray(input: any, type: string, options: any){
+  function checkArray(input: any, type: any, options: any){
     return all(function(it: any){
       return checkMultiple(it, type.of, options);
     }, input);
@@ -60,7 +60,7 @@ require=(function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c=
     }
     return input.length <= i;
   }
-  function checkFields(input: string, type: string, options: any){
+  function checkFields(input: Object, type: Object, options: Object){
     var inputKeys, numInputKeys, k, numOfKeys, key, ref$, types;
     inputKeys = {};
     numInputKeys = 0;
@@ -80,7 +80,7 @@ require=(function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c=
     }
     return type.subset || numInputKeys === numOfKeys;
   }
-  function checkStructure(input: any, type: string, options: any){
+  function checkStructure(input: any, type: any, options: any){
     if (!(input instanceof Object)) {
       return false;
     }
@@ -125,7 +125,7 @@ require=(function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c=
       return check(input, it, options);
     }, types);
   }
-  module.exports = function(parsedType: string, input: any, options: any){
+  module.exports = function(parsedType: Object, input: Object, options: Object){
     options == null && (options = {});
     if (options.customTypes == null) {
       options.customTypes = {};
@@ -139,7 +139,7 @@ require=(function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c=
 (function(){
   var identifierRegex, tokenRegex;
   identifierRegex = /[\$\w]+/;
-  function peek(tokens: Array<Token>){
+  function peek(tokens: Array<string>){
     var token;
     token = tokens[0];
     if (token == null) {
@@ -147,7 +147,7 @@ require=(function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c=
     }
     return token;
   }
-  function consumeIdent(tokens: Token[]){
+  function consumeIdent(tokens: Array<string>){
     var token;
     token = peek(tokens);
     if (!identifierRegex.test(token)) {
@@ -155,7 +155,7 @@ require=(function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c=
     }
     return tokens.shift();
   }
-  function consumeOp(tokens: Array<Token>, op: string){
+  function consumeOp(tokens: Array<string>, op: string){
     var token;
     token = peek(tokens);
     if (token !== op) {
@@ -163,7 +163,7 @@ require=(function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c=
     }
     return tokens.shift();
   }
-  function maybeConsumeOp(tokens: Array<Token>, op: string){
+  function maybeConsumeOp(tokens: Array<string>, op: string){
     var token;
     token = tokens[0];
     if (token === op) {
@@ -172,7 +172,7 @@ require=(function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c=
       return null;
     }
   }
-  function consumeArray(tokens: Array<Token>){
+  function consumeArray(tokens: Array<string>){
     var types;
     consumeOp(tokens, '[');
     if (peek(tokens) === ']') {
@@ -205,7 +205,7 @@ require=(function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c=
       of: components
     };
   }
-  function consumeFields(tokens: Token[]){
+  function consumeFields(tokens: Array<any>){
     var fields, subset, ref$, key, types;
     fields = {};
     consumeOp(tokens, '{');
@@ -229,14 +229,14 @@ require=(function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c=
       subset: subset
     };
   }
-  function consumeField(tokens: Array<string>){
+  function consumeField(tokens: Token[]){
     var key, types;
     key = consumeIdent(tokens);
     consumeOp(tokens, ':');
     types = consumeTypes(tokens);
     return [key, types];
   }
-  function maybeConsumeStructure(tokens: string[]){
+  function maybeConsumeStructure(tokens: Array<Token>){
     switch (tokens[0]) {
     case '[':
       return consumeArray(tokens);
@@ -246,7 +246,7 @@ require=(function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c=
       return consumeFields(tokens);
     }
   }
-  function consumeType(tokens: Token[]){
+  function consumeType(tokens: TokenStream){
     var token, wildcard, type, structure;
     token = peek(tokens);
     wildcard = token === '*';
@@ -270,7 +270,7 @@ require=(function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c=
       return structure;
     }
   }
-  function consumeTypes(tokens: Token[]){
+  function consumeTypes(tokens: Array<string>){
     var lookahead, types, typesSoFar, typeObj, type, structure;
     if ('::' === peek(tokens)) {
       throw new Error("No comment before comment separator '::' found.");
@@ -327,7 +327,7 @@ require=(function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c=
       throw new Error(e.message + " - Remaining tokens: " + JSON.stringify(tokens) + " - Initial input: '" + input + "'");
     }
   };
-  function in$(x: T, xs: T[]){
+  function in$(x: any, xs: Array<any>){
     var i = -1, l = xs.length >>> 0;
     while (++i < l) if (x === xs[i]) return true;
     return false;
@@ -346,12 +346,12 @@ curry = function(f: Function){
 flip = curry$(function(f: Function, x: any, y: any){
   return f(y, x);
 });
-fix = function(f: any){
-  return function(g: Graph){
+fix = function(f: Function){
+  return function(g: Function){
     return function(){
       return f(g(g)).apply(null, arguments);
     };
-  }(function(g: Graph){
+  }(function(g: Function){
     return function(){
       return f(g(g)).apply(null, arguments);
     };
@@ -391,7 +391,7 @@ module.exports = {
   over: over,
   memoize: memoize
 };
-function curry$(f: Function, bound: Array){
+function curry$(f: Function, bound: Object){
   var context,
   _curry = function(args: any[]) {
     return f.length > 1 ? function(){
@@ -505,7 +505,7 @@ empty = function(xs: Array<any>){
 reverse = function(xs: Array<T>){
   return xs.concat().reverse();
 };
-unique = function(xs: any[]){
+unique = function(xs: Array<any>){
   var result, i$, len$, x;
   result = [];
   for (i$ = 0, len$ = xs.length; i$ < len$; ++i$) {
@@ -549,7 +549,7 @@ foldr = curry$(function(f: Function, memo: any, xs: Array<any>){
   }
   return memo;
 });
-foldr1 = curry$(function(f: any, xs: any){
+foldr1 = curry$(function(f: Function, xs: Array<any>){
   return foldr(f, xs[xs.length - 1], xs.slice(0, -1));
 });
 unfoldr = curry$(function(f: any, b: any){
@@ -562,10 +562,10 @@ unfoldr = curry$(function(f: any, b: any){
   }
   return result;
 });
-concat = function(xss: Array<Array<any>>){
+concat = function(xss: any){
   return [].concat.apply([], xss);
 };
-concatMap = curry$(function(f: any, xs: any){
+concatMap = curry$(function(f: Function, xs: Array<any>){
   var x;
   return [].concat.apply([], (function(){
     var i$, ref$, len$, results$ = [];
@@ -576,7 +576,7 @@ concatMap = curry$(function(f: any, xs: any){
     return results$;
   }()));
 });
-flatten = function(xs: Array<Array<T>>){
+flatten = function(xs: Array<any>){
   var x;
   return [].concat.apply([], (function(){
     var i$, ref$, len$, results$ = [];
@@ -591,7 +591,7 @@ flatten = function(xs: Array<Array<T>>){
     return results$;
   }()));
 };
-difference = function(xs: List[A]){
+difference = function(xs: Array<T>){
   var yss, res$, i$, to$, results, len$, x, j$, len1$, ys;
   res$ = [];
   for (i$ = 1, to$ = arguments.length; i$ < to$; ++i$) {
@@ -611,7 +611,7 @@ difference = function(xs: List[A]){
   }
   return results;
 };
-intersection = function(xs: List[A]){
+intersection = function(xs: Array<any>){
   var yss, res$, i$, to$, results, len$, x, j$, len1$, ys;
   res$ = [];
   for (i$ = 1, to$ = arguments.length; i$ < to$; ++i$) {
@@ -678,7 +678,7 @@ groupBy = curry$(function(f: Function, xs: Array<any>){
   }
   return results;
 });
-andList = function(xs: any[]){
+andList = function(xs: Array<any>){
   var i$, len$, x;
   for (i$ = 0, len$ = xs.length; i$ < len$; ++i$) {
     x = xs[i$];
@@ -688,7 +688,7 @@ andList = function(xs: any[]){
   }
   return true;
 };
-orList = function(xs: Array<T>){
+orList = function(xs: Array<any>){
   var i$, len$, x;
   for (i$ = 0, len$ = xs.length; i$ < len$; ++i$) {
     x = xs[i$];
@@ -698,7 +698,7 @@ orList = function(xs: Array<T>){
   }
   return false;
 };
-any = curry$(function(f: Function, xs: Array<any>){
+any = curry$(function(f: Function, xs: Array){
   var i$, len$, x;
   for (i$ = 0, len$ = xs.length; i$ < len$; ++i$) {
     x = xs[i$];
@@ -718,8 +718,8 @@ all = curry$(function(f: Function, xs: Array<any>){
   }
   return true;
 });
-sort = function(xs: Array<T>){
-  return xs.concat().sort(function(x: number, y: number){
+sort = function(xs: Array<any>){
+  return xs.concat().sort(function(x: any, y: any){
     if (x > y) {
       return 1;
     } else if (x < y) {
@@ -732,8 +732,8 @@ sort = function(xs: Array<T>){
 sortWith = curry$(function(f: Function, xs: Array<any>){
   return xs.concat().sort(f);
 });
-sortBy = curry$(function(f: any, xs: any){
-  return xs.concat().sort(function(x: T, y: T){
+sortBy = curry$(function(f: Function, xs: Array<any>){
+  return xs.concat().sort(function(x: number, y: number){
     if (f(x) > f(y)) {
       return 1;
     } else if (f(x) < f(y)) {
@@ -752,7 +752,7 @@ sum = function(xs: Array<number>){
   }
   return result;
 };
-product = function(xs: Array<T>){
+product = function(xs: Array<number>){
   var result, i$, len$, x;
   result = 1;
   for (i$ = 0, len$ = xs.length; i$ < len$; ++i$) {
@@ -781,7 +781,7 @@ maximum = function(xs: Array<number>){
   }
   return max;
 };
-minimum = function(xs: any[]){
+minimum = function(xs: Array<number>){
   var min, i$, ref$, len$, x;
   min = xs[0];
   for (i$ = 0, len$ = (ref$ = xs.slice(1)).length; i$ < len$; ++i$) {
@@ -826,7 +826,7 @@ scan = scanl = curry$(function(f: Function, memo: any, xs: Array<any>){
     return results$;
   }()));
 });
-scan1 = scanl1 = curry$(function(f: any, xs: any){
+scan1 = scanl1 = curry$(function(f: Function, xs: Array<any>){
   if (!xs.length) {
     return;
   }
@@ -836,31 +836,31 @@ scanr = curry$(function(f: Function, memo: any, xs: Array<any>){
   xs = xs.concat().reverse();
   return scan(f, memo, xs).reverse();
 });
-scanr1 = curry$(function(f: any, xs: any){
+scanr1 = curry$(function(f: Function, xs: Array<any>){
   if (!xs.length) {
     return;
   }
   xs = xs.concat().reverse();
   return scan(f, xs[0], xs.slice(1)).reverse();
 });
-slice = curry$(function(x: number, y: number, xs: number[]){
+slice = curry$(function(x: any, y: any, xs: any){
   return xs.slice(x, y);
 });
-take = curry$(function(n: number, xs: any[]){
+take = curry$(function(n: number, xs: Array<any>){
   if (n <= 0) {
     return xs.slice(0, 0);
   } else {
     return xs.slice(0, n);
   }
 });
-drop = curry$(function(n: number, xs: T[]){
+drop = curry$(function(n: number, xs: Array<any>){
   if (n <= 0) {
     return xs;
   } else {
     return xs.slice(n);
   }
 });
-splitAt = curry$(function(n: Number, xs: List){
+splitAt = curry$(function(n: number, xs: Array<any>){
   return [take(n, xs), drop(n, xs)];
 });
 takeWhile = curry$(function(p: any, xs: any){
@@ -875,7 +875,7 @@ takeWhile = curry$(function(p: any, xs: any){
   }
   return xs.slice(0, i);
 });
-dropWhile = curry$(function(p: number, xs: any[]){
+dropWhile = curry$(function(p: any, xs: any){
   var len, i;
   len = xs.length;
   if (!len) {
@@ -893,7 +893,7 @@ span = curry$(function(p: any, xs: any){
 breakList = curry$(function(p: any, xs: any){
   return span(compose$(p, not$), xs);
 });
-zip = curry$(function(xs: Array<T>, ys: Array<T>){
+zip = curry$(function(xs: Array<any>, ys: Array<any>){
   var result, len, i$, len$, i, x;
   result = [];
   len = ys.length;
@@ -970,14 +970,14 @@ zipAllWith = function(f: Function){
     return results$;
   }
 };
-at = curry$(function(n: number, xs: any[]){
+at = curry$(function(n: number, xs: Array<any>){
   if (n < 0) {
     return xs[xs.length + n];
   } else {
     return xs[n];
   }
 });
-elemIndex = curry$(function(el: HTMLElement, xs: any[]){
+elemIndex = curry$(function(el: any, xs: any){
   var i$, len$, i, x;
   for (i$ = 0, len$ = xs.length; i$ < len$; ++i$) {
     i = i$;
@@ -987,7 +987,7 @@ elemIndex = curry$(function(el: HTMLElement, xs: any[]){
     }
   }
 });
-elemIndices = curry$(function(el: HTMLElement, xs: any[]){
+elemIndices = curry$(function(el: any, xs: any){
   var i$, len$, i, x, results$ = [];
   for (i$ = 0, len$ = xs.length; i$ < len$; ++i$) {
     i = i$;
@@ -1091,9 +1091,9 @@ module.exports = {
   findIndex: findIndex,
   findIndices: findIndices
 };
-function curry$(f: Function, bound: Array<any>){
+function curry$(f: Function, bound: Object){
   var context,
-  _curry = function(args: any[]) {
+  _curry = function(args: Array<any>) {
     return f.length > 1 ? function(){
       var params = args ? args.concat() : [];
       context = bound ? context || this : this;
@@ -1104,7 +1104,7 @@ function curry$(f: Function, bound: Array<any>){
   };
   return _curry();
 }
-function in$(x: T, xs: T[]){
+function in$(x: any, xs: any[]){
   var i = -1, l = xs.length >>> 0;
   while (++i < l) if (x === xs[i]) return true;
   return false;
@@ -1124,7 +1124,7 @@ function not$(x: any){ return !x; }
 },{}],5:[function(require: any,module: any,exports: any){
 // Generated by LiveScript 1.6.0
 var max, min, negate, abs, signum, quot, rem, div, mod, recip, pi, tau, exp, sqrt, ln, pow, sin, tan, cos, asin, acos, atan, atan2, truncate, round, ceiling, floor, isItNaN, even, odd, gcd, lcm;
-max = curry$(function(x$: Observable<number>, y$: Observable<number>){
+max = curry$(function(x$: y$, y$: z$){
   return x$ > y$ ? x$ : y$;
 });
 min = curry$(function(x$: number, y$: number){
@@ -1152,11 +1152,11 @@ rem = curry$(function(x$: number, y$: number){
 div = curry$(function(x: number, y: number){
   return Math.floor(x / y);
 });
-mod = curry$(function(x$: Observable<any>, y$: Observable<any>){
+mod = curry$(function(x$: number, y$: number){
   var ref$;
   return ((x$) % (ref$ = y$) + ref$) % ref$;
 });
-recip = (function(it: number){
+recip = (function(it: any){
   return 1 / it;
 });
 pi = Math.PI;
@@ -1164,7 +1164,7 @@ tau = pi * 2;
 exp = Math.exp;
 sqrt = Math.sqrt;
 ln = Math.log;
-pow = curry$(function(x$: number, y$: number){
+pow = curry$(function(x$: Observable, y$: Observable){
   return Math.pow(x$, y$);
 });
 sin = Math.sin;
@@ -1191,7 +1191,7 @@ even = function(x: number){
 odd = function(x: number){
   return x % 2 !== 0;
 };
-gcd = curry$(function(x: number, y: number){
+gcd = curry$(function(x: Number, y: Number){
   var z;
   x = Math.abs(x);
   y = Math.abs(y);
@@ -1239,7 +1239,7 @@ module.exports = {
   gcd: gcd,
   lcm: lcm
 };
-function curry$(f: Function, bound: Array){
+function curry$(f: Function, bound: Object){
   var context,
   _curry = function(args: any[]) {
     return f.length > 1 ? function(){
@@ -1255,7 +1255,7 @@ function curry$(f: Function, bound: Array){
 },{}],6:[function(require: any,module: any,exports: any){
 // Generated by LiveScript 1.6.0
 var values, keys, pairsToObj, objToPairs, listsToObj, objToLists, empty, each, map, compact, filter, reject, partition, find;
-values = function(object: any){
+values = function(object: Object){
   var i$, x, results$ = [];
   for (i$ in object) {
     x = object[i$];
@@ -1270,7 +1270,7 @@ keys = function(object: Object){
   }
   return results$;
 };
-pairsToObj = function(object: any){
+pairsToObj = function(object: Object){
   var i$, len$, x, resultObj$ = {};
   for (i$ = 0, len$ = object.length; i$ < len$; ++i$) {
     x = object[i$];
@@ -1278,7 +1278,7 @@ pairsToObj = function(object: any){
   }
   return resultObj$;
 };
-objToPairs = function(object: any){
+objToPairs = function(object: Object){
   var key, value, results$ = [];
   for (key in object) {
     value = object[key];
@@ -1286,7 +1286,7 @@ objToPairs = function(object: any){
   }
   return results$;
 };
-listsToObj = curry$(function(keys: any[], values: any[]){
+listsToObj = curry$(function(keys: Array<string>, values: Array<any>){
   var i$, len$, i, key, resultObj$ = {};
   for (i$ = 0, len$ = keys.length; i$ < len$; ++i$) {
     i = i$;
@@ -1295,7 +1295,7 @@ listsToObj = curry$(function(keys: any[], values: any[]){
   }
   return resultObj$;
 });
-objToLists = function(object: any){
+objToLists = function(object: Object){
   var keys, values, key, value;
   keys = [];
   values = [];
@@ -1329,7 +1329,7 @@ map = curry$(function(f: Function, object: Object){
   }
   return resultObj$;
 });
-compact = function(object: any){
+compact = function(object: Object){
   var k, x, resultObj$ = {};
   for (k in object) {
     x = object[k];
@@ -1394,9 +1394,9 @@ module.exports = {
   partition: partition,
   find: find
 };
-function curry$(f: Function, bound: Array<any>){
+function curry$(f: Function, bound: Object){
   var context,
-  _curry = function(args: any[]) {
+  _curry = function(args: Array<any>) {
     return f.length > 1 ? function(){
       var params = args ? args.concat() : [];
       context = bound ? context || this : this;
@@ -1410,10 +1410,10 @@ function curry$(f: Function, bound: Array<any>){
 },{}],7:[function(require: any,module: any,exports: any){
 // Generated by LiveScript 1.6.0
 var split, join, lines, unlines, words, unwords, chars, unchars, reverse, repeat, capitalize, camelize, dasherize;
-split = curry$(function(sep: string, str: string){
+split = curry$(function(sep: String, str: String){
   return str.split(sep);
 });
-join = curry$(function(sep: string, xs: string[]){
+join = curry$(function(sep: string, xs: Array<string>){
   return xs.join(sep);
 });
 lines = function(str: string){
@@ -1434,16 +1434,16 @@ words = function(str: string){
 unwords = function(it: any){
   return it.join(' ');
 };
-chars = function(it: string){
+chars = function(it: any){
   return it.split('');
 };
-unchars = function(it: string[]){
+unchars = function(it: any){
   return it.join('');
 };
-reverse = function(str: string){
+reverse = function(str: String){
   return str.split('').reverse().join('');
 };
-repeat = curry$(function(n: number, str: string){
+repeat = curry$(function(n: Number, str: String){
   var result, i$;
   result = '';
   for (i$ = 0; i$ < n; ++i$) {
@@ -1455,16 +1455,16 @@ capitalize = function(str: string){
   return str.charAt(0).toUpperCase() + str.slice(1);
 };
 camelize = function(it: string){
-  return it.replace(/[-_]+(.)?/g, function(arg$: any, c: any){
+  return it.replace(/[-_]+(.)?/g, function(arg$: lower, c: upper){
     return (c != null ? c : '').toUpperCase();
   });
 };
 dasherize = function(str: string){
-  return str.replace(/([^-A-Z])([A-Z]+)/g, function(arg$: number, lower: number, upper: number){
+  return str.replace(/([^-A-Z])([A-Z]+)/g, function(arg$: upper, lower: lower, upper: upper){
     return lower + "-" + (upper.length > 1
       ? upper
       : upper.toLowerCase());
-  }).replace(/^([A-Z]+)/, function(arg$: string, upper: string){
+  }).replace(/^([A-Z]+)/, function(arg$: String, upper: String){
     if (upper.length > 1) {
       return upper + "-";
     } else {
@@ -1487,7 +1487,7 @@ module.exports = {
   camelize: camelize,
   dasherize: dasherize
 };
-function curry$(f: Function, bound: Array){
+function curry$(f: Function, bound: Object){
   var context,
   _curry = function(args: any[]) {
     return f.length > 1 ? function(){
@@ -1511,10 +1511,10 @@ Num = require('./Num.js');
 id = function(x: any){
   return x;
 };
-isType = curry$(function(type: string, x: number){
+isType = curry$(function(type: String, x: Any){
   return toString$.call(x).slice(8, -1) === type;
 });
-replicate = curry$(function(n: number, x: number){
+replicate = curry$(function(n: Int, x: a){
   var i$, results$ = [];
   for (i$ = 0; i$ < n; ++i$) {
     results$.push(x);
@@ -1666,7 +1666,7 @@ prelude.gcd = Num.gcd;
 prelude.lcm = Num.lcm;
 prelude.VERSION = '1.2.1';
 module.exports = prelude;
-function curry$(f: Function, bound: Array){
+function curry$(f: Function, bound: Object){
   var context,
   _curry = function(args: any[]) {
     return f.length > 1 ? function(){
@@ -1686,7 +1686,7 @@ function curry$(f: Function, bound: Array){
   VERSION = '0.4.0';
   parseType = require('./parse-type');
   parsedTypeCheck = require('./check');
-  typeCheck = function(type: string, input: string, options: any){
+  typeCheck = function(type: string, input: any, options: any){
     return parsedTypeCheck(parseType(type), input, options);
   };
   module.exports = {

@@ -24,7 +24,7 @@ SOFTWARE.
 
 'use strict';
 
-module.exports = function(flag: boolean, argv: string[]) {
+module.exports = function(flag: string, argv: string[]) {
   argv = argv || process.argv;
 
   var terminatorPos = argv.indexOf('--');

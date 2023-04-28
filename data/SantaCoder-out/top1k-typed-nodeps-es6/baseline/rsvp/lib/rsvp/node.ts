@@ -16,7 +16,7 @@ function makeObject(_: any, argumentNames: string[]) {
   return obj;
 }
 
-function arrayResult(_: any[]) {
+function arrayResult(_: any) {
   let length = _.length;
   let args = new Array(length - 1);
 
@@ -121,7 +121,7 @@ function wrapThenable(then: Function, promise: Promise<any>) {
   ```javascript
   let fs = require('fs');
 
-  fs.readFile('myfile.txt', function(err: Error, data: string){
+  fs.readFile('myfile.txt', function(err: Error, data: Buffer){
     if (err) { ... } // Handle error
     fs.writeFile('myfile2.txt', data, function(err: any){
       if (err) { ... } // Handle error
@@ -153,7 +153,7 @@ function wrapThenable(then: Function, promise: Promise<any>) {
   @param {Function} nodeFunc a 'node-style' function that takes a callback as
   its last argument. The callback expects an error to be passed as its first
   argument (if an error occurred, otherwise null), and the value from the
-  operation as its second argument ('function(err: any, value: any){ }').
+  operation as its second argument ('function(err: Error, value: T){ }').
   @param {Boolean|Array} [options] An optional paramter that if set
   to `true` causes the promise to fulfill with the callback's success arguments
   as an array. This is useful if the node function has multiple success
@@ -233,7 +233,7 @@ function handleValueInput(promise: Promise<any>, args: any[], nodeFunc: Function
   return promise;
 }
 
-function handlePromiseInput(promise: Promise<any>, args: any[], nodeFunc: Function, self: any){
+function handlePromiseInput(promise: Promise<any>, args: any[], nodeFunc: NodeFunction, self: any){
   return Promise.all(args)
     .then(args => handleValueInput(promise, args, nodeFunc, self));
 }

@@ -230,7 +230,7 @@ const trim = (str) => str.trim ?
  * @param {Boolean} [allOwnKeys = false]
  * @returns {void}
  */
-function forEach(obj: any, fn: Function, {allOwnKeys = false} = {}: any) {
+function forEach(obj: any, fn: Function, {allOwnKeys = false} = {}: Object) {
   // Don't bother if no value provided
   if (obj === null || typeof obj === 'undefined') {
     return;

@@ -102,7 +102,7 @@ export const captureExit = function() {
 
 export const _handlers = handlers;
 
-export const _flush = function(lastTime: number, code: string) {
+export const _flush = function(lastTime: number, code: number) {
   isExiting = true;
   var work = handlers.splice(0, handlers.length);
 
@@ -116,7 +116,7 @@ export const _flush = function(lastTime: number, code: string) {
           }
           throw e;
         });
-      })).then(function(results: any) {
+      })).then(function(results: any[]) {
         if (firstRejected) {
           throw firstRejected;
         }

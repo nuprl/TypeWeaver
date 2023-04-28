@@ -30,7 +30,7 @@ export default {
   },
 };
 
-function shouldUnescape(path: string, hasXFlag: boolean) {
+function shouldUnescape(path: NodePath<Node>, hasXFlag: boolean) {
   const {
     node: {value},
     index,
@@ -48,7 +48,7 @@ function shouldUnescape(path: string, hasXFlag: boolean) {
 /**
  * \], \\, \^, \-
  */
-function preservesInCharClass(value: string, index: number, parent: RegExp) {
+function preservesInCharClass(value: string, index: number, parent: Node) {
   if (value === '^') {
     // Avoid [\^a] turning into [^a]
     return index === 0 && !parent.negative;
@@ -96,7 +96,7 @@ function consumeNumbers(startIndex: number, parent: Node, rtl: boolean) {
   return Math.abs(startIndex - i);
 }
 
-function isSimpleChar(node: Node, value: string) {
+function isSimpleChar(node: Char, value: string) {
   return (
     node &&
     node.type === 'Char' &&

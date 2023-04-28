@@ -2,7 +2,7 @@
 
 var valid_styles = ['normal', 'italic', 'oblique', 'inherit'];
 
-module.exports.isValid = function(v: any) {
+module.exports.isValid = function(v: string) {
   return valid_styles.indexOf(v.toLowerCase()) !== -1;
 };
 

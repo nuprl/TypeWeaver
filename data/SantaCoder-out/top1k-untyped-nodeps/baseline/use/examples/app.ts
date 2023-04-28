@@ -2,7 +2,7 @@
 var util = require('util');
 var plugins = require('base-plugins');
 
-function Factory(config: Config) {
+function Factory(config: any) {
   this.use = function(fn: Function) {
     fn.call(this, this);
     return this;

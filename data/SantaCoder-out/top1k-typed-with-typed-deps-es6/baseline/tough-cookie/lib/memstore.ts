@@ -73,7 +73,7 @@ class MemoryCookieStore extends Store {
     let pathMatcher;
     if (!path) {
       // null means "all paths"
-      pathMatcher = function matchAll(domainIndex: number) {
+      pathMatcher = function matchAll(domainIndex: DomainIndex) {
         for (const curPath in domainIndex) {
           const pathIndex = domainIndex[curPath];
           for (const key in pathIndex) {
@@ -82,7 +82,7 @@ class MemoryCookieStore extends Store {
         }
       };
     } else {
-      pathMatcher = function matchRFC(domainIndex: number) {
+      pathMatcher = function matchRFC(domainIndex: DomainIndex) {
         //NOTE: we should use path-match algorithm from S5.1.4 here
         //(see : https://github.com/ChromiumWebApps/chromium/blob/b3d3b4da8bb94c1b2e061600df106d590fda3620/net/cookies/canonical_cookie.cc#L299)
         Object.keys(domainIndex).forEach(cookiePath => {
@@ -210,7 +210,7 @@ function inspectFallback(val: any) {
   return result;
 }
 
-function formatDomain(domainName: string, domainValue: string) {
+function formatDomain(domainName: string, domainValue: DomainValue) {
   const indent = "  ";
   let result = `${indent}'${domainName}': {\n`;
   Object.keys(domainValue).forEach((path, i, paths) => {
@@ -224,7 +224,7 @@ function formatDomain(domainName: string, domainValue: string) {
   return result;
 }
 
-function formatPath(pathName: string, pathValue: string) {
+function formatPath(pathName: string, pathValue: CookieMap) {
   const indent = "    ";
   let result = `${indent}'${pathName}': {\n`;
   Object.keys(pathValue).forEach((cookieName, i, cookieNames) => {

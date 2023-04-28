@@ -559,7 +559,7 @@ function expect(value: any, name: string) {
   assert(value, 'expected ' + name + ' to be an instance of Node');
 }
 
-function hasOwn(obj: any, prop: string) {
+function hasOwn(obj: Object, prop: string) {
   return Object.hasOwnProperty.call(obj, prop);
 }
 
@@ -686,12 +686,12 @@ function cloneDeep(value: any) {
   }
 }
 
-function visit(node: Node, fn: any) {
+function visit(node: Node, fn: Function) {
   fn(node);
   return node.nodes ? mapVisit(node, fn) : node;
 }
 
-function mapVisit(node: Node, fn: any) {
+function mapVisit(node: Node, fn: Function) {
   node.nodes.forEach(n => visit(n, fn));
   return node;
 }

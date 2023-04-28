@@ -9,10 +9,10 @@ var request = require('request'),
 exports.getFile = function(url: string, cb: any) {
     var sourceDataFolder = path.join(__dirname, "source-data");
     var fullpath = path.join(sourceDataFolder, path.basename(url));
-    fs.readFile(fullpath, "utf8", function(err: any, text: string) {
+    fs.readFile(fullpath, "utf8", function(err: Error, text: string) {
         if (!err) return cb(null, text);
         if (err.code != "ENOENT") return cb(err);
-        request(url, errTo(cb, function(res: any, buf: any) {
+        request(url, errTo(cb, function(res: any, buf: Buffer) {
             fs.mkdir(sourceDataFolder, function(err: any) {
                 if (err && err.code != "EEXIST") return cb(err);
                 fs.writeFile(fullpath, buf, errTo(cb, function() {
@@ -36,7 +36,7 @@ exports.parseText = function(text: string, splitChar: string) {
 // so we emit surrogates when needed. Also, some character codes are actually
 // sequences (arrays) - we emit them prepended with U+0FFF-(length-2).
 // U+0FFF was chosen because it's small and unassigned, as well as 32 chars before it
-function arrToStr(arr: any[]) {
+function arrToStr(arr: Array<any>) {
     var s = '';
     for (var i = 0; i < arr.length; i++)
         if (Array.isArray(arr[i])) {
@@ -64,7 +64,7 @@ function arrToStr(arr: any[]) {
 // [0] = address of start of the chunk, hex string.
 // <str> - characters of the chunk.
 // <num> - increasing sequence of the length num, starting with prev character.
-exports.generateTable = function(dbcs: string, maxBytes: number) {
+exports.generateTable = function(dbcs: Object, maxBytes: Number) {
     var minSeqLen = 4;
     var table = [], range, block, seqLen;
     var max = 1 << ((maxBytes || 2) * 8);
@@ -105,10 +105,10 @@ exports.generateTable = function(dbcs: string, maxBytes: number) {
 }
 
 
-exports.writeTable = function(name: string, table: any) {
+exports.writeTable = function(name: string, table: Array<any>) {
     this.writeFile(name, "[\n" + table.map(function(a: any) {return JSON.stringify(a);}).join(",\n") + "\n]\n");
 }
 
-exports.writeFile = function(name: string, body: any) {
+exports.writeFile = function(name: string, body: string) {
     fs.writeFileSync(path.join(__dirname, "../encodings/tables", name + ".json"), body);
 }

@@ -2,7 +2,7 @@
 
 var isNative = /\.node$/;
 
-function forEach(obj: Object, callback: Function) {
+function forEach(obj: any, callback: Function) {
     for ( var key in obj ) {
         if (!Object.prototype.hasOwnProperty.call(obj, key)) {
             continue;
@@ -26,7 +26,7 @@ function clearCache(requireCache: any) {
     });
 }
 
-module.exports = function (requireCache: RequireCache, callback: Function, callbackForModulesToKeep: any, module: any) {
+module.exports = function (requireCache: any, callback: any, callbackForModulesToKeep: any, module: any) {
 
     var originalCache = assign({}, requireCache);
     clearCache(requireCache);

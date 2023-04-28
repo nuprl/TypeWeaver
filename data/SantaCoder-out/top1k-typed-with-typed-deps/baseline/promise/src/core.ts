@@ -32,7 +32,7 @@ function getThen(obj: any) {
   }
 }
 
-function tryCallOne(fn: any, a: any) {
+function tryCallOne(fn: Function, a: any) {
   try {
     return fn(a);
   } catch (ex) {
@@ -40,7 +40,7 @@ function tryCallOne(fn: any, a: any) {
     return IS_ERROR;
   }
 }
-function tryCallTwo(fn: Function, a: any, b: any) {
+function tryCallTwo(fn: any, a: any, b: any) {
   try {
     fn(a, b);
   } catch (ex) {
@@ -78,8 +78,8 @@ Promise.prototype.then = function(onFulfilled: any, onRejected: any) {
   return res;
 };
 
-function safeThen(self: Promise<any>, onFulfilled: any, onRejected: any) {
-  return new self.constructor(function (resolve: Function, reject: Function) {
+function safeThen(self: Promise, onFulfilled: any, onRejected: any) {
+  return new self.constructor(function (resolve: any, reject: any) {
     var res = new Promise(noop);
     res.then(resolve, reject);
     handle(self, new Handler(onFulfilled, onRejected, res));
@@ -109,7 +109,7 @@ function handle(self: Promise, deferred: Deferred) {
   handleResolved(self, deferred);
 }
 
-function handleResolved(self: Deferred<T>, deferred: Deferred<T>) {
+function handleResolved(self: Promise, deferred: Deferred) {
   asap(function() {
     var cb = self._state === 1 ? deferred.onFulfilled : deferred.onRejected;
     if (cb === null) {
@@ -128,7 +128,7 @@ function handleResolved(self: Deferred<T>, deferred: Deferred<T>) {
     }
   });
 }
-function resolve(self: any, newValue: any) {
+function resolve(self: Promise<T>, newValue: T) {
   // Promise Resolution Procedure: https://github.com/promises-aplus/promises-spec#the-promise-resolution-procedure
   if (newValue === self) {
     return reject(
@@ -170,7 +170,7 @@ function reject(self: Promise, newValue: any) {
   }
   finale(self);
 }
-function finale(self: Promise<any>) {
+function finale(self: Promise) {
   if (self._deferredState === 1) {
     handle(self, self._deferreds);
     self._deferreds = null;
@@ -197,7 +197,7 @@ function Handler(onFulfilled: Function, onRejected: Function, promise: Promise){
  */
 function doResolve(fn: Function, promise: any) {
   var done = false;
-  var res = tryCallTwo(fn, function (value: T) {
+  var res = tryCallTwo(fn, function (value: any) {
     if (done) return;
     done = true;
     resolve(promise, value);

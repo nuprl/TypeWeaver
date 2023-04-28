@@ -9,7 +9,7 @@ import keys from '../keys.js'
  * @param {Function} iteratee The function invoked per iteration.
  * @returns {Object} Returns `object`.
  */
-function baseForOwnRight(object: any, iteratee: any) {
+function baseForOwnRight(object: any, iteratee: Function) {
   return object && baseForRight(object, iteratee, keys)
 }
 

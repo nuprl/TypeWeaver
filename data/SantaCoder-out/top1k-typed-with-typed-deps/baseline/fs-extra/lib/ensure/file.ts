@@ -5,7 +5,7 @@ const path = require('path')
 const fs = require('graceful-fs')
 const mkdir = require('../mkdirs')
 
-function createFile (file: File, callback: Function) {
+function createFile (file: string, callback: any) {
   function makeFile () {
     fs.writeFile(file, '', err => {
       if (err) return callback(err)

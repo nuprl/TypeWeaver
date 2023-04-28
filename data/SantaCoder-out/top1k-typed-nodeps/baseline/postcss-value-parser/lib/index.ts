@@ -2,7 +2,7 @@ var parse = require("./parse");
 var walk = require("./walk");
 var stringify = require("./stringify");
 
-function ValueParser(value: any) {
+function ValueParser(value: string) {
   if (this instanceof ValueParser) {
     this.nodes = parse(value);
     return this;

@@ -8,8 +8,8 @@ var write = require('./lib/write')
 var URL = 'https://svn.apache.org/repos/asf/httpd/httpd/trunk/modules/http/http_protocol.c'
 var HEADERS = { 'User-Agent': 'nodejs/' + process.version + ' (' + process.platform + ', npm:statuses)' }
 
-https.get(URL, { headers: HEADERS }, function onResponse (res: Response) {
-  getBody(res, true, function (err: any, body: any) {
+https.get(URL, { headers: HEADERS }, function onResponse (res: IncomingMessage) {
+  getBody(res, true, function (err: any, body: string) {
     if (err) throw err
 
     var block = /status_lines\[[^\]]*\]\s*=\s*{([^}]+)};/m.exec(body)[1]

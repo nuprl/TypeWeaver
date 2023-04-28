@@ -35,7 +35,7 @@ import awaitify from './internal/awaitify.js'
  * }
  *
  * // Using callbacks
- * async.reject(fileList, fileExists, function(err: Error, results: string[]) {
+ * async.reject(fileList, fileExists, function(err: any, results: any) {
  *    // [ 'dir3/file6.txt' ]
  *    // results now equals an array of the non-existing files
  * });

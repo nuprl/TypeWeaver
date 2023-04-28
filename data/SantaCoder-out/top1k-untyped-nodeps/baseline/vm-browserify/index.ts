@@ -1,4 +1,4 @@
-var indexOf = function (xs: any[], item: any) {
+var indexOf = function (xs: Array<T>, item: T) {
     if (xs.indexOf) return xs.indexOf(item);
     else for (var i = 0; i < xs.length; i++) {
         if (xs[i] === item) return i;
@@ -14,7 +14,7 @@ var Object_keys = function (obj: any) {
     }
 };
 
-var forEach = function (xs: any[], fn: any) {
+var forEach = function (xs: Array<any>, fn: Function) {
     if (xs.forEach) return xs.forEach(fn)
     else for (var i = 0; i < xs.length; i++) {
         fn(xs[i], i, xs);
@@ -110,7 +110,7 @@ Script.prototype.runInThisContext = function () {
     return eval(this.code); // maybe...
 };
 
-Script.prototype.runInNewContext = function (context: ScriptContext) {
+Script.prototype.runInNewContext = function (context: any) {
     var ctx = Script.createContext(context);
     var res = this.runInContext(ctx);
 

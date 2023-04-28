@@ -166,7 +166,7 @@ function getRequireValue(node: t.Node, file: t.File) {
     return e.defaultExports;
   }
 }
-parsedFiles.forEach(function(file: string) {
+parsedFiles.forEach(function(file: File) {
   var namedExports = {};
   var localVariableMap = {};
 
@@ -202,7 +202,7 @@ parsedFiles.forEach(function(file: string) {
 
       // rename all top level variables to keep them local to the module
       if (t.isVariableDeclaration(path.node) && t.isProgram(path.parent)) {
-        path.node.declarations.forEach(function(declaration: t.VariableDeclaration) {
+        path.node.declarations.forEach(function(declaration: t.VariableDeclarator) {
           path.scope.rename(
             declaration.id.name,
             file.property + '_local_var_' + declaration.id.name
@@ -253,7 +253,7 @@ parsedFiles.forEach(function(file: string) {
   statements.push.apply(statements, file.ast.program.body);
 });
 var propertyDefinitions = [];
-parsedFiles.forEach(function(file: any) {
+parsedFiles.forEach(function(file: PropertyFile) {
   var dashed = camelToDashed(file.property);
   propertyDefinitions.push(
     t.objectProperty(

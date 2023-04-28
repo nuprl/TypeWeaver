@@ -111,7 +111,7 @@ class FileSystemBlobStore {
     const newMap = {};
     let offset = 0;
 
-    function push(key: string, invalidationKey: string, buffer: Buffer) {
+    function push(key: string, invalidationKey: string, buffer: ArrayBuffer) {
       buffers.push(buffer);
       newMap[key] = [invalidationKey, offset, offset + buffer.length];
       offset += buffer.length;
@@ -160,7 +160,7 @@ class NativeCompileCache {
       }
 
       // https://github.com/nodejs/node/blob/v10.15.3/lib/internal/modules/cjs/helpers.js#L28
-      function resolve(request: string, options: ResolveOptions) {
+      function resolve(request: string, options: NodeRequireResolveOptions) {
         return Module._resolveFilename(request, mod, false, options);
       }
       require.resolve = resolve;
@@ -168,7 +168,7 @@ class NativeCompileCache {
       // https://github.com/nodejs/node/blob/v10.15.3/lib/internal/modules/cjs/helpers.js#L37
       // resolve.resolve.paths was added in v8.9.0
       if (hasRequireResolvePaths) {
-        resolve.paths = function paths(request: Request) {
+        resolve.paths = function paths(request: string) {
           return Module._resolveLookupPaths(request, mod, true);
         };
       }

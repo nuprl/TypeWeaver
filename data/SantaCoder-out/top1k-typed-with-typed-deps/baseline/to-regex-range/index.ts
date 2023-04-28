@@ -85,7 +85,7 @@ const toRegexRange = (min, max, options) => {
   return state.result;
 };
 
-function collatePatterns(neg: boolean, pos: boolean, options: Options) {
+function collatePatterns(neg: string[], pos: string[], options: Options) {
   let onlyNegative = filterPatterns(neg, pos, '-', false, options) || [];
   let onlyPositive = filterPatterns(pos, neg, '', false, options) || [];
   let intersected = filterPatterns(neg, pos, '-?', true, options) || [];
@@ -157,7 +157,7 @@ function rangeToPattern(start: number, stop: number, options: RangeToPatternOpti
   return { pattern, count: [count], digits };
 }
 
-function splitToPatterns(min: number, max: number, tok: string, options: IOptions) {
+function splitToPatterns(min: number, max: number, tok: Token, options: Options) {
   let ranges = splitToRanges(min, max);
   let tokens = [];
   let start = min;
@@ -192,7 +192,7 @@ function splitToPatterns(min: number, max: number, tok: string, options: IOption
   return tokens;
 }
 
-function filterPatterns(arr: string[], comparison: string, prefix: string, intersection: boolean, options: any) {
+function filterPatterns(arr: Array<any>, comparison: Array<any>, prefix: string, intersection: boolean, options: any) {
   let result = [];
 
   for (let ele of arr) {
@@ -225,7 +225,7 @@ function compare(a: any, b: any) {
   return a > b ? 1 : b > a ? -1 : 0;
 }
 
-function contains(arr: any[], key: string, val: any) {
+function contains(arr: Array<any>, key: string, val: any) {
   return arr.some(ele => ele[key] === val);
 }
 
@@ -237,7 +237,7 @@ function countZeros(integer: number, zeros: number) {
   return integer - (integer % Math.pow(10, zeros));
 }
 
-function toQuantifier(digits: number) {
+function toQuantifier(digits: string[]) {
   let [start = 0, stop = ''] = digits;
   if (stop || start > 1) {
     return `{${start + (stop ? ',' + stop : '')}}`;
@@ -245,7 +245,7 @@ function toQuantifier(digits: number) {
   return '';
 }
 
-function toCharacterClass(a: string, b: string, options: Options) {
+function toCharacterClass(a: number, b: number, options: Options) {
   return `[${a}${(b - a === 1) ? '' : '-'}${b}]`;
 }
 
@@ -253,7 +253,7 @@ function hasPadding(str: string) {
   return /^-?(0+)\d/.test(str);
 }
 
-function padZeros(value: string, tok: string, options: PadOptions) {
+function padZeros(value: string, tok: Token, options: Options) {
   if (!tok.isPadded) {
     return value;
   }

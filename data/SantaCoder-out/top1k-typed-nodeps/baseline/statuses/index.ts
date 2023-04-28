@@ -60,7 +60,7 @@ status.retry = {
  * @private
  */
 
-function createMessageToStatusCodeMap (codes: number[]) {
+function createMessageToStatusCodeMap (codes: StatusCodes) {
   var map = {}
 
   Object.keys(codes).forEach(function forEachCode (code: string) {
@@ -79,7 +79,7 @@ function createMessageToStatusCodeMap (codes: number[]) {
  * @private
  */
 
-function createStatusCodeList (codes: number[]) {
+function createStatusCodeList (codes: Object) {
   return Object.keys(codes).map(function mapCode (code: string) {
     return Number(code)
   })

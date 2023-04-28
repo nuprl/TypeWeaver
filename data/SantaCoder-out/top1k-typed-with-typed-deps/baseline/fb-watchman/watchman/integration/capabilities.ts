@@ -11,7 +11,7 @@ var watchman = require('fb-watchman');
 function optional() {
   var client = new watchman.Client();
   client.capabilityCheck({optional: ['will-never-exist']},
-      function (error: any, resp: any) {
+      function (error: Error, resp: any) {
         assert.equal(error, null, 'no errors');
         assert.equal(resp.capabilities['will-never-exist'], false);
         client.end();

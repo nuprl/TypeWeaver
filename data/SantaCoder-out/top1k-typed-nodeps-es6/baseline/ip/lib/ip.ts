@@ -93,7 +93,7 @@ ip.isV6Format = function (ip: string) {
   return ipv6Regex.test(ip);
 };
 
-function _normalizeFamily(family: number) {
+function _normalizeFamily(family: any) {
   if (family === 4) {
     return 'ipv4';
   }
@@ -103,7 +103,7 @@ function _normalizeFamily(family: number) {
   return family ? family.toLowerCase() : 'ipv4';
 }
 
-ip.fromPrefixLen = function (prefixlen: number, family: number) {
+ip.fromPrefixLen = function (prefixlen: number, family: string) {
   if (prefixlen > 32) {
     family = 'ipv6';
   } else {
@@ -129,7 +129,7 @@ ip.fromPrefixLen = function (prefixlen: number, family: number) {
   return ip.toString(buff);
 };
 
-ip.mask = function (addr: string, mask: number) {
+ip.mask = function (addr: string, mask: string) {
   addr = ip.toBuffer(addr);
   mask = ip.toBuffer(mask);
 
@@ -181,7 +181,7 @@ ip.cidr = function (cidrString: string) {
   return ip.mask(addr, mask);
 };
 
-ip.subnet = function (addr: number, mask: number) {
+ip.subnet = function (addr: string, mask: string) {
   const networkAddress = ip.toLong(ip.mask(addr, mask));
 
   // Calculate the mask's length.

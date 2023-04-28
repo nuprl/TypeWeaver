@@ -20,7 +20,7 @@ import awaitify from './internal/awaitify.js'
  * `iteratee` functions have finished. Invoked with (err, results)
  * @returns {Promise} a promise, if no callback provided
  */
-function filterSeries (coll: any[], iteratee: Function, callback: Function) {
+function filterSeries (coll: any[], iteratee: any, callback: any) {
     return _filter(eachOfSeries, coll, iteratee, callback)
 }
 export default awaitify(filterSeries, 3);

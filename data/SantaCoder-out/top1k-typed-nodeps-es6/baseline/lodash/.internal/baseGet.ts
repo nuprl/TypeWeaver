@@ -9,7 +9,7 @@ import toKey from './toKey.js'
  * @param {Array|string} path The path of the property to get.
  * @returns {*} Returns the resolved value.
  */
-function baseGet(object: any, path: string) {
+function baseGet(object: any, path: PropertyPath) {
   path = castPath(path, object)
 
   let index = 0

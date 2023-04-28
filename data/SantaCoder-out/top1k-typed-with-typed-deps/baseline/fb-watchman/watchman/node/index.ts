@@ -66,7 +66,7 @@ Client.prototype.cancelCommands = function(why: string) {
   }
 
   // Synthesize an error condition for any commands that were queued
-  cmds.forEach(function(cmd: Command) {
+  cmds.forEach(function(cmd: ClientCommand) {
     cmd.cb(error);
   });
 }
@@ -117,7 +117,7 @@ Client.prototype.connect = function() {
       self.emit('connect');
       self.sendNextCommand();
     });
-    self.socket.on('error', function(err: any) {
+    self.socket.on('error', function(err: Error) {
       self.connecting = false;
       self.emit('error', err);
     });
@@ -220,7 +220,7 @@ Client.prototype.connect = function() {
   });
 }
 
-Client.prototype.command = function(args: any, done: any) {
+Client.prototype.command = function(args: Array<any>, done: Function) {
   done = done || function() {};
 
   // Queue up the command
@@ -295,7 +295,7 @@ Client.prototype.capabilityCheck = function(caps: any, done: Function) {
   this.command(['version', {
       optional: optional,
       required: required
-  }], function (error: any, resp: any) {
+  }], function (error: Error, resp: any) {
     if (error) {
       done(error);
       return;

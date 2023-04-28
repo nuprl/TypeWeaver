@@ -38,7 +38,7 @@ balanced.range = range
  * @param {string} b
  * @param {string} str
  */
-function range (a: number, b: number, str: string) {
+function range (a: string, b: string, str: string) {
   let begs, beg, left, right, result
   let ai = str.indexOf(a)
   let bi = str.indexOf(b, ai + 1)

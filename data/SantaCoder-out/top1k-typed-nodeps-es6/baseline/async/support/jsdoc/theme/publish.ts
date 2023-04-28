@@ -29,11 +29,11 @@ function tutoriallink(tutorial: string) {
     return helper.toTutorial(tutorial, null, { tag: 'em', classname: 'disabled', prefix: 'Tutorial: ' });
 }
 
-function getAncestorLinks(doclet: jsdoc.Doclet) {
+function getAncestorLinks(doclet: Doclet) {
     return helper.getAncestorLinks(data, doclet);
 }
 
-function hashToLink(doclet: Doclet, hash: string) {
+function hashToLink(doclet: jsdoc.Doclet, hash: string) {
     if ( !/^(#.+)/.test(hash) ) { return hash; }
 
     let url = helper.createLink(doclet);
@@ -42,7 +42,7 @@ function hashToLink(doclet: Doclet, hash: string) {
     return '<a href="' + url + '">' + hash + '</a>';
 }
 
-function needsSignature(doclet: jsdoc.Doclet) {
+function needsSignature(doclet: Doclet) {
     let needsSig = false;
 
     // function and class definitions always get a signature
@@ -63,7 +63,7 @@ function needsSignature(doclet: jsdoc.Doclet) {
     return needsSig;
 }
 
-function getSignatureAttributes(item: any) {
+function getSignatureAttributes(item: SignatureItem) {
     const attributes = [];
 
     if (item.optional) {
@@ -96,13 +96,13 @@ function updateItemName(item: Item) {
     return itemName;
 }
 
-function addParamAttributes(params: any) {
+function addParamAttributes(params: Array<any>) {
     return params.filter(param => {
         return param.name && param.name.indexOf('.') === -1;
     }).map(updateItemName);
 }
 
-function buildItemTypeStrings(item: Item) {
+function buildItemTypeStrings(item: any) {
     const types = [];
 
     if (item && item.type && item.type.names) {
@@ -114,7 +114,7 @@ function buildItemTypeStrings(item: Item) {
     return types;
 }
 
-function buildAttribsString(attribs: Attributes) {
+function buildAttribsString(attribs: string[]) {
     let attribsString = '';
 
     if (attribs && attribs.length) {
@@ -171,21 +171,21 @@ function addSignatureReturns(f: Function) {
         '<span class="type-signature">' + returnTypesString + '</span>';
 }
 
-function addSignatureTypes(f: Function) {
+function addSignatureTypes(f: any) {
     const types = f.type ? buildItemTypeStrings(f) : [];
 
     f.signature = (f.signature || '') + '<span class="type-signature">' +
         (types.length ? ' :' + types.join('|') : '') + '</span>';
 }
 
-function addAttribs(f: Function) {
+function addAttribs(f: File) {
     const attribs = helper.getAttribs(f);
     const attribsString = buildAttribsString(attribs);
 
     f.attribs = util.format('<span class="type-signature">%s</span>', attribsString);
 }
 
-function shortenPaths(files: string[], commonPrefix: string) {
+function shortenPaths(files: any, commonPrefix: string) {
     Object.keys(files).forEach(file => {
         files[file].shortened = files[file].resolved.replace(commonPrefix, '')
             // always use forward slashes
@@ -205,7 +205,7 @@ function getPathFromDoclet(doclet: Doclet) {
         doclet.meta.filename;
 }
 
-function generate(type: string, title: string, docs: string, filename: string, resolveLinks: boolean) {
+function generate(type: string, title: string, docs: any, filename: string, resolveLinks: boolean) {
     resolveLinks = resolveLinks === false ? false : true;
 
     const docData = {
@@ -224,7 +224,7 @@ function generate(type: string, title: string, docs: string, filename: string, r
     fs.writeFileSync(outpath, html, 'utf8');
 }
 
-function generateSourceFiles(sourceFiles: string[], encoding: string) {
+function generateSourceFiles(sourceFiles: any, encoding: string) {
     encoding = encoding || 'utf8';
     const sourceFilenames = [];
     Object.keys(sourceFiles).forEach(file => {
@@ -289,7 +289,7 @@ function attachModuleSymbols(doclets: Doclet[], modules: Module[]) {
     });
 }
 
-function buildMemberNav(items: any[], itemHeading: string, itemsSeen: number, linktoFn: any) {
+function buildMemberNav(items: any[], itemHeading: string, itemsSeen: any[], linktoFn: any) {
     let nav = '';
 
     if (items && items.length) {
@@ -350,7 +350,7 @@ function linktoExternal(longName: string, name: string) {
  * @param {array<object>} members.interfaces
  * @return {string} The HTML for the navigation sidebar.
  */
-function buildNav(members: Member[]) {
+function buildNav(members: any) {
     let nav = '<h2><a href="index.html">Home</a></h2>';
     const seen = {};
     const seenTutorials = {};
@@ -684,7 +684,7 @@ export const publish = (taffyData, opts, tutorials) => {
     });
 
     // TODO: move the tutorial functions to templateHelper.js
-    function generateTutorial(title: string, tutorial: string, filename: string) {
+    function generateTutorial(title: string, tutorial: Tutorial, filename: string) {
         const tutorialData = {
             title: title,
             header: tutorial.title,
@@ -701,7 +701,7 @@ export const publish = (taffyData, opts, tutorials) => {
     }
 
     // tutorials can have only one parent so there is no risk for loops
-    function saveChildren(node: Node) {
+    function saveChildren(node: TutorialNode) {
         node.children.forEach(child => {
             generateTutorial('Tutorial: ' + child.title, child, helper.tutorialToUrl(child.name));
             saveChildren(child);

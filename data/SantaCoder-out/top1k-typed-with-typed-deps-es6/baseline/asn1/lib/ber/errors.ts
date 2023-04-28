@@ -3,7 +3,7 @@
 
 export default {
 
-  newInvalidAsn1Error: function (msg: any) {
+  newInvalidAsn1Error: function (msg: string) {
     var e = new Error();
     e.name = 'InvalidAsn1Error';
     e.message = msg || '';

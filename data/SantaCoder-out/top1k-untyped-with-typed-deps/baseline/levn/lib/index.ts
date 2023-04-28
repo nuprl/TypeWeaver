@@ -5,7 +5,7 @@
   cast = require('./cast');
   parseType = require('type-check').parseType;
   VERSION = '0.4.1';
-  parsedTypeParse = function(parsedType: string, string: string, options: any){
+  parsedTypeParse = function(parsedType: ParsedType, string: string, options: ParseOptions){
     options == null && (options = {});
     options.explicit == null && (options.explicit = false);
     options.customTypes == null && (options.customTypes = {});

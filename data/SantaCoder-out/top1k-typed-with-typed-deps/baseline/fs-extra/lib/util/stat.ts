@@ -17,7 +17,7 @@ function getStats (src: string, dest: string, opts: Options) {
   ]).then(([srcStat, destStat]) => ({ srcStat, destStat }))
 }
 
-function getStatsSync (src: string, dest: string, opts: Options) {
+function getStatsSync (src: string, dest: string, opts: StatsOptions) {
   let destStat
   const statFunc = opts.dereference
     ? (file) => fs.statSync(file, { bigint: true })
@@ -32,7 +32,7 @@ function getStatsSync (src: string, dest: string, opts: Options) {
   return { srcStat, destStat }
 }
 
-function checkPaths (src: string, dest: string, funcName: string, opts: any, cb: any) {
+function checkPaths (src: string, dest: string, funcName: string, opts: Object, cb: Function) {
   util.callbackify(getStats)(src, dest, opts, (err, stats) => {
     if (err) return cb(err)
     const { srcStat, destStat } = stats
@@ -63,7 +63,7 @@ function checkPaths (src: string, dest: string, funcName: string, opts: any, cb:
   })
 }
 
-function checkPathsSync (src: string, dest: string, funcName: string, opts: any) {
+function checkPathsSync (src: string, dest: string, funcName: string, opts: Options) {
   const { srcStat, destStat } = getStatsSync(src, dest, opts)
 
   if (destStat) {
@@ -95,7 +95,7 @@ function checkPathsSync (src: string, dest: string, funcName: string, opts: any)
 // It works for all file types including symlinks since it
 // checks the src and dest inodes. It starts from the deepest
 // parent and stops once it reaches the src parent or the root path.
-function checkParentPaths (src: string, srcStat: any, dest: string, funcName: string, cb: Function) {
+function checkParentPaths (src: string, srcStat: fs.Stats, dest: string, funcName: string, cb: Function) {
   const srcParent = path.resolve(path.dirname(src))
   const destParent = path.resolve(path.dirname(dest))
   if (destParent === srcParent || destParent === path.parse(destParent).root) return cb()
@@ -111,7 +111,7 @@ function checkParentPaths (src: string, srcStat: any, dest: string, funcName: st
   })
 }
 
-function checkParentPathsSync (src: string, srcStat: any, dest: string, funcName: string) {
+function checkParentPathsSync (src: string, srcStat: fs.Stats, dest: string, funcName: string) {
   const srcParent = path.resolve(path.dirname(src))
   const destParent = path.resolve(path.dirname(dest))
   if (destParent === srcParent || destParent === path.parse(destParent).root) return

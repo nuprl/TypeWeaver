@@ -28,7 +28,7 @@ export default function mergeConfig(config1: any, config2: any) {
   }
 
   // eslint-disable-next-line consistent-return
-  function mergeDeepProperties(prop: any) {
+  function mergeDeepProperties(prop: string) {
     if (!utils.isUndefined(config2[prop])) {
       return getMergedValue(config1[prop], config2[prop]);
     } else if (!utils.isUndefined(config1[prop])) {

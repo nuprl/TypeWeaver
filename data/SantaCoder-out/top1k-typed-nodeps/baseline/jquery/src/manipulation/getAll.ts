@@ -1,7 +1,7 @@
 import jQuery from "../core.js";
 import nodeName from "../core/nodeName.js";
 
-function getAll( context: Context, tag : string) {
+function getAll( context: Element, tag : string) {
 
 	// Support: IE <=9 - 11+
 	// Use typeof to avoid zero-argument method invocation on host objects (trac-15151)

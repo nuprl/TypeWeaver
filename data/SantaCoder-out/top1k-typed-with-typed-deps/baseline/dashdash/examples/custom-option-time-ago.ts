@@ -17,7 +17,7 @@ var dashdash = require('../lib/dashdash');
  * or a date (another parsable by `new Date()`).
  */
 var durationRe = /^([1-9]\d*)([smhd])$/;
-function parseTimeAgo(option: string, optstr: string, arg: string) {
+function parseTimeAgo(option: any, optstr: string, arg: string) {
     var t;
     var match = durationRe.exec(arg);
     if (match) {

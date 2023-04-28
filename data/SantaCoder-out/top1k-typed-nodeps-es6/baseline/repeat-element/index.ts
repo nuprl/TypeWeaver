@@ -7,7 +7,7 @@
 
 'use strict';
 
-export default function repeat(ele: HTMLElement, num: number) {
+export default function repeat(ele: any, num: number) {
   if (Array.prototype.fill) {
     return new Array(num).fill(ele);
   }

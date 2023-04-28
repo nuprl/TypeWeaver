@@ -1,4 +1,4 @@
-export function convertChangesToXML(changes: Change[]) {
+export function convertChangesToXML(changes: Array<Change>) {
   let ret = [];
   for (let i = 0; i < changes.length; i++) {
     let change = changes[i];

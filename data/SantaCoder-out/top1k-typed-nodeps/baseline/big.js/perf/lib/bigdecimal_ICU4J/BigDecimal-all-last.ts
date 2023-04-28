@@ -690,7 +690,7 @@ var MathContext = (function () {
 return MathContext;
 })();
 
-var BigDecimal = (function (MathContext: MathContext) {
+var BigDecimal = (function (MathContext: java.math.MathContext) {
 /* Generated from 'BigDecimal.nrx' 8 Sep 2000 11:10:50 [v2.00] */
 /* Options: Binary Comments Crossref Format Java Logo Strictargs Strictcase Trace2 Verbose3 */
 //--package com.ibm.icu.math;
@@ -801,7 +801,7 @@ var BigDecimal = (function (MathContext: MathContext) {
 
 
 
-function div(a: number, b: number) {
+function div(a: BigDecimal, b: BigDecimal) {
     return (a-(a%b))/b;
 }
 
@@ -3355,7 +3355,7 @@ BigDecimal.ONE = BigDecimal.prototype.ONE = new BigDecimal("1");
   */
 
  //--public boolean equals(java.lang.Object obj){
- function equals(obj: any) {
+ function equals(obj: Object) {
   //--com.ibm.icu.math.BigDecimal rhs;
   var rhs;
   //--int i=0;
@@ -4792,7 +4792,7 @@ BigDecimal.ONE = BigDecimal.prototype.ONE = new BigDecimal("1");
   */
 
  //--private com.ibm.icu.math.BigDecimal dodivide(char code,com.ibm.icu.math.BigDecimal rhs,com.ibm.icu.math.MathContext set,int scale){
- function dodivide(code: string, rhs: string, set: string, scale: number) {
+ function dodivide(code: number, rhs: number, set: number, scale: number) {
   //--com.ibm.icu.math.BigDecimal lhs;
   var lhs;
   //--int reqdig;
@@ -5122,7 +5122,7 @@ BigDecimal.ONE = BigDecimal.prototype.ONE = new BigDecimal("1");
     Arg3 is what was found */
 
  //--private void badarg(java.lang.String name,int pos,java.lang.String value){
- function badarg(name: string, pos: number, value: any) {
+ function badarg(name: String, pos: int, value: any) {
   throw "Bad argument "+pos+" to "+name+": "+value;
   }
 
@@ -5182,7 +5182,7 @@ BigDecimal.ONE = BigDecimal.prototype.ONE = new BigDecimal("1");
  // 1999.12.22 -- special case m=-1, also drop 0 special case
 
  //--private static final byte[] byteaddsub(byte a[],int avlen,byte b[],int bvlen,int m,boolean reuse){
- function byteaddsub(a: Uint8Array, avlen: number, b: Uint8Array, bvlen: number, m: Uint8Array, reuse: Uint8Array) {
+ function byteaddsub(a: number, avlen: number, b: number, bvlen: number, m: number, reuse: number) {
   //--int alength;
   var alength;
   //--int blength;
@@ -5332,7 +5332,7 @@ BigDecimal.ONE = BigDecimal.prototype.ONE = new BigDecimal("1");
     */
 
  //--private static final com.ibm.icu.math.BigDecimal clone(com.ibm.icu.math.BigDecimal dec){
- function clone(dec: Decimal) {
+ function clone(dec: BigDecimal) {
   //--com.ibm.icu.math.BigDecimal copy;
   var copy;
   copy=new BigDecimal();
@@ -5349,7 +5349,7 @@ BigDecimal.ONE = BigDecimal.prototype.ONE = new BigDecimal("1");
     returns quietly or throws an exception */
 
  //--private void checkdigits(com.ibm.icu.math.BigDecimal rhs,int dig){
- function checkdigits(rhs: string, dig: number) {
+ function checkdigits(rhs: number, dig: number) {
   if (dig==0)
    return; // don't check if digits=0
   // first check lhs...
@@ -5579,7 +5579,7 @@ BigDecimal.ONE = BigDecimal.prototype.ONE = new BigDecimal("1");
    */
 
  //--private com.ibm.icu.math.BigDecimal finish(com.ibm.icu.math.MathContext set,boolean strip){
- function finish(set: Set<string>, strip: string) {
+ function finish(set: NumberFormatSettings, strip: boolean) {
   //--int d=0;
   var d=0;
   //--int i=0;
@@ -5686,16 +5686,16 @@ BigDecimal.ONE = BigDecimal.prototype.ONE = new BigDecimal("1");
   return this;
   }
 
- function isGreaterThan(other: BigNumberish) {
+ function isGreaterThan(other: BigDecimal) {
   return this.compareTo(other) > 0;
  };
- function isLessThan(other: BigRational) {
+ function isLessThan(other: BigDecimal) {
   return this.compareTo(other) < 0;
  };
- function isGreaterThanOrEqualTo(other: number) {
+ function isGreaterThanOrEqualTo(other: BigDecimal) {
   return this.compareTo(other) >= 0;
  };
- function isLessThanOrEqualTo(other: number) {
+ function isLessThanOrEqualTo(other: BigDecimal) {
   return this.compareTo(other) <= 0;
  };
  function isPositive() {

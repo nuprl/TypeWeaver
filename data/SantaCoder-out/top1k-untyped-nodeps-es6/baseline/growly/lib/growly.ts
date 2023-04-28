@@ -63,7 +63,7 @@ Growly.prototype.setHost = function(host: string, port: number) {
  *      growl.register('My Application', 'path/to/icon.png', [
  *          { label: 'success', dispname: 'Success', icon: 'path/to/success.png' },
  *          { label: 'warning', dispname: 'Warning', icon: 'path/to/warning.png', enabled: false }
- *      ], function(err: any) { console.log(err || 'Registration successful!'); });
+ *      ], function(err: Error) { console.log(err || 'Registration successful!'); });
  *
  * @param {String} appname
  * @param {String|Buffer} appicon
@@ -72,7 +72,7 @@ Growly.prototype.setHost = function(host: string, port: number) {
  * @api public
  */
 
-Growly.prototype.register = function(appname: string, appicon: string, notifications: boolean, callback: Function) {
+Growly.prototype.register = function(appname: string, appicon: string, notifications: Notification[], callback: Function) {
     var gntp;
 
     if (typeof appicon === 'object') {
@@ -132,7 +132,7 @@ Growly.prototype.register = function(appname: string, appicon: string, notificat
  *
  * Example notification:
  *
- *     growl.notify('Stuffs broken!', { label: 'warning' }, function(err: any, action: any) {
+ *     growl.notify('Stuffs broken!', { label: 'warning' }, function(err: Error, action: GrowlyAction) {
  *         console.log('Action:', action);
  *     });
  *
@@ -142,7 +142,7 @@ Growly.prototype.register = function(appname: string, appicon: string, notificat
  * @api public
  */
 
-Growly.prototype.notify = function(text: string, opts: any, callback: any) {
+Growly.prototype.notify = function(text: string, opts: NotifyOptions, callback: Function) {
     var self = this,
         gntp;
 
@@ -177,7 +177,7 @@ Growly.prototype.notify = function(text: string, opts: any, callback: any) {
     gntp.add('Notification-Callback-Target', undefined);
     gntp.newline();
 
-    gntp.send(function(err: any, resp: any) {
+    gntp.send(function(err: Error, resp: GrowlyResponse) {
         if (callback && err) {
             callback(err);
         } else if (callback && resp.state === 'CALLBACK') {

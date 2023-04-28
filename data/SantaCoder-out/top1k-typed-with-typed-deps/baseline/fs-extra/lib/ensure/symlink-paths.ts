@@ -26,7 +26,7 @@ const pathExists = require('../path-exists').pathExists
  * the ability to pass in `relative to current working direcotry` paths.
  */
 
-function symlinkPaths (srcpath: string, dstpath: string, callback: Function) {
+function symlinkPaths (srcpath: string, dstpath: string, callback: symlinkPathsCallback) {
   if (path.isAbsolute(srcpath)) {
     return fs.lstat(srcpath, (err) => {
       if (err) {

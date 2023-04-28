@@ -23,7 +23,7 @@ import reduce from './reduce.js'
  * (err, result).
  * @returns {Promise} a promise, if no callback is passed
  */
-export default function reduceRight (array: any[], memo: any, iteratee: Function, callback: Function) {
+export default function reduceRight (array: Array<any>, memo: any, iteratee: Function, callback: Function) {
     var reversed = [...array].reverse();
     return reduce(reversed, memo, iteratee, callback);
 }

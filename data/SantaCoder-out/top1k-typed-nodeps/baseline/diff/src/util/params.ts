@@ -1,4 +1,4 @@
-export function generateOptions(options: any, defaults: any) {
+export function generateOptions(options: Options, defaults: Options) {
   if (typeof options === 'function') {
     defaults.callback = options;
   } else if (options) {

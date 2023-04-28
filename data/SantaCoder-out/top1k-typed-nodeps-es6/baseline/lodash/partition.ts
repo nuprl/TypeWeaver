@@ -23,7 +23,7 @@ import reduce from './reduce.js'
  * partition(users, ({ active }) => active)
  * // => objects for [['fred'], ['barney', 'pebbles']]
  */
-function partition(collection: any[], predicate: any) {
+function partition(collection: any[], predicate: Function) {
   return reduce(collection, (result, value, key) => (
     result[predicate(value) ? 0 : 1].push(value), result
   ), [[], []])

@@ -3,7 +3,7 @@
 var BOMChar = '\uFEFF';
 
 exports.PrependBOM = PrependBOMWrapper
-function PrependBOMWrapper(encoder: any, options: any) {
+function PrependBOMWrapper(encoder: Encoder, options: any) {
     this.encoder = encoder;
     this.addBOM = true;
 }
@@ -25,7 +25,7 @@ PrependBOMWrapper.prototype.end = function() {
 //------------------------------------------------------------------------------
 
 exports.StripBOM = StripBOMWrapper;
-function StripBOMWrapper(decoder: any, options: any) {
+function StripBOMWrapper(decoder: Decoder, options: Options) {
     this.decoder = decoder;
     this.pass = false;
     this.options = options || {};

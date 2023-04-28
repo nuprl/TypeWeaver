@@ -15,7 +15,7 @@ import getMatchData from './.internal/getMatchData.js'
  * @returns {boolean} Returns `true` if `object` is a match, else `false`.
  * @example
  *
- * function isGreeting(value: string) {
+ * function isGreeting(value: any) {
  *   return /^h(?:i|ello)$/.test(value)
  * }
  *

@@ -1,3 +1,3 @@
-export default function cleanComment(data: CommentData, item: CommentItem, list: CommentList) {
+export default function cleanComment(data: string, item: Comment, list: Comment[]) {
     list.remove(item);
 };

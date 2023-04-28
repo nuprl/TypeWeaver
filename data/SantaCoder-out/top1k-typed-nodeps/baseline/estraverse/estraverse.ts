@@ -239,12 +239,12 @@
         Remove: REMOVE
     };
 
-    function Reference(parent: any, key: any) {
+    function Reference(parent: Object, key: string) {
         this.parent = parent;
         this.key = key;
     }
 
-    Reference.prototype.replace = function replace(node: T) {
+    Reference.prototype.replace = function replace(node: Node) {
         this.parent[this.key] = node;
     };
 
@@ -258,7 +258,7 @@
         }
     };
 
-    function Element(node: Node, path: string, wrap: any, ref: any) {
+    function Element(node: Node, path: Array<string>, wrap: Function, ref: Function) {
         this.node = node;
         this.path = path;
         this.wrap = wrap;
@@ -272,7 +272,7 @@
     Controller.prototype.path = function path() {
         var i, iz, j, jz, result, element;
 
-        function addToPath(result: string, path: string) {
+        function addToPath(result: string[], path: string) {
             if (Array.isArray(path)) {
                 for (j = 0, jz = path.length; j < jz; ++j) {
                     result.push(path[j]);
@@ -324,7 +324,7 @@
         return this.__current.node;
     };
 
-    Controller.prototype.__execute = function __execute(callback: Function, element: HTMLElement) {
+    Controller.prototype.__execute = function __execute(callback: Function, element: Element) {
         var previous, result;
 
         result = undefined;
@@ -342,7 +342,7 @@
 
     // API:
     // notify control skip / break
-    Controller.prototype.notify = function notify(flag: boolean) {
+    Controller.prototype.notify = function notify(flag: number) {
         this.__state = flag;
     };
 
@@ -384,18 +384,18 @@
         }
     };
 
-    function isNode(node: Node) {
+    function isNode(node: any) {
         if (node == null) {
             return false;
         }
         return typeof node === 'object' && typeof node.type === 'string';
     }
 
-    function isProperty(nodeType: string, key: string) {
+    function isProperty(nodeType: NodeType, key: string) {
         return (nodeType === Syntax.ObjectExpression || nodeType === Syntax.ObjectPattern) && 'properties' === key;
     }
   
-    function candidateExistsInLeaveList(leavelist: LeaveList, candidate: Candidate) {
+    function candidateExistsInLeaveList(leavelist: Array<any>, candidate: any) {
         for (var i = leavelist.length - 1; i >= 0; --i) {
             if (leavelist[i].node === candidate) {
                 return true;
@@ -525,7 +525,7 @@
             outer,
             key;
 
-        function removeElem(element: HTMLElement) {
+        function removeElem(element: Element) {
             var i,
                 key,
                 nextElem,
@@ -675,10 +675,10 @@
         return controller.replace(root, visitor);
     }
 
-    function extendCommentRange(comment: CommentRange, tokens: Token[]) {
+    function extendCommentRange(comment: Comment, tokens: Token[]) {
         var target;
 
-        target = upperBound(tokens, function search(token: string) {
+        target = upperBound(tokens, function search(token: Token) {
             return token.range[0] > comment.range[0];
         });
 
@@ -757,7 +757,7 @@
 
         cursor = 0;
         traverse(tree, {
-            leave: function (node: ts.Node) {
+            leave: function (node: Node) {
                 var comment;
 
                 while (cursor < comments.length) {

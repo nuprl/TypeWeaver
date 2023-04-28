@@ -25,7 +25,7 @@ const MAX_SAFE_INTEGER = 9007199254740991
  * toSafeInteger('3.2')
  * // => 3
  */
-function toSafeInteger(value: number) {
+function toSafeInteger(value: any) {
   if (!value) {
     return value === 0 ? value : 0
   }

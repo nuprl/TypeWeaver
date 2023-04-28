@@ -26,7 +26,7 @@ import toPlainObject from '../toPlainObject.js'
  * @param {Object} [stack] Tracks traversed source values and their merged
  *  counterparts.
  */
-function baseMergeDeep(object: any, source: any, key: string, srcIndex: number, mergeFunc: Function, customizer: Function, stack: string[]) {
+function baseMergeDeep(object: any, source: any, key: string, srcIndex: number, mergeFunc: Function, customizer: Function, stack: Stack) {
   const objValue = object[key]
   const srcValue = source[key]
   const stacked = stack.get(srcValue)

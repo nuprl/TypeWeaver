@@ -76,7 +76,7 @@ var ee1 = new EventEmitter1()
   ce.emit('foo', 'bar');
   ce.emit('foo', 'bar', 'baz');
   ce.emit('foo', 'bar', 'baz', 'boom');
-}).on('cycle', function cycle(e: MouseEvent) {
+}).on('cycle', function cycle(e: any) {
   console.log(e.target.toString());
 }).on('complete', function completed() {
   console.log('Fastest is %s', this.filter('fastest').map('name'));

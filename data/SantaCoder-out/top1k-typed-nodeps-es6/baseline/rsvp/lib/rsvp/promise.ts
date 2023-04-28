@@ -113,7 +113,7 @@ function needsNew() {
   Promise.all([
     getJSON('/posts'),
     getJSON('/comments')
-  ]).then(function(values: any){
+  ]).then(function(values: any[]){
     values[0] // => postsJSON
     values[1] // => commentsJSON
 
@@ -395,13 +395,13 @@ Promise.prototype._guidKey = guidKey;
 
   }
 
-  findAuthor(function(author: Author, err: Error){
+  findAuthor(function(author: string, err: Error){
     if (err) {
       failure(err);
       // failure
     } else {
       try {
-        findBoooksByAuthor(author, function(books: Array<Book>, err: any) {
+        findBoooksByAuthor(author, function(books: Book[], err: Error) {
           if (err) {
             failure(err);
           } else {
@@ -425,7 +425,7 @@ Promise.prototype._guidKey = guidKey;
   ```javascript
   findAuthor().
     then(findBooksByAuthor).
-    then(function(books: Book[]){
+    then(function(books: any){
       // found books
   }).catch(function(reason: any){
     // something went wrong

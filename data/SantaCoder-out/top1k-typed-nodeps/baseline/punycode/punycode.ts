@@ -284,7 +284,7 @@ const decode = function(input: string) {
  * @param {String} input The string of Unicode symbols.
  * @returns {String} The resulting Punycode string of ASCII-only symbols.
  */
-const encode = function(input: number) {
+const encode = function(input: string) {
 	const output = [];
 
 	// Convert the input in UCS-2 to an array of Unicode code points.

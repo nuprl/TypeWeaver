@@ -22,7 +22,7 @@ const extractICSS = (css, removeRules = true, mode = "auto") => {
   const icssImports = {};
   const icssExports = {};
 
-  function addImports(node: t.Node, path: t.NodePath<t.Program>) {
+  function addImports(node: Node, path: string) {
     const unquoted = path.replace(/'|"/g, "");
     icssImports[unquoted] = Object.assign(
       icssImports[unquoted] || {},
@@ -34,7 +34,7 @@ const extractICSS = (css, removeRules = true, mode = "auto") => {
     }
   }
 
-  function addExports(node: Node) {
+  function addExports(node: postcss.Node) {
     Object.assign(icssExports, getDeclsObject(node));
     if (removeRules) {
       node.remove();

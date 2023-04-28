@@ -2,15 +2,15 @@ var once = require('once');
 
 var noop = function() {};
 
-var isRequest = function(stream: ReadableStream) {
+var isRequest = function(stream: any) {
 	return stream.setHeader && typeof stream.abort === 'function';
 };
 
-var isChildProcess = function(stream: ReadableStream) {
+var isChildProcess = function(stream: NodeJS.WritableStream) {
 	return stream.stdio && Array.isArray(stream.stdio) && stream.stdio.length === 3
 };
 
-var eos = function(stream: ReadableStream, opts: any, callback: any) {
+var eos = function(stream: ReadableStream, opts: Options, callback: Callback) {
 	if (typeof opts === 'function') return eos(stream, null, opts);
 	if (!opts) opts = {};
 
@@ -40,7 +40,7 @@ var eos = function(stream: ReadableStream, opts: any, callback: any) {
 		callback.call(stream, exitCode ? new Error('exited with error code: ' + exitCode) : null);
 	};
 
-	var onerror = function(err: Error) {
+	var onerror = function(err: any) {
 		callback.call(stream, err);
 	};
 

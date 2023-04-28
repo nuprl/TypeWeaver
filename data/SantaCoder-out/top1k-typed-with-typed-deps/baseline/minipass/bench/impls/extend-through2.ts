@@ -1,5 +1,5 @@
 const through2 = require('through2')
-module.exports = function (opts: any) {
+module.exports = function (opts: through2.ConstructorOptions<any>) {
   if (opts.objectMode)
     return through2.obj(func)
   s = through2(func)
@@ -8,7 +8,7 @@ module.exports = function (opts: any) {
   }
   return s
 
-  function func (data: any, enc: any, done: any) {
+  function func (data: any, enc: string, done: Function) {
     this.push(data, enc)
     done()
   }

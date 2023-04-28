@@ -22,7 +22,7 @@ function serialOrdered(list: Array<any>, iterator: Function, sortMethod: Functio
 {
   var state = initState(list, sortMethod);
 
-  iterate(list, iterator, state, function iteratorHandler(error: Error, result: any)
+  iterate(list, iterator, state, function iteratorHandler(error: any, result: any)
   {
     if (error)
     {

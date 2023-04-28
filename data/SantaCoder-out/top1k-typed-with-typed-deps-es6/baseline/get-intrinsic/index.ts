@@ -7,7 +7,7 @@ var $Function = Function;
 var $TypeError = TypeError;
 
 // eslint-disable-next-line consistent-return
-var getEvalledConstructor = function (expressionSyntax: ExpressionSyntax) {
+var getEvalledConstructor = function (expressionSyntax: string) {
 	try {
 		return $Function('"use strict"; return (' + expressionSyntax + ').constructor;')();
 	} catch (e) {}
@@ -217,7 +217,7 @@ var stringToPath = function stringToPath(string: string) {
 		throw new $SyntaxError('invalid intrinsic syntax, expected opening `%`');
 	}
 	var result = [];
-	$replace(string, rePropName, function (match: RegExpMatchArray, number: string, quote: string, subString: string) {
+	$replace(string, rePropName, function (match: string, number: string, quote: string, subString: string) {
 		result[result.length] = quote ? $replace(subString, reEscapeChar, '$1') : number || match;
 	});
 	return result;

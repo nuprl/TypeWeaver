@@ -7,7 +7,7 @@
 
 'use strict';
 
-module.exports = function(num: number) {
+module.exports = function(num: any) {
   if (typeof num === 'number') {
     return num - num === 0;
   }

@@ -12,7 +12,7 @@ var performanceNow =
 
 // generate timestamp or delta
 // see http://nodejs.org/api/process.html#process_process_hrtime
-function hrtime(previousTimestamp: any){
+function hrtime(previousTimestamp: number[]){
   var clocktime = performanceNow.call(performance)*1e-3
   var seconds = Math.floor(clocktime)
   var nanoseconds = Math.floor((clocktime%1)*1e9)

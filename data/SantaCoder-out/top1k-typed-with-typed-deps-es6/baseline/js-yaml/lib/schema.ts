@@ -10,10 +10,10 @@ import Type from './type';
 function compileList(schema: Schema, name: string) {
   var result = [];
 
-  schema[name].forEach(function (currentType: string) {
+  schema[name].forEach(function (currentType: Type) {
     var newIndex = result.length;
 
-    result.forEach(function (previousType: any, previousIndex: any) {
+    result.forEach(function (previousType: Type, previousIndex: number) {
       if (previousType.tag === currentType.tag &&
           previousType.kind === currentType.kind &&
           previousType.multi === currentType.multi) {
@@ -29,7 +29,7 @@ function compileList(schema: Schema, name: string) {
 }
 
 
-function compileMap(/* lists... */: any[]) {
+function compileMap(/* lists... */: Array<YAMLNode>) {
   var result = {
         scalar: {},
         sequence: {},
@@ -59,12 +59,12 @@ function compileMap(/* lists... */: any[]) {
 }
 
 
-function Schema(definition: Object) {
+function Schema(definition: Type) {
   return this.extend(definition);
 }
 
 
-Schema.prototype.extend = function extend(definition: any) {
+Schema.prototype.extend = function extend(definition: SchemaDefinition) {
   var implicit = [];
   var explicit = [];
 
@@ -100,7 +100,7 @@ Schema.prototype.extend = function extend(definition: any) {
     }
   });
 
-  explicit.forEach(function (type: Type) {
+  explicit.forEach(function (type: any) {
     if (!(type instanceof Type)) {
       throw new YAMLException('Specified list of YAML types (or a single Type object) contains a non-Type object.');
     }

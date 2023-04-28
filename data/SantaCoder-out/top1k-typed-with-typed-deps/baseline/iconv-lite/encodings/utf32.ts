@@ -103,7 +103,7 @@ function Utf32Decoder(options: any, codec: any) {
     this.overflow = [];
 }
 
-Utf32Decoder.prototype.write = function(src: string) {
+Utf32Decoder.prototype.write = function(src: Buffer) {
     if (src.length === 0)
         return '';
 
@@ -152,7 +152,7 @@ Utf32Decoder.prototype.write = function(src: string) {
     return dst.slice(0, offset).toString('ucs2');
 };
 
-function _writeCodepoint(dst: Uint8Array, offset: number, codepoint: codepoint_t, badChar: bool) {
+function _writeCodepoint(dst: Uint8Array, offset: number, codepoint: number, badChar: number) {
     // NOTE: codepoint is signed int32 and can be negative. We keep it that way to help V8 with optimizations.
     if (codepoint < 0 || codepoint > 0x10FFFF) {
         // Not a valid Unicode codepoint

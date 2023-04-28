@@ -18,7 +18,7 @@ Cipher.prototype._init = function _init() {
   // Might be overrided
 };
 
-Cipher.prototype.update = function update(data: any[]) {
+Cipher.prototype.update = function update(data: Buffer) {
   if (data.length === 0)
     return [];
 
@@ -28,7 +28,7 @@ Cipher.prototype.update = function update(data: any[]) {
     return this._updateEncrypt(data);
 };
 
-Cipher.prototype._buffer = function _buffer(data: Buffer, off: number) {
+Cipher.prototype._buffer = function _buffer(data: Uint8Array, off: number) {
   // Append data to buffer
   var min = Math.min(this.buffer.length - this.bufferOff, data.length - off);
   for (var i = 0; i < min; i++)
@@ -73,7 +73,7 @@ Cipher.prototype._updateEncrypt = function _updateEncrypt(data: Uint8Array) {
   return out;
 };
 
-Cipher.prototype._updateDecrypt = function _updateDecrypt(data: Uint8Array) {
+Cipher.prototype._updateDecrypt = function _updateDecrypt(data: Buffer) {
   var inputOff = 0;
   var outputOff = 0;
 
@@ -109,7 +109,7 @@ Cipher.prototype.final = function final(buffer: Buffer) {
     return last;
 };
 
-Cipher.prototype._pad = function _pad(buffer: Buffer, off: number) {
+Cipher.prototype._pad = function _pad(buffer: Uint8Array, off: number) {
   if (off === 0)
     return false;
 

@@ -10,13 +10,13 @@ ws.write('hello')
 ws.write('world')
 ws.end()
 
-function write (data: any, enc: string, cb: any) {
+function write (data: Buffer, enc: string, cb: Function) {
   // i am your normal ._write method
   console.log('writing', data.toString())
   cb()
 }
 
-function flush (cb: Function) {
+function flush (cb: any) {
   // i am called before finish is emitted
   setTimeout(cb, 1000) // wait 1 sec
 }

@@ -85,7 +85,7 @@
      *
      * n {number|string|Big} A numeric value.
      */
-    function Big(n: number) {
+    function Big(n: any) {
       var x = this;
 
       // Enable constructor usage without new.
@@ -193,7 +193,7 @@
    * rm {number} Rounding mode: 0 (down), 1 (half-up), 2 (half-even) or 3 (up).
    * [more] {boolean} Whether the result of division was truncated.
    */
-  function round(x: BigJS, sd: number, rm: number, more: boolean) {
+  function round(x: BigNumber, sd: number, rm: number, more: boolean) {
     var xc = x.c;
 
     if (rm === UNDEFINED) rm = x.constructor.RM;
@@ -303,7 +303,7 @@
    *       -1 if the value of this Big is less than the value of Big y, or
    *        0 if they have the same value.
    */
-  P.cmp = function (y: number) {
+  P.cmp = function (y: any) {
     var isneg,
       x = this,
       xc = x.c,
@@ -340,7 +340,7 @@
    * Return a new Big whose value is the value of this Big divided by the value of Big y, rounded,
    * if necessary, to a maximum of Big.DP decimal places using rounding mode Big.RM.
    */
-  P.div = function (y: number) {
+  P.div = function (y: BigSource) {
     var x = this,
       Big = x.constructor,
       a = x.c,                  // dividend
@@ -450,7 +450,7 @@
   /*
    * Return true if the value of this Big is equal to the value of Big y, otherwise return false.
    */
-  P.eq = function (y: T) {
+  P.eq = function (y: BigSource) {
     return this.cmp(y) === 0;
   };
 
@@ -459,7 +459,7 @@
    * Return true if the value of this Big is greater than the value of Big y, otherwise return
    * false.
    */
-  P.gt = function (y: T) {
+  P.gt = function (y: BigSource) {
     return this.cmp(y) > 0;
   };
 
@@ -468,7 +468,7 @@
    * Return true if the value of this Big is greater than or equal to the value of Big y, otherwise
    * return false.
    */
-  P.gte = function (y: T) {
+  P.gte = function (y: Big) {
     return this.cmp(y) > -1;
   };
 
@@ -476,7 +476,7 @@
   /*
    * Return true if the value of this Big is less than the value of Big y, otherwise return false.
    */
-  P.lt = function (y: T) {
+  P.lt = function (y: Big) {
     return this.cmp(y) < 0;
   };
 
@@ -485,7 +485,7 @@
    * Return true if the value of this Big is less than or equal to the value of Big y, otherwise
    * return false.
    */
-  P.lte = function (y: T) {
+  P.lte = function (y: Big) {
     return this.cmp(y) < 1;
   };
 
@@ -493,7 +493,7 @@
   /*
    * Return a new Big whose value is the value of this Big minus the value of Big y.
    */
-  P.minus = P.sub = function (y: number) {
+  P.minus = P.sub = function (y: BigSource) {
     var i, j, t, xlty,
       x = this,
       Big = x.constructor,
@@ -603,7 +603,7 @@
   /*
    * Return a new Big whose value is the value of this Big modulo the value of Big y.
    */
-  P.mod = function (y: number) {
+  P.mod = function (y: Big) {
     var ygtx,
       x = this,
       Big = x.constructor,
@@ -645,7 +645,7 @@
   /*
    * Return a new Big whose value is the value of this Big plus the value of Big y.
    */
-  P.plus = P.add = function (y: number) {
+  P.plus = P.add = function (y: BigSource) {
     var e, k, t,
       x = this,
       Big = x.constructor;
@@ -776,7 +776,7 @@
    * dp? {number} Integer, -MAX_DP to MAX_DP inclusive.
    * rm? {number} Rounding mode: 0 (down), 1 (half-up), 2 (half-even) or 3 (up).
    */
-  P.round = function (dp: number, rm: number) {
+  P.round = function (dp: number, rm: RoundingMode) {
     if (dp === UNDEFINED) dp = 0;
     else if (dp !== ~~dp || dp < -MAX_DP || dp > MAX_DP) {
       throw Error(INVALID_DP);
@@ -835,7 +835,7 @@
   /*
    * Return a new Big whose value is the value of this Big times the value of Big y.
    */
-  P.times = P.mul = function (y: number) {
+  P.times = P.mul = function (y: BigSource) {
     var c,
       x = this,
       Big = x.constructor,
@@ -910,7 +910,7 @@
    * dp? {number} Decimal places: integer, 0 to MAX_DP inclusive.
    * rm? {number} Rounding mode: 0 (down), 1 (half-up), 2 (half-even) or 3 (up).
    */
-  P.toExponential = function (dp: Decimal, rm: RoundingMode) {
+  P.toExponential = function (dp: number, rm: RoundingMode) {
     var x = this,
       n = x.c[0];
 
@@ -936,7 +936,7 @@
    * (-0).toFixed(0) is '0', but (-0.1).toFixed(0) is '-0'.
    * (-0).toFixed(1) is '0.0', but (-0.01).toFixed(1) is '-0.0'.
    */
-  P.toFixed = function (dp: any, rm: any) {
+  P.toFixed = function (dp: number, rm: RoundingMode) {
     var x = this,
       n = x.c[0];
 
@@ -988,7 +988,7 @@
    * sd {number} Significant digits: integer, 1 to MAX_DP inclusive.
    * rm? {number} Rounding mode: 0 (down), 1 (half-up), 2 (half-even) or 3 (up).
    */
-  P.toPrecision = function (sd: any, rm: any) {
+  P.toPrecision = function (sd: number, rm: RoundingMode) {
     var x = this,
       Big = x.constructor,
       n = x.c[0];

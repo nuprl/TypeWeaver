@@ -41,7 +41,7 @@ function compare (a: any, b: any) {
   return a > b ? 1 : a < b ? -1 : 0
 }
 
-function generateBase (httpMethod: string, base_uri: string, params: any) {
+function generateBase (httpMethod: string, base_uri: string, params: Object) {
   // adapted from https://dev.twitter.com/docs/auth/oauth and 
   // https://dev.twitter.com/docs/auth/creating-signature
 
@@ -49,7 +49,7 @@ function generateBase (httpMethod: string, base_uri: string, params: any) {
   // http://tools.ietf.org/html/rfc5849#section-3.4.1.3.2
   var normalized = map(params)
   // 1.  First, the name and value of each parameter are encoded
-  .map(function (p: string[]) {
+  .map(function (p: any) {
     return [ rfc3986(p[0]), rfc3986(p[1] || '') ]
   })
   // 2.  The parameters are sorted by name, using ascending byte value
@@ -61,7 +61,7 @@ function generateBase (httpMethod: string, base_uri: string, params: any) {
   // 3.  The name of each parameter is concatenated to its corresponding
   //     value using an "=" character (ASCII code 61) as a separator, even
   //     if the value is empty.
-  .map(function (p: string[]) { return p.join('=') })
+  .map(function (p: any) { return p.join('=') })
    // 4.  The sorted name/value pairs are concatenated together into a
    //     single string by using an "&" character (ASCII code 38) as
    //     separator.
@@ -76,7 +76,7 @@ function generateBase (httpMethod: string, base_uri: string, params: any) {
   return base
 }
 
-function hmacsign (httpMethod: string, base_uri: string, params: any, consumer_secret: any, token_secret: any) {
+function hmacsign (httpMethod: string, base_uri: string, params: any, consumer_secret: string, token_secret: any) {
   var base = generateBase(httpMethod, base_uri, params)
   var key = [
     consumer_secret || '',
@@ -86,7 +86,7 @@ function hmacsign (httpMethod: string, base_uri: string, params: any, consumer_s
   return sha(key, base, 'sha1')
 }
 
-function hmacsign256 (httpMethod: string, base_uri: string, params: any, consumer_secret: string, token_secret: string) {
+function hmacsign256 (httpMethod: string, base_uri: string, params: any, consumer_secret: string, token_secret: any) {
   var base = generateBase(httpMethod, base_uri, params)
   var key = [
     consumer_secret || '',
@@ -96,7 +96,7 @@ function hmacsign256 (httpMethod: string, base_uri: string, params: any, consume
   return sha(key, base, 'sha256')
 }
 
-function rsasign (httpMethod: string, base_uri: string, params: any, private_key: string, token_secret: string) {
+function rsasign (httpMethod: string, base_uri: string, params: Object, private_key: string, token_secret: string) {
   var base = generateBase(httpMethod, base_uri, params)
   var key = private_key || ''
 

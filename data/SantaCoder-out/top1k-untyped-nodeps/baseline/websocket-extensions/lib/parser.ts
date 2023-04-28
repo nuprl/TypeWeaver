@@ -20,12 +20,12 @@ var Parser = {
 
     var values = header.match(EXT);
 
-    values.forEach(function(value: any) {
+    values.forEach(function(value: string) {
       var params = value.match(new RegExp(PARAM.source, 'g')),
           name   = params.shift(),
           offer  = {};
 
-      params.forEach(function(param: any) {
+      params.forEach(function(param: string) {
         var args = param.match(PARAM), key = args[1], data;
 
         if (args[2] !== undefined) {
@@ -78,7 +78,7 @@ var Offers = function() {
   this._inOrder = [];
 };
 
-Offers.prototype.push = function(name: string, params: any[]) {
+Offers.prototype.push = function(name: string, params: any) {
   if (!hasOwnProperty.call(this._byName, name))
     this._byName[name] = [];
 
@@ -86,7 +86,7 @@ Offers.prototype.push = function(name: string, params: any[]) {
   this._inOrder.push({ name: name, params: params });
 };
 
-Offers.prototype.eachOffer = function(callback: Function, context: any) {
+Offers.prototype.eachOffer = function(callback: Function, context: Object) {
   var list = this._inOrder;
   for (var i = 0, n = list.length; i < n; i++)
     callback.call(context, list[i].name, list[i].params);

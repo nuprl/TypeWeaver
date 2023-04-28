@@ -51,7 +51,7 @@ class CancelToken {
       return promise;
     };
 
-    executor(function cancel(message: string, config: AxiosRequestConfig, request: AxiosRequestConfig) {
+    executor(function cancel(message: string, config: AxiosRequestConfig, request: AxiosRequest) {
       if (token.reason) {
         // Cancellation has already been requested
         return;
@@ -108,7 +108,7 @@ class CancelToken {
    */
   static source() {
     let cancel;
-    const token = new CancelToken(function executor(c: CancelToken) {
+    const token = new CancelToken(function executor(c: any) {
       cancel = c;
     });
     return {

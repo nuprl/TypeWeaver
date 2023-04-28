@@ -13,7 +13,7 @@ import * as uuid from 'uuid';
 
 import testpage from '../utils/testpage';
 
-testpage(function (addTest: Function, done: Function) {
+testpage(function (addTest: TestFn, done: TestFn) {
   addTest('Named exports');
 
   addTest('uuidv1()', uuidv1());

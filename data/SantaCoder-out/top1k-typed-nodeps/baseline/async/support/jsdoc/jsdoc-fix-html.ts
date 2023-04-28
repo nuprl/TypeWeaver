@@ -187,7 +187,7 @@ fs.readdir(docsDir, (readErr, files) => {
         async.asyncify(() => {
             HTMLFiles.push(docFilename)
         }),
-        function(callback: Function) {
+        function(callback: any) {
             fixModuleLinks(HTMLFiles, callback);
         }
     ], (err) => {

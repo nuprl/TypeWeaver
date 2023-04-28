@@ -24,8 +24,8 @@ import awaitify from './internal/awaitify.js'
  *
  * var count = 0;
  * async.whilst(
- *     function test(cb: any) { cb(null, count < 5); },
- *     function iter(callback: any) {
+ *     function test(cb: Function) { cb(null, count < 5); },
+ *     function iter(callback: Function) {
  *         count++;
  *         setTimeout(function() {
  *             callback(null, count);
@@ -36,7 +36,7 @@ import awaitify from './internal/awaitify.js'
  *     }
  * );
  */
-function whilst(test: Function, iteratee: Function, callback: Function) {
+function whilst(test: AsyncBooleanIterator<T>, iteratee: AsyncFunction<T>, callback: AsyncFunction<T>) {
     callback = onlyOnce(callback);
     var _fn = wrapAsync(iteratee);
     var _test = wrapAsync(test);
@@ -49,7 +49,7 @@ function whilst(test: Function, iteratee: Function, callback: Function) {
         _test(check);
     }
 
-    function check(err: Error, truth: boolean) {
+    function check(err: any, truth: boolean) {
         if (err) return callback(err);
         if (err === false) return;
         if (!truth) return callback(null, ...results);

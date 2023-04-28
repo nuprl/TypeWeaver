@@ -6,7 +6,7 @@ const env = process.env
 
 // Used for testing only
 Object.defineProperty(exports, '_vendors', {
-  value: vendors.map(function (v: any) {
+  value: vendors.map(function (v: Vendor) {
     return v.constant
   })
 })
@@ -16,7 +16,7 @@ exports.isPR = null
 
 vendors.forEach(function (vendor: Vendor) {
   const envs = Array.isArray(vendor.env) ? vendor.env : [vendor.env]
-  const isCI = envs.every(function (obj: any) {
+  const isCI = envs.every(function (obj: Vendor) {
     return checkEnv(obj)
   })
 
@@ -65,7 +65,7 @@ exports.isCI = !!(
   false
 )
 
-function checkEnv (obj: any) {
+function checkEnv (obj: string) {
   if (typeof obj === 'string') return !!env[obj]
   return Object.keys(obj).every(function (k: string) {
     return env[k] === obj[k]

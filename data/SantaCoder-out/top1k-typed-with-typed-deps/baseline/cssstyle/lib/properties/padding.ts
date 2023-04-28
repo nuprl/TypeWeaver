@@ -3,7 +3,7 @@
 var parsers = require('../parsers.js');
 var TYPES = parsers.TYPES;
 
-var isValid = function(v: any) {
+var isValid = function(v: string) {
   var type = parsers.valueType(v);
   return (
     type === TYPES.LENGTH ||
@@ -23,7 +23,7 @@ var myGlobal = parsers.implicitSetter(
   function() {
     return true;
   },
-  function(v: any) {
+  function(v: string) {
     return v;
   }
 );

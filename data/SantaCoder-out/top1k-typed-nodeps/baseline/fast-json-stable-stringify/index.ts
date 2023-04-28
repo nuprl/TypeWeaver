@@ -6,7 +6,7 @@ module.exports = function (data: any, opts: any) {
     var cycles = (typeof opts.cycles === 'boolean') ? opts.cycles : false;
 
     var cmp = opts.cmp && (function (f: any) {
-        return function (node: Node) {
+        return function (node: any) {
             return function (a: any, b: any) {
                 var aobj = { key: a, value: node[a] };
                 var bobj = { key: b, value: node[b] };
@@ -16,7 +16,7 @@ module.exports = function (data: any, opts: any) {
     })(opts.cmp);
 
     var seen = [];
-    return (function stringify (node: Node) {
+    return (function stringify (node: any) {
         if (node && node.toJSON && typeof node.toJSON === 'function') {
             node = node.toJSON();
         }

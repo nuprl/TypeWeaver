@@ -41,7 +41,7 @@
     updateFragmentForSharing();
   }
 
-  function setResult(kind: string, result: any, mismatchedComponents: any) {
+  function setResult(kind: string, result: Result, mismatchedComponents: string[]) {
     const output = document.querySelector(`#${kind}-output`);
     const error = document.querySelector(`#${kind}-error`);
 

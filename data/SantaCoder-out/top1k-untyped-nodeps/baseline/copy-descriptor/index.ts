@@ -47,7 +47,7 @@
  * @api public
  */
 
-module.exports = function copyDescriptor(receiver: any, provider: any, from: any, to: any) {
+module.exports = function copyDescriptor(receiver: any, provider: any, from: string, to: string) {
   if (!isObject(provider) && typeof provider !== 'function') {
     to = from;
     from = provider;

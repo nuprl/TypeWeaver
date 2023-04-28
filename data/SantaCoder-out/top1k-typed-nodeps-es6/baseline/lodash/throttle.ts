@@ -49,7 +49,7 @@ import isObject from './isObject.js'
  * // Cancel the trailing throttled invocation.
  * jQuery(window).on('popstate', throttled.cancel)
  */
-function throttle(func: Function, wait: number, options: any) {
+function throttle(func: Function, wait: number, options: Object) {
   let leading = true
   let trailing = true
 

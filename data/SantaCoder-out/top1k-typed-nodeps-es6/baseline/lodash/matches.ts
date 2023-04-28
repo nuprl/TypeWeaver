@@ -30,7 +30,7 @@ const CLONE_DEEP_FLAG = 1
  * filter(objects, matches({ 'a': 4, 'c': 6 }))
  * // => [{ 'a': 4, 'b': 5, 'c': 6 }]
  */
-function matches(source: string) {
+function matches(source: any) {
   return baseMatches(baseClone(source, CLONE_DEEP_FLAG))
 }
 

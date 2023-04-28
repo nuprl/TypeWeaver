@@ -80,7 +80,7 @@ function dir(object: any) {
     console.log(util.inspect(object) + "\n")
 }
 
-function consoleAssert(expression: boolean) {
+function consoleAssert(expression: any) {
     if (!expression) {
         var arr = slice.call(arguments, 1)
         assert.ok(false, util.format.apply(null, arr))

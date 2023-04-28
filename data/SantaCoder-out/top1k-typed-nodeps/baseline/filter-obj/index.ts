@@ -1,4 +1,4 @@
-export function includeKeys(object: any, predicate: any) {
+export function includeKeys(object: Object, predicate: string[]) {
 	const result = {};
 
 	if (Array.isArray(predicate)) {

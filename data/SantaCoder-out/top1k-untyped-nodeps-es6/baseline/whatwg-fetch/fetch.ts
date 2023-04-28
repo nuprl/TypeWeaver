@@ -56,7 +56,7 @@ function normalizeName(name: string) {
   return name.toLowerCase()
 }
 
-function normalizeValue(value: string) {
+function normalizeValue(value: any) {
   if (typeof value !== 'string') {
     value = String(value)
   }
@@ -64,7 +64,7 @@ function normalizeValue(value: string) {
 }
 
 // Build a destructive iterator for the value list
-function iteratorFor(items: any[]) {
+function iteratorFor(items: Array<any>) {
   var iterator = {
     next: function() {
       var value = items.shift()
@@ -81,15 +81,15 @@ function iteratorFor(items: any[]) {
   return iterator
 }
 
-export function Headers(headers: HeadersInit) {
+export function Headers(headers: Headers) {
   this.map = {}
 
   if (headers instanceof Headers) {
-    headers.forEach(function(value: any, name: string) {
+    headers.forEach(function(value: string, name: string) {
       this.append(name, value)
     }, this)
   } else if (Array.isArray(headers)) {
-    headers.forEach(function(header: any) {
+    headers.forEach(function(header: string) {
       this.append(header[0], header[1])
     }, this)
   } else if (headers) {
@@ -99,7 +99,7 @@ export function Headers(headers: HeadersInit) {
   }
 }
 
-Headers.prototype.append = function(name: string, value: any) {
+Headers.prototype.append = function(name: string, value: string) {
   name = normalizeName(name)
   value = normalizeValue(value)
   var oldValue = this.map[name]
@@ -119,7 +119,7 @@ Headers.prototype.has = function(name: string) {
   return this.map.hasOwnProperty(normalizeName(name))
 }
 
-Headers.prototype.set = function(name: string, value: any) {
+Headers.prototype.set = function(name: string, value: string) {
   this.map[normalizeName(name)] = normalizeValue(value)
 }
 
@@ -133,7 +133,7 @@ Headers.prototype.forEach = function(callback: Function, thisArg: any) {
 
 Headers.prototype.keys = function() {
   var items = []
-  this.forEach(function(value: any, name: string) {
+  this.forEach(function(value: string, name: string) {
     items.push(name)
   })
   return iteratorFor(items)
@@ -141,7 +141,7 @@ Headers.prototype.keys = function() {
 
 Headers.prototype.values = function() {
   var items = []
-  this.forEach(function(value: T) {
+  this.forEach(function(value: string) {
     items.push(value)
   })
   return iteratorFor(items)
@@ -149,7 +149,7 @@ Headers.prototype.values = function() {
 
 Headers.prototype.entries = function() {
   var items = []
-  this.forEach(function(value: any, name: string) {
+  this.forEach(function(value: string, name: string) {
     items.push([name, value])
   })
   return iteratorFor(items)
@@ -159,7 +159,7 @@ if (support.iterable) {
   Headers.prototype[Symbol.iterator] = Headers.prototype.entries
 }
 
-function consumed(body: Response) {
+function consumed(body: ReadableStream) {
   if (body.bodyUsed) {
     return Promise.reject(new TypeError('Already read'))
   }
@@ -214,7 +214,7 @@ function bufferClone(buf: Buffer) {
 function Body() {
   this.bodyUsed = false
 
-  this._initBody = function(body: string) {
+  this._initBody = function(body: any) {
     /*
       fetch-mock wraps the Response object in an ES6 Proxy to
       provide useful test harness features such as flush. However, on
@@ -336,7 +336,7 @@ function normalizeMethod(method: string) {
   return methods.indexOf(upcased) > -1 ? upcased : method
 }
 
-export function Request(input: RequestInput, options: RequestOptions) {
+export function Request(input: RequestInfo, options: RequestInit) {
   if (!(this instanceof Request)) {
     throw new TypeError('Please use the "new" operator, this DOM object constructor cannot be called as a function.')
   }
@@ -403,12 +403,12 @@ Request.prototype.clone = function() {
   return new Request(this, {body: this._bodyInit})
 }
 
-function decode(body: FormData) {
+function decode(body: string) {
   var form = new FormData()
   body
     .trim()
     .split('&')
-    .forEach(function(bytes: Uint8Array) {
+    .forEach(function(bytes: string) {
       if (bytes) {
         var split = bytes.split('=')
         var name = split.shift().replace(/\+/g, ' ')

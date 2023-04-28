@@ -30,7 +30,7 @@
   // Returns one of those two, containing the final result.
   function exec(arr: any[], comp: any) {
     if (typeof(comp) !== 'function') {
-      comp = function (a: string, b: string) {
+      comp = function (a: any, b: any) {
         return String(a).localeCompare(b)
       };
     }
@@ -57,7 +57,7 @@
   }
 
   // Run a single pass with the given chunk size.
-  var pass = function (arr: Array<T>, comp: any, chk: any, result: Array<T>) {
+  var pass = function (arr: any[], comp: any, chk: any, result: any[]) {
     var len = arr.length;
     var i = 0;
     // Step size / double chunk size.

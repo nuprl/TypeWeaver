@@ -39,7 +39,7 @@ const supportedProtocols = platform.protocols.map(protocol => {
  *
  * @returns {Object<string, any>}
  */
-function dispatchBeforeRedirect(options: DispatchOptions) {
+function dispatchBeforeRedirect(options: http.ClientRequestArgs) {
   if (options.beforeRedirects.proxy) {
     options.beforeRedirects.proxy(options);
   }
@@ -57,7 +57,7 @@ function dispatchBeforeRedirect(options: DispatchOptions) {
  *
  * @returns {http.ClientRequestArgs}
  */
-function setProxy(options: any, configProxy: any, location: any) {
+function setProxy(options: any, configProxy: any, location: string) {
   let proxy = configProxy;
   if (!proxy && proxy !== false) {
     const proxyUrl = getProxyForUrl(location);
@@ -90,7 +90,7 @@ function setProxy(options: any, configProxy: any, location: any) {
     }
   }
 
-  options.beforeRedirects.proxy = function beforeRedirect(redirectOptions: RedirectOptions) {
+  options.beforeRedirects.proxy = function beforeRedirect(redirectOptions: AxiosRequestConfig) {
     // Configure proxy for redirected request, passing the original config proxy to apply
     // the exact same logic as if the redirected request was performed by axios directly.
     setProxy(redirectOptions, configProxy, redirectOptions.href);
@@ -128,7 +128,7 @@ export default function httpAdapter(config: AxiosRequestConfig) {
       emitter.removeAllListeners();
     }
 
-    function done(value: T, isRejected: boolean) {
+    function done(value: any, isRejected: boolean) {
       if (isDone) return;
 
       isDone = true;
@@ -141,7 +141,7 @@ export default function httpAdapter(config: AxiosRequestConfig) {
       isRejected ? rejectPromise(value) : resolvePromise(value);
     }
 
-    const resolve = function resolve(value: T) {
+    const resolve = function resolve(value: any) {
       done(value);
     };
 
@@ -149,7 +149,7 @@ export default function httpAdapter(config: AxiosRequestConfig) {
       done(value, true);
     };
 
-    function abort(reason: string) {
+    function abort(reason: CancelReason) {
       emitter.emit('abort', !reason || reason.type ? new CanceledError(null, config, req) : reason);
     }
 
@@ -503,7 +503,7 @@ export default function httpAdapter(config: AxiosRequestConfig) {
     });
 
     // Handle errors
-    req.on('error', function handleRequestError(err: Error) {
+    req.on('error', function handleRequestError(err: AxiosError) {
       // @todo remove
       // if (req.aborted && err.code !== AxiosError.ERR_FR_TOO_MANY_REDIRECTS) return;
       reject(AxiosError.from(err, null, config, req));

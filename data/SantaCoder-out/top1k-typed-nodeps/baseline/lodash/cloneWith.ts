@@ -17,7 +17,7 @@ const CLONE_SYMBOLS_FLAG = 4
  * @see cloneDeepWith
  * @example
  *
- * function customizer(value: unknown) {
+ * function customizer(value: any) {
  *   if (isElement(value)) {
  *     return value.cloneNode(false)
  *   }

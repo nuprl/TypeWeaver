@@ -30,7 +30,7 @@
         return sprintf.apply(null, [fmt].concat(argv || []))
     }
 
-    function sprintf_format(parse_tree: string, argv: any[]) {
+    function sprintf_format(parse_tree: Array<any>, argv: Array<any>) {
         var cursor = 1, tree_length = parse_tree.length, arg, output = '', i, k, ph, pad, pad_character, pad_length, is_positive, sign
         for (i = 0; i < tree_length; i++) {
             if (typeof parse_tree[i] === 'string') {

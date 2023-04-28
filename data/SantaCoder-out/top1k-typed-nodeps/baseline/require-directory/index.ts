@@ -10,7 +10,7 @@ var fs = require('fs'),
     rename: function (name: string) {
       return name;
     },
-    visit: function (obj: T) {
+    visit: function (obj: any) {
       return obj;
     }
   };
@@ -34,7 +34,7 @@ function checkFileInclusion(path: string, filename: string, options: Options) {
   );
 }
 
-function requireDirectory(m: NodeModule, path: string, options: RequireDirectoryOptions) {
+function requireDirectory(m: NodeModule, path: string, options: Options) {
   var retval = {};
 
   // path is optional

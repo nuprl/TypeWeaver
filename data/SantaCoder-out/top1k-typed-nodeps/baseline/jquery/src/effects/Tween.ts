@@ -4,14 +4,14 @@ import finalPropName from "../css/finalPropName.js";
 
 import "../css.js";
 
-function Tween( elem: HTMLElement, options: any, prop: string, end: any, easing : string) {
+function Tween( elem: Element, options: TweenOptions, prop: string, end: any, easing : any) {
 	return new Tween.prototype.init( elem, options, prop, end, easing );
 }
 jQuery.Tween = Tween;
 
 Tween.prototype = {
 	constructor: Tween,
-	init: function( elem: HTMLElement, options: any, prop: string, end: any, easing: string, unit : string) {
+	init: function( elem: HTMLElement, options: TweenOptions, prop: string, end: any, easing: string, unit : string) {
 		this.elem = elem;
 		this.prop = prop;
 		this.easing = easing || jQuery.easing._default;

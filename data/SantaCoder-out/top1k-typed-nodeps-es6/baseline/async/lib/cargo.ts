@@ -29,7 +29,7 @@ import queue from './internal/queue.js'
  * @example
  *
  * // create a cargo object with payload 2
- * var cargo = async.cargo(function(tasks: Array<Task>, callback: Function) {
+ * var cargo = async.cargo(function(tasks: any[], callback: Function) {
  *     for (var i=0; i<tasks.length; i++) {
  *         console.log('hello ' + tasks[i].name);
  *     }
@@ -37,10 +37,10 @@ import queue from './internal/queue.js'
  * }, 2);
  *
  * // add some items
- * cargo.push({name: 'foo'}, function(err: any) {
+ * cargo.push({name: 'foo'}, function(err: Error) {
  *     console.log('finished processing foo');
  * });
- * cargo.push({name: 'bar'}, function(err: any) {
+ * cargo.push({name: 'bar'}, function(err: Error) {
  *     console.log('finished processing bar');
  * });
  * await cargo.push({name: 'baz'});

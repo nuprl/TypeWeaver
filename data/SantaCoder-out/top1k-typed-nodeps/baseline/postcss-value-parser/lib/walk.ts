@@ -1,4 +1,4 @@
-module.exports = function walk(nodes: Node[], cb: any, bubble: boolean) {
+module.exports = function walk(nodes: Node[], cb: Function, bubble: boolean) {
   var i, max, node, result;
 
   for (i = 0, max = nodes.length; i < max; i += 1) {

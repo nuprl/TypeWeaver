@@ -1,7 +1,7 @@
 import {fsProps, fsAsyncMethods, fsSyncMethods} from './util/lists';
 
 
-export default function patchFs(vol: any, fs = require('fs': any)) {
+export default function patchFs(vol: Volume, fs = require('fs': any)) {
     const bkp = {};
 
     const patch = (key, newValue) => {

@@ -14,8 +14,8 @@
  * @api public
  */
 
-module.exports = function(options: Options) {
-  return function(snapdragon: Snapdragon) {
+module.exports = function(options: Object) {
+  return function(snapdragon: any) {
     if (snapdragon.isSnapdragon) {
       snapdragon.parser.define('capture', capture);
       snapdragon.define('capture', function() {

@@ -23,7 +23,7 @@ import toInteger from './toInteger.js'
  * drop([1, 2, 3], 0)
  * // => [1, 2, 3]
  */
-function drop(array: any[], n=1: number) {
+function drop(array: Array<any>, n=1: number) {
   const length = array == null ? 0 : array.length
   return length
     ? slice(array, n < 0 ? 0 : toInteger(n), length)

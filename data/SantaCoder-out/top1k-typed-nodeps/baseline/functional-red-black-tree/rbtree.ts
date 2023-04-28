@@ -5,7 +5,7 @@ module.exports = createRBTree
 var RED   = 0
 var BLACK = 1
 
-function RBNode(color: boolean, key: any, value: any, left: RBNode, right: RBNode, count: number) {
+function RBNode(color: number, key: any, value: any, left: RBNode, right: RBNode, count: number) {
   this._color = color
   this.key = key
   this.value = value
@@ -14,15 +14,15 @@ function RBNode(color: boolean, key: any, value: any, left: RBNode, right: RBNod
   this._count = count
 }
 
-function cloneNode(node: Node) {
+function cloneNode(node: RBNode) {
   return new RBNode(node._color, node.key, node.value, node.left, node.right, node._count)
 }
 
-function repaint(color: string, node: HTMLElement) {
+function repaint(color: string, node: RBNode) {
   return new RBNode(color, node.key, node.value, node.left, node.right, node._count)
 }
 
-function recount(node: TreeNode) {
+function recount(node: Node) {
   node._count = 1 + (node.left ? node.left._count : 0) + (node.right ? node.right._count : 0)
 }
 
@@ -36,7 +36,7 @@ var proto = RedBlackTree.prototype
 Object.defineProperty(proto, "keys", {
   get: function() {
     var result = []
-    this.forEach(function(k: string,v: any) {
+    this.forEach(function(k: any,v: any) {
       result.push(k)
     })
     return result
@@ -46,7 +46,7 @@ Object.defineProperty(proto, "keys", {
 Object.defineProperty(proto, "values", {
   get: function() {
     var result = []
-    this.forEach(function(k: string,v: any) {
+    this.forEach(function(k: number,v: T) {
       result.push(v)
     })
     return result
@@ -64,7 +64,7 @@ Object.defineProperty(proto, "length", {
 })
 
 //Insert a new item into the tree
-proto.insert = function(key: string, value: any) {
+proto.insert = function(key: K, value: V) {
   var cmp = this._compare
   //Find point to insert new node at
   var n = this.root
@@ -230,7 +230,7 @@ proto.insert = function(key: string, value: any) {
 
 
 //Visit all nodes inorder
-function doVisitFull(visit: Visit, node: Node) {
+function doVisitFull(visit: any, node: any) {
   if(node.left) {
     var v = doVisitFull(visit, node.left)
     if(v) { return v }
@@ -243,7 +243,7 @@ function doVisitFull(visit: Visit, node: Node) {
 }
 
 //Visit half nodes in order
-function doVisitHalf(lo: number, compare: any, visit: any, node: any) {
+function doVisitHalf(lo: any, compare: any, visit: any, node: any) {
   var l = compare(lo, node.key)
   if(l <= 0) {
     if(node.left) {
@@ -259,7 +259,7 @@ function doVisitHalf(lo: number, compare: any, visit: any, node: any) {
 }
 
 //Visit all nodes within a range
-function doVisit(lo: number, hi: number, compare: any, visit: any, node: any) {
+function doVisit(lo: K, hi: K, compare: any, visit: any, node: any) {
   var l = compare(lo, node.key)
   var h = compare(hi, node.key)
   var v
@@ -464,7 +464,7 @@ proto.find = function(key: K) {
 }
 
 //Removes item with key from tree
-proto.remove = function(key: string) {
+proto.remove = function(key: K) {
   var iter = this.find(key)
   if(iter) {
     return iter.remove()
@@ -491,7 +491,7 @@ proto.get = function(key: K) {
 }
 
 //Iterator for red black tree
-function RedBlackTreeIterator(tree: RedBlackTree, stack: Array<RedBlackTreeNode>) {
+function RedBlackTreeIterator(tree: RedBlackTree, stack: Array<Node>) {
   this.tree = tree
   this._stack = stack
 }
@@ -532,7 +532,7 @@ function swapNode(n: Node, v: Node) {
 }
 
 //Fix up a double black node in a tree
-function fixDoubleBlack(stack: Stack) {
+function fixDoubleBlack(stack: Node[]) {
   var n, p, s, z
   for(var i=stack.length-1; i>=0; --i) {
     n = stack[i]
@@ -919,7 +919,7 @@ Object.defineProperty(iproto, "hasNext", {
 })
 
 //Update value
-iproto.update = function(value: any) {
+iproto.update = function(value: T) {
   var stack = this._stack
   if(stack.length === 0) {
     throw new Error("Can't update empty node!")

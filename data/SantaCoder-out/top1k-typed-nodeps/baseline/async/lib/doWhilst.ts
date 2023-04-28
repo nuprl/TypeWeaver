@@ -25,20 +25,20 @@ import awaitify from './internal/awaitify.js'
  * `iteratee`'s callback. Invoked with (err, [results]);
  * @returns {Promise} a promise, if no callback is passed
  */
-function doWhilst(iteratee: Function, test: Function, callback: Function) {
+function doWhilst(iteratee: AsyncFunction, test: AsyncFunction, callback: Function) {
     callback = onlyOnce(callback);
     var _fn = wrapAsync(iteratee);
     var _test = wrapAsync(test);
     var results
 
-    function next(err: Error, ...args: any[]) {
+    function next(err: any, ...args: any[]) {
         if (err) return callback(err);
         if (err === false) return;
         results = args
         _test(...args, check);
     }
 
-    function check(err: Error, truth: boolean) {
+    function check(err: any, truth: boolean) {
         if (err) return callback(err);
         if (err === false) return;
         if (!truth) return callback(null, ...results);

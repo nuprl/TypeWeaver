@@ -41,7 +41,7 @@ const symbolValueOf = Symbol.prototype.valueOf
  * @param {Object} stack Tracks traversed `object` and `other` objects.
  * @returns {boolean} Returns `true` if the objects are equivalent, else `false`.
  */
-function equalByTag(object: any, other: any, tag: string, bitmask: number, customizer: _.Comparator<T>, equalFunc: _.Comparator<T>, stack: string[]) {
+function equalByTag(object: any, other: any, tag: any, bitmask: any, customizer: any, equalFunc: any, stack: any) {
   switch (tag) {
     case dataViewTag:
       if ((object.byteLength != other.byteLength) ||

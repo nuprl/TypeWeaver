@@ -61,7 +61,7 @@ function getInverseMeta(value: string) {
   return /[dws]/.test(value) ? value.toUpperCase() : value.toLowerCase();
 }
 
-function hasAppropriateSiblings(path: NodePath<t.Node>) {
+function hasAppropriateSiblings(path: NodePath<Node>) {
   const {parent, index} = path;
 
   if (parent.type !== 'Alternative') {

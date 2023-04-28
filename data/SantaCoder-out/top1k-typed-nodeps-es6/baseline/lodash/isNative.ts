@@ -29,7 +29,7 @@ const reIsNative = RegExp(`^${
  * isNative(isDate)
  * // => false
  */
-function isNative(value: any) {
+function isNative(value: unknown) {
   return isObject(value) && reIsNative.test(value)
 }
 

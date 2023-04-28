@@ -13,7 +13,7 @@ var version = process.version
 var ok = /^v[0-5]\./.test(version)
 import old from './old.js';
 
-function newError (er: Error) {
+function newError (er: any) {
   return er && er.syscall === 'realpath' && (
     er.code === 'ELOOP' ||
     er.code === 'ENOMEM' ||
@@ -21,7 +21,7 @@ function newError (er: Error) {
   )
 }
 
-function realpath (p: string, cache: Object, cb: Function) {
+function realpath (p: string, cache: any, cb: Function) {
   if (ok) {
     return origRealpath(p, cache, cb)
   }
@@ -30,7 +30,7 @@ function realpath (p: string, cache: Object, cb: Function) {
     cb = cache
     cache = null
   }
-  origRealpath(p, cache, function (er: any, result: any) {
+  origRealpath(p, cache, function (er: any, result: string) {
     if (newError(er)) {
       old.realpath(p, cache, cb)
     } else {
@@ -39,7 +39,7 @@ function realpath (p: string, cache: Object, cb: Function) {
   })
 }
 
-function realpathSync (p: string, cache: Object) {
+function realpathSync (p: string, cache: any) {
   if (ok) {
     return origRealpathSync(p, cache)
   }

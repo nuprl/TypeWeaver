@@ -1,7 +1,7 @@
-export default function (req: Request, res: Response) {
+export default function (req: IncomingMessage, res: ServerResponse) {
   let data = '';
   
-  req.on('data', function (chunk: string) {
+  req.on('data', function (chunk: any) {
     data += chunk;
   });
 

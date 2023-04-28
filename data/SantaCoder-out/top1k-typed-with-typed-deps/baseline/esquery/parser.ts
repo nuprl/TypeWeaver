@@ -18,7 +18,7 @@
     child.prototype = new ctor();
   }
 
-  function peg$SyntaxError(message: string, expected: string[], found: string, location: string) {
+  function peg$SyntaxError(message: string, expected: string, found: string, location: peg$SourceLocation) {
     this.message  = message;
     this.expected = expected;
     this.found    = found;
@@ -34,11 +34,11 @@
 
   peg$SyntaxError.buildMessage = function(expected: any, found: any) {
     var DESCRIBE_EXPECTATION_FNS = {
-          literal: function(expectation: any) {
+          literal: function(expectation: Object) {
             return "\"" + literalEscape(expectation.text) + "\"";
           },
 
-          "class": function(expectation: any) {
+          "class": function(expectation: ClassExpectation) {
             var escapedParts = "",
                 i;
 
@@ -51,15 +51,15 @@
             return "[" + (expectation.inverted ? "^" : "") + escapedParts + "]";
           },
 
-          any: function(expectation: string) {
+          any: function(expectation: any) {
             return "any character";
           },
 
-          end: function(expectation: string) {
+          end: function(expectation: Object) {
             return "end of input";
           },
 
-          other: function(expectation: Expectation) {
+          other: function(expectation: any) {
             return expectation.description;
           }
         };
@@ -98,7 +98,7 @@
       return DESCRIBE_EXPECTATION_FNS[expectation.type](expectation);
     }
 
-    function describeExpected(expected: any) {
+    function describeExpected(expected: any[]) {
       var descriptions = new Array(expected.length),
           i, j;
 
@@ -132,14 +132,14 @@
       }
     }
 
-    function describeFound(found: string) {
+    function describeFound(found: any) {
       return found ? "\"" + literalEscape(found) + "\"" : "end of input";
     }
 
     return "Expected " + describeExpected(expected) + " but " + describeFound(found) + " found.";
   };
 
-  function peg$parse(input: string, options: peg$IParseOptions) {
+  function peg$parse(input: string, options: any) {
     options = options !== void 0 ? options : {};
 
     var peg$FAILED = {},
@@ -147,7 +147,7 @@
         peg$startRuleFunctions = { start: peg$parsestart },
         peg$startRuleFunction  = peg$parsestart,
 
-        peg$c0 = function(ss: string) {
+        peg$c0 = function(ss: string[]) {
             return ss.length === 1 ? ss[0] : { type: 'matches', selectors: ss };
           },
         peg$c1 = function() { return void 0; },
@@ -155,7 +155,7 @@
         peg$c3 = peg$literalExpectation(" ", false),
         peg$c4 = /^[^ [\],():#!=><~+.]/,
         peg$c5 = peg$classExpectation([" ", "[", "]", ",", "(", ")", ":", "#", "!", "=", ">", "<", "~", "+", "."], true, false),
-        peg$c6 = function(i: any) { return i.join(''); },
+        peg$c6 = function(i: number) { return i.join(''); },
         peg$c7 = ">",
         peg$c8 = peg$literalExpectation(">", false),
         peg$c9 = function() { return 'child'; },
@@ -168,17 +168,17 @@
         peg$c16 = function() { return 'descendant'; },
         peg$c17 = ",",
         peg$c18 = peg$literalExpectation(",", false),
-        peg$c19 = function(s: string, ss: string[]) {
+        peg$c19 = function(s: string, ss: any[]) {
           return [s].concat(ss.map(function (s: string) { return s[3]; }));
         },
-        peg$c20 = function(a: number, ops: any) {
+        peg$c20 = function(a: any, ops: any) {
             return ops.reduce(function (memo: any, rhs: any) {
               return { type: rhs[0], left: memo, right: rhs[1] };
             }, a);
           },
         peg$c21 = "!",
         peg$c22 = peg$literalExpectation("!", false),
-        peg$c23 = function(subject: string, as: string) {
+        peg$c23 = function(subject: boolean, as: Array<Selector>) {
             const b = as.length === 1 ? as[0] : { type: 'compound', selectors: as };
             if(subject) b.subject = true;
             return b;
@@ -188,7 +188,7 @@
         peg$c26 = function(a: any) { return { type: 'wildcard', value: a }; },
         peg$c27 = "#",
         peg$c28 = peg$literalExpectation("#", false),
-        peg$c29 = function(i: string) { return { type: 'identifier', value: i }; },
+        peg$c29 = function(i: any) { return { type: 'identifier', value: i }; },
         peg$c30 = "[",
         peg$c31 = peg$literalExpectation("[", false),
         peg$c32 = "]",
@@ -198,7 +198,7 @@
         peg$c36 = peg$classExpectation([">", "<", "!"], false, false),
         peg$c37 = "=",
         peg$c38 = peg$literalExpectation("=", false),
-        peg$c39 = function(a: any) { return (a || '') + '='; },
+        peg$c39 = function(a: string) { return (a || '') + '='; },
         peg$c40 = /^[><]/,
         peg$c41 = peg$classExpectation([">", "<"], false, false),
         peg$c42 = ".",
@@ -206,7 +206,7 @@
         peg$c44 = function(a: any, as: any) {
             return [].concat.apply([a], as).join('');
           },
-        peg$c45 = function(name: string, op: string, value: any) {
+        peg$c45 = function(name: string, op: string, value: string) {
               return { type: 'attribute', name: name, operator: op, value: value };
             },
         peg$c46 = function(name: string) { return { type: 'attribute', name: name }; },
@@ -227,7 +227,7 @@
         peg$c59 = peg$classExpectation(["\\", "'"], true, false),
         peg$c60 = /^[0-9]/,
         peg$c61 = peg$classExpectation([["0", "9"]], false, false),
-        peg$c62 = function(a: number, b: number) {
+        peg$c62 = function(a: any, b: any) {
                 // Can use `a.flat().join('')` once supported
                 const leadingDecimals = a ? [].concat.apply([], a).join('') : '';
                 return { type: 'literal', value: parseFloat(leadingDecimals + b.join('')) };
@@ -239,7 +239,7 @@
         peg$c67 = peg$classExpectation([" ", ")"], true, false),
         peg$c68 = ")",
         peg$c69 = peg$literalExpectation(")", false),
-        peg$c70 = function(t: string[]) { return { type: 'type', value: t.join('') }; },
+        peg$c70 = function(t: string) { return { type: 'type', value: t.join('') }; },
         peg$c71 = /^[imsu]/,
         peg$c72 = peg$classExpectation(["i", "m", "s", "u"], false, false),
         peg$c73 = "/",
@@ -249,18 +249,18 @@
         peg$c77 = function(d: any, flgs: any) { return {
               type: 'regexp', value: new RegExp(d.join(''), flgs ? flgs.join('') : '') };
             },
-        peg$c78 = function(i: number, is: number) {
-          return { type: 'field', name: is.reduce(function(memo: string, p: string[]){ return memo + p[0] + p[1]; }, i)};
+        peg$c78 = function(i: any, is: any) {
+          return { type: 'field', name: is.reduce(function(memo: any, p: any){ return memo + p[0] + p[1]; }, i)};
         },
         peg$c79 = ":not(",
         peg$c80 = peg$literalExpectation(":not(", false),
-        peg$c81 = function(ss: Selector[]) { return { type: 'not', selectors: ss }; },
+        peg$c81 = function(ss: Array<Selector>) { return { type: 'not', selectors: ss }; },
         peg$c82 = ":matches(",
         peg$c83 = peg$literalExpectation(":matches(", false),
-        peg$c84 = function(ss: string[]) { return { type: 'matches', selectors: ss }; },
+        peg$c84 = function(ss: Array<Selector>) { return { type: 'matches', selectors: ss }; },
         peg$c85 = ":has(",
         peg$c86 = peg$literalExpectation(":has(", false),
-        peg$c87 = function(ss: string[]) { return { type: 'has', selectors: ss }; },
+        peg$c87 = function(ss: SelectorSequence) { return { type: 'has', selectors: ss }; },
         peg$c88 = ":first-child",
         peg$c89 = peg$literalExpectation(":first-child", false),
         peg$c90 = function() { return nth(1); },
@@ -269,10 +269,10 @@
         peg$c93 = function() { return nthLast(1); },
         peg$c94 = ":nth-child(",
         peg$c95 = peg$literalExpectation(":nth-child(", false),
-        peg$c96 = function(n: string[]) { return nth(parseInt(n.join(''), 10)); },
+        peg$c96 = function(n: string) { return nth(parseInt(n.join(''), 10)); },
         peg$c97 = ":nth-last-child(",
         peg$c98 = peg$literalExpectation(":nth-last-child(", false),
-        peg$c99 = function(n: string[]) { return nthLast(parseInt(n.join(''), 10)); },
+        peg$c99 = function(n: any) { return nthLast(parseInt(n.join(''), 10)); },
         peg$c100 = ":",
         peg$c101 = peg$literalExpectation(":", false),
         peg$c102 = "statement",
@@ -316,7 +316,7 @@
       return peg$computeLocation(peg$savedPos, peg$currPos);
     }
 
-    function expected(description: string, location: string) {
+    function expected(description: string, location: peg$IFileRange) {
       location = location !== void 0 ? location : peg$computeLocation(peg$savedPos, peg$currPos)
 
       throw peg$buildStructuredError(
@@ -326,7 +326,7 @@
       );
     }
 
-    function error(message: string, location: string) {
+    function error(message: string, location: peg$IFileRange) {
       location = location !== void 0 ? location : peg$computeLocation(peg$savedPos, peg$currPos)
 
       throw peg$buildSimpleError(message, location);
@@ -336,7 +336,7 @@
       return { type: "literal", text: text, ignoreCase: ignoreCase };
     }
 
-    function peg$classExpectation(parts: string[], inverted: boolean, ignoreCase: boolean) {
+    function peg$classExpectation(parts: Array<any>, inverted: boolean, ignoreCase: boolean) {
       return { type: "class", parts: parts, inverted: inverted, ignoreCase: ignoreCase };
     }
 
@@ -403,7 +403,7 @@
       };
     }
 
-    function peg$fail(expected: string[]) {
+    function peg$fail(expected: any) {
       if (peg$currPos < peg$maxFailPos) { return; }
 
       if (peg$currPos > peg$maxFailPos) {
@@ -414,11 +414,11 @@
       peg$maxFailExpected.push(expected);
     }
 
-    function peg$buildSimpleError(message: string, location: peg$LocationRange) {
+    function peg$buildSimpleError(message: string, location: peg$IFileLocation) {
       return new peg$SyntaxError(message, null, null, location);
     }
 
-    function peg$buildStructuredError(expected: any, found: any, location: string) {
+    function peg$buildStructuredError(expected: Array<string>, found: any, location: peg$IParseLocation) {
       return new peg$SyntaxError(
         peg$SyntaxError.buildMessage(expected, found),
         expected,

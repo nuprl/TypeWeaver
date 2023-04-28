@@ -31,7 +31,7 @@ module.exports = function( grunt : any) {
 		if ( testMode === "basic" ) {
 			runs.basic = config.testUrl + commit + "/test/index.html?module=basic";
 		} else {
-			tests.forEach( function( test : Function) {
+			tests.forEach( function( test : string) {
 				runs[ test ] = config.testUrl + commit + "/test/index.html?module=" + test;
 			} );
 		}
@@ -51,7 +51,7 @@ module.exports = function( grunt : any) {
 				runMax: config.runMax,
 				browserSets: browserSets,
 				timeout: timeout
-			}, function( err: Error, passed : boolean) {
+			}, function( err: any, passed : boolean) {
 				if ( err ) {
 					grunt.log.error( err );
 				}

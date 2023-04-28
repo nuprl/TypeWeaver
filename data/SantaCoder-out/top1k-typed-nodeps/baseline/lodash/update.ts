@@ -25,7 +25,7 @@ import baseUpdate from './.internal/baseUpdate.js'
  * console.log(object.x[0].y.z)
  * // => 0
  */
-function update(object: any, path: string, updater: any) {
+function update(object: any, path: any, updater: any) {
   return object == null ? object : baseUpdate(object, path, updater)
 }
 

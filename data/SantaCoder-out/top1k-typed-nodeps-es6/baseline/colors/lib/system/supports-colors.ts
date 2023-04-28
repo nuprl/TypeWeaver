@@ -55,7 +55,7 @@ function translateLevel(level: number) {
   };
 }
 
-function supportsColor(stream: NodeJS.WritableStream) {
+function supportsColor(stream: NodeJS.WriteStream) {
   if (forceColor === false) {
     return 0;
   }
@@ -139,7 +139,7 @@ function supportsColor(stream: NodeJS.WritableStream) {
   return min;
 }
 
-function getSupportLevel(stream: ReadableStream) {
+function getSupportLevel(stream: NodeJS.WriteStream) {
   var level = supportsColor(stream);
   return translateLevel(level);
 }

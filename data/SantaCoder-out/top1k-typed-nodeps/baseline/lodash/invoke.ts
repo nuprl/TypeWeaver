@@ -19,7 +19,7 @@ import toKey from './.internal/toKey.js'
  * invoke(object, 'a[0].b.c.slice', [1, 3])
  * // => [2, 3]
  */
-function invoke(object: any, path: string, args: any[]) {
+function invoke(object: any, path: PropertyPath, args: any[]) {
   path = castPath(path, object)
   object = parent(object, path)
   const func = object == null ? object : object[toKey(last(path))]

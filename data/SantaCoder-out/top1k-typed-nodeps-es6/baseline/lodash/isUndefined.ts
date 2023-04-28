@@ -13,7 +13,7 @@
  * isUndefined(null)
  * // => false
  */
-function isUndefined(value: any) {
+function isUndefined(value: unknown) {
   return value === undefined
 }
 

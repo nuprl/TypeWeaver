@@ -65,7 +65,7 @@ DelayedStream.prototype.pause = function() {
 DelayedStream.prototype.release = function() {
   this._released = true;
 
-  this._bufferedEvents.forEach(function(args: any[]) {
+  this._bufferedEvents.forEach(function(args: Array<any>) {
     this.emit.apply(this, args);
   }.bind(this));
   this._bufferedEvents = [];

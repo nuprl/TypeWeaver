@@ -174,7 +174,7 @@ Diff.prototype = {
   }
 };
 
-function buildValues(diff: DiffResult, components: Component[], newString: string, oldString: string, useLongestToken: boolean) {
+function buildValues(diff: Diff, components: Component[], newString: string, oldString: string, useLongestToken: boolean) {
   let componentPos = 0,
       componentLen = components.length,
       newPos = 0,
@@ -185,7 +185,7 @@ function buildValues(diff: DiffResult, components: Component[], newString: strin
     if (!component.removed) {
       if (!component.added && useLongestToken) {
         let value = newString.slice(newPos, newPos + component.count);
-        value = value.map(function(value: any, i: number) {
+        value = value.map(function(value: string, i: number) {
           let oldValue = oldString[oldPos + i];
           return oldValue.length > value.length ? oldValue : value;
         });
@@ -230,6 +230,6 @@ function buildValues(diff: DiffResult, components: Component[], newString: strin
   return components;
 }
 
-function clonePath(path: string) {
+function clonePath(path: Path) {
   return { newPos: path.newPos, components: path.components.slice(0) };
 }

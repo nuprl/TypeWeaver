@@ -35,7 +35,7 @@ function compileStyleAliases(map: StyleAliasMap) {
   return result;
 }
 
-function Type(tag: string, options: any) {
+function Type(tag: string, options: TypeOptions) {
   options = options || {};
 
   Object.keys(options).forEach(function (name: string) {

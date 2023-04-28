@@ -110,7 +110,7 @@
    * keys and one which is capable of safely using proxies as keys. See
    * comments below about HostWeakMap and DoubleWeakMap for details.
    *
-   * This function (which is a global: any, not exposed to guests: any) marks a
+   * This function (which is a global: it, not exposed to guests: it.constructor) marks a
    * WeakMap as permitted to do what is necessary to index all host
    * objects, at the cost of making it unsafe for proxies.
    *
@@ -221,7 +221,7 @@
     var u8s = new Uint8Array(ab);
     crypto.getRandomValues(u8s);
     HIDDEN_NAME = HIDDEN_NAME_PREFIX + 'rand:' +
-      Array.prototype.map.call(u8s, function(u8: u8) {
+      Array.prototype.map.call(u8s, function(u8: number) {
         return (u8 % 36).toString(36);
       }).join('') + '___';
   }
@@ -418,7 +418,7 @@
     var values = []; // brute force for corresponding values.
     var id = nextId++;
 
-    function get___(key: string, opt_default: any) {
+    function get___(key: any, opt_default: any) {
       var index;
       var hiddenRecord = getHiddenRecord(key);
       if (hiddenRecord) {
@@ -429,7 +429,7 @@
       }
     }
 
-    function has___(key: string) {
+    function has___(key: any) {
       var hiddenRecord = getHiddenRecord(key);
       if (hiddenRecord) {
         return id in hiddenRecord;
@@ -438,7 +438,7 @@
       }
     }
 
-    function set___(key: string, value: any) {
+    function set___(key: K, value: V) {
       var index;
       var hiddenRecord = getHiddenRecord(key);
       if (hiddenRecord) {
@@ -462,7 +462,7 @@
       return this;
     }
 
-    function delete___(key: string) {
+    function delete___(key: K) {
       var hiddenRecord = getHiddenRecord(key);
       var index, lastIndex;
       if (hiddenRecord) {
@@ -512,7 +512,7 @@
        * Return the value most recently associated with key, or
        * opt_default if none.
        */
-      value: function get(key: string, opt_default: any) {
+      value: function get(key: K, opt_default: V) {
         return this.get___(key, opt_default);
       },
       writable: true,
@@ -523,7 +523,7 @@
       /**
        * Is there a value associated with key in this WeakMap?
        */
-      value: function has(key: string) {
+      value: function has(key: K) {
         return this.has___(key);
       },
       writable: true,
@@ -535,7 +535,7 @@
        * Associate value with key in this WeakMap, overwriting any
        * previous association if present.
        */
-      value: function set(key: string, value: any) {
+      value: function set(key: K, value: V) {
         return this.set___(key, value);
       },
       writable: true,
@@ -609,7 +609,7 @@
           }
         }
 
-        function dhas(key: string) {
+        function dhas(key: K) {
           return hmap.has(key) || (omap ? omap.has___(key) : false);
         }
 
@@ -624,7 +624,7 @@
             return this;
           };
         } else {
-          dset = function(key: string, value: any) {
+          dset = function(key: K, value: V) {
             if (enableSwitching) {
               try {
                 hmap.set(key, value);
@@ -639,7 +639,7 @@
           };
         }
 
-        function ddelete(key: string) {
+        function ddelete(key: K) {
           var result = !!hmap['delete'](key);
           if (omap) { return omap.delete___(key) || result; }
           return result;
@@ -650,7 +650,7 @@
           has___:    { value: constFunc(dhas) },
           set___:    { value: constFunc(dset) },
           delete___: { value: constFunc(ddelete) },
-          permitHostObjects___: { value: constFunc(function(token: string) {
+          permitHostObjects___: { value: constFunc(function(token: any) {
             if (token === weakMapPermitHostObjects) {
               enableSwitching = true;
             } else {

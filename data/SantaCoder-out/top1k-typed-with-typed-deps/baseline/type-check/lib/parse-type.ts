@@ -2,7 +2,7 @@
 (function(){
   var identifierRegex, tokenRegex;
   identifierRegex = /[\$\w]+/;
-  function peek(tokens: Array<Token>){
+  function peek(tokens: Array<string>){
     var token;
     token = tokens[0];
     if (token == null) {
@@ -10,7 +10,7 @@
     }
     return token;
   }
-  function consumeIdent(tokens: Array<Token>){
+  function consumeIdent(tokens: Array<string>){
     var token;
     token = peek(tokens);
     if (!identifierRegex.test(token)) {
@@ -18,7 +18,7 @@
     }
     return tokens.shift();
   }
-  function consumeOp(tokens: Array, op: string){
+  function consumeOp(tokens: Array<string>, op: string){
     var token;
     token = peek(tokens);
     if (token !== op) {
@@ -26,7 +26,7 @@
     }
     return tokens.shift();
   }
-  function maybeConsumeOp(tokens: Array<Token>, op: string){
+  function maybeConsumeOp(tokens: Array<string>, op: string){
     var token;
     token = tokens[0];
     if (token === op) {
@@ -35,7 +35,7 @@
       return null;
     }
   }
-  function consumeArray(tokens: Array<Token>){
+  function consumeArray(tokens: Array<string>){
     var types;
     consumeOp(tokens, '[');
     if (peek(tokens) === ']') {
@@ -68,7 +68,7 @@
       of: components
     };
   }
-  function consumeFields(tokens: Token[]){
+  function consumeFields(tokens: Array<string>){
     var fields, subset, ref$, key, types;
     fields = {};
     consumeOp(tokens, '{');
@@ -92,14 +92,14 @@
       subset: subset
     };
   }
-  function consumeField(tokens: Array<Token>){
+  function consumeField(tokens: Token[]){
     var key, types;
     key = consumeIdent(tokens);
     consumeOp(tokens, ':');
     types = consumeTypes(tokens);
     return [key, types];
   }
-  function maybeConsumeStructure(tokens: Token[]){
+  function maybeConsumeStructure(tokens: Array<string>){
     switch (tokens[0]) {
     case '[':
       return consumeArray(tokens);
@@ -133,7 +133,7 @@
       return structure;
     }
   }
-  function consumeTypes(tokens: Token[]){
+  function consumeTypes(tokens: Array<string>){
     var lookahead, types, typesSoFar, typeObj, type, structure;
     if ('::' === peek(tokens)) {
       throw new Error("No comment before comment separator '::' found.");
@@ -190,7 +190,7 @@
       throw new Error(e.message + " - Remaining tokens: " + JSON.stringify(tokens) + " - Initial input: '" + input + "'");
     }
   };
-  function in$(x: T, xs: T[]){
+  function in$(x: any, xs: any[]){
     var i = -1, l = xs.length >>> 0;
     while (++i < l) if (x === xs[i]) return true;
     return false;

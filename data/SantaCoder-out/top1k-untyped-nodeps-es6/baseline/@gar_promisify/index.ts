@@ -3,7 +3,7 @@
 import { promisify } from 'util';
 
 const handler = {
-  get: function (target: any, prop: any, receiver: any) {
+  get: function (target: any, prop: string, receiver: any) {
     if (typeof target[prop] !== 'function') {
       return target[prop]
     }
@@ -25,7 +25,7 @@ const handler = {
   }
 }
 
-export default function (thingToPromisify: any) {
+export default function (thingToPromisify: Function) {
   if (typeof thingToPromisify === 'function') {
     return promisify(thingToPromisify)
   }

@@ -30,7 +30,7 @@ module.exports = fresh
  * @public
  */
 
-function fresh (reqHeaders: Headers, resHeaders: Headers) {
+function fresh (reqHeaders: IncomingHttpHeaders, resHeaders: OutgoingHttpHeaders) {
   // fields
   var modifiedSince = reqHeaders['if-modified-since']
   var noneMatch = reqHeaders['if-none-match']

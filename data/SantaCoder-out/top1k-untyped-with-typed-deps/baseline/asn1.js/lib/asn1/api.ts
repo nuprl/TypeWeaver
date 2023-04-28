@@ -10,7 +10,7 @@ api.define = function define(name: string, body: Function) {
   return new Entity(name, body);
 };
 
-function Entity(name: String, body: String) {
+function Entity(name: string, body: Object) {
   this.name = name;
   this.body = body;
 
@@ -18,14 +18,14 @@ function Entity(name: String, body: String) {
   this.encoders = {};
 }
 
-Entity.prototype._createNamed = function createNamed(Base: any) {
+Entity.prototype._createNamed = function createNamed(Base: Function) {
   const name = this.name;
 
   function Generated(entity: Entity) {
     this._initNamed(entity, name);
   }
   inherits(Generated, Base);
-  Generated.prototype._initNamed = function _initNamed(entity: Entity, name: string) {
+  Generated.prototype._initNamed = function _initNamed(entity: any, name: string) {
     Base.call(this, entity, name);
   };
 
@@ -40,7 +40,7 @@ Entity.prototype._getDecoder = function _getDecoder(enc: string) {
   return this.decoders[enc];
 };
 
-Entity.prototype.decode = function decode(data: string, enc: string, options: Options) {
+Entity.prototype.decode = function decode(data: Buffer, enc: string, options: Object) {
   return this._getDecoder(enc).decode(data, options);
 };
 

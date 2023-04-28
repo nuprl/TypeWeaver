@@ -131,7 +131,7 @@ utils.toNoop = function(node: Node, nodes: Node[]) {
  * function.
  *
  * ```js
- * snapdragon.compiler.set('i', function(node: Node) {
+ * snapdragon.compiler.set('i', function(node: Object) {
  *   utils.visit(node, function(childNode: Node) {
  *     // do stuff with "childNode"
  *     return childNode;
@@ -157,7 +157,7 @@ utils.visit = function(node: Node, fn: Function) {
  * the first node.
  *
  * ```js
- * snapdragon.compiler.set('i', function(node: Node) {
+ * snapdragon.compiler.set('i', function(node: Object) {
  *   utils.mapVisit(node, function(childNode: Node) {
  *     // do stuff with "childNode"
  *     return childNode;
@@ -210,7 +210,7 @@ utils.mapVisit = function(node: Node, fn: Function) {
  * @api public
  */
 
-utils.addOpen = function(node: Node, Node: Node, value: any, filter: any) {
+utils.addOpen = function(node: Node, Node: Function, value: string, filter: Function) {
   expect(node, 'node');
   assert(isFunction(Node), 'expected Node to be a constructor function');
 
@@ -260,7 +260,7 @@ utils.addOpen = function(node: Node, Node: Node, value: any, filter: any) {
  * @api public
  */
 
-utils.addClose = function(node: Node, Node: Node, value: any, filter: any) {
+utils.addClose = function(node: Node, Node: Node, value: string, filter: Filter) {
   assert(isFunction(Node), 'expected Node to be a constructor function');
   expect(node, 'node', Node);
 
@@ -290,7 +290,7 @@ utils.addClose = function(node: Node, Node: Node, value: any, filter: any) {
  * @api public
  */
 
-utils.wrapNodes = function(node: Node, Node: Node, filter: NodeFilter) {
+utils.wrapNodes = function(node: Node, Node: Function, filter: Function) {
   assert(utils.isNode(node), 'expected node to be an instance of Node');
   assert(isFunction(Node), 'expected Node to be a constructor function');
 
@@ -539,7 +539,7 @@ utils.hasType = function(node: Node, type: string) {
  * @api public
  */
 
-utils.firstOfType = function(nodes: Node[], type: string) {
+utils.firstOfType = function(nodes: Array<Node>, type: string) {
   for (const node of nodes) {
     if (utils.isType(node, type)) {
       return node;
@@ -575,7 +575,7 @@ utils.firstOfType = function(nodes: Node[], type: string) {
  * @api public
  */
 
-utils.findNode = function(nodes: Array<Node>, type: string) {
+utils.findNode = function(nodes: Array<Node>, type: string|number) {
   if (!Array.isArray(nodes)) return null;
   if (typeof type === 'number') return nodes[type];
   return utils.firstOfType(nodes, type);
@@ -659,7 +659,7 @@ utils.isClose = function(node: Node) {
  * @api public
  */
 
-utils.isBlock = function(node: any) {
+utils.isBlock = function(node: Node) {
   if (!node || !utils.isNode(node)) return false;
   if (!Array.isArray(node.nodes)) {
     return false;
@@ -808,7 +808,7 @@ utils.hasOpenAndClose = function(node: Node) {
  * @api public
  */
 
-utils.addType = function(state: any, node: any) {
+utils.addType = function(state: Object, node: Node) {
   assert(utils.isNode(node), 'expected node to be an instance of Node');
   assert(isObject(state), 'expected state to be an object');
 
@@ -848,7 +848,7 @@ utils.addType = function(state: any, node: any) {
  * @api public
  */
 
-utils.removeType = function(state: any, node: any) {
+utils.removeType = function(state: Object, node: Node) {
   assert(utils.isNode(node), 'expected node to be an instance of Node');
   assert(isObject(state), 'expected state to be an object');
 
@@ -877,7 +877,7 @@ utils.removeType = function(state: any, node: any) {
  * @api public
  */
 
-utils.isEmpty = function(node: Node, fn: any) {
+utils.isEmpty = function(node: Node, fn: Function) {
   assert(utils.isNode(node), 'expected node to be an instance of Node');
 
   if (!Array.isArray(node.nodes)) {
@@ -919,7 +919,7 @@ utils.isEmpty = function(node: Node, fn: any) {
  * @api public
  */
 
-utils.isInsideType = function(state: any, type: string) {
+utils.isInsideType = function(state: Object, type: string) {
   assert(isObject(state), 'expected state to be an object');
   assert(isString(type), 'expected type to be a string');
 
@@ -953,7 +953,7 @@ utils.isInsideType = function(state: any, type: string) {
  * @api public
  */
 
-utils.isInside = function(state: any, node: any, type: any) {
+utils.isInside = function(state: Object, node: Node, type: string) {
   assert(utils.isNode(node), 'expected node to be an instance of Node');
   assert(isObject(state), 'expected state to be an object');
 
@@ -1001,7 +1001,7 @@ utils.isInside = function(state: any, node: any, type: any) {
  * @api public
  */
 
-utils.last = function(arr: number[], n: number) {
+utils.last = function(arr: any[], n: number) {
   return Array.isArray(arr) ? arr[arr.length - (n || 1)] : null;
 };
 
@@ -1025,7 +1025,7 @@ utils.lastNode = function(node: Node) {
  * @api public
  */
 
-utils.arrayify = function(value: string) {
+utils.arrayify = function(value: any) {
   if (typeof value === 'string' && value !== '') {
     return [value];
   }
@@ -1044,7 +1044,7 @@ utils.arrayify = function(value: string) {
  * @api public
  */
 
-utils.stringify = function(value: string) {
+utils.stringify = function(value: any) {
   return utils.arrayify(value).join(',');
 };
 
@@ -1065,7 +1065,7 @@ utils.trim = function(str: string) {
  * Return true if value is an object
  */
 
-function isObject(value: unknown) {
+function isObject(value: any) {
   return typeOf(value) === 'object';
 }
 
@@ -1073,7 +1073,7 @@ function isObject(value: unknown) {
  * Return true if value is a string
  */
 
-function isString(value: unknown) {
+function isString(value: any) {
   return typeof value === 'string';
 }
 
@@ -1089,7 +1089,7 @@ function isFunction(value: any) {
  * Return true if value is an array
  */
 
-function isArray(value: unknown) {
+function isArray(value: any) {
   return Array.isArray(value);
 }
 
@@ -1111,7 +1111,7 @@ function append(compiler: Compiler, value: string, node: Node) {
 function assert(value: any, message: string) {
   if (!value) throw new Error(message);
 }
-function expect(node: Node, name: string, Node: any) {
+function expect(node: any, name: string, Node: any) {
   const isNode = (Node && Node.isNode) ? Node.isNode : utils.isNode;
   assert(isNode(node), `expected ${name} to be an instance of Node`);
 }

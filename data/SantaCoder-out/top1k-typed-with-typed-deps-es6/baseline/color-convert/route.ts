@@ -29,7 +29,7 @@ function buildGraph() {
 }
 
 // https://en.wikipedia.org/wiki/Breadth-first_search
-function deriveBFS(fromModel: Model) {
+function deriveBFS(fromModel: string) {
 	const graph = buildGraph();
 	const queue = [fromModel]; // Unshift -> queue -> pop
 
@@ -54,13 +54,13 @@ function deriveBFS(fromModel: Model) {
 	return graph;
 }
 
-function link(from: string, to: string) {
-	return function (args: T) {
+function link(from: Function, to: Function) {
+	return function (args: any) {
 		return to(from(args));
 	};
 }
 
-function wrapConversion(toModel: any, graph: any) {
+function wrapConversion(toModel: string, graph: Graph) {
 	const path = [graph[toModel].parent, toModel];
 	let fn = conversions[graph[toModel].parent][toModel];
 
@@ -75,7 +75,7 @@ function wrapConversion(toModel: any, graph: any) {
 	return fn;
 }
 
-export default function (fromModel: Model) {
+export default function (fromModel: string) {
 	const graph = deriveBFS(fromModel);
 	const conversion = {};
 

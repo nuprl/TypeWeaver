@@ -1,7 +1,7 @@
 var dns = require('dns');
 var retry = require('../lib/retry');
 
-function faultTolerantResolve(address: string, cb: any) {
+function faultTolerantResolve(address: string, cb: Function) {
   var opts = {
     retries: 2,
     factor: 2,
@@ -11,7 +11,7 @@ function faultTolerantResolve(address: string, cb: any) {
   };
   var operation = retry.operation(opts);
 
-  operation.attempt(function(currentAttempt: number) {
+  operation.attempt(function(currentAttempt: Operation<any>) {
     dns.resolve(address, function(err: Error, addresses: string[]) {
       if (operation.retry(err)) {
         return;

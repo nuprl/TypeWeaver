@@ -14,14 +14,14 @@ import map from './map.js'
  * @see flatMap, flatMapDeep, flatten, flattenDeep, flattenDepth, map, mapKeys, mapValues
  * @example
  *
- * function duplicate(n: number) {
+ * function duplicate(n: any) {
  *   return [[[n, n]]]
  * }
  *
  * flatMapDepth([1, 2], duplicate, 2)
  * // => [[1, 1], [2, 2]]
  */
-function flatMapDepth(collection: any[], iteratee: any, depth: number) {
+function flatMapDepth(collection: any[], iteratee: Function, depth: number) {
   depth = depth === undefined ? 1 : +depth
   return baseFlatten(map(collection, iteratee), depth)
 }

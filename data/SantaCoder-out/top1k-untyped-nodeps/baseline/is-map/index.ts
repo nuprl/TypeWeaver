@@ -17,7 +17,7 @@ var $mapHas = $Map ? Map.prototype.has : null;
 var $setHas = $Set ? Set.prototype.has : null;
 if (!exported && !$mapHas) {
 	// eslint-disable-next-line no-unused-vars
-	exported = function isMap(x: unknown) {
+	exported = function isMap(x: any) {
 		// `Map` does not have a `has` method
 		return false;
 	};

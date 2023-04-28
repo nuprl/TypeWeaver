@@ -38,7 +38,7 @@ if (parsed.help) {
   console.log('nopt cli tester')
   console.log('')
   console.log('types')
-  console.log(Object.keys(types).map(function M (t: number) {
+  console.log(Object.keys(types).map(function M (t: string) {
     var type = types[t]
     if (Array.isArray(type)) {
       return [t, type.map(function (mappedType: MappedType) {

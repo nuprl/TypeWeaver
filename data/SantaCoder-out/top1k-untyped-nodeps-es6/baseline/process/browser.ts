@@ -147,7 +147,7 @@ process.nextTick = function (fun: Function) {
 };
 
 // v8 likes predictible objects
-function Item(fun: Function, array: Array<any>) {
+function Item(fun: Function, array: any[]) {
     this.fun = fun;
     this.array = array;
 }

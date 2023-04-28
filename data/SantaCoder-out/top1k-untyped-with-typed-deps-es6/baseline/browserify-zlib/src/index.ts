@@ -72,7 +72,7 @@ exports.DeflateRaw = DeflateRaw;
 exports.InflateRaw = InflateRaw;
 exports.Unzip = Unzip;
 
-exports.createDeflate = function(o: Options) {
+exports.createDeflate = function(o: any) {
   return new Deflate(o);
 };
 
@@ -80,7 +80,7 @@ exports.createInflate = function(o: any) {
   return new Inflate(o);
 };
 
-exports.createDeflateRaw = function(o: Options) {
+exports.createDeflateRaw = function(o: any) {
   return new DeflateRaw(o);
 };
 
@@ -88,7 +88,7 @@ exports.createInflateRaw = function(o: any) {
   return new InflateRaw(o);
 };
 
-exports.createGzip = function(o: GzipOptions) {
+exports.createGzip = function(o: any) {
   return new Gzip(o);
 };
 
@@ -103,7 +103,7 @@ exports.createUnzip = function(o: any) {
 
 // Convenience methods.
 // compress/decompress a string or buffer in one step.
-exports.deflate = function(buffer: Buffer, opts: any, callback: Function) {
+exports.deflate = function(buffer: Buffer, opts: ZlibOptions, callback: Function) {
   if (typeof opts === 'function') {
     callback = opts;
     opts = {};
@@ -115,7 +115,7 @@ exports.deflateSync = function(buffer: Buffer, opts: any) {
   return zlibBufferSync(new Deflate(opts), buffer);
 };
 
-exports.gzip = function(buffer: Buffer, opts: any, callback: Function) {
+exports.gzip = function(buffer: Buffer, opts: GzipOptions, callback: any) {
   if (typeof opts === 'function') {
     callback = opts;
     opts = {};
@@ -127,7 +127,7 @@ exports.gzipSync = function(buffer: Buffer, opts: any) {
   return zlibBufferSync(new Gzip(opts), buffer);
 };
 
-exports.deflateRaw = function(buffer: Buffer, opts: any, callback: Function) {
+exports.deflateRaw = function(buffer: Buffer, opts: ZlibOptions, callback: Function) {
   if (typeof opts === 'function') {
     callback = opts;
     opts = {};
@@ -147,11 +147,11 @@ exports.unzip = function(buffer: Buffer, opts: any, callback: Function) {
   return zlibBuffer(new Unzip(opts), buffer, callback);
 };
 
-exports.unzipSync = function(buffer: Buffer, opts: any) {
+exports.unzipSync = function(buffer: Buffer, opts: ZlibOptions) {
   return zlibBufferSync(new Unzip(opts), buffer);
 };
 
-exports.inflate = function(buffer: Buffer, opts: any, callback: Function) {
+exports.inflate = function(buffer: Buffer, opts: InflateOptions, callback: any) {
   if (typeof opts === 'function') {
     callback = opts;
     opts = {};
@@ -163,7 +163,7 @@ exports.inflateSync = function(buffer: Buffer, opts: any) {
   return zlibBufferSync(new Inflate(opts), buffer);
 };
 
-exports.gunzip = function(buffer: Buffer, opts: any, callback: Function) {
+exports.gunzip = function(buffer: Buffer, opts: any, callback: any) {
   if (typeof opts === 'function') {
     callback = opts;
     opts = {};
@@ -171,11 +171,11 @@ exports.gunzip = function(buffer: Buffer, opts: any, callback: Function) {
   return zlibBuffer(new Gunzip(opts), buffer, callback);
 };
 
-exports.gunzipSync = function(buffer: Buffer, opts: any) {
+exports.gunzipSync = function(buffer: Buffer, opts: ZlibOptions) {
   return zlibBufferSync(new Gunzip(opts), buffer);
 };
 
-exports.inflateRaw = function(buffer: Buffer, opts: any, callback: Function) {
+exports.inflateRaw = function(buffer: Buffer, opts: InflateOptions, callback: any) {
   if (typeof opts === 'function') {
     callback = opts;
     opts = {};
@@ -183,7 +183,7 @@ exports.inflateRaw = function(buffer: Buffer, opts: any, callback: Function) {
   return zlibBuffer(new InflateRaw(opts), buffer, callback);
 };
 
-exports.inflateRawSync = function(buffer: Buffer, opts: any) {
+exports.inflateRawSync = function(buffer: Buffer, opts: ZlibOptions) {
   return zlibBufferSync(new InflateRaw(opts), buffer);
 };
 
@@ -242,43 +242,43 @@ function zlibBufferSync(engine: any, buffer: any) {
 
 // generic zlib
 // minimal 2-byte header
-function Deflate(opts: DeflateOptions) {
+function Deflate(opts: any) {
   if (!(this instanceof Deflate)) return new Deflate(opts);
   Zlib.call(this, opts, binding.DEFLATE);
 }
 
-function Inflate(opts: InflateOptions) {
+function Inflate(opts: ZlibOptions) {
   if (!(this instanceof Inflate)) return new Inflate(opts);
   Zlib.call(this, opts, binding.INFLATE);
 }
 
 
 // gzip - bigger header, same deflate compression
-function Gzip(opts: GzipOptions) {
+function Gzip(opts: any) {
   if (!(this instanceof Gzip)) return new Gzip(opts);
   Zlib.call(this, opts, binding.GZIP);
 }
 
-function Gunzip(opts: GunzipOptions) {
+function Gunzip(opts: ZlibOptions) {
   if (!(this instanceof Gunzip)) return new Gunzip(opts);
   Zlib.call(this, opts, binding.GUNZIP);
 }
 
 
 // raw - no header
-function DeflateRaw(opts: DeflateOptions) {
+function DeflateRaw(opts: any) {
   if (!(this instanceof DeflateRaw)) return new DeflateRaw(opts);
   Zlib.call(this, opts, binding.DEFLATERAW);
 }
 
-function InflateRaw(opts: InflateOptions) {
+function InflateRaw(opts: ZlibOptions) {
   if (!(this instanceof InflateRaw)) return new InflateRaw(opts);
   Zlib.call(this, opts, binding.INFLATERAW);
 }
 
 
 // auto-detect header.
-function Unzip(opts: UnzipOptions) {
+function Unzip(opts: ZlibOptions) {
   if (!(this instanceof Unzip)) return new Unzip(opts);
   Zlib.call(this, opts, binding.UNZIP);
 }
@@ -402,7 +402,7 @@ function Zlib(opts: ZlibOptions, mode: number) {
 
 util.inherits(Zlib, Transform);
 
-Zlib.prototype.params = function(level: number, strategy: string, callback: Function) {
+Zlib.prototype.params = function(level: number, strategy: number, callback: Function) {
   if (level < exports.Z_MIN_LEVEL ||
       level > exports.Z_MAX_LEVEL) {
     throw new RangeError('Invalid compression level: ' + level);
@@ -438,7 +438,7 @@ Zlib.prototype.reset = function() {
 
 // This is the _flush function called by the transform class,
 // internally, when the last chunk has been written.
-Zlib.prototype._flush = function(callback: Function) {
+Zlib.prototype._flush = function(callback: any) {
   this._transform(Buffer.alloc(0), '', callback);
 };
 
@@ -466,12 +466,12 @@ Zlib.prototype.flush = function(kind: string, callback: Function) {
   }
 };
 
-Zlib.prototype.close = function(callback: Function) {
+Zlib.prototype.close = function(callback: any) {
   _close(this, callback);
   process.nextTick(emitCloseNT, this);
 };
 
-function _close(engine: Engine, callback: Function) {
+function _close(engine: Zlib, callback: any) {
   if (callback)
     process.nextTick(callback);
 
@@ -483,11 +483,11 @@ function _close(engine: Engine, callback: Function) {
   engine._handle = null;
 }
 
-function emitCloseNT(self: Duplex) {
+function emitCloseNT(self: Zlib) {
   self.emit('close');
 }
 
-Zlib.prototype._transform = function(chunk: Buffer, encoding: string, cb: Function) {
+Zlib.prototype._transform = function(chunk: any, encoding: string, cb: Function) {
   var flushFlag;
   var ws = this._writableState;
   var ending = ws.ending || ws.ended;
@@ -518,7 +518,7 @@ Zlib.prototype._transform = function(chunk: Buffer, encoding: string, cb: Functi
   this._processChunk(chunk, flushFlag, cb);
 };
 
-Zlib.prototype._processChunk = function(chunk: Buffer, flushFlag: boolean, cb: any) {
+Zlib.prototype._processChunk = function(chunk: Buffer, flushFlag: boolean, cb: Function) {
   var availInBefore = chunk && chunk.length;
   var availOutBefore = this._chunkSize - this._offset;
   var inOff = 0;
@@ -532,7 +532,7 @@ Zlib.prototype._processChunk = function(chunk: Buffer, flushFlag: boolean, cb: a
     var nread = 0;
 
     var error;
-    this.on('error', function(er: any) {
+    this.on('error', function(er: Error) {
       error = er;
     });
 

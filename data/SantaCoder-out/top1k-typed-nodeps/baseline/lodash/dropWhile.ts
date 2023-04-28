@@ -21,7 +21,7 @@ import baseWhile from './.internal/baseWhile.js'
  * dropWhile(users, ({ active }) => active)
  * // => objects for ['pebbles']
  */
-function dropWhile(array: any[], predicate: any) {
+function dropWhile(array: any[], predicate: Function) {
   return (array != null && array.length)
     ? baseWhile(array, predicate, true)
     : []

@@ -4,7 +4,7 @@ import resolveException from '../lib/resolve-exception';
 import ensureMin from '../lib/ensure/min';
 import coerce from './coerce';
 
-export default function (value/*: any, options*/: any) {
+export default function (value/*: any, options*/: Options) {
 	var coerced = coerce(value), options = arguments[1];
 	if (coerced !== null) {
 		if (options) {

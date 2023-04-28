@@ -62,7 +62,7 @@ exports.parse = parse
  * @public
  */
 
-function format (obj: any) {
+function format (obj: Object) {
   if (!obj || typeof obj !== 'object') {
     throw new TypeError('argument obj is required')
   }

@@ -6,7 +6,7 @@ import splice from "../var/splice.js";
 var hasDuplicate;
 
 // Document order sorting
-function sortOrder( a: any, b : any) {
+function sortOrder( a: Element, b : Element) {
 
 	// Flag for duplicate removal
 	if ( a === b ) {
@@ -64,7 +64,7 @@ function sortOrder( a: any, b : any) {
  * Document sorting and removing duplicates
  * @param {ArrayLike} results
  */
-jQuery.uniqueSort = function( results : Array<any>) {
+jQuery.uniqueSort = function( results : any[]) {
 	var elem,
 		duplicates = [],
 		j = 0,

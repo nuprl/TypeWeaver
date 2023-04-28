@@ -118,8 +118,8 @@ module.exports.processImportsField = function processImportsField(
  * @param {(s: string, f: boolean) => void} assertTarget assertTarget
  * @returns {FieldProcessor} field processor
  */
-function createFieldProcessor(treeRoot: TreeRoot, assertRequest: AssertRequest, assertTarget: AssertTarget) {
-	return function fieldProcessor(request: any, conditionNames: string[]) {
+function createFieldProcessor(treeRoot: MappingTreeRoot, assertRequest: AssertRequest, assertTarget: AssertTarget) {
+	return function fieldProcessor(request: Request, conditionNames: string[]) {
 		request = assertRequest(request);
 
 		const match = findMatch(request, treeRoot);
@@ -183,7 +183,7 @@ function assertExportsFieldRequest(request: string) {
  * @param {string} request request
  * @returns {string} updated request
  */
-function assertImportsFieldRequest(request: any) {
+function assertImportsFieldRequest(request: string) {
 	if (request.charCodeAt(0) !== hashCode) {
 		throw new Error('Request should start with "#"');
 	}
@@ -204,7 +204,7 @@ function assertImportsFieldRequest(request: any) {
  * @param {string} exp export target
  * @param {boolean} expectFolder is folder expected
  */
-function assertExportTarget(exp: ExportTarget, expectFolder: string) {
+function assertExportTarget(exp: string, expectFolder: boolean) {
 	if (
 		exp.charCodeAt(0) === slashCode ||
 		(exp.charCodeAt(0) === dotCode && exp.charCodeAt(1) !== slashCode)
@@ -235,7 +235,7 @@ function assertExportTarget(exp: ExportTarget, expectFolder: string) {
  * @param {string} imp import target
  * @param {boolean} expectFolder is folder expected
  */
-function assertImportTarget(imp: Import, expectFolder: string) {
+function assertImportTarget(imp: string, expectFolder: boolean) {
 	const isFolder = imp.charCodeAt(imp.length - 1) === slashCode;
 
 	if (isFolder !== expectFolder) {
@@ -257,7 +257,7 @@ function assertImportTarget(imp: Import, expectFolder: string) {
  * @param {PathTreeNode} treeRoot path tree root
  * @returns {[MappingValue, number]|null} match or null, number is negative and one less when it's a folder mapping, number is request.length + 1 for direct mappings
  */
-function findMatch(request: Request, treeRoot: Node) {
+function findMatch(request: string, treeRoot: Node) {
 	if (request.length === 0) {
 		const value = treeRoot.files.get("");
 
@@ -352,7 +352,7 @@ function findMatch(request: Request, treeRoot: Node) {
  * @param {ConditionalMapping|DirectMapping|null} mapping mapping
  * @returns {boolean} is conditional mapping
  */
-function isConditionalMapping(mapping: Mapping) {
+function isConditionalMapping(mapping: unknown) {
 	return (
 		mapping !== null && typeof mapping === "object" && !Array.isArray(mapping)
 	);
@@ -507,7 +507,7 @@ function createNode() {
  * @param {string} path path
  * @param {MappingValue} target target
  */
-function walkPath(root: any, path: string, target: any) {
+function walkPath(root: Folder, path: string, target: Folder) {
 	if (path.length === 0) {
 		root.folder = target;
 		return;
@@ -562,7 +562,7 @@ function walkPath(root: any, path: string, target: any) {
  * @param {ExportsField} field exports field
  * @returns {PathTreeNode} tree root
  */
-function buildExportsFieldPathTree(field: Field) {
+function buildExportsFieldPathTree(field: ExportsField) {
 	const root = createNode();
 
 	// handle syntax sugar, if exports field is direct mapping for "."
@@ -630,7 +630,7 @@ function buildExportsFieldPathTree(field: Field) {
  * @param {ImportsField} field imports field
  * @returns {PathTreeNode} root
  */
-function buildImportsFieldPathTree(field: Field) {
+function buildImportsFieldPathTree(field: ImportsField) {
 	const root = createNode();
 
 	const keys = Object.keys(field);

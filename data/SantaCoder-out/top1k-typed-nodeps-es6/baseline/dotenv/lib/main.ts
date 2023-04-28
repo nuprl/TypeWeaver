@@ -5,7 +5,7 @@ import os from 'os';
 const LINE = /(?:^|^)\s*(?:export\s+)?([\w.-]+)(?:\s*=\s*?|:\s+?)(\s*'(?:\\'|[^'])*'|\s*"(?:\\"|[^"])*"|\s*`(?:\\`|[^`])*`|[^#\r\n]+)?\s*(?:#.*)?(?:$|$)/mg
 
 // Parser src into an Object
-function parse (src: string) {
+function parse (src: Buffer) {
   const obj = {}
 
   // Convert buffer to string
@@ -52,7 +52,7 @@ function _resolveHome (envPath: string) {
 }
 
 // Populates process.env from .env file
-function config (options: ConfigOptions) {
+function config (options: DotenvConfigOptions) {
   let dotenvPath = path.resolve(process.cwd(), '.env')
   let encoding = 'utf8'
   const debug = Boolean(options && options.debug)

@@ -26,7 +26,7 @@ RIPEMD160.outSize = 160;
 RIPEMD160.hmacStrength = 192;
 RIPEMD160.padLength = 64;
 
-RIPEMD160.prototype._update = function update(msg: any, start: number) {
+RIPEMD160.prototype._update = function update(msg: Uint8Array, start: number) {
   var A = this.h[0];
   var B = this.h[1];
   var C = this.h[2];

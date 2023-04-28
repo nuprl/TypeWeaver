@@ -3,9 +3,9 @@ import toType from "./core/toType.js";
 import rnothtmlwhite from "./var/rnothtmlwhite.js";
 
 // Convert String-formatted options into Object-formatted ones
-function createOptions( options : any) {
+function createOptions( options : string) {
 	var object = {};
-	jQuery.each( options.match( rnothtmlwhite ) || [], function( _: object, flag : string) {
+	jQuery.each( options.match( rnothtmlwhite ) || [], function( _: any, flag : string) {
 		object[ flag ] = true;
 	} );
 	return object;

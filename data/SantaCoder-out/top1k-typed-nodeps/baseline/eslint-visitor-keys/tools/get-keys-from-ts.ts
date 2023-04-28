@@ -63,7 +63,7 @@ const commentTypes = new Set([
  * @param {Node} excludedItem Excluded node
  * @returns {string[]} The literal names
  */
-function findOmitTypes(excludedItem: string) {
+function findOmitTypes(excludedItem: TSESTree.TSTypeNode) {
     if (excludedItem.type === "TSUnionType") {
         return excludedItem.types.map(typeNode => findOmitTypes(typeNode));
     }
@@ -89,7 +89,7 @@ function isPropertyExcluded(property: string, excludedProperties: string[]) {
  * @param {KeysStrict} initialNodes Initial node list to sort
  * @returns {KeysStrict} The keys
  */
-function alphabetizeKeyInterfaces(initialNodes: NodeInterface[]) {
+function alphabetizeKeyInterfaces(initialNodes: Node[]) {
 
     /**
      * Alphabetize
@@ -97,7 +97,7 @@ function alphabetizeKeyInterfaces(initialNodes: NodeInterface[]) {
      * @param {string} typeB The second type to compare
      * @returns {1|-1} The sorting index
      */
-    function alphabetize([typeA]: string, [typeB]: string) {
+    function alphabetize([typeA]: string[], [typeB]: string[]) {
         return typeA < typeB ? -1 : 1;
     }
     const sortedNodeEntries = Object.entries(initialNodes).sort(alphabetize);
@@ -151,7 +151,7 @@ function alphabetizeKeyInterfaces(initialNodes: NodeInterface[]) {
  * @param {Function} handler The callback
  * @returns {any[]} Return value of handler
  */
-function traverseExtends(declNode: Node, handler: any) {
+function traverseExtends(declNode: InterfaceDeclaration, handler: any) {
     const ret = [];
 
     for (const extension of declNode.extends || []) {
@@ -186,7 +186,7 @@ function traverseExtends(declNode: Node, handler: any) {
  * @param {(string) => void} handler Passed the property
  * @returns {any[]} The return values of the callback
  */
-function traverseProperties(tsDeclarationNode: ts.Declaration, handler: any) {
+function traverseProperties(tsDeclarationNode: ts.TypeAliasDeclaration, handler: any) {
     const tsPropertySignatures = tsDeclarationNode.body.body;
 
     const ret = [];
@@ -286,7 +286,7 @@ function getKeysFromTs(code, {
      * @param {Node} cfg.tsAnnotation The annotation node
      * @returns {boolean} Whether has a traverseable type
      */
-    function hasValidType({ property: any, tsAnnotation }: Property) {
+    function hasValidType({ property: any, tsAnnotation }: any) {
         const tsPropertyType = tsAnnotation.type;
 
         if (property !== "type") {
@@ -372,7 +372,7 @@ function getKeysFromTs(code, {
      * @param {string} property The property name
      * @returns {boolean} Whether the node is traversable
      */
-    function checkTraversability(annotationType: string, property: string) {
+    function checkTraversability(annotationType: AnnotationType, property: Property) {
         if (
             notTraversableTSTypes.has(annotationType.type)
         ) {
@@ -411,7 +411,7 @@ function getKeysFromTs(code, {
      * @param {string[]} excludedProperties Excluded properties
      * @returns {void}
      */
-    function addPropertyToNodeForDeclaration(tsDeclarationNode: ts.Declaration, node: ts.Node, excludedProperties: string[]) {
+    function addPropertyToNodeForDeclaration(tsDeclarationNode: ts.Node, node: Node, excludedProperties: string[]) {
 
         traverseProperties(tsDeclarationNode, ({ property, tsAnnotation }) => {
             if (isPropertyExcluded(property, excludedProperties)) {

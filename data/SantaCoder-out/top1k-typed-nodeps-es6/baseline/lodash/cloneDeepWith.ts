@@ -17,7 +17,7 @@ const CLONE_SYMBOLS_FLAG = 4
  * @see cloneWith
  * @example
  *
- * function customizer(value: unknown) {
+ * function customizer(value: any) {
  *   if (isElement(value)) {
  *     return value.cloneNode(true)
  *   }
@@ -32,7 +32,7 @@ const CLONE_SYMBOLS_FLAG = 4
  * console.log(el.childNodes.length)
  * // => 20
  */
-function cloneDeepWith(value: any, customizer: any) {
+function cloneDeepWith(value: any, customizer: Function) {
   customizer = typeof customizer === 'function' ? customizer : undefined
   return baseClone(value, CLONE_DEEP_FLAG | CLONE_SYMBOLS_FLAG, customizer)
 }

@@ -21,6 +21,6 @@ import parallel from './internal/parallel.js'
  * Invoked with (err, results).
  * @returns {Promise} a promise, if a callback is not passed
  */
-export default function parallelLimit(tasks: Array<Function>, limit: number, callback: any) {
+export default function parallelLimit(tasks: Array<Function>, limit: number, callback: Function) {
     return parallel(eachOfLimit(limit), tasks, callback);
 }

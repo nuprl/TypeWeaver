@@ -158,7 +158,7 @@ function minimize(dfa: DFA) {
   return dfa;
 }
 
-function sameRow(r1: number, r2: number) {
+function sameRow(r1: Set<string>[], r2: Set<string>[]) {
   if (!r2) {
     return false;
   }
@@ -187,7 +187,7 @@ function sameRow(r1: number, r2: number) {
  * Checks whether two states are N-equivalent, i.e. whether they go
  * to the same set on a symbol.
  */
-function areEquivalent(s1: string, s2: string, table: string, alphabet: string) {
+function areEquivalent(s1: string, s2: string, table: string[], alphabet: string[]) {
   for (const symbol of alphabet) {
     if (!goToSameSet(s1, s2, table, symbol)) {
       return false;
@@ -199,7 +199,7 @@ function areEquivalent(s1: string, s2: string, table: string, alphabet: string) 
 /**
  * Checks whether states go to the same set.
  */
-function goToSameSet(s1: string, s2: string, table: string, symbol: string) {
+function goToSameSet(s1: string, s2: string, table: any, symbol: string) {
   if (!currentTransitionMap[s1] || !currentTransitionMap[s2]) {
     return false;
   }

@@ -103,7 +103,7 @@ async.eachSeries(versionNames, cloneVersion, (err) => {
     });
 });
 
-function runSuite(suite: Suite, callback: any) {
+function runSuite(suite: Benchmark.Suite, callback: Function) {
     suite.on("complete", () => {
         callback();
     }).run({async: true});
@@ -115,22 +115,22 @@ function setDefaultOptions(suiteConfig: SuiteConfig) {
     return suiteConfig;
 }
 
-function handleMultipleArgs(list: Array<any>, suiteConfig: SuiteConfig) {
+function handleMultipleArgs(list: Array<SuiteConfig>, suiteConfig: SuiteConfig) {
     return list.concat(suiteConfig.args.map((suiteArgs) => {
         return _.defaults({args: suiteArgs}, suiteConfig);
     }));
 }
 
-function setName(suiteConfig: SuiteConfig) {
+function setName(suiteConfig: any) {
     suiteConfig.name = suiteConfig.name + "(" + suiteConfig.args.join(",") + ")";
     return suiteConfig;
 }
 
-function matchesGrep(suiteConfig: SuiteConfig) {
+function matchesGrep(suiteConfig: any) {
     return !!grep.exec(suiteConfig.name);
 }
 
-function doesNotMatch(suiteConfig: SuiteConfig) {
+function doesNotMatch(suiteConfig: any) {
     return !reject.exec(suiteConfig.name);
 }
 
@@ -203,7 +203,7 @@ function requireVersion(tag: string) {
     return require("./versions/" + tag + "/");
 }
 
-function cloneVersion(tag: string, callback: Function) {
+function cloneVersion(tag: string, callback: any) {
     if (tag === "current") return callback();
 
     var versionDir = __dirname + "/versions/" + tag;

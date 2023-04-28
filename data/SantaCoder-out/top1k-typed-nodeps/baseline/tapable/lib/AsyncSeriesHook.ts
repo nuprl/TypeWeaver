@@ -23,7 +23,7 @@ const COMPILE = function(options: any) {
 	return factory.create(options);
 };
 
-function AsyncSeriesHook(args = []: Array<any>, name = undefined: string) {
+function AsyncSeriesHook(args = []: any[], name = undefined: string) {
 	const hook = new Hook(args, name);
 	hook.constructor = AsyncSeriesHook;
 	hook.compile = COMPILE;

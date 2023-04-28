@@ -33,7 +33,7 @@ function createInstance(defaultConfig: AxiosRequestConfig) {
   utils.extend(instance, context, {allOwnKeys: true});
 
   // Factory for creating new instances
-  instance.create = function create(instanceConfig: InstanceConfig) {
+  instance.create = function create(instanceConfig: AxiosRequestConfig) {
     return createInstance(mergeConfig(defaultConfig, instanceConfig));
   };
 

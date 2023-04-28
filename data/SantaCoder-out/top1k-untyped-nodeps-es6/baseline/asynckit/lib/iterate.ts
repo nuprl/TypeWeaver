@@ -12,7 +12,7 @@ export default iterate;
  * @param {object} state - current job status
  * @param {function} callback - invoked when all elements processed
  */
-function iterate(list: any[], iterator: any, state: any, callback: any)
+function iterate(list: Array<any>, iterator: Function, state: any, callback: Function)
 {
   // store current index
   var key = state['keyedList'] ? state['keyedList'][state.index] : state.index;
@@ -55,7 +55,7 @@ function iterate(list: any[], iterator: any, state: any, callback: any)
  * @param   {function} callback - invoked after iterator is done with the job
  * @returns {function|mixed} - job abort function or something else
  */
-function runJob(iterator: Iterator<any>, key: string, item: any, callback: any)
+function runJob(iterator: Function, key: any, item: any, callback: Function)
 {
   var aborter;
 

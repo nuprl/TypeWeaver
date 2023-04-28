@@ -55,7 +55,7 @@ function instrument() {
 function runTest() {
     return gulp.src(paths.specFiles)
         .pipe(mocha())
-        .on('error', function (err: Error) {
+        .on('error', function (err: any) {
             console.error(String(err));
             console.error(chalk.bold.bgRed(' TESTS FAILED '));
         })

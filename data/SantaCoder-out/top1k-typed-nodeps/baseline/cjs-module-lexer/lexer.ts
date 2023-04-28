@@ -832,7 +832,7 @@ function tryParseObjectDefineOrKeys (keys: string[]) {
   pos = revertPos;
 }
 
-function readExportsOrModuleDotExports (ch: string) {
+function readExportsOrModuleDotExports (ch: number) {
   const revertPos = pos;
   if (ch === 109/*m*/ && source.startsWith('odule', pos + 1)) {
     pos += 6;
@@ -869,7 +869,7 @@ function tryParseModuleExportsDotAssign () {
   pos = revertPos;
 }
 
-function tryParseExportsDotAssign (assign: Node) {
+function tryParseExportsDotAssign (assign: Assign) {
   pos += 7;
   const revertPos = pos - 1;
   let ch = commentWhitespace();
@@ -1245,7 +1245,7 @@ function lineComment () {
   }
 }
 
-function stringLiteral (quote: string) {
+function stringLiteral (quote: number) {
   while (pos++ < end) {
     let ch = source.charCodeAt(pos);
     if (ch === quote)
@@ -1295,11 +1295,11 @@ function isBr (c: number) {
   return c === 13/*\r*/ || c === 10/*\n*/;
 }
 
-function isBrOrWs (c: string) {
+function isBrOrWs (c: number) {
   return c > 8 && c < 14 || c === 32 || c === 160;
 }
 
-function isBrOrWsOrPunctuatorNotDot (c: string) {
+function isBrOrWsOrPunctuatorNotDot (c: number) {
   return c > 8 && c < 14 || c === 32 || c === 160 || isPunctuator(c) && c !== 46/*.*/;
 }
 
@@ -1307,13 +1307,13 @@ function keywordStart (pos: number) {
   return pos === 0 || isBrOrWsOrPunctuatorNotDot(source.charCodeAt(pos - 1));
 }
 
-function readPrecedingKeyword (pos: number, match: RegExp) {
+function readPrecedingKeyword (pos: number, match: string) {
   if (pos < match.length - 1)
     return false;
   return source.startsWith(match, pos - match.length + 1) && (pos === 0 || isBrOrWsOrPunctuatorNotDot(source.charCodeAt(pos - match.length)));
 }
 
-function readPrecedingKeyword1 (pos: number, ch: string) {
+function readPrecedingKeyword1 (pos: number, ch: number) {
   return source.charCodeAt(pos) === ch && (pos === 0 || isBrOrWsOrPunctuatorNotDot(source.charCodeAt(pos - 1)));
 }
 
@@ -1397,7 +1397,7 @@ function isParenKeyword (curPos: number) {
       source.charCodeAt(curPos - 1) === 105/*i*/ && source.charCodeAt(curPos) === 102/*f*/;
 }
 
-function isPunctuator (ch: string) {
+function isPunctuator (ch: number) {
   // 23 possible punctuator endings: !%&()*+,-./:;<=>?[]^{}|~
   return ch === 33/*!*/ || ch === 37/*%*/ || ch === 38/*&*/ ||
     ch > 39 && ch < 48 || ch > 57 && ch < 64 ||
@@ -1405,7 +1405,7 @@ function isPunctuator (ch: string) {
     ch > 122 && ch < 127;
 }
 
-function isExpressionPunctuator (ch: string) {
+function isExpressionPunctuator (ch: number) {
   // 20 possible expression endings: !%&(*+,-.:;<=>?[^{|~
   return ch === 33/*!*/ || ch === 37/*%*/ || ch === 38/*&*/ ||
     ch > 39 && ch < 47 && ch !== 41 || ch > 57 && ch < 64 ||

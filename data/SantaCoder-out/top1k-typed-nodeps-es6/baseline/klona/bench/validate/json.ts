@@ -1,6 +1,6 @@
 import assert from 'uvu/assert';
 
-export default function (input: string, output: string) {
+export default function (input: any, output: any) {
 	assert.equal(output, input, 'initial copy');
 
 	output[0].age++;

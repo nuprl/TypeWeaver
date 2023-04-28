@@ -53,7 +53,7 @@
     "d": 1
   };
 
-  function assign(n: number, s: string) {
+  function assign(n: number, s: number) {
 
     if (isNaN(n = parseInt(n, 10))) {
       throw Fraction['InvalidParameter'];
@@ -412,7 +412,7 @@
      *
      * Ex: new Fraction({n: 2, d: 3}).add("14.9") => 467 / 30
      **/
-    "add": function(a: Fraction, b: Fraction) {
+    "add": function(a: number, b: number) {
 
       parse(a, b);
       return newFraction(
@@ -440,7 +440,7 @@
      *
      * Ex: new Fraction("-17.(345)").mul(3) => 5776 / 111
      **/
-    "mul": function(a: Fraction, b: Fraction) {
+    "mul": function(a: any, b: any) {
 
       parse(a, b);
       return newFraction(
@@ -517,7 +517,7 @@
      *
      * Ex: new Fraction(5,8).gcd(3,7) => 1/56
      */
-    "gcd": function(a: string, b: string) {
+    "gcd": function(a: number, b: number) {
 
       parse(a, b);
 
@@ -531,7 +531,7 @@
      *
      * Ex: new Fraction(5,8).lcm(3,7) => 15
      */
-    "lcm": function(a: string, b: string) {
+    "lcm": function(a: Fraction, b: Fraction) {
 
       parse(a, b);
 
@@ -603,7 +603,7 @@
      *
      * Ex: new Fraction(-1,2).pow(-3) => -8
      */
-    "pow": function(a: string, b: string) {
+    "pow": function(a: Fraction, b: Fraction) {
 
       parse(a, b);
 
@@ -668,7 +668,7 @@
      *
      * Ex: new Fraction(19.6).equals([98, 5]);
      **/
-    "equals": function(a: string, b: string) {
+    "equals": function(a: number, b: number) {
 
       parse(a, b);
       return this["s"] * this["n"] * P["d"] === P["s"] * P["n"] * this["d"]; // Same as compare() === 0
@@ -679,7 +679,7 @@
      *
      * Ex: new Fraction(19.6).equals([98, 5]);
      **/
-    "compare": function(a: string, b: string) {
+    "compare": function(a: number, b: number) {
 
       parse(a, b);
       var t = (this["s"] * this["n"] * P["d"] - P["s"] * P["n"] * this["d"]);
@@ -716,7 +716,7 @@
      *
      * Ex: new Fraction(19.6).divisible(1.5);
      */
-    "divisible": function(a: string, b: string) {
+    "divisible": function(a: Fraction, b: Fraction) {
 
       parse(a, b);
       return !(!(P["n"] * this["d"]) || ((this["n"] * P["d"]) % (P["n"] * this["d"])));
@@ -737,7 +737,7 @@
      *
      * Ex: new Fraction("1.'3'").toFraction(true) => "4 1/3"
      **/
-    'toFraction': function(excludeWhole: Boolean) {
+    'toFraction': function(excludeWhole: boolean) {
 
       var whole, str = "";
       var n = this["n"];

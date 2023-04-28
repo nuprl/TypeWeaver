@@ -117,7 +117,7 @@ function deepEqual(obj1: any, obj2: any)
 	return (true);
 }
 
-function isEmpty(obj: any)
+function isEmpty(obj: Object)
 {
 	var key;
 	for (key in obj)
@@ -125,13 +125,13 @@ function isEmpty(obj: any)
 	return (true);
 }
 
-function hasKey(obj: any, key: string)
+function hasKey(obj: Object, key: string)
 {
 	mod_assert.equal(typeof (key), 'string');
 	return (Object.prototype.hasOwnProperty.call(obj, key));
 }
 
-function forEachKey(obj: Object, callback: any)
+function forEachKey(obj: Object, callback: Function)
 {
 	for (var key in obj) {
 		if (hasKey(obj, key)) {
@@ -140,7 +140,7 @@ function forEachKey(obj: Object, callback: any)
 	}
 }
 
-function pluck(obj: any, key: string)
+function pluck(obj: Object, key: string)
 {
 	mod_assert.equal(typeof (key), 'string');
 	return (pluckv(obj, key));
@@ -171,12 +171,12 @@ function pluckv(obj: any, key: string)
  * depth).forEach(callback), except that the intermediate array is never
  * created.
  */
-function flattenIter(data: any, depth: number, callback: Function)
+function flattenIter(data: any, depth: number, callback: (any))
 {
 	doFlattenIter(data, depth, [], callback);
 }
 
-function doFlattenIter(data: any, depth: number, accum: any[], callback: Function)
+function doFlattenIter(data: any, depth: number, accum: any[], callback: (any))
 {
 	var each;
 	var key;
@@ -214,7 +214,7 @@ function flattenObject(data: any, depth: number)
 	var key;
 
 	for (key in data) {
-		flattenObject(data[key], depth - 1).forEach(function (p: string[]) {
+		flattenObject(data[key], depth - 1).forEach(function (p: string) {
 			rv.push([ key ].concat(p));
 		});
 	}
@@ -329,7 +329,7 @@ var PI_CONV_LC = 0x57;
  * A stricter version of parseInt() that provides options for changing what
  * is an acceptable string (for example, disallowing trailing characters).
  */
-function parseInteger(str: string, uopts: UintOptions)
+function parseInteger(str: string, uopts: PIOptions)
 {
 	mod_assert.string(str, 'str');
 	mod_assert.optionalObject(uopts, 'options');
@@ -562,7 +562,7 @@ function validateJsonObjectJS(schema: any, input: any)
 	return (rv);
 }
 
-function randElt(arr: any[])
+function randElt(arr: Array<any>)
 {
 	mod_assert.ok(Array.isArray(arr) && arr.length > 0,
 	    'randElt argument must be a non-empty array');
@@ -585,7 +585,7 @@ function assertHrtime(a: hrtime)
  * becomes valuable, we can define a representation and extend the
  * implementation to support it.
  */
-function hrtimeDiff(a: Hrtime, b: Hrtime)
+function hrtimeDiff(a: number[], b: number[])
 {
 	assertHrtime(a);
 	assertHrtime(b);
@@ -608,7 +608,7 @@ function hrtimeDiff(a: Hrtime, b: Hrtime)
  * Convert a hrtime reading from the array format returned by Node's
  * process.hrtime() into a scalar number of nanoseconds.
  */
-function hrtimeNanosec(a: HrTime)
+function hrtimeNanosec(a: any)
 {
 	assertHrtime(a);
 
@@ -619,7 +619,7 @@ function hrtimeNanosec(a: HrTime)
  * Convert a hrtime reading from the array format returned by Node's
  * process.hrtime() into a scalar number of microseconds.
  */
-function hrtimeMicrosec(a: hrtime)
+function hrtimeMicrosec(a: any)
 {
 	assertHrtime(a);
 
@@ -630,7 +630,7 @@ function hrtimeMicrosec(a: hrtime)
  * Convert a hrtime reading from the array format returned by Node's
  * process.hrtime() into a scalar number of milliseconds.
  */
-function hrtimeMillisec(a: hrtime)
+function hrtimeMillisec(a: any)
 {
 	assertHrtime(a);
 
@@ -672,7 +672,7 @@ function hrtimeAccum(a: Hrtime, b: Hrtime)
  * Add two hrtime readings A and B, returning the result as a new hrtime array.
  * Does not modify either input argument.
  */
-function hrtimeAdd(a: Hrtime, b: Hrtime)
+function hrtimeAdd(a: number[], b: number[])
 {
 	assertHrtime(a);
 
@@ -689,7 +689,7 @@ function hrtimeAdd(a: Hrtime, b: Hrtime)
  * properties.  If no properties were found, the returned array will be of
  * zero length.
  */
-function extraProperties(obj: any, allowed: string[])
+function extraProperties(obj: Object, allowed: string[])
 {
 	mod_assert.ok(typeof (obj) === 'object' && obj !== null,
 	    'obj argument must be a non-null object');
@@ -711,7 +711,7 @@ function extraProperties(obj: any, allowed: string[])
  * the union of these sets with "overrides" overriding "provided", and
  * "provided" overriding "defaults".  None of the input objects are modified.
  */
-function mergeObjects(provided: Object, overrides: Object, defaults: Object)
+function mergeObjects(provided: any, overrides: any, defaults: any)
 {
 	var rv, k;
 

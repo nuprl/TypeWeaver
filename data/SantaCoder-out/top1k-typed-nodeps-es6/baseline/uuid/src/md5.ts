@@ -1,6 +1,6 @@
 import crypto from 'crypto';
 
-function md5(bytes: Array<number>) {
+function md5(bytes: Buffer) {
   if (Array.isArray(bytes)) {
     bytes = Buffer.from(bytes);
   } else if (typeof bytes === 'string') {

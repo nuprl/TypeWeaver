@@ -17,7 +17,7 @@ glob.sync(__dirname + '/code/*.js').forEach(function (fp: string) {
   var fn = require(path.resolve(__dirname, 'code', fp));
   var name = path.basename(fp, path.extname(fp));
 
-  fixtures.forEach(function (fixture: any) {
+  fixtures.forEach(function (fixture: string) {
     console.log(bold(name) + ':', inspect(fn(require(fixture))));
   });
 });

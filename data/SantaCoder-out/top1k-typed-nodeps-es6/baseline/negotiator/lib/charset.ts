@@ -98,7 +98,7 @@ function getCharsetPriority(charset: string, accepted: string[], index: number) 
  * @private
  */
 
-function specify(charset: string, spec: string, index: number) {
+function specify(charset: string, spec: AcceptCharset, index: number) {
   var s = 0;
   if(spec.charset.toLowerCase() === charset.toLowerCase()){
     s |= 1;

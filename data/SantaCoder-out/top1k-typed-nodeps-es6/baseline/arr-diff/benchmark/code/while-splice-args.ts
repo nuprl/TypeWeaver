@@ -1,13 +1,13 @@
 'use strict';
 
-export default function(arr: Array<any>, arrays: Array<any>) {
+export default function(arr: any[], arrays: any[]) {
   for (var i = 1; i < arguments.length; i++) {
     diff(arr, arguments[i]);
   }
   return arr;
 };
 
-function diff(one: any, two: any) {
+function diff(one: any[], two: any[]) {
   if (!Array.isArray(two)) return;
   var len = two.length;
   var idx = -1;

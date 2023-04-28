@@ -79,7 +79,7 @@ function parseCharset(str: string, i: number) {
  * @private
  */
 
-function getCharsetPriority(charset: string, accepted: string[], index: number) {
+function getCharsetPriority(charset: string, accepted: Array<string>, index: number) {
   var priority = {o: -1, q: 0, s: 0};
 
   for (var i = 0; i < accepted.length; i++) {
@@ -98,7 +98,7 @@ function getCharsetPriority(charset: string, accepted: string[], index: number) 
  * @private
  */
 
-function specify(charset: string, spec: string, index: number) {
+function specify(charset: string, spec: AcceptCharset, index: number) {
   var s = 0;
   if(spec.charset.toLowerCase() === charset.toLowerCase()){
     s |= 1;

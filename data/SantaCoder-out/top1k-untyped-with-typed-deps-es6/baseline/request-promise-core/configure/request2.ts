@@ -6,7 +6,7 @@ import isFunction from 'lodash/isFunction';
 import isObjectLike from 'lodash/isObjectLike';
 
 
-export default function (options: any) {
+export default function (options: IOptions) {
 
     var errorText = 'Please verify options'; // For better minification because this string is repeating
 
@@ -33,7 +33,7 @@ export default function (options: any) {
 
     var originalInit = options.request.Request.prototype.init;
 
-    options.request.Request.prototype.init = function RP$initInterceptor(requestOptions: any) {
+    options.request.Request.prototype.init = function RP$initInterceptor(requestOptions: RequestInit) {
 
         // Init may be called again - currently in case of redirects
         if (isObjectLike(requestOptions) && !this._callback && !this._rp_promise) {

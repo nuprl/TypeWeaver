@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function(val: string, num: number) {
+module.exports = function(val: any, num: number) {
   return repeat(val, num, []).join('');
 };
 

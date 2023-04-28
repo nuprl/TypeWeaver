@@ -78,7 +78,7 @@ class Axios {
     // filter out skipped interceptors
     const requestInterceptorChain = [];
     let synchronousRequestInterceptors = true;
-    this.interceptors.request.forEach(function unshiftRequestInterceptors(interceptor: Interceptor) {
+    this.interceptors.request.forEach(function unshiftRequestInterceptors(interceptor: RequestInterceptor) {
       if (typeof interceptor.runWhen === 'function' && interceptor.runWhen(config) === false) {
         return;
       }
@@ -89,7 +89,7 @@ class Axios {
     });
 
     const responseInterceptorChain = [];
-    this.interceptors.response.forEach(function pushResponseInterceptors(interceptor: Interceptor) {
+    this.interceptors.response.forEach(function pushResponseInterceptors(interceptor: AxiosInterceptorManager<AxiosResponse>) {
       responseInterceptorChain.push(interceptor.fulfilled, interceptor.rejected);
     });
 
@@ -153,7 +153,7 @@ class Axios {
 }
 
 // Provide aliases for supported request methods
-utils.forEach(['delete', 'get', 'head', 'options'], function forEachMethodNoData(method: Function) {
+utils.forEach(['delete', 'get', 'head', 'options'], function forEachMethodNoData(method: string) {
   /*eslint func-names:0*/
   Axios.prototype[method] = function(url: string, config: AxiosRequestConfig) {
     return this.request(mergeConfig(config || {}, {

@@ -37,7 +37,7 @@ export default function cleanAtrule(node: Atrule, item: Atrule, list: Atrule[]) 
 
             // if there are some rules that not an @import or @charset before @import
             // remove it
-            list.prevUntil(item.prev, function(rule: Rule) {
+            list.prevUntil(item.prev, function(rule: Atrule) {
                 if (rule.type === 'Atrule') {
                     if (rule.name === 'import' || rule.name === 'charset') {
                         return;

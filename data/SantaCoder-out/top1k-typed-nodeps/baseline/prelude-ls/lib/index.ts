@@ -8,10 +8,10 @@ Num = require('./Num.js');
 id = function(x: any){
   return x;
 };
-isType = curry$(function(type: string, x: number){
+isType = curry$(function(type: Str, x: Any){
   return toString$.call(x).slice(8, -1) === type;
 });
-replicate = curry$(function(n: number, x: number){
+replicate = curry$(function(n: Int, x: a){
   var i$, results$ = [];
   for (i$ = 0; i$ < n; ++i$) {
     results$.push(x);
@@ -163,7 +163,7 @@ prelude.gcd = Num.gcd;
 prelude.lcm = Num.lcm;
 prelude.VERSION = '1.2.1';
 module.exports = prelude;
-function curry$(f: Function, bound: Array){
+function curry$(f: Function, bound: Object){
   var context,
   _curry = function(args: any[]) {
     return f.length > 1 ? function(){

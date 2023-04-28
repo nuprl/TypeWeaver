@@ -3,13 +3,13 @@
 import xnv from 'xml-name-validator';
 import { NAMESPACES } from './constants';
 
-function generatePrefix(map: any, newNamespace: string, prefixIndex: number) {
+function generatePrefix(map: PrefixMap, newNamespace: string, prefixIndex: number) {
   const generatedPrefix = `ns${prefixIndex}`;
   map[newNamespace] = [generatedPrefix];
   return generatedPrefix;
 }
 
-function preferredPrefixString(map: NamedNodeMap, ns: string, preferredPrefix: string) {
+function preferredPrefixString(map: PrefixMap, ns: string, preferredPrefix: string) {
   const candidateList = map[ns];
   if (!candidateList) {
     return null;
@@ -20,7 +20,7 @@ function preferredPrefixString(map: NamedNodeMap, ns: string, preferredPrefix: s
   return candidateList[candidateList.length - 1];
 }
 
-function serializeAttributeValue(value/* : any, requireWellFormed*/: boolean) {
+function serializeAttributeValue(value/* : string, requireWellFormed*/: boolean) {
   if (value === null) {
     return "";
   }

@@ -1,6 +1,6 @@
 'use strict';
 
-export default function diff(arr: any[], arrays: any[][]) {
+export default function diff(arr: Array<any>, arrays: Array<any>) {
   arrays = [].concat.apply([], [].slice.call(arguments, 1));
   var len = arrays.length;
   for (var i = 0; i < len; i++) {

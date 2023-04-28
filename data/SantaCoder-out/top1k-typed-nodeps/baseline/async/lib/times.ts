@@ -18,7 +18,7 @@ import timesLimit from './timesLimit.js'
  * @example
  *
  * // Pretend this is some complicated async factory
- * var createUser = function(id: string, callback: Function) {
+ * var createUser = function(id: number, callback: Function) {
  *     callback(null, {
  *         id: 'user' + id
  *     });
@@ -26,10 +26,10 @@ import timesLimit from './timesLimit.js'
  *
  * // generate 5 users
  * async.times(5, function(n: number, next: Function) {
- *     createUser(n, function(err: Error, user: User) {
+ *     createUser(n, function(err: Error, user: any) {
  *         next(err, user);
  *     });
- * }, function(err: Error, users: User[]) {
+ * }, function(err: any, users: any[]) {
  *     // we should now have 5 users
  * });
  */

@@ -61,7 +61,7 @@ var DEPRECATED_BOOLEANS_SYNTAX = [
 
 var DEPRECATED_BASE60_SYNTAX = /^[-+]?[0-9_]+(?::[0-9_]+)+(?:\.[0-9_]*)?$/;
 
-function compileStyleMap(schema: Schema, map: any) {
+function compileStyleMap(schema: Schema, map: StyleMap) {
   var result, keys, index, length, tag, style, type;
 
   if (map === null) return {};
@@ -88,7 +88,7 @@ function compileStyleMap(schema: Schema, map: any) {
   return result;
 }
 
-function encodeHex(character: string) {
+function encodeHex(character: number) {
   var string, handle, length;
 
   string = character.toString(16).toUpperCase();
@@ -113,7 +113,7 @@ function encodeHex(character: string) {
 var QUOTING_TYPE_SINGLE = 1,
     QUOTING_TYPE_DOUBLE = 2;
 
-function State(options: StateOptions) {
+function State(options: any) {
   this.schema        = options['schema'] || DEFAULT_SCHEMA;
   this.indent        = Math.max(1, (options['indent'] || 2));
   this.noArrayIndent = options['noArrayIndent'] || false;
@@ -222,7 +222,7 @@ function isNsCharOrWhitespace(c: number) {
 // [130]  ns-plain-char(c) ::=  ( ns-plain-safe(c) - “:” - “#” )
 //                            | ( /* An ns-char preceding */ “#” )
 //                            | ( “:” /* Followed by an ns-plain-safe(c) */ )
-function isPlainSafe(c: string, prev: string, inblock: boolean) {
+function isPlainSafe(c: string, prev: boolean, inblock: boolean) {
   var cIsNsCharOrWhitespace = isNsCharOrWhitespace(c);
   var cIsNsChar = cIsNsCharOrWhitespace && !isWhitespace(c);
   return (
@@ -560,7 +560,7 @@ function escapeString(string: string) {
   return result;
 }
 
-function writeFlowSequence(state: State, level: number, object: any) {
+function writeFlowSequence(state: State, level: number, object: any[]) {
   var _result = '',
       _tag    = state.tag,
       index,
@@ -588,7 +588,7 @@ function writeFlowSequence(state: State, level: number, object: any) {
   state.dump = '[' + _result + ']';
 }
 
-function writeBlockSequence(state: any, level: number, object: any, compact: boolean) {
+function writeBlockSequence(state: State, level: number, object: any, compact: boolean) {
   var _result = '',
       _tag    = state.tag,
       index,
@@ -625,7 +625,7 @@ function writeBlockSequence(state: any, level: number, object: any, compact: boo
   state.dump = _result || '[]'; // Empty sequence if no valid values.
 }
 
-function writeFlowMapping(state: State, level: number, object: FlowMapping) {
+function writeFlowMapping(state: State, level: number, object: any) {
   var _result       = '',
       _tag          = state.tag,
       objectKeyList = Object.keys(object),
@@ -671,7 +671,7 @@ function writeFlowMapping(state: State, level: number, object: FlowMapping) {
   state.dump = '{' + _result + '}';
 }
 
-function writeBlockMapping(state: any, level: any, object: any, compact: any) {
+function writeBlockMapping(state: State, level: number, object: any, compact: boolean) {
   var _result       = '',
       _tag          = state.tag,
       objectKeyList = Object.keys(object),
@@ -902,7 +902,7 @@ function writeNode(state: State, level: number, object: any, block: boolean, com
   return true;
 }
 
-function getDuplicateReferences(object: Object, state: State) {
+function getDuplicateReferences(object: any, state: State) {
   var objects = [],
       duplicatesIndexes = [],
       index,

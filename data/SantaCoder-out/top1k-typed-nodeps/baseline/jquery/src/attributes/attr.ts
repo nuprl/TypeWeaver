@@ -19,7 +19,7 @@ jQuery.fn.extend( {
 } );
 
 jQuery.extend( {
-	attr: function( elem: HTMLElement, name: string, value : any) {
+	attr: function( elem: Element, name: string, value : any) {
 		var ret, hooks,
 			nType = elem.nodeType;
 
@@ -66,7 +66,7 @@ jQuery.extend( {
 
 	attrHooks: {},
 
-	removeAttr: function( elem: HTMLElement, value : string) {
+	removeAttr: function( elem: Element, value : string) {
 		var name,
 			i = 0,
 
@@ -86,7 +86,7 @@ jQuery.extend( {
 // An input loses its value after becoming a radio
 if ( isIE ) {
 	jQuery.attrHooks.type = {
-		set: function( elem: HTMLElement, value : string) {
+		set: function( elem: Element, value : string) {
 			if ( value === "radio" && nodeName( elem, "input" ) ) {
 				var val = elem.value;
 				elem.setAttribute( "type", value );
@@ -114,7 +114,7 @@ jQuery.each( jQuery.expr.match.bool.source.match( /\w+/g ), function( _i: number
 			return ret;
 		},
 
-		set: function( elem: HTMLElement, value: any, name : string) {
+		set: function( elem: HTMLElement, value: string, name : string) {
 			if ( value === false ) {
 
 				// Remove boolean attributes when set to false

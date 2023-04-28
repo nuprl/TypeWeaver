@@ -4,7 +4,7 @@ import path from 'path';
 import http from 'http';
 let server;
 
-function pipeFileToResponse(res: Response, file: string, type: string) {
+function pipeFileToResponse(res: ServerResponse, file: string, type: string) {
   if (type) {
     res.writeHead(200, {
       'Content-Type': type
@@ -14,7 +14,7 @@ function pipeFileToResponse(res: Response, file: string, type: string) {
   fs.createReadStream(path.join(__dirname, file)).pipe(res);
 }
 
-server = http.createServer(function (req: IncomingMessage, res: ServerResponse) {
+server = http.createServer(function (req: http.IncomingMessage, res: http.ServerResponse) {
   req.setEncoding('utf8');
 
   const parsed = url.parse(req.url, true);
@@ -37,7 +37,7 @@ server = http.createServer(function (req: IncomingMessage, res: ServerResponse) 
     let result;
     let data = '';
 
-    req.on('data', function (chunk: string) {
+    req.on('data', function (chunk: Buffer) {
       data += chunk;
     });
 

@@ -5,13 +5,13 @@ var isArray       = require("./array/is")
 
 var objPropertyIsEnumerable = Object.prototype.propertyIsEnumerable;
 
-var assign = function (target: any, source: any) {
+var assign = function (target: Object, source: Object) {
 	for (var key in source) {
 		if (objPropertyIsEnumerable.call(source, key)) target[key] = source[key];
 	}
 };
 
-module.exports = function (validationDatum1/*: ValidationDatum1, ...validationDatumN: ValidationDatumN, options */: ValidationOptions) {
+module.exports = function (validationDatum1/*: ValidationDatum, ...validationDatumN: ValidationDatum[], options */: ValidationOptions) {
 	var validationData = [validationDatum1];
 	var globalOptions;
 	if (arguments.length > 1) {

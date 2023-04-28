@@ -56,7 +56,7 @@ function iterate(list: Array<any>, iterator: Function, state: any, callback: Fun
  * @param   {function} callback - invoked after iterator is done with the job
  * @returns {function|mixed} - job abort function or something else
  */
-function runJob(iterator: Iterator<any>, key: string, item: any, callback: any)
+function runJob(iterator: Function, key: string, item: any, callback: Function)
 {
   var aborter;
 

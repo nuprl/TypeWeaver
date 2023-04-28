@@ -16,7 +16,7 @@ printer.indent = function () {
     }
   }
 }
-printer.on('opentag', function (tag: string) {
+printer.on('opentag', function (tag: Tag) {
   this.indent()
   this.level++
   print('<' + tag.name)
@@ -39,12 +39,12 @@ printer.on('closetag', function (tag: string) {
   print('</' + tag + '>')
 })
 
-printer.on('cdata', function (data: any) {
+printer.on('cdata', function (data: string) {
   this.indent()
   print('<![CDATA[' + data + ']]>')
 })
 
-printer.on('comment', function (comment: Comment) {
+printer.on('comment', function (comment: string) {
   this.indent()
   print('<!--' + comment + '-->')
 })

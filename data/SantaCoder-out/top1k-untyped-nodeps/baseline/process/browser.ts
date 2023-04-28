@@ -35,7 +35,7 @@ function defaultClearTimeout () {
         cachedClearTimeout = defaultClearTimeout;
     }
 } ())
-function runTimeout(fun: Function) {
+function runTimeout(fun: any) {
     if (cachedSetTimeout === setTimeout) {
         //normal enviroments in sane situations
         return setTimeout(fun, 0);
@@ -60,7 +60,7 @@ function runTimeout(fun: Function) {
 
 
 }
-function runClearTimeout(marker: number) {
+function runClearTimeout(marker: any) {
     if (cachedClearTimeout === clearTimeout) {
         //normal enviroments in sane situations
         return clearTimeout(marker);
@@ -145,7 +145,7 @@ process.nextTick = function (fun: Function) {
 };
 
 // v8 likes predictible objects
-function Item(fun: Function, array: Array<any>) {
+function Item(fun: Function, array: any[]) {
     this.fun = fun;
     this.array = array;
 }

@@ -27,14 +27,14 @@ import seq from './seq.js'
  *     }, 10);
  * }
  *
- * function mul3(n: number, callback: any) {
+ * function mul3(n: number, callback: Function) {
  *     setTimeout(function () {
  *         callback(null, n * 3);
  *     }, 10);
  * }
  *
  * var add1mul3 = async.compose(mul3, add1);
- * add1mul3(4, function (err: any, result: number) {
+ * add1mul3(4, function (err: any, result: any) {
  *     // result now equals 15
  * });
  */

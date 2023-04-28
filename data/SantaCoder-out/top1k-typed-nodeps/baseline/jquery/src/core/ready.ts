@@ -32,7 +32,7 @@ jQuery.extend( {
 	readyWait: 1,
 
 	// Handle when the DOM is ready
-	ready: function( wait : number) {
+	ready: function( wait : boolean) {
 
 		// Abort if there are pending holds or we're already ready
 		if ( wait === true ? --jQuery.readyWait : jQuery.isReady ) {

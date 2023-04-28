@@ -22,7 +22,7 @@ Promise.denodeify = function (fn: Function, argumentCount: number) {
 };
 
 var callbackFn = (
-  'function (err: Error, res: any) {' +
+  'function (err: any, res: any) {' +
   'if (err) { rj(err); } else { rs(res); }' +
   '}'
 );
@@ -32,7 +32,7 @@ function denodeifyWithCount(fn: Function, argumentCount: number) {
     args.push('a' + i);
   }
   var body = [
-    'return function (' + args.join(': any,': args.join) + ') {',
+    'return function (' + args.join(': any,': '') + ') {',
     'var self = this;',
     'return new Promise(function (rs: any, rj: any) {',
     'var res = fn.call(',
@@ -47,7 +47,7 @@ function denodeifyWithCount(fn: Function, argumentCount: number) {
   ].join('');
   return Function(['Promise', 'fn'], body)(Promise, fn);
 }
-function denodeifyWithoutCount(fn: any) {
+function denodeifyWithoutCount(fn: Function) {
   var fnLength = Math.max(fn.length - 1, 3);
   var args = [];
   for (var i = 0; i < fnLength; i++) {
@@ -68,7 +68,7 @@ function denodeifyWithoutCount(fn: any) {
     'var cb = ' + callbackFn + ';',
     'var res;',
     'switch (argLength) {',
-    args.concat(['extra']).map(function (_: any, index: number) {
+    args.concat(['extra']).map(function (_: Function, index: number) {
       return (
         'case ' + (index) + ':' +
         'res = fn.call(' + ['self'].concat(args.slice(0, index)).concat('cb').join(',') + ');' +
@@ -104,7 +104,7 @@ Promise.nodeify = function (fn: Function) {
       return fn.apply(this, arguments).nodeify(callback, ctx);
     } catch (ex) {
       if (callback === null || typeof callback == 'undefined') {
-        return new Promise(function (resolve: any, reject: any) {
+        return new Promise(function (resolve: Function, reject: Function) {
           reject(ex);
         });
       } else {
@@ -119,7 +119,7 @@ Promise.nodeify = function (fn: Function) {
 Promise.prototype.nodeify = function (callback: Function, ctx: any) {
   if (typeof callback != 'function') return this;
 
-  this.then(function (value: any) {
+  this.then(function (value: T) {
     asap(function () {
       callback.call(ctx, null, value);
     });

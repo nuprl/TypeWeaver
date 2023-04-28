@@ -17,7 +17,7 @@ jQuery.ajaxTransport( function( options : any) {
 
 	// Cross domain only allowed if supported through XMLHttpRequest
 	return {
-		send: function( headers: any, complete : Function) {
+		send: function( headers: any, complete : any) {
 			var i,
 				xhr = options.xhr();
 

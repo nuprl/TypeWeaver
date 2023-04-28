@@ -1,6 +1,6 @@
 import { List, walk } from 'css-tree';
 
-function processRule(node: Node, item: RuleItem, list: RuleList) {
+function processRule(node: Node, item: Node, list: List) {
     const selectors = node.prelude.children;
 
     // generate new rule sets:

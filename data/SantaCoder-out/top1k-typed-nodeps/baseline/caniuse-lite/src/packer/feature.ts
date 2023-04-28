@@ -29,7 +29,7 @@ const getContents = getContentsFactory(base)
 const requireCall = moduleName =>
   t.callExpression(t.identifier('require'), [t.stringLiteral(moduleName)])
 
-function featureIndex(features: t.ObjectExpression) {
+function featureIndex(features: Feature[]) {
   let index = t.objectExpression(
     features.map(({ name }) =>
       t.objectProperty(t.stringLiteral(name), requireCall(`./features/${name}`))
@@ -39,7 +39,7 @@ function featureIndex(features: t.ObjectExpression) {
   return generateCode([moduleExports(index)])
 }
 
-function packSupport(supportData: SupportData) {
+function packSupport(supportData: string) {
   return sum(
     supportData.split(' ').map(support => {
       if (support in supported) {

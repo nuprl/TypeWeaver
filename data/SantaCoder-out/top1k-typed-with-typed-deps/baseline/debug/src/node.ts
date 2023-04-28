@@ -200,7 +200,7 @@ function log(...args: any[]) {
  * @param {String} namespaces
  * @api private
  */
-function save(namespaces: string[]) {
+function save(namespaces: string) {
 	if (namespaces) {
 		process.env.DEBUG = namespaces;
 	} else {
@@ -228,7 +228,7 @@ function load() {
  * differently for a particular `debug` instance.
  */
 
-function init(debug: any) {
+function init(debug: boolean) {
 	debug.inspectOpts = {};
 
 	const keys = Object.keys(exports.inspectOpts);

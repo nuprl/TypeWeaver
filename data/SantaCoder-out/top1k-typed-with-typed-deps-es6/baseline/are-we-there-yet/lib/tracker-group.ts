@@ -37,7 +37,7 @@ TrackerGroup.prototype.nameInTree = function () {
   return names.join('/')
 }
 
-TrackerGroup.prototype.addUnit = function (unit: Unit, weight: number) {
+TrackerGroup.prototype.addUnit = function (unit: TrackerUnit, weight: number) {
   if (unit.addUnit) {
     var toTest = this
     while (toTest) {
@@ -80,11 +80,11 @@ TrackerGroup.prototype.newGroup = function (name: string, weight: number) {
   return this.addUnit(new TrackerGroup(name), weight)
 }
 
-TrackerGroup.prototype.newItem = function (name: string, todo: Todo, weight: number) {
+TrackerGroup.prototype.newItem = function (name: string, todo: TrackerTodo, weight: number) {
   return this.addUnit(new Tracker(name, todo), weight)
 }
 
-TrackerGroup.prototype.newStream = function (name: string, todo: Todo, weight: number) {
+TrackerGroup.prototype.newStream = function (name: string, todo: TrackerStream, weight: number) {
   return this.addUnit(new TrackerStream(name, todo), weight)
 }
 

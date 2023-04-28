@@ -158,13 +158,13 @@ export default function patchRequire(vol: Volume, unixifyPaths = false: boolean,
 
 
     // Native extension for .js
-    Module._extensions['.js'] = function(module: string, filename: string) {
+    Module._extensions['.js'] = function(module: NodeModule, filename: string) {
         let content = vol.readFileSync(filename, 'utf8');
         module._compile(stripBOM(content), filename);
     };
 
     // Native extension for .json
-    Module._extensions['.json'] = function(module: string, filename: string) {
+    Module._extensions['.json'] = function(module: NodeModule, filename: string) {
         let content = vol.readFileSync(filename, 'utf8');
         try {
             module.exports = JSON.parse(stripBOM(content));
@@ -175,7 +175,7 @@ export default function patchRequire(vol: Volume, unixifyPaths = false: boolean,
     };
 
     let warned = true;
-    Module._findPath = function(request: any, paths: any, isMain: any) {
+    Module._findPath = function(request: string, paths: string[], isMain: boolean) {
         if (path.isAbsolute(request)) {
             paths = [''];
         } else if (!paths || paths.length === 0) {

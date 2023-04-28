@@ -3,7 +3,7 @@
 var utils = require('./utils');
 var assert = require('minimalistic-assert');
 
-function Hmac(hash: Hash, key: string, enc: string) {
+function Hmac(hash: Hash, key: Buffer, enc: string) {
   if (!(this instanceof Hmac))
     return new Hmac(hash, key, enc);
   this.Hash = hash;
@@ -16,7 +16,7 @@ function Hmac(hash: Hash, key: string, enc: string) {
 }
 module.exports = Hmac;
 
-Hmac.prototype._init = function init(key: string) {
+Hmac.prototype._init = function init(key: Buffer) {
   // Shorten key, if needed
   if (key.length > this.blockSize)
     key = new this.Hash().update(key).digest();
@@ -36,7 +36,7 @@ Hmac.prototype._init = function init(key: string) {
   this.outer = new this.Hash().update(key);
 };
 
-Hmac.prototype.update = function update(msg: Buffer, enc: string) {
+Hmac.prototype.update = function update(msg: string, enc: string) {
   this.inner.update(msg, enc);
   return this;
 };

@@ -101,7 +101,7 @@ module.exports.captureExit = function() {
 };
 
 module.exports._handlers = handlers;
-module.exports._flush = function(lastTime: number, code: string) {
+module.exports._flush = function(lastTime: number, code: number) {
   isExiting = true;
   var work = handlers.splice(0, handlers.length);
 
@@ -115,7 +115,7 @@ module.exports._flush = function(lastTime: number, code: string) {
           }
           throw e;
         });
-      })).then(function(results: any) {
+      })).then(function(results: any[]) {
         if (firstRejected) {
           throw firstRejected;
         }

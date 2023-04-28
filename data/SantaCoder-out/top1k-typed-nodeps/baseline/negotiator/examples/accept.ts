@@ -23,7 +23,7 @@
     return _results;
   })();
 
-  server = http.createServer(function(req: express.Request, res: express.Response) {
+  server = http.createServer(function(req: Request, res: Response) {
     var mediaType, negotiator;
     negotiator = new Negotiator(req);
     console.log("Accept: " + req.headers['accept']);

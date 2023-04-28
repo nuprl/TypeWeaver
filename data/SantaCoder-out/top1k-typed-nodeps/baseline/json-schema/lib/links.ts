@@ -20,7 +20,7 @@
 }(this, function () {// setup primitive classes to be JSON Schema types
 var exports = {};
 exports.cacheLinks = true;
-exports.getLink = function(relation: Relation, instance: Model, schema: Schema){
+exports.getLink = function(relation: string, instance: Object, schema: Object){
 	// gets the URI of the link for the given relation based on the instance and schema
 	// for example:
 	// getLink(
@@ -33,7 +33,7 @@ exports.getLink = function(relation: Relation, instance: Model, schema: Schema){
 		links = {};
 		var schemaLinks = schema.links;
 		if(schemaLinks && schemaLinks instanceof Array){
-			schemaLinks.forEach(function(link: any){
+			schemaLinks.forEach(function(link: Link){
 	/*			// TODO: allow for multiple same-name relations
 				if(links[link.rel]){
 					if(!(links[link.rel] instanceof Array)){

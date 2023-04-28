@@ -14,7 +14,7 @@ function startWatcher(name: string, files: string[], folders: string[]) {
 		console.log(name, "change", path.relative(folder, file), mtime);
 	});
 
-	w.on("aggregated", function(changes: any) {
+	w.on("aggregated", function(changes: string[]) {
 		var times = w.getTimes();
 		console.log(name, "aggregated", Array.from(changes, function(file: string) {
 			return path.relative(folder, file);

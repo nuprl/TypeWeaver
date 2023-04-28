@@ -44,7 +44,7 @@ module['exports'] = function() {
   // Iterate through all default styles and colors
   //
   var x = Object.keys(colors.styles);
-  x.forEach(function(style: any) {
+  x.forEach(function(style: string) {
     addProperty(style, function() {
       return colors.stylize(this, style);
     });

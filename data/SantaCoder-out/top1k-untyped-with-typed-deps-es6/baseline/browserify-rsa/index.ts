@@ -1,13 +1,13 @@
 import BN from 'bn.js';
 import randomBytes from 'randombytes';
 
-function blind (priv: Buffer) {
+function blind (priv: PrivateKey) {
   var r = getr(priv)
   var blinder = r.toRed(BN.mont(priv.modulus)).redPow(new BN(priv.publicExponent)).fromRed()
   return { blinder: blinder, unblinder: r.invm(priv.modulus) }
 }
 
-function getr (priv: RSA) {
+function getr (priv: RSAKey) {
   var len = priv.modulus.byteLength()
   var r
   do {
@@ -16,7 +16,7 @@ function getr (priv: RSA) {
   return r
 }
 
-function crt (msg: string, priv: Buffer) {
+function crt (msg: Buffer, priv: RSAKey) {
   var blinds = blind(priv)
   var len = priv.modulus.byteLength()
   var blinded = new BN(msg).mul(blinds.blinder).umod(priv.modulus)

@@ -5,7 +5,7 @@ module.exports = function(str: string, data: any) {
     'with(obj||{}){__p.push(\'' +
     str.replace(/\\/g, '\\\\')
        .replace(/'/g, "\\'")
-       .replace(INTERPOLATE, function(match: RegExpExecArray, code: string) {
+       .replace(INTERPOLATE, function(match: string, code: string) {
          return "'," + code.replace(/\\'/g, "'") + ",'"
        })
        .replace(/\r/g, '\\r')

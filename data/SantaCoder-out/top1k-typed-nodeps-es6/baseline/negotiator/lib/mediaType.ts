@@ -96,7 +96,7 @@ function parseMediaType(str: string, i: number) {
  * @private
  */
 
-function getMediaTypePriority(type: string, accepted: string[], index: number) {
+function getMediaTypePriority(type: string, accepted: Array<string>, index: number) {
   var priority = {o: -1, q: 0, s: 0};
 
   for (var i = 0; i < accepted.length; i++) {
@@ -115,7 +115,7 @@ function getMediaTypePriority(type: string, accepted: string[], index: number) {
  * @private
  */
 
-function specify(type: string, spec: any, index: number) {
+function specify(type: string, spec: MediaTypeSpec, index: number) {
   var p = parseMediaType(type);
   var s = 0;
 
@@ -176,7 +176,7 @@ function preferredMediaTypes(accept: string, provided: string[]) {
   });
 
   // sorted list of accepted types
-  return priorities.filter(isQuality).sort(compareSpecs).map(function getType(priority: number) {
+  return priorities.filter(isQuality).sort(compareSpecs).map(function getType(priority: string) {
     return provided[priorities.indexOf(priority)];
   });
 }
@@ -186,7 +186,7 @@ function preferredMediaTypes(accept: string, provided: string[]) {
  * @private
  */
 
-function compareSpecs(a: Spec, b: Spec) {
+function compareSpecs(a: any, b: any) {
   return (b.q - a.q) || (b.s - a.s) || (a.o - b.o) || (a.i - b.i) || 0;
 }
 
@@ -195,7 +195,7 @@ function compareSpecs(a: Spec, b: Spec) {
  * @private
  */
 
-function getFullType(spec: any) {
+function getFullType(spec: MediaType) {
   return spec.type + '/' + spec.subtype;
 }
 
@@ -204,7 +204,7 @@ function getFullType(spec: any) {
  * @private
  */
 
-function isQuality(spec: Spec) {
+function isQuality(spec: string) {
   return spec.q > 0;
 }
 

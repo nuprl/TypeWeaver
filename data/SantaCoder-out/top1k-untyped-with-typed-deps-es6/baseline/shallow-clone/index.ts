@@ -61,7 +61,7 @@ function cloneArrayBuffer(val: ArrayBuffer) {
   return res;
 }
 
-function cloneTypedArray(val: any, deep: boolean) {
+function cloneTypedArray(val: TypedArray, deep: boolean) {
   return new val.constructor(val.buffer, val.byteOffset, val.length);
 }
 

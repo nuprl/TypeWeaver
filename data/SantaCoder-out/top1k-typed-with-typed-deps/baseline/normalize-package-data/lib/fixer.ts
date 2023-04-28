@@ -43,7 +43,7 @@ module.exports = {
   },
 
   fixTypos: function (data: any) {
-    Object.keys(typos.topLevel).forEach(function (d: any) {
+    Object.keys(typos.topLevel).forEach(function (d: string) {
       if (Object.prototype.hasOwnProperty.call(data, d)) {
         this.warn('typo', d, typos.topLevel[d])
       }
@@ -121,7 +121,7 @@ module.exports = {
       this.warn('nonArrayBundleDependencies')
       delete data[bd]
     } else if (data[bd]) {
-      data[bd] = data[bd].filter(function (filtered: any) {
+      data[bd] = data[bd].filter(function (filtered: string) {
         if (!filtered || typeof filtered !== 'string') {
           this.warn('nonStringBundleDependency', filtered)
           return false
@@ -193,7 +193,7 @@ module.exports = {
     }
   },
 
-  fixVersionField: function (data: any, strict: boolean) {
+  fixVersionField: function (data: PackageJson, strict: boolean) {
     // allow "loose" semver 1.0 versions in non-strict mode
     // enforce strict semver 2.0 compliance in strict mode
     var loose = !strict
@@ -208,7 +208,7 @@ module.exports = {
     return true
   },
 
-  fixPeople: function (data: Person) {
+  fixPeople: function (data: any) {
     modifyPeople(data, unParsePerson)
     modifyPeople(data, parsePerson)
   },
@@ -259,7 +259,7 @@ module.exports = {
     }
   },
 
-  fixBugsField: function (data: any) {
+  fixBugsField: function (data: PackageData) {
     if (!data.bugs && data.repository && data.repository.url) {
       var hosted = hostedGitInfo.fromUrl(data.repository.url)
       if (hosted && hosted.bugs()) {
@@ -302,7 +302,7 @@ module.exports = {
     }
   },
 
-  fixHomepageField: function (data: any) {
+  fixHomepageField: function (data: PackageJson) {
     if (!data.homepage && data.repository && data.repository.url) {
       var hosted = hostedGitInfo.fromUrl(data.repository.url)
       if (hosted && hosted.docs()) {
@@ -323,7 +323,7 @@ module.exports = {
     }
   },
 
-  fixLicenseField: function (data: any) {
+  fixLicenseField: function (data: PackageJson) {
     const license = data.license || data.licence
     if (!license) {
       return this.warn('missingLicense')
@@ -356,7 +356,7 @@ function isValidScopedPackageName (spec: string) {
     rest[1] === encodeURIComponent(rest[1])
 }
 
-function isCorrectlyEncodedName (spec: Spec) {
+function isCorrectlyEncodedName (spec: string) {
   return !spec.match(/[/@\s+%:]/) &&
     spec === encodeURIComponent(spec)
 }
@@ -371,7 +371,7 @@ function ensureValidName (name: string, strict: boolean, allowLegacyCase: boolea
   }
 }
 
-function modifyPeople (data: any, fn: Function) {
+function modifyPeople (data: any, fn: any) {
   if (data.author) {
     data.author = fn(data.author)
   }['maintainers', 'contributors'].forEach(function (set: string) {
@@ -415,7 +415,7 @@ function parsePerson (person: string) {
   return obj
 }
 
-function addOptionalDepsToDeps (data: any, warn: Function) {
+function addOptionalDepsToDeps (data: Object, warn: Function) {
   var o = data.optionalDependencies
   if (!o) {
     return
@@ -427,7 +427,7 @@ function addOptionalDepsToDeps (data: any, warn: Function) {
   data.dependencies = d
 }
 
-function depObjectify (deps: string[], type: string, warn: boolean) {
+function depObjectify (deps: string, type: string, warn: Function) {
   if (!deps) {
     return {}
   }
@@ -452,7 +452,7 @@ function depObjectify (deps: string[], type: string, warn: boolean) {
   return o
 }
 
-function objectifyDeps (data: any, warn: Function) {
+function objectifyDeps (data: Object, warn: Function) {
   depTypes.forEach(function (type: string) {
     if (!data[type]) {
       return
@@ -461,7 +461,7 @@ function objectifyDeps (data: any, warn: Function) {
   })
 }
 
-function bugsTypos (bugs: Bug[], warn: boolean) {
+function bugsTypos (bugs: Bugs, warn: WarnFunction) {
   if (!bugs) {
     return
   }

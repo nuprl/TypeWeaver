@@ -67,7 +67,7 @@ function getImportLinkAPICode(esModule: boolean, loaderContext: LoaderContext) {
     : `var API = require(${modulePath});`;
 }
 
-function getImportLinkContentCode(esModule: boolean, loaderContext: LoaderContext, request: Request) {
+function getImportLinkContentCode(esModule: boolean, loaderContext: LoaderContext, request: string) {
   const modulePath = stringifyRequest(loaderContext, `!!${request}`);
 
   return esModule
@@ -114,7 +114,7 @@ function getImportStyleDomAPICode(
     : `var domAPI = require(${isSingleton ? singletonAPI : styleAPI});`;
 }
 
-function getImportStyleContentCode(esModule: boolean, loaderContext: LoaderContext, request: Request) {
+function getImportStyleContentCode(esModule: boolean, loaderContext: LoaderContext, request: string) {
   const modulePath = stringifyRequest(loaderContext, `!!${request}`);
 
   return esModule
@@ -152,7 +152,7 @@ function getImportInsertBySelectorCode(
   return "";
 }
 
-function getInsertOptionCode(insertType: string, options: InsertOptions) {
+function getInsertOptionCode(insertType: string, options: any) {
   if (insertType === "selector") {
     const insert = options.insert ? JSON.stringify(options.insert) : '"head"';
 
@@ -180,7 +180,7 @@ function getImportInsertStyleElementCode(esModule: boolean, loaderContext: Loade
     : `var insertStyleElement = require(${modulePath});`;
 }
 
-function getStyleHmrCode(esModule: boolean, loaderContext: LoaderContext, request: Request, lazy: Boolean) {
+function getStyleHmrCode(esModule: boolean, loaderContext: LoaderContext, request: string, lazy: boolean) {
   const modulePath = stringifyRequest(loaderContext, `!!${request}`);
 
   return `
@@ -255,7 +255,7 @@ if (module.hot) {
 `;
 }
 
-function getLinkHmrCode(esModule: boolean, loaderContext: LoaderContext, request: Request) {
+function getLinkHmrCode(esModule: boolean, loaderContext: LoaderContext, request: string) {
   const modulePath = stringifyRequest(loaderContext, `!!${request}`);
 
   return `
@@ -334,7 +334,7 @@ function getStyleTagTransformFnCode(
   return "";
 }
 
-function getStyleTagTransformFn(options: StyleTagOptions, isSingleton: boolean) {
+function getStyleTagTransformFn(options: Options, isSingleton: boolean) {
   // Todo remove "function" type for styleTagTransform option in next major release, because code duplication occurs. Leave require.resolve()
   return isSingleton
     ? ""
@@ -343,7 +343,7 @@ function getStyleTagTransformFn(options: StyleTagOptions, isSingleton: boolean) 
     : `options.styleTagTransform = styleTagTransformFn`;
 }
 
-function getExportStyleCode(esModule: boolean, loaderContext: LoaderContext, request: Request) {
+function getExportStyleCode(esModule: boolean, loaderContext: LoaderContext, request: string) {
   const modulePath = stringifyRequest(loaderContext, `!!${request}`);
 
   return esModule
@@ -352,7 +352,7 @@ function getExportStyleCode(esModule: boolean, loaderContext: LoaderContext, req
     : "module.exports = content && content.locals || {};";
 }
 
-function getExportLazyStyleCode(esModule: boolean, loaderContext: LoaderContext, request: Request) {
+function getExportLazyStyleCode(esModule: boolean, loaderContext: LoaderContext, request: string) {
   const modulePath = stringifyRequest(loaderContext, `!!${request}`);
 
   return esModule
@@ -361,7 +361,7 @@ function getExportLazyStyleCode(esModule: boolean, loaderContext: LoaderContext,
     : "module.exports = exported;";
 }
 
-function getSetAttributesCode(esModule: boolean, loaderContext: LoaderContext, options: LoaderOptions) {
+function getSetAttributesCode(esModule: boolean, loaderContext: LoaderContext, options: Options) {
   let modulePath;
 
   if (typeof options.attributes !== "undefined") {

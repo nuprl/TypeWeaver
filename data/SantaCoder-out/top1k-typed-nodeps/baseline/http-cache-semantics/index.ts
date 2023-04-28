@@ -89,7 +89,7 @@ function parseCacheControl(header: string) {
     return cc;
 }
 
-function formatCacheControl(cc: string) {
+function formatCacheControl(cc: CacheControl) {
     let parts = [];
     for (const k in cc) {
         const v = cc[k];

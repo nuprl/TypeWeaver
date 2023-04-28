@@ -48,7 +48,7 @@ var SOURCE = [ 'src/**/*.js' ];
  * introduced a feature or made a backwards-incompatible release.
  */
 
-function inc(importance: number) {
+function inc(importance: string) {
     // get all the files to bump version in
     return gulp.src(['./package.json'])
         // bump the version number in those files

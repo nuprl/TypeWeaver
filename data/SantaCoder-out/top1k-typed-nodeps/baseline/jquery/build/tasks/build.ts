@@ -94,7 +94,7 @@ module.exports = function( grunt : any) {
 			const excludeList = ( list, prepend ) => {
 				if ( list ) {
 					prepend = prepend ? `${ prepend }/` : "";
-					list.forEach( function( module : Module) {
+					list.forEach( function( module : string) {
 
 						// Exclude var modules as well
 						if ( module === "var" ) {
@@ -344,7 +344,7 @@ module.exports = function( grunt : any) {
 			if ( trackingAllowed ) {
 
 				// Track individuals
-				tracks.forEach( function( module : any) {
+				tracks.forEach( function( module : string) {
 					const path = defaultPath.concat( [ "individual" ], module );
 
 					insight.track.apply( insight, path );

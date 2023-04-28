@@ -11,7 +11,7 @@ function attemptAsyncOperation(someInput: any, cb: any) {
   var operation = retry.operation(opts);
 
   operation.attempt(function(currentAttempt: number) {
-    failingAsyncOperation(someInput, function(err: Error, result: any) {
+    failingAsyncOperation(someInput, function(err: any, result: any) {
 
       if (err && err.message === 'A fatal error') {
         operation.stop();
@@ -35,6 +35,6 @@ attemptAsyncOperation('test input', function(err: Error, errors: Array<Error>, r
   console.log(result);
 });
 
-function failingAsyncOperation(input: any, cb: Function) {
+function failingAsyncOperation(input: any, cb: any) {
   return setImmediate(cb.bind(null, new Error('A fatal error')));
 }

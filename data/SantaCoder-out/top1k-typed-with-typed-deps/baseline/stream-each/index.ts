@@ -16,7 +16,7 @@ function each (stream: Readable, fn: Function, cb: Function) {
   if (cb) eos(stream, {readable: true, writable: false}, done)
   return stream
 
-  function done (err: any) {
+  function done (err: Error) {
     if (!error) error = err
     ended = true
     if (!running) cb(error)

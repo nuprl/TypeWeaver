@@ -67,7 +67,7 @@ function entitytag (entity: string) {
  * @public
  */
 
-function etag (entity: any, options: any) {
+function etag (entity: any, options: Options) {
   if (entity == null) {
     throw new TypeError('argument entity is required')
   }
@@ -123,7 +123,7 @@ function isstats (obj: any) {
  * @private
  */
 
-function stattag (stat: Stat) {
+function stattag (stat: fs.Stats) {
   var mtime = stat.mtime.getTime().toString(16)
   var size = stat.size.toString(16)
 

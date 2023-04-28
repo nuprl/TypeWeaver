@@ -16,14 +16,14 @@ const INFINITY = 1 / 0
  * @see flatMap, flatMapDepth, flatten, flattenDeep, flattenDepth, map, mapKeys, mapValues
  * @example
  *
- * function duplicate(n: number) {
+ * function duplicate(n: any) {
  *   return [[[n, n]]]
  * }
  *
  * flatMapDeep([1, 2], duplicate)
  * // => [1, 1, 2, 2]
  */
-function flatMapDeep(collection: any[], iteratee: any) {
+function flatMapDeep(collection: any[], iteratee: Function) {
   return baseFlatten(map(collection, iteratee), INFINITY)
 }
 

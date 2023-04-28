@@ -9,7 +9,7 @@ const SourceNode = require("./SourceNode");
 const CodeNode = require("./CodeNode");
 const SourceListMap = require("./SourceListMap");
 
-module.exports = function fromStringWithSourceMap(code: string, map: string) {
+module.exports = function fromStringWithSourceMap(code: string, map: SourceMapGenerator) {
 	const sources = map.sources;
 	const sourcesContent = map.sourcesContent;
 	const mappings = map.mappings.split(";");

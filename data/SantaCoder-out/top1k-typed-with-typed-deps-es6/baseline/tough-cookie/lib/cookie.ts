@@ -79,7 +79,7 @@ const MIN_TIME = 0; // 31-bit min
 const SAME_SITE_CONTEXT_VAL_ERR =
   'Invalid sameSiteContext option for getCookies(); expected one of "strict", "lax", or "none"';
 
-function checkSameSiteContext(value: string) {
+function checkSameSiteContext(value: unknown) {
   validators.validate(validators.isNonEmptyString(value), value);
   const context = String(value).toLowerCase();
   if (context === "none" || context === "lax" || context === "strict") {
@@ -1272,7 +1272,7 @@ class CookieJar {
     const store = this.store;
 
     if (!store.updateCookie) {
-      store.updateCookie = function(oldCookie: string, newCookie: string, cb: Function) {
+      store.updateCookie = function(oldCookie: Cookie, newCookie: Cookie, cb: any) {
         this.putCookie(newCookie, cb);
       };
     }
@@ -1438,7 +1438,7 @@ class CookieJar {
   getCookieString(...args) {
     const cb = args.pop();
     validators.validate(validators.isFunction(cb), cb);
-    const next = function(err: Error, cookies: any) {
+    const next = function(err: Error, cookies: Array<Cookie>) {
       if (err) {
         cb(err);
       } else {
@@ -1458,7 +1458,7 @@ class CookieJar {
   getSetCookieStrings(...args) {
     const cb = args.pop();
     validators.validate(validators.isFunction(cb), cb);
-    const next = function(err: any, cookies: any) {
+    const next = function(err: Error, cookies: Array<any>) {
       if (err) {
         cb(err);
       } else {
@@ -1623,7 +1623,7 @@ class CookieJar {
       let completedCount = 0;
       const removeErrors = [];
 
-      function removeCookieCb(removeErr: any) {
+      function removeCookieCb(removeErr: Error) {
         if (removeErr) {
           removeErrors.push(removeErr);
         }
@@ -1714,7 +1714,7 @@ CookieJar.fromJSON = CookieJar.deserializeSync;
 CookieJar.deserialize = fromCallback(CookieJar.deserialize);
 
 // Use a closure to provide a true imperative API for synchronous stores.
-function syncWrap(method: Function) {
+function syncWrap(method: string) {
   return function(...args: any[]) {
     if (!this.store.synchronous) {
       throw new Error(

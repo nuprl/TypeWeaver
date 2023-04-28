@@ -10,7 +10,7 @@ export default async;
  * @param   {function} callback - callback to invoke
  * @returns {function} - augmented callback
  */
-function async(callback: Function)
+function async(callback: any)
 {
   var isAsync = false;
 

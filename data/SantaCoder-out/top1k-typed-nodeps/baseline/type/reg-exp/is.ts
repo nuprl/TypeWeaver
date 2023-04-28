@@ -7,7 +7,7 @@ var regExpTest = RegExp.prototype.test
   , objectToString = Object.prototype.toString
   , objectTaggedString = objectToString.call(/a/);
 
-module.exports = function (value: any) {
+module.exports = function (value: unknown) {
 	if (!value) return false;
 
 	// Sanity check (reject objects which do not expose common RegExp interface)

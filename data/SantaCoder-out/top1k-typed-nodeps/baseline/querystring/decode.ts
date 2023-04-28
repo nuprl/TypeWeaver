@@ -24,11 +24,11 @@
 // If obj.hasOwnProperty has been overridden, then calling
 // obj.hasOwnProperty(prop) will break.
 // See: https://github.com/joyent/node/issues/1707
-function hasOwnProperty(obj: any, prop: string) {
+function hasOwnProperty(obj: Object, prop: string) {
   return Object.prototype.hasOwnProperty.call(obj, prop);
 }
 
-module.exports = function(qs: string, sep: string, eq: string, options: any) {
+module.exports = function(qs: string, sep: string, eq: string, options: qs.ParseOptions) {
   sep = sep || '&';
   eq = eq || '=';
   var obj = {};

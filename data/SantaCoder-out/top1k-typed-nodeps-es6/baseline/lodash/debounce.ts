@@ -62,7 +62,7 @@ import root from './.internal/root.js'
  * // Check for pending invocations.
  * const status = debounced.pending() ? "Pending..." : "Ready"
  */
-function debounce(func: Function, wait: number, options: Object) {
+function debounce(func: Function, wait: number, options: any) {
   let lastArgs,
     lastThis,
     maxWait,

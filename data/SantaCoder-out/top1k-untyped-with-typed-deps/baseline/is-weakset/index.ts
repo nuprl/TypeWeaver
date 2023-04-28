@@ -10,7 +10,7 @@ var $setHas = callBound('WeakSet.prototype.has', true);
 if ($setHas) {
 	var $mapHas = callBound('WeakMap.prototype.has', true);
 
-	module.exports = function isWeakSet(x: unknown) {
+	module.exports = function isWeakSet(x: any) {
 		if (!x || typeof x !== 'object') {
 			return false;
 		}
@@ -29,7 +29,7 @@ if ($setHas) {
 	};
 } else {
 	// eslint-disable-next-line no-unused-vars
-	module.exports = function isWeakSet(x: any) {
+	module.exports = function isWeakSet(x: unknown) {
 		// `WeakSet` does not exist, or does not have a `has` method
 		return false;
 	};

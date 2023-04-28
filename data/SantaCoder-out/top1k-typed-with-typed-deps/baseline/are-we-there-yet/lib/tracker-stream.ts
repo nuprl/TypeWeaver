@@ -4,7 +4,7 @@ var stream = require('readable-stream')
 var delegate = require('delegates')
 var Tracker = require('./tracker.js')
 
-var TrackerStream = module.exports = function (name: string, size: number, options: any) {
+var TrackerStream = module.exports = function (name: string, size: number, options: stream.TransformOptions) {
   stream.Transform.call(this, options)
   this.tracker = new Tracker(name, size)
   this.name = name
@@ -14,12 +14,12 @@ var TrackerStream = module.exports = function (name: string, size: number, optio
 util.inherits(TrackerStream, stream.Transform)
 
 function delegateChange (trackerStream: TrackerStream) {
-  return function (name: string, completion: any, tracker: any) {
+  return function (name: string, completion: number, tracker: Tracker) {
     trackerStream.emit('change', name, completion, trackerStream)
   }
 }
 
-TrackerStream.prototype._transform = function (data: any, encoding: string, cb: Function) {
+TrackerStream.prototype._transform = function (data: Buffer, encoding: string, cb: Function) {
   this.tracker.completeWork(data.length ? data.length : 1)
   this.push(data)
   cb()

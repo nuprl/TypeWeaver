@@ -27,7 +27,7 @@ export default {
 
     EventTarget.mixin(object);
 
-    object.on('finished', function(event: any) {
+    object.on('finished', function(event: Event) {
       // handle event
     });
 
@@ -45,11 +45,11 @@ export default {
     let yehuda = new Person();
     let tom = new Person();
 
-    yehuda.on('poke', function(event: Event) {
+    yehuda.on('poke', function(event: any) {
       console.log('Yehuda says OW');
     });
 
-    tom.on('poke', function(event: any) {
+    tom.on('poke', function(event: string) {
       console.log('Tom says OW');
     });
 
@@ -74,7 +74,7 @@ export default {
     Registers a callback to be executed when `eventName` is triggered
 
     ```javascript
-    object.on('event', function(eventInfo: any){
+    object.on('event', function(eventInfo: EventInfo){
       // handle the event
     });
 

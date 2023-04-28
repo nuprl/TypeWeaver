@@ -15,7 +15,7 @@ var Extensions = function() {
 Extensions.MESSAGE_OPCODES = [1, 2];
 
 var instance = {
-  add: function(ext: string) {
+  add: function(ext: Extension) {
     if (typeof ext.name !== 'string') throw new TypeError('extension.name must be a string');
     if (ext.type !== 'permessage') throw new TypeError('extension.type must be "permessage"');
 
@@ -46,7 +46,7 @@ var instance = {
       var offers = session.generateOffer();
       offers = offers ? [].concat(offers) : [];
 
-      offers.forEach(function(off: number) {
+      offers.forEach(function(off: Object) {
         offer.push(Parser.serializeParams(ext.name, off));
       }, this);
     }, this);
@@ -88,7 +88,7 @@ var instance = {
     this._pipeline = new Pipeline(sessions);
   },
 
-  generateResponse: function(header: any) {
+  generateResponse: function(header: string) {
     var sessions = [],
         response = [],
         offers   = Parser.parseHeader(header);
@@ -111,7 +111,7 @@ var instance = {
     return response.length > 0 ? response.join(', ') : null;
   },
 
-  validFrameRsv: function(frame: number) {
+  validFrameRsv: function(frame: Frame) {
     var allowed = { rsv1: false, rsv2: false, rsv3: false },
         ext;
 
@@ -129,7 +129,7 @@ var instance = {
            (allowed.rsv3 || !frame.rsv3);
   },
 
-  processIncomingMessage: function(message: string, callback: Function, context: any) {
+  processIncomingMessage: function(message: any, callback: Function, context: any) {
     this._pipeline.processIncomingMessage(message, callback, context);
   },
 
@@ -142,13 +142,13 @@ var instance = {
     this._pipeline.close(callback, context);
   },
 
-  _reserve: function(ext: string) {
+  _reserve: function(ext: Extension) {
     this._rsv1 = this._rsv1 || (ext.rsv1 && ext.name);
     this._rsv2 = this._rsv2 || (ext.rsv2 && ext.name);
     this._rsv3 = this._rsv3 || (ext.rsv3 && ext.name);
   },
 
-  _reserved: function(ext: string) {
+  _reserved: function(ext: Extensions) {
     if (this._rsv1 && ext.rsv1) return [1, this._rsv1];
     if (this._rsv2 && ext.rsv2) return [2, this._rsv2];
     if (this._rsv3 && ext.rsv3) return [3, this._rsv3];

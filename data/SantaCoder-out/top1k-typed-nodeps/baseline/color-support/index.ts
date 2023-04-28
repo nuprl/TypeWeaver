@@ -36,7 +36,7 @@ function has16m (obj: any) {
   return obj
 }
 
-function colorSupport (options: any, obj: any) {
+function colorSupport (options: ColorSupportOptions, obj: ColorSupportObject) {
   options = options || {}
 
   obj = obj || {}

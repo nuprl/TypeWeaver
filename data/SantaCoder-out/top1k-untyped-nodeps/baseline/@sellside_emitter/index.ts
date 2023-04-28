@@ -249,7 +249,7 @@ function mixin(target: any) {
   return target;
 }
 
-function copy(target: any, provider: any, keys: string[]) {
+function copy(target: Object, provider: Object, keys: string[]) {
   for (const key of keys) {
     if (typeof provider[key] === 'function') {
       define(target, key, provider[key].bind(provider));

@@ -1,7 +1,7 @@
 import LoaderLoadingError from './LoaderLoadingError';
 var url;
 
-export default function loadLoader(loader: Loader, callback: Function) {
+export default function loadLoader(loader: Loader, callback: any) {
 	if(loader.type === "module") {
 		try {
 			if(url === undefined) url = require("url");
@@ -36,7 +36,7 @@ export default function loadLoader(loader: Loader, callback: Function) {
 	}
 };
 
-function handleResult(loader: LoaderContext, module: Module, callback: Function) {
+function handleResult(loader: Loader, module: any, callback: any) {
 	if(typeof module !== "function" && typeof module !== "object") {
 		return callback(new LoaderLoadingError(
 			"Module '" + loader.path + "' is not a loader (export function or es6 module)"

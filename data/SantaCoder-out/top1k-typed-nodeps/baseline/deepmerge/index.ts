@@ -11,12 +11,12 @@ function cloneUnlessOtherwiseSpecified(value: any, options: any) {
 }
 
 function defaultArrayMerge(target: any[], source: any[], options: any) {
-	return target.concat(source).map(function(element: HTMLElement) {
+	return target.concat(source).map(function(element: any) {
 		return cloneUnlessOtherwiseSpecified(element, options)
 	})
 }
 
-function getMergeFunction(key: string, options: MergeOptions) {
+function getMergeFunction(key: string, options: Options) {
 	if (!options.customMerge) {
 		return deepmerge
 	}
@@ -26,7 +26,7 @@ function getMergeFunction(key: string, options: MergeOptions) {
 
 function getEnumerableOwnPropertySymbols(target: any) {
 	return Object.getOwnPropertySymbols
-		? Object.getOwnPropertySymbols(target).filter(function(symbol: any) {
+		? Object.getOwnPropertySymbols(target).filter(function(symbol: symbol) {
 			return target.propertyIsEnumerable(symbol)
 		})
 		: []
@@ -98,7 +98,7 @@ deepmerge.all = function deepmergeAll(array: any[], options: any) {
 		throw new Error('first argument should be an array')
 	}
 
-	return array.reduce(function(prev: T, next: T) {
+	return array.reduce(function(prev: any, next: any) {
 		return deepmerge(prev, next, options)
 	}, {})
 }

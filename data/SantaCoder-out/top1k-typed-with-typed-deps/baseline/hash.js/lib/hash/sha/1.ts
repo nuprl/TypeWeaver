@@ -34,7 +34,7 @@ SHA1.outSize = 160;
 SHA1.hmacStrength = 80;
 SHA1.padLength = 64;
 
-SHA1.prototype._update = function _update(msg: any, start: number) {
+SHA1.prototype._update = function _update(msg: Uint8Array, start: number) {
   var W = this.W;
 
   for (var i = 0; i < 16; i++)

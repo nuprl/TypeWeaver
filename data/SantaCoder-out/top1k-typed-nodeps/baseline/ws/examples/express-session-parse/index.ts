@@ -58,7 +58,7 @@ const server = http.createServer(app);
 //
 const wss = new WebSocketServer({ clientTracking: false, noServer: true });
 
-server.on('upgrade', function (request: http.IncomingMessage, socket: net.Socket, head: Buffer) {
+server.on('upgrade', function (request: IncomingMessage, socket: Socket, head: Buffer) {
   console.log('Parsing session from request...');
 
   sessionParser(request, {}, () => {
@@ -76,7 +76,7 @@ server.on('upgrade', function (request: http.IncomingMessage, socket: net.Socket
   });
 });
 
-wss.on('connection', function (ws: WebSocket, request: http.IncomingMessage) {
+wss.on('connection', function (ws: WebSocket, request: IncomingMessage) {
   const userId = request.session.userId;
 
   map.set(userId, ws);

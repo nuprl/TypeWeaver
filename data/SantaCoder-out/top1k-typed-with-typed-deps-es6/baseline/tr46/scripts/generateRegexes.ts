@@ -26,7 +26,7 @@ const cp = {
 };
 /* eslint-enable global-require */
 
-function r(strings: TemplateStringsArray, ...regs: RegExp[]) {
+function r(strings: string[], ...regs: RegExp[]) {
   let output = "";
   for (const [i, reg] of regs.entries()) {
     output += strings[i];

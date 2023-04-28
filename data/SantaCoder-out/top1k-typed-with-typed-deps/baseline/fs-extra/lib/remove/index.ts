@@ -4,7 +4,7 @@ const fs = require('graceful-fs')
 const u = require('universalify').fromCallback
 const rimraf = require('./rimraf')
 
-function remove (path: string, callback: any) {
+function remove (path: string, callback: Function) {
   // Node 14.14.0+
   if (fs.rm) return fs.rm(path, { recursive: true, force: true }, callback)
   rimraf(path, callback)

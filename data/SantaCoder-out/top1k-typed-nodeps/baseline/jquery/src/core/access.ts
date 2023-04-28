@@ -3,7 +3,7 @@ import toType from "../core/toType.js";
 
 // Multifunctional method to get and set values of a collection
 // The value/s can optionally be executed if it's a function
-var access = function( elems: any, fn: any, key: any, value: any, chainable: any, emptyGet: any, raw : any) {
+var access = function( elems: Element[], fn: Function, key: any, value: any, chainable: any, emptyGet: any, raw : any) {
 	var i = 0,
 		len = elems.length,
 		bulk = key == null;
@@ -33,7 +33,7 @@ var access = function( elems: any, fn: any, key: any, value: any, chainable: any
 			// ...except when executing function values
 			} else {
 				bulk = fn;
-				fn = function( elem: HTMLElement, _key: string, value : any) {
+				fn = function( elem: Element, _key: string, value : any) {
 					return bulk.call( jQuery( elem ), value );
 				};
 			}

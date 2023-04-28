@@ -46,7 +46,7 @@ import UseFilePlugin from './UseFilePlugin';
 /** @typedef {string|string[]|false} AliasOptionNewRequest */
 /** @typedef {{[k: string]: AliasOptionNewRequest}} AliasOptions */
 /** @typedef {{[k: string]: string|string[] }} ExtensionAliasOptions */
-/** @typedef {{apply: function(Resolver): void} | function(this: Resolver: void, Resolver: void): void} Plugin */
+/** @typedef {{apply: function(Resolver): void} | function(this: Resolver: void, Resolver: Resolver): void} Plugin */
 
 /**
  * @typedef {Object} UserResolveOptions
@@ -115,7 +115,7 @@ import UseFilePlugin from './UseFilePlugin';
  * @param {PnpApi | null=} option option
  * @returns {PnpApi | null} processed option
  */
-function processPnpApiOption(option: string) {
+function processPnpApiOption(option: AliasOptions) {
 	if (
 		option === undefined &&
 		/** @type {NodeJS.ProcessVersions & {pnp: string}} */ versions.pnp
@@ -131,7 +131,7 @@ function processPnpApiOption(option: string) {
  * @param {AliasOptions | AliasOptionEntry[] | undefined} alias alias
  * @returns {AliasOptionEntry[]} normalized aliases
  */
-function normalizeAlias(alias: string) {
+function normalizeAlias(alias: AliasOption) {
 	return typeof alias === "object" && !Array.isArray(alias) && alias !== null
 		? Object.keys(alias).map(key => {
 				/** @type {AliasOptionEntry} */
@@ -151,7 +151,7 @@ function normalizeAlias(alias: string) {
  * @param {UserResolveOptions} options input options
  * @returns {ResolveOptions} output options
  */
-function createOptions(options: any) {
+function createOptions(options: Options) {
 	const mainFieldsSet = new Set(options.mainFields || ["main"]);
 	const mainFields = [];
 
@@ -249,7 +249,7 @@ function createOptions(options: any) {
  * @param {UserResolveOptions} options resolve options
  * @returns {Resolver} created resolver
  */
-export const createResolver = function (options: any) {
+export const createResolver = function (options: AliasOptions) {
 	const normalizedOptions = createOptions(options);
 
 	const {
@@ -659,7 +659,7 @@ export const createResolver = function (options: any) {
  * @param {function(string: string): boolean} filter predicate
  * @returns {Array<string | string[]>} merge result
  */
-function mergeFilteredToArray(array: any[], filter: any) {
+function mergeFilteredToArray(array: Array<string>, filter: any) {
 	/** @type {Array<string | string[]>} */
 	const result = [];
 	const set = new Set(array);

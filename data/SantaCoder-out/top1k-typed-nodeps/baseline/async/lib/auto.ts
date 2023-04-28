@@ -55,16 +55,16 @@ import { promiseCallback, PROMISE_SYMBOL } from './internal/promiseCallback.js'
  *         // this is run at the same time as getting the data
  *         callback(null, 'folder');
  *     },
- *     write_file: ['get_data', 'make_folder', function(results: any, callback: Function) {
+ *     write_file: ['get_data', 'make_folder', function(results: any, callback: any) {
  *         // once there is some data and the directory exists,
  *         // write the data to a file in the directory
  *         callback(null, 'filename');
  *     }],
- *     email_link: ['write_file', function(results: any, callback: any) {
+ *     email_link: ['write_file', function(results: any, callback: Function) {
  *         // once the file is written let's email a link to it...
  *         callback(null, {'file':results.write_file, 'email':'user@example.com'});
  *     }]
- * }, function(err: Error, results: any) {
+ * }, function(err: any, results: any) {
  *     if (err) {
  *         console.log('err = ', err);
  *     }
@@ -79,12 +79,12 @@ import { promiseCallback, PROMISE_SYMBOL } from './internal/promiseCallback.js'
  *
  * //Using Promises
  * async.auto({
- *     get_data: function(callback: any) {
+ *     get_data: function(callback: Function) {
  *         console.log('in get_data');
  *         // async code to get some data
  *         callback(null, 'data', 'converted to array');
  *     },
- *     make_folder: function(callback: Function) {
+ *     make_folder: function(callback: any) {
  *         console.log('in make_folder');
  *         // async code to create a directory to store a file in
  *         // this is run at the same time as getting the data
@@ -214,7 +214,7 @@ export default function auto(tasks: any, concurrency: number, callback: any) {
     checkForDeadlocks();
     processQueue();
 
-    function enqueueTask(key: string, task: Task) {
+    function enqueueTask(key: string, task: Task<T>) {
         readyTasks.push(() => runTask(key, task));
     }
 

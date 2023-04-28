@@ -22,7 +22,7 @@ import baseUpdate from './.internal/baseUpdate.js'
  * updateWith(object, '[0][1]', () => 'a', Object)
  * // => { '0': { '1': 'a' } }
  */
-function updateWith(object: any, path: any, updater: any, customizer: any) {
+function updateWith(object: any, path: any[], updater: any, customizer: any) {
   customizer = typeof customizer === 'function' ? customizer : undefined
   return object == null ? object : baseUpdate(object, path, updater, customizer)
 }

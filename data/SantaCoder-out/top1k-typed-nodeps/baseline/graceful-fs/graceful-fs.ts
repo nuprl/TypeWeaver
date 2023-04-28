@@ -21,7 +21,7 @@ if (typeof Symbol === 'function' && typeof Symbol.for === 'function') {
 
 function noop () {}
 
-function publishQueue(context: Context, queue: Queue) {
+function publishQueue(context: any, queue: any) {
   Object.defineProperty(context, gracefulQueue, {
     get: function() {
       return queue
@@ -50,7 +50,7 @@ if (!fs[gracefulQueue]) {
   // This is essential when multiple graceful-fs instances are
   // in play at the same time.
   fs.close = (function (fs$close: any) {
-    function close (fd: number, cb: any) {
+    function close (fd: number, cb: Function) {
       return fs$close.call(fs, fd, function (err: any) {
         // This function uses the graceful-fs shared queue
         if (!err) {
@@ -68,7 +68,7 @@ if (!fs[gracefulQueue]) {
     return close
   })(fs.close)
 
-  fs.closeSync = (function (fs$closeSync: any) {
+  fs.closeSync = (function (fs$closeSync: Function) {
     function closeSync (fd: number) {
       // This function uses the graceful-fs shared queue
       fs$closeSync.apply(fs, arguments)
@@ -114,7 +114,7 @@ function patch (fs: any) {
 
     return go$readFile(path, options, cb)
 
-    function go$readFile (path: string, options: any, cb: any, startTime: any) {
+    function go$readFile (path: string, options: any, cb: Function, startTime: number) {
       return fs$readFile(path, options, function (err: any) {
         if (err && (err.code === 'EMFILE' || err.code === 'ENFILE'))
           enqueue([go$readFile, [path, options, cb], err, startTime || Date.now(), Date.now()])
@@ -128,13 +128,13 @@ function patch (fs: any) {
 
   var fs$writeFile = fs.writeFile
   fs.writeFile = writeFile
-  function writeFile (path: string, data: string, options: Object, cb: Function) {
+  function writeFile (path: string, data: any, options: any, cb: any) {
     if (typeof options === 'function')
       cb = options, options = null
 
     return go$writeFile(path, data, options, cb)
 
-    function go$writeFile (path: string, data: string, options: any, cb: any, startTime: any) {
+    function go$writeFile (path: string, data: any, options: any, cb: any, startTime: any) {
       return fs$writeFile(path, data, options, function (err: any) {
         if (err && (err.code === 'EMFILE' || err.code === 'ENFILE'))
           enqueue([go$writeFile, [path, data, options, cb], err, startTime || Date.now(), Date.now()])
@@ -149,13 +149,13 @@ function patch (fs: any) {
   var fs$appendFile = fs.appendFile
   if (fs$appendFile)
     fs.appendFile = appendFile
-  function appendFile (path: string, data: string, options: any, cb: Function) {
+  function appendFile (path: string, data: any, options: any, cb: Function) {
     if (typeof options === 'function')
       cb = options, options = null
 
     return go$appendFile(path, data, options, cb)
 
-    function go$appendFile (path: string, data: string, options: any, cb: Function, startTime: number) {
+    function go$appendFile (path: string, data: any, options: any, cb: any, startTime: any) {
       return fs$appendFile(path, data, options, function (err: any) {
         if (err && (err.code === 'EMFILE' || err.code === 'ENFILE'))
           enqueue([go$appendFile, [path, data, options, cb], err, startTime || Date.now(), Date.now()])
@@ -177,7 +177,7 @@ function patch (fs: any) {
     }
     return go$copyFile(src, dest, flags, cb)
 
-    function go$copyFile (src: string, dest: string, flags: number, cb: any, startTime: number) {
+    function go$copyFile (src: string, dest: string, flags: number, cb: Function, startTime: number) {
       return fs$copyFile(src, dest, flags, function (err: any) {
         if (err && (err.code === 'EMFILE' || err.code === 'ENFILE'))
           enqueue([go$copyFile, [src, dest, flags, cb], err, startTime || Date.now(), Date.now()])
@@ -192,12 +192,12 @@ function patch (fs: any) {
   var fs$readdir = fs.readdir
   fs.readdir = readdir
   var noReaddirOptionVersions = /^v[0-5]\./
-  function readdir (path: string, options: readdir.Options, cb: readdir.Callback) {
+  function readdir (path: string, options: any, cb: Function) {
     if (typeof options === 'function')
       cb = options, options = null
 
     var go$readdir = noReaddirOptionVersions.test(process.version)
-      ? function go$readdir (path: string, options: any, cb: any, startTime: number) {
+      ? function go$readdir (path: string, options: any, cb: Function, startTime: number) {
         return fs$readdir(path, fs$readdirCallback(
           path, options, cb, startTime
         ))
@@ -211,7 +211,7 @@ function patch (fs: any) {
     return go$readdir(path, options, cb)
 
     function fs$readdirCallback (path: string, options: fs$readdirOptions, cb: fs$readdirCallback, startTime: number) {
-      return function (err: any, files: any) {
+      return function (err: any, files: string[]) {
         if (err && (err.code === 'EMFILE' || err.code === 'ENFILE'))
           enqueue([
             go$readdir,
@@ -294,7 +294,7 @@ function patch (fs: any) {
     configurable: true
   })
 
-  function ReadStream (path: string, options: ReadStreamOptions) {
+  function ReadStream (path: string, options: Object) {
     if (this instanceof ReadStream)
       return fs$ReadStream.apply(this, arguments), this
     else
@@ -317,7 +317,7 @@ function patch (fs: any) {
     })
   }
 
-  function WriteStream (path: string, options: any) {
+  function WriteStream (path: string, options: fs$WriteStreamOptions) {
     if (this instanceof WriteStream)
       return fs$WriteStream.apply(this, arguments), this
     else
@@ -326,7 +326,7 @@ function patch (fs: any) {
 
   function WriteStream$open () {
     var that = this
-    open(that.path, that.flags, that.mode, function (err: Error, fd: number) {
+    open(that.path, that.flags, that.mode, function (err: any, fd: any) {
       if (err) {
         that.destroy()
         that.emit('error', err)
@@ -341,20 +341,20 @@ function patch (fs: any) {
     return new fs.ReadStream(path, options)
   }
 
-  function createWriteStream (path: string, options: any) {
+  function createWriteStream (path: string, options: fs.WriteFileOptions) {
     return new fs.WriteStream(path, options)
   }
 
   var fs$open = fs.open
   fs.open = open
-  function open (path: string, flags: number, mode: number, cb: any) {
+  function open (path: string, flags: number, mode: number, cb: Function) {
     if (typeof mode === 'function')
       cb = mode, mode = null
 
     return go$open(path, flags, mode, cb)
 
-    function go$open (path: string, flags: number, mode: number, cb: any, startTime: number) {
-      return fs$open(path, flags, mode, function (err: any, fd: number) {
+    function go$open (path: string, flags: number, mode: number, cb: Function, startTime: number) {
+      return fs$open(path, flags, mode, function (err: any, fd: any) {
         if (err && (err.code === 'EMFILE' || err.code === 'ENFILE'))
           enqueue([go$open, [path, flags, mode, cb], err, startTime || Date.now(), Date.now()])
         else {

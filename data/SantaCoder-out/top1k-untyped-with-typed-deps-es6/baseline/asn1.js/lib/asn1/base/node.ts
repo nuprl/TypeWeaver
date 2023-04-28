@@ -29,7 +29,7 @@ const overrided = [
   '_encodeNull', '_encodeInt', '_encodeBool'
 ];
 
-function Node(enc: string, parent: Node, name: string) {
+function Node(enc: Encoder, parent: Node, name: string) {
   const state = {};
   this._baseState = state;
 
@@ -91,20 +91,20 @@ Node.prototype._wrap = function wrap() {
   }, this);
 };
 
-Node.prototype._init = function init(body: any) {
+Node.prototype._init = function init(body: Function) {
   const state = this._baseState;
 
   assert(state.parent === null);
   body.call(this);
 
   // Filter children
-  state.children = state.children.filter(function(child: State) {
+  state.children = state.children.filter(function(child: Node) {
     return child._baseState.parent === this;
   }, this);
   assert.equal(state.children.length, 1, 'Root node can have only one child');
 };
 
-Node.prototype._useArgs = function useArgs(args: any[]) {
+Node.prototype._useArgs = function useArgs(args: Array<any>) {
   const state = this._baseState;
 
   // Filter children and args
@@ -132,7 +132,7 @@ Node.prototype._useArgs = function useArgs(args: any[]) {
         return arg;
 
       const res = {};
-      Object.keys(arg).forEach(function(key: number) {
+      Object.keys(arg).forEach(function(key: string) {
         if (key == (key | 0))
           key |= 0;
         const value = arg[key];
@@ -172,7 +172,7 @@ tags.forEach(function(tag: string) {
   };
 });
 
-Node.prototype.use = function use(item: any) {
+Node.prototype.use = function use(item: Node) {
   assert(item);
   const state = this._baseState;
 
@@ -247,7 +247,7 @@ Node.prototype.any = function any() {
   return this;
 };
 
-Node.prototype.choice = function choice(obj: any) {
+Node.prototype.choice = function choice(obj: Object) {
   const state = this._baseState;
 
   assert(state.choice === null);
@@ -259,7 +259,7 @@ Node.prototype.choice = function choice(obj: any) {
   return this;
 };
 
-Node.prototype.contains = function contains(item: T) {
+Node.prototype.contains = function contains(item: Node) {
   const state = this._baseState;
 
   assert(state.use === null);
@@ -272,7 +272,7 @@ Node.prototype.contains = function contains(item: T) {
 // Decoding
 //
 
-Node.prototype._decode = function decode(input: Uint8Array, options: Options) {
+Node.prototype._decode = function decode(input: Input, options: DecodeOptions) {
   const state = this._baseState;
 
   // Decode root node
@@ -372,7 +372,7 @@ Node.prototype._decode = function decode(input: Uint8Array, options: Options) {
 
     // Decode children
     if (!state.any && state.choice === null && state.children !== null) {
-      state.children.forEach(function decodeChildren(child: any) {
+      state.children.forEach(function decodeChildren(child: AsnSchema) {
         // NOTE: We are ignoring errors here, to let parser continue with other
         // parts of encoded data
         child._decode(input, options);
@@ -400,7 +400,7 @@ Node.prototype._decode = function decode(input: Uint8Array, options: Options) {
   return result;
 };
 
-Node.prototype._decodeGeneric = function decodeGeneric(tag: number, input: Uint8Array, options: DecodeOptions) {
+Node.prototype._decodeGeneric = function decodeGeneric(tag: string, input: Buffer, options: DecodeOptions) {
   const state = this._baseState;
 
   if (tag === 'seq' || tag === 'set')
@@ -432,7 +432,7 @@ Node.prototype._decodeGeneric = function decodeGeneric(tag: number, input: Uint8
   }
 };
 
-Node.prototype._getUse = function _getUse(entity: any, obj: any) {
+Node.prototype._getUse = function _getUse(entity: Entity, obj: Object) {
 
   const state = this._baseState;
   // Create altered use decoder if implicit is set
@@ -446,7 +446,7 @@ Node.prototype._getUse = function _getUse(entity: any, obj: any) {
   return state.useDecoder;
 };
 
-Node.prototype._decodeChoice = function decodeChoice(input: Uint8Array, options: DecodeOptions) {
+Node.prototype._decodeChoice = function decodeChoice(input: DecodeStream, options: DecodeOptions) {
   const state = this._baseState;
   let result = null;
   let match = false;
@@ -478,11 +478,11 @@ Node.prototype._decodeChoice = function decodeChoice(input: Uint8Array, options:
 // Encoding
 //
 
-Node.prototype._createEncoderBuffer = function createEncoderBuffer(data: Uint8Array) {
+Node.prototype._createEncoderBuffer = function createEncoderBuffer(data: any) {
   return new EncoderBuffer(data, this.reporter);
 };
 
-Node.prototype._encode = function encode(data: any, reporter: any, parent: any) {
+Node.prototype._encode = function encode(data: any, reporter: Reporter, parent: any) {
   const state = this._baseState;
   if (state['default'] !== null && state['default'] === data)
     return;
@@ -497,7 +497,7 @@ Node.prototype._encode = function encode(data: any, reporter: any, parent: any) 
   return result;
 };
 
-Node.prototype._encodeValue = function encode(data: any, reporter: any, parent: any) {
+Node.prototype._encodeValue = function encode(data: any, reporter: Reporter, parent: Node) {
   const state = this._baseState;
 
   // Decode root node
@@ -559,7 +559,7 @@ Node.prototype._encodeValue = function encode(data: any, reporter: any, parent: 
 
       const child = this.clone();
       child._baseState.implicit = null;
-      content = this._createEncoderBuffer(data.map(function(item: T) {
+      content = this._createEncoderBuffer(data.map(function(item: any) {
         const state = this._baseState;
 
         return this._getUse(state.args[0], data)._encode(item, reporter);
@@ -606,7 +606,7 @@ Node.prototype._encodeChoice = function encodeChoice(data: any, reporter: Report
   return node._encode(data.value, reporter);
 };
 
-Node.prototype._encodePrimitive = function encodePrimitive(tag: number, data: any) {
+Node.prototype._encodePrimitive = function encodePrimitive(tag: string, data: any) {
   const state = this._baseState;
 
   if (/str$/.test(tag))

@@ -58,8 +58,8 @@ var encodingFamilies = [
 var encodings = {};
 
 // Add all encodings from encodingFamilies.
-encodingFamilies.forEach(function(family: Family){
-    family.encodings.forEach(function(encoding: string){
+encodingFamilies.forEach(function(family: any){
+    family.encodings.forEach(function(encoding: any){
         if (family.convert)
             encoding = family.convert(encoding);
 
@@ -72,7 +72,7 @@ encodingFamilies.forEach(function(family: Family){
         };
 
         if (encoding.aliases)
-            encoding.aliases.forEach(function(alias: String){
+            encoding.aliases.forEach(function(alias: string){
                 encodings[alias] = encodingName;
             });
     });

@@ -9,8 +9,8 @@ var xmlFile = path.resolve(__dirname, 'shopping.xml')
 import util from 'util';
 import http from 'http';
 
-fs.readFile(xmlFile, function (er: Error, d: any) {
-  http.createServer(function (req: Request, res: Response) {
+fs.readFile(xmlFile, function (er: Error, d: Buffer) {
+  http.createServer(function (req: http.IncomingMessage, res: http.ServerResponse) {
     if (er) throw er
     var xmlstr = d.toString('utf8')
 
@@ -32,7 +32,7 @@ fs.readFile(xmlFile, function (er: Error, d: any) {
       }
     }
 
-    parser.onopentag = function (tag: string) {
+    parser.onopentag = function (tag: Tag) {
       if (tag.name !== 'product' && !product) return
       if (tag.name === 'product') {
         product = tag

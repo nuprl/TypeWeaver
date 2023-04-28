@@ -1,5 +1,5 @@
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require: any,module: any,exports: any){
-var indexOf = function (xs: Array<T>, item: T) {
+var indexOf = function (xs: Array<any>, item: any) {
     if (xs.indexOf) return xs.indexOf(item);
     else for (var i = 0; i < xs.length; i++) {
         if (xs[i] === item) return i;
@@ -15,7 +15,7 @@ var Object_keys = function (obj: any) {
     }
 };
 
-var forEach = function (xs: Array<T>, fn: any) {
+var forEach = function (xs: Array<any>, fn: Function) {
     if (xs.forEach) return xs.forEach(fn)
     else for (var i = 0; i < xs.length; i++) {
         fn(xs[i], i, xs);

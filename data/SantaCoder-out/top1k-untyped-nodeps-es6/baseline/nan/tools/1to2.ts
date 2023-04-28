@@ -188,7 +188,7 @@ for (i = 1, length = groups.length; i < length; i++) {
 }
 
 /* create the master RegExp, whis is the union of all the groups' expressions */
-master = new RegExp(groups.map(function (a: string) { return a[1]; }).join('|'), 'gm');
+master = new RegExp(groups.map(function (a: any) { return a[1]; }).join('|'), 'gm');
 
 /* replacement function for String.replace, receives 21 arguments */
 function replace() {
@@ -391,7 +391,7 @@ function replace() {
 
 /* reads a file, runs replacement and writes it back */
 function processFile(file: string) {
-  fs.readFile(file, {encoding: 'utf8'}, function (err: any, data: any) {
+  fs.readFile(file, {encoding: 'utf8'}, function (err: any, data: string) {
     if (err) {
       throw err;
     }
@@ -407,7 +407,7 @@ function processFile(file: string) {
 
 /* process file names from command line and process the identified files */
 for (i = 2, length = process.argv.length; i < length; i++) {
-  glob(process.argv[i], function (err: Error, matches: string[]) {
+  glob(process.argv[i], function (err: any, matches: string[]) {
     if (err) {
       throw err;
     }

@@ -39,7 +39,7 @@ const getSignalsByNumber = function () {
   return Object.assign({}, ...signalsA)
 }
 
-const getSignalByNumber = function (number: number, signals: number[]) {
+const getSignalByNumber = function (number: number, signals: Signal[]) {
   const signal = findSignalByNumber(number, signals)
 
   if (signal === undefined) {
@@ -62,7 +62,7 @@ const getSignalByNumber = function (number: number, signals: number[]) {
 
 // Several signals might end up sharing the same number because of OS-specific
 // numbers, in which case those prevail.
-const findSignalByNumber = function (number: number, signals: number[]) {
+const findSignalByNumber = function (number: number, signals: Signal[]) {
   const signal = signals.find(({ name }) => constants.signals[name] === number)
 
   if (signal !== undefined) {

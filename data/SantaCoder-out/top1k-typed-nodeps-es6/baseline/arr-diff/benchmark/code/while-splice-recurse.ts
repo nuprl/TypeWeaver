@@ -1,6 +1,6 @@
 'use strict';
 
-export default function diff(arr: any[], arrays: any[][]) {
+export default function diff(arr: any[], arrays: any[]) {
   arrays = [].concat.apply([], [].slice.call(arguments, 1));
   var len = arrays.length;
   for (var i = 0; i < len; i++) {
@@ -9,7 +9,7 @@ export default function diff(arr: any[], arrays: any[][]) {
   return arr;
 };
 
-function remove(arr: Array<any>, ele: any) {
+function remove(arr: any[], ele: any) {
   var idx = arr.indexOf(ele);
   if (idx === -1) {
     return;

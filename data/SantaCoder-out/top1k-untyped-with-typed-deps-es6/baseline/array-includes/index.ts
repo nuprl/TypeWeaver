@@ -12,7 +12,7 @@ import shim from './shim';
 var $slice = callBound('Array.prototype.slice');
 
 /* eslint-disable no-unused-vars */
-var boundShim = function includes(array: Array<any>, searchElement: any) {
+var boundShim = function includes(array: any[], searchElement: any) {
 /* eslint-enable no-unused-vars */
 	RequireObjectCoercible(array);
 	return polyfill(array, $slice(arguments, 1));

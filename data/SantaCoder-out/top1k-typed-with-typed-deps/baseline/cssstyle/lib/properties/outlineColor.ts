@@ -3,7 +3,7 @@
 var parseColor = require('../parsers').parseColor;
 
 module.exports.definition = {
-  set: function(v: T) {
+  set: function(v: string) {
     this._setProperty('outline-color', parseColor(v));
   },
   get: function() {

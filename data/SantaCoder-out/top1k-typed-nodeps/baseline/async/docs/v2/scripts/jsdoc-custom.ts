@@ -80,7 +80,7 @@ $(function initSearchBar() {
         templates: {
             header: '<h3 class="search-bar-header">Issues</h3>'
         }
-    }).on('typeahead:select', function(ev: Event, suggestion: any) {
+    }).on('typeahead:select', function(ev: any, suggestion: any) {
         var host;
         if (location.origin != "null") {
             host = location.origin;

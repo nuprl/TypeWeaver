@@ -18,14 +18,14 @@ function limitRange(min: number, max: number, value: number) {
   return Math.max(min, Math.min(max, value));
 }
 
-function validateRange(min: number, max: number, value: number, minExclusive: number, maxExclusive: number) {
+function validateRange(min: number, max: number, value: number, minExclusive: boolean, maxExclusive: boolean) {
   if (!testRange(min, max, value, minExclusive, maxExclusive)) {
     throw new Error(value + ' is outside of range [' + min + ',' + max + ')');
   }
   return value;
 }
 
-function testRange(min: number, max: number, value: number, minExclusive: number, maxExclusive: number) {
+function testRange(min: number, max: number, value: number, minExclusive: boolean, maxExclusive: boolean) {
   return !(
        value < min ||
        value > max ||
@@ -43,10 +43,10 @@ function curry(min: number, max: number, minExclusive: boolean, maxExclusive: bo
   return {
     wrap: wrapRange.bind(null, min, max),
     limit: limitRange.bind(null, min, max),
-    validate: function(value: string) {
+    validate: function(value: number) {
       return validateRange(min, max, value, minExclusive, maxExclusive);
     },
-    test: function(value: string) {
+    test: function(value: number) {
       return testRange(min, max, value, minExclusive, maxExclusive);
     },
     toString: boundNameFn,

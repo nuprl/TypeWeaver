@@ -37,7 +37,7 @@ var stringifyPrimitive = function(v: any) {
   }
 };
 
-export default function(obj: any, sep: string, eq: string, name: string) {
+export default function(obj: Object, sep: string, eq: string, name: string) {
   sep = sep || '&';
   eq = eq || '=';
   if (obj === null) {
@@ -63,11 +63,11 @@ export default function(obj: any, sep: string, eq: string, name: string) {
          encodeURIComponent(stringifyPrimitive(obj));
 };
 
-var isArray = Array.isArray || function (xs: Array<T>) {
+var isArray = Array.isArray || function (xs: any) {
   return Object.prototype.toString.call(xs) === '[object Array]';
 };
 
-function map (xs: Array<T>, f: any) {
+function map (xs: Array<any>, f: Function) {
   if (xs.map) return xs.map(f);
   var res = [];
   for (var i = 0; i < xs.length; i++) {
@@ -76,7 +76,7 @@ function map (xs: Array<T>, f: any) {
   return res;
 }
 
-var objectKeys = Object.keys || function (obj: Object) {
+var objectKeys = Object.keys || function (obj: any) {
   var res = [];
   for (var key in obj) {
     if (Object.prototype.hasOwnProperty.call(obj, key)) res.push(key);

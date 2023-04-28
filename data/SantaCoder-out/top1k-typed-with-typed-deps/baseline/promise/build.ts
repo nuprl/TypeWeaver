@@ -23,7 +23,7 @@ function fixup(src: string) {
   var ast = acorn.parse(src);
   src = src.split('');
   walk.simple(ast, {
-    MemberExpression: function (node: t.Node) {
+    MemberExpression: function (node: Node) {
       if (node.computed) return;
       if (node.property.type !== 'Identifier') return;
       if (node.property.name[0] !== '_') return;

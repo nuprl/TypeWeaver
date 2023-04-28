@@ -22,7 +22,7 @@ const INFINITY = 1 / 0
  * toString([1, 2, 3])
  * // => '1,2,3'
  */
-function toString(value: any) {
+function toString(value: unknown) {
   if (value == null) {
     return ''
   }

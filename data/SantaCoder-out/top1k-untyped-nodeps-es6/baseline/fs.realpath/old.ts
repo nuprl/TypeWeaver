@@ -49,7 +49,7 @@ function rethrow() {
     }
   }
 
-  function missingCallback(err: Error) {
+  function missingCallback(err: ErrnoException) {
     if (err) {
       if (process.throwDeprecation)
         throw err;  // Forgot a callback but don't know where? Use NODE_DEBUG=fs
@@ -64,7 +64,7 @@ function rethrow() {
   }
 }
 
-function maybeCallback(cb: Function) {
+function maybeCallback(cb: any) {
   return typeof cb === 'function' ? cb : rethrow();
 }
 
@@ -278,7 +278,7 @@ export const realpath = function realpath(p: string, cache: Object, cb: Function
         return gotTarget(null, seenLinks[id], base);
       }
     }
-    fs.stat(base, function(err: Error) {
+    fs.stat(base, function(err: any) {
       if (err) return cb(err);
 
       fs.readlink(base, function(err: any, target: any) {
@@ -288,7 +288,7 @@ export const realpath = function realpath(p: string, cache: Object, cb: Function
     });
   }
 
-  function gotTarget(err: any, target: any, base: any) {
+  function gotTarget(err: any, target: string, base: string) {
     if (err) return cb(err);
 
     var resolvedLink = pathModule.resolve(previous, target);

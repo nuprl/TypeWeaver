@@ -10,7 +10,7 @@ module.exports = state;
  *                                     or `null` to keep them as is
  * @returns {object} - initial state object
  */
-function state(list: any[], sortMethod: string)
+function state(list: Array<any>, sortMethod: any)
 {
   var isNamedList = !Array.isArray(list)
     , initState =

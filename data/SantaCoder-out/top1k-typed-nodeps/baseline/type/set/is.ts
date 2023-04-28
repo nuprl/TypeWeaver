@@ -6,7 +6,7 @@ var isPrototype = require("../prototype/is");
 // still early native implementation (e.g. in FF) predated symbols
 var objectToString = Object.prototype.toString, objectTaggedString = objectToString.call(new Set());
 
-module.exports = function (value: any) {
+module.exports = function (value: unknown) {
 	if (!value) return false;
 
 	// Sanity check (reject objects which do not expose common Set interface)

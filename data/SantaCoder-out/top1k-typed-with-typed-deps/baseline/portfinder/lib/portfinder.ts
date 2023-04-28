@@ -21,7 +21,7 @@ var debugTestPort = debug('portfinder:testPort'),
 
 var internals = {};
 
-internals.testPort = function(options: any, callback: any) {
+internals.testPort = function(options: any, callback: Function) {
   if (!callback) {
     callback = options;
     options = {};
@@ -120,7 +120,7 @@ exports.basePath = '/tmp/portfinder'
 // #### @callback {function} Continuation to respond to when complete.
 // Responds with a unbound port on the current machine.
 //
-exports.getPort = function (options: any, callback: any) {
+exports.getPort = function (options: any, callback: Function) {
   if (!callback) {
     callback = options;
     options = {};
@@ -151,7 +151,7 @@ exports.getPort = function (options: any, callback: any) {
   return _async.eachSeries(exports._defaultHosts, function(host: string, next: Function) {
     debugGetPort("in eachSeries() iteration callback: host is", host);
 
-    return internals.testPort({ host: host, port: options.port }, function(err: Error, port: number) {
+    return internals.testPort({ host: host, port: options.port }, function(err: any, port: number) {
       if (err) {
         debugGetPort("in eachSeries() iteration callback testPort() callback", "with an err:", err.code);
         currentHost = host;
@@ -214,7 +214,7 @@ exports.getPort = function (options: any, callback: any) {
 };
 
 //
-// ### function getPortPromise (options: any)
+// ### function getPortPromise (options: Object)
 // #### @options {Object} Settings to use when finding the necessary port
 // Responds a promise to an unbound port on the current machine.
 //
@@ -227,7 +227,7 @@ exports.getPortPromise = function (options: any) {
     options = {};
   }
   return new Promise(function(resolve: Function, reject: Function) {
-    exports.getPort(options, function(err: Error, port: number) {
+    exports.getPort(options, function(err: any, port: number) {
       if (err) {
         return reject(err);
       }
@@ -237,13 +237,13 @@ exports.getPortPromise = function (options: any) {
 }
 
 //
-// ### function getPorts (count: number, options: any, callback: any)
+// ### function getPorts (count: number, options: Object, callback: Function)
 // #### @count {Number} The number of ports to find
 // #### @options {Object} Settings to use when finding the necessary port
 // #### @callback {function} Continuation to respond to when complete.
 // Responds with an array of unbound ports on the current machine.
 //
-exports.getPorts = function (count: number, options: any, callback: any) {
+exports.getPorts = function (count: number, options: PortOptions, callback: any) {
   if (!callback) {
     callback = options;
     options = {};
@@ -267,13 +267,13 @@ exports.getPorts = function (count: number, options: any, callback: any) {
 };
 
 //
-// ### function getSocket (options: any, callback: any)
+// ### function getSocket (options: Object, callback: Function)
 // #### @options {Object} Settings to use when finding the necessary port
 // #### @callback {function} Continuation to respond to when complete.
 // Responds with a unbound socket using the specified directory and base
 // name on the current machine.
 //
-exports.getSocket = function (options: any, callback: any) {
+exports.getSocket = function (options: any, callback: Function) {
   if (!callback) {
     callback = options;
     options = {};
@@ -334,7 +334,7 @@ exports.getSocket = function (options: any, callback: any) {
   function checkAndTestSocket () {
     var dir = path.dirname(options.path);
 
-    fs.stat(dir, function (err: any, stats: any) {
+    fs.stat(dir, function (err: Error, stats: fs.Stats) {
       if (err || !stats.isDirectory()) {
         return createAndTestSocket(dir);
       }

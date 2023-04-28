@@ -43,7 +43,7 @@ function progressEventReducer(listener: ProgressListener, isDownloadStream: bool
 }
 
 export default function xhrAdapter(config: AxiosRequestConfig) {
-  return new Promise(function dispatchXhrRequest(resolve: Function, reject: Function) {
+  return new Promise(function dispatchXhrRequest(resolve: AxiosPromiseResolve, reject: AxiosPromiseReject) {
     let requestData = config.data;
     const requestHeaders = AxiosHeaders.from(config.headers).normalize();
     const responseType = config.responseType;
@@ -189,7 +189,7 @@ export default function xhrAdapter(config: AxiosRequestConfig) {
 
     // Add headers to the request
     if ('setRequestHeader' in request) {
-      utils.forEach(requestHeaders.toJSON(), function setRequestHeader(val: string, key: string) {
+      utils.forEach(requestHeaders.toJSON(), function setRequestHeader(val: any, key: any) {
         request.setRequestHeader(key, val);
       });
     }

@@ -1,6 +1,6 @@
 var toString = Object.prototype.toString;
 
-module.exports = function(val: string) {
+module.exports = function(val: any) {
   if (val === 'arguments') {
     return kindOf(arguments);
   }

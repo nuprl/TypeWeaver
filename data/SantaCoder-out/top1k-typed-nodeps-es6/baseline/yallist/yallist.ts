@@ -15,7 +15,7 @@ function Yallist (list: Array<any>) {
   self.length = 0
 
   if (list && typeof list.forEach === 'function') {
-    list.forEach(function (item: any) {
+    list.forEach(function (item: T) {
       self.push(item)
     })
   } else if (arguments.length > 0) {
@@ -27,7 +27,7 @@ function Yallist (list: Array<any>) {
   return self
 }
 
-Yallist.prototype.removeNode = function (node: Node) {
+Yallist.prototype.removeNode = function (node: Node<T>) {
   if (node.list !== this) {
     throw new Error('removing node which does not belong to this list')
   }
@@ -186,7 +186,7 @@ Yallist.prototype.getReverse = function (n: number) {
   }
 }
 
-Yallist.prototype.map = function (fn: Function, thisp: any) {
+Yallist.prototype.map = function (fn: any, thisp: any) {
   thisp = thisp || this
   var res = new Yallist()
   for (var walker = this.head; walker !== null;) {
@@ -196,7 +196,7 @@ Yallist.prototype.map = function (fn: Function, thisp: any) {
   return res
 }
 
-Yallist.prototype.mapReverse = function (fn: Function, thisp: any) {
+Yallist.prototype.mapReverse = function (fn: any, thisp: any) {
   thisp = thisp || this
   var res = new Yallist()
   for (var walker = this.tail; walker !== null;) {
@@ -226,7 +226,7 @@ Yallist.prototype.reduce = function (fn: Function, initial: any) {
   return acc
 }
 
-Yallist.prototype.reduceReverse = function (fn: Function, initial: any) {
+Yallist.prototype.reduceReverse = function (fn: any, initial: any) {
   var acc
   var walker = this.tail
   if (arguments.length > 1) {
@@ -364,7 +364,7 @@ Yallist.prototype.reverse = function () {
   return this
 }
 
-function insert (self: Tree, node: Node, value: T) {
+function insert (self: List, node: Node, value: any) {
   var inserted = node === self.head ?
     new Node(value, null, node, self) :
     new Node(value, node, node.next, self)
@@ -381,7 +381,7 @@ function insert (self: Tree, node: Node, value: T) {
   return inserted
 }
 
-function push (self: T, item: T) {
+function push (self: LinkedList, item: any) {
   self.tail = new Node(item, self.tail, null, self)
   if (!self.head) {
     self.head = self.tail
@@ -389,7 +389,7 @@ function push (self: T, item: T) {
   self.length++
 }
 
-function unshift (self: List<T>, item: T) {
+function unshift (self: LinkedList, item: any) {
   self.head = new Node(item, null, self.head, self)
   if (!self.tail) {
     self.tail = self.head

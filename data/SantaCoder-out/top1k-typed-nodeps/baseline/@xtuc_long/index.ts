@@ -303,7 +303,7 @@ Long.fromString = fromString;
  * @returns {!Long}
  * @inner
  */
-function fromValue(val: number, unsigned: boolean) {
+function fromValue(val: LongLike, unsigned: boolean) {
   if (typeof val === 'number')
     return fromNumber(val, unsigned);
   if (typeof val === 'string')
@@ -642,7 +642,7 @@ LongPrototype.isEven = function isEven() {
  * @param {!Long|number|string} other Other value
  * @returns {boolean}
  */
-LongPrototype.equals = function equals(other: any) {
+LongPrototype.equals = function equals(other: Long) {
   if (!isLong(other))
     other = fromValue(other);
   if (this.unsigned !== other.unsigned && (this.high >>> 31) === 1 && (other.high >>> 31) === 1)
@@ -664,7 +664,7 @@ LongPrototype.eq = LongPrototype.equals;
  * @param {!Long|number|string} other Other value
  * @returns {boolean}
  */
-LongPrototype.notEquals = function notEquals(other: T) {
+LongPrototype.notEquals = function notEquals(other: Long|number|string) {
   return !this.eq(/* validates */ other);
 };
 
@@ -690,7 +690,7 @@ LongPrototype.ne = LongPrototype.notEquals;
  * @param {!Long|number|string} other Other value
  * @returns {boolean}
  */
-LongPrototype.lessThan = function lessThan(other: number) {
+LongPrototype.lessThan = function lessThan(other: Long|number|string) {
   return this.comp(/* validates */ other) < 0;
 };
 
@@ -708,7 +708,7 @@ LongPrototype.lt = LongPrototype.lessThan;
  * @param {!Long|number|string} other Other value
  * @returns {boolean}
  */
-LongPrototype.lessThanOrEqual = function lessThanOrEqual(other: number) {
+LongPrototype.lessThanOrEqual = function lessThanOrEqual(other: Long|number|string) {
   return this.comp(/* validates */ other) <= 0;
 };
 
@@ -734,7 +734,7 @@ LongPrototype.le = LongPrototype.lessThanOrEqual;
  * @param {!Long|number|string} other Other value
  * @returns {boolean}
  */
-LongPrototype.greaterThan = function greaterThan(other: number) {
+LongPrototype.greaterThan = function greaterThan(other: Long|number|string) {
   return this.comp(/* validates */ other) > 0;
 };
 
@@ -752,7 +752,7 @@ LongPrototype.gt = LongPrototype.greaterThan;
  * @param {!Long|number|string} other Other value
  * @returns {boolean}
  */
-LongPrototype.greaterThanOrEqual = function greaterThanOrEqual(other: number) {
+LongPrototype.greaterThanOrEqual = function greaterThanOrEqual(other: Long|number|string) {
   return this.comp(/* validates */ other) >= 0;
 };
 
@@ -830,7 +830,7 @@ LongPrototype.neg = LongPrototype.negate;
  * @param {!Long|number|string} addend Addend
  * @returns {!Long} Sum
  */
-LongPrototype.add = function add(addend: Long) {
+LongPrototype.add = function add(addend: Long|number) {
   if (!isLong(addend))
     addend = fromValue(addend);
 
@@ -867,7 +867,7 @@ LongPrototype.add = function add(addend: Long) {
  * @param {!Long|number|string} subtrahend Subtrahend
  * @returns {!Long} Difference
  */
-LongPrototype.subtract = function subtract(subtrahend: Long) {
+LongPrototype.subtract = function subtract(subtrahend: Long|number|string) {
   if (!isLong(subtrahend))
     subtrahend = fromValue(subtrahend);
   return this.add(subtrahend.neg());
@@ -887,7 +887,7 @@ LongPrototype.sub = LongPrototype.subtract;
  * @param {!Long|number|string} multiplier Multiplier
  * @returns {!Long} Product
  */
-LongPrototype.multiply = function multiply(multiplier: BigNumberish) {
+LongPrototype.multiply = function multiply(multiplier: Long) {
   if (this.isZero())
     return this;
   if (!isLong(multiplier))
@@ -1177,7 +1177,7 @@ LongPrototype.ctz = LongPrototype.countTrailingZeros;
  * @param {!Long|number|string} other Other Long
  * @returns {!Long}
  */
-LongPrototype.and = function and(other: Long) {
+LongPrototype.and = function and(other: Long|number|string) {
   if (!isLong(other))
     other = fromValue(other);
   return fromBits(this.low & other.low, this.high & other.high, this.unsigned);
@@ -1189,7 +1189,7 @@ LongPrototype.and = function and(other: Long) {
  * @param {!Long|number|string} other Other Long
  * @returns {!Long}
  */
-LongPrototype.or = function or(other: Long) {
+LongPrototype.or = function or(other: Long|number|string) {
   if (!isLong(other))
     other = fromValue(other);
   return fromBits(this.low | other.low, this.high | other.high, this.unsigned);
@@ -1420,7 +1420,7 @@ LongPrototype.toBytesBE = function toBytesBE() {
  * @param {boolean=} le Whether little or big endian, defaults to big endian
  * @returns {Long} The corresponding Long value
  */
-Long.fromBytes = function fromBytes(bytes: Uint8Array, unsigned: boolean, le: boolean) {
+Long.fromBytes = function fromBytes(bytes: Array<number>, unsigned: boolean, le: boolean) {
   return le ? Long.fromBytesLE(bytes, unsigned) : Long.fromBytesBE(bytes, unsigned);
 };
 
@@ -1430,7 +1430,7 @@ Long.fromBytes = function fromBytes(bytes: Uint8Array, unsigned: boolean, le: bo
  * @param {boolean=} unsigned Whether unsigned or not, defaults to signed
  * @returns {Long} The corresponding Long value
  */
-Long.fromBytesLE = function fromBytesLE(bytes: Uint8Array, unsigned: boolean) {
+Long.fromBytesLE = function fromBytesLE(bytes: Array<number>, unsigned: boolean) {
   return new Long(
     bytes[0] |
     bytes[1] << 8 |

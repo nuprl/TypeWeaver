@@ -33,7 +33,7 @@ var BACKSPACE = String.fromCharCode(127);
 var CTRLC = '\u0003';
 var CTRLD = '\u0004';
 
-function getPass(opts: any, cb: any) {
+function getPass(opts: mod_tty.PassOptions, cb: mod_tty.PassCallback) {
 	if (typeof (opts) === 'function' && cb === undefined) {
 		cb = opts;
 		opts = {};
@@ -103,7 +103,7 @@ function getPass(opts: any, cb: any) {
 }
 
 function openTTY(cb: any) {
-	mod_fs.open('/dev/tty', 'r+', function (err: any, rttyfd: any) {
+	mod_fs.open('/dev/tty', 'r+', function (err: Error, rttyfd: number) {
 		if ((err && (err.code === 'ENOENT' || err.code === 'EACCES')) ||
 		    (process.version.match(/^v0[.][0-8][.]/))) {
 			cb(null, undefined, undefined, process.stdin,

@@ -62,12 +62,12 @@ Negotiator.prototype.languages = function languages(available: string[]) {
   return preferredLanguages(this.request.headers['accept-language'], available);
 };
 
-Negotiator.prototype.mediaType = function mediaType(available: Array<MediaType>) {
+Negotiator.prototype.mediaType = function mediaType(available: string[]) {
   var set = this.mediaTypes(available);
   return set && set[0];
 };
 
-Negotiator.prototype.mediaTypes = function mediaTypes(available: MediaTypes) {
+Negotiator.prototype.mediaTypes = function mediaTypes(available: string[]) {
   return preferredMediaTypes(this.request.headers.accept, available);
 };
 

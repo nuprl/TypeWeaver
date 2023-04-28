@@ -63,7 +63,7 @@
 
   // Ensures that nodes have the correct types.
   var assertTypeRegexMap = {};
-  function assertType(type: string, expected: any) {
+  function assertType(type: string, expected: string) {
     if (expected.indexOf('|') == -1) {
       if (type == expected) {
         return;
@@ -97,7 +97,7 @@
   }
 
   // Constructs a string by concatentating the output of each term.
-  function generateSequence(generator: any, terms: any, /* optional */  separator: string) {
+  function generateSequence(generator: Generator, terms: string[], /* optional */  separator: string) {
     var i = -1,
         length = terms.length,
         result = '',
@@ -162,7 +162,7 @@
     return generate(node);
   }
 
-  function generateCharacterClass(node: Node) {
+  function generateCharacterClass(node: CharacterClass) {
     assertType(node.type, 'characterClass');
 
     var kind = node.kind;
@@ -224,7 +224,7 @@
     return '.';
   }
 
-  function generateGroup(node: Node) {
+  function generateGroup(node: GroupNode) {
     assertType(node.type, 'group');
 
     var result = '';
@@ -265,7 +265,7 @@
     return node.value;
   }
 
-  function generateQuantifier(node: Node) {
+  function generateQuantifier(node: QuantifierNode) {
     assertType(node.type, 'quantifier');
 
     var quantifier = '',
@@ -314,7 +314,7 @@
     return generate(node);
   }
 
-  function generateUnicodePropertyEscape(node: t.Node) {
+  function generateUnicodePropertyEscape(node: UnicodePropertyEscape) {
     assertType(node.type, 'unicodePropertyEscape');
 
     return '\\' + (node.negative ? 'P' : 'p') + '{' + node.value + '}';

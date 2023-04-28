@@ -19,7 +19,7 @@ const COMPARE_UNORDERED_FLAG = 2
  * @param {Object} stack Tracks traversed `array` and `other` objects.
  * @returns {boolean} Returns `true` if the arrays are equivalent, else `false`.
  */
-function equalArrays(array: any[], other: any[], bitmask: boolean, customizer: _.Comparator<T>, equalFunc: _.Comparator<T>, stack: string[]) {
+function equalArrays(array: any[], other: any[], bitmask: number, customizer: Function, equalFunc: Function, stack: Set<any>) {
   const isPartial = bitmask & COMPARE_PARTIAL_FLAG
   const arrLength = array.length
   const othLength = other.length

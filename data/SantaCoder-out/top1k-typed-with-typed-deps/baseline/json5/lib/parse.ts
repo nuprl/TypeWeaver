@@ -683,7 +683,7 @@ const lexStates = {
     },
 }
 
-function newToken (type: string, value: any) {
+function newToken (type: string, value: string) {
     return {
         type,
         value,

@@ -24,19 +24,19 @@ import awaitify from './internal/awaitify.js'
  *
  * var count = 0;
  * async.whilst(
- *     function test(cb: any) { cb(null, count < 5); },
- *     function iter(callback: any) {
+ *     function test(cb: Function) { cb(null, count < 5); },
+ *     function iter(callback: Function) {
  *         count++;
  *         setTimeout(function() {
  *             callback(null, count);
  *         }, 1000);
  *     },
- *     function (err: Error, n: number) {
+ *     function (err: any, n: number) {
  *         // 5 seconds have passed, n = 5
  *     }
  * );
  */
-function whilst(test: Function, iteratee: Function, callback: Function) {
+function whilst(test: AsyncFunction, iteratee: AsyncFunction, callback: AsyncFunction) {
     callback = onlyOnce(callback);
     var _fn = wrapAsync(iteratee);
     var _test = wrapAsync(test);

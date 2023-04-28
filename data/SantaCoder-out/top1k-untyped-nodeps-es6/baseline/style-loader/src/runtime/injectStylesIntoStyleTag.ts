@@ -13,7 +13,7 @@ function getIndexByIdentifier(identifier: string) {
   return result;
 }
 
-function modulesToDom(list: Module[], options: Options) {
+function modulesToDom(list: Array<Module>, options: Options) {
   const idCountMap = {};
   const identifiers = [];
 
@@ -55,7 +55,7 @@ function modulesToDom(list: Module[], options: Options) {
   return identifiers;
 }
 
-function addElementStyle(obj: HTMLElement, options: ElementStyleOptions) {
+function addElementStyle(obj: Object, options: Options) {
   const api = options.domAPI(options);
 
   api.update(obj);
@@ -88,7 +88,7 @@ export default (list, options) => {
 
   let lastIdentifiers = modulesToDom(list, options);
 
-  return function update(newList: any[]) {
+  return function update(newList: Module[]) {
     newList = newList || [];
 
     for (let i = 0; i < lastIdentifiers.length; i++) {

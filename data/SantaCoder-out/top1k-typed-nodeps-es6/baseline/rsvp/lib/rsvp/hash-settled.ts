@@ -43,7 +43,7 @@ HashSettled.prototype._setResultAt = setSettledResult;
     notAPromise: 4
   };
 
-  hashSettled(promises).then(function(hash: any){
+  hashSettled(promises).then(function(hash: Hash<Promise<number>>){
     // hash here is an object that looks like:
     // {
     //   myPromise: { state: 'fulfilled', value: 1 },
@@ -68,7 +68,7 @@ HashSettled.prototype._setResultAt = setSettledResult;
     anotherRejectedPromise: reject(new Error('more rejection')),
   };
 
-  hashSettled(promises).then(function(hash: any){
+  hashSettled(promises).then(function(hash: Object){
     // hash here is an object that looks like:
     // {
     //   myPromise:              { state: 'fulfilled', value: 1 },
@@ -99,7 +99,7 @@ HashSettled.prototype._setResultAt = setSettledResult;
 
   let myObject = new MyConstructor();
 
-  hashSettled(myObject).then(function(hash: String){
+  hashSettled(myObject).then(function(hash: Object){
     // protoProperty will not be present, instead you will just have an
     // object that looks like:
     // {

@@ -42,7 +42,7 @@ let __;
  */
 let __loc;
 
-function yyloc(start: any, end: any) {
+function yyloc(start: Location, end: Location) {
   if (!yy.options.captureLocations) {
     return null;
   }
@@ -911,7 +911,7 @@ function getRange(text: string) {
 /**
  * Checks class range
  */
-function checkClassRange(from: number, to: number) {
+function checkClassRange(from: CharClassElement, to: CharClassElement) {
   if (from.kind === 'control' || to.kind === 'control' || (!isNaN(from.codePoint) && !isNaN(to.codePoint) && from.codePoint > to.codePoint)) {
     throw new SyntaxError(`Range ${from.value}-${to.value} out of order in character class`);
   }
@@ -924,7 +924,7 @@ import unicodeProperties from '../unicode/parser-unicode-properties.js';
 /**
  * Unicode property.
  */
-function UnicodeProperty(matched: string, loc: Location) {
+function UnicodeProperty(matched: string, loc: SourceLocation) {
   const negative = matched[1] === 'P';
   const separatorIdx = matched.indexOf('=');
 
@@ -974,7 +974,7 @@ function UnicodeProperty(matched: string, loc: Location) {
 /**
  * Creates a character node.
  */
-function Char(value: string, kind: string, loc: SourceLocation) {
+function Char(value: string, kind: CharKind, loc: SourceLocation) {
   let symbol;
   let codePoint;
 
@@ -1072,7 +1072,7 @@ const validFlags = 'gimsuxy';
  * Checks the flags are valid, and that
  * we don't duplicate flags.
  */
-function checkFlags(flags: string[]) {
+function checkFlags(flags: string) {
   const seen = new Set();
 
   for (const flag of flags) {
@@ -1089,7 +1089,7 @@ function checkFlags(flags: string[]) {
  * Parses patterns like \1, \2, etc. either as a backreference
  * to a group, or a deciaml char code.
  */
-function GroupRefOrDecChar(text: string, textLoc: number) {
+function GroupRefOrDecChar(text: string, textLoc: Location) {
   const reference = Number(text.slice(1));
 
   if (reference > 0 && reference <= capturingGroupsCount) {
@@ -1114,7 +1114,7 @@ const ucpReAnywhere = /\\u\{[0-9a-fA-F]{1,}\}/; // matches anywhere in string
 /**
  * Validates Unicode group name.
  */
-function validateUnicodeGroupName(name: string, state: State) {
+function validateUnicodeGroupName(name: string, state: string) {
   const isUnicodeName = ucpReAnywhere.test(name);
   const isUnicodeState = (state === 'u' || state === 'xu' || state === 'u_class');
 
@@ -1149,7 +1149,7 @@ function validateUnicodeGroupName(name: string, state: State) {
 const uidRe = /\\u(?:([dD][89aAbB][0-9a-fA-F]{2})\\u([dD][c-fC-F][0-9a-fA-F]{2})|([dD][89aAbB][0-9a-fA-F]{2})|([dD][c-fC-F][0-9a-fA-F]{2})|([0-9a-ce-fA-CE-F][0-9a-fA-F]{3}|[dD][0-7][0-9a-fA-F]{2})|\{(0*(?:[0-9a-fA-F]{1,5}|10[0-9a-fA-F]{4}))\})/;
 
 function decodeUnicodeGroupName(name: string) {
-  return name.replace(new RegExp(uidRe, 'g'), function (_: number, leadSurrogate: number, trailSurrogate: number, leadSurrogateOnly: boolean, trailSurrogateOnly: boolean, nonSurrogate: boolean, codePoint: number) {
+  return name.replace(new RegExp(uidRe, 'g'), function (_: string, leadSurrogate: string, trailSurrogate: string, leadSurrogateOnly: string, trailSurrogateOnly: string, nonSurrogate: string, codePoint: string) {
     if (leadSurrogate) {
       return String.fromCodePoint(parseInt(leadSurrogate, 16), parseInt(trailSurrogate, 16));
     }
@@ -1296,7 +1296,7 @@ function Node(node: Node, loc: Location) {
 /**
  * Creates location node.
  */
-function loc(start: number, end: number) {
+function loc(start: Position, end: Position) {
   if (!yy.options.captureLocations) {
     return null;
   }

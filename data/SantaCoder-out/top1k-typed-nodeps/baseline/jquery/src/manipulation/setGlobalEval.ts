@@ -1,7 +1,7 @@
 import dataPriv from "../data/var/dataPriv.js";
 
 // Mark scripts as having already been evaluated
-function setGlobalEval( elems: any[], refElements : any[]) {
+function setGlobalEval( elems: JQuery, refElements : JQuery[]) {
 	var i = 0,
 		l = elems.length;
 

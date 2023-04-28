@@ -18,17 +18,17 @@
     typed = require('./typed');
     utility = require('./utility');
 
-    function sliceSource(source: string, index: number, last: number) {
+    function sliceSource(source: any[], index: number, last: number) {
         return source.slice(index, last);
     }
 
     hasOwnProperty = (function () {
         var func = Object.prototype.hasOwnProperty;
-        return function hasOwnProperty(obj: Object, name: string) {
+        return function hasOwnProperty(obj: any, name: string) {
             return func.call(obj, name);
         };
     }());
-    function shallowCopy(obj: Object) {
+    function shallowCopy(obj: any) {
         var ret = {}, key;
         for (key in obj) {
             if (obj.hasOwnProperty(key)) {
@@ -38,7 +38,7 @@
         return ret;
     }
 
-    function isASCIIAlphanumeric(ch: string) {
+    function isASCIIAlphanumeric(ch: number) {
         return (ch >= 0x61  /* 'a' */ && ch <= 0x7A  /* 'z' */) ||
             (ch >= 0x41  /* 'A' */ && ch <= 0x5A  /* 'Z' */) ||
             (ch >= 0x30  /* '0' */ && ch <= 0x39  /* '9' */);
@@ -193,7 +193,7 @@
         // { { ok: string } }
         //
         // therefore, scanning type expression with balancing braces.
-        function parseType(title: string, last: boolean, addRange: boolean) {
+        function parseType(title: string, last: number, addRange: boolean) {
             var ch, brace, type, startIndex, direct = false;
 
 
@@ -253,7 +253,7 @@
             return typed.parseType(type, {startIndex: convertIndex(startIndex), range: addRange});
         }
 
-        function scanIdentifier(last: string) {
+        function scanIdentifier(last: number) {
             var identifier;
             if (!esutils.code.isIdentifierStartES5(source.charCodeAt(index)) && !source[index].match(/[0-9]/)) {
                 return null;
@@ -265,13 +265,13 @@
             return identifier;
         }
 
-        function skipWhiteSpace(last: string) {
+        function skipWhiteSpace(last: number) {
             while (index < last && (esutils.code.isWhiteSpace(source.charCodeAt(index)) || esutils.code.isLineTerminator(source.charCodeAt(index)))) {
                 advance();
             }
         }
 
-        function parseName(last: string, allowBrackets: boolean, allowNestedParams: boolean) {
+        function parseName(last: number, allowBrackets: boolean, allowNestedParams: boolean) {
             var name = '',
                 useBrackets,
                 insideString;
@@ -468,7 +468,7 @@
             return true;
         };
 
-        TagParser.prototype._parseNamePath = function (optional: string) {
+        TagParser.prototype._parseNamePath = function (optional: boolean) {
             var name;
             name = parseName(this._last, sloppy && isAllowedOptional(this._title), true);
             if (!name) {
@@ -773,7 +773,7 @@
             return this._tag;
         };
 
-        function parseTag(options: any) {
+        function parseTag(options: Options) {
             var title, parser, tag;
 
             // skip to tag
@@ -823,7 +823,7 @@
             return preserveWhitespace ? description : description.trim();
         }
 
-        function parse(comment: string, options: Options) {
+        function parse(comment: string, options: CommentParserOptions) {
             var tags = [], tag, description, interestingTags, i, iz;
 
             if (options === undefined) {

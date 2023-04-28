@@ -45,8 +45,8 @@ import awaitify from './internal/awaitify.js'
  *
  * // asynchronous function that computes the file size in bytes
  * // file size is added to the memoized value, then returned
- * function getFileSizeInBytes(memo: any, file: any, callback: any) {
- *     fs.stat(file, function(err: Error, stat: Stats) {
+ * function getFileSizeInBytes(memo: number, file: string, callback: any) {
+ *     fs.stat(file, function(err: any, stat: any) {
  *         if (err) {
  *             return callback(err);
  *         }
@@ -66,7 +66,7 @@ import awaitify from './internal/awaitify.js'
  * });
  *
  * // Error Handling
- * async.reduce(withMissingFileList, 0, getFileSizeInBytes, function(err: Error, result: any) {
+ * async.reduce(withMissingFileList, 0, getFileSizeInBytes, function(err: Error, result: number) {
  *     if (err) {
  *         console.log(err);
  *         // [ Error: ENOENT: no such file or directory ]

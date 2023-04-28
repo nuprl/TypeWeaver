@@ -7,7 +7,7 @@ function makeException(ErrorType: any, message: string, options: any) {
   return new ErrorType(`${options.context ? options.context : "Value"} ${message}.`);
 }
 
-function toNumber(value: any, options: any) {
+function toNumber(value: any, options: Options) {
   if (typeof value === "bigint") {
     throw makeException(TypeError, "is a BigInt which cannot be converted to a number", options);
   }
@@ -326,7 +326,7 @@ function isSharedArrayBuffer(value: unknown) {
   }
 }
 
-function isArrayBufferDetached(value: any) {
+function isArrayBufferDetached(value: ArrayBuffer) {
   try {
     // eslint-disable-next-line no-new
     new Uint8Array(value);

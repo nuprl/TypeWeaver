@@ -21,7 +21,7 @@ export default first;
  * @public
  */
 
-function first (stuff: any, done: Function) {
+function first (stuff: Array<any>, done: Function) {
   if (!Array.isArray(stuff)) {
     throw new TypeError('arg must be an array of [ee, events...] arrays')
   }
@@ -79,7 +79,7 @@ function first (stuff: any, done: Function) {
  * @private
  */
 
-function listener (event: any, done: any) {
+function listener (event: string, done: DoneFn) {
   return function onevent (arg1: any) {
     var args = new Array(arguments.length)
     var ee = this

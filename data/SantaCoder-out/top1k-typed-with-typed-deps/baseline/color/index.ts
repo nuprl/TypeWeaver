@@ -19,7 +19,7 @@ for (const model of Object.keys(convert)) {
 
 const limiters = {};
 
-function Color(object: any, model: any) {
+function Color(object: ColorInput, model: string) {
 	if (!(this instanceof Color)) {
 		return new Color(object, model);
 	}
@@ -422,7 +422,7 @@ for (const model of Object.keys(convert)) {
 	};
 
 	// 'static' construction methods
-	Color[model] = function (...args: any[]) {
+	Color[model] = function (...args: number[]) {
 		let color = args[0];
 		if (typeof color === 'number') {
 			color = zeroArray(args, channels);
@@ -442,7 +442,7 @@ function roundToPlace(places: number) {
 	};
 }
 
-function getset(model: Model, channel: string, modifier: string) {
+function getset(model: string, channel: string, modifier: any) {
 	model = Array.isArray(model) ? model : [model];
 
 	for (const m of model) {
@@ -451,7 +451,7 @@ function getset(model: Model, channel: string, modifier: string) {
 
 	model = model[0];
 
-	return function (value: any) {
+	return function (value: number) {
 		let result;
 
 		if (value !== undefined) {
@@ -483,7 +483,7 @@ function assertArray(value: any) {
 	return Array.isArray(value) ? value : [value];
 }
 
-function zeroArray(array: any[], length: number) {
+function zeroArray(array: number[], length: number) {
 	for (let i = 0; i < length; i++) {
 		if (typeof array[i] !== 'number') {
 			array[i] = 0;

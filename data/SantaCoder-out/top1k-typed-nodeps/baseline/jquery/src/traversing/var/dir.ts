@@ -1,6 +1,6 @@
 import jQuery from "../../core.js";
 
-export default function( elem: HTMLElement, dir: string, until : HTMLElement) {
+export default function( elem: HTMLElement, dir: string, until : string) {
 	var matched = [],
 		truncate = until !== undefined;
 

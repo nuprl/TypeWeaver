@@ -56,7 +56,7 @@ var runAsync = function (func: Function, cb: Function) {
             console.warn('Run-async wrapped function (async: Function) returned a promise.\nCalls to async() callback can have unexpected results.');
           }
           usingCallback = true;
-          return function (err: Error, value: any) {
+          return function (err: any, value: any) {
             if (err) {
               wrappedReject(err);
             } else {

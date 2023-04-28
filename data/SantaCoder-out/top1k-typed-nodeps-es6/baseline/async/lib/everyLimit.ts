@@ -23,7 +23,7 @@ import awaitify from './internal/awaitify.js'
  * depending on the values of the async tests. Invoked with (err, result).
  * @returns {Promise} a promise, if no callback provided
  */
-function everyLimit(coll: any[], limit: number, iteratee: any, callback: any) {
+function everyLimit(coll: any[], limit: number, iteratee: Function, callback: Function) {
     return createTester(bool => !bool, res => !res)(eachOfLimit(limit), coll, iteratee, callback)
 }
 export default awaitify(everyLimit, 4);

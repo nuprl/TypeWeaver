@@ -51,7 +51,7 @@ function e() {
  *
  * [in-a] --a--> [out-a] --ε--> [in-b] --b--> [out-b]
  */
-function altPair(first: Pair, second: Pair) {
+function altPair(first: NFA, second: NFA) {
   first.out.accepting = false;
   second.out.accepting = true;
 
@@ -65,7 +65,7 @@ function altPair(first: Pair, second: Pair) {
  *
  * Creates a alteration NFA for (at least) two NFA-fragments.
  */
-function alt(first: string, ...fragments: string[]) {
+function alt(first: NFAFragment, ...fragments: NFAFragment[]) {
   for (let fragment of fragments) {
     first = altPair(first, fragment);
   }
@@ -100,7 +100,7 @@ function orPair(first: NFAState, second: NFAState) {
  *
  * Creates a disjunction NFA for (at least) two NFA-fragments.
  */
-function or(first: Function, ...fragments: Function[]) {
+function or(first: NFAState, ...fragments: NFAState[]) {
   for (let fragment of fragments) {
     first = orPair(first, fragment);
   }
@@ -115,7 +115,7 @@ function or(first: Function, ...fragments: Function[]) {
  *
  * a*
  */
-function repExplicit(fragment: Fragment) {
+function repExplicit(fragment: NFAFragment) {
   const inState = new NFAState();
   const outState = new NFAState({
     accepting: true,
@@ -136,7 +136,7 @@ function repExplicit(fragment: Fragment) {
  * Optimized Kleene-star: just adds ε-transitions from
  * input to the output, and back.
  */
-function rep(fragment: string) {
+function rep(fragment: Fragment) {
   fragment.in.addTransition(EPSILON, fragment.out);
   fragment.out.addTransition(EPSILON, fragment.in);
   return fragment;
@@ -146,7 +146,7 @@ function rep(fragment: string) {
  * Optimized Plus: just adds ε-transitions from
  * the output to the input.
  */
-function plusRep(fragment: string) {
+function plusRep(fragment: Fragment) {
   fragment.out.addTransition(EPSILON, fragment.in);
   return fragment;
 }
@@ -155,7 +155,7 @@ function plusRep(fragment: string) {
  * Optimized ? repetition: just adds ε-transitions from
  * the input to the output.
  */
-function questionRep(fragment: string) {
+function questionRep(fragment: Fragment) {
   fragment.in.addTransition(EPSILON, fragment.out);
   return fragment;
 }

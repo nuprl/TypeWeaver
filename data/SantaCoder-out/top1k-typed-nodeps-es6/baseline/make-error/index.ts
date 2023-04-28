@@ -92,7 +92,7 @@ var setFunctionName = (function () {
 
 // -------------------------------------------------------------------
 
-function makeError(constructor: Function, super_: Function) {
+function makeError(constructor: string, super_: Function) {
   if (super_ == null || super_ === Error) {
     super_ = BaseError;
   } else if (typeof super_ !== "function") {

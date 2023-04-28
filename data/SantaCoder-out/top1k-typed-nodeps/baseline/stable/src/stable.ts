@@ -1,11 +1,11 @@
 // A stable array sort, because `Array#sort()` is not guaranteed stable.
 // This is an implementation of merge sort, without recursion.
 
-var stable = function (arr: any[], comp: Comparator<any>) {
+var stable = function (arr: any[], comp: any) {
   return exec(arr.slice(), comp)
 }
 
-stable.inplace = function (arr: Array<T>, comp: any) {
+stable.inplace = function (arr: any[], comp: any) {
   var result = exec(arr, comp)
 
   // This simply copies back if the result isn't in the original array,
@@ -48,7 +48,7 @@ function exec(arr: any[], comp: any) {
 }
 
 // Run a single pass with the given chunk size.
-var pass = function (arr: any[], comp: any, chk: any, result: any) {
+var pass = function (arr: any[], comp: any, chk: any, result: any[]) {
   var len = arr.length
   var i = 0
   // Step size / double chunk size.

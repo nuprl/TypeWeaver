@@ -4,7 +4,7 @@
 function reverse(map: any) {
   const res = {};
 
-  Object.keys(map).forEach(function(key: string) {
+  Object.keys(map).forEach(function(key: number) {
     // Convert key to integer if it is stringified
     if ((key | 0) == key)
       key = key | 0;

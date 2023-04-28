@@ -16,7 +16,7 @@
  *
  * async.waterfall([
  *     async.constant(42),
- *     function (value: number, next: Function) {
+ *     function (value: any, next: Function) {
  *         // value === 42
  *     },
  *     //...

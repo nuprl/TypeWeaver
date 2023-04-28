@@ -320,7 +320,7 @@ function parseFunctionArgs(functionArgs: FunctionArgs, count: number, rgb: strin
         args[0].type = 'Angle';
     }
 
-    return args.map(function(arg: any) {
+    return args.map(function(arg: Argument) {
         let value = Math.max(0, arg.value);
 
         switch (arg.type) {

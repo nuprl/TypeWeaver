@@ -15,7 +15,7 @@ import getMatchData from './.internal/getMatchData.js'
  * @returns {boolean} Returns `true` if `object` is a match, else `false`.
  * @example
  *
- * function isGreeting(value: string) {
+ * function isGreeting(value: any) {
  *   return /^h(?:i|ello)$/.test(value)
  * }
  *
@@ -31,7 +31,7 @@ import getMatchData from './.internal/getMatchData.js'
  * isMatchWith(object, source, customizer)
  * // => true
  */
-function isMatchWith(object: any, source: any, customizer: any) {
+function isMatchWith(object: any, source: any, customizer: Function) {
   customizer = typeof customizer === 'function' ? customizer : undefined
   return baseIsMatch(object, source, getMatchData(source), customizer)
 }

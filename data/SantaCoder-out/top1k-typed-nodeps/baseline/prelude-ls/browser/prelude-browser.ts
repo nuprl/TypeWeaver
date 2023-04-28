@@ -16,12 +16,12 @@ curry = function(f: Function){
 flip = curry$(function(f: Function, x: any, y: any){
   return f(y, x);
 });
-fix = function(f: any){
-  return function(g: Graph){
+fix = function(f: Function){
+  return function(g: Function){
     return function(){
       return f(g(g)).apply(null, arguments);
     };
-  }(function(g: Graph){
+  }(function(g: Function){
     return function(){
       return f(g(g)).apply(null, arguments);
     };
@@ -61,7 +61,7 @@ module.exports = {
   over: over,
   memoize: memoize
 };
-function curry$(f: Function, bound: Array){
+function curry$(f: Function, bound: Object){
   var context,
   _curry = function(args: any[]) {
     return f.length > 1 ? function(){
@@ -93,7 +93,7 @@ map = curry$(function(f: Function, xs: Array<any>){
   }
   return results$;
 });
-compact = function(xs: any[]){
+compact = function(xs: Array<any>){
   var i$, len$, x, results$ = [];
   for (i$ = 0, len$ = xs.length; i$ < len$; ++i$) {
     x = xs[i$];
@@ -160,7 +160,7 @@ tail = function(xs: Array<T>){
   }
   return xs.slice(1);
 };
-last = function(xs: number[]){
+last = function(xs: Array<T>){
   return xs[xs.length - 1];
 };
 initial = function(xs: Array<T>){
@@ -169,10 +169,10 @@ initial = function(xs: Array<T>){
   }
   return xs.slice(0, -1);
 };
-empty = function(xs: Array<any>){
+empty = function(xs: Array<T>){
   return !xs.length;
 };
-reverse = function(xs: Array<T>){
+reverse = function(xs: Array<any>){
   return xs.concat().reverse();
 };
 unique = function(xs: Array<T>){
@@ -232,10 +232,10 @@ unfoldr = curry$(function(f: any, b: any){
   }
   return result;
 });
-concat = function(xss: any[][]){
+concat = function(xss: any){
   return [].concat.apply([], xss);
 };
-concatMap = curry$(function(f: any, xs: any){
+concatMap = curry$(function(f: Function, xs: Array<any>){
   var x;
   return [].concat.apply([], (function(){
     var i$, ref$, len$, results$ = [];
@@ -246,7 +246,7 @@ concatMap = curry$(function(f: any, xs: any){
     return results$;
   }()));
 });
-flatten = function(xs: Array<Array<T>>){
+flatten = function(xs: Array<any>){
   var x;
   return [].concat.apply([], (function(){
     var i$, ref$, len$, results$ = [];
@@ -261,7 +261,7 @@ flatten = function(xs: Array<Array<T>>){
     return results$;
   }()));
 };
-difference = function(xs: List[A]){
+difference = function(xs: Array<T>){
   var yss, res$, i$, to$, results, len$, x, j$, len1$, ys;
   res$ = [];
   for (i$ = 1, to$ = arguments.length; i$ < to$; ++i$) {
@@ -281,7 +281,7 @@ difference = function(xs: List[A]){
   }
   return results;
 };
-intersection = function(xs: Array[Int]){
+intersection = function(xs: Array<T>){
   var yss, res$, i$, to$, results, len$, x, j$, len1$, ys;
   res$ = [];
   for (i$ = 1, to$ = arguments.length; i$ < to$; ++i$) {
@@ -358,7 +358,7 @@ andList = function(xs: any[]){
   }
   return true;
 };
-orList = function(xs: Array<T>){
+orList = function(xs: Array<any>){
   var i$, len$, x;
   for (i$ = 0, len$ = xs.length; i$ < len$; ++i$) {
     x = xs[i$];
@@ -388,7 +388,7 @@ all = curry$(function(f: Function, xs: Array<any>){
   }
   return true;
 });
-sort = function(xs: any[]){
+sort = function(xs: Array<any>){
   return xs.concat().sort(function(x: number, y: number){
     if (x > y) {
       return 1;
@@ -402,8 +402,8 @@ sort = function(xs: any[]){
 sortWith = curry$(function(f: Function, xs: Array<any>){
   return xs.concat().sort(f);
 });
-sortBy = curry$(function(f: any, xs: any){
-  return xs.concat().sort(function(x: T, y: T){
+sortBy = curry$(function(f: Function, xs: Array<any>){
+  return xs.concat().sort(function(x: number, y: number){
     if (f(x) > f(y)) {
       return 1;
     } else if (f(x) < f(y)) {
@@ -440,7 +440,7 @@ mean = average = function(xs: Array<number>){
   }
   return sum / xs.length;
 };
-maximum = function(xs: number[]){
+maximum = function(xs: Array<number>){
   var max, i$, ref$, len$, x;
   max = xs[0];
   for (i$ = 0, len$ = (ref$ = xs.slice(1)).length; i$ < len$; ++i$) {
@@ -451,7 +451,7 @@ maximum = function(xs: number[]){
   }
   return max;
 };
-minimum = function(xs: any[]){
+minimum = function(xs: Array<number>){
   var min, i$, ref$, len$, x;
   min = xs[0];
   for (i$ = 0, len$ = (ref$ = xs.slice(1)).length; i$ < len$; ++i$) {
@@ -484,7 +484,7 @@ minimumBy = curry$(function(f: Function, xs: Array<any>){
   }
   return min;
 });
-scan = scanl = curry$(function(f: any, memo: any, xs: any){
+scan = scanl = curry$(function(f: Function, memo: any, xs: Array){
   var last, x;
   last = memo;
   return [memo].concat((function(){
@@ -496,41 +496,41 @@ scan = scanl = curry$(function(f: any, memo: any, xs: any){
     return results$;
   }()));
 });
-scan1 = scanl1 = curry$(function(f: any, xs: any){
+scan1 = scanl1 = curry$(function(f: Function, xs: Array<any>){
   if (!xs.length) {
     return;
   }
   return scan(f, xs[0], xs.slice(1));
 });
-scanr = curry$(function(f: Function, memo: any, xs: any[]){
+scanr = curry$(function(f: Function, memo: any, xs: Array<any>){
   xs = xs.concat().reverse();
   return scan(f, memo, xs).reverse();
 });
-scanr1 = curry$(function(f: any, xs: any){
+scanr1 = curry$(function(f: Function, xs: Array<any>){
   if (!xs.length) {
     return;
   }
   xs = xs.concat().reverse();
   return scan(f, xs[0], xs.slice(1)).reverse();
 });
-slice = curry$(function(x: number, y: number, xs: number[]){
+slice = curry$(function(x: any, y: any, xs: any){
   return xs.slice(x, y);
 });
-take = curry$(function(n: number, xs: T[]){
+take = curry$(function(n: number, xs: Array<any>){
   if (n <= 0) {
     return xs.slice(0, 0);
   } else {
     return xs.slice(0, n);
   }
 });
-drop = curry$(function(n: number, xs: T[]){
+drop = curry$(function(n: number, xs: Array<any>){
   if (n <= 0) {
     return xs;
   } else {
     return xs.slice(n);
   }
 });
-splitAt = curry$(function(n: number, xs: Array<T>){
+splitAt = curry$(function(n: number, xs: Array<any>){
   return [take(n, xs), drop(n, xs)];
 });
 takeWhile = curry$(function(p: any, xs: any){
@@ -563,7 +563,7 @@ span = curry$(function(p: any, xs: any){
 breakList = curry$(function(p: any, xs: any){
   return span(compose$(p, not$), xs);
 });
-zip = curry$(function(xs: any[], ys: any[]){
+zip = curry$(function(xs: Array<any>, ys: Array<any>){
   var result, len, i$, len$, i, x;
   result = [];
   len = ys.length;
@@ -640,14 +640,14 @@ zipAllWith = function(f: Function){
     return results$;
   }
 };
-at = curry$(function(n: number, xs: Array<T>){
+at = curry$(function(n: number, xs: Array<any>){
   if (n < 0) {
     return xs[xs.length + n];
   } else {
     return xs[n];
   }
 });
-elemIndex = curry$(function(el: HTMLElement, xs: any[]){
+elemIndex = curry$(function(el: any, xs: any){
   var i$, len$, i, x;
   for (i$ = 0, len$ = xs.length; i$ < len$; ++i$) {
     i = i$;
@@ -657,7 +657,7 @@ elemIndex = curry$(function(el: HTMLElement, xs: any[]){
     }
   }
 });
-elemIndices = curry$(function(el: HTMLElement, xs: Array<HTMLElement>){
+elemIndices = curry$(function(el: any, xs: any){
   var i$, len$, i, x, results$ = [];
   for (i$ = 0, len$ = xs.length; i$ < len$; ++i$) {
     i = i$;
@@ -761,7 +761,7 @@ module.exports = {
   findIndex: findIndex,
   findIndices: findIndices
 };
-function curry$(f: Function, bound: Array){
+function curry$(f: Function, bound: Object){
   var context,
   _curry = function(args: any[]) {
     return f.length > 1 ? function(){
@@ -790,11 +790,11 @@ function compose$() {
     return result;
   };
 }
-function not$(x: boolean){ return !x; }
+function not$(x: any){ return !x; }
 },{}],3:[function(require: any,module: any,exports: any){
 // Generated by LiveScript 1.6.0
 var max, min, negate, abs, signum, quot, rem, div, mod, recip, pi, tau, exp, sqrt, ln, pow, sin, tan, cos, asin, acos, atan, atan2, truncate, round, ceiling, floor, isItNaN, even, odd, gcd, lcm;
-max = curry$(function(x$: Observable<number>, y$: Observable<number>){
+max = curry$(function(x$: y$, y$: z$){
   return x$ > y$ ? x$ : y$;
 });
 min = curry$(function(x$: number, y$: number){
@@ -816,17 +816,17 @@ signum = function(x: number){
 quot = curry$(function(x: number, y: number){
   return ~~(x / y);
 });
-rem = curry$(function(x$: number, y$: number){
+rem = curry$(function(x$: y$, y$: z$){
   return x$ % y$;
 });
 div = curry$(function(x: number, y: number){
   return Math.floor(x / y);
 });
-mod = curry$(function(x$: Rx.Observable<any>, y$: Rx.Observable<any>){
+mod = curry$(function(x$: Number, y$: Number){
   var ref$;
   return ((x$) % (ref$ = y$) + ref$) % ref$;
 });
-recip = (function(it: number){
+recip = (function(it: any){
   return 1 / it;
 });
 pi = Math.PI;
@@ -834,7 +834,7 @@ tau = pi * 2;
 exp = Math.exp;
 sqrt = Math.sqrt;
 ln = Math.log;
-pow = curry$(function(x$: number, y$: number){
+pow = curry$(function(x$: Observable, y$: Observable){
   return Math.pow(x$, y$);
 });
 sin = Math.sin;
@@ -909,7 +909,7 @@ module.exports = {
   gcd: gcd,
   lcm: lcm
 };
-function curry$(f: Function, bound: Array<any>){
+function curry$(f: Function, bound: Object){
   var context,
   _curry = function(args: any[]) {
     return f.length > 1 ? function(){
@@ -925,7 +925,7 @@ function curry$(f: Function, bound: Array<any>){
 },{}],4:[function(require: any,module: any,exports: any){
 // Generated by LiveScript 1.6.0
 var values, keys, pairsToObj, objToPairs, listsToObj, objToLists, empty, each, map, compact, filter, reject, partition, find;
-values = function(object: any){
+values = function(object: Object){
   var i$, x, results$ = [];
   for (i$ in object) {
     x = object[i$];
@@ -948,7 +948,7 @@ pairsToObj = function(object: Object){
   }
   return resultObj$;
 };
-objToPairs = function(object: any){
+objToPairs = function(object: Object){
   var key, value, results$ = [];
   for (key in object) {
     value = object[key];
@@ -956,7 +956,7 @@ objToPairs = function(object: any){
   }
   return results$;
 };
-listsToObj = curry$(function(keys: any, values: any){
+listsToObj = curry$(function(keys: Array<any>, values: Array<any>){
   var i$, len$, i, key, resultObj$ = {};
   for (i$ = 0, len$ = keys.length; i$ < len$; ++i$) {
     i = i$;
@@ -991,7 +991,7 @@ each = curry$(function(f: Function, object: Object){
   }
   return object;
 });
-map = curry$(function(f: any, object: any){
+map = curry$(function(f: Function, object: Object){
   var k, x, resultObj$ = {};
   for (k in object) {
     x = object[k];
@@ -1064,7 +1064,7 @@ module.exports = {
   partition: partition,
   find: find
 };
-function curry$(f: Function, bound: Array){
+function curry$(f: Function, bound: Object){
   var context,
   _curry = function(args: any[]) {
     return f.length > 1 ? function(){
@@ -1080,22 +1080,22 @@ function curry$(f: Function, bound: Array){
 },{}],5:[function(require: any,module: any,exports: any){
 // Generated by LiveScript 1.6.0
 var split, join, lines, unlines, words, unwords, chars, unchars, reverse, repeat, capitalize, camelize, dasherize;
-split = curry$(function(sep: string, str: string){
+split = curry$(function(sep: String, str: String){
   return str.split(sep);
 });
-join = curry$(function(sep: string, xs: string[]){
+join = curry$(function(sep: string, xs: Array<string>){
   return xs.join(sep);
 });
-lines = function(str: string){
+lines = function(str: String){
   if (!str.length) {
     return [];
   }
   return str.split('\n');
 };
-unlines = function(it: string){
+unlines = function(it: any){
   return it.join('\n');
 };
-words = function(str: string){
+words = function(str: String){
   if (!str.length) {
     return [];
   }
@@ -1104,13 +1104,13 @@ words = function(str: string){
 unwords = function(it: any){
   return it.join(' ');
 };
-chars = function(it: string){
+chars = function(it: any){
   return it.split('');
 };
 unchars = function(it: any){
   return it.join('');
 };
-reverse = function(str: string){
+reverse = function(str: String){
   return str.split('').reverse().join('');
 };
 repeat = curry$(function(n: number, str: string){
@@ -1125,16 +1125,16 @@ capitalize = function(str: string){
   return str.charAt(0).toUpperCase() + str.slice(1);
 };
 camelize = function(it: string){
-  return it.replace(/[-_]+(.)?/g, function(arg$: any, c: any){
+  return it.replace(/[-_]+(.)?/g, function(arg$: lower, c: upper){
     return (c != null ? c : '').toUpperCase();
   });
 };
 dasherize = function(str: string){
-  return str.replace(/([^-A-Z])([A-Z]+)/g, function(arg$: number, lower: number, upper: number){
+  return str.replace(/([^-A-Z])([A-Z]+)/g, function(arg$: string, lower: string, upper: string){
     return lower + "-" + (upper.length > 1
       ? upper
       : upper.toLowerCase());
-  }).replace(/^([A-Z]+)/, function(arg$: number, upper: number[]){
+  }).replace(/^([A-Z]+)/, function(arg$: String, upper: String){
     if (upper.length > 1) {
       return upper + "-";
     } else {
@@ -1157,7 +1157,7 @@ module.exports = {
   camelize: camelize,
   dasherize: dasherize
 };
-function curry$(f: Function, bound: Array){
+function curry$(f: Function, bound: Object){
   var context,
   _curry = function(args: any[]) {
     return f.length > 1 ? function(){
@@ -1181,10 +1181,10 @@ Num = require('./Num.js');
 id = function(x: any){
   return x;
 };
-isType = curry$(function(type: string, x: number){
+isType = curry$(function(type: String, x: Any){
   return toString$.call(x).slice(8, -1) === type;
 });
-replicate = curry$(function(n: number, x: number){
+replicate = curry$(function(n: Int, x: a){
   var i$, results$ = [];
   for (i$ = 0; i$ < n; ++i$) {
     results$.push(x);
@@ -1336,7 +1336,7 @@ prelude.gcd = Num.gcd;
 prelude.lcm = Num.lcm;
 prelude.VERSION = '1.2.1';
 module.exports = prelude;
-function curry$(f: Function, bound: Array){
+function curry$(f: Function, bound: Object){
   var context,
   _curry = function(args: any[]) {
     return f.length > 1 ? function(){

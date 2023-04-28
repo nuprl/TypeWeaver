@@ -61,7 +61,7 @@ function getOutputLength(inputLength8: number) {
 /*
  * Calculate the MD5 of an array of little-endian words, and a bit length.
  */
-function wordsToMd5(x: string, len: number) {
+function wordsToMd5(x: number[], len: number) {
   /* append padding */
   x[len >> 5] |= 0x80 << len % 32;
   x[getOutputLength(len) - 1] = len;

@@ -22,7 +22,7 @@
 
   function encode(string: string) {
     // URL-encode some more characters to avoid issues when using permalink URLs in Markdown
-    return encodeURIComponent(string).replace(/['()_*]/g, function(character: Character) {
+    return encodeURIComponent(string).replace(/['()_*]/g, function(character: string) {
       return '%' + character.charCodeAt().toString(16);
     });
   }

@@ -2,7 +2,7 @@ var hasOwnProperty = Object.prototype.hasOwnProperty
 
 export default PseudoMap;
 
-function PseudoMap (set: Set<T>) {
+function PseudoMap (set: any) {
   if (!(this instanceof PseudoMap)) // whyyyyyyy
     throw new TypeError("Constructor PseudoMap requires 'new'")
 
@@ -31,7 +31,7 @@ PseudoMap.prototype.forEach = function (fn: Function, thisp: any) {
   }, this)
 }
 
-PseudoMap.prototype.has = function (k: string) {
+PseudoMap.prototype.has = function (k: any) {
   return !!find(this._data, k)
 }
 
@@ -40,11 +40,11 @@ PseudoMap.prototype.get = function (k: string) {
   return res && res.value
 }
 
-PseudoMap.prototype.set = function (k: string, v: any) {
+PseudoMap.prototype.set = function (k: any, v: any) {
   set(this._data, k, v)
 }
 
-PseudoMap.prototype.delete = function (k: string) {
+PseudoMap.prototype.delete = function (k: K) {
   var res = find(this._data, k)
   if (res) {
     delete this._data[res._index]
@@ -84,13 +84,13 @@ function same (a: any, b: any) {
   return a === b || a !== a && b !== b
 }
 
-function Entry (k: any, v: any, i: any) {
+function Entry (k: any, v: any, i: number) {
   this.key = k
   this.value = v
   this._index = i
 }
 
-function find (data: any, k: string) {
+function find (data: any, k: any) {
   for (var i = 0, s = '_' + k, key = s;
        hasOwnProperty.call(data, key);
        key = s + i++) {
@@ -99,7 +99,7 @@ function find (data: any, k: string) {
   }
 }
 
-function set (data: any, k: string, v: any) {
+function set (data: MapData, k: any, v: any) {
   for (var i = 0, s = '_' + k, key = s;
        hasOwnProperty.call(data, key);
        key = s + i++) {

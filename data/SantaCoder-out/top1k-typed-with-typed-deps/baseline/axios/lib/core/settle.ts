@@ -11,7 +11,7 @@ import AxiosError from './AxiosError.js';
  *
  * @returns {object} The response.
  */
-export default function settle(resolve: Function, reject: Function, response: Object) {
+export default function settle(resolve: Function, reject: Function, response: AxiosResponse) {
   const validateStatus = response.config.validateStatus;
   if (!response.status || !validateStatus || validateStatus(response.status)) {
     resolve(response);

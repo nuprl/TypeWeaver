@@ -387,7 +387,7 @@ function replace() {
 
 /* reads a file, runs replacement and writes it back */
 function processFile(file: string) {
-  fs.readFile(file, {encoding: 'utf8'}, function (err: any, data: any) {
+  fs.readFile(file, {encoding: 'utf8'}, function (err: any, data: string) {
     if (err) {
       throw err;
     }
@@ -403,7 +403,7 @@ function processFile(file: string) {
 
 /* process file names from command line and process the identified files */
 for (i = 2, length = process.argv.length; i < length; i++) {
-  glob(process.argv[i], function (err: any, matches: any) {
+  glob(process.argv[i], function (err: any, matches: string[]) {
     if (err) {
       throw err;
     }

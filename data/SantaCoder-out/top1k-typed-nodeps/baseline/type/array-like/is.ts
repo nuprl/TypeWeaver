@@ -3,7 +3,7 @@
 var coerceToArrayLength = require("../array-length/coerce")
   , isObject            = require("../object/is");
 
-module.exports = function (value/*: any, options*/: Options) {
+module.exports = function (value/*: any, options*/: any) {
 	if (!isObject(value)) {
 		var options = arguments[1];
 		if (isObject(options) && options.allowString && typeof value === "string") return true;

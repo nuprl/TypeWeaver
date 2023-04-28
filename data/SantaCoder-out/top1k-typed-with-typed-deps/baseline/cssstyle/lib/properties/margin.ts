@@ -30,7 +30,7 @@ var myGlobal = parsers.implicitSetter(
   function() {
     return true;
   },
-  function(v: any) {
+  function(v: string) {
     return v;
   }
 );

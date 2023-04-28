@@ -95,19 +95,19 @@
         };
       }
     },
-    Number: function(it: Option<A>){
+    Number: function(it: any){
       return {
         type: 'Just',
         value: +it
       };
     },
-    Int: function(it: Maybe<T>){
+    Int: function(it: any){
       return {
         type: 'Just',
         value: +it
       };
     },
-    Float: function(it: Option<A>){
+    Float: function(it: any){
       return {
         type: 'Just',
         value: +it
@@ -131,7 +131,7 @@
         };
       }
     },
-    RegExp: function(value: any, options: any){
+    RegExp: function(value: String, options: Options){
       var that;
       if (that = /^\/([\s\S]*)\/([gimy]*)$/.exec(value)) {
         return {
@@ -149,7 +149,7 @@
         };
       }
     },
-    Array: function(value: any, options: CastArrayOptions){
+    Array: function(value: any, options: any){
       return castArray(value, {
         of: [{
           type: '*'
@@ -161,15 +161,15 @@
         of: {}
       }, options);
     },
-    String: function(it: any){
+    String: function(it: String){
       var replace, that;
       if (toString$.call(it).slice(8, -1) !== 'String') {
         return {
           type: 'Nothing'
         };
       }
-      replace = function(value: any, quote: any){
-        return value.replace(/\\([^u]|u[0-9a-fA-F]{4})/g, function(all: boolean, escaped: string){
+      replace = function(value: string, quote: string){
+        return value.replace(/\\([^u]|u[0-9a-fA-F]{4})/g, function(all: string, escaped: string){
           switch (escaped[0]) {
           case quote:
             return quote;
@@ -210,7 +210,7 @@
       }
     }
   };
-  function castArray(node: Node, type: string, options: any){
+  function castArray(node: Node, type: Type, options: Options){
     var typeOf, element;
     if (toString$.call(node).slice(8, -1) !== 'Array') {
       return {
@@ -230,7 +230,7 @@
       }())
     };
   }
-  function castTuple(node: Node, type: Type, options: Options){
+  function castTuple(node: Array<any>, type: Array<any>, options: any){
     var result, i, i$, ref$, len$, types, cast;
     if (toString$.call(node).slice(8, -1) !== 'Array') {
       return {
@@ -258,7 +258,7 @@
       };
     }
   }
-  function castFields(node: Node, type: string, options: Options){
+  function castFields(node: Object, type: Type, options: Options){
     var typeOf, key, value;
     if (toString$.call(node).slice(8, -1) !== 'Object') {
       return {
@@ -282,7 +282,7 @@
       }())
     };
   }
-  function typeCast(node: Node, typeObj: Type, options: Options){
+  function typeCast(node: Node, typeObj: Object, options: Object){
     var type, structure, castFunc, ref$;
     type = typeObj.type, structure = typeObj.structure;
     if (type) {
@@ -302,7 +302,7 @@
       }
     }
   }
-  function typesCast(node: Node, types: string[], options: Options){
+  function typesCast(node: Node, types: Array<Type>, options: Object){
     var i$, len$, type, ref$, valueType, value;
     for (i$ = 0, len$ = types.length; i$ < len$; ++i$) {
       type = types[i$];
@@ -318,7 +318,7 @@
     }
     throw new Error("Value " + JSON.stringify(node) + " does not type check against " + JSON.stringify(types) + ".");
   }
-  module.exports = function(node: Node, types: string[], options: any){
+  module.exports = function(node: Node, types: Type[], options: Options){
     if (!options.explicit && types.length === 1 && types[0].type === 'String') {
       return node;
     }

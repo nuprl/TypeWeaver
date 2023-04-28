@@ -151,7 +151,7 @@ function lookup (path: string) {
  * @private
  */
 
-function populateMaps (extensions: string[], types: string[]) {
+function populateMaps (extensions: Object, types: Object) {
   // source preference (least -> most)
   var preference = ['nginx', 'apache', undefined, 'iana']
 

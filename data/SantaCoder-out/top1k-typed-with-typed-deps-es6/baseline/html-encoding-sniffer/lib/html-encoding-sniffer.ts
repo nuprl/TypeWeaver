@@ -290,6 +290,6 @@ function extractCharacterEncodingFromMeta(string: string) {
   return whatwgEncoding.labelToName(string.substring(position, end));
 }
 
-function isSpaceCharacter(c: string) {
+function isSpaceCharacter(c: number) {
   return c === 0x09 || c === 0x0A || c === 0x0C || c === 0x0D || c === 0x20;
 }

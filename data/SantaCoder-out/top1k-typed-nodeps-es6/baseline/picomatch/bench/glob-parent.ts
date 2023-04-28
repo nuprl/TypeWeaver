@@ -15,7 +15,7 @@ const cycle = (e, newline) => {
   process.stdout.write(`\u001b[G  ${e.target}${newline ? '\n' : ''}`);
 };
 
-function bench(name: string, options: BenchmarkOptions) {
+function bench(name: string, options: any) {
   const config = { name, ...options };
 
   const suite = new Suite(config);

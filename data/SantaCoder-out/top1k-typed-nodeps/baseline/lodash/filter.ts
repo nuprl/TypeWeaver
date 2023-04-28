@@ -21,7 +21,7 @@
  * filter(users, ({ active }) => active)
  * // => objects for ['barney']
  */
-function filter(array: any[], predicate: any) {
+function filter(array: any[], predicate: Function) {
   let index = -1
   let resIndex = 0
   const length = array == null ? 0 : array.length

@@ -16,7 +16,7 @@ function assertEventName(eventName: string) {
 	}
 }
 
-function assertListener(listener: any) {
+function assertListener(listener: Function) {
 	if (typeof listener !== 'function') {
 		throw new TypeError('listener must be a function');
 	}
@@ -57,7 +57,7 @@ function enqueueProducers(instance: any, eventName: string, eventData: any) {
 	}
 }
 
-function iterator(instance: any, eventNames: string) {
+function iterator(instance: EventEmitter, eventNames: string) {
 	eventNames = Array.isArray(eventNames) ? eventNames : [eventNames];
 
 	let isFinished = false;
@@ -162,7 +162,7 @@ function defaultMethodNamesOrAssert(methodNames: string[]) {
 
 const isMetaEvent = eventName => eventName === listenerAdded || eventName === listenerRemoved;
 
-function emitMetaEvent(emitter: EventEmitter, eventName: string, eventData: any) {
+function emitMetaEvent(emitter: Emittery, eventName: string, eventData: any) {
 	if (isMetaEvent(eventName)) {
 		try {
 			canEmitMetaEvents = true;

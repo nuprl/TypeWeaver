@@ -14,7 +14,7 @@ function monkeyPatch () {
   })
 }
 
-function abbrev (list: string[]) {
+function abbrev (list: Array<string>) {
   if (arguments.length !== 1 || !Array.isArray(list)) {
     list = Array.prototype.slice.call(arguments, 0)
   }

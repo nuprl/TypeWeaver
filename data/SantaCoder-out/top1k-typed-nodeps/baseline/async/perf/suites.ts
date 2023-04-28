@@ -203,7 +203,7 @@ module.exports = [{
     ],
     setup(num) {
         tasks = _.range(num).map(() => {
-            return function(cb: Function) {
+            return function(cb: void) {
                 setImmediate(cb);
             };
         });
@@ -237,11 +237,11 @@ module.exports = [{
     ],
     setup(num) {
         tasks = [
-            function(cb: Function) {
+            function(cb: any) {
                 return cb(null, 1);
             }
         ].concat(_.range(num).map((i) => {
-            return function(arg: any, cb: any) {
+            return function(arg: number, cb: any) {
                 setImmediate(() => {
                     cb(null, i);
                 });
@@ -263,7 +263,7 @@ module.exports = [{
             dep1 (cb) { cb(null, 1); }
         };
         _.times(num, (n) => {
-            var task = ['dep' + (n+1), function(results: number, cb: Function) {
+            var task = ['dep' + (n+1), function(results: any, cb: any) {
                 setImmediate(cb, null, n);
             }];
             if (n > 2) task.unshift('dep' + n);
@@ -295,7 +295,7 @@ module.exports = [{
             });
         }
 
-        function worker(task: Task, callback: Function) {
+        function worker(task: any, callback: any) {
             if (task.num === numEntries) {
                 return done();
             }

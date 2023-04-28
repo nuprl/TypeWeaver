@@ -17,7 +17,7 @@ glob.sync(__dirname + '/code/*.js').forEach(function (fp: string) {
   let name = path.basename(fp, path.extname(fp));
   let problems = [];
 
-  fixtures.forEach(function (fixture: any, idx: number) {
+  fixtures.forEach(function (fixture: any[], idx: number) {
     let answer = fn.apply(fn, fixture).length;
 
     if (answer !== expected[idx]) {
@@ -30,7 +30,7 @@ glob.sync(__dirname + '/code/*.js').forEach(function (fp: string) {
   } else {
     console.log(' ' + chalk.bold.red('✖') + ' ' + chalk.bold(name));
 
-    problems.forEach(function (item: any, idx: number, arr: any) {
+    problems.forEach(function (item: any, idx: number, arr: any[]) {
       let str = item[0] + ' gave ' + item[1] + ', expected ' + item[2];
       console.log((idx === arr.length - 1 ? ' ┗ ' : ' ┣ ') + chalk.red(str));
     });

@@ -10,7 +10,7 @@ function normalizeHeader(header: string) {
   return header && String(header).trim().toLowerCase();
 }
 
-function normalizeValue(value: string) {
+function normalizeValue(value: any) {
   if (value === false || value == null) {
     return value;
   }
@@ -66,7 +66,7 @@ function buildAccessors(obj: any, header: string) {
   });
 }
 
-function findKey(obj: any, key: string) {
+function findKey(obj: Object, key: string) {
   key = key.toLowerCase();
   const keys = Object.keys(obj);
   let i = keys.length;
@@ -80,7 +80,7 @@ function findKey(obj: any, key: string) {
   return null;
 }
 
-function AxiosHeaders(headers: any, defaults: any) {
+function AxiosHeaders(headers: AxiosHeaders, defaults: AxiosHeaders) {
   headers && this.set(headers);
   this[$defaults] = defaults || null;
 }
@@ -122,7 +122,7 @@ Object.assign(AxiosHeaders.prototype, {
     return this;
   },
 
-  get: function(header: string, parser: any) {
+  get: function(header: string, parser: Parser) {
     header = normalizeHeader(header);
 
     if (!header) return undefined;
@@ -164,11 +164,11 @@ Object.assign(AxiosHeaders.prototype, {
     return false;
   },
 
-  delete: function(header: string, matcher: RegExp) {
+  delete: function(header: string, matcher: string) {
     const self = this;
     let deleted = false;
 
-    function deleteHeader(_header: Header) {
+    function deleteHeader(_header: string) {
       _header = normalizeHeader(_header);
 
       if (_header) {

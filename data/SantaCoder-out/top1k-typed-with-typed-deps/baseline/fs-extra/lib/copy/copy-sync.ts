@@ -29,19 +29,19 @@ function copySync (src: string, dest: string, opts: Object) {
   return handleFilterAndCopy(destStat, src, dest, opts)
 }
 
-function handleFilterAndCopy (destStat: fs.Stats, src: string, dest: string, opts: any) {
+function handleFilterAndCopy (destStat: fs.Stats, src: string, dest: string, opts: Object) {
   if (opts.filter && !opts.filter(src, dest)) return
   const destParent = path.dirname(dest)
   if (!fs.existsSync(destParent)) mkdirsSync(destParent)
   return getStats(destStat, src, dest, opts)
 }
 
-function startCopy (destStat: Stats, src: string, dest: string, opts: any) {
+function startCopy (destStat: fs.Stats, src: string, dest: string, opts: Object) {
   if (opts.filter && !opts.filter(src, dest)) return
   return getStats(destStat, src, dest, opts)
 }
 
-function getStats (destStat: Stats, src: string, dest: string, opts: any) {
+function getStats (destStat: fs.Stats, src: string, dest: string, opts: Object) {
   const statSync = opts.dereference ? fs.statSync : fs.lstatSync
   const srcStat = statSync(src)
 
@@ -55,12 +55,12 @@ function getStats (destStat: Stats, src: string, dest: string, opts: any) {
   throw new Error(`Unknown file: ${src}`)
 }
 
-function onFile (srcStat: fs.Stats, destStat: fs.Stats, src: string, dest: string, opts: any) {
+function onFile (srcStat: fs.Stats, destStat: fs.Stats, src: string, dest: string, opts: Object) {
   if (!destStat) return copyFile(srcStat, src, dest, opts)
   return mayCopyFile(srcStat, src, dest, opts)
 }
 
-function mayCopyFile (srcStat: fs.Stats, src: string, dest: string, opts: CopyOptions) {
+function mayCopyFile (srcStat: fs.Stats, src: string, dest: string, opts: Object) {
   if (opts.overwrite) {
     fs.unlinkSync(dest)
     return copyFile(srcStat, src, dest, opts)
@@ -69,13 +69,13 @@ function mayCopyFile (srcStat: fs.Stats, src: string, dest: string, opts: CopyOp
   }
 }
 
-function copyFile (srcStat: fs.Stats, src: string, dest: string, opts: any) {
+function copyFile (srcStat: fs.Stats, src: string, dest: string, opts: Object) {
   fs.copyFileSync(src, dest)
   if (opts.preserveTimestamps) handleTimestamps(srcStat.mode, src, dest)
   return setDestMode(dest, srcStat.mode)
 }
 
-function handleTimestamps (srcMode: string, src: string, dest: string) {
+function handleTimestamps (srcMode: number, src: string, dest: string) {
   // Make sure the file is writable before setting the timestamp
   // otherwise open fails with EPERM when invoked with 'r+'
   // (through utimes call)
@@ -103,7 +103,7 @@ function setDestTimestamps (src: string, dest: string) {
   return utimesMillisSync(dest, updatedSrcStat.atime, updatedSrcStat.mtime)
 }
 
-function onDir (srcStat: any, destStat: any, src: any, dest: any, opts: any) {
+function onDir (srcStat: fs.Stats, destStat: fs.Stats, src: string, dest: string, opts: Object) {
   if (!destStat) return mkDirAndCopy(srcStat.mode, src, dest, opts)
   return copyDir(src, dest, opts)
 }
@@ -114,18 +114,18 @@ function mkDirAndCopy (srcMode: number, src: string, dest: string, opts: any) {
   return setDestMode(dest, srcMode)
 }
 
-function copyDir (src: string, dest: string, opts: any) {
+function copyDir (src: string, dest: string, opts: Object) {
   fs.readdirSync(src).forEach(item => copyDirItem(item, src, dest, opts))
 }
 
-function copyDirItem (item: any, src: string, dest: string, opts: any) {
+function copyDirItem (item: string, src: string, dest: string, opts: Object) {
   const srcItem = path.join(src, item)
   const destItem = path.join(dest, item)
   const { destStat } = stat.checkPathsSync(srcItem, destItem, 'copy', opts)
   return startCopy(destStat, srcItem, destItem, opts)
 }
 
-function onLink (destStat: Stats, src: string, dest: string, opts: LinkOptions) {
+function onLink (destStat: fs.Stats, src: string, dest: string, opts: LinkOptions) {
   let resolvedSrc = fs.readlinkSync(src)
   if (opts.dereference) {
     resolvedSrc = path.resolve(process.cwd(), resolvedSrc)

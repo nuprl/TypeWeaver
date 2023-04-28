@@ -1,7 +1,7 @@
 import jQuery from "../core.js";
 
 // Note: an element does not contain itself
-jQuery.contains = function( a: number, b : number) {
+jQuery.contains = function( a: Element, b : Element) {
 	var adown = a.nodeType === 9 ? a.documentElement : a,
 		bup = b && b.parentNode;
 

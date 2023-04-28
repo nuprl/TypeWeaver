@@ -48,8 +48,8 @@ import mapValuesLimit from './mapValuesLimit.js'
  * };
  *
  * // asynchronous function that returns the file size in bytes
- * function getFileSizeInBytes(file: File, key: string, callback: any) {
- *     fs.stat(file, function(err: Error, stat: Stats) {
+ * function getFileSizeInBytes(file: string, key: string, callback: any) {
+ *     fs.stat(file, function(err: any, stat: any) {
  *         if (err) {
  *             return callback(err);
  *         }
@@ -58,7 +58,7 @@ import mapValuesLimit from './mapValuesLimit.js'
  * }
  *
  * // Using callbacks
- * async.mapValues(fileMap, getFileSizeInBytes, function(err: Error, result: any) {
+ * async.mapValues(fileMap, getFileSizeInBytes, function(err: Error, result: Object) {
  *     if (err) {
  *         console.log(err);
  *     } else {
@@ -73,7 +73,7 @@ import mapValuesLimit from './mapValuesLimit.js'
  * });
  *
  * // Error handling
- * async.mapValues(withMissingFileMap, getFileSizeInBytes, function(err: Error, result: any) {
+ * async.mapValues(withMissingFileMap, getFileSizeInBytes, function(err: any, result: any) {
  *     if (err) {
  *         console.log(err);
  *         // [ Error: ENOENT: no such file or directory ]

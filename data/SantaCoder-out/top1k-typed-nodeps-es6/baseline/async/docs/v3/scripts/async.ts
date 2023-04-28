@@ -117,7 +117,7 @@
      * async.waterfall([
      *     async.apply(fs.readFile, filename, "utf8"),
      *     async.asyncify(JSON.parse),
-     *     function (data: any, next: any) {
+     *     function (data: any, next: Function) {
      *         // data is the result of parsing the text.
      *         // If there was a parsing error, it would have been caught.
      *     }
@@ -126,10 +126,10 @@
      * // passing a function returning a promise
      * async.waterfall([
      *     async.apply(fs.readFile, filename, "utf8"),
-     *     async.asyncify(function (contents: string) {
+     *     async.asyncify(function (contents: any) {
      *         return db.model.create(contents);
      *     }),
-     *     function (model: Model, next: Function) {
+     *     function (model: T, next: any) {
      *         // `model` is the instantiated model object.
      *         // If there was an error, this function would be skipped.
      *     }
@@ -137,7 +137,7 @@
      *
      * // es2017 example, though `asyncify` is not needed if your JS environment
      * // supports async functions out of the box
-     * var q = async.queue(async.asyncify(async function(file: File) {
+     * var q = async.queue(async.asyncify(async function(file: T) {
      *     var intermediateStep = await processFile(file);
      *     return await somePromise(intermediateStep)
      * }));
@@ -146,7 +146,7 @@
      */
     function asyncify(func: Function) {
         if (isAsync(func)) {
-            return function (...args/*: any[], callback*/: Function) {
+            return function (...args/*: any[], callback*/: any) {
                 const callback = args.pop();
                 const promise = func.apply(this, args);
                 return handlePromise(promise, callback)
@@ -177,7 +177,7 @@
         });
     }
 
-    function invokeCallback(callback: any, error: any, value: any) {
+    function invokeCallback(callback: Function, error: any, value: any) {
         try {
             callback(error, value);
         } catch (err) {
@@ -185,7 +185,7 @@
         }
     }
 
-    function isAsync(fn: Function) {
+    function isAsync(fn: any) {
         return fn[Symbol.toStringTag] === 'AsyncFunction';
     }
 
@@ -223,7 +223,7 @@
         return awaitable
     }
 
-    function applyEach (eachfn: Function) {
+    function applyEach (eachfn: EachFunction) {
         return function applyEach(fns: Function[], ...callArgs: any[]) {
             const go = awaitify(function (callback: Function) {
                 var that = this;
@@ -235,7 +235,7 @@
         };
     }
 
-    function _asyncMap(eachfn: Function, arr: Array<any>, iteratee: Function, callback: Function) {
+    function _asyncMap(eachfn: EachOfIterator, arr: any[], iteratee: AsyncIterator<any>, callback: AsyncResultCallback<any[]>) {
         arr = arr || [];
         var results = [];
         var counter = 0;
@@ -329,7 +329,7 @@
     }
 
     // for async generators
-    function asyncEachOfLimit(generator: any, limit: any, iteratee: any, callback: any) {
+    function asyncEachOfLimit(generator: any, limit: number, iteratee: any, callback: any) {
         let done = false;
         let canceled = false;
         let awaiting = false;
@@ -360,7 +360,7 @@
             }).catch(handleError);
         }
 
-        function iterateeCallback(err: Error, result: any) {
+        function iterateeCallback(err: any, result: any) {
             //console.log('iterateeCallback')
             running -= 1;
             if (canceled) return
@@ -411,7 +411,7 @@
             var running = 0;
             var looping = false;
 
-            function iterateeCallback(err: Error, value: any) {
+            function iterateeCallback(err: any, value: any) {
                 if (canceled) return
                 running -= 1;
                 if (err) {
@@ -473,14 +473,14 @@
      * `iteratee` functions have finished, or an error occurs. Invoked with (err).
      * @returns {Promise} a promise, if a callback is omitted
      */
-    function eachOfLimit$1(coll: any, limit: number, iteratee: any, callback: any) {
+    function eachOfLimit$1(coll: any[], limit: iterateeCallback<any>, iteratee: AsyncFunction<any>, callback: Callback<any>) {
         return eachOfLimit(limit)(coll, wrapAsync(iteratee), callback);
     }
 
     var eachOfLimit$2 = awaitify(eachOfLimit$1, 4);
 
     // eachOf implementation optimized for array-likes
-    function eachOfArrayLike(coll: any[], iteratee: Function, callback: Function) {
+    function eachOfArrayLike(coll: ArrayLike<any>, iteratee: Function, callback: Function) {
         callback = once(callback);
         var index = 0,
             completed = 0,
@@ -490,7 +490,7 @@
             callback(null);
         }
 
-        function iteratorCallback(err: Error, value: any) {
+        function iteratorCallback(err: any, value: any) {
             if (err === false) {
                 canceled = true;
             }
@@ -508,7 +508,7 @@
     }
 
     // a generic version of eachOf which can handle array, object, and iterator cases.
-    function eachOfGeneric (coll: any, iteratee: any, callback: any) {
+    function eachOfGeneric (coll: any, iteratee: Function, callback: Function) {
         return eachOfLimit$2(coll, Infinity, iteratee, callback);
     }
 
@@ -621,7 +621,7 @@
      * }
      *
      */
-    function eachOf(coll: any, iteratee: any, callback: any) {
+    function eachOf(coll: any, iteratee: Function, callback: Function) {
         var eachOfImplementation = isArrayLike(coll) ? eachOfArrayLike : eachOfGeneric;
         return eachOfImplementation(coll, wrapAsync(iteratee), callback);
     }
@@ -670,7 +670,7 @@
      * const withMissingFileList = ['file1.txt','file2.txt','file4.txt'];
      *
      * // asynchronous function that returns the file size in bytes
-     * function getFileSizeInBytes(file: File, callback: any) {
+     * function getFileSizeInBytes(file: string, callback: any) {
      *     fs.stat(file, function(err: Error, stat: fs.Stats) {
      *         if (err) {
      *             return callback(err);
@@ -680,7 +680,7 @@
      * }
      *
      * // Using callbacks
-     * async.map(fileList, getFileSizeInBytes, function(err: Error, results: any) {
+     * async.map(fileList, getFileSizeInBytes, function(err: Error, results: number[]) {
      *     if (err) {
      *         console.log(err);
      *     } else {
@@ -691,7 +691,7 @@
      * });
      *
      * // Error Handling
-     * async.map(withMissingFileList, getFileSizeInBytes, function(err: Error, results: any) {
+     * async.map(withMissingFileList, getFileSizeInBytes, function(err: Error, results: Array<T>) {
      *     if (err) {
      *         console.log(err);
      *         // [ Error: ENOENT: no such file or directory ]
@@ -745,7 +745,7 @@
      * }
      *
      */
-    function map (coll: any[], iteratee: any, callback: any) {
+    function map (coll: any[], iteratee: Function, callback: Function) {
         return _asyncMap(eachOf$1, coll, iteratee, callback)
     }
     var map$1 = awaitify(map, 3);
@@ -809,7 +809,7 @@
      * functions have finished, or an error occurs. Invoked with (err).
      * @returns {Promise} a promise, if a callback is omitted
      */
-    function eachOfSeries(coll: any, iteratee: any, callback: any) {
+    function eachOfSeries(coll: any, iteratee: Function, callback: Function) {
         return eachOfLimit$2(coll, 1, iteratee, callback)
     }
     var eachOfSeries$1 = awaitify(eachOfSeries, 3);
@@ -833,7 +833,7 @@
      * transformed items from the `coll`. Invoked with (err, results).
      * @returns {Promise} a promise, if no callback is passed
      */
-    function mapSeries (coll: any[], iteratee: Function, callback: Function) {
+    function mapSeries (coll: any, iteratee: Function, callback: Function) {
         return _asyncMap(eachOfSeries$1, coll, iteratee, callback)
     }
     var mapSeries$1 = awaitify(mapSeries, 3);
@@ -923,17 +923,17 @@
      *         // async code to get some data
      *         callback(null, 'data', 'converted to array');
      *     },
-     *     make_folder: function(callback: Function) {
+     *     make_folder: function(callback: any) {
      *         // async code to create a directory to store a file in
      *         // this is run at the same time as getting the data
      *         callback(null, 'folder');
      *     },
-     *     write_file: ['get_data', 'make_folder', function(results: any, callback: Function) {
+     *     write_file: ['get_data', 'make_folder', function(results: any, callback: any) {
      *         // once there is some data and the directory exists,
      *         // write the data to a file in the directory
      *         callback(null, 'filename');
      *     }],
-     *     email_link: ['write_file', function(results: any, callback: any) {
+     *     email_link: ['write_file', function(results: any, callback: Function) {
      *         // once the file is written let's email a link to it...
      *         callback(null, {'file':results.write_file, 'email':'user@example.com'});
      *     }]
@@ -957,18 +957,18 @@
      *         // async code to get some data
      *         callback(null, 'data', 'converted to array');
      *     },
-     *     make_folder: function(callback: Function) {
+     *     make_folder: function(callback: any) {
      *         console.log('in make_folder');
      *         // async code to create a directory to store a file in
      *         // this is run at the same time as getting the data
      *         callback(null, 'folder');
      *     },
-     *     write_file: ['get_data', 'make_folder', function(results: any, callback: Function) {
+     *     write_file: ['get_data', 'make_folder', function(results: any, callback: any) {
      *         // once there is some data and the directory exists,
      *         // write the data to a file in the directory
      *         callback(null, 'filename');
      *     }],
-     *     email_link: ['write_file', function(results: any, callback: any) {
+     *     email_link: ['write_file', function(results: any, callback: Function) {
      *         // once the file is written let's email a link to it...
      *         callback(null, {'file':results.write_file, 'email':'user@example.com'});
      *     }]
@@ -997,12 +997,12 @@
      *                 // this is run at the same time as getting the data
      *                 callback(null, 'folder');
      *             },
-     *             write_file: ['get_data', 'make_folder', function(results: any, callback: any) {
+     *             write_file: ['get_data', 'make_folder', function(results: any, callback: Function) {
      *                 // once there is some data and the directory exists,
      *                 // write the data to a file in the directory
      *                 callback(null, 'filename');
      *             }],
-     *             email_link: ['write_file', function(results: any, callback: any) {
+     *             email_link: ['write_file', function(results: any, callback: Function) {
      *                 // once the file is written let's email a link to it...
      *                 callback(null, {'file':results.write_file, 'email':'user@example.com'});
      *             }]
@@ -1021,7 +1021,7 @@
      * }
      *
      */
-    function auto(tasks: Array<any>, concurrency: number, callback: Function) {
+    function auto(tasks: any, concurrency: any, callback: any) {
         if (typeof concurrency !== 'number') {
             // concurrency is optional, shift the args.
             callback = concurrency;
@@ -1087,7 +1087,7 @@
         checkForDeadlocks();
         processQueue();
 
-        function enqueueTask(key: string, task: Task) {
+        function enqueueTask(key: string, task: Task<T>) {
             readyTasks.push(() => runTask(key, task));
         }
 
@@ -1280,7 +1280,7 @@
      *         // async code to get some data
      *         callback(null, 'data', 'converted to array');
      *     },
-     *     make_folder: function(callback: Function) {
+     *     make_folder: function(callback: any) {
      *         // async code to create a directory to store a file in
      *         // this is run at the same time as getting the data
      *         callback(null, 'folder');
@@ -1290,7 +1290,7 @@
      *         // write the data to a file in the directory
      *         callback(null, 'filename');
      *     },
-     *     email_link: function(write_file: Function, callback: Function) {
+     *     email_link: function(write_file: any, callback: any) {
      *         // once the file is written let's email a link to it...
      *         // write_file contains the filename returned by write_file.
      *         callback(null, {'file':write_file, 'email':'user@example.com'});
@@ -1313,11 +1313,11 @@
      *     write_file: ['get_data', 'make_folder', function(get_data: any, make_folder: any, callback: any) {
      *         callback(null, 'filename');
      *     }],
-     *     email_link: ['write_file', function(write_file: any, callback: any) {
+     *     email_link: ['write_file', function(write_file: string, callback: Function) {
      *         callback(null, {'file':write_file, 'email':'user@example.com'});
      *     }]
      *     //...
-     * }, function(err: Error, results: any) {
+     * }, function(err: any, results: any) {
      *     console.log('err = ', err);
      *     console.log('email_link = ', results.email_link);
      * });
@@ -1455,7 +1455,7 @@
         dll.head = dll.tail = node;
     }
 
-    function queue(worker: Function, concurrency: number, payload: any[]) {
+    function queue(worker: any, concurrency: number, payload: any) {
         if (concurrency == null) {
             concurrency = 1;
         }
@@ -1497,7 +1497,7 @@
         }
 
         var processingScheduled = false;
-        function _insert(data: any, insertAtFront: boolean, rejectOnError: boolean, callback: any) {
+        function _insert(data: any, insertAtFront: boolean, rejectOnError: boolean, callback: Function) {
             if (callback != null && typeof callback !== 'function') {
                 throw new Error('task callback must be a function');
             }
@@ -1540,7 +1540,7 @@
             }
         }
 
-        function _createCB(tasks: Task[]) {
+        function _createCB(tasks: any[]) {
             return function (err: any, ...args: any[]) {
                 numRunning -= 1;
 
@@ -1756,7 +1756,7 @@
      * @example
      *
      * // create a cargo object with payload 2
-     * var cargo = async.cargo(function(tasks: Array<Task>, callback: Function) {
+     * var cargo = async.cargo(function(tasks: Array<T>, callback: any) {
      *     for (var i=0; i<tasks.length; i++) {
      *         console.log('hello ' + tasks[i].name);
      *     }
@@ -1767,7 +1767,7 @@
      * cargo.push({name: 'foo'}, function(err: Error) {
      *     console.log('finished processing foo');
      * });
-     * cargo.push({name: 'bar'}, function(err: any) {
+     * cargo.push({name: 'bar'}, function(err: Error) {
      *     console.log('finished processing bar');
      * });
      * await cargo.push({name: 'baz'});
@@ -1810,7 +1810,7 @@
      * @example
      *
      * // create a cargoQueue object with payload 2 and concurrency 2
-     * var cargoQueue = async.cargoQueue(function(tasks: Array<Task>, callback: Function) {
+     * var cargoQueue = async.cargoQueue(function(tasks: Array<T>, callback: Function) {
      *     for (var i=0; i<tasks.length; i++) {
      *         console.log('hello ' + tasks[i].name);
      *     }
@@ -1821,7 +1821,7 @@
      * cargoQueue.push({name: 'foo'}, function(err: Error) {
      *     console.log('finished processing foo');
      * });
-     * cargoQueue.push({name: 'bar'}, function(err: Error) {
+     * cargoQueue.push({name: 'bar'}, function(err: any) {
      *     console.log('finished processing bar');
      * });
      * cargoQueue.push({name: 'baz'}, function(err: any) {
@@ -1831,7 +1831,7 @@
      *     console.log('finished processing boo');
      * });
      */
-    function cargo$1(worker: Worker, concurrency: number, payload: any) {
+    function cargo$1(worker: Function, concurrency: number, payload: number) {
         return queue(worker, concurrency, payload);
     }
 
@@ -1877,7 +1877,7 @@
      *
      * // asynchronous function that computes the file size in bytes
      * // file size is added to the memoized value, then returned
-     * function getFileSizeInBytes(memo: any, file: any, callback: any) {
+     * function getFileSizeInBytes(memo: number, file: string, callback: any) {
      *     fs.stat(file, function(err: Error, stat: fs.Stats) {
      *         if (err) {
      *             return callback(err);
@@ -1887,7 +1887,7 @@
      * }
      *
      * // Using callbacks
-     * async.reduce(fileList, 0, getFileSizeInBytes, function(err: Error, result: any) {
+     * async.reduce(fileList, 0, getFileSizeInBytes, function(err: Error, result: number) {
      *     if (err) {
      *         console.log(err);
      *     } else {
@@ -1898,7 +1898,7 @@
      * });
      *
      * // Error Handling
-     * async.reduce(withMissingFileList, 0, getFileSizeInBytes, function(err: Error, result: string) {
+     * async.reduce(withMissingFileList, 0, getFileSizeInBytes, function(err: Error, result: number) {
      *     if (err) {
      *         console.log(err);
      *         // [ Error: ENOENT: no such file or directory ]
@@ -1985,7 +1985,7 @@
      * // Part of an app, that fetches cats of the logged user.
      * // This example uses `seq` function to avoid overnesting and error
      * // handling clutter.
-     * app.get('/cats', function(request: http.IncomingMessage, response: http.ServerResponse) {
+     * app.get('/cats', function(request: Request, response: Response) {
      *     var User = request.models.User;
      *     async.seq(
      *         User.get.bind(User),  // 'User.get' has signature (id, callback(err, data))
@@ -2002,7 +2002,7 @@
      *     });
      * });
      */
-    function seq(...functions: any) {
+    function seq(...functions: reduce$1) {
         var _functions = functions.map(wrapAsync);
         return function (...args: any[]) {
             var that = this;
@@ -2087,7 +2087,7 @@
      * transformed items from the `coll`. Invoked with (err, results).
      * @returns {Promise} a promise, if no callback is passed
      */
-    function mapLimit (coll: any[], limit: number, iteratee: any, callback: any) {
+    function mapLimit (coll: any, limit: number, iteratee: Function, callback: Function) {
         return _asyncMap(eachOfLimit(limit), coll, iteratee, callback)
     }
     var mapLimit$1 = awaitify(mapLimit, 4);
@@ -2112,7 +2112,7 @@
      * (err, results).
      * @returns A Promise, if no callback is passed
      */
-    function concatLimit(coll: any[], limit: number, iteratee: Function, callback: Function) {
+    function concatLimit(coll: any[], limit: number, iteratee: any, callback: any) {
         var _iteratee = wrapAsync(iteratee);
         return mapLimit$1(coll, limit, (val, iterCb) => {
             _iteratee(val, (err, ...args) => {
@@ -2163,7 +2163,7 @@
      * let withMissingDirectoryList = ['dir1','dir2','dir3', 'dir4'];
      *
      * // Using callbacks
-     * async.concat(directoryList, fs.readdir, function(err: Error, results: any) {
+     * async.concat(directoryList, fs.readdir, function(err: Error, results: string[]) {
      *    if (err) {
      *        console.log(err);
      *    } else {
@@ -2173,7 +2173,7 @@
      * });
      *
      * // Error Handling
-     * async.concat(withMissingDirectoryList, fs.readdir, function(err: Error, results: any) {
+     * async.concat(withMissingDirectoryList, fs.readdir, function(err: Error, results: string[]) {
      *    if (err) {
      *        console.log(err);
      *        // [ Error: ENOENT: no such file or directory ]
@@ -2226,7 +2226,7 @@
      * }
      *
      */
-    function concat(coll: Array<any>, iteratee: Function, callback: Function) {
+    function concat(coll: any[], iteratee: Function, callback: Function) {
         return concatLimit$1(coll, Infinity, iteratee, callback)
     }
     var concat$1 = awaitify(concat, 3);
@@ -2251,7 +2251,7 @@
      * (err, results).
      * @returns A Promise, if no callback is passed
      */
-    function concatSeries(coll: any[], iteratee: Function, callback: Function) {
+    function concatSeries(coll: any, iteratee: Function, callback: Function) {
         return concatLimit$1(coll, 1, iteratee, callback)
     }
     var concatSeries$1 = awaitify(concatSeries, 3);
@@ -2274,7 +2274,7 @@
      *
      * async.waterfall([
      *     async.constant(42),
-     *     function (value: number, next: Function) {
+     *     function (value: any, next: Function) {
      *         // value === 42
      *     },
      *     //...
@@ -2292,7 +2292,7 @@
      * async.auto({
      *     hostname: async.constant("https://server.net/"),
      *     port: findFreePort,
-     *     launchServer: ["hostname", "port", function (options: any, cb: any) {
+     *     launchServer: ["hostname", "port", function (options: any, cb: Function) {
      *         startServer(options, cb);
      *     }],
      *     //...
@@ -2305,7 +2305,7 @@
         };
     }
 
-    function _createTester(check: any, getResult: any) {
+    function _createTester(check: Function, getResult: Function) {
         return (eachfn, arr, _iteratee, cb) => {
             var testPassed = false;
             var testResult;
@@ -2368,7 +2368,7 @@
      * }
      *
      * async.detect(['file3.txt','file2.txt','dir1/file1.txt'], fileExists,
-     *    function(err: Error, result: any) {
+     *    function(err: any, result: any) {
      *        console.log(result);
      *        // dir1/file1.txt
      *        // result now equals the first file in the list that exists
@@ -2399,7 +2399,7 @@
      * }
      *
      */
-    function detect(coll: any[], iteratee: any, callback: any) {
+    function detect(coll: any[], iteratee: Function, callback: Function) {
         return _createTester(bool => bool, (res, item) => item)(eachOf$1, coll, iteratee, callback)
     }
     var detect$1 = awaitify(detect, 3);
@@ -2427,7 +2427,7 @@
      * (err, result).
      * @returns {Promise} a promise, if a callback is omitted
      */
-    function detectLimit(coll: any[], limit: number, iteratee: any, callback: any) {
+    function detectLimit(coll: any[], limit: number, iteratee: Function, callback: Function) {
         return _createTester(bool => bool, (res, item) => item)(eachOfLimit(limit), coll, iteratee, callback)
     }
     var detectLimit$1 = awaitify(detectLimit, 4);
@@ -2453,7 +2453,7 @@
      * (err, result).
      * @returns {Promise} a promise, if a callback is omitted
      */
-    function detectSeries(coll: any[], iteratee: Function, callback: Function) {
+    function detectSeries(coll: any, iteratee: Function, callback: Function) {
         return _createTester(bool => bool, (res, item) => item)(eachOfLimit(1), coll, iteratee, callback)
     }
 
@@ -2543,7 +2543,7 @@
             _test(...args, check);
         }
 
-        function check(err: any, truth: boolean) {
+        function check(err: any, truth: any) {
             if (err) return callback(err);
             if (err === false) return;
             if (!truth) return callback(null, ...results);
@@ -2576,7 +2576,7 @@
      * callback. Invoked with (err, [results]);
      * @returns {Promise} a promise, if no callback is passed
      */
-    function doUntil(iteratee: Function, test: Function, callback: Function) {
+    function doUntil(iteratee: AsyncFunction, test: AsyncFunction, callback: AsyncFunction) {
         const _test = wrapAsync(test);
         return doWhilst$1(iteratee, (...args) => {
             const cb = args.pop();
@@ -2584,7 +2584,7 @@
         }, callback);
     }
 
-    function _withoutIndex(iteratee: any) {
+    function _withoutIndex(iteratee: Function) {
         return (value, index, callback) => iteratee(value, callback);
     }
 
@@ -2623,7 +2623,7 @@
      * const withMissingFileList = ['dir1/file1.txt', 'dir4/file2.txt'];
      *
      * // asynchronous function that deletes a file
-     * const deleteFile = function(file: string, callback: any) {
+     * const deleteFile = function(file: string, callback: Function) {
      *     fs.unlink(file, callback);
      * };
      *
@@ -2637,7 +2637,7 @@
      * });
      *
      * // Error Handling
-     * async.each(withMissingFileList, deleteFile, function(err: any){
+     * async.each(withMissingFileList, deleteFile, function(err: Error){
      *     console.log(err);
      *     // [ Error: ENOENT: no such file or directory ]
      *     // since dir4/file2.txt does not exist
@@ -2687,7 +2687,7 @@
      * }
      *
      */
-    function eachLimit(coll: any[], iteratee: any, callback: any) {
+    function eachLimit(coll: any, iteratee: Function, callback: Function) {
         return eachOf$1(coll, _withoutIndex(wrapAsync(iteratee)), callback);
     }
 
@@ -2714,7 +2714,7 @@
      * `iteratee` functions have finished, or an error occurs. Invoked with (err).
      * @returns {Promise} a promise, if a callback is omitted
      */
-    function eachLimit$1(coll: any, limit: number, iteratee: any, callback: any) {
+    function eachLimit$1(coll: any, limit: any, iteratee: any, callback: any) {
         return eachOfLimit(limit)(coll, _withoutIndex(wrapAsync(iteratee)), callback);
     }
     var eachLimit$2 = awaitify(eachLimit$1, 4);
@@ -2767,7 +2767,7 @@
      * signature as the function passed in.
      * @example
      *
-     * function sometimesAsync(arg: number, callback: any) {
+     * function sometimesAsync(arg: any, callback: any) {
      *     if (cache[arg]) {
      *         return callback(null, cache[arg]); // this would be synchronous!!
      *     } else {
@@ -2784,7 +2784,7 @@
      */
     function ensureAsync(fn: Function) {
         if (isAsync(fn)) return fn;
-        return function (...args/*: any[], callback*/: Function) {
+        return function (...args/*: any[], callback*/: any) {
             var callback = args.pop();
             var sync = true;
             args.push((...innerArgs) => {
@@ -2836,7 +2836,7 @@
      * }
      *
      * // Using callbacks
-     * async.every(fileList, fileExists, function(err: Error, result: any) {
+     * async.every(fileList, fileExists, function(err: Error, result: boolean) {
      *     console.log(result);
      *     // true
      *     // result is true since every file exists
@@ -2893,7 +2893,7 @@
      * }
      *
      */
-    function every(coll: any[], iteratee: Function, callback: Function) {
+    function every(coll: any, iteratee: Function, callback: Function) {
         return _createTester(bool => !bool, res => !res)(eachOf$1, coll, iteratee, callback)
     }
     var every$1 = awaitify(every, 3);
@@ -2919,7 +2919,7 @@
      * depending on the values of the async tests. Invoked with (err, result).
      * @returns {Promise} a promise, if no callback provided
      */
-    function everyLimit(coll: any[], limit: number, iteratee: any, callback: any) {
+    function everyLimit(coll: Array<any>, limit: number, iteratee: Function, callback: Function) {
         return _createTester(bool => !bool, res => !res)(eachOfLimit(limit), coll, iteratee, callback)
     }
     var everyLimit$1 = awaitify(everyLimit, 4);
@@ -2944,12 +2944,12 @@
      * depending on the values of the async tests. Invoked with (err, result).
      * @returns {Promise} a promise, if no callback provided
      */
-    function everySeries(coll: any[], iteratee: Function, callback: Function) {
+    function everySeries(coll: any, iteratee: any, callback: any) {
         return _createTester(bool => !bool, res => !res)(eachOfSeries$1, coll, iteratee, callback)
     }
     var everySeries$1 = awaitify(everySeries, 3);
 
-    function filterArray(eachfn: Function, arr: any[], iteratee: Function, callback: Function) {
+    function filterArray(eachfn: EachFunction<any>, arr: any[], iteratee: Function, callback: Function) {
         var truthValues = new Array(arr.length);
         eachfn(arr, (x, index, iterCb) => {
             iteratee(x, (err, v) => {
@@ -2966,7 +2966,7 @@
         });
     }
 
-    function filterGeneric(eachfn: Function, coll: any[], iteratee: Function, callback: Function) {
+    function filterGeneric(eachfn: EachFunction<any>, coll: any, iteratee: any, callback: any) {
         var results = [];
         eachfn(coll, (x, index, iterCb) => {
             iteratee(x, (err, v) => {
@@ -2984,7 +2984,7 @@
         });
     }
 
-    function _filter(eachfn: Function, coll: any, iteratee: Function, callback: Function) {
+    function _filter(eachfn: Function, coll: any[], iteratee: Function, callback: Function) {
         var filter = isArrayLike(coll) ? filterArray : filterGeneric;
         return filter(eachfn, coll, wrapAsync(iteratee), callback);
     }
@@ -3023,7 +3023,7 @@
      * }
      *
      * // Using callbacks
-     * async.filter(files, fileExists, function(err: Error, results: any) {
+     * async.filter(files, fileExists, function(err: Error, results: string[]) {
      *    if(err) {
      *        console.log(err);
      *    } else {
@@ -3057,7 +3057,7 @@
      * }
      *
      */
-    function filter (coll: any[], iteratee: any, callback: any) {
+    function filter (coll: any, iteratee: Function, callback: Function) {
         return _filter(eachOf$1, coll, iteratee, callback)
     }
     var filter$1 = awaitify(filter, 3);
@@ -3082,7 +3082,7 @@
      * `iteratee` functions have finished. Invoked with (err, results).
      * @returns {Promise} a promise, if no callback provided
      */
-    function filterLimit (coll: any[], limit: number, iteratee: any, callback: any) {
+    function filterLimit (coll: AsyncIterable<any>, limit: number, iteratee: Function, callback: Callback<any[]>) {
         return _filter(eachOfLimit(limit), coll, iteratee, callback)
     }
     var filterLimit$1 = awaitify(filterLimit, 4);
@@ -3174,7 +3174,7 @@
      * properties are arrays of values which returned the corresponding key.
      * @returns {Promise} a promise, if no callback is passed
      */
-    function groupByLimit(coll: any[], limit: number, iteratee: any, callback: any) {
+    function groupByLimit(coll: any[], limit: number, iteratee: Function, callback: Function) {
         var _iteratee = wrapAsync(iteratee);
         return mapLimit$1(coll, limit, (val, iterCb) => {
             _iteratee(val, (err, key) => {
@@ -3241,7 +3241,7 @@
      *
      * // asynchronous function that detects file type as none, file, or directory
      * function detectFile(file: string, callback: any) {
-     *     fs.stat(file, function(err: Error, stat: fs.Stats) {
+     *     fs.stat(file, function(err: any, stat: any) {
      *         if (err) {
      *             return callback(null, 'none');
      *         }
@@ -3250,7 +3250,7 @@
      * }
      *
      * //Using callbacks
-     * async.groupBy(files, detectFile, function(err: Error, result: any) {
+     * async.groupBy(files, detectFile, function(err: Error, result: Object) {
      *     if(err) {
      *         console.log(err);
      *     } else {
@@ -3319,7 +3319,7 @@
      * properties are arrays of values which returned the corresponding key.
      * @returns {Promise} a promise, if no callback is passed
      */
-    function groupBySeries (coll: any[], iteratee: Function, callback: Function) {
+    function groupBySeries (coll: any[], iteratee: AsyncFunction, callback: Callback<any[]>) {
         return groupByLimit$1(coll, 1, iteratee, callback)
     }
 
@@ -3340,7 +3340,7 @@
      * @example
      *
      * // in a module
-     * var hello = function(name: string, callback: Function) {
+     * var hello = function(name: String, callback: Function) {
      *     setTimeout(function() {
      *         callback(null, 'hello ' + name);
      *     }, 1000);
@@ -3374,7 +3374,7 @@
      * Invoked with (err, result).
      * @returns {Promise} a promise, if no callback is passed
      */
-    function mapValuesLimit(obj: any, limit: number, iteratee: Function, callback: Function) {
+    function mapValuesLimit(obj: any, limit: number, iteratee: AsyncFunction, callback: AsyncResultCallback<any>) {
         callback = once(callback);
         var newObj = {};
         var _iteratee = wrapAsync(iteratee);
@@ -3437,7 +3437,7 @@
      * };
      *
      * // asynchronous function that returns the file size in bytes
-     * function getFileSizeInBytes(file: File, key: string, callback: any) {
+     * function getFileSizeInBytes(file: string, key: string, callback: any) {
      *     fs.stat(file, function(err: Error, stat: fs.Stats) {
      *         if (err) {
      *             return callback(err);
@@ -3447,7 +3447,7 @@
      * }
      *
      * // Using callbacks
-     * async.mapValues(fileMap, getFileSizeInBytes, function(err: Error, result: string) {
+     * async.mapValues(fileMap, getFileSizeInBytes, function(err: Error, result: Object) {
      *     if (err) {
      *         console.log(err);
      *     } else {
@@ -3462,7 +3462,7 @@
      * });
      *
      * // Error handling
-     * async.mapValues(withMissingFileMap, getFileSizeInBytes, function(err: Error, result: any) {
+     * async.mapValues(withMissingFileMap, getFileSizeInBytes, function(err: Error, result: Object) {
      *     if (err) {
      *         console.log(err);
      *         // [ Error: ENOENT: no such file or directory ]
@@ -3548,7 +3548,7 @@
      * Invoked with (err, result).
      * @returns {Promise} a promise, if no callback is passed
      */
-    function mapValuesSeries(obj: any, iteratee: Function, callback: Function) {
+    function mapValuesSeries(obj: Dictionary<any>, iteratee: AsyncFunction<any>, callback: Callback<Dictionary<any>>) {
         return mapValuesLimit$1(obj, 1, iteratee, callback)
     }
 
@@ -3651,7 +3651,7 @@
      * });
      * call_order.push('one');
      *
-     * async.setImmediate(function (a: number, b: number, c: number) {
+     * async.setImmediate(function (a: any, b: any, c: any) {
      *     // a, b, and c equal 1, 2, and 3
      * }, 1, 2, 3);
      */
@@ -3730,7 +3730,7 @@
      *             callback(null, 'two');
      *         }, 100);
      *     }
-     * ], function(err: Error, results: any) {
+     * ], function(err: Error, results: any[]) {
      *     console.log(results);
      *     // results is equal to ['one','two'] even though
      *     // the second function had a shorter timeout.
@@ -3748,7 +3748,7 @@
      *             callback(null, 2);
      *         }, 100);
      *     }
-     * }, function(err: Error, results: any) {
+     * }, function(err: Error, results: Object) {
      *     console.log(results);
      *     // results is equal to: { one: 1, two: 2 }
      * });
@@ -3775,7 +3775,7 @@
      *
      * // an example using an object instead of an array
      * async.parallel({
-     *     one: function(callback: Function) {
+     *     one: function(callback: any) {
      *         setTimeout(function() {
      *             callback(null, 1);
      *         }, 200);
@@ -3820,7 +3820,7 @@
      * async () => {
      *     try {
      *         let results = await async.parallel({
-     *             one: function(callback: Function) {
+     *             one: function(callback: any) {
      *                 setTimeout(function() {
      *                     callback(null, 1);
      *                 }, 200);
@@ -3864,7 +3864,7 @@
      * Invoked with (err, results).
      * @returns {Promise} a promise, if a callback is not passed
      */
-    function parallelLimit(tasks: any[], limit: number, callback: any) {
+    function parallelLimit(tasks: Array<any>, limit: number, callback: Function) {
         return parallel(eachOfLimit(limit), tasks, callback);
     }
 
@@ -3903,7 +3903,7 @@
      * and a `priority` property, if this is a
      * [priorityQueue]{@link module:ControlFlow.priorityQueue} object.
      * Invoked with `queue.remove(testFn)`, where `testFn` is of the form
-     * `function ({data: any, priority}: any) {}` and returns a Boolean.
+     * `function ({data: task, priority}: Task<T>) {}` and returns a Boolean.
      * @property {Function} saturated - a function that sets a callback that is
      * called when the number of running workers hits the `concurrency` limit, and
      * further tasks will be queued.  If the callback is omitted, `q.saturated()`
@@ -3989,7 +3989,7 @@
      * await q.drain()
      *
      * // assign an error callback
-     * q.error(function(err: any, task: any) {
+     * q.error(function(err: Error, task: Task) {
      *     console.error('task experienced an error');
      * });
      *
@@ -4001,7 +4001,7 @@
      * q.push({name: 'bar'});
      *
      * // add some items to the queue (batch-wise)
-     * q.push([{name: 'baz'},{name: 'bay'},{name: 'bax'}], function(err: Error) {
+     * q.push([{name: 'baz'},{name: 'bay'},{name: 'bax'}], function(err: any) {
      *     console.log('finished processing item');
      * });
      *
@@ -4123,7 +4123,7 @@
         return ((i+1)>>1)-1;
     }
 
-    function smaller(x: Task, y: Task) {
+    function smaller(x: any, y: any) {
         if (x.priority !== y.priority) {
             return x.priority < y.priority;
         }
@@ -4157,7 +4157,7 @@
      *   except this returns a promise that rejects if an error occurs.
      * * The `unshift` and `unshiftAsync` methods were removed.
      */
-    function priorityQueue(worker: Function, concurrency: number) {
+    function priorityQueue(worker: Worker, concurrency: number) {
         // Start with a normal queue
         var q = queue$1(worker, concurrency);
 
@@ -4175,7 +4175,7 @@
             };
         };
 
-        function createDataItems(tasks: Task[], priority: number) {
+        function createDataItems(tasks: any[], priority: number) {
             if (!Array.isArray(tasks)) {
                 return {data: tasks, priority};
             }
@@ -4305,7 +4305,7 @@
      *     })
      * ],
      * // optional callback
-     * function(err: Error, results: any) {
+     * function(err: any, results: any[]) {
      *     // values
      *     // results[0].value = 'one'
      *     // results[1].error = 'bad stuff happened'
@@ -4314,7 +4314,7 @@
      */
     function reflect(fn: Function) {
         var _fn = wrapAsync(fn);
-        return initialParams(function reflectOn(args: any[], reflectCallback: Function) {
+        return initialParams(function reflectOn(args: any[], reflectCallback: any) {
             args.push((error, ...cbArgs) => {
                 let retVal = {};
                 if (error) {
@@ -4355,7 +4355,7 @@
      *             callback(null, 'one');
      *         }, 200);
      *     },
-     *     function(callback: Function) {
+     *     function(callback: any) {
      *         // do some more stuff but error ...
      *         callback(new Error('bad stuff happened'));
      *     },
@@ -4368,7 +4368,7 @@
      *
      * async.parallel(async.reflectAll(tasks),
      * // optional callback
-     * function(err: Error, results: any) {
+     * function(err: Error, results: Array<any>) {
      *     // values
      *     // results[0].value = 'one'
      *     // results[1].error = Error('bad stuff happened')
@@ -4377,12 +4377,12 @@
      *
      * // an example using an object instead of an array
      * let tasks = {
-     *     one: function(callback: Function) {
+     *     one: function(callback: any) {
      *         setTimeout(function() {
      *             callback(null, 'one');
      *         }, 200);
      *     },
-     *     two: function(callback: any) {
+     *     two: function(callback: Function) {
      *         callback('two');
      *     },
      *     three: function(callback: Function) {
@@ -4394,7 +4394,7 @@
      *
      * async.parallel(async.reflectAll(tasks),
      * // optional callback
-     * function(err: Error, results: any) {
+     * function(err: any, results: any) {
      *     // values
      *     // results.one.value = 'one'
      *     // results.two.error = 'two'
@@ -4456,7 +4456,7 @@
      * }
      *
      * // Using callbacks
-     * async.reject(fileList, fileExists, function(err: Error, results: string[]) {
+     * async.reject(fileList, fileExists, function(err: any, results: any) {
      *    // [ 'dir3/file6.txt' ]
      *    // results now equals an array of the non-existing files
      * });
@@ -4485,7 +4485,7 @@
      * }
      *
      */
-    function reject$1 (coll: any[], iteratee: Function, callback: Function) {
+    function reject$1 (coll: Array<any>, iteratee: Function, callback: Callback<Array<any>>) {
         return reject(eachOf$1, coll, iteratee, callback)
     }
     var reject$2 = awaitify(reject$1, 3);
@@ -4510,7 +4510,7 @@
      * `iteratee` functions have finished. Invoked with (err, results).
      * @returns {Promise} a promise, if no callback is passed
      */
-    function rejectLimit (coll: any[], limit: number, iteratee: any, callback: any) {
+    function rejectLimit (coll: AsyncCollection<any>, limit: number, iteratee: Function, callback: Callback<any[]>) {
         return reject(eachOfLimit(limit), coll, iteratee, callback)
     }
     var rejectLimit$1 = awaitify(rejectLimit, 4);
@@ -4589,7 +4589,7 @@
      * });
      *
      * // try calling apiMethod 3 times, waiting 200 ms between each retry
-     * async.retry({times: 3, interval: 200}, apiMethod, function(err: Error, result: any) {
+     * async.retry({times: 3, interval: 200}, apiMethod, function(err: any, result: any) {
      *     // do something with the result
      * });
      *
@@ -4600,7 +4600,7 @@
      *   interval: function(retryCount: number) {
      *     return 50 * Math.pow(2, retryCount);
      *   }
-     * }, apiMethod, function(err: Error, result: any) {
+     * }, apiMethod, function(err: any, result: any) {
      *     // do something with the result
      * });
      *
@@ -4612,7 +4612,7 @@
      * // try calling apiMethod only when error condition satisfies, all other
      * // errors will abort the retry control flow and return to final callback
      * async.retry({
-     *   errorFilter: function(err: any) {
+     *   errorFilter: function(err: Error) {
      *     return err.message === 'Temporary error'; // only retry on a specific error
      *   }
      * }, apiMethod, function(err: Error, result: any) {
@@ -4632,7 +4632,7 @@
     const DEFAULT_TIMES = 5;
     const DEFAULT_INTERVAL = 0;
 
-    function retry(opts: any, task: any, callback: any) {
+    function retry(opts: Options, task: Function, callback: Function) {
         var options = {
             times: DEFAULT_TIMES,
             intervalFunc: constant$1(DEFAULT_INTERVAL)
@@ -4670,7 +4670,7 @@
         return callback[PROMISE_SYMBOL]
     }
 
-    function parseTimes(acc: string[], t: string) {
+    function parseTimes(acc: any, t: any) {
         if (typeof t === 'object') {
             acc.times = +t.times || DEFAULT_TIMES;
 
@@ -4715,7 +4715,7 @@
      *     })]
      * }, callback);
      */
-    function retryable (opts: RetryOptions, task: Task<any>) {
+    function retryable (opts: RetryOptions, task: AsyncFunction) {
         if (!task) {
             task = opts;
             opts = null;
@@ -4730,7 +4730,7 @@
                 args.push(callback);
                 callback = promiseCallback();
             }
-            function taskFn(cb: Function) {
+            function taskFn(cb: Callback) {
                 _task(...args, cb);
             }
 
@@ -4791,7 +4791,7 @@
      *             callback(null, 'two');
      *         }, 100);
      *     }
-     * ], function(err: Error, results: any) {
+     * ], function(err: any, results: any) {
      *     console.log(results);
      *     // results is equal to ['one','two']
      * });
@@ -4947,7 +4947,7 @@
      *
      * // Using callbacks
      * async.some(['dir1/missing.txt','dir2/missing.txt','dir3/file5.txt'], fileExists,
-     *    function(err: Error, result: any) {
+     *    function(err: Error, result: boolean) {
      *        console.log(result);
      *        // true
      *        // result is true since some file in the list exists
@@ -5007,7 +5007,7 @@
      * }
      *
      */
-    function some(coll: any[], iteratee: any, callback: any) {
+    function some(coll: any[], iteratee: Function, callback: Function) {
         return _createTester(Boolean, res => res)(eachOf$1, coll, iteratee, callback)
     }
     var some$1 = awaitify(some, 3);
@@ -5034,7 +5034,7 @@
      * tests. Invoked with (err, result).
      * @returns {Promise} a promise, if no callback provided
      */
-    function someLimit(coll: any[], limit: number, iteratee: any, callback: any) {
+    function someLimit(coll: Array<any>, limit: number, iteratee: Function, callback: Function) {
         return _createTester(Boolean, res => res)(eachOfLimit(limit), coll, iteratee, callback)
     }
     var someLimit$1 = awaitify(someLimit, 4);
@@ -5060,7 +5060,7 @@
      * tests. Invoked with (err, result).
      * @returns {Promise} a promise, if no callback provided
      */
-    function someSeries(coll: any[], iteratee: any, callback: any) {
+    function someSeries(coll: any[], iteratee: Function, callback: Function) {
         return _createTester(Boolean, res => res)(eachOfSeries$1, coll, iteratee, callback)
     }
     var someSeries$1 = awaitify(someSeries, 3);
@@ -5092,7 +5092,7 @@
      * // smallfile.txt is a file that is 121 bytes in size
      *
      * // asynchronous function that returns the file size in bytes
-     * function getFileSizeInBytes(file: any, callback: any) {
+     * function getFileSizeInBytes(file: string, callback: any) {
      *     fs.stat(file, function(err: Error, stat: fs.Stats) {
      *         if (err) {
      *             return callback(err);
@@ -5103,7 +5103,7 @@
      *
      * // Using callbacks
      * async.sortBy(['mediumfile.txt','smallfile.txt','bigfile.txt'], getFileSizeInBytes,
-     *     function(err: Error, results: any) {
+     *     function(err: Error, results: string[]) {
      *         if (err) {
      *             console.log(err);
      *         } else {
@@ -5120,11 +5120,11 @@
      *
      * // ascending order
      * async.sortBy(['mediumfile.txt','smallfile.txt','bigfile.txt'], function(file: string, callback: any) {
-     *     getFileSizeInBytes(file, function(getFileSizeErr: any, fileSize: any) {
+     *     getFileSizeInBytes(file, function(getFileSizeErr: Error, fileSize: number) {
      *         if (getFileSizeErr) return callback(getFileSizeErr);
      *         callback(null, fileSize);
      *     });
-     * }, function(err: Error, results: any) {
+     * }, function(err: Error, results: string[]) {
      *         if (err) {
      *             console.log(err);
      *         } else {
@@ -5137,14 +5137,14 @@
      * );
      *
      * // descending order
-     * async.sortBy(['bigfile.txt','mediumfile.txt','smallfile.txt'], function(file: string, callback: Function) {
-     *     getFileSizeInBytes(file, function(getFileSizeErr: any, fileSize: any) {
+     * async.sortBy(['bigfile.txt','mediumfile.txt','smallfile.txt'], function(file: string, callback: any) {
+     *     getFileSizeInBytes(file, function(getFileSizeErr: Error, fileSize: number) {
      *         if (getFileSizeErr) {
      *             return callback(getFileSizeErr);
      *         }
      *         callback(null, fileSize * -1);
      *     });
-     * }, function(err: Error, results: any) {
+     * }, function(err: Error, results: string[]) {
      *         if (err) {
      *             console.log(err);
      *         } else {
@@ -5158,7 +5158,7 @@
      *
      * // Error handling
      * async.sortBy(['mediumfile.txt','smallfile.txt','missingfile.txt'], getFileSizeInBytes,
-     *     function(err: Error, results: any) {
+     *     function(err: Error, results: Array<any>) {
      *         if (err) {
      *             console.log(err);
      *             // [ Error: ENOENT: no such file or directory ]
@@ -5215,7 +5215,7 @@
      * }
      *
      */
-    function sortBy (coll: any[], iteratee: any, callback: any) {
+    function sortBy (coll: any[], iteratee: Function, callback: Function) {
         var _iteratee = wrapAsync(iteratee);
         return map$1(coll, (x, iterCb) => {
             _iteratee(x, (err, criteria) => {
@@ -5254,7 +5254,7 @@
      * @example
      *
      * function myFunction(foo: string, callback: any) {
-     *     doAsyncTask(foo, function(err: Error, data: any) {
+     *     doAsyncTask(foo, function(err: any, data: any) {
      *         // handle errors
      *         if (err) return callback(err);
      *
@@ -5268,14 +5268,14 @@
      * var wrapped = async.timeout(myFunction, 1000);
      *
      * // call `wrapped` as you would `myFunction`
-     * wrapped({ bar: 'bar' }, function(err: any, data: any) {
+     * wrapped({ bar: 'bar' }, function(err: Error, data: any) {
      *     // if `myFunction` takes < 1000 ms to execute, `err`
      *     // and `data` will have their expected values
      *
      *     // else `err` will be an Error with the code 'ETIMEDOUT'
      * });
      */
-    function timeout(asyncFn: Function, milliseconds: number, info: string) {
+    function timeout(asyncFn: AsyncFunction, milliseconds: number, info: any) {
         var fn = wrapAsync(asyncFn);
 
         return initialParams((args, callback) => {
@@ -5354,7 +5354,7 @@
      * @example
      *
      * // Pretend this is some complicated async factory
-     * var createUser = function(id: string, callback: Function) {
+     * var createUser = function(id: number, callback: Function) {
      *     callback(null, {
      *         id: 'user' + id
      *     });
@@ -5362,7 +5362,7 @@
      *
      * // generate 5 users
      * async.times(5, function(n: number, next: Function) {
-     *     createUser(n, function(err: Error, user: User) {
+     *     createUser(n, function(err: any, user: any) {
      *         next(err, user);
      *     });
      * }, function(err: Error, users: User[]) {
@@ -5428,8 +5428,8 @@
      *
      * // asynchronous function that returns the file size, transformed to human-readable format
      * // e.g. 1024 bytes = 1KB, 1234 bytes = 1.21 KB, 1048576 bytes = 1MB, etc.
-     * function transformFileSize(acc: number, value: number, key: string, callback: Function) {
-     *     fs.stat(value, function(err: Error, stat: fs.Stats) {
+     * function transformFileSize(acc: any, value: any, key: any, callback: any) {
+     *     fs.stat(value, function(err: any, stat: any) {
      *         if (err) {
      *             return callback(err);
      *         }
@@ -5439,7 +5439,7 @@
      * }
      *
      * // Using callbacks
-     * async.transform(fileList, transformFileSize, function(err: Error, result: any) {
+     * async.transform(fileList, transformFileSize, function(err: Error, result: string[]) {
      *     if(err) {
      *         console.log(err);
      *     } else {
@@ -5485,7 +5485,7 @@
      *
      * // asynchronous function that returns the file size, transformed to human-readable format
      * // e.g. 1024 bytes = 1KB, 1234 bytes = 1.21 KB, 1048576 bytes = 1MB, etc.
-     * function transformFileSize(acc: number, value: number, key: string, callback: Function) {
+     * function transformFileSize(acc: any, value: any, key: any, callback: any) {
      *     fs.stat(value, function(err: Error, stat: fs.Stats) {
      *         if (err) {
      *             return callback(err);
@@ -5496,7 +5496,7 @@
      * }
      *
      * // Using callbacks
-     * async.transform(fileMap, transformFileSize, function(err: Error, result: any) {
+     * async.transform(fileMap, transformFileSize, function(err: Error, result: Object) {
      *     if(err) {
      *         console.log(err);
      *     } else {
@@ -5527,7 +5527,7 @@
      * }
      *
      */
-    function transform (coll: any[], accumulator: any, iteratee: any, callback: any) {
+    function transform (coll: Array<any>, accumulator: any, iteratee: Function, callback: Function) {
         if (arguments.length <= 3 && typeof accumulator === 'function') {
             callback = iteratee;
             iteratee = accumulator;
@@ -5564,23 +5564,23 @@
      * @returns {Promise} a promise, if no callback is passed
      * @example
      * async.tryEach([
-     *     function getDataFromFirstWebsite(callback: Function) {
+     *     function getDataFromFirstWebsite(callback: any) {
      *         // Try getting the data from the first website
      *         callback(err, data);
      *     },
-     *     function getDataFromSecondWebsite(callback: any) {
+     *     function getDataFromSecondWebsite(callback: Function) {
      *         // First website failed,
      *         // Try getting the data from the backup website
      *         callback(err, data);
      *     }
      * ],
      * // optional callback
-     * function(err: Error, results: any) {
+     * function(err: any, results: any) {
      *     Now do something with the data.
      * });
      *
      */
-    function tryEach(tasks: Array<Function>, callback: Function) {
+    function tryEach(tasks: Array<AsyncFunction>, callback: AsyncFunction) {
         var error = null;
         var result;
         return eachSeries$1(tasks, (task, taskCb) => {
@@ -5641,14 +5641,14 @@
      *
      * var count = 0;
      * async.whilst(
-     *     function test(cb: any) { cb(null, count < 5); },
+     *     function test(cb: Function) { cb(null, count < 5); },
      *     function iter(callback: Function) {
      *         count++;
      *         setTimeout(function() {
      *             callback(null, count);
      *         }, 1000);
      *     },
-     *     function (err: Error, n: number) {
+     *     function (err: any, n: number) {
      *         // 5 seconds have passed, n = 5
      *     }
      * );
@@ -5666,7 +5666,7 @@
             _test(check);
         }
 
-        function check(err: any, truth: boolean) {
+        function check(err: any, truth: any) {
             if (err) return callback(err);
             if (err === false) return;
             if (!truth) return callback(null, ...results);
@@ -5703,20 +5703,20 @@
      * @example
      * const results = []
      * let finished = false
-     * async.until(function test(cb: any) {
+     * async.until(function test(cb: Function) {
      *     cb(null, finished)
-     * }, function iter(next: any) {
+     * }, function iter(next: Function) {
      *     fetchPage(url, (err, body) => {
      *         if (err) return next(err)
      *         results = results.concat(body.objects)
      *         finished = !!body.next
      *         next(err)
      *     })
-     * }, function done (err: Error) {
+     * }, function done (err: any) {
      *     // all pages have been fetched
      * })
      */
-    function until(test: Function, iteratee: Function, callback: Function) {
+    function until(test: AsyncBooleanIterator<any>, iteratee: AsyncFunction<any>, callback: AsyncFunction<any>) {
         const _test = wrapAsync(test);
         return whilst$1((cb) => _test((err, truth) => cb (err, !truth)), iteratee, callback);
     }
@@ -5746,15 +5746,15 @@
      *     function(callback: Function) {
      *         callback(null, 'one', 'two');
      *     },
-     *     function(arg1: any, arg2: any, callback: any) {
+     *     function(arg1: string, arg2: string, callback: Function) {
      *         // arg1 now equals 'one' and arg2 now equals 'two'
      *         callback(null, 'three');
      *     },
-     *     function(arg1: any, callback: any) {
+     *     function(arg1: any, callback: Function) {
      *         // arg1 now equals 'three'
      *         callback(null, 'done');
      *     }
-     * ], function (err: Error, result: any) {
+     * ], function (err: any, result: any) {
      *     // result now equals 'done'
      * });
      *
@@ -5763,13 +5763,13 @@
      *     myFirstFunction,
      *     mySecondFunction,
      *     myLastFunction,
-     * ], function (err: Error, result: any) {
+     * ], function (err: any, result: any) {
      *     // result now equals 'done'
      * });
      * function myFirstFunction(callback: Function) {
      *     callback(null, 'one', 'two');
      * }
-     * function mySecondFunction(arg1: string, arg2: number, callback: Function) {
+     * function mySecondFunction(arg1: string, arg2: number, callback: any) {
      *     // arg1 now equals 'one' and arg2 now equals 'two'
      *     callback(null, 'three');
      * }
@@ -5784,7 +5784,7 @@
         if (!tasks.length) return callback();
         var taskIndex = 0;
 
-        function nextTask(args: any) {
+        function nextTask(args: any[]) {
             var task = wrapAsync(tasks[taskIndex++]);
             task(...args, onlyOnce(next));
         }
@@ -5805,7 +5805,7 @@
     /**
      * An "async function" in the context of Async is an asynchronous function with
      * a variable number of parameters, with the final parameter being a callback.
-     * (`function (arg1: any, arg2: any, ...: any[], callback: any) {}`)
+     * (`function (arg1: any, arg2: any, ...: any[], callback: Function) {}`)
      * The final callback is of the form `callback(err, results...)`, which must be
      * called once the function is completed.  The callback should be called with a
      * Error as its first argument to signal that an error occurred.

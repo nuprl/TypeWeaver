@@ -436,7 +436,7 @@ const configs = {
 	}
 };
 
-function defaultsReducer(defaults: Object, [name: string, {default: value}]: any) {
+function defaultsReducer(defaults: Config, [name: string, {default: value}]: any) {
 	/* Modifying arrays in defaults is safe, does not change schema. */
 	if (Array.isArray(value)) {
 		value = [...value];

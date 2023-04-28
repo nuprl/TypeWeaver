@@ -10,12 +10,12 @@ export const jsonDiff = new Diff();
 jsonDiff.useLongestToken = true;
 
 jsonDiff.tokenize = lineDiff.tokenize;
-jsonDiff.castInput = function(value: string) {
+jsonDiff.castInput = function(value: any) {
   const {undefinedReplacement, stringifyReplacer = (k, v) => typeof v === 'undefined' ? undefinedReplacement : v} = this.options;
 
   return typeof value === 'string' ? value : JSON.stringify(canonicalize(value, null, null, stringifyReplacer), stringifyReplacer, '  ');
 };
-jsonDiff.equals = function(left: any, right: any) {
+jsonDiff.equals = function(left: string, right: string) {
   return Diff.prototype.equals.call(jsonDiff, left.replace(/,([\r\n])/g, '$1'), right.replace(/,([\r\n])/g, '$1'));
 };
 
@@ -23,7 +23,7 @@ export function diffJson(oldObj: any, newObj: any, options: any) { return jsonDi
 
 // This function handles the presence of circular references by bailing out when encountering an
 // object that is already on the "stack" of items being processed. Accepts an optional replacer
-export function canonicalize(obj: any, stack: any[], replacementStack: any[], replacer: any, key: string) {
+export function canonicalize(obj: any, stack: any[], replacementStack: any[], replacer: any, key: any) {
   stack = stack || [];
   replacementStack = replacementStack || [];
 

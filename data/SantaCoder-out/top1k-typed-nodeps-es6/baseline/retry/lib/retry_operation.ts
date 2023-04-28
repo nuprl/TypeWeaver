@@ -1,4 +1,4 @@
-function RetryOperation(timeouts: number[], options: RetryOptions) {
+function RetryOperation(timeouts: Timeouts, options: RetryOptions) {
   // Compatibility for the old (timeouts, retryForever) signature
   if (typeof options === 'boolean') {
     options = { forever: options };
@@ -40,7 +40,7 @@ RetryOperation.prototype.stop = function() {
   this._cachedTimeouts = null;
 };
 
-RetryOperation.prototype.retry = function(err: any) {
+RetryOperation.prototype.retry = function(err: Error) {
   if (this._timeout) {
     clearTimeout(this._timeout);
   }
@@ -92,7 +92,7 @@ RetryOperation.prototype.retry = function(err: any) {
   return true;
 };
 
-RetryOperation.prototype.attempt = function(fn: Function, timeoutOps: TimeoutOptions) {
+RetryOperation.prototype.attempt = function(fn: Function, timeoutOps: TimeoutOps) {
   this._fn = fn;
 
   if (timeoutOps) {

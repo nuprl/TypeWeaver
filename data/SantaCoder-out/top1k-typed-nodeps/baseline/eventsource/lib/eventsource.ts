@@ -32,7 +32,7 @@ function hasBom (buf: Buffer) {
  * @param {Object} [eventSourceInitDict] extra init params. See README for details.
  * @api public
  **/
-function EventSource (url: string, eventSourceInitDict: EventSourceInitDict) {
+function EventSource (url: string, eventSourceInitDict: EventSourceInit) {
   var readyState = EventSource.CONNECTING
   var headers = eventSourceInitDict && eventSourceInitDict.headers
   var hasNewOrigin = false
@@ -143,7 +143,7 @@ function EventSource (url: string, eventSourceInitDict: EventSourceInitDict) {
       options.withCredentials = eventSourceInitDict.withCredentials
     }
 
-    req = (isSecure ? https : http).request(options, function (res: any) {
+    req = (isSecure ? https : http).request(options, function (res: IncomingMessage) {
       self.connectionInProgress = false
       // Handle HTTP errors
       if (res.statusCode === 500 || res.statusCode === 502 || res.statusCode === 503 || res.statusCode === 504) {
@@ -271,7 +271,7 @@ function EventSource (url: string, eventSourceInitDict: EventSourceInitDict) {
       })
     })
 
-    req.on('error', function (err: any) {
+    req.on('error', function (err: Error) {
       self.connectionInProgress = false
       onConnectionClosed(err.message)
     })
@@ -365,7 +365,7 @@ EventSource.prototype.constructor = EventSource; // make stacktraces readable
      * @return {Mixed} the set function or undefined
      * @api private
      */
-    set: function set (listener: Function) {
+    set: function set (listener: EventListener) {
       this.removeAllListeners(method)
       this.addEventListener(method, listener)
     }
@@ -402,7 +402,7 @@ EventSource.prototype.close = function () {
  * @see http://dev.w3.org/html5/websockets/#the-websocket-interface
  * @api public
  */
-EventSource.prototype.addEventListener = function addEventListener (type: string, listener: EventListenerOrEventListenerObject) {
+EventSource.prototype.addEventListener = function addEventListener (type: string, listener: Function) {
   if (typeof listener === 'function') {
     // store a reference so we can return the original function again
     listener._listener = listener
@@ -434,7 +434,7 @@ EventSource.prototype.dispatchEvent = function dispatchEvent (event: Event) {
  * @see http://dev.w3.org/html5/websockets/#the-websocket-interface
  * @api public
  */
-EventSource.prototype.removeEventListener = function removeEventListener (type: string, listener: EventListenerOrEventListenerObject) {
+EventSource.prototype.removeEventListener = function removeEventListener (type: string, listener: Function) {
   if (typeof listener === 'function') {
     listener._listener = undefined
     this.removeListener(type, listener)
@@ -447,7 +447,7 @@ EventSource.prototype.removeEventListener = function removeEventListener (type: 
  * @see http://www.w3.org/TR/DOM-Level-3-Events/#interface-Event
  * @api private
  */
-function Event (type: string, optionalProperties: any) {
+function Event (type: string, optionalProperties: Object) {
   Object.defineProperty(this, 'type', { writable: false, value: type, enumerable: true })
   if (optionalProperties) {
     for (var f in optionalProperties) {

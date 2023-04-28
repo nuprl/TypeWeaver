@@ -50,7 +50,7 @@ var PointYamlType = new yaml.Type('!point', {
   },
 
   // If a node is resolved, use it to create a Point instance.
-  construct: function (data: number[]) {
+  construct: function (data: any) {
     return new Point(data[0], data[1], data[2]);
   },
 
@@ -84,7 +84,7 @@ var SPACE_SCHEMA = yaml.DEFAULT_SCHEMA.extend([ SpaceYamlType, PointYamlType ]);
 if (require.main === module) {
 
   // And read a document using that schema.
-  fs.readFile(path.join(__dirname, 'custom_types.yml'), 'utf8', function (error: any, data: any) {
+  fs.readFile(path.join(__dirname, 'custom_types.yml'), 'utf8', function (error: Error, data: string) {
     var loaded;
 
     if (!error) {

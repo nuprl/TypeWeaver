@@ -7,7 +7,7 @@ function p(char: string) {
 }
 
 // https://url.spec.whatwg.org/#percent-encode
-function percentEncode(c: string) {
+function percentEncode(c: number) {
   let hex = c.toString(16).toUpperCase();
   if (hex.length === 1) {
     hex = `0${hex}`;
@@ -17,7 +17,7 @@ function percentEncode(c: string) {
 }
 
 // https://url.spec.whatwg.org/#percent-decode
-function percentDecodeBytes(input: string) {
+function percentDecodeBytes(input: Uint8Array) {
   const output = new Uint8Array(input.byteLength);
   let outputIndex = 0;
   for (let i = 0; i < input.byteLength; ++i) {
@@ -49,7 +49,7 @@ function isC0ControlPercentEncode(c: number) {
 
 // https://url.spec.whatwg.org/#fragment-percent-encode-set
 const extraFragmentPercentEncodeSet = new Set([p(" "), p("\""), p("<"), p(">"), p("`")]);
-function isFragmentPercentEncode(c: number) {
+function isFragmentPercentEncode(c: string) {
   return isC0ControlPercentEncode(c) || extraFragmentPercentEncodeSet.has(c);
 }
 
@@ -73,7 +73,7 @@ function isPathPercentEncode(c: string) {
 // https://url.spec.whatwg.org/#userinfo-percent-encode-set
 const extraUserinfoPercentEncodeSet =
   new Set([p("/"), p(":"), p(";"), p("="), p("@"), p("["), p("\\"), p("]"), p("^"), p("|")]);
-function isUserinfoPercentEncode(c: number) {
+function isUserinfoPercentEncode(c: string) {
   return isPathPercentEncode(c) || extraUserinfoPercentEncodeSet.has(c);
 }
 
@@ -85,7 +85,7 @@ function isComponentPercentEncode(c: string) {
 
 // https://url.spec.whatwg.org/#application-x-www-form-urlencoded-percent-encode-set
 const extraURLEncodedPercentEncodeSet = new Set([p("!"), p("'"), p("("), p(")"), p("~")]);
-function isURLEncodedPercentEncode(c: string) {
+function isURLEncodedPercentEncode(c: number) {
   return isComponentPercentEncode(c) || extraURLEncodedPercentEncodeSet.has(c);
 }
 
@@ -109,13 +109,13 @@ function utf8PercentEncodeCodePointInternal(codePoint: number, percentEncodePred
   return output;
 }
 
-function utf8PercentEncodeCodePoint(codePoint: number, percentEncodePredicate: any) {
+function utf8PercentEncodeCodePoint(codePoint: number, percentEncodePredicate: PercentEncodePredicate) {
   return utf8PercentEncodeCodePointInternal(String.fromCodePoint(codePoint), percentEncodePredicate);
 }
 
 // https://url.spec.whatwg.org/#string-percent-encode-after-encoding
 // https://url.spec.whatwg.org/#string-utf-8-percent-encode
-function utf8PercentEncodeString(input: string, percentEncodePredicate: any, spaceAsPlus = false: boolean) {
+function utf8PercentEncodeString(input: string, percentEncodePredicate: PercentEncodePredicate, spaceAsPlus = false: boolean) {
   let output = "";
   for (const codePoint of input) {
     if (spaceAsPlus && codePoint === " ") {

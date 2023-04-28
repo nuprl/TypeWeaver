@@ -47,7 +47,7 @@ module['exports'] = function zalgo(text: string, options: Options) {
 
   function isChar(character: string) {
     var bool = false;
-    all.filter(function(i: string) {
+    all.filter(function(i: number) {
       bool = (i === character);
     });
     return bool;

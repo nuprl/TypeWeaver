@@ -10,7 +10,7 @@ const { EMPTY_BUFFER } = require('./constants');
  * @return {Buffer} The resulting buffer
  * @public
  */
-function concat(list: Array<any>, totalLength: number) {
+function concat(list: Buffer[], totalLength: number) {
   if (list.length === 0) return EMPTY_BUFFER;
   if (list.length === 1) return list[0];
 
@@ -38,7 +38,7 @@ function concat(list: Array<any>, totalLength: number) {
  * @param {Number} length The number of bytes to mask.
  * @public
  */
-function _mask(source: string, mask: string, output: string, offset: maskOffset, length: maskLength) {
+function _mask(source: Buffer, mask: Buffer, output: Buffer, offset: number, length: number) {
   for (let i = 0; i < length; i++) {
     output[offset + i] = source[i] ^ mask[i & 3];
   }
@@ -80,7 +80,7 @@ function toArrayBuffer(buf: Buffer) {
  * @throws {TypeError}
  * @public
  */
-function toBuffer(data: any) {
+function toBuffer(data: Buffer) {
   toBuffer.readOnly = true;
 
   if (Buffer.isBuffer(data)) return data;
@@ -112,12 +112,12 @@ if (!process.env.WS_NO_BUFFER_UTIL) {
   try {
     const bufferUtil = require('bufferutil');
 
-    module.exports.mask = function (source: Uint8Array, mask: Uint8Array, output: Uint8Array, offset: number, length: number) {
+    module.exports.mask = function (source: Buffer, mask: Buffer, output: Buffer, offset: number, length: number) {
       if (length < 48) _mask(source, mask, output, offset, length);
       else bufferUtil.mask(source, mask, output, offset, length);
     };
 
-    module.exports.unmask = function (buffer: Buffer, mask: string) {
+    module.exports.unmask = function (buffer: Buffer, mask: Buffer) {
       if (buffer.length < 32) _unmask(buffer, mask);
       else bufferUtil.unmask(buffer, mask);
     };

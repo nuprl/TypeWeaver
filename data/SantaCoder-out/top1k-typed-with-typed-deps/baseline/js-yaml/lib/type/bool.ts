@@ -2,7 +2,7 @@
 
 var Type = require('../type');
 
-function resolveYamlBoolean(data: any) {
+function resolveYamlBoolean(data: string) {
   if (data === null) return false;
 
   var max = data.length;
@@ -11,7 +11,7 @@ function resolveYamlBoolean(data: any) {
          (max === 5 && (data === 'false' || data === 'False' || data === 'FALSE'));
 }
 
-function constructYamlBoolean(data: string) {
+function constructYamlBoolean(data: any) {
   return data === 'true' ||
          data === 'True' ||
          data === 'TRUE';
@@ -27,8 +27,8 @@ module.exports = new Type('tag:yaml.org,2002:bool', {
   construct: constructYamlBoolean,
   predicate: isBoolean,
   represent: {
-    lowercase: function (object: boolean) { return object ? 'true' : 'false'; },
-    uppercase: function (object: boolean) { return object ? 'TRUE' : 'FALSE'; },
+    lowercase: function (object: any) { return object ? 'true' : 'false'; },
+    uppercase: function (object: any) { return object ? 'TRUE' : 'FALSE'; },
     camelcase: function (object: boolean) { return object ? 'True' : 'False'; }
   },
   defaultStyle: 'lowercase'

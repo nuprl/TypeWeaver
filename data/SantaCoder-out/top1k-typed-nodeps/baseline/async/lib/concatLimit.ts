@@ -22,7 +22,7 @@ import awaitify from './internal/awaitify.js'
  * (err, results).
  * @returns A Promise, if no callback is passed
  */
-function concatLimit(coll: any[], limit: number, iteratee: any, callback: any) {
+function concatLimit(coll: any[], limit: number, iteratee: AsyncFunction, callback: Callback<any[]>) {
     var _iteratee = wrapAsync(iteratee);
     return mapLimit(coll, limit, (val, iterCb) => {
         _iteratee(val, (err, ...args) => {

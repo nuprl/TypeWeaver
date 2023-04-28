@@ -8,7 +8,7 @@ import "./deprecated/event.js";
 // arguments.
 // jQuery.proxy is deprecated to promote standards (specifically Function#bind)
 // However, it is not slated for removal any time soon
-jQuery.proxy = function( fn: Function, context : Object) {
+jQuery.proxy = function( fn: Function, context : any) {
 	var tmp, args, proxy;
 
 	if ( typeof context === "string" ) {

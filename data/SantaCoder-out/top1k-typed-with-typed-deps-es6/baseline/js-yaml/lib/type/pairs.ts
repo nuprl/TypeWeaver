@@ -4,7 +4,7 @@ import Type from '../type';
 
 var _toString = Object.prototype.toString;
 
-function resolveYamlPairs(data: YAMLNode) {
+function resolveYamlPairs(data: any) {
   if (data === null) return true;
 
   var index, length, pair, keys, result,

@@ -31,7 +31,7 @@ var
 		fontWeight: "400"
 	};
 
-function setPositiveNumber( _elem: HTMLElement, value: number, subtract : boolean) {
+function setPositiveNumber( _elem: HTMLElement, value: number, subtract : number) {
 
 	// Any relative (+/-) values have already been
 	// normalized at this point
@@ -43,7 +43,7 @@ function setPositiveNumber( _elem: HTMLElement, value: number, subtract : boolea
 		value;
 }
 
-function boxModelAdjustment( elem: HTMLElement, dimension: string, box: BoxModel, isBorderBox: boolean, styles: any, computedVal : any) {
+function boxModelAdjustment( elem: HTMLElement, dimension: "width", box: string, isBorderBox: boolean, styles: CSSStyleDeclaration, computedVal : number) {
 	var i = dimension === "width" ? 1 : 0,
 		extra = 0,
 		delta = 0;
@@ -111,7 +111,7 @@ function boxModelAdjustment( elem: HTMLElement, dimension: string, box: BoxModel
 	return delta;
 }
 
-function getWidthOrHeight( elem: HTMLElement, dimension: string, extra : string) {
+function getWidthOrHeight( elem: HTMLElement, dimension: string, extra : boolean) {
 
 	// Start with computed style
 	var styles = getStyles( elem ),
@@ -193,7 +193,7 @@ jQuery.extend( {
 	cssHooks: {},
 
 	// Get and set the style property on a DOM Node
-	style: function( elem: HTMLElement, name: string, value: any, extra : any) {
+	style: function( elem: HTMLElement, name: string, value: string, extra : any) {
 
 		// Don't set styles on text and comment nodes
 		if ( !elem || elem.nodeType === 3 || elem.nodeType === 8 || !elem.style ) {
@@ -309,9 +309,9 @@ jQuery.extend( {
 	}
 } );
 
-jQuery.each( [ "height", "width" ], function( _i: number, dimension : Dimension) {
+jQuery.each( [ "height", "width" ], function( _i: number, dimension : string) {
 	jQuery.cssHooks[ dimension ] = {
-		get: function( elem: HTMLElement, computed: CSSStyleDeclaration, extra : CSSStyleDeclaration) {
+		get: function( elem: Element, computed: CSSStyleDeclaration, extra : CSSStyleDeclaration) {
 			if ( computed ) {
 
 				// Certain elements can have dimension info if we invisibly show them
@@ -332,7 +332,7 @@ jQuery.each( [ "height", "width" ], function( _i: number, dimension : Dimension)
 			}
 		},
 
-		set: function( elem: JQuery, value: any, extra : any) {
+		set: function( elem: Element, value: string, extra : any) {
 			var matches,
 				styles = getStyles( elem ),
 
@@ -369,7 +369,7 @@ jQuery.each( {
 	border: "Width"
 }, function( prefix: string, suffix : string) {
 	jQuery.cssHooks[ prefix + suffix ] = {
-		expand: function( value : any) {
+		expand: function( value : string) {
 			var i = 0,
 				expanded = {},
 
@@ -391,8 +391,8 @@ jQuery.each( {
 } );
 
 jQuery.fn.extend( {
-	css: function( name: string, value : any) {
-		return access( this, function( elem: HTMLElement, name: string, value : any) {
+	css: function( name: string, value : string) {
+		return access( this, function( elem: HTMLElement, name: string, value : string) {
 			var styles, len,
 				map = {},
 				i = 0;

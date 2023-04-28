@@ -19,7 +19,7 @@ const hasOwnProperty = Object.prototype.hasOwnProperty
  * @param {Object} stack Tracks traversed `object` and `other` objects.
  * @returns {boolean} Returns `true` if the objects are equivalent, else `false`.
  */
-function equalObjects(object: any, other: any, bitmask: any, customizer: any, equalFunc: any, stack: any) {
+function equalObjects(object: any, other: any, bitmask: number, customizer: Function, equalFunc: Function, stack: Set<any>) {
   const isPartial = bitmask & COMPARE_PARTIAL_FLAG
   const objProps = getAllKeys(object)
   const objLength = objProps.length

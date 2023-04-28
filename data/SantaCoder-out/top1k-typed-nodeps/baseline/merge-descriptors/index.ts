@@ -31,7 +31,7 @@ var hasOwnProperty = Object.prototype.hasOwnProperty
  * @public
  */
 
-function merge (dest: any, src: any, redefine: boolean) {
+function merge (dest: Object, src: Object, redefine: boolean) {
   if (!dest) {
     throw new TypeError('argument dest is required')
   }

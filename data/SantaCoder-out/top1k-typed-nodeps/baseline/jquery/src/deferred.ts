@@ -71,7 +71,7 @@ jQuery.extend( {
 				pipe: function( /* fnDone: any, fnFail: any, fnProgress */ : any) {
 					var fns = arguments;
 
-					return jQuery.Deferred( function( newDefer : Deferred<T>) {
+					return jQuery.Deferred( function( newDefer : JQueryDeferred<T>) {
 						jQuery.each( tuples, function( _i: number, tuple : any[]) {
 
 							// Map tuples (progress, done, fail) to arguments (done, fail, progress)
@@ -99,9 +99,9 @@ jQuery.extend( {
 						fns = null;
 					} ).promise();
 				},
-				then: function( onFulfilled: any, onRejected: any, onProgress : any) {
+				then: function( onFulfilled: Function, onRejected: Function, onProgress : Function) {
 					var maxDepth = 0;
-					function resolve( depth: number, deferred: Deferred<T>, handler: Handler<T>, special : boolean) {
+					function resolve( depth: number, deferred: Deferred<T>, handler: any, special : boolean) {
 						return function() {
 							var that = this,
 								args = arguments,

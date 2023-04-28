@@ -72,7 +72,7 @@ co(function * () {
 
   // construct json map
   var json = Object.create(null)
-  results.forEach(function (result: any) {
+  results.forEach(function (result: MimeResult) {
     var mime = result.mime
 
     if (mime in json) {
@@ -312,7 +312,7 @@ function * getTemplateBody (res) {
   }, []).join('\n')
 }
 
-function addSource (data: string, url: string) {
+function addSource (data: Object, url: string) {
   var sources = data.sources || (data.sources = [])
 
   if (sources.indexOf(url) === -1) {

@@ -49,7 +49,7 @@ const TYPE_STATICS = {};
 TYPE_STATICS[ForwardRef] = FORWARD_REF_STATICS;
 TYPE_STATICS[Memo] = MEMO_STATICS;
 
-function getStatics(component: React.ComponentType<any>) {
+function getStatics(component: any) {
     // React v16.11 and below
     if (isMemo(component)) {
         return MEMO_STATICS;
@@ -66,7 +66,7 @@ const getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor;
 const getPrototypeOf = Object.getPrototypeOf;
 const objectPrototype = Object.prototype;
 
-export default function hoistNonReactStatics(targetComponent: any, sourceComponent: options.ReactComponent, excludelist: List<String>) {
+export default function hoistNonReactStatics(targetComponent: any, sourceComponent: any, excludelist: any[]) {
     if (typeof sourceComponent !== 'string') { // don't hoist over string (html) components
 
         if (objectPrototype) {

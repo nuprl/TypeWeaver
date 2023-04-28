@@ -14,7 +14,7 @@ import map from './map.js'
  * @see flatMap, flatMapDeep, flatten, flattenDeep, flattenDepth, map, mapKeys, mapValues
  * @example
  *
- * function duplicate(n: number) {
+ * function duplicate(n: any) {
  *   return [[[n, n]]]
  * }
  *

@@ -27,7 +27,7 @@ function getTarget(target: string) {
 }
 
 /* istanbul ignore next  */
-function insertBySelector(insert: string, style: string) {
+function insertBySelector(insert: string, style: HTMLStyleElement) {
   const target = getTarget(insert);
 
   if (!target) {

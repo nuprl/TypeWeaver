@@ -27,7 +27,7 @@ const TAP_PROMISE = () => {
 	throw new Error("tapPromise is not supported on a SyncLoopHook");
 };
 
-const COMPILE = function(options: any) {
+const COMPILE = function(options: HookCompileOptions) {
 	factory.setup(this, options);
 	return factory.create(options);
 };

@@ -29,8 +29,8 @@ import awaitify from './internal/awaitify.js'
  * // smallfile.txt is a file that is 121 bytes in size
  *
  * // asynchronous function that returns the file size in bytes
- * function getFileSizeInBytes(file: File, callback: any) {
- *     fs.stat(file, function(err: Error, stat: Stats) {
+ * function getFileSizeInBytes(file: string, callback: any) {
+ *     fs.stat(file, function(err: any, stat: any) {
  *         if (err) {
  *             return callback(err);
  *         }
@@ -40,7 +40,7 @@ import awaitify from './internal/awaitify.js'
  *
  * // Using callbacks
  * async.sortBy(['mediumfile.txt','smallfile.txt','bigfile.txt'], getFileSizeInBytes,
- *     function(err: Error, results: any) {
+ *     function(err: Error, results: string[]) {
  *         if (err) {
  *             console.log(err);
  *         } else {
@@ -61,7 +61,7 @@ import awaitify from './internal/awaitify.js'
  *         if (getFileSizeErr) return callback(getFileSizeErr);
  *         callback(null, fileSize);
  *     });
- * }, function(err: Error, results: any) {
+ * }, function(err: Error, results: string[]) {
  *         if (err) {
  *             console.log(err);
  *         } else {
@@ -74,14 +74,14 @@ import awaitify from './internal/awaitify.js'
  * );
  *
  * // descending order
- * async.sortBy(['bigfile.txt','mediumfile.txt','smallfile.txt'], function(file: string, callback: Function) {
- *     getFileSizeInBytes(file, function(getFileSizeErr: any, fileSize: number) {
+ * async.sortBy(['bigfile.txt','mediumfile.txt','smallfile.txt'], function(file: string, callback: any) {
+ *     getFileSizeInBytes(file, function(getFileSizeErr: Error, fileSize: number) {
  *         if (getFileSizeErr) {
  *             return callback(getFileSizeErr);
  *         }
  *         callback(null, fileSize * -1);
  *     });
- * }, function(err: Error, results: any) {
+ * }, function(err: Error, results: string[]) {
  *         if (err) {
  *             console.log(err);
  *         } else {
@@ -95,7 +95,7 @@ import awaitify from './internal/awaitify.js'
  *
  * // Error handling
  * async.sortBy(['mediumfile.txt','smallfile.txt','missingfile.txt'], getFileSizeInBytes,
- *     function(err: Error, results: any) {
+ *     function(err: any, results: any) {
  *         if (err) {
  *             console.log(err);
  *             // [ Error: ENOENT: no such file or directory ]
@@ -152,7 +152,7 @@ import awaitify from './internal/awaitify.js'
  * }
  *
  */
-function sortBy (coll: any[], iteratee: any, callback: any) {
+function sortBy (coll: any[], iteratee: Function, callback: Function) {
     var _iteratee = wrapAsync(iteratee);
     return map(coll, (x, iterCb) => {
         _iteratee(x, (err, criteria) => {

@@ -24,7 +24,7 @@ module.exports = rangeParser
  * @public
  */
 
-function rangeParser (size: number, str: string, options: Options) {
+function rangeParser (size: number, str: string, options: RangeParserOptions) {
   if (typeof str !== 'string') {
     throw new TypeError('argument str must be a string')
   }
@@ -123,7 +123,7 @@ function combineRanges (ranges: Range[]) {
  * @private
  */
 
-function mapWithIndex (range: number, index: number) {
+function mapWithIndex (range: Range, index: number) {
   return {
     start: range.start,
     end: range.end,

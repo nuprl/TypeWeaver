@@ -5,7 +5,7 @@ function stringify(obj: any, replacer: any, spaces: any, cycleReplacer: any) {
   return JSON.stringify(obj, serializer(replacer, cycleReplacer), spaces)
 }
 
-function serializer(replacer: any, cycleReplacer: any) {
+function serializer(replacer: Function, cycleReplacer: Function) {
   var stack = [], keys = []
 
   if (cycleReplacer == null) cycleReplacer = function(key: string, value: any) {
@@ -13,7 +13,7 @@ function serializer(replacer: any, cycleReplacer: any) {
     return "[Circular ~." + keys.slice(0, stack.indexOf(value)).join(".") + "]"
   }
 
-  return function(key: string, value: any) {
+  return function(key: any, value: any) {
     if (stack.length > 0) {
       var thisPos = stack.indexOf(this)
       ~thisPos ? stack.splice(thisPos + 1) : stack.push(this)

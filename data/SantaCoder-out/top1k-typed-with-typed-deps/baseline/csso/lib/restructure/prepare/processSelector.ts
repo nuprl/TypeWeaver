@@ -18,10 +18,10 @@ const nonFreezePseudoClasses = new Set([
     'before'
 ]);
 
-export default function processSelector(node: Node, usageData: UsageData) {
+export default function processSelector(node: postcss.Node, usageData: UsageData) {
     const pseudos = new Set();
 
-    node.prelude.children.forEach(function(simpleSelector: string) {
+    node.prelude.children.forEach(function(simpleSelector: SimpleSelector) {
         let tagName = '*';
         let scope = 0;
 

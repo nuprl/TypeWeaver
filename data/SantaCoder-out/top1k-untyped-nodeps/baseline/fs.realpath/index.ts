@@ -13,7 +13,7 @@ var version = process.version
 var ok = /^v[0-5]\./.test(version)
 var old = require('./old.js')
 
-function newError (er: Error) {
+function newError (er: any) {
   return er && er.syscall === 'realpath' && (
     er.code === 'ELOOP' ||
     er.code === 'ENOMEM' ||
@@ -30,7 +30,7 @@ function realpath (p: string, cache: Object, cb: Function) {
     cb = cache
     cache = null
   }
-  origRealpath(p, cache, function (er: Error, result: any) {
+  origRealpath(p, cache, function (er: any, result: string) {
     if (newError(er)) {
       old.realpath(p, cache, cb)
     } else {

@@ -16,7 +16,7 @@ const toString = Object.prototype.toString
  * invert(object)
  * // => { '1': 'c', '2': 'b' }
  */
-function invert(object: Object) {
+function invert(object: any) {
   const result = {}
   Object.keys(object).forEach((key) => {
     let value = object[key]

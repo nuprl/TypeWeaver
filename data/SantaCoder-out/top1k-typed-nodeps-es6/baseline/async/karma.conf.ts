@@ -1,4 +1,4 @@
-export default function(config: Config) {
+export default function(config: any) {
     config.set({
         browsers: ['Firefox'],
         files: ['test/*.js'],

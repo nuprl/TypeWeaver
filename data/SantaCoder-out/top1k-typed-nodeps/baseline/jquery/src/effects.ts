@@ -63,7 +63,7 @@ function genFx( type: string, includeWidth : boolean) {
 	return attrs;
 }
 
-function createTween( value: any, prop: any, animation : any) {
+function createTween( value: any, prop: string, animation : Animation) {
 	var tween,
 		collection = ( Animation.tweeners[ prop ] || [] ).concat( Animation.tweeners[ "*" ] ),
 		index = 0,
@@ -245,7 +245,7 @@ function defaultPrefilter( elem: Element, props: Object, opts : Object) {
 	}
 }
 
-function propFilter( props: string[], specialEasing : any) {
+function propFilter( props: CSSProperties, specialEasing : CSSEasing) {
 	var index, name, easing, value, hooks;
 
 	// camelCase, specialEasing and expand cssHook pass
@@ -282,7 +282,7 @@ function propFilter( props: string[], specialEasing : any) {
 	}
 }
 
-function Animation( elem: HTMLElement, properties: any, options : AnimationOptions) {
+function Animation( elem: Element, properties: AnimationProperties, options : AnimationOptions) {
 	var result,
 		stopped,
 		index = 0,
@@ -335,7 +335,7 @@ function Animation( elem: HTMLElement, properties: any, options : AnimationOptio
 			startTime: fxNow || createFxNow(),
 			duration: options.duration,
 			tweens: [],
-			createTween: function( prop: string, end : number) {
+			createTween: function( prop: string, end : any) {
 				var tween = jQuery.Tween( elem, animation.opts, prop, end,
 					animation.opts.specialEasing[ prop ] || animation.opts.easing );
 				animation.tweens.push( tween );
@@ -414,7 +414,7 @@ jQuery.Animation = jQuery.extend( Animation, {
 		} ]
 	},
 
-	tweener: function( props: any, callback : any) {
+	tweener: function( props: string[], callback : Function) {
 		if ( typeof props === "function" ) {
 			callback = props;
 			props = [ "*" ];
@@ -435,7 +435,7 @@ jQuery.Animation = jQuery.extend( Animation, {
 
 	prefilters: [ defaultPrefilter ],
 
-	prefilter: function( callback: Function, prepend : boolean) {
+	prefilter: function( callback: AnimationPrefilterCallback, prepend : boolean) {
 		if ( prepend ) {
 			Animation.prefilters.unshift( callback );
 		} else {
@@ -497,7 +497,7 @@ jQuery.fn.extend( {
 			// Animate to the value specified
 			.end().animate( { opacity: to }, speed, easing, callback );
 	},
-	animate: function( prop: string, speed: number, easing: string, callback : Function) {
+	animate: function( prop: any, speed: any, easing: any, callback : any) {
 		var empty = jQuery.isEmptyObject( prop ),
 			optall = jQuery.speed( speed, easing, callback ),
 			doAnimation = function() {
@@ -658,7 +658,7 @@ jQuery.fx.tick = function() {
 	fxNow = undefined;
 };
 
-jQuery.fx.timer = function( timer : Timer) {
+jQuery.fx.timer = function( timer : any) {
 	jQuery.timers.push( timer );
 	jQuery.fx.start();
 };

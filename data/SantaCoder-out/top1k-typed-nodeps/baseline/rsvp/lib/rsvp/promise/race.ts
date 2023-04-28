@@ -21,7 +21,7 @@ import {
     }, 200);
   });
 
-  let promise2 = new Promise(function(resolve: Function, reject: Function){
+  let promise2 = new Promise(function(resolve: any, reject: any){
     setTimeout(function(){
       resolve('promise 2');
     }, 100);
@@ -79,7 +79,7 @@ import {
   @return {Promise} a promise which settles in the same way as the first passed
   promise to settle.
 */
-export default function race(entries: Array<Entry>, label: string) {
+export default function race(entries: Array<any>, label: string) {
   /*jshint validthis:true */
   let Constructor = this;
 

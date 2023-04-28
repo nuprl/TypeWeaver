@@ -22,7 +22,7 @@ function toFunction(list: any[]) {
   }
 }
 
-function from2(opts: Options, read: any) {
+function from2(opts: Options, read: Readable) {
   if (typeof opts !== 'object' || Array.isArray(opts)) {
     read = opts
     opts = {}
@@ -33,7 +33,7 @@ function from2(opts: Options, read: any) {
   return rs
 }
 
-function ctor(opts: any, read: any) {
+function ctor(opts: Options, read: Function) {
   if (typeof opts === 'function') {
     read = opts
     opts = {}
@@ -42,7 +42,7 @@ function ctor(opts: any, read: any) {
   opts = defaults(opts)
 
   inherits(Class, Readable)
-  function Class(override: any) {
+  function Class(override: Object) {
     if (!(this instanceof Class)) return new Class(override)
     this._reading = false
     this._callback = check
@@ -52,7 +52,7 @@ function ctor(opts: any, read: any) {
     var self = this
     var hwm = this._readableState.highWaterMark
 
-    function check(err: Error, data: Buffer) {
+    function check(err: Error, data: any) {
       if (self.destroyed) return
       if (err) return self.destroy(err)
       if (data === null) return self.push(null)
@@ -97,7 +97,7 @@ function obj(opts: any, read: any) {
 
 function noop () {}
 
-function defaults(opts: any) {
+function defaults(opts: Options) {
   opts = opts || {}
   return opts
 }

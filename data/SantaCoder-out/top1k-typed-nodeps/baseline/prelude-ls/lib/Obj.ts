@@ -23,7 +23,7 @@ pairsToObj = function(object: Object){
   }
   return resultObj$;
 };
-objToPairs = function(object: any){
+objToPairs = function(object: Object){
   var key, value, results$ = [];
   for (key in object) {
     value = object[key];
@@ -31,7 +31,7 @@ objToPairs = function(object: any){
   }
   return results$;
 };
-listsToObj = curry$(function(keys: any, values: any){
+listsToObj = curry$(function(keys: Array<string>, values: Array<any>){
   var i$, len$, i, key, resultObj$ = {};
   for (i$ = 0, len$ = keys.length; i$ < len$; ++i$) {
     i = i$;
@@ -40,7 +40,7 @@ listsToObj = curry$(function(keys: any, values: any){
   }
   return resultObj$;
 });
-objToLists = function(object: any){
+objToLists = function(object: Object){
   var keys, values, key, value;
   keys = [];
   values = [];
@@ -139,7 +139,7 @@ module.exports = {
   partition: partition,
   find: find
 };
-function curry$(f: Function, bound: Array){
+function curry$(f: Function, bound: Object){
   var context,
   _curry = function(args: any[]) {
     return f.length > 1 ? function(){

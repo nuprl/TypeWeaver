@@ -67,7 +67,7 @@ function decode (str: string) {
   }
 }
 
-function copyBE (src: Uint8Array, outBuf16: Uint16Array) {
+function copyBE (src: string, outBuf16: Uint16Array) {
   const len = src.length;
   let i = 0;
   while (i < len) {
@@ -76,7 +76,7 @@ function copyBE (src: Uint8Array, outBuf16: Uint16Array) {
   }
 }
 
-function copyLE (src: Uint8Array, outBuf16: Uint16Array) {
+function copyLE (src: string, outBuf16: Uint16Array) {
   const len = src.length;
   let i = 0;
   while (i < len)

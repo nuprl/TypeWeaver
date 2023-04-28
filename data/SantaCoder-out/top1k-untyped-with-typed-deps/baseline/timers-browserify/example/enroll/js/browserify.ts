@@ -134,7 +134,7 @@ require.alias = function (from: string, to: string) {
     }
 };
 
-require.define = function (filename: string, fn: any) {
+require.define = function (filename: string, fn: Function) {
     var dirname = require._core[filename]
         ? ''
         : require.modules.path().dirname(filename)
@@ -174,7 +174,7 @@ if (!process.nextTick) process.nextTick = (function () {
     ;
     
     if (canPost) {
-        window.addEventListener('message', function (ev: Event) {
+        window.addEventListener('message', function (ev: MessageEvent) {
             if (ev.source === window && ev.data === 'browserify-tick') {
                 ev.stopPropagation();
                 if (queue.length > 0) {
@@ -223,7 +223,7 @@ require.define("/node_modules/timers-browserify/package.json", Function(
 
 require.define("/node_modules/timers-browserify/main.js", Function(
     [ 'require', 'module', 'exports', '__dirname', '__filename' ],
-    "// DOM APIs, for completeness\n\nexports.setTimeout = setTimeout;\nexports.clearTimeout = clearTimeout;\nexports.setInterval = setInterval;\nexports.clearInterval = clearInterval;\n\n// TODO: Change to more effiecient list approach used in Node.js\n// For now, we just implement the APIs using the primitives above.\n\nexports.enroll = function(item, delay) {\n  item._timeoutID = setTimeout(item._onTimeout, delay);\n};\n\nexports.unenroll = function(item) {\n  clearTimeout(item._timeoutID);\n};\n\nexports.active = function(item: T) {\n  // our naive impl doesn't care (correctness is still preserved)\n};\n\n//@ sourceURL=/node_modules/timers-browserify/main.js"
+    "// DOM APIs, for completeness\n\nexports.setTimeout = setTimeout;\nexports.clearTimeout = clearTimeout;\nexports.setInterval = setInterval;\nexports.clearInterval = clearInterval;\n\n// TODO: Change to more effiecient list approach used in Node.js\n// For now, we just implement the APIs using the primitives above.\n\nexports.enroll = function(item, delay) {\n  item._timeoutID = setTimeout(item._onTimeout, delay);\n};\n\nexports.unenroll = function(item) {\n  clearTimeout(item._timeoutID);\n};\n\nexports.active = function(item: any) {\n  // our naive impl doesn't care (correctness is still preserved)\n};\n\n//@ sourceURL=/node_modules/timers-browserify/main.js"
 ));
 
 require.define("/main.js", Function(

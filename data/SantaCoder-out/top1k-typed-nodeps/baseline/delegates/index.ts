@@ -33,7 +33,7 @@ function Delegator(proto: Object, target: Object) {
  * @api public
  */
 
-Delegator.auto = function(proto: any, targetProto: any, targetProp: string){
+Delegator.auto = function(proto: Object, targetProto: Object, targetProp: string){
   var delegator = Delegator(proto, targetProp);
   var properties = Object.getOwnPropertyNames(targetProto);
   for (var i = 0; i < properties.length; i++) {
@@ -67,7 +67,7 @@ Delegator.auto = function(proto: any, targetProto: any, targetProp: string){
  * @api public
  */
 
-Delegator.prototype.method = function(name: string){
+Delegator.prototype.method = function(name: String){
   var proto = this.proto;
   var target = this.target;
   this.methods.push(name);
@@ -87,7 +87,7 @@ Delegator.prototype.method = function(name: string){
  * @api public
  */
 
-Delegator.prototype.access = function(name: string){
+Delegator.prototype.access = function(name: String){
   return this.getter(name).setter(name);
 };
 
@@ -99,7 +99,7 @@ Delegator.prototype.access = function(name: string){
  * @api public
  */
 
-Delegator.prototype.getter = function(name: string){
+Delegator.prototype.getter = function(name: String){
   var proto = this.proto;
   var target = this.target;
   this.getters.push(name);
@@ -119,7 +119,7 @@ Delegator.prototype.getter = function(name: string){
  * @api public
  */
 
-Delegator.prototype.setter = function(name: string){
+Delegator.prototype.setter = function(name: String){
   var proto = this.proto;
   var target = this.target;
   this.setters.push(name);

@@ -9,7 +9,7 @@ export default function (opts: any) {
   }
   return s
 
-  function func (data: any, enc: any, done: any) {
+  function func (data: any, enc: string, done: Function) {
     this.push(data, enc)
     done()
   }

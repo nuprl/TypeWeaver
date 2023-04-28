@@ -20,6 +20,6 @@ function fcssescape( ch: string, asCodePoint : boolean) {
 	return "\\" + ch;
 }
 
-jQuery.escapeSelector = function( sel : any) {
+jQuery.escapeSelector = function( sel : string) {
 	return ( sel + "" ).replace( rcssescape, fcssescape );
 };

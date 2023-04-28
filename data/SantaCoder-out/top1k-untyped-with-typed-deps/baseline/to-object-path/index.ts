@@ -16,7 +16,7 @@ module.exports = function toPath(args: any[]) {
   return filter(args).join('.');
 };
 
-function filter(arr: any[]) {
+function filter(arr: Array<any>) {
   var len = arr.length;
   var idx = -1;
   var res = [];

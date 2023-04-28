@@ -6,7 +6,7 @@ const path = require('path')
 const mkdir = require('../mkdirs')
 const pathExists = require('../path-exists').pathExists
 
-function outputFile (file: string, data: string, encoding: string, callback: Function) {
+function outputFile (file: string, data: string, encoding: string, callback: any) {
   if (typeof encoding === 'function') {
     callback = encoding
     encoding = 'utf8'

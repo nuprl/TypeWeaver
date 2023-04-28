@@ -12,7 +12,7 @@ export default {
 	validateJsonObjectJSV: validateJsonObjectJSV
 };
 
-function validateJsonObjectJSV(schema: any, input: any)
+function validateJsonObjectJSV(schema: Object, input: Object)
 {
 	if (!mod_jsv)
 		mod_jsv = require('JSV');

@@ -1,4 +1,4 @@
-module.exports = function union(arr: Array<any>) {
+module.exports = function union(arr: any[]) {
   var len = arguments.length;
   var res = [], i = 0;
 

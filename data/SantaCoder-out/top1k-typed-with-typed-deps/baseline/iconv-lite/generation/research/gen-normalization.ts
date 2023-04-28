@@ -76,7 +76,7 @@ async.parallel({
 
     // -------------------------------------------------------------------------
     
-    function f(ch: number) { return features[ch] || {combiningClass: 0}; }
+    function f(ch: string) { return features[ch] || {combiningClass: 0}; }
     function hex(ch: string) { return (+ch).toString(16);}
 
     function decompose(ch: string, canonical: boolean) {
@@ -87,7 +87,7 @@ async.parallel({
     }
     /*
     for (var ch in features) {
-        [true, false].map(function(can: any) {
+        [true, false].map(function(can: number) {
             var arr = decompose(ch, can);
             for (var i = 0; i < arr.length-1; i++)
                 if (f(arr[i]).combiningClass > f(arr[i+1]).combiningClass)

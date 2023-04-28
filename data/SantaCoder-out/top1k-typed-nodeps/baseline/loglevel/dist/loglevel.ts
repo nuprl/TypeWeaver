@@ -78,7 +78,7 @@
 
     // These private functions always need `this` to be set properly
 
-    function replaceLoggingMethods(level: string, loggerName: string) {
+    function replaceLoggingMethods(level: number, loggerName: string) {
         /*jshint validthis:true */
         for (var i = 0; i < logMethods.length; i++) {
             var methodName = logMethods[i];
@@ -93,7 +93,7 @@
 
     // In old IE versions, the console isn't present until you first open it.
     // We build realMethod() replacements here that regenerate logging methods
-    function enableLoggingWhenConsoleArrives(methodName: string, level: LogLevel, loggerName: string) {
+    function enableLoggingWhenConsoleArrives(methodName: string, level: string, loggerName: string) {
         return function () {
             if (typeof console !== undefinedType) {
                 replaceLoggingMethods.call(this, level, loggerName);
@@ -104,13 +104,13 @@
 
     // By default, we use closely bound real methods wherever possible, and
     // otherwise we wait for a console to appear, and then try again.
-    function defaultMethodFactory(methodName: string, level: number, loggerName: string) {
+    function defaultMethodFactory(methodName: string, level: string, loggerName: string) {
         /*jshint validthis:true */
         return realMethod(methodName) ||
                enableLoggingWhenConsoleArrives.apply(this, arguments);
     }
 
-    function Logger(name: string, defaultLevel: string, factory: LoggerFactory) {
+    function Logger(name: string, defaultLevel: string, factory: any) {
       var self = this;
       var currentLevel;
       defaultLevel = defaultLevel == null ? "WARN" : defaultLevel;

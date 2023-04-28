@@ -7,7 +7,7 @@
 
 var fs = require('fs')
 
-module.exports = function writeDatabaseSync (fileName: string, obj: any) {
+module.exports = function writeDatabaseSync (fileName: string, obj: Object) {
   var fd = fs.openSync(fileName, 'w')
   var keys = Object.keys(obj).sort()
 

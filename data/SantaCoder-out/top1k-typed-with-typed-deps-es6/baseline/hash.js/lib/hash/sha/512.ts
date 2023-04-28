@@ -86,7 +86,7 @@ SHA512.outSize = 512;
 SHA512.hmacStrength = 192;
 SHA512.padLength = 128;
 
-SHA512.prototype._prepareBlock = function _prepareBlock(msg: any, start: number) {
+SHA512.prototype._prepareBlock = function _prepareBlock(msg: Uint8Array, start: number) {
   var W = this.W;
 
   // 32 x 32bit words
@@ -115,7 +115,7 @@ SHA512.prototype._prepareBlock = function _prepareBlock(msg: any, start: number)
   }
 };
 
-SHA512.prototype._update = function _update(msg: Message, start: number) {
+SHA512.prototype._update = function _update(msg: any, start: number) {
   this._prepareBlock(msg, start);
 
   var W = this.W;
@@ -285,7 +285,7 @@ function s1_512_lo(xh: number, xl: number) {
   return r;
 }
 
-function g0_512_hi(xh: u64, xl: u64) {
+function g0_512_hi(xh: number, xl: number) {
   var c0_hi = rotr64_hi(xh, xl, 1);
   var c1_hi = rotr64_hi(xh, xl, 8);
   var c2_hi = shr64_hi(xh, xl, 7);

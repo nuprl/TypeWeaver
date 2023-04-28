@@ -94,7 +94,7 @@ function loadDescriptionFile(
 					});
 				}
 
-				function onJson(err: any, content: any) {
+				function onJson(err: Error, content: string) {
 					if (err) {
 						if (resolveContext.log)
 							resolveContext.log(
@@ -135,7 +135,7 @@ function loadDescriptionFile(
  * @param {string|string[]} field field
  * @returns {object|string|number|boolean|undefined} field data
  */
-function getField(content: string, field: string) {
+function getField(content: any, field: string) {
 	if (!content) return undefined;
 	if (Array.isArray(field)) {
 		let current = content;

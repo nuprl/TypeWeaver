@@ -45,7 +45,7 @@ import groupByLimit from './groupByLimit.js'
  * }
  *
  * //Using callbacks
- * async.groupBy(files, detectFile, function(err: Error, result: any) {
+ * async.groupBy(files, detectFile, function(err: Error, result: Object) {
  *     if(err) {
  *         console.log(err);
  *     } else {
@@ -91,6 +91,6 @@ import groupByLimit from './groupByLimit.js'
  * }
  *
  */
-export default function groupBy (coll: any[], iteratee: Function, callback: Function) {
+export default function groupBy (coll: any[], iteratee: any, callback: any) {
     return groupByLimit(coll, Infinity, iteratee, callback)
 }

@@ -2,7 +2,7 @@ const PROMISE_SYMBOL = Symbol('promiseCallback')
 
 function promiseCallback () {
     let resolve, reject
-    function callback (err: Error, ...args: any[]) {
+    function callback (err: any, ...args: any[]) {
         if (err) return reject(err)
         resolve(args.length > 1 ? args : args[0])
     }

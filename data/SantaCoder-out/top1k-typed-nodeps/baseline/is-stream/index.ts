@@ -23,7 +23,7 @@ export function isDuplexStream(stream: any) {
 		&& isReadableStream(stream);
 }
 
-export function isTransformStream(stream: any) {
+export function isTransformStream(stream: DuplexStream) {
 	return isDuplexStream(stream)
 		&& typeof stream._transform === 'function';
 }

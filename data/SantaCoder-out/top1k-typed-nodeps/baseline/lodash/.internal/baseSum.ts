@@ -6,7 +6,7 @@
  * @param {Function} iteratee The function invoked per iteration.
  * @returns {number} Returns the sum.
  */
-function baseSum(array: any[], iteratee: any) {
+function baseSum(array: any[], iteratee: Function) {
   let result
 
   for (const value of array) {

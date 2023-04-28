@@ -7,7 +7,7 @@
 
 'use strict';
 
-export default function base(app: Application, options: Options) {
+export default function base(app: Object, options: Object) {
   if (!isObject(app) && typeof app !== 'function') {
     throw new TypeError('expected an object or function');
   }
@@ -31,7 +31,7 @@ export default function base(app: Application, options: Options) {
    * var use = require('use');
    *
    * // define a plugin
-   * function foo(app: Application) {
+   * function foo(app: Function) {
    *   // do stuff
    * }
    *
@@ -92,7 +92,7 @@ export default function base(app: Application, options: Options) {
    * `fns` array to be called by the `run` method.
    */
 
-  function use(type: string, fn: Function, options: any) {
+  function use(type: string, fn: Function, options: Object) {
     var offset = 1;
 
     if (typeof type === 'string' || Array.isArray(type)) {

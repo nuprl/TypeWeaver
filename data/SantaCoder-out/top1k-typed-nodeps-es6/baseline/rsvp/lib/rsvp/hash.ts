@@ -21,7 +21,7 @@ import PromiseHash from './promise-hash';
     notAPromise: 4
   };
 
-  hash(promises).then(function(hash: any){
+  hash(promises).then(function(hash: Hash<Promise<T>>){
     // hash here is an object that looks like:
     // {
     //   myPromise: 1,
@@ -44,7 +44,7 @@ import PromiseHash from './promise-hash';
     anotherRejectedPromise: reject(new Error('anotherRejectedPromise')),
   };
 
-  hash(promises).then(function(hash: string){
+  hash(promises).then(function(hash: Hash<any>){
     // Code here never runs because there are rejected promises!
   }, function(reason: any) {
     // reason.message === 'rejectedPromise'
@@ -69,7 +69,7 @@ import PromiseHash from './promise-hash';
 
   let myObject = new MyConstructor();
 
-  hash(myObject).then(function(hash: string){
+  hash(myObject).then(function(hash: Object){
     // protoProperty will not be present, instead you will just have an
     // object that looks like:
     // {
@@ -91,9 +91,9 @@ import PromiseHash from './promise-hash';
   @return {Promise} promise that is fulfilled when all properties of `promises`
   have been fulfilled, or rejected if any of them become rejected.
 */
-export default function hash(object: any, label: string) {
+export default function hash(object: Object, label: string) {
   return Promise.resolve(object, label)
-    .then(function(object: any) {
+    .then(function(object: Object) {
       if (object === null || typeof object !== 'object') {
         throw new TypeError("Promise.hash must be called with an object");
       }

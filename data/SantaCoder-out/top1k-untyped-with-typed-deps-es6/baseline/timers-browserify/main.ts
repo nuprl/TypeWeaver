@@ -19,7 +19,7 @@ export const clearTimeout = exports.clearInterval = function(timeout: Timeout) {
   }
 };
 
-function Timeout(id: number, clearFn: any) {
+function Timeout(id: number, clearFn: Function) {
   this._id = id;
   this._clearFn = clearFn;
 }

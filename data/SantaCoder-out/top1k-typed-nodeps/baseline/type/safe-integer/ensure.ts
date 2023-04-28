@@ -3,7 +3,7 @@
 var resolveException = require("../lib/resolve-exception")
   , coerce           = require("./coerce");
 
-module.exports = function (value/*: any, options*/: CoerceOptions) {
+module.exports = function (value/*: any, options*/: Options) {
 	var coerced = coerce(value);
 	if (coerced !== null) return coerced;
 	var options = arguments[1];

@@ -14,7 +14,7 @@ var getBasicPropertyDescriptor = require('./utils/getBasicPropertyDescriptor');
  * @constructor
  * @see http://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSStyleDeclaration
  */
-var CSSStyleDeclaration = function CSSStyleDeclaration(onChangeCallback: any) {
+var CSSStyleDeclaration = function CSSStyleDeclaration(onChangeCallback: Function) {
   this._values = {};
   this._importants = {};
   this._length = 0;
@@ -48,7 +48,7 @@ CSSStyleDeclaration.prototype = {
    * @param {string} [priority=null] "important" or null
    * @see http://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSStyleDeclaration-setProperty
    */
-  setProperty: function(name: string, value: any, priority: string) {
+  setProperty: function(name: string, value: string, priority: string) {
     if (value === undefined) {
       return;
     }
@@ -156,7 +156,7 @@ CSSStyleDeclaration.prototype = {
   /**
    *   http://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSStyleDeclaration-item
    */
-  item: function(index: string) {
+  item: function(index: number) {
     index = parseInt(index, 10);
     if (index < 0 || index >= this._length) {
       return '';
@@ -184,7 +184,7 @@ Object.defineProperties(CSSStyleDeclaration.prototype, {
       }
       return properties.join(' ');
     },
-    set: function(value: any) {
+    set: function(value: string) {
       var i;
       this._values = {};
       Array.prototype.splice.call(this, 0, this._length);
@@ -227,7 +227,7 @@ Object.defineProperties(CSSStyleDeclaration.prototype, {
      * length. If the new length is more, it does nothing, the new indices
      * will be undefined until set.
      **/
-    set: function(value: any) {
+    set: function(value: number) {
       var i;
       for (i = value; i < this._length; i++) {
         delete this[i];

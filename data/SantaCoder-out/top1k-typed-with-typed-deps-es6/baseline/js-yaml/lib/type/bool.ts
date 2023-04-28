@@ -2,7 +2,7 @@
 
 import Type from '../type';
 
-function resolveYamlBoolean(data: any) {
+function resolveYamlBoolean(data: string) {
   if (data === null) return false;
 
   var max = data.length;
@@ -27,9 +27,9 @@ export default new Type('tag:yaml.org,2002:bool', {
   construct: constructYamlBoolean,
   predicate: isBoolean,
   represent: {
-    lowercase: function (object: boolean) { return object ? 'true' : 'false'; },
+    lowercase: function (object: any) { return object ? 'true' : 'false'; },
     uppercase: function (object: boolean) { return object ? 'TRUE' : 'FALSE'; },
-    camelcase: function (object: any) { return object ? 'True' : 'False'; }
+    camelcase: function (object: boolean) { return object ? 'True' : 'False'; }
   },
   defaultStyle: 'lowercase'
 });

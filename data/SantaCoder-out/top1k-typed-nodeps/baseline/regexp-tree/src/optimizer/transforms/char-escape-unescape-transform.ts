@@ -30,7 +30,7 @@ module.exports = {
   },
 };
 
-function shouldUnescape(path: string, hasXFlag: boolean) {
+function shouldUnescape(path: NodePath<Literal>, hasXFlag: boolean) {
   const {
     node: {value},
     index,
@@ -48,7 +48,7 @@ function shouldUnescape(path: string, hasXFlag: boolean) {
 /**
  * \], \\, \^, \-
  */
-function preservesInCharClass(value: string, index: number, parent: RegExp) {
+function preservesInCharClass(value: string, index: number, parent: Node) {
   if (value === '^') {
     // Avoid [\^a] turning into [^a]
     return index === 0 && !parent.negative;
@@ -60,7 +60,7 @@ function preservesInCharClass(value: string, index: number, parent: RegExp) {
   return /[\]\\]/.test(value);
 }
 
-function preservesEscape(value: string, index: number, parent: Node, hasXFlag: boolean) {
+function preservesEscape(value: string, index: number, parent: string, hasXFlag: boolean) {
   if (value === '{') {
     return preservesOpeningCurlyBraceEscape(index, parent);
   }

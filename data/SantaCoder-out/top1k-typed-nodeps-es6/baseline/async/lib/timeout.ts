@@ -20,7 +20,7 @@ import wrapAsync from './internal/wrapAsync.js'
  * Invoke this function with the same parameters as you would `asyncFunc`.
  * @example
  *
- * function myFunction(foo: string, callback: any) {
+ * function myFunction(foo: any, callback: Function) {
  *     doAsyncTask(foo, function(err: Error, data: any) {
  *         // handle errors
  *         if (err) return callback(err);

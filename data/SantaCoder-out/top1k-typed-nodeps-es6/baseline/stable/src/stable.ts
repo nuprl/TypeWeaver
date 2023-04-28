@@ -5,7 +5,7 @@ var stable = function (arr: any[], comp: any) {
   return exec(arr.slice(), comp)
 }
 
-stable.inplace = function (arr: Array<T>, comp: any) {
+stable.inplace = function (arr: Array<T>, comp: Comparator<T>) {
   var result = exec(arr, comp)
 
   // This simply copies back if the result isn't in the original array,

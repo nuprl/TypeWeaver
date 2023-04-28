@@ -60,7 +60,7 @@ export default function (options: any) {
     };
 
     plumbing.defaultTransformations = {
-        HEAD: function (body: any, response: any, resolveWithFullResponse: any) {
+        HEAD: function (body: any, response: any, resolveWithFullResponse: boolean) {
             return resolveWithFullResponse ? response : response.headers;
         }
     };
@@ -90,7 +90,7 @@ export default function (options: any) {
 
             if (isFunction(self._rp_options.transform) && self._rp_options.transform2xxOnly === false) {
 
-                (new PromiseImpl(function (resolve: Function) {
+                (new PromiseImpl(function (resolve: any) {
                     resolve(self._rp_options.transform(body, response, self._rp_options.resolveWithFullResponse)); // transform may return a Promise
                 }))
                     .then(function (transformedResponse: any) {
@@ -108,7 +108,7 @@ export default function (options: any) {
 
             if (isFunction(self._rp_options.transform) && (is2xx || self._rp_options.transform2xxOnly === false)) {
 
-                (new PromiseImpl(function (resolve: Function) {
+                (new PromiseImpl(function (resolve: any) {
                     resolve(self._rp_options.transform(body, response, self._rp_options.resolveWithFullResponse)); // transform may return a Promise
                 }))
                     .then(function (transformedResponse: any) {
@@ -132,7 +132,7 @@ export default function (options: any) {
 
     };
 
-    plumbing.exposePromiseMethod = function (exposeTo: any, bindTo: any, promisePropertyKey: any, methodToExpose: any, exposeAs: string) {
+    plumbing.exposePromiseMethod = function (exposeTo: any, bindTo: any, promisePropertyKey: string, methodToExpose: string, exposeAs: string) {
 
         exposeAs = exposeAs || methodToExpose;
 
@@ -147,7 +147,7 @@ export default function (options: any) {
 
     };
 
-    plumbing.exposePromise = function (exposeTo: any, bindTo: any, promisePropertyKey: any, exposeAs: any) {
+    plumbing.exposePromise = function (exposeTo: any, bindTo: any, promisePropertyKey: string, exposeAs: string) {
 
         exposeAs = exposeAs || 'promise';
 

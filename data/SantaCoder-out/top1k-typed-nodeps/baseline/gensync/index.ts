@@ -12,7 +12,7 @@ const GENSYNC_RACE_NONEMPTY = "GENSYNC_RACE_NONEMPTY";
 const GENSYNC_ERRBACK_NO_CALLBACK = "GENSYNC_ERRBACK_NO_CALLBACK";
 
 module.exports = Object.assign(
-  function gensync(optsOrFn: GenSyncOptions) {
+  function gensync(optsOrFn: GeneratorOptions) {
     let genFn = optsOrFn;
     if (typeof optsOrFn !== "function") {
       genFn = newGenerator(optsOrFn);
@@ -30,7 +30,7 @@ module.exports = Object.assign(
         const items = Array.from(args[0]);
         return items.map(item => evaluateSync(item));
       },
-      async: function(args: any, resolve: any, reject: any) {
+      async: function(args: any[], resolve: any, reject: any) {
         const items = Array.from(args[0]);
 
         if (items.length === 0) {
@@ -65,7 +65,7 @@ module.exports = Object.assign(
 
         return evaluateSync(items[0]);
       },
-      async: function(args: any[], resolve: Function, reject: Function) {
+      async: function(args: any[], resolve: any, reject: any) {
         const items = Array.from(args[0]);
         if (items.length === 0) {
           throw makeError("Must race at least 1 item", GENSYNC_RACE_NONEMPTY);
@@ -133,7 +133,7 @@ function assertTypeof(type: string, name: string, value: any, allowUndefined: bo
 
   throw makeError(msg, GENSYNC_OPTIONS_ERROR);
 }
-function makeError(msg: string, code: number) {
+function makeError(msg: string, code: string) {
   return Object.assign(new Error(msg), { code });
 }
 
@@ -141,7 +141,7 @@ function makeError(msg: string, code: number) {
  * Given an options object, return a new generator that dispatches the
  * correct handler based on sync or async execution.
  */
-function newGenerator({ name: name, arity: arity, sync: sync, async: async, errback }: any) {
+function newGenerator({ name: name, arity: arity, sync: sync, async: async, errback }: GeneratorOptions) {
   assertTypeof("string", "name", name, true /* allowUndefined */);
   assertTypeof("number", "arity", arity, true /* allowUndefined */);
   assertTypeof("function", "sync", sync);
@@ -202,7 +202,7 @@ function wrapGenerator(genFn: GeneratorFunction) {
   });
 }
 
-function buildOperation({ name: name, arity: arity, sync: sync, async }: FunctionOptions) {
+function buildOperation({ name: operationName, arity: arity, sync: sync, async }: Operation) {
   return setFunctionMetadata(name, arity, function*(...args) {
     const resume = yield GENSYNC_START;
     if (!resume) {
@@ -254,7 +254,7 @@ function evaluateSync(gen: any) {
   return value;
 }
 
-function evaluateAsync(gen: Generator, resolve: any, reject: any) {
+function evaluateAsync(gen: any, resolve: any, reject: any) {
   (function step() {
     try {
       let value;
@@ -291,7 +291,7 @@ function evaluateAsync(gen: Generator, resolve: any, reject: any) {
   })();
 }
 
-function assertStart(value: string, gen: any) {
+function assertStart(value: any, gen: Generator) {
   if (value === GENSYNC_START) return;
 
   throwError(

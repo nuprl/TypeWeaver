@@ -45,7 +45,7 @@ for (var i = 0; i < 25; i++) {
   master.listeners('event');
 }).add('fastemitter', function() {
   fe.listeners('event');
-}).on('cycle', function cycle(e: Event) {
+}).on('cycle', function cycle(e: any) {
   console.log(e.target.toString());
 }).on('complete', function completed() {
   console.log('Fastest is %s', this.filter('fastest').map('name'));

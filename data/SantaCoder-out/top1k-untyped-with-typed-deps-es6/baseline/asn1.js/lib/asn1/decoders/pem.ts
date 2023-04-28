@@ -11,7 +11,7 @@ function PEMDecoder(entity: string) {
 inherits(PEMDecoder, DERDecoder);
 export default PEMDecoder;
 
-PEMDecoder.prototype.decode = function decode(data: string, options: Options) {
+PEMDecoder.prototype.decode = function decode(data: Buffer, options: DecodeOptions) {
   const lines = data.toString().split(/[\r\n]+/g);
 
   const label = options.label.toUpperCase();

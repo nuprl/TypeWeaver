@@ -31,7 +31,7 @@ wordDiff.equals = function(left: string, right: string) {
   }
   return left === right || (this.options.ignoreWhitespace && !reWhitespace.test(left) && !reWhitespace.test(right));
 };
-wordDiff.tokenize = function(value: any) {
+wordDiff.tokenize = function(value: string) {
   // All whitespace symbols except newline group into one token, each newline - in separate token
   let tokens = value.split(/([^\S\r\n]+|[()[\]{}'"\r\n]|\b)/);
 
@@ -50,7 +50,7 @@ wordDiff.tokenize = function(value: any) {
   return tokens;
 };
 
-export function diffWords(oldStr: string, newStr: string, options: DiffOptions) {
+export function diffWords(oldStr: string, newStr: string, options: any) {
   options = generateOptions(options, {ignoreWhitespace: true});
   return wordDiff.diff(oldStr, newStr, options);
 }

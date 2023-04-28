@@ -7,7 +7,7 @@ try {
 import universalify from 'universalify';
 import { stringify, stripBom } from './utils';
 
-async function _readFile (file: string, options = {}: Options) {
+async function _readFile (file: string, options = {}: ReadFileOptions) {
   if (typeof options === 'string') {
     options = { encoding: options }
   }
@@ -60,7 +60,7 @@ function readFileSync (file: string, options = {}: Options) {
   }
 }
 
-async function _writeFile (file: string, obj: any, options = {}: any) {
+async function _writeFile (file: string, obj: any, options = {}: WriteFileOptions) {
   const fs = options.fs || _fs
 
   const str = stringify(obj, options)
@@ -70,7 +70,7 @@ async function _writeFile (file: string, obj: any, options = {}: any) {
 
 const writeFile = universalify.fromPromise(_writeFile)
 
-function writeFileSync (file: string, obj: any, options = {}: WriteOptions) {
+function writeFileSync (file: string, obj: any, options = {}: Options) {
   const fs = options.fs || _fs
 
   const str = stringify(obj, options)

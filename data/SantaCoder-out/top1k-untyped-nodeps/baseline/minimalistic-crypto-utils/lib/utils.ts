@@ -2,7 +2,7 @@
 
 var utils = exports;
 
-function toArray(msg: any, enc: any) {
+function toArray(msg: any, enc: string) {
   if (Array.isArray(msg))
     return msg.slice();
   if (!msg)
@@ -42,7 +42,7 @@ function zero2(word: string) {
 }
 utils.zero2 = zero2;
 
-function toHex(msg: string) {
+function toHex(msg: Buffer) {
   var res = '';
   for (var i = 0; i < msg.length; i++)
     res += zero2(msg[i].toString(16));
@@ -50,7 +50,7 @@ function toHex(msg: string) {
 }
 utils.toHex = toHex;
 
-utils.encode = function encode(arr: Buffer[], enc: string) {
+utils.encode = function encode(arr: Buffer, enc: string) {
   if (enc === 'hex')
     return toHex(arr);
   else

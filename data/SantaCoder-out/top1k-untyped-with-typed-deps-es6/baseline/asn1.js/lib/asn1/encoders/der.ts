@@ -7,7 +7,7 @@ import Node from '../base/node';
 // Import DER constants
 import der from '../constants/der';
 
-function DEREncoder(entity: any) {
+function DEREncoder(entity: Entity) {
   this.enc = 'der';
   this.name = entity.name;
   this.entity = entity;
@@ -94,7 +94,7 @@ DERNode.prototype._encodeStr = function encodeStr(str: string, tag: string) {
   }
 };
 
-DERNode.prototype._encodeObjid = function encodeObjid(id: number, values: any[], relative: number) {
+DERNode.prototype._encodeObjid = function encodeObjid(id: number, values: any, relative: number) {
   if (typeof id === 'string') {
     if (!values)
       return this.reporter.error('string objid given, but no values map found');
@@ -147,7 +147,7 @@ function two(num: number) {
     return num;
 }
 
-DERNode.prototype._encodeTime = function encodeTime(time: number, tag: number) {
+DERNode.prototype._encodeTime = function encodeTime(time: number, tag: string) {
   let str;
   const date = new Date(time);
 
@@ -182,7 +182,7 @@ DERNode.prototype._encodeNull = function encodeNull() {
   return this._createEncoderBuffer('');
 };
 
-DERNode.prototype._encodeInt = function encodeInt(num: number, values: number[]) {
+DERNode.prototype._encodeInt = function encodeInt(num: number, values: any) {
   if (typeof num === 'string') {
     if (!values)
       return this.reporter.error('String int or enum given, but no values map');
@@ -240,13 +240,13 @@ DERNode.prototype._encodeBool = function encodeBool(value: boolean) {
   return this._createEncoderBuffer(value ? 0xff : 0);
 };
 
-DERNode.prototype._use = function use(entity: Entity, obj: any) {
+DERNode.prototype._use = function use(entity: DERNode, obj: any) {
   if (typeof entity === 'function')
     entity = entity(obj);
   return entity._getEncoder('der').tree;
 };
 
-DERNode.prototype._skipDefault = function skipDefault(dataBuffer: Buffer, reporter: Reporter, parent: Node) {
+DERNode.prototype._skipDefault = function skipDefault(dataBuffer: string[], reporter: Reporter, parent: Node) {
   const state = this._baseState;
   let i;
   if (state['default'] === null)
@@ -268,7 +268,7 @@ DERNode.prototype._skipDefault = function skipDefault(dataBuffer: Buffer, report
 
 // Utility methods
 
-function encodeTag(tag: string, primitive: boolean, cls: Class<any>, reporter: Reporter) {
+function encodeTag(tag: string, primitive: boolean, cls: DER, reporter: Reporter) {
   let res;
 
   if (tag === 'seqof')

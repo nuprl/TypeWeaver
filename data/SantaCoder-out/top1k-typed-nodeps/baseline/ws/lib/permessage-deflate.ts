@@ -476,7 +476,7 @@ function deflateOnData(chunk: Buffer) {
  * @param {Buffer} chunk A chunk of data
  * @private
  */
-function inflateOnData(chunk: any) {
+function inflateOnData(chunk: Uint8Array) {
   this[kTotalLength] += chunk.length;
 
   if (

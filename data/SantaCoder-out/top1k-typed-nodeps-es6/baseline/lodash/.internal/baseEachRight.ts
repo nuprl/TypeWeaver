@@ -9,7 +9,7 @@ import isArrayLike from '../isArrayLike.js'
  * @param {Function} iteratee The function invoked per iteration.
  * @returns {Array|Object} Returns `collection`.
  */
-function baseEachRight(collection: List<any>, iteratee: Function) {
+function baseEachRight(collection: any[], iteratee: Function) {
   if (collection == null) {
     return collection
   }

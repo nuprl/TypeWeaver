@@ -40,7 +40,7 @@
     'closenamespace'
   ]
 
-  function SAXParser (strict: boolean, opt: ParserOptions) {
+  function SAXParser (strict: boolean, opt: sax.SAXOptions) {
     if (!(this instanceof SAXParser)) {
       return new SAXParser(strict, opt)
     }
@@ -94,7 +94,7 @@
     }
   }
 
-  function checkBufferLength (parser: Parser) {
+  function checkBufferLength (parser: any) {
     var maxAllowed = Math.max(sax.MAX_BUFFER_LENGTH, 10)
     var maxActual = 0
     for (var i = 0, l = buffers.length; i < l; i++) {
@@ -136,7 +136,7 @@
     }
   }
 
-  function flushBuffers (parser: Parser) {
+  function flushBuffers (parser: SAXParser) {
     closeText(parser)
     if (parser.cdata !== '') {
       emitNode(parser, 'oncdata', parser.cdata)
@@ -529,7 +529,7 @@
     parser.textNode = ''
   }
 
-  function textopts (opt: string, text: string) {
+  function textopts (opt: TextOptions, text: string) {
     if (opt.trim) text = text.trim()
     if (opt.normalize) text = text.replace(/\s+/g, ' ')
     return text
@@ -565,7 +565,7 @@
     return parser
   }
 
-  function strictFail (parser: Parser, message: string) {
+  function strictFail (parser: SAXParser, message: string) {
     if (typeof parser !== 'object' || !(parser instanceof SAXParser)) {
       throw new Error('bad call to strictFail')
     }
@@ -587,7 +587,7 @@
     emitNode(parser, 'onopentagstart', tag)
   }
 
-  function qname (name: string, attribute: string) {
+  function qname (name: string, attribute: boolean) {
     var i = name.indexOf(':')
     var qualName = i < 0 ? [ '', name ] : name.split(':')
     var prefix = qualName[0]
@@ -673,7 +673,7 @@
 
       var parent = parser.tags[parser.tags.length - 1] || parser
       if (tag.ns && parent.ns !== tag.ns) {
-        Object.keys(tag.ns).forEach(function (p: Node) {
+        Object.keys(tag.ns).forEach(function (p: string) {
           emitNode(parser, 'onopennamespace', {
             prefix: p,
             uri: tag.ns[p]
@@ -858,7 +858,7 @@
     return result
   }
 
-  function write (chunk: Buffer) {
+  function write (chunk: any) {
     var parser = this
     if (this.error) {
       throw this.error

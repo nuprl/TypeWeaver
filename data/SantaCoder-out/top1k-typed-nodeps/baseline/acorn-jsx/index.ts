@@ -9,7 +9,7 @@ const decimalNumber = /^\d+$/;
 const acornJsxMap = new WeakMap();
 
 // Get the original tokens for the given `acorn` namespace object.
-function getJsxTokens(acorn: any) {
+function getJsxTokens(acorn: AcornType) {
   acorn = acorn.Parser.acorn || acorn;
   let acornJsx = acornJsxMap.get(acorn);
   if (!acornJsx) {
@@ -36,7 +36,7 @@ function getJsxTokens(acorn: any) {
       this.context.push(tc_oTag); // start opening tag context
       this.exprAllowed = false;
     };
-    tokTypes.jsxTagEnd.updateContext = function(prevType: string) {
+    tokTypes.jsxTagEnd.updateContext = function(prevType: number) {
       let out = this.context.pop();
       if (out === tc_oTag && prevType === tt.slash || out === tc_cTag) {
         this.context.pop();
@@ -55,7 +55,7 @@ function getJsxTokens(acorn: any) {
 
 // Transforms JSX element name to string.
 
-function getQualifiedJSXName(object: any) {
+function getQualifiedJSXName(object: t.JSXIdentifier) {
   if (!object)
     return object;
 
@@ -70,7 +70,7 @@ function getQualifiedJSXName(object: any) {
     getQualifiedJSXName(object.property);
 }
 
-module.exports = function(options: any) {
+module.exports = function(options: Options) {
   options = options || {};
   return function(Parser: any) {
     return plugin({

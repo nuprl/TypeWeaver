@@ -9,7 +9,7 @@ function isHexCode(c: string) {
          ((0x61/* a */ <= c) && (c <= 0x66/* f */));
 }
 
-function isOctCode(c: string) {
+function isOctCode(c: any) {
   return ((0x30/* 0 */ <= c) && (c <= 0x37/* 7 */));
 }
 

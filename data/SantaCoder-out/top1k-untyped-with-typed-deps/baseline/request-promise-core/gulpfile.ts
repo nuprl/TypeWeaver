@@ -107,11 +107,11 @@ gulp.task('clean-coverage', function (done: Function) {
     rimraf('./coverage', done);
 });
 
-gulp.task('ci', function (done: Function) {
+gulp.task('ci', function (done: any) {
     runSequence('validate', 'coveralls', 'test-without-coverage', done);
 });
 
-gulp.task('ci-no-cov', function (done: Function) {
+gulp.task('ci-no-cov', function (done: any) {
     runSequence('validate', 'test-without-coverage', done);
 });
 

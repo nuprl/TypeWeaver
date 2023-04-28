@@ -1,4 +1,4 @@
-function stringifyNode(node: Node, custom: string[]) {
+function stringifyNode(node: Node, custom: CustomStringify) {
   var type = node.type;
   var value = node.value;
   var buf;
@@ -32,7 +32,7 @@ function stringifyNode(node: Node, custom: string[]) {
   return value;
 }
 
-function stringify(nodes: Node[], custom: any) {
+function stringify(nodes: Node[], custom: Custom) {
   var result, i;
 
   if (Array.isArray(nodes)) {

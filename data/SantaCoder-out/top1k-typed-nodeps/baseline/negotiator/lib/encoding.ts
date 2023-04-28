@@ -95,7 +95,7 @@ function parseEncoding(str: string, i: number) {
  * @private
  */
 
-function getEncodingPriority(encoding: string, accepted: string[], index: number) {
+function getEncodingPriority(encoding: string, accepted: Array<string>, index: number) {
   var priority = {o: -1, q: 0, s: 0};
 
   for (var i = 0; i < accepted.length; i++) {
@@ -114,7 +114,7 @@ function getEncodingPriority(encoding: string, accepted: string[], index: number
  * @private
  */
 
-function specify(encoding: string, spec: string, index: number) {
+function specify(encoding: string, spec: EncodingSpec, index: number) {
   var s = 0;
   if(spec.encoding.toLowerCase() === encoding.toLowerCase()){
     s |= 1;
@@ -151,7 +151,7 @@ function preferredEncodings(accept: string, provided: string[]) {
   });
 
   // sorted list of accepted encodings
-  return priorities.filter(isQuality).sort(compareSpecs).map(function getEncoding(priority: string) {
+  return priorities.filter(isQuality).sort(compareSpecs).map(function getEncoding(priority: string[]) {
     return provided[priorities.indexOf(priority)];
   });
 }
@@ -170,7 +170,7 @@ function compareSpecs(a: Spec, b: Spec) {
  * @private
  */
 
-function getFullEncoding(spec: EncodingSpec) {
+function getFullEncoding(spec: Encoding) {
   return spec.encoding;
 }
 

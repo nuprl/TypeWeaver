@@ -9,7 +9,7 @@ const Node = require('../base/node');
 // Import DER constants
 const der = require('../constants/der');
 
-function DERDecoder(entity: any) {
+function DERDecoder(entity: Entity) {
   this.enc = 'der';
   this.name = entity.name;
   this.entity = entity;
@@ -20,7 +20,7 @@ function DERDecoder(entity: any) {
 }
 module.exports = DERDecoder;
 
-DERDecoder.prototype.decode = function decode(data: Buffer, options: Options) {
+DERDecoder.prototype.decode = function decode(data: Buffer, options: DecodeOptions) {
   if (!DecoderBuffer.isDecoderBuffer(data)) {
     data = new DecoderBuffer(data, options);
   }
@@ -50,7 +50,7 @@ DERNode.prototype._peekTag = function peekTag(buffer: Buffer, tag: string, any: 
     (decodedTag.tagStr + 'of') === tag || any;
 };
 
-DERNode.prototype._decodeTag = function decodeTag(buffer: Buffer, tag: number, any: any) {
+DERNode.prototype._decodeTag = function decodeTag(buffer: Buffer, tag: string, any: boolean) {
   const decodedTag = derDecodeTag(buffer,
     'Failed to decode tag of "' + tag + '"');
   if (buffer.isError(decodedTag))
@@ -87,7 +87,7 @@ DERNode.prototype._decodeTag = function decodeTag(buffer: Buffer, tag: number, a
   return buffer.skip(len, 'Failed to match body of: "' + tag + '"');
 };
 
-DERNode.prototype._skipUntilEnd = function skipUntilEnd(buffer: Buffer, fail: boolean) {
+DERNode.prototype._skipUntilEnd = function skipUntilEnd(buffer: Buffer, fail: Fail) {
   for (;;) {
     const tag = derDecodeTag(buffer, fail);
     if (buffer.isError(tag))
@@ -168,7 +168,7 @@ DERNode.prototype._decodeStr = function decodeStr(buffer: Buffer, tag: string) {
   }
 };
 
-DERNode.prototype._decodeObjid = function decodeObjid(buffer: Buffer, values: number[], relative: number) {
+DERNode.prototype._decodeObjid = function decodeObjid(buffer: Buffer, values: any, relative: number) {
   let result;
   const identifiers = [];
   let ident = 0;
@@ -204,7 +204,7 @@ DERNode.prototype._decodeObjid = function decodeObjid(buffer: Buffer, values: nu
   return result;
 };
 
-DERNode.prototype._decodeTime = function decodeTime(buffer: Buffer, tag: number) {
+DERNode.prototype._decodeTime = function decodeTime(buffer: Buffer, tag: string) {
   const str = buffer.raw().toString();
 
   let year;
@@ -250,7 +250,7 @@ DERNode.prototype._decodeBool = function decodeBool(buffer: Buffer) {
     return res !== 0;
 };
 
-DERNode.prototype._decodeInt = function decodeInt(buffer: Buffer, values: number[]) {
+DERNode.prototype._decodeInt = function decodeInt(buffer: Buffer, values: any[]) {
   // Bigint, return as it is (assume big endian)
   const raw = buffer.raw();
   let res = new bignum(raw);
@@ -261,7 +261,7 @@ DERNode.prototype._decodeInt = function decodeInt(buffer: Buffer, values: number
   return res;
 };
 
-DERNode.prototype._use = function use(entity: Entity, obj: any) {
+DERNode.prototype._use = function use(entity: any, obj: any) {
   if (typeof entity === 'function')
     entity = entity(obj);
   return entity._getDecoder('der').tree;
@@ -269,7 +269,7 @@ DERNode.prototype._use = function use(entity: Entity, obj: any) {
 
 // Utility methods
 
-function derDecodeTag(buf: Buffer, fail: boolean) {
+function derDecodeTag(buf: Buffer, fail: number) {
   let tag = buf.readUInt8(fail);
   if (buf.isError(tag))
     return tag;
@@ -302,7 +302,7 @@ function derDecodeTag(buf: Buffer, fail: boolean) {
   };
 }
 
-function derDecodeLen(buf: Buffer, primitive: boolean, fail: boolean) {
+function derDecodeLen(buf: Buffer, primitive: boolean, fail: number) {
   let len = buf.readUInt8(fail);
   if (buf.isError(len))
     return len;

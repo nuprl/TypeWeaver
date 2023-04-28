@@ -39,13 +39,13 @@ import awaitify from './internal/awaitify.js'
  * }
  *
  * // Using callbacks
- * async.every(fileList, fileExists, function(err: Error, result: any) {
+ * async.every(fileList, fileExists, function(err: any, result: any) {
  *     console.log(result);
  *     // true
  *     // result is true since every file exists
  * });
  *
- * async.every(withMissingFileList, fileExists, function(err: Error, result: any) {
+ * async.every(withMissingFileList, fileExists, function(err: any, result: any) {
  *     console.log(result);
  *     // false
  *     // result is false since NOT every file exists
@@ -96,7 +96,7 @@ import awaitify from './internal/awaitify.js'
  * }
  *
  */
-function every(coll: any[], iteratee: Function, callback: Function) {
+function every(coll: any[], iteratee: any, callback: any) {
     return createTester(bool => !bool, res => !res)(eachOf, coll, iteratee, callback)
 }
 export default awaitify(every, 3);
