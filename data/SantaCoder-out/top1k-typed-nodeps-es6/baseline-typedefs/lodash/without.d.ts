@@ -1,2 +1,2 @@
-declare function without(array: Array<any>, ...values: Array<any>): any[];
+declare function without(array: ArrayLike<any>, ...values: ArrayLike<any>): any[];
 export default without;

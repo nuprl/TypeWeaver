@@ -1,2 +1,2 @@
-declare function groupBy(collection: any[], iteratee: any): any;
+declare function groupBy(collection: any[], iteratee: Function): any;
 export default groupBy;

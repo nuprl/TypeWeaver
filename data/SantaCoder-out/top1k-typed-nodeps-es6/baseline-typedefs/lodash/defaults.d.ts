@@ -1,2 +1,2 @@
-declare function defaults(object: any, ...sources: any[]): any;
+declare function defaults(object: Object, ...sources: Object[]): Object;
 export default defaults;

@@ -81,7 +81,6 @@ lib/SourceListMap.ts(29,10): error TS2339: Property 'children' does not exist on
 lib/SourceListMap.ts(29,24): error TS2339: Property 'children' does not exist on type 'SourceListMap'.
 lib/SourceListMap.ts(31,10): error TS2339: Property 'children' does not exist on type 'SourceListMap'.
 lib/SourceListMap.ts(34,9): error TS2339: Property 'children' does not exist on type 'SourceListMap'.
-lib/SourceListMap.ts(36,49): error TS2304: Cannot find name 'Solution'.
 lib/SourceListMap.ts(47,10): error TS2339: Property 'children' does not exist on type 'SourceListMap'.
 lib/SourceListMap.ts(48,19): error TS2339: Property 'children' does not exist on type 'SourceListMap'.
 lib/SourceListMap.ts(48,47): error TS2339: Property 'children' does not exist on type 'SourceListMap'.
@@ -90,17 +89,16 @@ lib/SourceListMap.ts(49,10): error TS2339: Property 'children' does not exist on
 lib/SourceListMap.ts(49,24): error TS2339: Property 'children' does not exist on type 'SourceListMap'.
 lib/SourceListMap.ts(51,10): error TS2339: Property 'children' does not exist on type 'SourceListMap'.
 lib/SourceListMap.ts(54,9): error TS2339: Property 'children' does not exist on type 'SourceListMap'.
-lib/SourceListMap.ts(56,67): error TS2304: Cannot find name 'Solution'.
 lib/SourceListMap.ts(66,8): error TS2339: Property 'children' does not exist on type 'SourceListMap'.
 lib/SourceListMap.ts(66,39): error TS2304: Cannot find name 'Solution'.
-lib/SourceListMap.ts(72,41): error TS2304: Cannot find name 'Solution'.
+lib/SourceListMap.ts(72,41): error TS2304: Cannot find name 'SolutionNode'.
 lib/SourceListMap.ts(86,10): error TS2554: Expected 3 arguments, but got 1.
 lib/SourceListMap.ts(90,15): error TS2339: Property 'children' does not exist on type 'SourceListMap'.
 lib/SourceListMap.ts(90,42): error TS2304: Cannot find name 'Solution'.
 lib/SourceListMap.ts(97,23): error TS2339: Property 'children' does not exist on type 'SourceListMap'.
 lib/SourceListMap.ts(97,50): error TS2304: Cannot find name 'Solution'.
 lib/SourceListMap.ts(100,25): error TS2339: Property 'children' does not exist on type 'SourceListMap'.
-lib/SourceListMap.ts(100,52): error TS2304: Cannot find name 'Solution'.
+lib/SourceListMap.ts(100,52): error TS2304: Cannot find name 'SourceMapConsumer'.
 lib/SourceListMap.ts(110,37): error TS2339: Property 'hasSourceContent' does not exist on type 'MappingsContext'.
 lib/SourceNode.ts(7,7): error TS2451: Cannot redeclare block-scoped variable 'base64VLQ'.
 lib/SourceNode.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'getNumberOfLines'.
@@ -158,9 +156,7 @@ lib/fromStringWithSourceMap.ts(7,7): error TS2451: Cannot redeclare block-scoped
 lib/fromStringWithSourceMap.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'SourceNode'.
 lib/fromStringWithSourceMap.ts(9,7): error TS2451: Cannot redeclare block-scoped variable 'CodeNode'.
 lib/fromStringWithSourceMap.ts(10,7): error TS2451: Cannot redeclare block-scoped variable 'SourceListMap'.
-lib/fromStringWithSourceMap.ts(13,22): error TS2339: Property 'sources' does not exist on type 'string'.
-lib/fromStringWithSourceMap.ts(14,29): error TS2339: Property 'sourcesContent' does not exist on type 'string'.
-lib/fromStringWithSourceMap.ts(15,23): error TS2339: Property 'mappings' does not exist on type 'string'.
+lib/fromStringWithSourceMap.ts(12,70): error TS2304: Cannot find name 'SourceMapGenerator'.
 lib/fromStringWithSourceMap.ts(46,37): error TS2304: Cannot find name 'Mapping'.
 lib/fromStringWithSourceMap.ts(67,9): error TS2554: Expected 3 arguments, but got 1.
 lib/fromStringWithSourceMap.ts(68,35): error TS2304: Cannot find name 'Mapping'.

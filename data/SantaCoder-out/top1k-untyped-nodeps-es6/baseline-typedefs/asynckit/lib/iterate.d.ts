@@ -1,2 +1,2 @@
 export default iterate;
-declare function iterate(list: any[], iterator: any, state: any, callback: any): void;
+declare function iterate(list: Array<any>, iterator: Function, state: any, callback: Function): void;

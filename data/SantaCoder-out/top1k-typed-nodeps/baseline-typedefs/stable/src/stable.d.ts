@@ -1,2 +1,2 @@
-declare var stable: (arr: any[], comp: Comparator<any>) => any[];
+declare var stable: (arr: any[], comp: any) => any[];
 export default stable;

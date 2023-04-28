@@ -1,10 +1,19 @@
 scripts/build.ts(20,1): error TS2554: Expected 3 arguments, but got 2.
+scripts/build.ts(47,54): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'string'.
 scripts/build.ts(61,10): error TS2393: Duplicate function implementation.
+scripts/build.ts(62,12): error TS2339: Property 'extensions' does not exist on type 'Object'.
+scripts/build.ts(63,9): error TS2339: Property 'extensions' does not exist on type 'Object'.
+scripts/build.ts(66,11): error TS2339: Property 'extensions' does not exist on type 'Object'.
+scripts/build.ts(67,9): error TS2339: Property 'extensions' does not exist on type 'Object'.
 scripts/build.ts(74,10): error TS2393: Duplicate function implementation.
 scripts/build.ts(94,9): error TS2339: Property 'source' does not exist on type '{}'.
 scripts/fetch-apache.ts(33,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'URL' must be of type '{ new (url: string | URL, base?: string | URL): URL; prototype: URL; createObjectURL(obj: Blob | MediaSource): string; revokeObjectURL(url: string): void; }', but here has type 'string'.
 scripts/fetch-apache.ts(41,20): error TS2339: Property 'index' does not exist on type 'RegExp'.
 scripts/fetch-apache.ts(66,10): error TS2393: Duplicate function implementation.
+scripts/fetch-apache.ts(67,12): error TS2339: Property 'extensions' does not exist on type 'Object'.
+scripts/fetch-apache.ts(68,9): error TS2339: Property 'extensions' does not exist on type 'Object'.
+scripts/fetch-apache.ts(71,11): error TS2339: Property 'extensions' does not exist on type 'Object'.
+scripts/fetch-apache.ts(72,9): error TS2339: Property 'extensions' does not exist on type 'Object'.
 scripts/fetch-apache.ts(79,10): error TS2393: Duplicate function implementation.
 scripts/fetch-apache.ts(95,10): error TS2393: Duplicate function implementation.
 scripts/fetch-apache.ts(96,44): error TS2304: Cannot find name 'IncomingMessage'.
@@ -15,17 +24,18 @@ scripts/fetch-iana.ts(198,7): error TS2367: This comparison appears to be uninte
 scripts/fetch-iana.ts(200,5): error TS2739: Type 'string[]' is missing the following properties from type 'RegExpExecArray': index, input, 0
 scripts/fetch-iana.ts(236,12): error TS2393: Duplicate function implementation.
 scripts/fetch-iana.ts(302,49): error TS2367: This comparison appears to be unintentional because the types 'string' and 'number' have no overlap.
-scripts/fetch-iana.ts(316,22): error TS2339: Property 'sources' does not exist on type 'string'.
-scripts/fetch-iana.ts(316,39): error TS2339: Property 'sources' does not exist on type 'string'.
+scripts/fetch-iana.ts(316,22): error TS2339: Property 'sources' does not exist on type 'Object'.
+scripts/fetch-iana.ts(316,39): error TS2339: Property 'sources' does not exist on type 'Object'.
 scripts/fetch-iana.ts(349,22): error TS2339: Property 'index' does not exist on type 'RegExp'.
 scripts/fetch-iana.ts(362,22): error TS2339: Property 'index' does not exist on type 'RegExp'.
-scripts/fetch-iana.ts(394,92): error TS2304: Cannot find name 'RFC'.
 scripts/fetch-nginx.ts(31,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'URL' must be of type '{ new (url: string | URL, base?: string | URL): URL; prototype: URL; createObjectURL(obj: Blob | MediaSource): string; revokeObjectURL(url: string): void; }', but here has type 'string'.
 scripts/fetch-nginx.ts(39,20): error TS2339: Property 'index' does not exist on type 'RegExp'.
 scripts/fetch-nginx.ts(60,10): error TS2393: Duplicate function implementation.
+scripts/fetch-nginx.ts(61,12): error TS2339: Property 'extensions' does not exist on type 'Object'.
+scripts/fetch-nginx.ts(62,9): error TS2339: Property 'extensions' does not exist on type 'Object'.
+scripts/fetch-nginx.ts(65,11): error TS2339: Property 'extensions' does not exist on type 'Object'.
+scripts/fetch-nginx.ts(66,9): error TS2339: Property 'extensions' does not exist on type 'Object'.
 scripts/fetch-nginx.ts(73,10): error TS2393: Duplicate function implementation.
-scripts/fetch-nginx.ts(74,18): error TS2339: Property 'length' does not exist on type 'Object'.
-scripts/fetch-nginx.ts(78,34): error TS2339: Property 'length' does not exist on type 'Object'.
 scripts/fetch-nginx.ts(89,10): error TS2393: Duplicate function implementation.
-scripts/fetch-nginx.ts(90,44): error TS2503: Cannot find namespace 'http'.
+scripts/fetch-nginx.ts(90,44): error TS2304: Cannot find name 'IncomingMessage'.
 

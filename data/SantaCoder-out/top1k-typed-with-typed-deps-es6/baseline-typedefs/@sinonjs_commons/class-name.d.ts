@@ -1,2 +1,2 @@
-declare function className(value: string): any;
+declare function className(value: any): any;
 export default className;

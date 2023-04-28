@@ -1,2 +1,2 @@
-declare function unionWith(...arrays: any[][]): any[];
+declare function unionWith(...arrays: Array<any>[]): any[];
 export default unionWith;

@@ -1,5 +1,5 @@
 declare function isValidName(name: string): boolean;
-declare function isValidValue(name: string, value: any): boolean;
+declare function isValidValue(name: string, value: string): boolean;
 declare function isAlias(name: string): boolean;
 declare function isGeneralCategoryValue(value: string): boolean;
 declare function isScriptCategoryValue(value: string): boolean;

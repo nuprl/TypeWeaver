@@ -1197,4 +1197,6 @@ declare const configs: {
         };
     };
 };
-declare function defaultsReducer(defaults: any, [name, string, { default: value }]: any): any;
+declare function defaultsReducer(defaults: Object, [name, string, { default: value }]: any): Object & {
+    [x: number]: any;
+};

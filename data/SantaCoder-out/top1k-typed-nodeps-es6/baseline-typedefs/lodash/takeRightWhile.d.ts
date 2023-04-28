@@ -1,2 +1,2 @@
-declare function takeRightWhile(array: any[], predicate: any): any[];
+declare function takeRightWhile(array: any[], predicate: Function): any[];
 export default takeRightWhile;

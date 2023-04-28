@@ -1,21 +1,15 @@
 src/index.ts(29,70): error TS2304: Cannot find name 'Graph'.
+src/index.ts(29,86): error TS2304: Cannot find name 'Visited'.
 src/index.ts(55,20): error TS2339: Property 'createImportedName' does not exist on type '{}'.
 src/index.ts(58,17): error TS2339: Property 'createImportedName' does not exist on type '{}'.
 src/index.ts(59,36): error TS2339: Property 'failOnWrongOrder' does not exist on type '{}'.
-src/index.ts(80,59): error TS2345: Argument of type '{}' is not assignable to parameter of type 'Set<string>'.
-  Type '{}' is missing the following properties from type 'Set<string>': add, clear, delete, forEach, and 7 more.
-src/index.ts(120,63): error TS2345: Argument of type '{}' is not assignable to parameter of type 'Set<string>'.
 src/index.ts(140,45): error TS2339: Property 'nodes' does not exist on type 'Error'.
 src/index.ts(148,30): error TS2339: Property 'nodes' does not exist on type 'Error'.
-src/topologicalSort.ts(4,41): error TS2304: Cannot find name 'Graph'.
+src/topologicalSort.ts(4,43): error TS2304: Cannot find name 'Graph'.
 src/topologicalSort.ts(12,6): error TS2339: Property 'nodes' does not exist on type 'Error'.
-src/topologicalSort.ts(17,39): error TS2304: Cannot find name 'Graph'.
-src/topologicalSort.ts(18,13): error TS2538: Type 'Node' cannot be used as an index type.
-src/topologicalSort.ts(22,13): error TS2538: Type 'Node' cannot be used as an index type.
-src/topologicalSort.ts(30,9): error TS2538: Type 'Node' cannot be used as an index type.
-src/topologicalSort.ts(43,9): error TS2538: Type 'Node' cannot be used as an index type.
-src/topologicalSort.ts(45,15): error TS2345: Argument of type 'Node' is not assignable to parameter of type 'string'.
+src/topologicalSort.ts(17,41): error TS2304: Cannot find name 'Graph'.
+src/topologicalSort.ts(17,55): error TS2304: Cannot find name 'State'.
+src/topologicalSort.ts(17,70): error TS2304: Cannot find name 'Result'.
 src/topologicalSort.ts(48,33): error TS2304: Cannot find name 'Graph'.
 src/topologicalSort.ts(48,33): error TS4078: Parameter 'graph' of exported function has or is using private name 'Graph'.
-src/topologicalSort.ts(56,26): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Node'.
 

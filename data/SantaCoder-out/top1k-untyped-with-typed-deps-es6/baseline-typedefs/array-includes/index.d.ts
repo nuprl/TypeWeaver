@@ -1,2 +1,2 @@
-declare var boundShim: (array: Array<any>, searchElement: any) => boolean;
+declare var boundShim: (array: any[], searchElement: any) => boolean;
 export default boundShim;

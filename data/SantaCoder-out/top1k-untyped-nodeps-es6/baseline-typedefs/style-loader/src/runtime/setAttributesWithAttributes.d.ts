@@ -1,2 +1,2 @@
-declare function setAttributesWithoutAttributes(styleElement: HTMLElement, attributes: any): void;
+declare function setAttributesWithoutAttributes(styleElement: HTMLStyleElement, attributes: any): void;
 export default setAttributesWithoutAttributes;

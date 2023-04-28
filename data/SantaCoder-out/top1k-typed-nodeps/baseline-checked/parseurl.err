@@ -5,8 +5,8 @@ benchmark/simplepath.ts(64,10): error TS2393: Duplicate function implementation.
 benchmark/slash.ts(63,10): error TS2393: Duplicate function implementation.
 index.ts(35,25): error TS2304: Cannot find name 'IncomingMessage'.
 index.ts(35,25): error TS4078: Parameter 'req' of exported function has or is using private name 'IncomingMessage'.
-index.ts(66,17): error TS2339: Property 'originalUrl' does not exist on type 'Request'.
-index.ts(73,20): error TS2339: Property '_parsedOriginalUrl' does not exist on type 'Request'.
-index.ts(84,15): error TS2339: Property '_parsedOriginalUrl' does not exist on type 'Request'.
-index.ts(157,15): error TS2339: Property '_raw' does not exist on type 'URL'.
+index.ts(65,28): error TS2304: Cannot find name 'IncomingMessage'.
+index.ts(65,28): error TS4078: Parameter 'req' of exported function has or is using private name 'IncomingMessage'.
+index.ts(153,41): error TS2749: 'Url' refers to a value, but is being used as a type here. Did you mean 'typeof Url'?
+index.ts(153,41): error TS4078: Parameter 'parsedUrl' of exported function has or is using private name 'Url'.
 

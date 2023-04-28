@@ -1,1 +1,1 @@
-declare function replace(str: string, pattern: RegExp, replacement: string): string;
+declare function replace(str: string, pattern: string, replacement: string): string;

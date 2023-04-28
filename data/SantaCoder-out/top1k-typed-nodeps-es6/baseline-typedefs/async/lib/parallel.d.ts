@@ -1,1 +1,1 @@
-export default function parallel(tasks: Array<Function>, callback: Function): any;
+export default function parallel(tasks: Array<any>, callback: Function): any;

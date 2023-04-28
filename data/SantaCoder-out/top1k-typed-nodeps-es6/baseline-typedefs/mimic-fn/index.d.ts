@@ -1,3 +1,3 @@
-export default function mimicFunction(to: any, from: any, { ignoreNonConfigurable }: {
+export default function mimicFunction(to: Function, from: Function, { ignoreNonConfigurable }: {
     ignoreNonConfigurable?: boolean;
-}, Options: any): any;
+}, MimicOptions: any): Function;

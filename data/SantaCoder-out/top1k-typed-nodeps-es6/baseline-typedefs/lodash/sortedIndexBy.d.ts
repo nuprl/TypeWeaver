@@ -1,2 +1,2 @@
-declare function sortedIndexBy(array: any[], value: any, iteratee: any): number;
+declare function sortedIndexBy(array: any[], value: any, iteratee: Function): number;
 export default sortedIndexBy;

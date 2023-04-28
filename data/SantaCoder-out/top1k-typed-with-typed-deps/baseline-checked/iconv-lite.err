@@ -1,3 +1,5 @@
+encodings/internal.ts(25,38): error TS4078: Parameter 'codecOptions' of exported function has or is using private name 'CodecOptions'.
+encodings/internal.ts(25,59): error TS4078: Parameter 'iconv' of exported function has or is using private name 'Iconv'.
 encodings/sbcs-data-generated.ts(118,20): error TS1002: Unterminated string literal.
 encodings/sbcs-data-generated.ts(119,1): error TS1127: Invalid character.
 encodings/sbcs-data-generated.ts(119,2): error TS1127: Invalid character.
@@ -1210,6 +1212,8 @@ encodings/sbcs-data-generated.ts(469,11): error TS1005: ';' expected.
 encodings/sbcs-data-generated.ts(470,11): error TS1005: ';' expected.
 encodings/sbcs-data-generated.ts(471,12): error TS1005: ';' expected.
 encodings/sbcs-data-generated.ts(473,1): error TS1128: Declaration or statement expected.
-encodings/utf32.ts(155,70): error TS4078: Parameter 'codepoint' of exported function has or is using private name 'codepoint_t'.
-encodings/utf32.ts(155,92): error TS4078: Parameter 'badChar' of exported function has or is using private name 'bool'.
+generation/research/get-iconv-encodings.ts(94,33): error TS4078: Parameter 'converter' of exported function has or is using private name 'iconv'.
+lib/bom-handling.ts(6,37): error TS4078: Parameter 'encoder' of exported function has or is using private name 'Encoder'.
+lib/bom-handling.ts(28,35): error TS4078: Parameter 'decoder' of exported function has or is using private name 'Decoder'.
+lib/bom-handling.ts(28,53): error TS4078: Parameter 'options' of exported function has or is using private name 'Options'.
 

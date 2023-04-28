@@ -6,15 +6,15 @@ declare const _default: {
         };
         '.babel.jsx': {
             module: string;
-            register: (hook: HookContext, config: any) => void;
+            register: (hook: any, config: any) => void;
         };
         '.babel.ts': {
             module: string;
-            register: (hook: Hook, config: any) => void;
+            register: (hook: any, config: any) => void;
         }[];
         '.babel.tsx': {
             module: string;
-            register: (hook: HookContext, config: any) => void;
+            register: (hook: Hook, config: BabelConfig) => void;
         };
         '.cjs': string;
         '.coffee': string;
@@ -37,14 +37,14 @@ declare const _default: {
         };
         '.esm.js': {
             module: string;
-            register: (hook: Hook) => void;
+            register: (hook: Function) => void;
         };
         '.js': any;
         '.json': any;
         '.json5': string;
         '.jsx': (string | {
             module: string;
-            register: (hook: Hook, config: any) => void;
+            register: (hook: any, config: any) => void;
         })[];
         '.litcoffee': string;
         '.mdx': string;
@@ -52,48 +52,48 @@ declare const _default: {
         '.node': any;
         '.sucrase.js': {
             module: string;
-            register: (hook: Hook, config: any) => void;
+            register: (hook: Hook, config: SucraseConfig) => void;
         };
         '.sucrase.jsx': {
             module: string;
-            register: (hook: HookContext, config: any) => void;
+            register: (hook: Hook, config: SucraseConfig) => void;
         };
         '.sucrase.ts': {
             module: string;
-            register: (hook: Hook, config: any) => void;
+            register: (hook: Hook, config: SucraseConfig) => void;
         };
         '.sucrase.tsx': {
             module: string;
-            register: (hook: HookContext, config: any) => void;
+            register: (hook: Hook, config: RegisterOptions) => void;
         };
         '.swc.js': {
             module: string;
-            register: (hook: Hook, config: any) => void;
+            register: (hook: Hook, config: Options) => void;
         };
         '.swc.jsx': {
             module: string;
-            register: (hook: HookContext, config: any) => void;
+            register: (hook: Hook, config: Config) => void;
         };
         '.swc.ts': {
             module: string;
-            register: (hook: HookContext, config: any) => void;
+            register: (hook: any, config: any) => void;
         };
         '.swc.tsx': {
             module: string;
-            register: (hook: Hook, config: any) => void;
+            register: (hook: Hook, config: Options) => void;
         };
         '.toml': {
             module: string;
-            register: (hook: Hook, config: Config) => void;
+            register: (hook: Hook, config: any) => void;
         };
         '.ts': (string | {
             module: string;
-            register: (hook: Hook, config: any) => void;
+            register: (hook: any, config: any) => void;
         })[];
         '.cts': string[];
         '.tsx': (string | {
             module: string;
-            register: (hook: Hook, config: any) => void;
+            register: (hook: Hook, config: BabelConfig) => void;
         })[];
         '.yaml': string;
         '.yml': string;

@@ -1,1 +1,1 @@
-export default function test(callback: Function): void;
+export default function test(callback: any): void;

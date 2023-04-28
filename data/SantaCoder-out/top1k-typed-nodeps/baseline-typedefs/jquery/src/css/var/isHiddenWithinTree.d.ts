@@ -1,1 +1,1 @@
-export default function (elem: HTMLElement, el: HTMLElement): boolean;
+export default function (elem: Element, el: Element): boolean;

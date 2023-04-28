@@ -1,1 +1,1 @@
-declare function hasOwnProperty(obj: any, prop: string): any;
+declare function hasOwnProperty(obj: Object, prop: string): any;

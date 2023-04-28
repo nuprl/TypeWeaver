@@ -5,4 +5,4 @@ export declare class MapEnumerator extends Enumerator {
     _init(Constructor: any, input: any, bool: any, label: any, mapFn: any): void;
     _setResultAt(state: any, i: any, value: any, firstPass: any): void;
 }
-export default function map(promises: Promise<any>[], mapFn: any, label: string): any;
+export default function map(promises: Array<Promise<any>>, mapFn: any, label: string): any;

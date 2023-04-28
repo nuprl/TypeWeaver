@@ -1,2 +1,2 @@
-export default function (dict: any): any;
-export declare const httpify: (resp: any, headers: any) => any;
+export default function (dict: Object): any;
+export declare const httpify: (resp: http.ServerResponse, headers: http.IncomingHttpHeaders) => any;

@@ -1,4 +1,8 @@
 bin.ts(2,5): error TS2300: Duplicate identifier 'colorSupport'.
 browser.ts(3,10): error TS2300: Duplicate identifier 'colorSupport'.
 index.ts(39,10): error TS2300: Duplicate identifier 'colorSupport'.
+index.ts(39,33): error TS2304: Cannot find name 'ColorSupportOptions'.
+index.ts(39,33): error TS4078: Parameter 'options' of exported function has or is using private name 'ColorSupportOptions'.
+index.ts(39,59): error TS2304: Cannot find name 'ColorSupportObject'.
+index.ts(39,59): error TS4078: Parameter 'obj' of exported function has or is using private name 'ColorSupportObject'.
 

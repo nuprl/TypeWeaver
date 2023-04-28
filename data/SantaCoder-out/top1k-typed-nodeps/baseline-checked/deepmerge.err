@@ -1,5 +1,5 @@
-index.ts(19,49): error TS2304: Cannot find name 'MergeOptions'.
-index.ts(19,49): error TS4078: Parameter 'options' of exported function has or is using private name 'MergeOptions'.
+index.ts(19,49): error TS2304: Cannot find name 'Options'.
+index.ts(19,49): error TS4078: Parameter 'options' of exported function has or is using private name 'Options'.
 index.ts(36,36): error TS2769: No overload matches this call.
   Overload 1 of 2, '(...items: ConcatArray<string>[]): string[]', gave the following error.
     Argument of type 'symbol[]' is not assignable to parameter of type 'ConcatArray<string>'.
@@ -9,8 +9,6 @@ index.ts(36,36): error TS2769: No overload matches this call.
   Overload 2 of 2, '(...items: (string | ConcatArray<string>)[]): string[]', gave the following error.
     Argument of type 'symbol[]' is not assignable to parameter of type 'string | ConcatArray<string>'.
       Type 'symbol[]' is not assignable to type 'ConcatArray<string>'.
-index.ts(101,37): error TS2304: Cannot find name 'T'.
-index.ts(101,46): error TS2304: Cannot find name 'T'.
 rollup.config.ts(1,21): error TS2307: Cannot find module 'rollup-plugin-node-resolve' or its corresponding type declarations.
 rollup.config.ts(2,22): error TS2307: Cannot find module 'rollup-plugin-commonjs' or its corresponding type declarations.
 rollup.config.ts(3,17): error TS2732: Cannot find module './package.json'. Consider using '--resolveJsonModule' to import module with '.json' extension.

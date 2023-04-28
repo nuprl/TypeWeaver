@@ -1,2 +1,2 @@
-declare function has(object: Object, key: string): any;
+declare function has(object: any, key: string): any;
 export default has;

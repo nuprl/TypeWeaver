@@ -1,8 +1,12 @@
 src/interpreter/finite-automaton/dfa/dfa-minimizer.ts(20,24): error TS4078: Parameter 'dfa' of exported function has or is using private name 'DFA'.
-src/interpreter/finite-automaton/nfa/builders.ts(117,32): error TS4078: Parameter 'fragment' of exported function has or is using private name 'Fragment'.
-src/optimizer/transforms/char-class-classranges-merge-transform.ts(118,46): error TS1005: ',' expected.
+src/interpreter/finite-automaton/nfa/builders.ts(67,21): error TS4078: Parameter 'first' of exported function has or is using private name 'NFAFragment'.
+src/interpreter/finite-automaton/nfa/builders.ts(67,48): error TS4078: Parameter 'fragments' of exported function has or is using private name 'NFAFragment'.
+src/interpreter/finite-automaton/nfa/builders.ts(117,32): error TS4078: Parameter 'fragment' of exported function has or is using private name 'NFAFragment'.
+src/interpreter/finite-automaton/nfa/builders.ts(138,24): error TS4078: Parameter 'fragment' of exported function has or is using private name 'NFAFragment'.
+src/interpreter/finite-automaton/nfa/builders.ts(148,28): error TS4078: Parameter 'fragment' of exported function has or is using private name 'Fragment'.
+src/interpreter/finite-automaton/nfa/builders.ts(157,32): error TS4078: Parameter 'fragment' of exported function has or is using private name 'Fragment'.
+src/optimizer/transforms/char-class-classranges-merge-transform.ts(118,49): error TS1005: ',' expected.
 src/optimizer/transforms/char-class-to-meta-transform.ts(186,59): error TS1005: ',' expected.
-src/optimizer/transforms/char-class-to-meta-transform.ts(186,61): error TS1003: Identifier expected.
 src/transform/utils.ts(58,46): error TS4078: Parameter 'quantifier' of exported function has or is using private name 'Quantifier'.
 src/traverse/index.ts(27,46): error TS1005: ',' expected.
 

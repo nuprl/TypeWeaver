@@ -1,8 +1,8 @@
-index.ts(6,16): error TS2339: Property 'setHeader' does not exist on type 'ReadableStream<any>'.
-index.ts(6,43): error TS2339: Property 'abort' does not exist on type 'ReadableStream<any>'.
-index.ts(10,16): error TS2339: Property 'stdio' does not exist on type 'ReadableStream<any>'.
-index.ts(10,46): error TS2339: Property 'stdio' does not exist on type 'ReadableStream<any>'.
-index.ts(10,63): error TS2339: Property 'stdio' does not exist on type 'ReadableStream<any>'.
+index.ts(10,16): error TS2339: Property 'stdio' does not exist on type 'WritableStream'.
+index.ts(10,46): error TS2339: Property 'stdio' does not exist on type 'WritableStream'.
+index.ts(10,63): error TS2339: Property 'stdio' does not exist on type 'WritableStream'.
+index.ts(13,50): error TS2304: Cannot find name 'Options'.
+index.ts(13,69): error TS2304: Cannot find name 'Callback'.
 index.ts(19,18): error TS2339: Property '_writableState' does not exist on type 'ReadableStream<any>'.
 index.ts(20,18): error TS2339: Property '_readableState' does not exist on type 'ReadableStream<any>'.
 index.ts(21,69): error TS2339: Property 'readable' does not exist on type 'ReadableStream<any>'.
@@ -15,6 +15,8 @@ index.ts(64,14): error TS2339: Property 'req' does not exist on type 'ReadableSt
 index.ts(65,15): error TS2339: Property 'on' does not exist on type 'ReadableStream<any>'.
 index.ts(67,10): error TS2339: Property 'on' does not exist on type 'ReadableStream<any>'.
 index.ts(68,10): error TS2339: Property 'on' does not exist on type 'ReadableStream<any>'.
+index.ts(71,21): error TS2345: Argument of type 'ReadableStream<any>' is not assignable to parameter of type 'WritableStream'.
+  Type 'ReadableStream<any>' is missing the following properties from type 'WritableStream': writable, write, end, addListener, and 14 more.
 index.ts(71,37): error TS2339: Property 'on' does not exist on type 'ReadableStream<any>'.
 index.ts(73,9): error TS2339: Property 'on' does not exist on type 'ReadableStream<any>'.
 index.ts(74,9): error TS2339: Property 'on' does not exist on type 'ReadableStream<any>'.

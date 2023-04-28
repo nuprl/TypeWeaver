@@ -1,1 +1,1 @@
-export default function (flag: boolean, argv: string[]): boolean;
+export default function (flag: string, argv: string[]): boolean;

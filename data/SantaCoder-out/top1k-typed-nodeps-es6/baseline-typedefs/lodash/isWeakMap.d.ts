@@ -1,2 +1,2 @@
-declare function isWeakMap(value: any): boolean;
+declare function isWeakMap(value: unknown): boolean;
 export default isWeakMap;

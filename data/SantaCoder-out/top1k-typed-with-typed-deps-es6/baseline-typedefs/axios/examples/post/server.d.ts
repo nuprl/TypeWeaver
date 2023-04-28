@@ -1,1 +1,1 @@
-export default function (req: Request, res: Response): void;
+export default function (req: any, res: any): void;

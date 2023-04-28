@@ -11,4 +11,4 @@ declare const lite: any;
 declare const json: any;
 declare const naiive: (x: any) => any;
 declare const clone_full: (x: any) => any;
-declare function runner(name: string, contenders: Array<Function>): void;
+declare function runner(name: string, contenders: any): void;

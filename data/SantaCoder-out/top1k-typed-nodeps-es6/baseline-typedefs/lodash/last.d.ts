@@ -1,2 +1,2 @@
-declare function last(array: Array<any>): any;
+declare function last(array: any[]): any;
 export default last;

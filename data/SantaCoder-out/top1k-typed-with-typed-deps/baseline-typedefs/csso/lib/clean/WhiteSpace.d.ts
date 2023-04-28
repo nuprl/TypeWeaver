@@ -1,1 +1,1 @@
-export default function cleanWhitespace(node: Node, item: Node, list: Node[]): void;
+export default function cleanWhitespace(node: Node, item: Node, list: NodeList): void;

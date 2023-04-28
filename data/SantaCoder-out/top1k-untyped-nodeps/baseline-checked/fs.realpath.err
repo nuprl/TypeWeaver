@@ -1,8 +1,7 @@
-index.ts(17,19): error TS2339: Property 'syscall' does not exist on type 'Error'.
-index.ts(18,8): error TS2339: Property 'code' does not exist on type 'Error'.
-index.ts(19,8): error TS2339: Property 'code' does not exist on type 'Error'.
-index.ts(20,8): error TS2339: Property 'code' does not exist on type 'Error'.
 old.ts(53,19): error TS2551: Property 'throwDeprecation' does not exist on type 'Process'. Did you mean 'traceDeprecation'?
 old.ts(55,25): error TS2339: Property 'noDeprecation' does not exist on type 'Process'.
+old.ts(186,24): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'Function'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+    Type 'Object' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
 old.ts(286,9): error TS2554: Expected 3 arguments, but got 2.
 

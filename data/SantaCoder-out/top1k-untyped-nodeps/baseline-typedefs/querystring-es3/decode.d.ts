@@ -1,2 +1,2 @@
-declare function hasOwnProperty(obj: any, prop: string): any;
-declare var isArray: (xs: List<A>) => boolean;
+declare function hasOwnProperty(obj: Object, prop: string): any;
+declare var isArray: (xs: any) => boolean;

@@ -1,30 +1,13 @@
 lib/ber/index.ts(6,5): error TS2300: Duplicate identifier 'Reader'.
 lib/ber/index.ts(7,5): error TS2300: Duplicate identifier 'Writer'.
 lib/ber/reader.ts(18,10): error TS2300: Duplicate identifier 'Reader'.
-lib/ber/reader.ts(133,60): error TS2554: Expected 0 arguments, but got 1.
-lib/ber/reader.ts(160,46): error TS2304: Cannot find name 'ASN1Tag'.
-lib/ber/reader.ts(230,60): error TS2554: Expected 0 arguments, but got 1.
+lib/ber/reader.ts(160,46): error TS2749: 'ASN1' refers to a value, but is being used as a type here. Did you mean 'typeof ASN1'?
 lib/ber/writer.ts(43,10): error TS2300: Duplicate identifier 'Writer'.
 lib/ber/writer.ts(43,26): error TS2552: Cannot find name 'WriterOptions'. Did you mean 'WorkerOptions'?
 lib/ber/writer.ts(43,26): error TS4078: Parameter 'options' of exported function has or is using private name 'WriterOptions'.
+lib/ber/writer.ts(163,56): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/ber/writer.ts(163,62): error TS2538: Type 'String' cannot be used as an index type.
 lib/ber/writer.ts(164,8): error TS2358: The left-hand side of an 'instanceof' expression must be of type 'any', an object type or a type parameter.
-lib/ber/writer.ts(185,15): error TS2339: Property 'push' does not exist on type 'Uint8Array'.
-lib/ber/writer.ts(187,15): error TS2339: Property 'push' does not exist on type 'Uint8Array'.
-lib/ber/writer.ts(188,15): error TS2339: Property 'push' does not exist on type 'Uint8Array'.
-lib/ber/writer.ts(190,13): error TS2339: Property 'push' does not exist on type 'Uint8Array'.
-lib/ber/writer.ts(191,13): error TS2339: Property 'push' does not exist on type 'Uint8Array'.
-lib/ber/writer.ts(192,13): error TS2339: Property 'push' does not exist on type 'Uint8Array'.
-lib/ber/writer.ts(194,13): error TS2339: Property 'push' does not exist on type 'Uint8Array'.
-lib/ber/writer.ts(195,13): error TS2339: Property 'push' does not exist on type 'Uint8Array'.
-lib/ber/writer.ts(196,13): error TS2339: Property 'push' does not exist on type 'Uint8Array'.
-lib/ber/writer.ts(197,13): error TS2339: Property 'push' does not exist on type 'Uint8Array'.
-lib/ber/writer.ts(199,13): error TS2339: Property 'push' does not exist on type 'Uint8Array'.
-lib/ber/writer.ts(200,13): error TS2339: Property 'push' does not exist on type 'Uint8Array'.
-lib/ber/writer.ts(201,13): error TS2339: Property 'push' does not exist on type 'Uint8Array'.
-lib/ber/writer.ts(202,13): error TS2339: Property 'push' does not exist on type 'Uint8Array'.
-lib/ber/writer.ts(203,13): error TS2339: Property 'push' does not exist on type 'Uint8Array'.
-lib/ber/writer.ts(211,17): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'Uint8Array'.
-  Type 'any[]' is missing the following properties from type 'Uint8Array': BYTES_PER_ELEMENT, buffer, byteLength, byteOffset, and 3 more.
 ../../../../node_modules/@types/node/buffer.d.ts(98,14): error TS2661: Cannot export 'Buffer'. Only local declarations can be exported from a module.
 ../../../../node_modules/@types/node/buffer.d.ts(2208,13): error TS2403: Subsequent variable declarations must have the same type.  Variable 'Buffer' must be of type 'any', but here has type 'BufferConstructor'.
 

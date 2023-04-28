@@ -5,7 +5,7 @@ declare const globToRegExp: any;
 declare const watchEventSource: any;
 declare const EMPTY_ARRAY: any[];
 declare const EMPTY_OPTIONS: {};
-declare function addWatchersToSet(watchers: Array<Watcher>, set: Set<any>): void;
+declare function addWatchersToSet(watchers: Watcher[], set: Set<DirectoryWatcher>): void;
 declare const stringToRegexp: (ignored: any) => string;
 declare const ignoredToFunction: (ignored: any) => any;
 declare const normalizeOptions: (options: any) => {

@@ -1,2 +1,2 @@
-declare function unset(object: Object, path: string): boolean;
+declare function unset(object: any, path: string): boolean;
 export default unset;

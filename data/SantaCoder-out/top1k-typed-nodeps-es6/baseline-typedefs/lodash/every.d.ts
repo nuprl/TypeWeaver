@@ -1,2 +1,2 @@
-declare function every(array: any[], predicate: any): boolean;
+declare function every(array: any[], predicate: Function): boolean;
 export default every;

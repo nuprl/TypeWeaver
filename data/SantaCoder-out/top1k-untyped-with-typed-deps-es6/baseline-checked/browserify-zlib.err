@@ -2,46 +2,46 @@ src/binding.ts(7,21): error TS2307: Cannot find module 'pako/lib/zlib/zstream' o
 src/binding.ts(8,26): error TS2307: Cannot find module 'pako/lib/zlib/deflate.js' or its corresponding type declarations.
 src/binding.ts(9,26): error TS2307: Cannot find module 'pako/lib/zlib/inflate.js' or its corresponding type declarations.
 src/binding.ts(10,23): error TS2307: Cannot find module 'pako/lib/zlib/constants' or its corresponding type declarations.
-src/binding.ts(82,42): error TS2304: Cannot find name 'Async'.
-src/binding.ts(82,56): error TS2304: Cannot find name 'Flush'.
 src/index.ts(5,8): error TS1192: Module '"src/binding"' has no default export.
-src/index.ts(75,37): error TS2304: Cannot find name 'Options'.
 src/index.ts(76,10): error TS2350: Only a void function can be called with the 'new' keyword.
 src/index.ts(80,10): error TS2350: Only a void function can be called with the 'new' keyword.
-src/index.ts(83,40): error TS2304: Cannot find name 'Options'.
 src/index.ts(84,10): error TS2350: Only a void function can be called with the 'new' keyword.
 src/index.ts(88,10): error TS2350: Only a void function can be called with the 'new' keyword.
-src/index.ts(91,34): error TS2552: Cannot find name 'GzipOptions'. Did you mean 'GainOptions'?
 src/index.ts(92,10): error TS2350: Only a void function can be called with the 'new' keyword.
 src/index.ts(96,10): error TS2350: Only a void function can be called with the 'new' keyword.
 src/index.ts(100,10): error TS2350: Only a void function can be called with the 'new' keyword.
+src/index.ts(106,50): error TS2304: Cannot find name 'ZlibOptions'.
 src/index.ts(111,21): error TS2350: Only a void function can be called with the 'new' keyword.
 src/index.ts(115,25): error TS2350: Only a void function can be called with the 'new' keyword.
+src/index.ts(118,47): error TS2552: Cannot find name 'GzipOptions'. Did you mean 'GainOptions'?
 src/index.ts(123,21): error TS2350: Only a void function can be called with the 'new' keyword.
 src/index.ts(127,25): error TS2350: Only a void function can be called with the 'new' keyword.
+src/index.ts(130,53): error TS2304: Cannot find name 'ZlibOptions'.
 src/index.ts(135,21): error TS2350: Only a void function can be called with the 'new' keyword.
 src/index.ts(139,25): error TS2350: Only a void function can be called with the 'new' keyword.
 src/index.ts(147,21): error TS2350: Only a void function can be called with the 'new' keyword.
+src/index.ts(150,52): error TS2304: Cannot find name 'ZlibOptions'.
 src/index.ts(151,25): error TS2350: Only a void function can be called with the 'new' keyword.
+src/index.ts(154,50): error TS2304: Cannot find name 'InflateOptions'.
 src/index.ts(159,21): error TS2350: Only a void function can be called with the 'new' keyword.
 src/index.ts(163,25): error TS2350: Only a void function can be called with the 'new' keyword.
 src/index.ts(171,21): error TS2350: Only a void function can be called with the 'new' keyword.
+src/index.ts(174,53): error TS2304: Cannot find name 'ZlibOptions'.
 src/index.ts(175,25): error TS2350: Only a void function can be called with the 'new' keyword.
+src/index.ts(178,53): error TS2304: Cannot find name 'InflateOptions'.
 src/index.ts(183,21): error TS2350: Only a void function can be called with the 'new' keyword.
+src/index.ts(186,57): error TS2304: Cannot find name 'ZlibOptions'.
 src/index.ts(187,25): error TS2350: Only a void function can be called with the 'new' keyword.
-src/index.ts(245,24): error TS2552: Cannot find name 'DeflateOptions'. Did you mean 'DelayOptions'?
 src/index.ts(246,42): error TS2350: Only a void function can be called with the 'new' keyword.
-src/index.ts(250,24): error TS2304: Cannot find name 'InflateOptions'.
+src/index.ts(250,24): error TS2304: Cannot find name 'ZlibOptions'.
 src/index.ts(251,42): error TS2350: Only a void function can be called with the 'new' keyword.
-src/index.ts(257,21): error TS2552: Cannot find name 'GzipOptions'. Did you mean 'GainOptions'?
 src/index.ts(258,39): error TS2350: Only a void function can be called with the 'new' keyword.
-src/index.ts(262,23): error TS2304: Cannot find name 'GunzipOptions'.
+src/index.ts(262,23): error TS2304: Cannot find name 'ZlibOptions'.
 src/index.ts(263,41): error TS2350: Only a void function can be called with the 'new' keyword.
-src/index.ts(269,27): error TS2552: Cannot find name 'DeflateOptions'. Did you mean 'DelayOptions'?
 src/index.ts(270,45): error TS2350: Only a void function can be called with the 'new' keyword.
-src/index.ts(274,27): error TS2304: Cannot find name 'InflateOptions'.
+src/index.ts(274,27): error TS2304: Cannot find name 'ZlibOptions'.
 src/index.ts(275,45): error TS2350: Only a void function can be called with the 'new' keyword.
-src/index.ts(281,22): error TS2304: Cannot find name 'UnzipOptions'.
+src/index.ts(281,22): error TS2304: Cannot find name 'ZlibOptions'.
 src/index.ts(282,40): error TS2350: Only a void function can be called with the 'new' keyword.
 src/index.ts(300,21): error TS2304: Cannot find name 'ZlibOptions'.
 src/index.ts(304,3): error TS2684: The 'this' context of type 'typeof Transform' is not assignable to method's 'this' of type 'Function'.
@@ -51,8 +51,8 @@ src/index.ts(368,5): error TS2554: Expected 2 arguments, but got 1.
 src/index.ts(372,11): error TS2339: Property 'errno' does not exist on type 'Error'.
 src/index.ts(373,11): error TS2339: Property 'code' does not exist on type 'Error'.
 src/index.ts(449,5): error TS2322: Type 'string' is not assignable to type 'Function'.
-src/index.ts(474,25): error TS2304: Cannot find name 'Engine'.
-src/index.ts(486,28): error TS2304: Cannot find name 'Duplex'.
+src/index.ts(474,25): error TS2749: 'Zlib' refers to a value, but is being used as a type here. Did you mean 'typeof Zlib'?
+src/index.ts(486,28): error TS2749: 'Zlib' refers to a value, but is being used as a type here. Did you mean 'typeof Zlib'?
 src/index.ts(555,7): error TS2554: Expected 2 arguments, but got 1.
 src/index.ts(560,5): error TS2554: Expected 2 arguments, but got 1.
 

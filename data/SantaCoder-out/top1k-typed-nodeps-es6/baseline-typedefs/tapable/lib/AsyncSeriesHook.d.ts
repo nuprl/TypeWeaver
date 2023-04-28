@@ -1,4 +1,5 @@
-declare function AsyncSeriesHook(args: any[], Array: any, : any, any: any): any;
+import Hook from './Hook';
+declare function AsyncSeriesHook(args: any[], any: any, []: Iterable<any>, name: any, string: any): Hook;
 declare namespace AsyncSeriesHook {
     var prototype: any;
 }

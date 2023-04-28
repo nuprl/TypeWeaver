@@ -1,21 +1,9 @@
-index.ts(20,29): error TS2304: Cannot find name 'Schema'.
-index.ts(20,29): error TS4078: Parameter 'schema' of exported function has or is using private name 'Schema'.
-index.ts(26,55): error TS2345: Argument of type 'string[]' is not assignable to parameter of type 'number'.
+index.ts(20,44): error TS2304: Cannot find name 'Arity'.
+index.ts(20,44): error TS4078: Parameter 'arity' of exported function has or is using private name 'Arity'.
 index.ts(27,48): error TS2554: Expected 1 arguments, but got 2.
 index.ts(28,42): error TS2554: Expected 1 arguments, but got 2.
-index.ts(40,23): error TS2345: Argument of type '{}' is not assignable to parameter of type 'number'.
-index.ts(42,46): error TS2345: Argument of type '{}' is not assignable to parameter of type 'number'.
-index.ts(43,43): error TS2345: Argument of type '{}' is not assignable to parameter of type 'number'.
-index.ts(44,46): error TS2345: Argument of type '{}' is not assignable to parameter of type 'number'.
-index.ts(49,29): error TS2345: Argument of type 'string[]' is not assignable to parameter of type 'number'.
-index.ts(66,23): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
-index.ts(70,23): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
-index.ts(78,23): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
-index.ts(87,31): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string[]'.
-index.ts(88,25): error TS2339: Property 'every' does not exist on type 'number'.
-index.ts(91,23): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
-index.ts(94,36): error TS2304: Cannot find name 'Schema'.
-index.ts(94,36): error TS4078: Parameter 'schema' of exported function has or is using private name 'Schema'.
-index.ts(95,23): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+index.ts(79,17): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'string[]'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+    Type 'Object' is missing the following properties from type 'string[]': length, pop, push, concat, and 29 more.
 index.ts(101,7): error TS2339: Property 'code' does not exist on type 'Error'.
 

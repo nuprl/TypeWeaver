@@ -100,6 +100,7 @@ lib/DirectoryWatcher.ts(400,11): error TS2339: Property '_activeEvents' does not
 lib/DirectoryWatcher.ts(411,44): error TS2339: Property 'path' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(413,33): error TS2339: Property 'path' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(419,11): error TS2339: Property 'lastWatchEvent' does not exist on type 'DirectoryWatcher'.
+lib/DirectoryWatcher.ts(431,25): error TS2345: Argument of type 'Date' is not assignable to parameter of type 'number'.
 lib/DirectoryWatcher.ts(445,9): error TS2339: Property '_activeEvents' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(450,12): error TS2551: Property 'closed' does not exist on type 'DirectoryWatcher'. Did you mean 'close'?
 lib/DirectoryWatcher.ts(473,12): error TS2339: Property 'polledWatching' does not exist on type 'DirectoryWatcher'.
@@ -164,6 +165,7 @@ lib/DirectoryWatcher.ts(619,12): error TS2339: Property 'scanAgain' does not exi
 lib/DirectoryWatcher.ts(620,24): error TS2339: Property 'scanAgainInitial' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(622,12): error TS2339: Property 'scanning' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(628,16): error TS2551: Property 'closed' does not exist on type 'DirectoryWatcher'. Did you mean 'close'?
+lib/DirectoryWatcher.ts(645,26): error TS2345: Argument of type 'Date' is not assignable to parameter of type 'number'.
 lib/DirectoryWatcher.ts(655,30): error TS2339: Property 'directories' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(673,23): error TS2339: Property 'lastWatchEvent' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(674,36): error TS2339: Property 'files' does not exist on type 'DirectoryWatcher'.
@@ -194,11 +196,7 @@ lib/DirectoryWatcher.ts(759,9): error TS2339: Property 'directories' does not ex
 lib/DirectoryWatcher.ts(761,12): error TS2339: Property 'parentWatcher' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(762,9): error TS2339: Property 'parentWatcher' does not exist on type 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(763,9): error TS2339: Property 'parentWatcher' does not exist on type 'DirectoryWatcher'.
-lib/DirectoryWatcher.ts(772,36): error TS2304: Cannot find name 'Entry'.
-lib/DirectoryWatcher.ts(781,25): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lib/DirectoryWatcher.ts(782,31): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lib/DirectoryWatcher.ts(783,32): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lib/DirectoryWatcher.ts(784,33): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/DirectoryWatcher.ts(772,36): error TS2304: Cannot find name 'FSEntry'.
 lib/LinkResolver.ts(18,8): error TS2339: Property 'cache' does not exist on type 'LinkResolver'.
 lib/LinkResolver.ts(26,27): error TS2339: Property 'cache' does not exist on type 'LinkResolver'.
 lib/LinkResolver.ts(34,9): error TS2339: Property 'cache' does not exist on type 'LinkResolver'.
@@ -260,7 +258,8 @@ lib/watchEventSource.ts(176,54): error TS2339: Property 'rootPath' does not exis
 lib/watchEventSource.ts(183,15): error TS2339: Property 'mapWatcherToPath' does not exist on type 'RecursiveWatcher'.
 lib/watchpack.ts(7,8): error TS1192: Module '"lib/getWatcherManager"' has no default export.
 lib/watchpack.ts(11,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/SantaCoder-out/top1k-typed-with-typed-deps-es6/baseline/watchpack/lib/watchEventSource"' has no default export.
-lib/watchpack.ts(16,41): error TS2304: Cannot find name 'Watcher'.
+lib/watchpack.ts(16,37): error TS2304: Cannot find name 'Watcher'.
+lib/watchpack.ts(16,57): error TS2304: Cannot find name 'DirectoryWatcher'.
 lib/watchpack.ts(69,8): error TS2339: Property 'files' does not exist on type 'WatchpackFileWatcher'.
 lib/watchpack.ts(70,8): error TS2339: Property 'watcher' does not exist on type 'WatchpackFileWatcher'.
 lib/watchpack.ts(72,28): error TS2339: Property 'files' does not exist on type 'WatchpackFileWatcher'.

@@ -1,7 +1,7 @@
 declare const _default: {
     input: string;
     output: {
-        format: string;
+        format: any;
         sourcemap: any;
         file: string;
         name: string;

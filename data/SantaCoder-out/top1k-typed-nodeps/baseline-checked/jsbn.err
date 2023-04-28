@@ -3,7 +3,6 @@ index.ts(119,7): error TS2339: Property 't' does not exist on type 'Uint8Array'.
 index.ts(120,7): error TS2339: Property 's' does not exist on type 'Uint8Array'.
 index.ts(182,24): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(196,20): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(211,26): error TS2552: Cannot find name 'BigNumber'. Did you mean 'Number'?
 index.ts(263,24): error TS2339: Property 's' does not exist on type 'Uint8Array'.
 index.ts(266,15): error TS2339: Property 't' does not exist on type 'Uint8Array'.
 index.ts(312,7): error TS2339: Property 't' does not exist on type 'Uint8Array'.
@@ -13,7 +12,10 @@ index.ts(320,7): error TS2339: Property 's' does not exist on type 'Uint8Array'.
 index.ts(337,7): error TS2339: Property 't' does not exist on type 'Uint8Array'.
 index.ts(338,7): error TS2339: Property 's' does not exist on type 'Uint8Array'.
 index.ts(339,7): error TS2339: Property 'clamp' does not exist on type 'Uint8Array'.
-index.ts(343,38): error TS2552: Cannot find name 'BigNumber'. Did you mean 'Number'?
+index.ts(344,7): error TS2339: Property 's' does not exist on type 'Uint8Array'.
+index.ts(347,9): error TS2339: Property 't' does not exist on type 'Uint8Array'.
+index.ts(359,7): error TS2339: Property 't' does not exist on type 'Uint8Array'.
+index.ts(360,7): error TS2339: Property 'clamp' does not exist on type 'Uint8Array'.
 index.ts(367,22): error TS2339: Property 't' does not exist on type 'Uint8Array'.
 index.ts(373,11): error TS2339: Property 't' does not exist on type 'Uint8Array'.
 index.ts(374,14): error TS2339: Property 's' does not exist on type 'Uint8Array'.
@@ -27,11 +29,7 @@ index.ts(403,7): error TS2339: Property 't' does not exist on type 'Uint8Array'.
 index.ts(406,7): error TS2339: Property 's' does not exist on type 'Uint8Array'.
 index.ts(407,7): error TS2339: Property 'clamp' does not exist on type 'Uint8Array'.
 index.ts(408,21): error TS2339: Property 's' does not exist on type 'Uint8Array'.
-index.ts(414,16): error TS2339: Property 't' does not exist on type 'Uint8Array'.
-index.ts(426,11): error TS2339: Property 't' does not exist on type 'Uint8Array'.
-index.ts(426,22): error TS2339: Property 't' does not exist on type 'Uint8Array'.
-index.ts(427,7): error TS2339: Property 's' does not exist on type 'Uint8Array'.
-index.ts(428,7): error TS2339: Property 'clamp' does not exist on type 'Uint8Array'.
+index.ts(412,27): error TS2552: Cannot find name 'BigNumber'. Did you mean 'Number'?
 index.ts(434,16): error TS2339: Property 'abs' does not exist on type 'Uint8Array'.
 index.ts(438,24): error TS2339: Property 'fromInt' does not exist on type 'Uint8Array'.
 index.ts(445,14): error TS2339: Property 's' does not exist on type 'Uint8Array'.
@@ -46,72 +44,56 @@ index.ts(487,7): error TS2339: Property 't' does not exist on type 'Uint8Array'.
 index.ts(488,7): error TS2339: Property 'clamp' does not exist on type 'Uint8Array'.
 index.ts(489,20): error TS2339: Property 'rShiftTo' does not exist on type 'Uint8Array'.
 index.ts(497,59): error TS2339: Property 'subTo' does not exist on type 'Uint8Array'.
-index.ts(506,11): error TS2339: Property 's' does not exist on type 'number'.
-index.ts(506,22): error TS2339: Property 'compareTo' does not exist on type 'number'.
-index.ts(506,55): error TS2339: Property 'mod' does not exist on type 'number'.
+index.ts(506,11): error TS2339: Property 's' does not exist on type 'Uint8Array'.
+index.ts(506,22): error TS2339: Property 'compareTo' does not exist on type 'Uint8Array'.
+index.ts(506,55): error TS2339: Property 'mod' does not exist on type 'Uint8Array'.
 index.ts(513,7): error TS2339: Property 'divRemTo' does not exist on type 'Uint8Array'.
-index.ts(516,7): error TS2339: Property 'multiplyTo' does not exist on type 'Uint8Array'.
+index.ts(515,22): error TS2552: Cannot find name 'BigNumber'. Did you mean 'Number'?
+index.ts(515,36): error TS2552: Cannot find name 'BigNumber'. Did you mean 'Number'?
+index.ts(515,50): error TS2552: Cannot find name 'BigNumber'. Did you mean 'Number'?
 index.ts(520,7): error TS2339: Property 'squareTo' does not exist on type 'Uint8Array'.
-index.ts(558,17): error TS2339: Property 'invDigit' does not exist on type 'number'.
-index.ts(561,24): error TS2339: Property 'DB' does not exist on type 'number'.
-index.ts(562,22): error TS2339: Property 't' does not exist on type 'number'.
-index.ts(568,7): error TS2339: Property 'abs' does not exist on type 'number'.
-index.ts(570,11): error TS2339: Property 's' does not exist on type 'number'.
+index.ts(558,17): error TS2339: Property 'invDigit' does not exist on type 'Uint8Array'.
+index.ts(561,24): error TS2339: Property 'DB' does not exist on type 'Uint8Array'.
+index.ts(562,22): error TS2339: Property 't' does not exist on type 'Uint8Array'.
+index.ts(568,7): error TS2339: Property 'abs' does not exist on type 'Uint8Array'.
+index.ts(570,11): error TS2339: Property 's' does not exist on type 'Uint8Array'.
 index.ts(577,7): error TS2339: Property 'copyTo' does not exist on type 'Uint8Array'.
-index.ts(585,9): error TS2339: Property 't' does not exist on type 'number'.
-index.ts(587,11): error TS2339: Property 't' does not exist on type 'number'.
-index.ts(594,11): error TS2339: Property 'DM' does not exist on type 'number'.
-index.ts(599,24): error TS2339: Property 'DV' does not exist on type 'number'.
-index.ts(600,19): error TS2339: Property 'DV' does not exist on type 'number'.
-index.ts(604,7): error TS2339: Property 'clamp' does not exist on type 'number'.
-index.ts(605,7): error TS2339: Property 'drShiftTo' does not exist on type 'number'.
-index.ts(606,11): error TS2339: Property 'compareTo' does not exist on type 'number'.
-index.ts(606,37): error TS2339: Property 'subTo' does not exist on type 'number'.
+index.ts(585,9): error TS2339: Property 't' does not exist on type 'Uint8Array'.
+index.ts(587,11): error TS2339: Property 't' does not exist on type 'Uint8Array'.
+index.ts(594,11): error TS2339: Property 'DM' does not exist on type 'Uint8Array'.
+index.ts(599,24): error TS2339: Property 'DV' does not exist on type 'Uint8Array'.
+index.ts(600,19): error TS2339: Property 'DV' does not exist on type 'Uint8Array'.
+index.ts(604,7): error TS2339: Property 'clamp' does not exist on type 'Uint8Array'.
+index.ts(605,7): error TS2339: Property 'drShiftTo' does not exist on type 'Uint8Array'.
+index.ts(606,11): error TS2339: Property 'compareTo' does not exist on type 'Uint8Array'.
+index.ts(606,37): error TS2339: Property 'subTo' does not exist on type 'Uint8Array'.
 index.ts(611,7): error TS2339: Property 'squareTo' does not exist on type 'Uint8Array'.
 index.ts(617,7): error TS2339: Property 'multiplyTo' does not exist on type 'Uint8Array'.
-index.ts(634,9): error TS2365: Operator '>' cannot be applied to types 'Uint8Array' and 'number'.
-index.ts(634,27): error TS2365: Operator '<' cannot be applied to types 'Uint8Array' and 'number'.
-index.ts(637,13): error TS2339: Property 'convert' does not exist on type 'Uint8Array'.
-index.ts(638,17): error TS2345: Argument of type 'Uint8Array' is not assignable to parameter of type 'number'.
-index.ts(641,9): error TS2339: Property 'sqrTo' does not exist on type 'Uint8Array'.
-index.ts(642,12): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-index.ts(642,33): error TS2339: Property 'mulTo' does not exist on type 'Uint8Array'.
-index.ts(649,14): error TS2339: Property 'revert' does not exist on type 'Uint8Array'.
-index.ts(809,9): error TS2339: Property 'nextBytes' does not exist on type 'never'.
-index.ts(846,24): error TS2552: Cannot find name 'BigNumber'. Did you mean 'Number'?
-index.ts(849,21): error TS2552: Cannot find name 'BigNumber'. Did you mean 'Number'?
-index.ts(852,21): error TS2552: Cannot find name 'BigNumber'. Did you mean 'Number'?
+index.ts(633,33): error TS2749: 'SecureRandom' refers to a value, but is being used as a type here. Did you mean 'typeof SecureRandom'?
+index.ts(655,22): error TS2339: Property 'isEven' does not exist on type 'Uint8Array'.
 index.ts(860,22): error TS2339: Property 't' does not exist on type 'Uint8Array'.
-index.ts(861,36): error TS2349: This expression is not callable.
-  Type 'Number' has no call signatures.
 index.ts(862,11): error TS2339: Property 't' does not exist on type 'Uint8Array'.
 index.ts(863,13): error TS2339: Property 's' does not exist on type 'Uint8Array'.
-index.ts(864,43): error TS2349: This expression is not callable.
-  Type 'Number' has no call signatures.
 index.ts(865,9): error TS2339: Property 't' does not exist on type 'Uint8Array'.
 index.ts(868,25): error TS2339: Property 't' does not exist on type 'Uint8Array'.
-index.ts(868,40): error TS2349: This expression is not callable.
-  Type 'Number' has no call signatures.
 index.ts(869,9): error TS2339: Property 't' does not exist on type 'Uint8Array'.
 index.ts(869,15): error TS2339: Property 't' does not exist on type 'Uint8Array'.
 index.ts(871,7): error TS2339: Property 's' does not exist on type 'Uint8Array'.
-index.ts(871,11): error TS2349: This expression is not callable.
-  Type 'Number' has no call signatures.
 index.ts(871,24): error TS2339: Property 's' does not exist on type 'Uint8Array'.
 index.ts(872,7): error TS2339: Property 'clamp' does not exist on type 'Uint8Array'.
-index.ts(927,9): error TS2365: Operator '<' cannot be applied to types 'Uint8Array' and 'number'.
-index.ts(935,9): error TS2365: Operator '<' cannot be applied to types 'Uint8Array' and 'number'.
+index.ts(907,12): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(1023,22): error TS2339: Property 't' does not exist on type 'Uint8Array'.
 index.ts(1029,11): error TS2339: Property 't' does not exist on type 'Uint8Array'.
 index.ts(1030,14): error TS2339: Property 's' does not exist on type 'Uint8Array'.
 index.ts(1039,20): error TS2339: Property 't' does not exist on type 'Uint8Array'.
 index.ts(1044,14): error TS2339: Property 's' does not exist on type 'Uint8Array'.
-index.ts(1046,7): error TS2339: Property 's' does not exist on type 'number'.
-index.ts(1049,7): error TS2339: Property 't' does not exist on type 'number'.
-index.ts(1050,7): error TS2339: Property 'clamp' does not exist on type 'number'.
+index.ts(1046,7): error TS2339: Property 's' does not exist on type 'Uint8Array'.
+index.ts(1049,7): error TS2339: Property 't' does not exist on type 'Uint8Array'.
+index.ts(1050,7): error TS2339: Property 'clamp' does not exist on type 'Uint8Array'.
 index.ts(1105,31): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 index.ts(1128,7): error TS2339: Property 'multiplyTo' does not exist on type 'Uint8Array'.
-index.ts(1131,7): error TS2339: Property 'squareTo' does not exist on type 'Uint8Array'.
+index.ts(1130,22): error TS2304: Cannot find name 'BigNum'.
+index.ts(1130,33): error TS2304: Cannot find name 'BigNum'.
 index.ts(1140,21): error TS2304: Cannot find name 'BN'.
 index.ts(1147,33): error TS2339: Property 't' does not exist on type 'Uint8Array'.
 index.ts(1148,7): error TS2339: Property 's' does not exist on type 'Uint8Array'.
@@ -125,12 +107,12 @@ index.ts(1163,7): error TS2339: Property 's' does not exist on type 'Uint8Array'
 index.ts(1165,45): error TS2339: Property 't' does not exist on type 'Uint8Array'.
 index.ts(1167,7): error TS2339: Property 'clamp' does not exist on type 'Uint8Array'.
 index.ts(1168,7): error TS2339: Property 'drShiftTo' does not exist on type 'Uint8Array'.
-index.ts(1176,36): error TS2339: Property 't' does not exist on type 'number'.
-index.ts(1182,11): error TS2339: Property 's' does not exist on type 'number'.
-index.ts(1182,22): error TS2339: Property 't' does not exist on type 'number'.
-index.ts(1182,49): error TS2339: Property 'mod' does not exist on type 'number'.
-index.ts(1183,16): error TS2339: Property 'compareTo' does not exist on type 'number'.
-index.ts(1186,9): error TS2339: Property 'copyTo' does not exist on type 'number'.
+index.ts(1176,36): error TS2339: Property 't' does not exist on type 'Uint8Array'.
+index.ts(1182,11): error TS2339: Property 's' does not exist on type 'Uint8Array'.
+index.ts(1182,22): error TS2339: Property 't' does not exist on type 'Uint8Array'.
+index.ts(1182,49): error TS2339: Property 'mod' does not exist on type 'Uint8Array'.
+index.ts(1183,16): error TS2339: Property 'compareTo' does not exist on type 'Uint8Array'.
+index.ts(1186,9): error TS2339: Property 'copyTo' does not exist on type 'Uint8Array'.
 index.ts(1198,7): error TS2339: Property 'drShiftTo' does not exist on type 'Uint8Array'.
 index.ts(1199,11): error TS2339: Property 't' does not exist on type 'Uint8Array'.
 index.ts(1200,9): error TS2339: Property 't' does not exist on type 'Uint8Array'.
@@ -140,18 +122,17 @@ index.ts(1205,40): error TS2339: Property 'dAddOffset' does not exist on type 'U
 index.ts(1206,7): error TS2339: Property 'subTo' does not exist on type 'Uint8Array'.
 index.ts(1207,14): error TS2339: Property 'compareTo' does not exist on type 'Uint8Array'.
 index.ts(1207,40): error TS2339: Property 'subTo' does not exist on type 'Uint8Array'.
-index.ts(1212,7): error TS2339: Property 'squareTo' does not exist on type 'Uint8Array'.
+index.ts(1211,28): error TS2552: Cannot find name 'BigNumber'. Did you mean 'Number'?
+index.ts(1211,42): error TS2552: Cannot find name 'BigNumber'. Did you mean 'Number'?
 index.ts(1218,7): error TS2339: Property 'multiplyTo' does not exist on type 'Uint8Array'.
 index.ts(1230,15): error TS2551: Property 'bitLength' does not exist on type 'Uint8Array'. Did you mean 'byteLength'?
-index.ts(1240,32): error TS2345: Argument of type 'Uint8Array' is not assignable to parameter of type 'number'.
 index.ts(1241,16): error TS2339: Property 'isEven' does not exist on type 'Uint8Array'.
-index.ts(1241,42): error TS2345: Argument of type 'Uint8Array' is not assignable to parameter of type 'number'.
-index.ts(1242,29): error TS2345: Argument of type 'Uint8Array' is not assignable to parameter of type 'number'.
 index.ts(1260,15): error TS2339: Property 't' does not exist on type 'Uint8Array'.
-index.ts(1316,21): error TS2304: Cannot find name 'BN'.
+index.ts(1318,15): error TS2339: Property 's' does not exist on type 'Uint8Array'.
+index.ts(1318,25): error TS2339: Property 'negate' does not exist on type 'Uint8Array'.
+index.ts(1318,38): error TS2339: Property 'clone' does not exist on type 'Uint8Array'.
 index.ts(1360,16): error TS2339: Property 'isEven' does not exist on type 'Uint8Array'.
 index.ts(1361,36): error TS2339: Property 'signum' does not exist on type 'Uint8Array'.
 index.ts(1362,15): error TS2339: Property 'clone' does not exist on type 'Uint8Array'.
-index.ts(1703,28): error TS2304: Cannot find name 'i32'.
 index.ts(1732,31): error TS2339: Property 'random' does not exist on type 'Crypto'.
 

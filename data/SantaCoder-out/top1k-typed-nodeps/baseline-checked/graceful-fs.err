@@ -2,18 +2,12 @@ clone.ts(9,10): error TS2300: Duplicate identifier 'clone'.
 clone.ts(16,9): error TS2403: Subsequent variable declarations must have the same type.  Variable 'copy' must be of type '{ __proto__: any; }', but here has type 'any'.
 graceful-fs.ts(3,5): error TS2300: Duplicate identifier 'legacy'.
 graceful-fs.ts(4,5): error TS2300: Duplicate identifier 'clone'.
-graceful-fs.ts(24,32): error TS2304: Cannot find name 'Context'.
-graceful-fs.ts(24,32): error TS4078: Parameter 'context' of exported function has or is using private name 'Context'.
-graceful-fs.ts(24,48): error TS2304: Cannot find name 'Queue'.
-graceful-fs.ts(24,48): error TS4078: Parameter 'queue' of exported function has or is using private name 'Queue'.
 graceful-fs.ts(86,13): error TS2554: Expected 0 arguments, but got 1.
 graceful-fs.ts(102,10): error TS2393: Duplicate function implementation.
 graceful-fs.ts(115,12): error TS2554: Expected 4 arguments, but got 3.
 graceful-fs.ts(135,12): error TS2554: Expected 5 arguments, but got 4.
 graceful-fs.ts(156,12): error TS2554: Expected 5 arguments, but got 4.
 graceful-fs.ts(178,12): error TS2554: Expected 5 arguments, but got 4.
-graceful-fs.ts(195,44): error TS2503: Cannot find namespace 'readdir'.
-graceful-fs.ts(195,65): error TS2503: Cannot find namespace 'readdir'.
 graceful-fs.ts(211,12): error TS2554: Expected 4 arguments, but got 3.
 graceful-fs.ts(213,57): error TS2304: Cannot find name 'fs$readdirOptions'.
 graceful-fs.ts(213,80): error TS2749: 'fs$readdirCallback' refers to a value, but is being used as a type here. Did you mean 'typeof fs$readdirCallback'?
@@ -21,21 +15,17 @@ graceful-fs.ts(236,5): error TS2630: Cannot assign to 'ReadStream' because it is
 graceful-fs.ts(237,5): error TS2630: Cannot assign to 'WriteStream' because it is a function.
 graceful-fs.ts(257,7): error TS2630: Cannot assign to 'ReadStream' because it is a function.
 graceful-fs.ts(267,7): error TS2630: Cannot assign to 'WriteStream' because it is a function.
-graceful-fs.ts(297,47): error TS2304: Cannot find name 'ReadStreamOptions'.
+graceful-fs.ts(320,48): error TS2304: Cannot find name 'fs$WriteStreamOptions'.
+graceful-fs.ts(344,54): error TS2503: Cannot find namespace 'fs'.
 graceful-fs.ts(354,12): error TS2554: Expected 5 arguments, but got 4.
 graceful-fs.ts(372,9): error TS2554: Expected 0 arguments, but got 3.
 graceful-fs.ts(416,11): error TS2554: Expected 0 arguments, but got 3.
 graceful-fs.ts(420,11): error TS2554: Expected 0 arguments, but got 3.
 graceful-fs.ts(435,13): error TS2554: Expected 0 arguments, but got 3.
 legacy-streams.ts(5,10): error TS2300: Duplicate identifier 'legacy'.
-legacy-streams.ts(11,47): error TS2304: Cannot find name 'ReadStreamOptions'.
 legacy-streams.ts(12,47): error TS2350: Only a void function can be called with the 'new' keyword.
-legacy-streams.ts(75,48): error TS2304: Cannot find name 'WriteStreamOptions'.
 legacy-streams.ts(76,48): error TS2350: Only a void function can be called with the 'new' keyword.
 polyfills.ts(29,10): error TS2393: Duplicate function implementation.
 polyfills.ts(104,22): error TS2339: Property 'code' does not exist on type 'Error'.
 polyfills.ts(104,46): error TS2339: Property 'code' does not exist on type 'Error'.
-polyfills.ts(107,45): error TS2304: Cannot find name 'State'.
-polyfills.ts(107,56): error TS2304: Cannot find name 'State'.
-polyfills.ts(301,44): error TS2304: Cannot find name 'Stats'.
 

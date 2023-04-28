@@ -1,6 +1,8 @@
 rollup.config.ts(2,17): error TS2732: Cannot find module './package.json'. Consider using '--resolveJsonModule' to import module with '.json' extension.
 src/stable.ts(8,8): error TS2339: Property 'inplace' does not exist on type '(arr: any[], comp: any) => any[]'.
 src/stable.ts(8,39): error TS2304: Cannot find name 'T'.
+src/stable.ts(8,49): error TS2304: Cannot find name 'Comparator'.
+src/stable.ts(8,60): error TS2304: Cannot find name 'T'.
 stable.min.ts(3,2): error TS1345: An expression of type 'void' cannot be tested for truthiness.
 stable.min.ts(3,107): error TS2304: Cannot find name 'define'.
 stable.min.ts(3,115): error TS2304: Cannot find name 'define'.
@@ -10,6 +12,4 @@ stable.ts(6,10): error TS2304: Cannot find name 'define'.
 stable.ts(6,35): error TS2304: Cannot find name 'define'.
 stable.ts(6,48): error TS2304: Cannot find name 'define'.
 stable.ts(17,10): error TS2339: Property 'inplace' does not exist on type '(arr: any[], comp: any) => any[]'.
-stable.ts(60,35): error TS2304: Cannot find name 'T'.
-stable.ts(60,74): error TS2304: Cannot find name 'T'.
 

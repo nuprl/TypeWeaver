@@ -1,2 +1,2 @@
-declare function isNative(value: any): boolean;
+declare function isNative(value: unknown): boolean;
 export default isNative;

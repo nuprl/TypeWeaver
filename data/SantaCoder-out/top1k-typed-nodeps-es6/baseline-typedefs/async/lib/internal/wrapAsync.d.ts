@@ -1,4 +1,4 @@
-declare function isAsync(fn: Function): boolean;
+declare function isAsync(fn: any): boolean;
 declare function isAsyncGenerator(fn: any): boolean;
 declare function isAsyncIterable(obj: any): boolean;
 declare function wrapAsync(asyncFn: Function): Function;

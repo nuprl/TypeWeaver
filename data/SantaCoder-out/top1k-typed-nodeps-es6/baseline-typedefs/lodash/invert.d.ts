@@ -1,2 +1,2 @@
-declare function invert(object: Object): {};
+declare function invert(object: any): {};
 export default invert;

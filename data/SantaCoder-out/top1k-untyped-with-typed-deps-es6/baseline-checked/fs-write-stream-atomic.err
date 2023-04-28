@@ -1,26 +1,17 @@
 index.ts(18,37): error TS2554: Expected 0 arguments, but got 3.
-index.ts(34,52): error TS2304: Cannot find name 'WriteStreamOptions'.
-index.ts(34,52): error TS4078: Parameter 'options' of exported function has or is using private name 'WriteStreamOptions'.
 index.ts(36,12): error TS2350: Only a void function can be called with the 'new' keyword.
 index.ts(49,25): error TS2348: Value of type 'typeof WriteStream' is not callable. Did you mean to include 'new'?
-index.ts(62,7): error TS2367: This comparison appears to be unintentional because the types 'Event' and 'string' have no overlap.
-index.ts(80,21): error TS2339: Property '__atomicClosed' does not exist on type 'Writable'.
-index.ts(81,17): error TS2339: Property '__atomicClosed' does not exist on type 'Writable'.
-index.ts(82,21): error TS2339: Property '__atomicChown' does not exist on type 'Writable'.
-index.ts(83,29): error TS2339: Property '__atomicChown' does not exist on type 'Writable'.
-index.ts(84,29): error TS2339: Property '__atomicChown' does not exist on type 'Writable'.
-index.ts(85,35): error TS2339: Property '__atomicTmp' does not exist on type 'Writable'.
-index.ts(92,27): error TS2339: Property '__atomicTmp' does not exist on type 'Writable'.
-index.ts(92,52): error TS2339: Property '__atomicTarget' does not exist on type 'Writable'.
-index.ts(96,21): error TS2339: Property '__isWin' does not exist on type 'Writable'.
-index.ts(111,37): error TS2339: Property '__atomicTmp' does not exist on type 'Writable'.
-index.ts(112,77): error TS2345: Argument of type 'Buffer' is not assignable to parameter of type 'string'.
-index.ts(115,37): error TS2339: Property '__atomicTarget' does not exist on type 'Writable'.
-index.ts(116,83): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Encoding'.
+index.ts(72,35): error TS2304: Cannot find name 'AtomicWriteStream'.
+index.ts(78,36): error TS2552: Cannot find name 'WriteStream'. Did you mean 'WritableStream'?
+index.ts(97,13): error TS2339: Property 'syscall' does not exist on type 'Error'.
+index.ts(97,28): error TS2339: Property 'syscall' does not exist on type 'Error'.
+index.ts(98,13): error TS2339: Property 'code' does not exist on type 'Error'.
+index.ts(98,25): error TS2339: Property 'code' does not exist on type 'Error'.
+index.ts(100,23): error TS2345: Argument of type 'Error' is not assignable to parameter of type 'boolean'.
+index.ts(112,80): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Encoding'.
+index.ts(116,80): error TS2345: Argument of type 'Buffer' is not assignable to parameter of type 'string'.
 index.ts(123,15): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'Error'.
 index.ts(130,16): error TS2554: Expected 1 arguments, but got 0.
 index.ts(132,24): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'Error'.
-index.ts(138,27): error TS2339: Property '__atomicTmp' does not exist on type 'Writable'.
-index.ts(166,17): error TS2339: Property '__atomicClosed' does not exist on type 'Writable'.
-index.ts(171,33): error TS2339: Property '__atomicTmp' does not exist on type 'Writable'.
+index.ts(162,36): error TS2304: Cannot find name 'AtomicWriteStream'.
 

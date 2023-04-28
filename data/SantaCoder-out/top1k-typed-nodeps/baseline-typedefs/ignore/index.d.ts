@@ -1,4 +1,4 @@
-declare function makeArray(subject: any): any[];
+declare function makeArray(subject: string): string[] | (string & any[]);
 declare const EMPTY = "";
 declare const SPACE = " ";
 declare const ESCAPE = "\\";

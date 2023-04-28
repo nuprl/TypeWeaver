@@ -1,5 +1,5 @@
 declare function debounce(func: Function, wait: number, options: any): {
-    (...args: any[]): any;
+    (...args: A): any;
     cancel: () => void;
     flush: () => any;
     pending: () => boolean;

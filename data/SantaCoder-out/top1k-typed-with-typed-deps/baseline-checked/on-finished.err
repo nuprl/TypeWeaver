@@ -1,13 +1,15 @@
+index.ts(46,27): error TS2304: Cannot find name 'Message'.
+index.ts(46,27): error TS4078: Parameter 'msg' of exported function has or is using private name 'Message'.
 index.ts(48,21): error TS2554: Expected 1 arguments, but got 3.
+index.ts(66,27): error TS2304: Cannot find name 'IncomingMessage'.
+index.ts(66,27): error TS4078: Parameter 'msg' of exported function has or is using private name 'IncomingMessage'.
 index.ts(91,39): error TS2304: Cannot find name 'Message'.
 index.ts(91,39): error TS4078: Parameter 'msg' of exported function has or is using private name 'Message'.
-index.ts(107,30): error TS2304: Cannot find name 'Socket'.
-index.ts(141,49): error TS2304: Cannot find name 'Listener'.
-index.ts(141,49): error TS4078: Parameter 'listener' of exported function has or is using private name 'Listener'.
-index.ts(142,22): error TS2339: Property '__onFinished' does not exist on type 'string'.
-index.ts(146,20): error TS2339: Property '__onFinished' does not exist on type 'string'.
-index.ts(163,13): error TS2339: Property '__onFinished' does not exist on type 'string'.
-index.ts(163,44): error TS2339: Property '__onFinished' does not exist on type 'string'.
+index.ts(107,30): error TS2503: Cannot find namespace 'net'.
+index.ts(142,22): error TS2339: Property '__onFinished' does not exist on type 'object'.
+index.ts(146,20): error TS2339: Property '__onFinished' does not exist on type 'object'.
+index.ts(161,31): error TS2304: Cannot find name 'Message'.
+index.ts(161,31): error TS4078: Parameter 'msg' of exported function has or is using private name 'Message'.
 index.ts(188,34): error TS2304: Cannot find name 'IncomingMessage'.
 index.ts(188,34): error TS4078: Parameter 'res' of exported function has or is using private name 'IncomingMessage'.
 index.ts(194,54): error TS2304: Cannot find name 'Socket'.

@@ -1,2 +1,2 @@
-declare function intersectionBy(...arrays: any[]): any[];
+declare function intersectionBy(...arrays: ArrayLike<any>[]): any[];
 export default intersectionBy;

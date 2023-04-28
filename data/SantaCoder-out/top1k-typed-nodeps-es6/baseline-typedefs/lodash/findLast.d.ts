@@ -1,2 +1,2 @@
-declare function findLast(collection: any[], predicate: any, fromIndex: any): any;
+declare function findLast(collection: any[], predicate: any, fromIndex: number): any;
 export default findLast;

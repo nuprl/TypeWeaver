@@ -1,2 +1,2 @@
-declare function xor(...arrays: number[][]): any[];
+declare function xor(...arrays: Array<ArrayLike<any>>): any[];
 export default xor;

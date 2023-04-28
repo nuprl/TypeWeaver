@@ -1,2 +1,2 @@
-declare function drop(array: any[], n: number, number: any): any[];
+declare function drop(array: Array<any>, n: number, number: any): any[];
 export default drop;

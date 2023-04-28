@@ -1,17 +1,6 @@
 index.ts(45,3): error TS2684: The 'this' context of type 'typeof EventEmitter' is not assignable to method's 'this' of type 'Function'.
   Types of property 'once' are incompatible.
     Type '{ (emitter: _NodeEventTarget, eventName: string | symbol, options?: StaticEventEmitterOptions): Promise<any[]>; (emitter: _DOMEventTarget, eventName: string, options?: StaticEventEmitterOptions): Promise<...>; }' is not assignable to type '() => Function & FnProps<any>'.
-index.ts(52,14): error TS2339: Property 'writable' does not exist on type 'string'.
-index.ts(53,26): error TS2339: Property 'write' does not exist on type 'string'.
-index.ts(67,8): error TS2339: Property 'on' does not exist on type 'string'.
-index.ts(71,13): error TS2339: Property '_isStdio' does not exist on type 'string'.
-index.ts(81,10): error TS2339: Property 'end' does not exist on type 'string'.
-index.ts(89,21): error TS2339: Property 'destroy' does not exist on type 'string'.
-index.ts(89,50): error TS2339: Property 'destroy' does not exist on type 'string'.
-index.ts(101,8): error TS2339: Property 'on' does not exist on type 'string'.
-index.ts(106,10): error TS2339: Property 'removeListener' does not exist on type 'string'.
-index.ts(112,10): error TS2339: Property 'removeListener' does not exist on type 'string'.
-index.ts(117,10): error TS2339: Property 'removeListener' does not exist on type 'string'.
-index.ts(123,8): error TS2339: Property 'on' does not exist on type 'string'.
-index.ts(125,8): error TS2339: Property 'emit' does not exist on type 'string'.
+index.ts(48,40): error TS2304: Cannot find name 'Writable'.
+index.ts(71,46): error TS2339: Property 'end' does not exist on type 'Object'.
 

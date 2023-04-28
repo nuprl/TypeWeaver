@@ -1,33 +1,47 @@
 src/interpreter/finite-automaton/dfa/dfa-minimizer.ts(20,24): error TS4078: Parameter 'dfa' of exported function has or is using private name 'DFA'.
-src/interpreter/finite-automaton/nfa/builders.ts(54,25): error TS4078: Parameter 'first' of exported function has or is using private name 'Pair'.
-src/interpreter/finite-automaton/nfa/builders.ts(54,39): error TS4078: Parameter 'second' of exported function has or is using private name 'Pair'.
+src/interpreter/finite-automaton/dfa/dfa-minimizer.ts(202,53): error TS4078: Parameter 'table' of exported function has or is using private name 'TransitionTable'.
+src/interpreter/finite-automaton/nfa/builders.ts(54,25): error TS4078: Parameter 'first' of exported function has or is using private name 'NFA'.
+src/interpreter/finite-automaton/nfa/builders.ts(54,38): error TS4078: Parameter 'second' of exported function has or is using private name 'NFA'.
+src/interpreter/finite-automaton/nfa/builders.ts(68,21): error TS4078: Parameter 'first' of exported function has or is using private name 'NFAFragment'.
+src/interpreter/finite-automaton/nfa/builders.ts(68,48): error TS4078: Parameter 'fragments' of exported function has or is using private name 'NFAFragment'.
 src/interpreter/finite-automaton/nfa/builders.ts(81,24): error TS4078: Parameter 'first' of exported function has or is using private name 'NFAState'.
 src/interpreter/finite-automaton/nfa/builders.ts(81,42): error TS4078: Parameter 'second' of exported function has or is using private name 'NFAState'.
-src/interpreter/finite-automaton/nfa/builders.ts(118,32): error TS4078: Parameter 'fragment' of exported function has or is using private name 'Fragment'.
-src/optimizer/transforms/char-case-insensitive-lowercase-transform.ts(64,39): error TS4078: Parameter 'symbol' of exported function has or is using private name 'ts'.
-src/optimizer/transforms/char-case-insensitive-lowercase-transform.ts(64,56): error TS4078: Parameter 'node' of exported function has or is using private name 'ts'.
-src/optimizer/transforms/char-class-classranges-merge-transform.ts(118,46): error TS1005: ',' expected.
-src/optimizer/transforms/char-class-classranges-merge-transform.ts(130,32): error TS4078: Parameter 'expression' of exported function has or is using private name 'Expression'.
-src/optimizer/transforms/char-class-classranges-merge-transform.ts(155,47): error TS4078: Parameter 'meta' of exported function has or is using private name 'Meta'.
-src/optimizer/transforms/char-class-classranges-merge-transform.ts(265,54): error TS4078: Parameter 'expression' of exported function has or is using private name 'ts'.
-src/optimizer/transforms/char-class-classranges-merge-transform.ts(265,81): error TS4078: Parameter 'classRange' of exported function has or is using private name 'ts'.
-src/optimizer/transforms/char-class-classranges-merge-transform.ts(304,54): error TS4078: Parameter 'expression' of exported function has or is using private name 'Expression'.
-src/optimizer/transforms/char-class-classranges-merge-transform.ts(304,78): error TS4078: Parameter 'classRange' of exported function has or is using private name 'PsiElementRange'.
-src/optimizer/transforms/char-class-classranges-merge-transform.ts(327,59): error TS4078: Parameter 'classRange' of exported function has or is using private name 'ClassRange'.
+src/interpreter/finite-automaton/nfa/builders.ts(103,20): error TS4078: Parameter 'first' of exported function has or is using private name 'NFAState'.
+src/interpreter/finite-automaton/nfa/builders.ts(103,44): error TS4078: Parameter 'fragments' of exported function has or is using private name 'NFAState'.
+src/interpreter/finite-automaton/nfa/builders.ts(118,32): error TS4078: Parameter 'fragment' of exported function has or is using private name 'NFAFragment'.
+src/interpreter/finite-automaton/nfa/builders.ts(139,24): error TS4078: Parameter 'fragment' of exported function has or is using private name 'Fragment'.
+src/interpreter/finite-automaton/nfa/builders.ts(149,28): error TS4078: Parameter 'fragment' of exported function has or is using private name 'Fragment'.
+src/interpreter/finite-automaton/nfa/builders.ts(158,32): error TS4078: Parameter 'fragment' of exported function has or is using private name 'Fragment'.
+src/optimizer/transforms/char-case-insensitive-lowercase-transform.ts(57,37): error TS4078: Parameter 'classRange' of exported function has or is using private name 'ClassRange'.
+src/optimizer/transforms/char-class-classranges-merge-transform.ts(68,27): error TS4078: Parameter 'a' of exported function has or is using private name 'CharClass'.
+src/optimizer/transforms/char-class-classranges-merge-transform.ts(68,41): error TS4078: Parameter 'b' of exported function has or is using private name 'CharClass'.
+src/optimizer/transforms/char-class-classranges-merge-transform.ts(95,35): error TS4078: Parameter 'expression' of exported function has or is using private name 'CharExpression'.
+src/optimizer/transforms/char-class-classranges-merge-transform.ts(118,49): error TS1005: ',' expected.
+src/optimizer/transforms/char-class-classranges-merge-transform.ts(155,33): error TS4078: Parameter 'expression' of exported function has or is using private name 'Expression'.
+src/optimizer/transforms/char-class-classranges-merge-transform.ts(216,34): error TS4078: Parameter 'expression' of exported function has or is using private name 'Expression'.
+src/optimizer/transforms/char-class-classranges-merge-transform.ts(249,34): error TS4078: Parameter 'expression' of exported function has or is using private name 'Expression'.
+src/optimizer/transforms/char-class-classranges-merge-transform.ts(265,74): error TS4078: Parameter 'classRange' of exported function has or is using private name 'ClassRange'.
+src/optimizer/transforms/char-class-classranges-merge-transform.ts(304,74): error TS4078: Parameter 'classRange' of exported function has or is using private name 'ClassRange'.
+src/optimizer/transforms/char-class-classranges-merge-transform.ts(327,39): error TS4078: Parameter 'expression' of exported function has or is using private name 'Expression'.
+src/optimizer/transforms/char-class-classranges-merge-transform.ts(327,63): error TS4078: Parameter 'classRange' of exported function has or is using private name 'ClassRange'.
 src/optimizer/transforms/char-class-classranges-merge-transform.ts(380,40): error TS4078: Parameter 'expression' of exported function has or is using private name 'Expression'.
 src/optimizer/transforms/char-class-to-meta-transform.ts(34,36): error TS4078: Parameter 'path' of exported function has or is using private name 'NodePath'.
-src/optimizer/transforms/char-class-to-meta-transform.ts(34,45): error TS4078: Parameter 'path' of exported function has or is using private name 't'.
+src/optimizer/transforms/char-class-to-meta-transform.ts(34,45): error TS4078: Parameter 'path' of exported function has or is using private name 'RegExpLiteral'.
 src/optimizer/transforms/char-class-to-meta-transform.ts(53,34): error TS4078: Parameter 'path' of exported function has or is using private name 'NodePath'.
-src/optimizer/transforms/char-class-to-meta-transform.ts(53,43): error TS4078: Parameter 'path' of exported function has or is using private name 't'.
 src/optimizer/transforms/char-class-to-meta-transform.ts(145,40): error TS4078: Parameter 'path' of exported function has or is using private name 'NodePath'.
 src/optimizer/transforms/char-class-to-meta-transform.ts(145,49): error TS4078: Parameter 'path' of exported function has or is using private name 't'.
-src/optimizer/transforms/char-class-to-meta-transform.ts(178,34): error TS4078: Parameter 'node' of exported function has or is using private name 't'.
 src/optimizer/transforms/char-class-to-meta-transform.ts(186,59): error TS1005: ',' expected.
 src/optimizer/transforms/char-class-to-meta-transform.ts(186,61): error TS1003: Identifier expected.
-src/optimizer/transforms/char-class-to-meta-transform.ts(210,29): error TS4078: Parameter 'node' of exported function has or is using private name 'ts'.
 src/optimizer/transforms/char-code-to-simple-char-transform.ts(57,36): error TS4078: Parameter 'classRange' of exported function has or is using private name 'ClassRange'.
+src/optimizer/transforms/char-escape-unescape-transform.ts(33,31): error TS4078: Parameter 'path' of exported function has or is using private name 'NodePath'.
+src/optimizer/transforms/char-escape-unescape-transform.ts(33,40): error TS4078: Parameter 'path' of exported function has or is using private name 'Literal'.
+src/optimizer/transforms/combine-repeating-patterns-transform.ts(50,51): error TS4078: Parameter 'alternative' of exported function has or is using private name 'NodePath'.
+src/optimizer/transforms/combine-repeating-patterns-transform.ts(50,60): error TS4078: Parameter 'alternative' of exported function has or is using private name 'T'.
+src/optimizer/transforms/combine-repeating-patterns-transform.ts(50,71): error TS4078: Parameter 'child' of exported function has or is using private name 'NodePath'.
+src/optimizer/transforms/combine-repeating-patterns-transform.ts(50,80): error TS4078: Parameter 'child' of exported function has or is using private name 'T'.
 src/optimizer/transforms/combine-repeating-patterns-transform.ts(108,53): error TS4078: Parameter 'alternative' of exported function has or is using private name 'Alternative'.
 src/optimizer/transforms/combine-repeating-patterns-transform.ts(155,53): error TS4078: Parameter 'alternative' of exported function has or is using private name 'Alternative'.
+src/optimizer/transforms/group-single-chars-to-char-class.ts(59,36): error TS4078: Parameter 'expression' of exported function has or is using private name 'Expression'.
 src/optimizer/transforms/quantifier-range-to-symbol-transform.ts(39,32): error TS4078: Parameter 'path' of exported function has or is using private name 'NodePath'.
 src/optimizer/transforms/quantifier-range-to-symbol-transform.ts(39,41): error TS4078: Parameter 'path' of exported function has or is using private name 't'.
 src/optimizer/transforms/quantifier-range-to-symbol-transform.ts(50,31): error TS4078: Parameter 'path' of exported function has or is using private name 'NodePath'.
@@ -36,8 +50,11 @@ src/optimizer/transforms/quantifier-range-to-symbol-transform.ts(61,32): error T
 src/optimizer/transforms/quantifier-range-to-symbol-transform.ts(61,41): error TS4078: Parameter 'path' of exported function has or is using private name 't'.
 src/optimizer/transforms/quantifiers-merge-transform.ts(99,40): error TS4078: Parameter 'quantifier' of exported function has or is using private name 'Quantifier'.
 src/optimizer/transforms/quantifiers-merge-transform.ts(108,36): error TS4078: Parameter 'quantifier' of exported function has or is using private name 'Quantifier'.
+src/parser/generated/regexp-tree.ts(914,32): error TS4078: Parameter 'from' of exported function has or is using private name 'Char'.
+src/parser/generated/regexp-tree.ts(914,42): error TS4078: Parameter 'to' of exported function has or is using private name 'Char'.
 src/parser/generated/regexp-tree.ts(927,48): error TS4078: Parameter 'loc' of exported function has or is using private name 'SourceLocation'.
-src/parser/generated/regexp-tree.ts(977,49): error TS4078: Parameter 'loc' of exported function has or is using private name 'SourceLocation'.
+src/parser/generated/regexp-tree.ts(977,36): error TS4078: Parameter 'kind' of exported function has or is using private name 'CharKind'.
+src/parser/generated/regexp-tree.ts(977,51): error TS4078: Parameter 'loc' of exported function has or is using private name 'SourceLocation'.
 src/parser/generated/regexp-tree.ts(1314,33): error TS4078: Parameter 'token' of exported function has or is using private name 'Token'.
 src/transform/utils.ts(58,46): error TS4078: Parameter 'quantifier' of exported function has or is using private name 'Quantifier'.
 src/traverse/index.ts(27,46): error TS1005: ',' expected.

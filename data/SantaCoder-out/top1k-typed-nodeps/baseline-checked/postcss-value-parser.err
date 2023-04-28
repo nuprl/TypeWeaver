@@ -3,10 +3,10 @@ lib/index.ts(10,10): error TS2350: Only a void function can be called with the '
 lib/parse.ts(253,31): error TS2339: Property 'sourceEndIndex' does not exist on type '{ nodes: any[]; }'.
 lib/parse.ts(316,16): error TS2339: Property 'unclosed' does not exist on type '{ nodes: any[]; }'.
 lib/parse.ts(317,16): error TS2339: Property 'sourceEndIndex' does not exist on type '{ nodes: any[]; }'.
+lib/stringify.ts(1,44): error TS2304: Cannot find name 'CustomStringify'.
+lib/stringify.ts(1,44): error TS4078: Parameter 'custom' of exported function has or is using private name 'CustomStringify'.
 lib/stringify.ts(2,19): error TS2339: Property 'type' does not exist on type 'Node'.
 lib/stringify.ts(3,20): error TS2339: Property 'value' does not exist on type 'Node'.
-lib/stringify.ts(7,33): error TS2349: This expression is not callable.
-  Type 'string[]' has no call signatures.
 lib/stringify.ts(12,16): error TS2339: Property 'quote' does not exist on type 'Node'.
 lib/stringify.ts(13,32): error TS2339: Property 'unclosed' does not exist on type 'Node'.
 lib/stringify.ts(15,33): error TS2339: Property 'unclosed' does not exist on type 'Node'.
@@ -18,4 +18,6 @@ lib/stringify.ts(26,13): error TS2339: Property 'before' does not exist on type 
 lib/stringify.ts(28,13): error TS2339: Property 'after' does not exist on type 'Node'.
 lib/stringify.ts(29,13): error TS2339: Property 'unclosed' does not exist on type 'Node'.
 lib/stringify.ts(35,10): error TS2300: Duplicate identifier 'stringify'.
+lib/stringify.ts(35,43): error TS2304: Cannot find name 'Custom'.
+lib/stringify.ts(35,43): error TS4078: Parameter 'custom' of exported function has or is using private name 'Custom'.
 

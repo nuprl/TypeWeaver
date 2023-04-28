@@ -10,5 +10,5 @@ declare var IMPLS_PATHS: {};
 declare var IMPLS: any[];
 declare var SAMPLES_DIRECTORY: any;
 declare var SAMPLES: any[];
-declare function select(patterns: string[]): any[];
+declare function select(patterns: Array<RegExp>): any[];
 declare function run(files: string[]): void;

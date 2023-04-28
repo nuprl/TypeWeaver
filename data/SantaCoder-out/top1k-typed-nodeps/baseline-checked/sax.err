@@ -1,59 +1,43 @@
 examples/example.ts(15,15): error TS2349: This expression is not callable.
   Type 'void' has no call signatures.
 examples/example.ts(21,2): error TS2554: Expected 0 arguments, but got 1.
-examples/get-products.ts(14,29): error TS2554: Expected 0 arguments, but got 1.
-examples/get-products.ts(35,15): error TS2339: Property 'name' does not exist on type 'string'.
-examples/get-products.ts(36,15): error TS2339: Property 'name' does not exist on type 'string'.
-examples/get-products.ts(39,11): error TS2339: Property 'parent' does not exist on type 'string'.
-examples/get-products.ts(40,11): error TS2339: Property 'children' does not exist on type 'string'.
-examples/get-products.ts(41,11): error TS2339: Property 'parent' does not exist on type 'string'.
-examples/get-products.ts(41,25): error TS2339: Property 'parent' does not exist on type 'string'.
-examples/get-products.ts(51,11): error TS2339: Property 'writeHead' does not exist on type 'Response'.
-examples/get-products.ts(52,11): error TS2339: Property 'end' does not exist on type 'Response'.
-examples/hello-world.ts(2,7): error TS2339: Property 'writeHead' does not exist on type 'Response'.
-examples/hello-world.ts(3,7): error TS2339: Property 'end' does not exist on type 'Response'.
-examples/pretty-print.ts(22,19): error TS2339: Property 'name' does not exist on type 'string'.
-examples/pretty-print.ts(23,21): error TS2339: Property 'attributes' does not exist on type 'string'.
-examples/pretty-print.ts(24,39): error TS2339: Property 'attributes' does not exist on type 'string'.
+examples/get-products.ts(12,36): error TS2304: Cannot find name 'IncomingMessage'.
+examples/get-products.ts(12,58): error TS2304: Cannot find name 'ServerResponse'.
+examples/get-products.ts(34,39): error TS2304: Cannot find name 'Tag'.
+examples/hello-world.ts(1,45): error TS2304: Cannot find name 'IncomingMessage'.
+examples/hello-world.ts(1,67): error TS2304: Cannot find name 'ServerResponse'.
+examples/pretty-print.ts(19,38): error TS2304: Cannot find name 'Tag'.
 examples/pretty-print.ts(64,10): error TS2384: Overload signatures must all be ambient or non-ambient.
 lib/sax.ts(2,48): error TS2304: Cannot find name 'Options'.
 lib/sax.ts(2,66): error TS2350: Only a void function can be called with the 'new' keyword.
+lib/sax.ts(45,45): error TS2503: Cannot find namespace 'sax'.
 lib/sax.ts(47,14): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/sax.ts(62,22): error TS2339: Property 'BEGIN' does not exist on type 'number'.
 lib/sax.ts(79,5): error TS2554: Expected 3 arguments, but got 2.
-lib/sax.ts(99,39): error TS2304: Cannot find name 'Parser'.
-lib/sax.ts(125,27): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Error'.
+lib/sax.ts(99,39): error TS2749: 'SAXParser' refers to a value, but is being used as a type here. Did you mean 'typeof SAXParser'?
 lib/sax.ts(135,34): error TS2304: Cannot find name 'Parser'.
-lib/sax.ts(141,34): error TS2304: Cannot find name 'Parser'.
-lib/sax.ts(172,48): error TS2304: Cannot find name 'Options'.
+lib/sax.ts(141,34): error TS2749: 'SAXParser' refers to a value, but is being used as a type here. Did you mean 'typeof SAXParser'?
+lib/sax.ts(172,48): error TS2304: Cannot find name 'ParserOptions'.
 lib/sax.ts(173,12): error TS2350: Only a void function can be called with the 'new' keyword.
+lib/sax.ts(176,45): error TS2304: Cannot find name 'ParserOptions'.
 lib/sax.ts(178,14): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/sax.ts(183,20): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/sax.ts(623,26): error TS2304: Cannot find name 'Parser'.
 lib/sax.ts(627,30): error TS2304: Cannot find name 'Parser'.
 lib/sax.ts(632,31): error TS2304: Cannot find name 'Parser'.
 lib/sax.ts(644,27): error TS2304: Cannot find name 'Parser'.
-lib/sax.ts(647,7): error TS2322: Type 'string' is not assignable to type 'Error'.
-lib/sax.ts(651,20): error TS2345: Argument of type 'Error' is not assignable to parameter of type 'string'.
 lib/sax.ts(657,25): error TS2304: Cannot find name 'Parser'.
 lib/sax.ts(659,29): error TS2339: Property 'BEGIN' does not exist on type 'number'.
 lib/sax.ts(660,27): error TS2339: Property 'BEGIN_WHITESPACE' does not exist on type 'number'.
 lib/sax.ts(661,27): error TS2339: Property 'TEXT' does not exist on type 'number'.
-lib/sax.ts(662,21): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Error'.
 lib/sax.ts(667,5): error TS2554: Expected 3 arguments, but got 2.
-lib/sax.ts(672,32): error TS2304: Cannot find name 'Parser'.
+lib/sax.ts(672,32): error TS2749: 'SAXParser' refers to a value, but is being used as a type here. Did you mean 'typeof SAXParser'?
 lib/sax.ts(676,16): error TS2339: Property 'strict' does not exist on type '{}'.
-lib/sax.ts(677,21): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Error'.
 lib/sax.ts(681,28): error TS2304: Cannot find name 'Parser'.
 lib/sax.ts(688,11): error TS2339: Property 'ns' does not exist on type '{ name: any; attributes: {}; }'.
 lib/sax.ts(709,28): error TS2304: Cannot find name 'Parser'.
-lib/sax.ts(721,41): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'string'.
 lib/sax.ts(761,29): error TS2304: Cannot find name 'Parser'.
 lib/sax.ts(767,16): error TS2554: Expected 2 arguments, but got 1.
-lib/sax.ts(780,37): error TS2345: Argument of type '(p: Node) => void' is not assignable to parameter of type '(value: string, index: number, array: string[]) => void'.
-  Types of parameters 'p' and 'value' are incompatible.
-    Type 'string' is not assignable to type 'Node'.
-lib/sax.ts(795,36): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'string'.
 lib/sax.ts(829,26): error TS2339: Property 'SCRIPT' does not exist on type 'number'.
 lib/sax.ts(831,26): error TS2339: Property 'TEXT' does not exist on type 'number'.
 lib/sax.ts(840,30): error TS2304: Cannot find name 'Parser'.
@@ -65,7 +49,6 @@ lib/sax.ts(911,33): error TS2304: Cannot find name 'Parser'.
 lib/sax.ts(944,37): error TS2304: Cannot find name 'Parser'.
 lib/sax.ts(946,24): error TS2339: Property 'OPEN_WAKA' does not exist on type 'number'.
 lib/sax.ts(953,24): error TS2339: Property 'TEXT' does not exist on type 'number'.
-lib/sax.ts(972,9): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Error'.
 lib/sax.ts(1001,16): error TS2339: Property 'BEGIN' does not exist on type 'number'.
 lib/sax.ts(1002,28): error TS2339: Property 'BEGIN_WHITESPACE' does not exist on type 'number'.
 lib/sax.ts(1009,16): error TS2339: Property 'BEGIN_WHITESPACE' does not exist on type 'number'.

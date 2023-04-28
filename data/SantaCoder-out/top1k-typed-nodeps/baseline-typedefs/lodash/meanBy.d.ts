@@ -1,2 +1,2 @@
-declare function meanBy(array: any[], iteratee: any): number;
+declare function meanBy(array: Array<any>, iteratee: Function): number;
 export default meanBy;

@@ -5,4 +5,4 @@
  * MIT Licensed
  */
 declare var hasOwnProperty: (v: PropertyKey) => boolean;
-declare function merge(dest: any, src: any, redefine: boolean): any;
+declare function merge(dest: Object, src: Object, redefine: boolean): Object;

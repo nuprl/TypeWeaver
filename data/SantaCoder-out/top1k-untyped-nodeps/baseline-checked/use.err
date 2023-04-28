@@ -1,10 +1,11 @@
-examples/app.ts(5,26): error TS2304: Cannot find name 'Config'.
-examples/app.ts(5,26): error TS4078: Parameter 'config' of exported function has or is using private name 'Config'.
 examples/app.ts(28,10): error TS2393: Duplicate function implementation.
 examples/app.ts(84,28): error TS2749: 'App' refers to a value, but is being used as a type here. Did you mean 'typeof App'?
 examples/layered.ts(2,5): error TS2300: Duplicate identifier 'define'.
 examples/layered.ts(5,10): error TS2393: Duplicate function implementation.
-index.ts(10,37): error TS2304: Cannot find name 'Application'.
-index.ts(10,59): error TS2304: Cannot find name 'Options'.
+index.ts(16,26): error TS2339: Property 'prop' does not exist on type 'Object'.
+index.ts(16,51): error TS2339: Property 'prop' does not exist on type 'Object'.
+index.ts(95,53): error TS2304: Cannot find name 'Options'.
+index.ts(116,21): error TS2339: Property 'hook' does not exist on type 'Object'.
+index.ts(117,12): error TS2339: Property 'hook' does not exist on type 'Object'.
 index.ts(149,10): error TS2300: Duplicate identifier 'define'.
 

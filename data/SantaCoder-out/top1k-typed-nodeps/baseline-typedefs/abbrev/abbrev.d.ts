@@ -1,5 +1,5 @@
 declare function monkeyPatch(): void;
-declare function abbrev(list: string[]): {};
+declare function abbrev(list: Array<string>): {};
 declare namespace abbrev {
     var abbrev: typeof globalThis.abbrev;
     var monkeyPatch: typeof globalThis.monkeyPatch;

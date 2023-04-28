@@ -1,3 +1,5 @@
+index.ts(22,24): error TS2304: Cannot find name 'ColorInput'.
+index.ts(22,24): error TS4078: Parameter 'object' of exported function has or is using private name 'ColorInput'.
 index.ts(24,10): error TS2350: Only a void function can be called with the 'new' keyword.
 index.ts(43,23): error TS2339: Property 'model' does not exist on type '{}'.
 index.ts(44,27): error TS2339: Property 'color' does not exist on type '{}'.
@@ -9,7 +11,7 @@ index.ts(189,11): error TS2350: Only a void function can be called with the 'new
 index.ts(196,21): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 index.ts(197,23): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 index.ts(198,22): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
-index.ts(200,51): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+index.ts(200,14): error TS2345: Argument of type 'string[]' is not assignable to parameter of type 'string'.
 index.ts(202,29): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 index.ts(203,27): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 index.ts(205,29): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
@@ -34,17 +36,14 @@ index.ts(237,11): error TS2350: Only a void function can be called with the 'new
 index.ts(237,11): error TS2554: Expected 2 arguments, but got 1.
 index.ts(245,11): error TS2350: Only a void function can be called with the 'new' keyword.
 index.ts(245,11): error TS2554: Expected 2 arguments, but got 1.
-index.ts(358,16): error TS2339: Property 'rgb' does not exist on type '(object: any, model: any) => any'.
-index.ts(395,16): error TS2339: Property 'rgb' does not exist on type '(object: any, model: any) => any'.
+index.ts(358,16): error TS2339: Property 'rgb' does not exist on type '(object: ColorInput, model: string) => any'.
+index.ts(395,16): error TS2339: Property 'rgb' does not exist on type '(object: ColorInput, model: string) => any'.
 index.ts(414,11): error TS2350: Only a void function can be called with the 'new' keyword.
 index.ts(414,11): error TS2554: Expected 2 arguments, but got 1.
 index.ts(418,11): error TS2350: Only a void function can be called with the 'new' keyword.
 index.ts(421,10): error TS2350: Only a void function can be called with the 'new' keyword.
+index.ts(428,4): error TS2322: Type 'number[]' is not assignable to type 'number'.
 index.ts(431,10): error TS2350: Only a void function can be called with the 'new' keyword.
-index.ts(445,24): error TS2304: Cannot find name 'Model'.
-index.ts(445,24): error TS4078: Parameter 'model' of exported function has or is using private name 'Model'.
-index.ts(459,13): error TS2349: This expression is not callable.
-  Type 'String' has no call signatures.
-index.ts(469,13): error TS2349: This expression is not callable.
-  Type 'String' has no call signatures.
+index.ts(446,2): error TS2322: Type 'string[] | (string & any[])' is not assignable to type 'string'.
+  Type 'string[]' is not assignable to type 'string'.
 

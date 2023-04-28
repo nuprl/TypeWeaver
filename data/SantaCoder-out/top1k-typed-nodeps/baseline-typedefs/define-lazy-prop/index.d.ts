@@ -1,1 +1,1 @@
-export default function defineLazyProperty(object: any, propertyName: string, valueGetter: any): any;
+export default function defineLazyProperty(object: Object, propertyName: string, valueGetter: any): Object;

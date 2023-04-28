@@ -1,1 +1,1 @@
-export default function (elem: HTMLElement, options: any, callback: any): any;
+export default function (elem: HTMLElement, options: CSSStyleDeclaration, callback: Function): any;

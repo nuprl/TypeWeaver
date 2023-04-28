@@ -1,1 +1,1 @@
-export default function hash(object: any, label: string): any;
+export default function hash(object: Object, label: string): any;

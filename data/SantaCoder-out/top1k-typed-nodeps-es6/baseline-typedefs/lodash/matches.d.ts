@@ -1,2 +1,2 @@
-declare function matches(source: string): (object: any) => boolean;
+declare function matches(source: any): (object: any) => boolean;
 export default matches;

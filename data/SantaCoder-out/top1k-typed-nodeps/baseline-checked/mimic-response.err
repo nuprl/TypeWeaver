@@ -1,12 +1,5 @@
-index.ts(23,15): error TS2339: Property '_readableState' does not exist on type 'WritableStream<any>'.
-index.ts(54,13): error TS2339: Property 'once' does not exist on type 'ReadableStream<any>'.
-index.ts(55,12): error TS2339: Property 'destroy' does not exist on type 'WritableStream<any>'.
-index.ts(57,12): error TS2339: Property 'emit' does not exist on type 'WritableStream<any>'.
-index.ts(60,13): error TS2339: Property 'once' does not exist on type 'ReadableStream<any>'.
-index.ts(61,18): error TS2339: Property 'complete' does not exist on type 'ReadableStream<any>'.
-index.ts(62,17): error TS2339: Property 'readable' does not exist on type 'WritableStream<any>'.
-index.ts(63,14): error TS2339: Property 'once' does not exist on type 'WritableStream<any>'.
-index.ts(64,15): error TS2339: Property 'emit' does not exist on type 'WritableStream<any>'.
-index.ts(67,14): error TS2339: Property 'emit' does not exist on type 'WritableStream<any>'.
-index.ts(70,13): error TS2339: Property 'emit' does not exist on type 'WritableStream<any>'.
+index.ts(22,51): error TS2552: Cannot find name 'Readable'. Did you mean '_Readable'?
+index.ts(22,51): error TS4078: Parameter 'fromStream' of exported function has or is using private name 'Readable'.
+index.ts(22,71): error TS2304: Cannot find name 'Writable'.
+index.ts(22,71): error TS4078: Parameter 'toStream' of exported function has or is using private name 'Writable'.
 

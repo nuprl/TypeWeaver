@@ -12,4 +12,4 @@ declare function charset(type: string): any;
 declare function contentType(str: string): any;
 declare function extension(type: string): any;
 declare function lookup(path: string): any;
-declare function populateMaps(extensions: string[], types: string[]): void;
+declare function populateMaps(extensions: Object, types: Object): void;

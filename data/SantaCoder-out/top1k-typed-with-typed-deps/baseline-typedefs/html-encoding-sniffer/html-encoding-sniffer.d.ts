@@ -11,4 +11,4 @@ declare function getAttribute(uint8Array: Uint8Array, i: number, l: number): {
     attr?: undefined;
 };
 declare function extractCharacterEncodingFromMeta(string: string): any;
-declare function isSpaceCharacter(c: string): boolean;
+declare function isSpaceCharacter(c: number): boolean;

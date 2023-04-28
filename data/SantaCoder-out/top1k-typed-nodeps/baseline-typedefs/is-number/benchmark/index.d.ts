@@ -6,7 +6,7 @@ declare function bench(name: string): {
     run: any;
     add(key: any, fn: any): any;
 };
-declare function run(fn: Function, prop: string, string: any): void;
-declare function isNumberParseFloat(n: string): boolean;
+declare function run(fn: any, prop: string, string: any): void;
+declare function isNumberParseFloat(n: any): boolean;
 declare function isNumber60(val: any): boolean;
 declare function isNumber61(val: any): boolean;

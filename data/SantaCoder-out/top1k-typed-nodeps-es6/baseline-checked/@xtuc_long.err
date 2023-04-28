@@ -2,25 +2,27 @@ index.ts(271,22): error TS2554: Expected 2 arguments, but got 1.
 index.ts(278,19): error TS2554: Expected 2 arguments, but got 1.
 index.ts(279,38): error TS2554: Expected 2 arguments, but got 1.
 index.ts(282,27): error TS2554: Expected 2 arguments, but got 1.
+index.ts(306,39): error TS2709: Cannot use namespace 'Long' as a type.
 index.ts(310,12): error TS2554: Expected 3 arguments, but got 2.
-index.ts(312,23): error TS2339: Property 'low' does not exist on type 'never'.
-index.ts(312,32): error TS2339: Property 'high' does not exist on type 'never'.
-index.ts(312,85): error TS2339: Property 'unsigned' does not exist on type 'never'.
 index.ts(367,18): error TS2554: Expected 2 arguments, but got 1.
 index.ts(373,12): error TS2554: Expected 2 arguments, but got 1.
 index.ts(397,11): error TS2554: Expected 2 arguments, but got 1.
 index.ts(421,15): error TS2554: Expected 2 arguments, but got 1.
 index.ts(509,23): error TS2554: Expected 2 arguments, but got 1.
+index.ts(645,47): error TS2709: Cannot use namespace 'Long' as a type.
 index.ts(647,13): error TS2554: Expected 2 arguments, but got 1.
+index.ts(667,53): error TS2709: Cannot use namespace 'Long' as a type.
+index.ts(693,51): error TS2709: Cannot use namespace 'Long' as a type.
+index.ts(711,65): error TS2709: Cannot use namespace 'Long' as a type.
+index.ts(737,57): error TS2709: Cannot use namespace 'Long' as a type.
+index.ts(755,71): error TS2709: Cannot use namespace 'Long' as a type.
+index.ts(782,49): error TS2304: Cannot find name 'LongLike'.
 index.ts(784,13): error TS2554: Expected 2 arguments, but got 1.
+index.ts(833,42): error TS2709: Cannot use namespace 'Long' as a type.
 index.ts(835,14): error TS2554: Expected 2 arguments, but got 1.
-index.ts(844,20): error TS2339: Property 'high' does not exist on type 'number'.
-index.ts(845,20): error TS2339: Property 'high' does not exist on type 'number'.
-index.ts(846,20): error TS2339: Property 'low' does not exist on type 'number'.
-index.ts(847,20): error TS2339: Property 'low' does not exist on type 'number'.
+index.ts(870,56): error TS2709: Cannot use namespace 'Long' as a type.
 index.ts(872,18): error TS2554: Expected 2 arguments, but got 1.
-index.ts(873,30): error TS2339: Property 'neg' does not exist on type 'number'.
-index.ts(890,56): error TS2552: Cannot find name 'BigNumber'. Did you mean 'Number'?
+index.ts(890,56): error TS2709: Cannot use namespace 'Long' as a type.
 index.ts(894,18): error TS2554: Expected 2 arguments, but got 1.
 index.ts(976,49): error TS2709: Cannot use namespace 'Long' as a type.
 index.ts(978,15): error TS2554: Expected 2 arguments, but got 1.
@@ -38,4 +40,6 @@ index.ts(1243,23): error TS2339: Property 'toInt' does not exist on type 'number
 index.ts(1267,42): error TS2339: Property 'toInt' does not exist on type 'number'.
 index.ts(1298,42): error TS2339: Property 'toInt' does not exist on type 'number'.
 index.ts(1325,42): error TS2339: Property 'toInt' does not exist on type 'number'.
+index.ts(1424,68): error TS2345: Argument of type 'number[]' is not assignable to parameter of type 'Uint8Array'.
+  Type 'number[]' is missing the following properties from type 'Uint8Array': BYTES_PER_ELEMENT, buffer, byteLength, byteOffset, and 3 more.
 

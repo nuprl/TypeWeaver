@@ -3,7 +3,7 @@ declare var Stream: any;
 declare var util: any;
 declare var UUID_REGEXP: RegExp;
 declare function _capitalize(str: string): string;
-declare function _toss(name: string, expected: string, oper: string, arg: any, actual: any): void;
+declare function _toss(name: string, expected: string, oper: string, arg: Function, actual: Function): void;
 declare function _getClass(arg: any): any;
 declare function noop(): void;
 declare var types: {

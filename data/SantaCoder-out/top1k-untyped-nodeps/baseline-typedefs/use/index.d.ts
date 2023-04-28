@@ -5,4 +5,4 @@
  * Released under the MIT License.
  */
 declare function isObject(val: any): boolean;
-declare function define(obj: any, key: string, val: any): void;
+declare function define(obj: Object, key: string, val: any): void;

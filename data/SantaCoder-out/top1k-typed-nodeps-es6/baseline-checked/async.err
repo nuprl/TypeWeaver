@@ -3,9 +3,22 @@ dist/async.ts(3595,51): error TS1005: ',' expected.
 dist/async.ts(4186,50): error TS1005: ',' expected.
 dist/async.ts(4190,55): error TS1005: ',' expected.
 docs/v2/scripts/async.ts(64,33): error TS1138: Parameter declaration expected.
-docs/v2/scripts/async.ts(64,38): error TS1005: ',' expected.
+docs/v2/scripts/async.ts(64,40): error TS1005: ',' expected.
+docs/v2/scripts/async.ts(64,44): error TS1005: ',' expected.
+docs/v2/scripts/async.ts(64,45): error TS1109: Expression expected.
+docs/v2/scripts/async.ts(64,47): error TS1005: ',' expected.
+docs/v2/scripts/async.ts(65,13): error TS1005: ':' expected.
+docs/v2/scripts/async.ts(65,40): error TS1005: ',' expected.
+docs/v2/scripts/async.ts(66,16): error TS1005: ':' expected.
+docs/v2/scripts/async.ts(66,53): error TS1005: ',' expected.
+docs/v2/scripts/async.ts(67,6): error TS1005: ')' expected.
+docs/v2/scripts/async.ts(68,1): error TS1128: Declaration or statement expected.
 docs/v2/scripts/async.ts(71,50): error TS1138: Parameter declaration expected.
-docs/v2/scripts/async.ts(71,55): error TS1005: ',' expected.
+docs/v2/scripts/async.ts(1126,28): error TS4078: Parameter 'eachfn' of exported function has or is using private name 'EachOfFunction'.
+docs/v2/scripts/async.ts(1126,66): error TS4078: Parameter 'iteratee' of exported function has or is using private name 'AsyncFunction'.
+docs/v2/scripts/async.ts(1126,91): error TS4078: Parameter 'callback' of exported function has or is using private name 'AsyncResultCallback'.
+docs/v2/scripts/async.ts(2128,26): error TS4078: Parameter 'dll' of exported function has or is using private name 'DLL'.
+docs/v2/scripts/async.ts(2207,24): error TS4078: Parameter 'worker' of exported function has or is using private name 'AsyncWorker'.
 docs/v2/scripts/async.ts(2563,30): error TS1138: Parameter declaration expected.
 docs/v2/scripts/async.ts(2565,32): error TS1138: Parameter declaration expected.
 docs/v2/scripts/async.ts(2565,37): error TS1005: ',' expected.
@@ -15,8 +28,22 @@ docs/v2/scripts/async.ts(2756,38): error TS1138: Parameter declaration expected.
 docs/v2/scripts/async.ts(2756,43): error TS1005: ',' expected.
 docs/v2/scripts/async.ts(2759,57): error TS1138: Parameter declaration expected.
 docs/v2/scripts/async.ts(2759,62): error TS1005: ',' expected.
+docs/v2/scripts/async.ts(3089,23): error TS4078: Parameter 'test' of exported function has or is using private name 'AsyncFunction'.
+docs/v2/scripts/async.ts(3089,42): error TS4078: Parameter 'fn' of exported function has or is using private name 'AsyncFunction'.
+docs/v2/scripts/async.ts(3195,78): error TS4078: Parameter 'callback' of exported function has or is using private name 'Callback'.
 docs/v2/scripts/async.ts(3816,58): error TS1138: Parameter declaration expected.
 docs/v2/scripts/async.ts(3816,63): error TS1005: ',' expected.
+docs/v2/scripts/async.ts(4384,84): error TS4078: Parameter 'callback' of exported function has or is using private name 'Callback'.
+docs/v2/scripts/async.ts(5217,23): error TS4078: Parameter 'test' of exported function has or is using private name 'AsyncBooleanResultIterator'.
+docs/v2/scripts/async.ts(5217,50): error TS4078: Parameter 'test' of exported function has or is using private name 'T'.
+docs/v2/scripts/async.ts(5217,64): error TS4078: Parameter 'iteratee' of exported function has or is using private name 'AsyncFunction'.
+docs/v2/scripts/async.ts(5217,78): error TS4078: Parameter 'iteratee' of exported function has or is using private name 'T'.
+docs/v2/scripts/async.ts(5217,92): error TS4078: Parameter 'callback' of exported function has or is using private name 'AsyncResultIterator'.
+docs/v2/scripts/async.ts(5217,112): error TS4078: Parameter 'callback' of exported function has or is using private name 'T'.
+docs/v2/scripts/async.ts(5609,1): error TS1128: Declaration or statement expected.
+docs/v2/scripts/async.ts(5609,2): error TS1128: Declaration or statement expected.
+docs/v2/scripts/async.ts(5609,3): error TS1128: Declaration or statement expected.
+docs/v2/scripts/async.ts(5609,4): error TS1128: Declaration or statement expected.
 docs/v2/scripts/prettify/lang-css.ts(1,82): error TS1002: Unterminated string literal.
 docs/v2/scripts/prettify/lang-css.ts(2,1): error TS1005: ',' expected.
 docs/v2/scripts/prettify/lang-css.ts(2,8): error TS1005: ',' expected.
@@ -49,15 +76,33 @@ docs/v3/scripts/prettify/lang-css.ts(2,27): error TS1005: ',' expected.
 docs/v3/scripts/prettify/lang-css.ts(2,62): error TS1109: Expression expected.
 docs/v3/scripts/prettify/lang-css.ts(3,172): error TS1005: ',' expected.
 docs/v3/scripts/prettify/lang-css.ts(3,173): error TS1005: ',' expected.
-karma.conf.ts(1,33): error TS4078: Parameter 'config' of exported function has or is using private name 'Config'.
-lib/auto.ts(151,37): error TS4078: Parameter 'tasks' of exported function has or is using private name 'Task'.
+lib/doUntil.ts(25,43): error TS4078: Parameter 'iteratee' of exported function has or is using private name 'AsyncFunction'.
+lib/doUntil.ts(25,64): error TS4078: Parameter 'test' of exported function has or is using private name 'AsyncFunction'.
+lib/doUntil.ts(25,89): error TS4078: Parameter 'callback' of exported function has or is using private name 'Callback'.
 lib/internal/awaitify.ts(3,76): error TS1005: ',' expected.
+lib/internal/filter.ts(39,41): error TS4078: Parameter 'eachfn' of exported function has or is using private name 'EachFunction'.
+lib/internal/map.ts(3,43): error TS4078: Parameter 'eachfn' of exported function has or is using private name 'EachOfIteratorFunc'.
+lib/internal/map.ts(3,115): error TS4078: Parameter 'callback' of exported function has or is using private name 'AsyncResultCallback'.
+lib/internal/queue.ts(6,39): error TS4078: Parameter 'worker' of exported function has or is using private name 'AsyncWorker'.
+lib/internal/queue.ts(6,51): error TS4078: Parameter 'worker' of exported function has or is using private name 'T'.
+lib/internal/queue.ts(6,85): error TS4078: Parameter 'payload' of exported function has or is using private name 'T'.
+lib/internal/reject.ts(4,40): error TS4078: Parameter 'eachfn' of exported function has or is using private name 'EachOfFunction'.
+lib/internal/reject.ts(4,79): error TS4078: Parameter '_iteratee' of exported function has or is using private name 'AsyncFunction'.
+lib/internal/reject.ts(4,104): error TS4078: Parameter 'callback' of exported function has or is using private name 'AsyncResultCallback'.
+lib/internal/withoutIndex.ts(1,49): error TS4078: Parameter 'iteratee' of exported function has or is using private name 'Iteratee'.
 lib/memoize.ts(45,62): error TS1005: ',' expected.
 lib/priorityQueue.ts(55,46): error TS1005: ',' expected.
 lib/priorityQueue.ts(59,51): error TS1005: ',' expected.
+lib/reflectAll.ts(70,43): error TS4078: Parameter 'tasks' of exported function has or is using private name 'ITasks'.
 lib/retry.ts(98,37): error TS4078: Parameter 'opts' of exported function has or is using private name 'RetryOptions'.
+lib/retry.ts(98,57): error TS4078: Parameter 'task' of exported function has or is using private name 'TaskFunction'.
+lib/retry.ts(98,81): error TS4078: Parameter 'callback' of exported function has or is using private name 'Callback'.
 lib/retryable.ts(35,42): error TS4078: Parameter 'opts' of exported function has or is using private name 'RetryOptions'.
-lib/retryable.ts(35,62): error TS4078: Parameter 'task' of exported function has or is using private name 'RetryTask'.
+lib/timesLimit.ts(22,76): error TS4078: Parameter 'iteratee' of exported function has or is using private name 'AsyncFunction'.
+lib/timesLimit.ts(22,101): error TS4078: Parameter 'callback' of exported function has or is using private name 'AsyncResultCallback'.
+lib/until.ts(43,37): error TS4078: Parameter 'test' of exported function has or is using private name 'AsyncFunction'.
+lib/until.ts(43,71): error TS4078: Parameter 'iteratee' of exported function has or is using private name 'AsyncFunction'.
+lib/until.ts(43,102): error TS4078: Parameter 'callback' of exported function has or is using private name 'AsyncFunction'.
 support/jsdoc/theme/static/scripts/prettify/lang-css.ts(1,82): error TS1002: Unterminated string literal.
 support/jsdoc/theme/static/scripts/prettify/lang-css.ts(2,1): error TS1005: ',' expected.
 support/jsdoc/theme/static/scripts/prettify/lang-css.ts(2,8): error TS1005: ',' expected.

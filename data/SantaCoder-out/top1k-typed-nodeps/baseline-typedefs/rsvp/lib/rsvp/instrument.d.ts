@@ -1,1 +1,1 @@
-export default function instrument(eventName: string, promise: Promise<any>, child: any): void;
+export default function instrument(eventName: string, promise: Promise<any>, child: Promise<any>): void;

@@ -24,11 +24,11 @@ declare function isNodeModules(file: string): any;
 declare var extensions: {
     '.babel.js': {
         module: string;
-        register: (hook: HookContext, config: any) => void;
+        register: (hook: Hook, config: any) => void;
     };
     '.babel.jsx': {
         module: string;
-        register: (hook: HookContext, config: any) => void;
+        register: (hook: Hook, config: any) => void;
     };
     '.babel.ts': {
         module: string;
@@ -36,7 +36,7 @@ declare var extensions: {
     }[];
     '.babel.tsx': {
         module: string;
-        register: (hook: HookContext, config: any) => void;
+        register: (hook: Hook, config: any) => void;
     };
     '.cjs': any;
     '.coffee': string;
@@ -55,18 +55,18 @@ declare var extensions: {
     };
     '.esbuild.tsx': {
         module: string;
-        register: (mod: any, config: any) => void;
+        register: (mod: Module, config: RegisterOptions) => void;
     };
     '.esm.js': {
         module: string;
-        register: (hook: Hook) => void;
+        register: (hook: any) => void;
     };
     '.js': any;
     '.json': any;
     '.json5': string;
     '.jsx': (string | {
         module: string;
-        register: (hook: Hook, config: any) => void;
+        register: (hook: any, config: any) => void;
     })[];
     '.litcoffee': string;
     '.mdx': string;
@@ -74,48 +74,48 @@ declare var extensions: {
     '.node': any;
     '.sucrase.js': {
         module: string;
-        register: (hook: Hook, config: any) => void;
+        register: (hook: Hook, config: SucraseConfig) => void;
     };
     '.sucrase.jsx': {
         module: string;
-        register: (hook: HookContext, config: any) => void;
+        register: (hook: Hook, config: SucraseConfig) => void;
     };
     '.sucrase.ts': {
         module: string;
-        register: (hook: Hook, config: any) => void;
+        register: (hook: Hook, config: SucraseConfig) => void;
     };
     '.sucrase.tsx': {
         module: string;
-        register: (hook: Hook, config: any) => void;
+        register: (hook: Hook, config: RegisterOptions) => void;
     };
     '.swc.js': {
         module: string;
-        register: (hook: HookContext, config: any) => void;
+        register: (hook: Hook, config: any) => void;
     };
     '.swc.jsx': {
         module: string;
-        register: (hook: HookContext, config: any) => void;
+        register: (hook: Hook, config: Config) => void;
     };
     '.swc.ts': {
         module: string;
-        register: (hook: HookContext, config: any) => void;
+        register: (hook: Hook, config: Config) => void;
     };
     '.swc.tsx': {
         module: string;
-        register: (hook: HookContext, config: any) => void;
+        register: (hook: Hook, config: Config) => void;
     };
     '.toml': {
         module: string;
-        register: (hook: Hook, config: Config) => void;
+        register: (hook: Hook, config: any) => void;
     };
     '.ts': (string | {
         module: string;
-        register: (hook: Hook, config: any) => void;
+        register: (hook: any, config: any) => void;
     })[];
     '.cts': string[];
     '.tsx': (string | {
         module: string;
-        register: (hook: Hook, config: any) => void;
+        register: (hook: Hook, config: Config) => void;
     })[];
     '.yaml': string;
     '.yml': string;

@@ -1,4 +1,4 @@
-declare function state(list: any[], sortMethod: string): {
+declare function state(list: Array<any>, sortMethod: any): {
     index: number;
     keyedList: string[];
     jobs: {};

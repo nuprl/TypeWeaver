@@ -5,21 +5,14 @@ benchmark/code/repeat-string-1.5.4.ts(41,10): error TS2393: Duplicate function i
 benchmark/code/while-array-3.ts(7,10): error TS2393: Duplicate function implementation.
 benchmark/code/while-bitwise.ts(5,10): error TS2393: Duplicate function implementation.
 benchmark/helper.ts(5,5): error TS2300: Duplicate identifier 'repeat'.
-benchmark/helper.ts(42,27): error TS2304: Cannot find name 'Token'.
-benchmark/helper.ts(42,27): error TS4078: Parameter 'tok' of exported function has or is using private name 'Token'.
 benchmark/helper.ts(49,13): error TS2339: Property 'name' does not exist on type '{ num: number; val: string; }'.
-benchmark/helper.ts(66,15): error TS2339: Property 'name' does not exist on type 'string'.
 benchmark/helper.ts(66,42): error TS2554: Expected 2 arguments, but got 3.
-benchmark/helper.ts(66,66): error TS2339: Property 'val' does not exist on type 'string'.
 benchmark/helper.ts(74,7): error TS2339: Property 'name' does not exist on type '{ num: number; val: string; }'.
 benchmark/helper.ts(76,3): error TS2322: Type 'string' is not assignable to type 'number'.
 benchmark/helper.ts(89,19): error TS2304: Cannot find name 'Token'.
 benchmark/helper.ts(89,19): error TS4078: Parameter 'tok' of exported function has or is using private name 'Token'.
-benchmark/helper.ts(90,33): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-benchmark/index.ts(17,39): error TS2339: Property 'key' does not exist on type 'string'.
-benchmark/index.ts(17,52): error TS2339: Property 'key' does not exist on type 'string'.
-benchmark/index.ts(18,32): error TS2339: Property 'path' does not exist on type 'string'.
-benchmark/index.ts(19,20): error TS2339: Property 'run' does not exist on type 'string'.
+benchmark/index.ts(16,31): error TS2304: Cannot find name 'Code'.
+benchmark/index.ts(16,46): error TS2304: Cannot find name 'Fixture'.
 index.ts(41,10): error TS2300: Duplicate identifier 'repeat'.
 index.ts(41,10): error TS2393: Duplicate function implementation.
 

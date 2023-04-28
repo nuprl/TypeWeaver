@@ -12,4 +12,4 @@ export declare const gotoSOL: () => string;
 export declare const beep: () => string;
 export declare const hideCursor: () => string;
 export declare const showCursor: () => string;
-export declare const color: (colorWith: string) => string;
+export declare const color: (colorWith: any) => string;

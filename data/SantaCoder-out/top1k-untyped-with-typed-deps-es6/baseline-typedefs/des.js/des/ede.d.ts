@@ -1,5 +1,5 @@
 declare function EDE(options: any): void;
 declare namespace EDE {
-    var create: (options: EDEOptions) => any;
+    var create: (options: any) => any;
 }
 export default EDE;

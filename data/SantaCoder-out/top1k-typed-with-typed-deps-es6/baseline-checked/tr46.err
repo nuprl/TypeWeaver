@@ -2,14 +2,25 @@ index.ts(4,21): error TS2307: Cannot find module './lib/regexes.js' or its corre
 index.ts(5,26): error TS2732: Cannot find module './lib/mappingTable.json'. Consider using '--resolveJsonModule' to import module with '.json' extension.
 index.ts(12,57): error TS2304: Cannot find name 'Options'.
 index.ts(44,99): error TS2304: Cannot find name 'Options'.
-index.ts(49,42): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
-index.ts(80,175): error TS2304: Cannot find name 'Options'.
-index.ts(87,7): error TS2552: Cannot find name 'checkHyphens'. Did you mean 'checkHyphen'?
-index.ts(100,33): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+index.ts(80,176): error TS2304: Cannot find name 'Options'.
 index.ts(175,50): error TS2304: Cannot find name 'Options'.
 scripts/generateMappingTable.ts(5,19): error TS2307: Cannot find module 'minipass-fetch' or its corresponding type declarations.
 scripts/generateMappingTable.ts(6,32): error TS2732: Cannot find module '../package.json'. Consider using '--resolveJsonModule' to import module with '.json' extension.
 scripts/generateRegexes.ts(33,28): error TS2554: Expected 0 arguments, but got 1.
+scripts/generateRegexes.ts(44,20): error TS2345: Argument of type 'TemplateStringsArray' is not assignable to parameter of type 'string[]'.
+  Type 'TemplateStringsArray' is missing the following properties from type 'string[]': pop, push, reverse, shift, and 6 more.
+scripts/generateRegexes.ts(50,26): error TS2345: Argument of type 'TemplateStringsArray' is not assignable to parameter of type 'string[]'.
+scripts/generateRegexes.ts(54,15): error TS2345: Argument of type 'TemplateStringsArray' is not assignable to parameter of type 'string[]'.
+scripts/generateRegexes.ts(56,15): error TS2345: Argument of type 'TemplateStringsArray' is not assignable to parameter of type 'string[]'.
+scripts/generateRegexes.ts(61,16): error TS2345: Argument of type 'TemplateStringsArray' is not assignable to parameter of type 'string[]'.
+scripts/generateRegexes.ts(64,15): error TS2345: Argument of type 'TemplateStringsArray' is not assignable to parameter of type 'string[]'.
+scripts/generateRegexes.ts(65,15): error TS2345: Argument of type 'TemplateStringsArray' is not assignable to parameter of type 'string[]'.
+scripts/generateRegexes.ts(68,12): error TS2345: Argument of type 'TemplateStringsArray' is not assignable to parameter of type 'string[]'.
+scripts/generateRegexes.ts(84,12): error TS2345: Argument of type 'TemplateStringsArray' is not assignable to parameter of type 'string[]'.
+scripts/generateRegexes.ts(94,14): error TS2345: Argument of type 'TemplateStringsArray' is not assignable to parameter of type 'string[]'.
+scripts/generateRegexes.ts(95,14): error TS2345: Argument of type 'TemplateStringsArray' is not assignable to parameter of type 'string[]'.
+scripts/generateRegexes.ts(98,12): error TS2345: Argument of type 'TemplateStringsArray' is not assignable to parameter of type 'string[]'.
+scripts/generateRegexes.ts(112,12): error TS2345: Argument of type 'TemplateStringsArray' is not assignable to parameter of type 'string[]'.
 scripts/generateUnicodeCodePoints.ts(9,3): error TS1108: A 'return' statement can only be used within a function body.
 scripts/getLatestTests.ts(15,19): error TS2307: Cannot find module 'minipass-fetch' or its corresponding type declarations.
 scripts/getLatestTests.ts(16,32): error TS2732: Cannot find module '../package.json'. Consider using '--resolveJsonModule' to import module with '.json' extension.

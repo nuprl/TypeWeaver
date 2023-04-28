@@ -14,25 +14,27 @@ lib/fixer.ts(157,22): error TS2538: Type 'string[]' cannot be used as an index t
 lib/fixer.ts(160,23): error TS2538: Type 'string[]' cannot be used as an index type.
 lib/fixer.ts(162,49): error TS2538: Type 'string[]' cannot be used as an index type.
 lib/fixer.ts(164,16): error TS2538: Type 'string[]' cannot be used as an index type.
-lib/fixer.ts(211,30): error TS2304: Cannot find name 'Person'.
-lib/fixer.ts(359,40): error TS2304: Cannot find name 'Spec'.
-lib/fixer.ts(359,40): error TS4078: Parameter 'spec' of exported function has or is using private name 'Spec'.
+lib/fixer.ts(196,36): error TS2304: Cannot find name 'PackageJson'.
+lib/fixer.ts(262,33): error TS2304: Cannot find name 'PackageData'.
+lib/fixer.ts(305,37): error TS2304: Cannot find name 'PackageJson'.
+lib/fixer.ts(326,36): error TS2304: Cannot find name 'PackageJson'.
 lib/fixer.ts(386,33): error TS2304: Cannot find name 'Person'.
 lib/fixer.ts(386,33): error TS4078: Parameter 'person' of exported function has or is using private name 'Person'.
 lib/fixer.ts(407,9): error TS2339: Property 'name' does not exist on type '{}'.
 lib/fixer.ts(410,9): error TS2339: Property 'email' does not exist on type '{}'.
 lib/fixer.ts(413,9): error TS2339: Property 'url' does not exist on type '{}'.
-lib/fixer.ts(435,17): error TS2339: Property 'trim' does not exist on type 'never'.
-lib/fixer.ts(440,3): error TS2349: This expression is not callable.
-  Type 'Boolean' has no call signatures.
+lib/fixer.ts(419,16): error TS2339: Property 'optionalDependencies' does not exist on type 'Object'.
+lib/fixer.ts(423,16): error TS2339: Property 'dependencies' does not exist on type 'Object'.
+lib/fixer.ts(427,8): error TS2339: Property 'dependencies' does not exist on type 'Object'.
+lib/fixer.ts(435,5): error TS2322: Type 'string[]' is not assignable to type 'string'.
 lib/fixer.ts(445,5): error TS2322: Type 'string[]' is not assignable to type 'string'.
 lib/fixer.ts(446,16): error TS2339: Property 'shift' does not exist on type 'string'.
 lib/fixer.ts(447,16): error TS2339: Property 'join' does not exist on type 'string'.
-lib/fixer.ts(460,49): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'boolean'.
-lib/fixer.ts(464,27): error TS2304: Cannot find name 'Bug'.
-lib/fixer.ts(464,27): error TS4078: Parameter 'bugs' of exported function has or is using private name 'Bug'.
-lib/fixer.ts(470,7): error TS2349: This expression is not callable.
-  Type 'Boolean' has no call signatures.
-lib/make_warning.ts(16,78): error TS2304: Cannot find name 'Field'.
-lib/make_warning.ts(16,78): error TS4078: Parameter 'field' of exported function has or is using private name 'Field'.
+lib/fixer.ts(464,27): error TS2304: Cannot find name 'Bugs'.
+lib/fixer.ts(464,27): error TS4078: Parameter 'bugs' of exported function has or is using private name 'Bugs'.
+lib/fixer.ts(464,39): error TS2552: Cannot find name 'WarnFunction'. Did you mean 'Function'?
+lib/fixer.ts(464,39): error TS4078: Parameter 'warn' of exported function has or is using private name 'WarnFunction'.
+lib/normalize.ts(20,27): error TS2304: Cannot find name 'PackageData'.
+lib/normalize.ts(20,27): error TS4078: Parameter 'data' of exported function has or is using private name 'PackageData'.
+lib/normalize.ts(21,7): error TS2367: This comparison appears to be unintentional because the types 'Function' and 'boolean' have no overlap.
 

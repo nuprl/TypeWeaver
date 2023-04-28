@@ -1,2 +1,2 @@
-declare function lastIndexOf(array: any[], value: any, fromIndex: number): number;
+declare function lastIndexOf(array: any[], value: any, fromIndex: any): number;
 export default lastIndexOf;

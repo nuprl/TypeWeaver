@@ -11,15 +11,13 @@ examples/clock.ts(37,23): error TS2339: Property 'timer' does not exist on type 
 examples/clock.ts(40,8): error TS2339: Property 'startedAt' does not exist on type 'Clock'.
 examples/clock.ts(41,8): error TS2339: Property 'timer' does not exist on type 'Clock'.
 examples/clock.ts(43,8): error TS2554: Expected 2 arguments, but got 1.
-examples/clock.ts(47,18): error TS2339: Property 'duration' does not exist on type 'Animation'.
+examples/clock.ts(47,29): error TS2304: Cannot find name 'TimerEvent'.
 examples/emit.ts(16,11): error TS2554: Expected 2 arguments, but got 1.
 examples/eventdata.ts(12,45): error TS2554: Expected 2 arguments, but got 4.
-index.ts(19,35): error TS2304: Cannot find name 'Listener'.
-index.ts(25,33): error TS2304: Cannot find name 'EventEmitter'.
+index.ts(60,43): error TS2304: Cannot find name 'T'.
 index.ts(61,2): error TS2322: Type '(string & any[]) | string[]' is not assignable to type 'string'.
   Type 'string[]' is not assignable to type 'string'.
 index.ts(102,6): error TS2322: Type '(value: unknown) => void' is not assignable to type '() => void'.
-index.ts(165,33): error TS2304: Cannot find name 'EventEmitter'.
 index.ts(226,14): error TS2339: Property 'DEBUG' does not exist on type '{}'.
 index.ts(226,42): error TS2339: Property 'DEBUG' does not exist on type '{}'.
 index.ts(240,8): error TS2339: Property 'debug' does not exist on type 'Emittery'.
@@ -34,6 +32,8 @@ index.ts(268,33): error TS2339: Property 'debug' does not exist on type 'Emitter
 index.ts(290,25): error TS2345: Argument of type 'typeof listenerAdded' is not assignable to parameter of type 'string'.
 index.ts(315,25): error TS2345: Argument of type 'typeof listenerRemoved' is not assignable to parameter of type 'string'.
 index.ts(330,11): error TS2339: Property 'off' does not exist on type 'Promise<unknown>'.
+index.ts(340,19): error TS2345: Argument of type 'this' is not assignable to parameter of type 'AsyncIterator<T, any, undefined>'.
+  Property 'next' is missing in type 'Emittery' but required in type 'AsyncIterator<T, any, undefined>'.
 index.ts(410,23): error TS2345: Argument of type 'typeof listenerAdded' is not assignable to parameter of type 'string'.
 index.ts(415,10): error TS2554: Expected 2 arguments, but got 1.
 index.ts(423,23): error TS2345: Argument of type 'typeof listenerRemoved' is not assignable to parameter of type 'string'.

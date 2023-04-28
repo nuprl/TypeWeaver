@@ -1,1 +1,1 @@
-export default function (thingToPromisify: any): any;
+export default function (thingToPromisify: Function): any;

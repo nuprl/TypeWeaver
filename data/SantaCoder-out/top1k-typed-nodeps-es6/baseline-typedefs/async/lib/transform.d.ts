@@ -1,1 +1,1 @@
-export default function transform(coll: Array<any>, accumulator: any, iteratee: any, callback: any): any;
+export default function transform(coll: any[], accumulator: any, iteratee: Function, callback: Function): any;

@@ -1,4 +1,4 @@
 declare const _default: (root: any, { requireWellFormed }?: {
     requireWellFormed?: boolean;
-}) => any;
+}) => string;
 export default _default;

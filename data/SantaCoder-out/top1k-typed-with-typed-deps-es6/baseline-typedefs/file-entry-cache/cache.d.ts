@@ -4,8 +4,8 @@ declare const _default: {
     create: (cacheId: string, _path: string, useChecksum: boolean) => {
         cache: any;
         getHash: (buffer: Buffer) => string;
-        hasFileChanged: (file: File) => any;
-        analyzeFiles: (files: any) => {
+        hasFileChanged: (file: string) => any;
+        analyzeFiles: (files: Array<string>) => {
             changedFiles: any[];
             notFoundFiles: any[];
             notChangedFiles: any[];
@@ -21,8 +21,8 @@ declare const _default: {
             changed: boolean;
             meta: any;
         };
-        getUpdatedFiles: (files: Array<File>) => any;
-        normalizeEntries: (files: string[]) => any[];
+        getUpdatedFiles: (files: Array<string>) => any;
+        normalizeEntries: (files: FileEntry[]) => any[];
         removeEntry: (entryName: string) => void;
         deleteCacheFile: () => void;
         destroy: () => void;

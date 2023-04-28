@@ -1,2 +1,2 @@
-declare function md5(bytes: string): any[];
+declare function md5(bytes: Uint8Array): any[];
 export default md5;

@@ -9,7 +9,7 @@ declare var TOKEN_REGEXP: RegExp;
 declare var QESC_REGEXP: RegExp;
 declare var QUOTE_REGEXP: RegExp;
 declare var TYPE_REGEXP: RegExp;
-declare function format(obj: any): any;
+declare function format(obj: Object): any;
 declare function parse(string: string): any;
 declare function getcontenttype(obj: any): string;
 declare function qstring(val: any): string;

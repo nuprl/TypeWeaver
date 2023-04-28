@@ -18,7 +18,7 @@ declare const cp: {
     BN: any;
     ON: any;
 };
-declare function r(strings: TemplateStringsArray, ...regs: RegExp[]): string;
+declare function r(strings: string[], ...regs: RegExp[]): string;
 declare const regexes: {
     combiningMarks: string;
     combiningClassVirama: string;

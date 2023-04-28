@@ -12,5 +12,5 @@ declare var URL: {
 declare var HEADERS: {
     'User-Agent': string;
 };
-declare function generateRowMapper(headers: string[]): (obj: any, val: any, index: number) => any;
+declare function generateRowMapper(headers: string[]): (obj: Object, val: string, index: number) => Object;
 declare function normalizeHeader(val: string): string;

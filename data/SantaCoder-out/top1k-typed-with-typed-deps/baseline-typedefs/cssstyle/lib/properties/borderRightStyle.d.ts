@@ -1,1 +1,1 @@
-declare var isValid: (v: any) => boolean;
+declare var isValid: (v: string) => boolean;

@@ -1,2 +1,2 @@
-declare function isWeakSet(value: any): boolean;
+declare function isWeakSet(value: unknown): boolean;
 export default isWeakSet;

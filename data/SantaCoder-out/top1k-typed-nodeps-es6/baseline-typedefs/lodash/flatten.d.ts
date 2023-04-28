@@ -1,2 +1,2 @@
-declare function flatten(array: any[]): any;
+declare function flatten(array: any[]): any[];
 export default flatten;

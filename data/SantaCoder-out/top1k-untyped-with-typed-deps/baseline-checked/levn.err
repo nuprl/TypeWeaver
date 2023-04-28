@@ -1,48 +1,35 @@
-lib/cast.ts(20,13): error TS2322: Type '{ type: string; }' is not assignable to type 'string'.
-lib/cast.ts(22,16): error TS2322: Type '{ type: string; }' is not assignable to type 'string'.
-lib/cast.ts(24,16): error TS2322: Type '{ type: string; }' is not assignable to type 'string'.
-lib/cast.ts(26,16): error TS2322: Type '{ type: string; }' is not assignable to type 'string'.
-lib/cast.ts(28,16): error TS2322: Type '{ type: string; }' is not assignable to type 'string'.
-lib/cast.ts(30,16): error TS2322: Type '{ type: string; }' is not assignable to type 'string'.
-lib/cast.ts(32,16): error TS2322: Type '{ type: string; }' is not assignable to type 'string'.
-lib/cast.ts(34,16): error TS2322: Type '{ type: string; }' is not assignable to type 'string'.
-lib/cast.ts(36,16): error TS2322: Type '{ type: string; }' is not assignable to type 'string'.
-lib/cast.ts(38,16): error TS2322: Type '{ type: string; }' is not assignable to type 'string'.
-lib/cast.ts(98,26): error TS2749: 'Option' refers to a value, but is being used as a type here. Did you mean 'typeof Option'?
-lib/cast.ts(98,33): error TS2304: Cannot find name 'A'.
-lib/cast.ts(104,23): error TS2304: Cannot find name 'Maybe'.
-lib/cast.ts(104,29): error TS2304: Cannot find name 'T'.
-lib/cast.ts(110,25): error TS2749: 'Option' refers to a value, but is being used as a type here. Did you mean 'typeof Option'?
-lib/cast.ts(110,32): error TS2304: Cannot find name 'A'.
-lib/cast.ts(152,42): error TS2304: Cannot find name 'CastArrayOptions'.
-lib/cast.ts(153,31): error TS2345: Argument of type '{ of: { type: string; }[]; }' is not assignable to parameter of type 'string'.
-lib/cast.ts(160,32): error TS2345: Argument of type '{ of: {}; }' is not assignable to parameter of type 'string'.
-lib/cast.ts(220,19): error TS2339: Property 'of' does not exist on type 'string'.
+lib/cast.ts(134,46): error TS2304: Cannot find name 'Options'.
+lib/cast.ts(136,50): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
+  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+lib/cast.ts(148,29): error TS2769: No overload matches this call.
+  Overload 1 of 3, '(pattern: string | RegExp, flags?: string): RegExp', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'string | RegExp'.
+  Overload 2 of 3, '(pattern: string | RegExp): RegExp', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'string | RegExp'.
+  Overload 3 of 3, '(pattern: string, flags?: string): RegExp', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'string'.
+      'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+lib/cast.ts(213,40): error TS2304: Cannot find name 'Type'.
+lib/cast.ts(213,55): error TS2304: Cannot find name 'Options'.
 lib/cast.ts(225,43): error TS2339: Property 'length' does not exist on type 'Node'.
-lib/cast.ts(233,40): error TS2304: Cannot find name 'Type'.
-lib/cast.ts(233,55): error TS2304: Cannot find name 'Options'.
-lib/cast.ts(250,14): error TS2339: Property 'length' does not exist on type 'Node'.
+lib/cast.ts(242,38): error TS2339: Property 'of' does not exist on type 'any[]'.
+lib/cast.ts(261,43): error TS2304: Cannot find name 'Type'.
 lib/cast.ts(261,58): error TS2304: Cannot find name 'Options'.
-lib/cast.ts(268,19): error TS2339: Property 'of' does not exist on type 'string'.
-lib/cast.ts(275,38): error TS2322: Type '{ type: string; }' is not assignable to type 'string'.
-lib/cast.ts(285,42): error TS2304: Cannot find name 'Type'.
-lib/cast.ts(285,57): error TS2304: Cannot find name 'Options'.
-lib/cast.ts(305,60): error TS2304: Cannot find name 'Options'.
-lib/cast.ts(322,61): error TS2339: Property 'type' does not exist on type 'string'.
-lib/parse-string.ts(17,32): error TS2304: Cannot find name 'Token'.
-lib/parse-string.ts(17,47): error TS2304: Cannot find name 'Observable'.
-lib/parse-string.ts(34,33): error TS2304: Cannot find name 'Token'.
-lib/parse-string.ts(37,33): error TS2304: Cannot find name 'Token'.
-lib/parse-string.ts(40,34): error TS2304: Cannot find name 'Token'.
-lib/parse-string.ts(48,34): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Function'.
-lib/parse-string.ts(58,33): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-lib/parse-string.ts(60,27): error TS2322: Type 'string' is not assignable to type 'Function'.
-lib/parse-string.ts(62,46): error TS2339: Property 'indexOf' does not exist on type 'Function'.
+lib/cast.ts(287,20): error TS2339: Property 'type' does not exist on type 'Object'.
+lib/cast.ts(287,46): error TS2339: Property 'structure' does not exist on type 'Object'.
+lib/cast.ts(289,35): error TS2339: Property 'customTypes' does not exist on type 'Object'.
+lib/cast.ts(299,26): error TS2345: Argument of type 'Node' is not assignable to parameter of type 'any[]'.
+  Type 'Node' is missing the following properties from type 'any[]': length, pop, push, concat, and 29 more.
+lib/cast.ts(305,47): error TS2304: Cannot find name 'Type'.
+lib/cast.ts(314,30): error TS2339: Property 'customTypes' does not exist on type 'Object'.
+lib/cast.ts(321,48): error TS2304: Cannot find name 'Type'.
+lib/cast.ts(321,65): error TS2304: Cannot find name 'Options'.
+lib/index.ts(8,42): error TS2304: Cannot find name 'ParsedType'.
+lib/index.ts(8,79): error TS2304: Cannot find name 'ParseOptions'.
+lib/parse-string.ts(34,39): error TS2304: Cannot find name 'Token'.
 lib/parse-string.ts(67,35): error TS2304: Cannot find name 'Token'.
-lib/parse-string.ts(79,36): error TS2304: Cannot find name 'Token'.
-lib/parse-string.ts(79,71): error TS2304: Cannot find name 'Options'.
 lib/parse-string.ts(89,37): error TS2554: Expected 2 arguments, but got 1.
 lib/parse-string.ts(93,21): error TS2554: Expected 2 arguments, but got 1.
-lib/parse-string.ts(102,61): error TS2339: Property 'type' does not exist on type 'string'.
-lib/parse-string.ts(106,36): error TS2345: Argument of type 'string' is not assignable to parameter of type 'string[]'.
+lib/parse-string.ts(99,36): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/parse-string.ts(102,18): error TS2339: Property 'explicit' does not exist on type 'Object'.
 

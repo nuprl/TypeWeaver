@@ -1,1 +1,1 @@
-export default function (obj: any, sep: string, eq: string, name: string): string;
+export default function (obj: Object, sep: string, eq: string, name: string): string;

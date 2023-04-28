@@ -1,2 +1,2 @@
-declare function zipWith(...arrays: any[]): any[];
+declare function zipWith(...arrays: Array<any>[]): any[];
 export default zipWith;

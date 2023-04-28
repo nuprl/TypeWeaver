@@ -1,12 +1,9 @@
-declare function stringify(obj: any, { EOL, string, finalEOL, boolean, replacer, any, spaces }: {
-    EOL?: string;
-    string: any;
-    finalEOL?: boolean;
-    boolean: any;
-    replacer?: any;
-    any: any;
+declare function stringify(obj: any, { EOL, EOL, finalEOL, finalEOL, replacer, replacer, spaces }: {
+    EOL: any;
+    finalEOL: any;
+    replacer: any;
     spaces: any;
-}, any: any): string;
+}, Options: any): string;
 declare function stripBom(content: string): string;
 declare const _default: {
     stringify: typeof stringify;

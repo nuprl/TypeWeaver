@@ -9,7 +9,7 @@ declare const valueOf: () => symbol;
 declare const typeOf: any;
 declare function clone(val: any, deep: boolean): any;
 declare function cloneRegExp(val: RegExp): any;
-declare function cloneArrayBuffer(val: ArrayBuffer): any;
+declare function cloneArrayBuffer(val: any): any;
 declare function cloneTypedArray(val: any, deep: boolean): any;
 declare function cloneBuffer(val: Buffer): Buffer;
 declare function cloneSymbol(val: any): any;

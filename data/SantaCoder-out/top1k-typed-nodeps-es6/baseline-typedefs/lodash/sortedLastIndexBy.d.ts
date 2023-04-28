@@ -1,2 +1,2 @@
-declare function sortedLastIndexBy(array: Array<any>, value: any, iteratee: Function): number;
+declare function sortedLastIndexBy(array: any[], value: any, iteratee: Function): number;
 export default sortedLastIndexBy;

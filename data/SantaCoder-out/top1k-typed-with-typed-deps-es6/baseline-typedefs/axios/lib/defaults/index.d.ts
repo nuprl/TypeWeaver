@@ -5,7 +5,7 @@ declare const defaults: {
         clarifyTimeoutError: boolean;
     };
     adapter: any;
-    transformRequest: ((data: any, headers: any) => any)[];
+    transformRequest: ((data: any, headers: HttpHeaders) => any)[];
     transformResponse: ((data: any) => any)[];
     timeout: number;
     xsrfCookieName: string;

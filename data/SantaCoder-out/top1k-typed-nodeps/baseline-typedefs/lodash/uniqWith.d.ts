@@ -1,2 +1,2 @@
-declare function uniqWith(array: any[], comparator: any): any[];
+declare function uniqWith(array: any[], comparator: any[]): any[];
 export default uniqWith;

@@ -1,2 +1,2 @@
-declare function remove(array: any[], predicate: any): any[];
+declare function remove(array: any[], predicate: Function): any[];
 export default remove;

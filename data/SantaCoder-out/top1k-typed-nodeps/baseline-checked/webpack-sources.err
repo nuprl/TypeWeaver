@@ -32,8 +32,10 @@ lib/ReplaceSource.ts(25,8): error TS2339: Property 'end' does not exist on type 
 lib/ReplaceSource.ts(26,8): error TS2339: Property 'content' does not exist on type 'Replacement'.
 lib/ReplaceSource.ts(27,8): error TS2339: Property 'name' does not exist on type 'Replacement'.
 lib/ReplaceSource.ts(29,9): error TS2339: Property 'index' does not exist on type 'Replacement'.
-lib/ReplaceSource.ts(124,41): error TS2304: Cannot find name 'IToken'.
-lib/ReplaceSource.ts(124,52): error TS2304: Cannot find name 'IToken'.
+lib/ReplaceSource.ts(124,41): error TS2552: Cannot find name 'IReplacement'. Did you mean 'Replacement'?
+lib/ReplaceSource.ts(124,58): error TS2552: Cannot find name 'IReplacement'. Did you mean 'Replacement'?
+lib/ReplaceSource.ts(133,41): error TS2552: Cannot find name 'ChunkReplacement'. Did you mean 'Replacement'?
+lib/ReplaceSource.ts(133,62): error TS2552: Cannot find name 'ChunkReplacement'. Did you mean 'Replacement'?
 lib/SizeOnlySource.ts(7,7): error TS2451: Cannot redeclare block-scoped variable 'Source'.
 lib/Source.ts(7,7): error TS2451: Cannot redeclare block-scoped variable 'Source'.
 lib/Source.ts(15,22): error TS2769: No overload matches this call.

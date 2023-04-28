@@ -3,7 +3,7 @@ export declare const _reset: () => void;
 export declare const releaseExit: () => void;
 export declare const captureExit: () => void;
 export declare const _handlers: any[];
-export declare const _flush: (lastTime: number, code: string) => RSVP.Promise<void>;
+export declare const _flush: (lastTime: number, code: number) => RSVP.Promise<void>;
 export declare const onExit: (cb: Function) => void;
 export declare const offExit: (cb: Function) => void;
 export declare const exit: () => void;

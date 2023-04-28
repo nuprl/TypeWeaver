@@ -1,1 +1,1 @@
-export default function copyPrototypeMethods(prototype: any): any;
+export default function copyPrototypeMethods(prototype: Object): any;

@@ -8,7 +8,7 @@ declare class AsyncParallelBailHookCodeFactory extends HookCodeFactory {
     }): string;
 }
 declare const factory: AsyncParallelBailHookCodeFactory;
-declare const COMPILE: (options: any) => any;
+declare const COMPILE: (options: HookMapOptions) => any;
 declare function AsyncParallelBailHook(args: any[], any: any, []: Iterable<any>, name: any, string: any): any;
 declare namespace AsyncParallelBailHook {
     var prototype: any;

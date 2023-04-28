@@ -1,1 +1,1 @@
-export default function repeat(ele: HTMLElement, num: number): HTMLElement[];
+export default function repeat(ele: any, num: number): any[];

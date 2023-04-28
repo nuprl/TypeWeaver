@@ -1,14 +1,8 @@
 bin/nopt.ts(2,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/SantaCoder-out/top1k-typed-with-typed-deps-es6/baseline/nopt/lib/nopt"' has no default export.
-bin/nopt.ts(41,47): error TS2345: Argument of type '(t: number) => any[]' is not assignable to parameter of type '(value: string, index: number, array: string[]) => any[]'.
-  Types of parameters 't' and 'value' are incompatible.
-    Type 'string' is not assignable to type 'number'.
 bin/nopt.ts(44,49): error TS2304: Cannot find name 'MappedType'.
 docs/examples/my-program.ts(5,18): error TS2307: Cannot find module '../lib/nopt' or its corresponding type declarations.
 lib/nopt.ts(28,57): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/nopt.ts(36,9): error TS2554: Expected 0 arguments, but got 4.
-lib/nopt.ts(46,34): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'string[]'.
-  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-    Type 'Object' is missing the following properties from type 'string[]': length, pop, push, concat, and 29 more.
 lib/nopt.ts(49,8): error TS2339: Property 'argv' does not exist on type '{}'.
 lib/nopt.ts(50,30): error TS2339: Property 'argv' does not exist on type '{}'.
 lib/nopt.ts(82,11): error TS2554: Expected 0 arguments, but got 2.
@@ -20,16 +14,13 @@ lib/nopt.ts(100,17): error TS2554: Expected 0 arguments, but got 2.
 lib/nopt.ts(117,13): error TS2554: Expected 0 arguments, but got 4.
 lib/nopt.ts(122,17): error TS2554: Expected 0 arguments, but got 2.
 lib/nopt.ts(126,13): error TS2554: Expected 0 arguments, but got 4.
-lib/nopt.ts(128,28): error TS2304: Cannot find name 'T'.
 lib/nopt.ts(135,13): error TS2554: Expected 0 arguments, but got 4.
 lib/nopt.ts(138,13): error TS2554: Expected 0 arguments, but got 3.
 lib/nopt.ts(144,11): error TS2554: Expected 0 arguments, but got 4.
+lib/nopt.ts(153,7): error TS2367: This comparison appears to be unintentional because the types 'string' and 'boolean' have no overlap.
 lib/nopt.ts(175,9): error TS2554: Expected 0 arguments, but got 4.
 lib/nopt.ts(184,9): error TS2554: Expected 0 arguments, but got 4.
 lib/nopt.ts(195,16): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
-lib/nopt.ts(211,3): error TS2322: Type 'UrlWithStringQuery' is not assignable to type 'string'.
-lib/nopt.ts(212,12): error TS2339: Property 'host' does not exist on type 'string'.
-lib/nopt.ts(215,17): error TS2339: Property 'href' does not exist on type 'string'.
 lib/nopt.ts(241,7): error TS2367: This comparison appears to be unintentional because the types 'string' and 'ArrayConstructor' have no overlap.
 lib/nopt.ts(253,11): error TS2554: Expected 0 arguments, but got 4.
 lib/nopt.ts(260,11): error TS2554: Expected 0 arguments, but got 2.
@@ -39,13 +30,11 @@ lib/nopt.ts(275,15): error TS2339: Property 'name' does not exist on type 'strin
 lib/nopt.ts(289,9): error TS2554: Expected 0 arguments, but got 5.
 lib/nopt.ts(298,9): error TS2554: Expected 0 arguments, but got 4.
 lib/nopt.ts(305,11): error TS2554: Expected 0 arguments, but got 2.
-lib/nopt.ts(311,7): error TS2542: Index signature in type 'String' only permits reading.
-lib/nopt.ts(321,14): error TS2551: Property 'splice' does not exist on type 'string'. Did you mean 'slice'?
+lib/nopt.ts(326,49): error TS2345: Argument of type '{ [abbreviation: string]: string; }' is not assignable to parameter of type 'string'.
 lib/nopt.ts(327,13): error TS2554: Expected 0 arguments, but got 3.
 lib/nopt.ts(329,15): error TS2554: Expected 0 arguments, but got 2.
-lib/nopt.ts(330,14): error TS2551: Property 'splice' does not exist on type 'string'. Did you mean 'slice'?
 lib/nopt.ts(403,30): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+lib/nopt.ts(452,49): error TS2304: Cannot find name 'Abbrevs'.
+lib/nopt.ts(452,86): error TS2304: Cannot find name 'Abbrevs'.
 lib/nopt.ts(484,11): error TS2554: Expected 0 arguments, but got 2.
-lib/nopt.ts(494,28): error TS2304: Cannot find name 'T'.
-lib/nopt.ts(494,36): error TS2304: Cannot find name 'T'.
 

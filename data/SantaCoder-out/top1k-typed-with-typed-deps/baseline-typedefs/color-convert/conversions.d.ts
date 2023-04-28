@@ -63,4 +63,4 @@ declare const convert: {
     };
 };
 declare const LAB_FT: number;
-declare function comparativeDistance(x: number, y: number): number;
+declare function comparativeDistance(x: number[], y: number[]): number;

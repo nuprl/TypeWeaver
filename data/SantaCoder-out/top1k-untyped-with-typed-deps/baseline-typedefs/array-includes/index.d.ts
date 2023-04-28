@@ -7,4 +7,4 @@ declare var getPolyfill: any;
 declare var polyfill: any;
 declare var shim: any;
 declare var $slice: any;
-declare var boundShim: (array: Array<any>, searchElement: any) => any;
+declare var boundShim: (array: any[], searchElement: any) => any;

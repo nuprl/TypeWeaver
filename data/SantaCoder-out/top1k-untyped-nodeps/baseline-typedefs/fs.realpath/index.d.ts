@@ -4,7 +4,7 @@ declare var origRealpathSync: any;
 declare var version: string;
 declare var ok: boolean;
 declare var old: any;
-declare function newError(er: Error): boolean;
+declare function newError(er: any): boolean;
 declare function realpath(p: string, cache: Object, cb: Function): any;
 declare namespace realpath {
     var realpath: typeof globalThis.realpath;

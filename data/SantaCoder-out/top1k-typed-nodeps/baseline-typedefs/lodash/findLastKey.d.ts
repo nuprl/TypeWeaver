@@ -1,2 +1,2 @@
-declare function findLastKey(object: Object, predicate: any): any;
+declare function findLastKey(object: any, predicate: any): any;
 export default findLastKey;

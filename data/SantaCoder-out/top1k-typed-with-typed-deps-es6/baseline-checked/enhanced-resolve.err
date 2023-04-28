@@ -191,7 +191,6 @@ lib/DescriptionFilePlugin.ts(47,12): error TS2339: Property 'filenames' does not
 lib/DescriptionFileUtils.ts(63,15): error TS2554: Expected 2 arguments, but got 1.
 lib/DescriptionFileUtils.ts(87,16): error TS2554: Expected 2 arguments, but got 1.
 lib/DescriptionFileUtils.ts(90,15): error TS2554: Expected 2 arguments, but got 1.
-lib/DescriptionFileUtils.ts(147,14): error TS18047: 'current' is possibly 'null'.
 lib/DirectoryExistsPlugin.ts(17,8): error TS2339: Property 'source' does not exist on type 'DirectoryExistsPlugin'.
 lib/DirectoryExistsPlugin.ts(18,8): error TS2339: Property 'target' does not exist on type 'DirectoryExistsPlugin'.
 lib/DirectoryExistsPlugin.ts(26,43): error TS2339: Property 'target' does not exist on type 'DirectoryExistsPlugin'.
@@ -315,10 +314,14 @@ lib/Resolver.ts(413,8): error TS2339: Property 'hooks' does not exist on type 'R
 lib/Resolver.ts(416,25): error TS2554: Expected 3 arguments, but got 2.
 lib/ResolverFactory.ts(10,10): error TS2459: Module '"./util/path"' declares 'getType' locally, but it is not exported.
 lib/ResolverFactory.ts(10,19): error TS2459: Module '"./util/path"' declares 'PathType' locally, but it is not exported.
+lib/ResolverFactory.ts(118,38): error TS2304: Cannot find name 'AliasOptions'.
+lib/ResolverFactory.ts(134,32): error TS2304: Cannot find name 'AliasOption'.
+lib/ResolverFactory.ts(154,33): error TS2304: Cannot find name 'Options'.
 lib/ResolverFactory.ts(171,30): error TS2339: Property 'name' does not exist on type 'unknown'.
 lib/ResolverFactory.ts(171,43): error TS2339: Property 'name' does not exist on type 'unknown'.
 lib/ResolverFactory.ts(171,56): error TS2339: Property 'name' does not exist on type 'unknown'.
 lib/ResolverFactory.ts(172,25): error TS2339: Property 'forceRelative' does not exist on type 'unknown'.
+lib/ResolverFactory.ts(252,50): error TS2304: Cannot find name 'AliasOptions'.
 lib/RestrictionsPlugin.ts(27,8): error TS2339: Property 'source' does not exist on type 'RestrictionsPlugin'.
 lib/RestrictionsPlugin.ts(28,8): error TS2339: Property 'restrictions' does not exist on type 'RestrictionsPlugin'.
 lib/RestrictionsPlugin.ts(37,18): error TS2339: Property 'source' does not exist on type 'RestrictionsPlugin'.
@@ -361,11 +364,7 @@ lib/TryNextPlugin.ts(20,8): error TS2339: Property 'target' does not exist on ty
 lib/TryNextPlugin.ts(28,43): error TS2339: Property 'target' does not exist on type 'TryNextPlugin'.
 lib/TryNextPlugin.ts(30,18): error TS2339: Property 'source' does not exist on type 'TryNextPlugin'.
 lib/TryNextPlugin.ts(35,11): error TS2339: Property 'message' does not exist on type 'TryNextPlugin'.
-lib/UnsafeCachePlugin.ts(16,34): error TS2339: Property 'context' does not exist on type 'Request'.
-lib/UnsafeCachePlugin.ts(17,17): error TS2339: Property 'path' does not exist on type 'Request'.
-lib/UnsafeCachePlugin.ts(18,18): error TS2339: Property 'query' does not exist on type 'Request'.
-lib/UnsafeCachePlugin.ts(19,21): error TS2339: Property 'fragment' does not exist on type 'Request'.
-lib/UnsafeCachePlugin.ts(20,20): error TS2339: Property 'request' does not exist on type 'Request'.
+lib/UnsafeCachePlugin.ts(13,44): error TS2304: Cannot find name 'ResolveRequest'.
 lib/UnsafeCachePlugin.ts(33,8): error TS2339: Property 'source' does not exist on type 'UnsafeCachePlugin'.
 lib/UnsafeCachePlugin.ts(34,8): error TS2339: Property 'filterPredicate' does not exist on type 'UnsafeCachePlugin'.
 lib/UnsafeCachePlugin.ts(35,8): error TS2339: Property 'withContext' does not exist on type 'UnsafeCachePlugin'.
@@ -385,73 +384,41 @@ lib/UseFilePlugin.ts(28,43): error TS2339: Property 'target' does not exist on t
 lib/UseFilePlugin.ts(30,18): error TS2339: Property 'source' does not exist on type 'UseFilePlugin'.
 lib/UseFilePlugin.ts(32,55): error TS2339: Property 'filename' does not exist on type 'UseFilePlugin'.
 lib/UseFilePlugin.ts(38,48): error TS2339: Property 'filename' does not exist on type 'UseFilePlugin'.
-lib/getInnerRequest.ts(8,51): error TS2304: Cannot find name 'Resolver'.
-lib/getInnerRequest.ts(8,51): error TS4078: Parameter 'resolver' of exported function has or is using private name 'Resolver'.
-lib/getInnerRequest.ts(10,18): error TS2339: Property '__innerRequest' does not exist on type 'Request'.
-lib/getInnerRequest.ts(11,11): error TS2339: Property '__innerRequest_request' does not exist on type 'Request'.
-lib/getInnerRequest.ts(11,46): error TS2339: Property 'request' does not exist on type 'Request'.
-lib/getInnerRequest.ts(12,11): error TS2339: Property '__innerRequest_relativePath' does not exist on type 'Request'.
-lib/getInnerRequest.ts(12,51): error TS2339: Property 'relativePath' does not exist on type 'Request'.
-lib/getInnerRequest.ts(14,18): error TS2339: Property '__innerRequest' does not exist on type 'Request'.
-lib/getInnerRequest.ts(16,14): error TS2339: Property 'request' does not exist on type 'Request'.
-lib/getInnerRequest.ts(17,26): error TS2339: Property 'request' does not exist on type 'Request'.
-lib/getInnerRequest.ts(18,54): error TS2339: Property 'relativePath' does not exist on type 'Request'.
-lib/getInnerRequest.ts(19,41): error TS2339: Property 'relativePath' does not exist on type 'Request'.
-lib/getInnerRequest.ts(22,26): error TS2339: Property 'relativePath' does not exist on type 'Request'.
-lib/getInnerRequest.ts(24,10): error TS2339: Property '__innerRequest_request' does not exist on type 'Request'.
-lib/getInnerRequest.ts(24,43): error TS2339: Property 'request' does not exist on type 'Request'.
-lib/getInnerRequest.ts(25,10): error TS2339: Property '__innerRequest_relativePath' does not exist on type 'Request'.
-lib/getInnerRequest.ts(25,48): error TS2339: Property 'relativePath' does not exist on type 'Request'.
-lib/getInnerRequest.ts(26,18): error TS2339: Property '__innerRequest' does not exist on type 'Request'.
+lib/getInnerRequest.ts(8,51): error TS2304: Cannot find name 'InnerRequestResolver'.
+lib/getInnerRequest.ts(8,51): error TS4078: Parameter 'resolver' of exported function has or is using private name 'InnerRequestResolver'.
+lib/getInnerRequest.ts(8,82): error TS2304: Cannot find name 'InnerRequest'.
+lib/getInnerRequest.ts(8,82): error TS4078: Parameter 'request' of exported function has or is using private name 'InnerRequest'.
 lib/index.ts(10,8): error TS1192: Module '"lib/ResolverFactory"' has no default export.
+lib/index.ts(37,3): error TS2322: Type '{ environments: string[]; }' is not assignable to type 'string'.
 lib/index.ts(55,3): error TS2322: Type '{ environments: string[]; }' is not assignable to type 'string'.
-lib/index.ts(60,26): error TS2304: Cannot find name 'Options'.
-lib/index.ts(81,30): error TS2304: Cannot find name 'SyncOptions'.
-lib/util/entrypoints.ts(121,41): error TS2304: Cannot find name 'TreeRoot'.
-lib/util/entrypoints.ts(121,66): error TS2304: Cannot find name 'AssertRequest'.
-lib/util/entrypoints.ts(121,95): error TS2304: Cannot find name 'AssertTarget'.
-lib/util/entrypoints.ts(207,34): error TS2304: Cannot find name 'ExportTarget'.
-lib/util/entrypoints.ts(221,6): error TS2367: This comparison appears to be unintentional because the types 'boolean' and 'string' have no overlap.
-lib/util/entrypoints.ts(238,34): error TS2304: Cannot find name 'Import'.
-lib/util/entrypoints.ts(241,6): error TS2367: This comparison appears to be unintentional because the types 'boolean' and 'string' have no overlap.
-lib/util/entrypoints.ts(261,14): error TS2339: Property 'length' does not exist on type 'Request'.
+lib/index.ts(72,4): error TS2322: Type '{ environments: string[]; }' is not assignable to type 'string'.
+lib/index.ts(81,30): error TS2304: Cannot find name 'ResolverOptions'.
+lib/index.ts(92,4): error TS2322: Type '{ environments: string[]; }' is not assignable to type 'string'.
+lib/util/entrypoints.ts(121,41): error TS2304: Cannot find name 'MappingTree'.
+lib/util/entrypoints.ts(121,69): error TS2304: Cannot find name 'AssertRequest'.
+lib/util/entrypoints.ts(121,98): error TS2304: Cannot find name 'AssertTarget'.
+lib/util/entrypoints.ts(125,27): error TS2345: Argument of type 'Request' is not assignable to parameter of type 'string'.
+lib/util/entrypoints.ts(147,35): error TS2339: Property 'length' does not exist on type 'Request'.
+lib/util/entrypoints.ts(150,15): error TS2339: Property 'slice' does not exist on type 'Request'.
+lib/util/entrypoints.ts(151,15): error TS2339: Property 'slice' does not exist on type 'Request'.
 lib/util/entrypoints.ts(262,26): error TS2339: Property 'files' does not exist on type 'Node'.
 lib/util/entrypoints.ts(268,12): error TS2339: Property 'children' does not exist on type 'Node'.
 lib/util/entrypoints.ts(269,12): error TS2339: Property 'folder' does not exist on type 'Node'.
 lib/util/entrypoints.ts(270,12): error TS2339: Property 'wildcards' does not exist on type 'Node'.
 lib/util/entrypoints.ts(272,26): error TS2339: Property 'files' does not exist on type 'Node'.
-lib/util/entrypoints.ts(274,34): error TS2339: Property 'length' does not exist on type 'Request'.
-lib/util/entrypoints.ts(279,27): error TS2339: Property 'indexOf' does not exist on type 'Request'.
 lib/util/entrypoints.ts(285,30): error TS2339: Property 'folder' does not exist on type 'Node'.
 lib/util/entrypoints.ts(314,33): error TS2339: Property 'wildcards' does not exist on type 'Node'.
 lib/util/entrypoints.ts(316,33): error TS2339: Property 'children' does not exist on type 'Node'.
-lib/util/entrypoints.ts(318,26): error TS2339: Property 'slice' does not exist on type 'Request'.
 lib/util/entrypoints.ts(322,12): error TS2339: Property 'children' does not exist on type 'Node'.
 lib/util/entrypoints.ts(324,24): error TS2339: Property 'children' does not exist on type 'Node'.
-lib/util/entrypoints.ts(332,24): error TS2339: Property 'indexOf' does not exist on type 'Request'.
-lib/util/entrypoints.ts(336,35): error TS2339: Property 'slice' does not exist on type 'Request'.
 lib/util/entrypoints.ts(338,21): error TS2339: Property 'files' does not exist on type 'Node'.
-lib/util/entrypoints.ts(341,26): error TS2339: Property 'length' does not exist on type 'Request'.
 lib/util/entrypoints.ts(346,29): error TS2339: Property 'wildcards' does not exist on type 'Node'.
-lib/util/entrypoints.ts(355,40): error TS2304: Cannot find name 'Mapping'.
 lib/util/entrypoints.ts(441,50): error TS2304: Cannot find name 'ConditionalMapping'.
 lib/util/entrypoints.ts(470,23): error TS2339: Property 'has' does not exist on type 'string[]'.
-lib/util/entrypoints.ts(512,8): error TS2339: Property 'folder' does not exist on type 'Node'.
-lib/util/entrypoints.ts(530,12): error TS2339: Property 'children' does not exist on type 'Node'.
-lib/util/entrypoints.ts(532,9): error TS2339: Property 'children' does not exist on type 'Node'.
-lib/util/entrypoints.ts(533,9): error TS2339: Property 'children' does not exist on type 'Node'.
-lib/util/entrypoints.ts(535,19): error TS2339: Property 'children' does not exist on type 'Node'.
-lib/util/entrypoints.ts(539,10): error TS2339: Property 'children' does not exist on type 'Node'.
-lib/util/entrypoints.ts(549,8): error TS2339: Property 'folder' does not exist on type 'Node'.
-lib/util/entrypoints.ts(553,13): error TS2339: Property 'wildcards' does not exist on type 'Node'.
-lib/util/entrypoints.ts(553,38): error TS2339: Property 'wildcards' does not exist on type 'Node'.
-lib/util/entrypoints.ts(554,9): error TS2339: Property 'wildcards' does not exist on type 'Node'.
-lib/util/entrypoints.ts(556,9): error TS2339: Property 'files' does not exist on type 'Node'.
-lib/util/entrypoints.ts(565,43): error TS2304: Cannot find name 'Field'.
-lib/util/entrypoints.ts(623,12): error TS2345: Argument of type '{ children: any; folder: any; wildcards: any; files: Map<any, any>; }' is not assignable to parameter of type 'Node'.
-  Type '{ children: any; folder: any; wildcards: any; files: Map<any, any>; }' is missing the following properties from type 'Node': baseURI, childNodes, firstChild, isConnected, and 46 more.
-lib/util/entrypoints.ts(633,43): error TS2304: Cannot find name 'Field'.
-lib/util/entrypoints.ts(663,12): error TS2345: Argument of type '{ children: any; folder: any; wildcards: any; files: Map<any, any>; }' is not assignable to parameter of type 'Node'.
+lib/util/entrypoints.ts(510,25): error TS2304: Cannot find name 'Folder'.
+lib/util/entrypoints.ts(510,55): error TS2304: Cannot find name 'Folder'.
+lib/util/entrypoints.ts(565,43): error TS2304: Cannot find name 'ExportsField'.
+lib/util/entrypoints.ts(633,43): error TS2304: Cannot find name 'ImportsField'.
 tooling/format-file-header.ts(116,32): error TS2769: No overload matches this call.
   Overload 1 of 3, '(path: PathOrFileDescriptor, options?: { encoding?: null; flag?: string; }): Buffer', gave the following error.
     Argument of type 'unknown' is not assignable to parameter of type 'PathOrFileDescriptor'.

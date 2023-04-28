@@ -1,1 +1,1 @@
-export default function (arr: any[], arrays: any[][]): any[];
+export default function (arr: any[], arrays: any[]): any[];

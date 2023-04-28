@@ -1,2 +1,2 @@
-declare function insertBySelector(insert: string, style: string): void;
+declare function insertBySelector(insert: string, style: HTMLStyleElement): void;
 export default insertBySelector;

@@ -1,4 +1,4 @@
-declare function setup(env: string): {
+declare function setup(env: any): {
     (namespace: string): {
         (...args: any[]): void;
         namespace: string;

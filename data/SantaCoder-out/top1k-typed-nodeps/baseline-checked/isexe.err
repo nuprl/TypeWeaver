@@ -1,22 +1,20 @@
 index.ts(12,10): error TS2393: Duplicate function implementation.
-index.ts(37,14): error TS2339: Property 'code' does not exist on type 'Error'.
+index.ts(12,40): error TS2304: Cannot find name 'Options'.
+index.ts(12,53): error TS2304: Cannot find name 'Callback'.
 index.ts(46,10): error TS2393: Duplicate function implementation.
 index.ts(46,39): error TS2304: Cannot find name 'SyncOptions'.
 mode.ts(6,10): error TS2393: Duplicate function implementation.
+mode.ts(6,40): error TS2304: Cannot find name 'Options'.
+mode.ts(6,53): error TS2304: Cannot find name 'Cb'.
 mode.ts(12,10): error TS2393: Duplicate function implementation.
-mode.ts(12,39): error TS2304: Cannot find name 'SyncOptions'.
 mode.ts(16,10): error TS2393: Duplicate function implementation.
-mode.ts(16,44): error TS2304: Cannot find name 'Options'.
-mode.ts(17,15): error TS2339: Property 'isFile' does not exist on type 'string'.
-mode.ts(20,27): error TS2503: Cannot find namespace 'fs'.
-mode.ts(20,27): error TS4078: Parameter 'stat' of exported function has or is using private name 'fs'.
-mode.ts(20,46): error TS2304: Cannot find name 'Options'.
-mode.ts(20,46): error TS4078: Parameter 'options' of exported function has or is using private name 'Options'.
-windows.ts(6,47): error TS2304: Cannot find name 'Options'.
-windows.ts(6,47): error TS4078: Parameter 'options' of exported function has or is using private name 'Options'.
+mode.ts(16,27): error TS2503: Cannot find namespace 'fs'.
 windows.ts(27,10): error TS2393: Duplicate function implementation.
+windows.ts(27,27): error TS2503: Cannot find namespace 'fs'.
+windows.ts(27,60): error TS2304: Cannot find name 'Options'.
 windows.ts(34,10): error TS2393: Duplicate function implementation.
 windows.ts(34,40): error TS2304: Cannot find name 'Options'.
+windows.ts(34,53): error TS2304: Cannot find name 'Cb'.
 windows.ts(40,10): error TS2393: Duplicate function implementation.
-windows.ts(40,39): error TS2304: Cannot find name 'SyncOptions'.
+windows.ts(40,39): error TS2304: Cannot find name 'Options'.
 

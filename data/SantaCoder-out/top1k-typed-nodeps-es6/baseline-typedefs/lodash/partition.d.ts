@@ -1,2 +1,2 @@
-declare function partition(collection: any[], predicate: any): any;
+declare function partition(collection: any[], predicate: Function): any;
 export default partition;

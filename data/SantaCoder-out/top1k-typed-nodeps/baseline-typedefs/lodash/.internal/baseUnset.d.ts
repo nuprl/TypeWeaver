@@ -1,2 +1,2 @@
-declare function baseUnset(object: any, path: string[]): boolean;
+declare function baseUnset(object: any, path: any): boolean;
 export default baseUnset;

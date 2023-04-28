@@ -1,2 +1,2 @@
-declare function some(array: any[], predicate: any): boolean;
+declare function some(array: any[], predicate: Function): boolean;
 export default some;

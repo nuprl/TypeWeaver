@@ -1,5 +1,9 @@
 lib/attributes.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'xnv'.
 lib/attributes.ts(5,9): error TS2451: Cannot redeclare block-scoped variable 'NAMESPACES'.
+lib/attributes.ts(7,30): error TS2304: Cannot find name 'PrefixMap'.
+lib/attributes.ts(7,30): error TS4078: Parameter 'map' of exported function has or is using private name 'PrefixMap'.
+lib/attributes.ts(13,37): error TS2304: Cannot find name 'PrefixMap'.
+lib/attributes.ts(13,37): error TS4078: Parameter 'map' of exported function has or is using private name 'PrefixMap'.
 lib/attributes.ts(30,6): error TS2339: Property 'replace' does not exist on type 'boolean'.
 lib/attributes.ts(100,11): error TS2554: Expected 1 arguments, but got 2.
 lib/attributes.ts(117,73): error TS2554: Expected 1 arguments, but got 2.
@@ -9,18 +13,38 @@ lib/serialize.ts(25,60): error TS2304: Cannot find name 'NamespaceMap'.
 lib/serialize.ts(25,60): error TS4078: Parameter 'map' of exported function has or is using private name 'NamespaceMap'.
 lib/serialize.ts(25,85): error TS2304: Cannot find name 'PrefixMap'.
 lib/serialize.ts(25,85): error TS4078: Parameter 'prefixMap' of exported function has or is using private name 'PrefixMap'.
+lib/serialize.ts(61,82): error TS2304: Cannot find name 'PrefixMap'.
+lib/serialize.ts(61,82): error TS4078: Parameter 'prefixMap' of exported function has or is using private name 'PrefixMap'.
 lib/serialize.ts(150,66): error TS2304: Cannot find name 'PrefixMap'.
 lib/serialize.ts(150,66): error TS4078: Parameter 'prefixMap' of exported function has or is using private name 'PrefixMap'.
-lib/serialize.ts(161,69): error TS2304: Cannot find name 'PrefixMap'.
-lib/serialize.ts(161,69): error TS4078: Parameter 'prefixMap' of exported function has or is using private name 'PrefixMap'.
-lib/serialize.ts(162,48): error TS2339: Property 'data' does not exist on type 'Node'.
-lib/serialize.ts(168,11): error TS2339: Property 'data' does not exist on type 'Node'.
-lib/serialize.ts(168,39): error TS2339: Property 'data' does not exist on type 'Node'.
-lib/serialize.ts(172,22): error TS2339: Property 'data' does not exist on type 'Node'.
-lib/serialize.ts(278,12): error TS2339: Property 'content' does not exist on type 'Element'.
-lib/serialize.ts(285,25): error TS2488: Type 'NodeListOf<ChildNode>' must have a '[Symbol.iterator]()' method that returns an iterator.
-lib/serialize.ts(310,9): error TS2345: Argument of type 'Node' is not assignable to parameter of type 'Element'.
+lib/serialize.ts(161,72): error TS2304: Cannot find name 'PrefixMap'.
+lib/serialize.ts(161,72): error TS4078: Parameter 'prefixMap' of exported function has or is using private name 'PrefixMap'.
+lib/serialize.ts(175,69): error TS2304: Cannot find name 'PrefixMap'.
+lib/serialize.ts(175,69): error TS4078: Parameter 'prefixMap' of exported function has or is using private name 'PrefixMap'.
+lib/serialize.ts(175,114): error TS2304: Cannot find name 'RefMap'.
+lib/serialize.ts(175,114): error TS4078: Parameter 'refs' of exported function has or is using private name 'RefMap'.
+lib/serialize.ts(178,11): error TS2339: Property 'localName' does not exist on type 'Node'.
+lib/serialize.ts(178,53): error TS2339: Property 'localName' does not exist on type 'Node'.
+lib/serialize.ts(189,5): error TS2345: Argument of type 'Node' is not assignable to parameter of type 'Element'.
   Type 'Node' is missing the following properties from type 'Element': attributes, classList, className, clientHeight, and 114 more.
+lib/serialize.ts(194,19): error TS2339: Property 'namespaceURI' does not exist on type 'Node'.
+lib/serialize.ts(200,35): error TS2339: Property 'localName' does not exist on type 'Node'.
+lib/serialize.ts(202,28): error TS2339: Property 'localName' does not exist on type 'Node'.
+lib/serialize.ts(206,11): error TS2339: Property 'prefix' does not exist on type 'Node'.
+lib/serialize.ts(215,50): error TS2339: Property 'localName' does not exist on type 'Node'.
+lib/serialize.ts(233,41): error TS2339: Property 'localName' does not exist on type 'Node'.
+lib/serialize.ts(241,28): error TS2339: Property 'localName' does not exist on type 'Node'.
+lib/serialize.ts(245,28): error TS2339: Property 'localName' does not exist on type 'Node'.
+lib/serialize.ts(263,28): error TS2339: Property 'localName' does not exist on type 'Node'.
+lib/serialize.ts(276,38): error TS2339: Property 'localName' does not exist on type 'Node'.
+lib/serialize.ts(278,12): error TS2339: Property 'content' does not exist on type 'Node'.
+lib/serialize.ts(285,25): error TS2488: Type 'NodeListOf<ChildNode>' must have a '[Symbol.iterator]()' method that returns an iterator.
+lib/serialize.ts(306,69): error TS2304: Cannot find name 'PrefixMap'.
+lib/serialize.ts(306,69): error TS4078: Parameter 'prefixMap' of exported function has or is using private name 'PrefixMap'.
+lib/serialize.ts(306,114): error TS2304: Cannot find name 'Refs'.
+lib/serialize.ts(306,114): error TS4078: Parameter 'refs' of exported function has or is using private name 'Refs'.
+lib/serialize.ts(325,31): error TS2345: Argument of type 'Node' is not assignable to parameter of type 'Comment'.
+  Type 'Node' is missing the following properties from type 'CharacterData': data, length, appendData, deleteData, and 9 more.
 lib/serialize.ts(327,28): error TS2345: Argument of type 'Node' is not assignable to parameter of type 'Text'.
   Type 'Node' is missing the following properties from type 'Text': wholeText, splitText, data, length, and 12 more.
 lib/serialize.ts(338,9): error TS2345: Argument of type 'Node' is not assignable to parameter of type 'DocumentType'.

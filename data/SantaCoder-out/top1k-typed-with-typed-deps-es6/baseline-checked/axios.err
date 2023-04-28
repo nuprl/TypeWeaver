@@ -4,16 +4,21 @@ examples/get/server.ts(28,31): error TS4078: Parameter 'req' of exported functio
 examples/get/server.ts(28,53): error TS4078: Parameter 'res' of exported function has or is using private name 'ServerResponse'.
 examples/postMultipartFormData/server.ts(1,31): error TS4078: Parameter 'req' of exported function has or is using private name 'IncomingMessage'.
 examples/postMultipartFormData/server.ts(1,53): error TS4078: Parameter 'res' of exported function has or is using private name 'ServerResponse'.
+examples/upload/server.ts(1,31): error TS4078: Parameter 'req' of exported function has or is using private name 'IncomingMessage'.
+examples/upload/server.ts(1,53): error TS4078: Parameter 'res' of exported function has or is using private name 'ServerResponse'.
 gulpfile.ts(34,72): error TS1005: ',' expected.
 lib/adapters/http.ts(101,45): error TS4078: Parameter 'config' of exported function has or is using private name 'AxiosRequestConfig'.
 lib/adapters/xhr.ts(45,44): error TS4078: Parameter 'config' of exported function has or is using private name 'AxiosRequestConfig'.
 lib/cancel/CanceledError.ts(15,49): error TS4078: Parameter 'config' of exported function has or is using private name 'AxiosRequestConfig'.
-lib/cancel/CanceledError.ts(15,78): error TS4078: Parameter 'request' of exported function has or is using private name 'AxiosRequestConfig'.
 lib/core/AxiosError.ts(16,60): error TS4078: Parameter 'config' of exported function has or is using private name 'AxiosRequestConfig'.
-lib/core/AxiosError.ts(16,89): error TS4078: Parameter 'request' of exported function has or is using private name 'AxiosRequestConfig'.
-lib/core/AxiosError.ts(16,119): error TS4078: Parameter 'response' of exported function has or is using private name 'AxiosResponse'.
+lib/core/AxiosError.ts(16,104): error TS4078: Parameter 'response' of exported function has or is using private name 'AxiosResponse'.
 lib/core/dispatchRequest.ts(33,49): error TS4078: Parameter 'config' of exported function has or is using private name 'AxiosRequestConfig'.
-lib/utils.ts(233,67): error TS1005: ',' expected.
+lib/core/settle.ts(14,79): error TS4078: Parameter 'response' of exported function has or is using private name 'AxiosResponse'.
+lib/core/transformData.ts(15,66): error TS4078: Parameter 'response' of exported function has or is using private name 'AxiosResponse'.
+lib/helpers/buildURL.ts(33,81): error TS4078: Parameter 'options' of exported function has or is using private name 'Options'.
+lib/helpers/fromDataURI.ts(19,76): error TS4078: Parameter 'options' of exported function has or is using private name 'Options'.
+lib/helpers/toFormData.ts(96,60): error TS4078: Parameter 'options' of exported function has or is using private name 'Options'.
+lib/helpers/toURLEncodedForm.ts(7,62): error TS4078: Parameter 'options' of exported function has or is using private name 'FormDataOptions'.
+lib/utils.ts(233,69): error TS1005: ',' expected.
 lib/utils.ts(284,67): error TS1138: Parameter declaration expected.
-lib/utils.ts(284,75): error TS1005: ',' expected.
 

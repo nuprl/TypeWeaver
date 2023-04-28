@@ -1,2 +1,2 @@
-declare function baseSortedIndexBy(array: any[], value: any, iteratee: any, retHighest: any): number;
+declare function baseSortedIndexBy(array: Array<any>, value: any, iteratee: Function, retHighest: boolean): number;
 export default baseSortedIndexBy;

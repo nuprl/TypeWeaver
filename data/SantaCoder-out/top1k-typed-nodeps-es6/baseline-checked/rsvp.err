@@ -21,18 +21,28 @@ lib/rsvp/-internal.ts(31,10): error TS2339: Property 'async' does not exist on t
 lib/rsvp/-internal.ts(50,7): error TS2554: Expected 4 arguments, but got 5.
 lib/rsvp/-internal.ts(59,37): error TS2315: Type 'Promise' is not generic.
 lib/rsvp/-internal.ts(76,46): error TS2315: Type 'Promise' is not generic.
-lib/rsvp/-internal.ts(91,34): error TS2315: Type 'Promise' is not generic.
-lib/rsvp/-internal.ts(108,43): error TS2315: Type 'Promise' is not generic.
-lib/rsvp/-internal.ts(116,34): error TS2315: Type 'Promise' is not generic.
+lib/rsvp/-internal.ts(110,30): error TS2339: Property '_result' does not exist on type 'Promise'.
+lib/rsvp/-internal.ts(117,15): error TS2339: Property '_state' does not exist on type 'Promise'.
+lib/rsvp/-internal.ts(119,11): error TS2339: Property '_result' does not exist on type 'Promise'.
+lib/rsvp/-internal.ts(120,11): error TS2339: Property '_state' does not exist on type 'Promise'.
+lib/rsvp/-internal.ts(122,15): error TS2339: Property '_subscribers' does not exist on type 'Promise'.
 lib/rsvp/-internal.ts(124,7): error TS2554: Expected 3 arguments, but got 2.
 lib/rsvp/-internal.ts(127,12): error TS2339: Property 'async' does not exist on type '{ instrument: boolean; }'.
-lib/rsvp/-internal.ts(131,33): error TS2315: Type 'Promise' is not generic.
+lib/rsvp/-internal.ts(132,15): error TS2339: Property '_state' does not exist on type 'Promise'.
+lib/rsvp/-internal.ts(133,11): error TS2339: Property '_state' does not exist on type 'Promise'.
+lib/rsvp/-internal.ts(134,11): error TS2339: Property '_result' does not exist on type 'Promise'.
 lib/rsvp/-internal.ts(135,10): error TS2339: Property 'async' does not exist on type '{ instrument: boolean; }'.
+lib/rsvp/-internal.ts(138,35): error TS2304: Cannot find name 'Observable'.
+lib/rsvp/-internal.ts(138,35): error TS4078: Parameter 'parent' of exported function has or is using private name 'Observable'.
+lib/rsvp/-internal.ts(138,54): error TS2304: Cannot find name 'Observable'.
+lib/rsvp/-internal.ts(138,54): error TS4078: Parameter 'child' of exported function has or is using private name 'Observable'.
 lib/rsvp/-internal.ts(149,12): error TS2339: Property 'async' does not exist on type '{ instrument: boolean; }'.
 lib/rsvp/-internal.ts(153,34): error TS2315: Type 'Promise' is not generic.
 lib/rsvp/-internal.ts(158,5): error TS2554: Expected 3 arguments, but got 2.
+lib/rsvp/-internal.ts(179,39): error TS2304: Cannot find name 'PromiseState'.
+lib/rsvp/-internal.ts(179,39): error TS4078: Parameter 'state' of exported function has or is using private name 'PromiseState'.
+lib/rsvp/-internal.ts(194,15): error TS2339: Property '_state' does not exist on type 'Promise'.
 lib/rsvp/-internal.ts(209,44): error TS2315: Type 'Promise' is not generic.
-lib/rsvp/all-settled.ts(73,51): error TS2315: Type 'Promise' is not generic.
 lib/rsvp/all-settled.ts(75,20): error TS2339: Property 'reject' does not exist on type 'typeof Promise'.
 lib/rsvp/all-settled.ts(78,50): error TS2339: Property 'promise' does not exist on type 'AllSettled'.
 lib/rsvp/all.ts(14,42): error TS2315: Type 'Promise' is not generic.
@@ -73,10 +83,10 @@ lib/rsvp/filter.ts(22,12): error TS2339: Property '_result' does not exist on ty
 lib/rsvp/filter.ts(25,20): error TS2339: Property '_mapFn' does not exist on type 'FilterEnumerator'.
 lib/rsvp/filter.ts(34,12): error TS2339: Property '_remaining' does not exist on type 'FilterEnumerator'.
 lib/rsvp/filter.ts(36,14): error TS2339: Property '_result' does not exist on type 'FilterEnumerator'.
-lib/rsvp/filter.ts(133,42): error TS2315: Type 'Promise' is not generic.
 lib/rsvp/filter.ts(135,20): error TS2339: Property 'reject' does not exist on type 'typeof Promise'.
 lib/rsvp/filter.ts(138,18): error TS2339: Property 'resolve' does not exist on type 'typeof Promise'.
-lib/rsvp/filter.ts(139,36): error TS2315: Type 'Promise' is not generic.
+lib/rsvp/filter.ts(139,30): error TS2315: Type 'Promise' is not generic.
+lib/rsvp/filter.ts(139,38): error TS2304: Cannot find name 'T'.
 lib/rsvp/filter.ts(143,71): error TS2339: Property 'promise' does not exist on type 'FilterEnumerator'.
 lib/rsvp/hash-settled.ts(126,18): error TS2339: Property 'resolve' does not exist on type 'typeof Promise'.
 lib/rsvp/hash-settled.ts(132,54): error TS2554: Expected 3 arguments, but got 4.
@@ -87,6 +97,7 @@ lib/rsvp/hash.ts(100,54): error TS2339: Property 'promise' does not exist on typ
 lib/rsvp/instrument.ts(28,20): error TS2339: Property '_guidKey' does not exist on type 'Promise<any>'.
 lib/rsvp/instrument.ts(29,20): error TS2339: Property '_id' does not exist on type 'Promise<any>'.
 lib/rsvp/instrument.ts(31,23): error TS2339: Property '_result' does not exist on type 'Promise<any>'.
+lib/rsvp/instrument.ts(32,31): error TS2339: Property '_id' does not exist on type 'Promise<any>'.
 lib/rsvp/instrument.ts(33,22): error TS2339: Property '_label' does not exist on type 'Promise<any>'.
 lib/rsvp/instrument.ts(35,66): error TS2339: Property '_label' does not exist on type 'Promise<any>'.
 lib/rsvp/map.ts(11,46): error TS2554: Expected 4 arguments, but got 5.
@@ -99,19 +110,19 @@ lib/rsvp/map.ts(19,10): error TS2339: Property '_mapFn' does not exist on type '
 lib/rsvp/map.ts(27,30): error TS2339: Property '_mapFn' does not exist on type 'MapEnumerator'.
 lib/rsvp/map.ts(32,12): error TS2339: Property '_remaining' does not exist on type 'MapEnumerator'.
 lib/rsvp/map.ts(33,12): error TS2339: Property '_result' does not exist on type 'MapEnumerator'.
-lib/rsvp/map.ts(120,39): error TS2315: Type 'Promise' is not generic.
+lib/rsvp/map.ts(120,45): error TS2315: Type 'Promise' is not generic.
 lib/rsvp/map.ts(122,20): error TS2339: Property 'reject' does not exist on type 'typeof Promise'.
 lib/rsvp/map.ts(125,18): error TS2339: Property 'resolve' does not exist on type 'typeof Promise'.
 lib/rsvp/map.ts(126,30): error TS2315: Type 'Promise' is not generic.
+lib/rsvp/map.ts(126,38): error TS2304: Cannot find name 'T'.
 lib/rsvp/map.ts(130,65): error TS2339: Property 'promise' does not exist on type 'MapEnumerator'.
 lib/rsvp/node.ts(30,48): error TS2315: Type 'Promise' is not generic.
 lib/rsvp/node.ts(184,23): error TS2554: Expected 2 arguments, but got 1.
 lib/rsvp/node.ts(199,19): error TS2554: Expected 2 arguments, but got 1.
-lib/rsvp/node.ts(207,38): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type 'any[]'.
-  Type 'IArguments' is missing the following properties from type 'any[]': pop, push, concat, join, and 27 more.
 lib/rsvp/node.ts(222,6): error TS2339: Property '__proto__' does not exist on type '() => any'.
 lib/rsvp/node.ts(227,36): error TS2315: Type 'Promise' is not generic.
 lib/rsvp/node.ts(236,38): error TS2315: Type 'Promise' is not generic.
+lib/rsvp/node.ts(236,75): error TS2552: Cannot find name 'NodeFunction'. Did you mean 'Function'?
 lib/rsvp/node.ts(237,18): error TS2339: Property 'all' does not exist on type 'typeof Promise'.
 lib/rsvp/promise-hash.ts(14,10): error TS2339: Property '_result' does not exist on type 'PromiseHash'.
 lib/rsvp/promise-hash.ts(22,24): error TS2339: Property 'promise' does not exist on type 'PromiseHash'.
@@ -137,8 +148,6 @@ lib/rsvp/promise.ts(243,9): error TS2339: Property 'resolve' does not exist on t
 lib/rsvp/promise.ts(244,9): error TS2339: Property 'reject' does not exist on type 'typeof Promise'.
 lib/rsvp/promise.ts(246,19): error TS2339: Property '_guidKey' does not exist on type 'Promise'.
 lib/rsvp/promise.ts(442,19): error TS2339: Property 'then' does not exist on type 'Promise'.
-lib/rsvp/promise/all.ts(54,44): error TS2304: Cannot find name 'Entry'.
-lib/rsvp/promise/all.ts(54,44): error TS4078: Parameter 'entries' of exported function has or is using private name 'Entry'.
 lib/rsvp/promise/all.ts(58,75): error TS2339: Property 'promise' does not exist on type 'Enumerator'.
 lib/rsvp/race.ts(14,43): error TS2315: Type 'Promise' is not generic.
 lib/rsvp/race.ts(15,18): error TS2339: Property 'race' does not exist on type 'typeof Promise'.

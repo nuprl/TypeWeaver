@@ -1,2 +1,2 @@
-declare function maxBy(array: any[], iteratee: any): any;
+declare function maxBy(array: any[], iteratee: Function): any;
 export default maxBy;

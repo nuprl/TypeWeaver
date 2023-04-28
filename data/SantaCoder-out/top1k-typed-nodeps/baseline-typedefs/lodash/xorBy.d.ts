@@ -1,2 +1,2 @@
-declare function xorBy(...arrays: any[]): any[];
+declare function xorBy(...arrays: Array<any>[]): any[];
 export default xorBy;

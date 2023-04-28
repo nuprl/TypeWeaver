@@ -1,4 +1,3 @@
-examples/custom-option-arrayOfCommaSepString.ts(18,16): error TS2339: Property 'trim' does not exist on type 'number'.
 examples/custom-option-duration.ts(38,18): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 examples/custom-option-duration.ts(41,18): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 examples/custom-option-duration.ts(44,18): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
@@ -9,69 +8,35 @@ examples/custom-option-time-ago.ts(36,26): error TS2362: The left-hand side of a
 examples/custom-option-time-ago.ts(39,26): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 examples/custom-option-time-ago.ts(45,26): error TS2554: Expected 3 arguments, but got 1.
 lib/dashdash.ts(52,16): error TS2554: Expected 4 arguments, but got 1.
-lib/dashdash.ts(107,30): error TS2749: 'Option' refers to a value, but is being used as a type here. Did you mean 'typeof Option'?
-lib/dashdash.ts(107,30): error TS4078: Parameter 'option' of exported function has or is using private name 'Option'.
-lib/dashdash.ts(129,39): error TS2749: 'Option' refers to a value, but is being used as a type here. Did you mean 'typeof Option'?
-lib/dashdash.ts(129,39): error TS4078: Parameter 'option' of exported function has or is using private name 'Option'.
+lib/dashdash.ts(98,28): error TS2749: 'Option' refers to a value, but is being used as a type here. Did you mean 'typeof Option'?
+lib/dashdash.ts(98,28): error TS4078: Parameter 'option' of exported function has or is using private name 'Option'.
+lib/dashdash.ts(102,30): error TS2749: 'Option' refers to a value, but is being used as a type here. Did you mean 'typeof Option'?
+lib/dashdash.ts(102,30): error TS4078: Parameter 'option' of exported function has or is using private name 'Option'.
+lib/dashdash.ts(259,25): error TS2304: Cannot find name 'ParserConfig'.
+lib/dashdash.ts(259,25): error TS4078: Parameter 'config' of exported function has or is using private name 'ParserConfig'.
+lib/dashdash.ts(273,57): error TS2304: Cannot find name 'ConfigOption'.
 lib/dashdash.ts(354,67): error TS2749: 'Option' refers to a value, but is being used as a type here. Did you mean 'typeof Option'?
-lib/dashdash.ts(377,19): error TS2322: Type '{ argv: any[]; slice: any; }' is not assignable to type 'any[]'.
-  Object literal may only specify known properties, and 'argv' does not exist in type 'any[]'.
-lib/dashdash.ts(382,9): error TS2740: Type '{}' is missing the following properties from type 'any[]': length, pop, push, concat, and 29 more.
-lib/dashdash.ts(384,41): error TS2339: Property 'argv' does not exist on type 'any[]'.
-lib/dashdash.ts(386,23): error TS2339: Property 'argv' does not exist on type 'any[]'.
-lib/dashdash.ts(389,22): error TS2339: Property 'env' does not exist on type 'any[]'.
-lib/dashdash.ts(394,39): error TS2339: Property 'type' does not exist on type 'string'.
+lib/dashdash.ts(372,49): error TS2304: Cannot find name 'ParseInputs'.
+lib/dashdash.ts(393,29): error TS2749: 'Option' refers to a value, but is being used as a type here. Did you mean 'typeof Option'?
 lib/dashdash.ts(462,61): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'string'.
-lib/dashdash.ts(464,66): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
-lib/dashdash.ts(478,25): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 lib/dashdash.ts(524,60): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'string'.
-lib/dashdash.ts(526,65): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
-lib/dashdash.ts(537,73): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
-lib/dashdash.ts(568,54): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 lib/dashdash.ts(574,49): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'string'.
 lib/dashdash.ts(579,44): error TS2749: 'Option' refers to a value, but is being used as a type here. Did you mean 'typeof Option'?
 lib/dashdash.ts(589,10): error TS2339: Property '_order' does not exist on type '{}'.
 lib/dashdash.ts(590,10): error TS2339: Property '_args' does not exist on type '{}'.
-lib/dashdash.ts(625,47): error TS2304: Cannot find name 'Config'.
+lib/dashdash.ts(625,47): error TS2304: Cannot find name 'HelpConfig'.
 lib/dashdash.ts(655,44): error TS2749: 'Option' refers to a value, but is being used as a type here. Did you mean 'typeof Option'?
 lib/dashdash.ts(706,44): error TS2749: 'Option' refers to a value, but is being used as a type here. Did you mean 'typeof Option'?
-lib/dashdash.ts(831,9): error TS2345: Argument of type '{ name: any; specExtra: any; argtypes: any; options: any; }' is not assignable to parameter of type 'string[]'.
-  Object literal may only specify known properties, and 'name' does not exist in type 'string[]'.
-lib/dashdash.ts(878,24): error TS2339: Property 'options' does not exist on type 'string[]'.
-lib/dashdash.ts(879,32): error TS2339: Property 'context' does not exist on type 'string[]'.
-lib/dashdash.ts(880,30): error TS2339: Property 'includeHidden' does not exist on type 'string[]'.
-lib/dashdash.ts(881,39): error TS2339: Property 'argtypes' does not exist on type 'string[]'.
-lib/dashdash.ts(883,24): error TS2339: Property 'context' does not exist on type 'string[]'.
-lib/dashdash.ts(885,14): error TS2339: Property 'includeHidden' does not exist on type 'string[]'.
-lib/dashdash.ts(885,57): error TS2339: Property 'includeHidden' does not exist on type 'string[]'.
-lib/dashdash.ts(891,11): error TS2339: Property 'options' does not exist on type 'string[]'.
-lib/dashdash.ts(892,15): error TS2339: Property 'group' does not exist on type 'string'.
-lib/dashdash.ts(892,40): error TS2339: Property 'group' does not exist on type 'string'.
-lib/dashdash.ts(897,26): error TS2339: Property 'names' does not exist on type 'string'.
-lib/dashdash.ts(897,38): error TS2339: Property 'name' does not exist on type 'string'.
-lib/dashdash.ts(898,39): error TS2339: Property 'type' does not exist on type 'string'.
-lib/dashdash.ts(901,19): error TS2339: Property 'completionType' does not exist on type 'string'.
-lib/dashdash.ts(901,65): error TS2339: Property 'type' does not exist on type 'string'.
-lib/dashdash.ts(904,45): error TS2339: Property 'hidden' does not exist on type 'string'.
-lib/dashdash.ts(911,45): error TS2339: Property 'hidden' does not exist on type 'string'.
-lib/dashdash.ts(919,41): error TS2339: Property 'hidden' does not exist on type 'string'.
-lib/dashdash.ts(943,14): error TS2339: Property 'argtypes' does not exist on type 'string[]'.
-lib/dashdash.ts(948,22): error TS2339: Property 'argtypes' does not exist on type 'string[]'.
-lib/dashdash.ts(975,24): error TS2339: Property 'options' does not exist on type 'string[]'.
-lib/dashdash.ts(976,24): error TS2339: Property 'name' does not exist on type 'string[]'.
-lib/dashdash.ts(977,32): error TS2339: Property 'specExtra' does not exist on type 'string[]'.
-lib/dashdash.ts(978,39): error TS2339: Property 'argtypes' does not exist on type 'string[]'.
-lib/dashdash.ts(982,20): error TS2339: Property 'name' does not exist on type 'string[]'.
-lib/dashdash.ts(985,13): error TS2345: Argument of type '{ options: any; argtypes: any; }' is not assignable to parameter of type 'string[]'.
-  Object literal may only specify known properties, and 'options' does not exist in type 'string[]'.
-lib/dashdash.ts(985,27): error TS2339: Property 'options' does not exist on type 'string[]'.
-lib/dashdash.ts(986,28): error TS2339: Property 'argtypes' does not exist on type 'string[]'.
-lib/dashdash.ts(989,14): error TS2339: Property 'specExtra' does not exist on type 'string[]'.
-lib/dashdash.ts(990,36): error TS2339: Property 'specExtra' does not exist on type 'string[]'.
+lib/dashdash.ts(824,65): error TS2304: Cannot find name 'BashCompletionArgs'.
+lib/dashdash.ts(891,52): error TS2749: 'Option' refers to a value, but is being used as a type here. Did you mean 'typeof Option'?
+lib/dashdash.ts(973,42): error TS2304: Cannot find name 'BashCompletionFromOptionsArgs'.
+lib/dashdash.ts(973,42): error TS4078: Parameter 'args' of exported function has or is using private name 'BashCompletionFromOptionsArgs'.
 lib/dashdash.ts(1000,31): error TS2304: Cannot find name 'ParserConfig'.
 lib/dashdash.ts(1000,31): error TS4078: Parameter 'config' of exported function has or is using private name 'ParserConfig'.
 lib/dashdash.ts(1011,25): error TS2304: Cannot find name 'Config'.
 lib/dashdash.ts(1011,25): error TS4078: Parameter 'config_' of exported function has or is using private name 'Config'.
 lib/dashdash.ts(1046,36): error TS2304: Cannot find name 'OptionType'.
 lib/dashdash.ts(1046,36): error TS4078: Parameter 'optionType' of exported function has or is using private name 'OptionType'.
+lib/dashdash.ts(1081,29): error TS2304: Cannot find name 'OptionSpec'.
+lib/dashdash.ts(1081,29): error TS4078: Parameter 'o' of exported function has or is using private name 'OptionSpec'.
 

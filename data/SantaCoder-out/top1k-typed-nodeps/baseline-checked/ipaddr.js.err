@@ -51,15 +51,13 @@ ipaddr.min.ts(1,11056): error TS2339: Property 'IPv6' does not exist on type '{}
 ipaddr.min.ts(1,11096): error TS2339: Property 'IPv4' does not exist on type '{}'.
 ipaddr.min.ts(1,11205): error TS2339: Property 'process' does not exist on type '{}'.
 ipaddr.min.ts(1,11319): error TS2339: Property 'subnetMatch' does not exist on type '{}'.
-ipaddr.min.ts(1,11711): error TS2322: Type '{}' is not assignable to type 'Window & typeof globalThis'.
+ipaddr.min.ts(1,11343): error TS2503: Cannot find namespace 'h'.
+ipaddr.min.ts(1,11353): error TS2503: Cannot find namespace 'h'.
+ipaddr.min.ts(1,11724): error TS2322: Type '{}' is not assignable to type 'Window & typeof globalThis'.
   Type '{}' is missing the following properties from type 'Window': clientInformation, closed, customElements, devicePixelRatio, and 195 more.
 lib/ipaddr.ts(89,9): error TS2322: Type 'any[]' is not assignable to type 'number'.
-lib/ipaddr.ts(121,17): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lib/ipaddr.ts(121,42): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/ipaddr.ts(161,12): error TS2339: Property 'IPv4' does not exist on type '{}'.
-lib/ipaddr.ts(227,23): error TS2339: Property 'kind' does not exist on type 'string'.
-lib/ipaddr.ts(231,49): error TS2339: Property 'octets' does not exist on type 'string'.
-lib/ipaddr.ts(231,60): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+lib/ipaddr.ts(219,49): error TS2749: 'IPv4' refers to a value, but is being used as a type here. Did you mean 'typeof IPv4'?
 lib/ipaddr.ts(278,27): error TS2339: Property 'subnetMatch' does not exist on type '{}'.
 lib/ipaddr.ts(288,27): error TS2339: Property 'IPv6' does not exist on type '{}'.
 lib/ipaddr.ts(305,12): error TS2339: Property 'IPv4' does not exist on type '{}'.
@@ -72,15 +70,8 @@ lib/ipaddr.ts(373,12): error TS2339: Property 'IPv4' does not exist on type '{}'
 lib/ipaddr.ts(384,12): error TS2339: Property 'IPv4' does not exist on type '{}'.
 lib/ipaddr.ts(406,12): error TS2339: Property 'IPv4' does not exist on type '{}'.
 lib/ipaddr.ts(478,12): error TS2339: Property 'IPv4' does not exist on type '{}'.
-lib/ipaddr.ts(479,9): error TS2322: Type 'number' is not assignable to type 'string'.
-lib/ipaddr.ts(480,13): error TS2365: Operator '<' cannot be applied to types 'string' and 'number'.
-lib/ipaddr.ts(480,27): error TS2365: Operator '>' cannot be applied to types 'string' and 'number'.
-lib/ipaddr.ts(486,45): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lib/ipaddr.ts(494,52): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lib/ipaddr.ts(494,76): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/ipaddr.ts(479,27): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 lib/ipaddr.ts(501,12): error TS2339: Property 'IPv6' does not exist on type '{}'.
-lib/ipaddr.ts(511,38): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lib/ipaddr.ts(511,55): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/ipaddr.ts(534,27): error TS2554: Expected 2 arguments, but got 1.
 lib/ipaddr.ts(535,25): error TS2554: Expected 2 arguments, but got 1.
 lib/ipaddr.ts(536,25): error TS2554: Expected 2 arguments, but got 1.
@@ -97,7 +88,7 @@ lib/ipaddr.ts(551,19): error TS2554: Expected 2 arguments, but got 1.
 lib/ipaddr.ts(552,23): error TS2554: Expected 2 arguments, but got 1.
 lib/ipaddr.ts(553,26): error TS2554: Expected 2 arguments, but got 1.
 lib/ipaddr.ts(554,23): error TS2554: Expected 2 arguments, but got 1.
-lib/ipaddr.ts(581,59): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+lib/ipaddr.ts(568,49): error TS2749: 'IPv6' refers to a value, but is being used as a type here. Did you mean 'typeof IPv6'?
 lib/ipaddr.ts(637,27): error TS2339: Property 'subnetMatch' does not exist on type '{}'.
 lib/ipaddr.ts(686,31): error TS2339: Property 'IPv4' does not exist on type '{}'.
 lib/ipaddr.ts(749,12): error TS2339: Property 'IPv6' does not exist on type '{}'.
@@ -108,12 +99,7 @@ lib/ipaddr.ts(815,12): error TS2339: Property 'IPv6' does not exist on type '{}'
 lib/ipaddr.ts(825,12): error TS2339: Property 'IPv6' does not exist on type '{}'.
 lib/ipaddr.ts(845,12): error TS2339: Property 'IPv6' does not exist on type '{}'.
 lib/ipaddr.ts(884,12): error TS2339: Property 'IPv6' does not exist on type '{}'.
-lib/ipaddr.ts(885,9): error TS2322: Type 'number' is not assignable to type 'string'.
-lib/ipaddr.ts(886,13): error TS2365: Operator '<' cannot be applied to types 'string' and 'number'.
-lib/ipaddr.ts(886,27): error TS2365: Operator '>' cannot be applied to types 'string' and 'number'.
-lib/ipaddr.ts(892,45): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lib/ipaddr.ts(900,52): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lib/ipaddr.ts(900,76): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/ipaddr.ts(885,27): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 lib/ipaddr.ts(907,12): error TS2339: Property 'fromByteArray' does not exist on type '{}'.
 lib/ipaddr.ts(911,31): error TS2339: Property 'IPv4' does not exist on type '{}'.
 lib/ipaddr.ts(913,31): error TS2339: Property 'IPv6' does not exist on type '{}'.

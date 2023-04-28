@@ -1,1 +1,1 @@
-export default function (n: number, elem: any): any[];
+export default function (n: Node, elem: Node): any[];

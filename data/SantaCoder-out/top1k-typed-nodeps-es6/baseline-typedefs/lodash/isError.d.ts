@@ -1,2 +1,2 @@
-declare function isError(value: any): boolean;
+declare function isError(value: unknown): boolean;
 export default isError;

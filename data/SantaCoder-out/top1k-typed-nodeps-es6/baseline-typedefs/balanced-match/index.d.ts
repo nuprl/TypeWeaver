@@ -6,6 +6,6 @@ declare function balanced(a: string, b: string, str: string): {
     post: string;
 };
 declare namespace balanced {
-    var range: (a: number, b: number, str: string) => any;
+    var range: (a: string, b: string, str: string) => any;
 }
 export default balanced;

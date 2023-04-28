@@ -1,1 +1,1 @@
-export default function cleanRaw(node: Node, item: Node, list: Node): void;
+export default function cleanRaw(node: Node, item: Node, list: NodeList): void;

@@ -1,2 +1,2 @@
-declare function buildFragment(elems: Node[], context: Document, scripts: Node[], selection: Node, ignored: Node[]): DocumentFragment;
+declare function buildFragment(elems: ArrayLike<Element>, context: Document, scripts: Array<string>, selection: Selection, ignored: Array<Element>): DocumentFragment;
 export default buildFragment;

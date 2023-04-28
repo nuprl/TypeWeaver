@@ -1,2 +1,2 @@
-declare function mapKey(object: Object, iteratee: Function): {};
+declare function mapKey(object: any, iteratee: Function): {};
 export default mapKey;

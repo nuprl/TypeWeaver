@@ -1,24 +1,27 @@
+lib/attributes.ts(6,30): error TS2304: Cannot find name 'PrefixMap'.
+lib/attributes.ts(12,37): error TS2304: Cannot find name 'PrefixMap'.
 lib/attributes.ts(29,6): error TS2339: Property 'replace' does not exist on type 'boolean'.
 lib/attributes.ts(99,11): error TS2554: Expected 1 arguments, but got 2.
 lib/attributes.ts(116,73): error TS2554: Expected 1 arguments, but got 2.
 lib/serialize.ts(4,8): error TS1192: Module '"lib/attributes"' has no default export.
 lib/serialize.ts(24,60): error TS2304: Cannot find name 'NamespaceMap'.
-lib/serialize.ts(24,85): error TS2304: Cannot find name 'NamespaceMap'.
+lib/serialize.ts(24,85): error TS2304: Cannot find name 'PrefixMap'.
+lib/serialize.ts(60,82): error TS2304: Cannot find name 'PrefixMap'.
 lib/serialize.ts(149,66): error TS2304: Cannot find name 'PrefixMap'.
-lib/serialize.ts(150,48): error TS2339: Property 'data' does not exist on type 'Node'.
-lib/serialize.ts(154,15): error TS2339: Property 'data' does not exist on type 'Node'.
-lib/serialize.ts(160,69): error TS2304: Cannot find name 'PrefixMap'.
-lib/serialize.ts(161,48): error TS2339: Property 'data' does not exist on type 'Node'.
-lib/serialize.ts(167,11): error TS2339: Property 'data' does not exist on type 'Node'.
-lib/serialize.ts(167,39): error TS2339: Property 'data' does not exist on type 'Node'.
-lib/serialize.ts(171,22): error TS2339: Property 'data' does not exist on type 'Node'.
+lib/serialize.ts(160,72): error TS2304: Cannot find name 'PrefixMap'.
+lib/serialize.ts(174,72): error TS2304: Cannot find name 'PrefixMap'.
+lib/serialize.ts(174,117): error TS2304: Cannot find name 'RefMap'.
 lib/serialize.ts(277,12): error TS2339: Property 'content' does not exist on type 'Element'.
 lib/serialize.ts(284,25): error TS2488: Type 'NodeListOf<ChildNode>' must have a '[Symbol.iterator]()' method that returns an iterator.
 lib/serialize.ts(305,69): error TS2304: Cannot find name 'PrefixMap'.
+lib/serialize.ts(305,114): error TS2304: Cannot find name 'Refs'.
 lib/serialize.ts(309,9): error TS2345: Argument of type 'Node' is not assignable to parameter of type 'Element'.
   Type 'Node' is missing the following properties from type 'Element': attributes, classList, className, clientHeight, and 114 more.
+lib/serialize.ts(324,31): error TS2345: Argument of type 'Node' is not assignable to parameter of type 'Comment'.
+  Type 'Node' is missing the following properties from type 'CharacterData': data, length, appendData, deleteData, and 9 more.
+lib/serialize.ts(326,28): error TS2345: Argument of type 'Node' is not assignable to parameter of type 'Text'.
+  Type 'Node' is missing the following properties from type 'Text': wholeText, splitText, data, length, and 12 more.
 lib/serialize.ts(337,9): error TS2345: Argument of type 'Node' is not assignable to parameter of type 'DocumentType'.
   Type 'Node' is missing the following properties from type 'DocumentType': name, publicId, systemId, after, and 3 more.
 lib/serialize.ts(352,36): error TS2345: Argument of type 'Node' is not assignable to parameter of type 'CDATASection'.
-  Type 'Node' is missing the following properties from type 'Text': wholeText, splitText, data, length, and 12 more.
 

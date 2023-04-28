@@ -1,4 +1,5 @@
-declare function getSupportLevel(stream: ReadableStream): false | {
+/// <reference types="node" />
+declare function getSupportLevel(stream: NodeJS.WriteStream): false | {
     level: number;
     hasBasic: boolean;
     has256: boolean;

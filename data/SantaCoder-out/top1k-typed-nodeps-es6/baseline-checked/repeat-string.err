@@ -2,20 +2,14 @@ benchmark/code/repeating.ts(3,23): error TS2307: Cannot find module 'repeating' 
 benchmark/helper.ts(5,20): error TS2307: Cannot find module 'repeat-string' or its corresponding type declarations.
 benchmark/helper.ts(6,22): error TS2307: Cannot find module 'isobject' or its corresponding type declarations.
 benchmark/helper.ts(7,18): error TS2307: Cannot find module 'text-table' or its corresponding type declarations.
-benchmark/helper.ts(42,27): error TS2304: Cannot find name 'Token'.
 benchmark/helper.ts(49,13): error TS2339: Property 'name' does not exist on type '{ num: number; val: string; }'.
-benchmark/helper.ts(66,15): error TS2339: Property 'name' does not exist on type 'string'.
 benchmark/helper.ts(66,42): error TS2554: Expected 2 arguments, but got 3.
-benchmark/helper.ts(66,66): error TS2339: Property 'val' does not exist on type 'string'.
 benchmark/helper.ts(74,7): error TS2339: Property 'name' does not exist on type '{ num: number; val: string; }'.
 benchmark/helper.ts(76,3): error TS2322: Type 'string' is not assignable to type 'number'.
-benchmark/helper.ts(90,27): error TS2339: Property 'num' does not exist on type 'string'.
-benchmark/helper.ts(90,33): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+benchmark/helper.ts(89,19): error TS2304: Cannot find name 'Token'.
 benchmark/index.ts(4,18): error TS2307: Cannot find module 'ansi-cyan' or its corresponding type declarations.
 benchmark/index.ts(5,25): error TS2307: Cannot find module 'yargs-parser' or its corresponding type declarations.
 benchmark/index.ts(7,19): error TS2307: Cannot find module 'benchmarked' or its corresponding type declarations.
-benchmark/index.ts(18,39): error TS2339: Property 'key' does not exist on type 'string'.
-benchmark/index.ts(18,52): error TS2339: Property 'key' does not exist on type 'string'.
-benchmark/index.ts(19,32): error TS2339: Property 'path' does not exist on type 'string'.
-benchmark/index.ts(20,20): error TS2339: Property 'run' does not exist on type 'string'.
+benchmark/index.ts(17,31): error TS2304: Cannot find name 'Code'.
+benchmark/index.ts(17,46): error TS2304: Cannot find name 'Fixture'.
 

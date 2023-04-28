@@ -1,2 +1,2 @@
-declare function findLastIndex(array: any[], predicate: any, fromIndex: number): number;
+declare function findLastIndex(array: any[], predicate: any, fromIndex: any): number;
 export default findLastIndex;

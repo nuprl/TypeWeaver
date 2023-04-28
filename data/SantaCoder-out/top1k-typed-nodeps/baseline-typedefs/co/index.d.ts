@@ -1,5 +1,5 @@
 declare var slice: (start?: number, end?: number) => any[];
-declare function co(gen: Generator): Promise<unknown>;
+declare function co(gen: Function): Promise<unknown>;
 declare namespace co {
     var co: typeof globalThis.co;
     var wrap: (fn: Function) => {

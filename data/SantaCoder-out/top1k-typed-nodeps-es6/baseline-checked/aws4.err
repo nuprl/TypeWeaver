@@ -1,11 +1,5 @@
 aws4.ts(10,73): error TS2345: Argument of type 'string' is not assignable to parameter of type 'BinaryToTextEncoding'.
 aws4.ts(14,68): error TS2345: Argument of type 'string' is not assignable to parameter of type 'BinaryToTextEncoding'.
-aws4.ts(19,47): error TS2769: No overload matches this call.
-  The last overload gave the following error.
-    Argument of type '(c: number) => string' is not assignable to parameter of type '(substring: string, ...args: any[]) => string'.
-      Types of parameters 'c' and 'substring' are incompatible.
-        Type 'string' is not assignable to type 'number'.
-aws4.ts(20,20): error TS2339: Property 'charCodeAt' does not exist on type 'number'.
 aws4.ts(44,55): error TS2552: Cannot find name 'Credentials'. Did you mean 'Credential'?
 aws4.ts(46,36): error TS2740: Type 'UrlWithStringQuery' is missing the following properties from type 'Request': cache, credentials, destination, headers, and 17 more.
 aws4.ts(48,25): error TS2540: Cannot assign to 'headers' because it is a read-only property.
@@ -38,23 +32,14 @@ aws4.ts(276,14): error TS2339: Property 'push' does not exist on type 'string'.
 aws4.ts(370,53): error TS2552: Cannot find name 'Credentials'. Did you mean 'Credential'?
 browser/index.ts(1,18): error TS2307: Cannot find module 'aws4' or its corresponding type declarations.
 example.ts(2,18): error TS2307: Cannot find module '.' or its corresponding type declarations.
-example.ts(5,59): error TS2552: Cannot find name 'Readable'. Did you mean '_Readable'?
 example.ts(17,1): error TS2739: Type '{ host: string; path: string; }' is missing the following properties from type '{ host: string; path: string; service: string; region: string; }': service, region
 example.ts(20,77): error TS2322: Type '{ host: string; path: string; signQuery: boolean; }' is not assignable to type '{ host: string; path: string; service: string; region: string; }'.
   Object literal may only specify known properties, and 'signQuery' does not exist in type '{ host: string; path: string; service: string; region: string; }'.
 example.ts(23,1): error TS2741: Property 'host' is missing in type '{ service: string; region: string; path: string; }' but required in type '{ host: string; path: string; service: string; region: string; }'.
 example.ts(26,1): error TS2739: Type '{ service: string; path: string; }' is missing the following properties from type '{ host: string; path: string; service: string; region: string; }': host, region
-lru.ts(59,10): error TS2339: Property 'prev' does not exist on type 'Node'.
-lru.ts(60,10): error TS2339: Property 'next' does not exist on type 'Node'.
-lru.ts(62,10): error TS2339: Property 'prev' does not exist on type 'Node'.
-lru.ts(63,10): error TS2339: Property 'next' does not exist on type 'Node'.
-lru.ts(64,10): error TS2339: Property 'next' does not exist on type 'Node'.
-lru.ts(79,27): error TS2339: Property 'next' does not exist on type 'Node'.
-lru.ts(80,19): error TS2339: Property 'prev' does not exist on type 'Node'.
-lru.ts(81,10): error TS2339: Property 'prev' does not exist on type 'Node'.
-lru.ts(81,27): error TS2339: Property 'next' does not exist on type 'Node'.
-lru.ts(84,26): error TS2339: Property 'prev' does not exist on type 'Node'.
-lru.ts(85,19): error TS2339: Property 'next' does not exist on type 'Node'.
-lru.ts(86,10): error TS2339: Property 'next' does not exist on type 'Node'.
-lru.ts(86,27): error TS2339: Property 'prev' does not exist on type 'Node'.
+lru.ts(18,40): error TS2304: Cannot find name 'K'.
+lru.ts(18,48): error TS2304: Cannot find name 'V'.
+lru.ts(51,57): error TS2304: Cannot find name 'DoublyLinkedListNode'.
+lru.ts(51,78): error TS2304: Cannot find name 'T'.
+lru.ts(77,52): error TS2749: 'DoublyLinkedNode' refers to a value, but is being used as a type here. Did you mean 'typeof DoublyLinkedNode'?
 

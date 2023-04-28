@@ -1,1 +1,1 @@
-export default function (...args: any[]): (...ignoredArgs: any) => any;
+export default function (...args: any[]): (...ignoredArgs: Function) => any;

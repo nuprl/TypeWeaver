@@ -2,7 +2,7 @@ declare var undefined: any;
 declare var $SyntaxError: SyntaxErrorConstructor;
 declare var $Function: FunctionConstructor;
 declare var $TypeError: TypeErrorConstructor;
-declare var getEvalledConstructor: (expressionSyntax: ExpressionSyntax) => any;
+declare var getEvalledConstructor: (expressionSyntax: string) => any;
 declare var $gOPD: (o: any, p: PropertyKey) => PropertyDescriptor;
 declare var throwTypeError: () => never;
 declare var ThrowTypeError: () => any;

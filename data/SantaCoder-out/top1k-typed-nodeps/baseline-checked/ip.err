@@ -7,8 +7,7 @@ lib/ip.ts(77,5): error TS2322: Type 'string' is not assignable to type 'any[]'.
 lib/ip.ts(78,21): error TS2339: Property 'replace' does not exist on type 'any[]'.
 lib/ip.ts(79,21): error TS2339: Property 'replace' does not exist on type 'any[]'.
 lib/ip.ts(103,26): error TS2339: Property 'toLowerCase' does not exist on type 'number'.
-lib/ip.ts(108,5): error TS2322: Type 'string' is not assignable to type 'number'.
-lib/ip.ts(114,7): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
+lib/ip.ts(110,31): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 lib/ip.ts(142,19): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/ip.ts(142,29): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/ip.ts(148,19): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.

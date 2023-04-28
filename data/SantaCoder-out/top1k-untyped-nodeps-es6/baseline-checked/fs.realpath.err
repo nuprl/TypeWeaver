@@ -1,24 +1,18 @@
 index.ts(14,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/SantaCoder-out/top1k-untyped-nodeps-es6/baseline/fs.realpath/old"' has no default export.
-index.ts(17,19): error TS2339: Property 'syscall' does not exist on type 'Error'.
-index.ts(18,8): error TS2339: Property 'code' does not exist on type 'Error'.
-index.ts(19,8): error TS2339: Property 'code' does not exist on type 'Error'.
-index.ts(20,8): error TS2339: Property 'code' does not exist on type 'Error'.
-index.ts(26,12): error TS2769: No overload matches this call.
+index.ts(26,35): error TS2769: No overload matches this call.
   Overload 1 of 4, '(path: PathLike, options: EncodingOption, callback: (err: ErrnoException, resolvedPath: string) => void): void', gave the following error.
     Argument of type 'Function' is not assignable to parameter of type '(err: ErrnoException, resolvedPath: string) => void'.
       Type 'Function' provides no match for the signature '(err: ErrnoException, resolvedPath: string): void'.
   Overload 2 of 4, '(path: PathLike, options: BufferEncodingOption, callback: (err: ErrnoException, resolvedPath: Buffer) => void): void', gave the following error.
-    Argument of type 'Object' is not assignable to parameter of type 'BufferEncodingOption'.
-      The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+    Argument of type 'Function' is not assignable to parameter of type '(err: ErrnoException, resolvedPath: Buffer) => void'.
+      Type 'Function' provides no match for the signature '(err: ErrnoException, resolvedPath: Buffer): void'.
   Overload 3 of 4, '(path: PathLike, options: EncodingOption, callback: (err: ErrnoException, resolvedPath: string | Buffer) => void): void', gave the following error.
     Argument of type 'Function' is not assignable to parameter of type '(err: ErrnoException, resolvedPath: string | Buffer) => void'.
       Type 'Function' provides no match for the signature '(err: ErrnoException, resolvedPath: string | Buffer): void'.
 index.ts(59,3): error TS2739: Type 'typeof realpath' is missing the following properties from type 'typeof realpath': __promisify__, native
-index.ts(60,3): error TS2741: Property 'native' is missing in type '(p: string, cache: Object) => any' but required in type 'typeof realpathSync'.
+index.ts(60,3): error TS2741: Property 'native' is missing in type '(p: string, cache: any) => any' but required in type 'typeof realpathSync'.
+old.ts(52,33): error TS2304: Cannot find name 'ErrnoException'.
 old.ts(54,19): error TS2551: Property 'throwDeprecation' does not exist on type 'Process'. Did you mean 'traceDeprecation'?
 old.ts(56,25): error TS2339: Property 'noDeprecation' does not exist on type 'Process'.
-old.ts(186,24): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'Function'.
-  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
-    Type 'Object' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
 old.ts(286,9): error TS2554: Expected 3 arguments, but got 2.
 

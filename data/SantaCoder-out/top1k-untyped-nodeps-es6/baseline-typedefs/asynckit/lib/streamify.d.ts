@@ -3,5 +3,5 @@ declare const _default: {
     callback: typeof wrapCallback;
 };
 export default _default;
-declare function wrapIterator(iterator: any): (item: any, key: any, cb: any) => any;
-declare function wrapCallback(callback: Function): (error: any, result: any) => any;
+declare function wrapIterator(iterator: Function): (item: any, key: string, cb: Function) => any;
+declare function wrapCallback(callback: Function): (error: Error, result: any) => any;

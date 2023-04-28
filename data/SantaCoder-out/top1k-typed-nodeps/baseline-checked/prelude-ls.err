@@ -103,10 +103,7 @@ browser/prelude-browser.ts(7,439): error TS2554: Expected 2 arguments, but got 1
 browser/prelude-browser.ts(10,9): error TS2554: Expected 2 arguments, but got 1.
 browser/prelude-browser.ts(14,10): error TS2554: Expected 2 arguments, but got 1.
 browser/prelude-browser.ts(16,8): error TS2554: Expected 2 arguments, but got 1.
-browser/prelude-browser.ts(20,22): error TS2304: Cannot find name 'Graph'.
-browser/prelude-browser.ts(24,17): error TS2304: Cannot find name 'Graph'.
 browser/prelude-browser.ts(30,8): error TS2554: Expected 2 arguments, but got 1.
-browser/prelude-browser.ts(64,37): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/prelude-browser.ts(75,10): error TS2554: Expected 1 arguments, but got 0.
 browser/prelude-browser.ts(80,8): error TS2554: Expected 2 arguments, but got 1.
 browser/prelude-browser.ts(88,7): error TS2554: Expected 2 arguments, but got 1.
@@ -117,8 +114,9 @@ browser/prelude-browser.ts(135,13): error TS2554: Expected 2 arguments, but got 
 browser/prelude-browser.ts(145,8): error TS2554: Expected 2 arguments, but got 1.
 browser/prelude-browser.ts(154,35): error TS2304: Cannot find name 'T'.
 browser/prelude-browser.ts(157,27): error TS2304: Cannot find name 'T'.
+browser/prelude-browser.ts(163,27): error TS2304: Cannot find name 'T'.
 browser/prelude-browser.ts(166,30): error TS2304: Cannot find name 'T'.
-browser/prelude-browser.ts(175,30): error TS2304: Cannot find name 'T'.
+browser/prelude-browser.ts(172,28): error TS2304: Cannot find name 'T'.
 browser/prelude-browser.ts(178,29): error TS2304: Cannot find name 'T'.
 browser/prelude-browser.ts(189,12): error TS2554: Expected 2 arguments, but got 1.
 browser/prelude-browser.ts(203,16): error TS2554: Expected 2 arguments, but got 1.
@@ -127,35 +125,27 @@ browser/prelude-browser.ts(214,9): error TS2554: Expected 2 arguments, but got 1
 browser/prelude-browser.ts(222,10): error TS2554: Expected 2 arguments, but got 1.
 browser/prelude-browser.ts(225,11): error TS2554: Expected 2 arguments, but got 1.
 browser/prelude-browser.ts(238,13): error TS2554: Expected 2 arguments, but got 1.
-browser/prelude-browser.ts(249,36): error TS2304: Cannot find name 'T'.
-browser/prelude-browser.ts(264,27): error TS2749: 'List' refers to a value, but is being used as a type here. Did you mean 'typeof List'?
-browser/prelude-browser.ts(264,32): error TS2304: Cannot find name 'A'.
-browser/prelude-browser.ts(284,29): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
-browser/prelude-browser.ts(284,35): error TS2304: Cannot find name 'Int'.
+browser/prelude-browser.ts(264,33): error TS2304: Cannot find name 'T'.
+browser/prelude-browser.ts(284,35): error TS2304: Cannot find name 'T'.
 browser/prelude-browser.ts(323,11): error TS2554: Expected 2 arguments, but got 1.
 browser/prelude-browser.ts(337,11): error TS2554: Expected 2 arguments, but got 1.
-browser/prelude-browser.ts(361,29): error TS2304: Cannot find name 'T'.
 browser/prelude-browser.ts(371,7): error TS2554: Expected 2 arguments, but got 1.
 browser/prelude-browser.ts(381,7): error TS2554: Expected 2 arguments, but got 1.
 browser/prelude-browser.ts(402,12): error TS2554: Expected 2 arguments, but got 1.
 browser/prelude-browser.ts(403,27): error TS2345: Argument of type 'Function' is not assignable to parameter of type '(a: any, b: any) => number'.
   Type 'Function' provides no match for the signature '(a: any, b: any): number'.
 browser/prelude-browser.ts(405,10): error TS2554: Expected 2 arguments, but got 1.
-browser/prelude-browser.ts(406,39): error TS2304: Cannot find name 'T'.
-browser/prelude-browser.ts(406,45): error TS2304: Cannot find name 'T'.
 browser/prelude-browser.ts(465,13): error TS2554: Expected 2 arguments, but got 1.
 browser/prelude-browser.ts(476,13): error TS2554: Expected 2 arguments, but got 1.
 browser/prelude-browser.ts(487,16): error TS2554: Expected 2 arguments, but got 1.
+browser/prelude-browser.ts(487,60): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/prelude-browser.ts(499,18): error TS2554: Expected 2 arguments, but got 1.
 browser/prelude-browser.ts(505,9): error TS2554: Expected 2 arguments, but got 1.
 browser/prelude-browser.ts(509,10): error TS2554: Expected 2 arguments, but got 1.
 browser/prelude-browser.ts(516,9): error TS2554: Expected 2 arguments, but got 1.
 browser/prelude-browser.ts(519,8): error TS2554: Expected 2 arguments, but got 1.
-browser/prelude-browser.ts(519,39): error TS2304: Cannot find name 'T'.
 browser/prelude-browser.ts(526,8): error TS2554: Expected 2 arguments, but got 1.
-browser/prelude-browser.ts(526,39): error TS2304: Cannot find name 'T'.
 browser/prelude-browser.ts(533,11): error TS2554: Expected 2 arguments, but got 1.
-browser/prelude-browser.ts(533,48): error TS2304: Cannot find name 'T'.
 browser/prelude-browser.ts(536,13): error TS2554: Expected 2 arguments, but got 1.
 browser/prelude-browser.ts(548,13): error TS2554: Expected 2 arguments, but got 1.
 browser/prelude-browser.ts(560,8): error TS2554: Expected 2 arguments, but got 1.
@@ -166,24 +156,26 @@ browser/prelude-browser.ts(580,11): error TS2554: Expected 2 arguments, but got 
 browser/prelude-browser.ts(580,44): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/prelude-browser.ts(580,55): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/prelude-browser.ts(643,6): error TS2554: Expected 2 arguments, but got 1.
-browser/prelude-browser.ts(643,43): error TS2304: Cannot find name 'T'.
 browser/prelude-browser.ts(650,13): error TS2554: Expected 2 arguments, but got 1.
 browser/prelude-browser.ts(660,15): error TS2554: Expected 2 arguments, but got 1.
 browser/prelude-browser.ts(671,13): error TS2554: Expected 2 arguments, but got 1.
 browser/prelude-browser.ts(681,15): error TS2554: Expected 2 arguments, but got 1.
-browser/prelude-browser.ts(764,37): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/prelude-browser.ts(775,10): error TS2554: Expected 1 arguments, but got 0.
 browser/prelude-browser.ts(797,7): error TS2554: Expected 2 arguments, but got 1.
-browser/prelude-browser.ts(797,27): error TS2304: Cannot find name 'Observable'.
-browser/prelude-browser.ts(797,51): error TS2304: Cannot find name 'Observable'.
+browser/prelude-browser.ts(797,27): error TS2749: 'y$' refers to a value, but is being used as a type here. Did you mean 'typeof y$'?
+browser/prelude-browser.ts(797,35): error TS2304: Cannot find name 'z$'.
 browser/prelude-browser.ts(800,7): error TS2554: Expected 2 arguments, but got 1.
 browser/prelude-browser.ts(816,8): error TS2554: Expected 2 arguments, but got 1.
 browser/prelude-browser.ts(819,7): error TS2554: Expected 2 arguments, but got 1.
+browser/prelude-browser.ts(819,27): error TS2749: 'y$' refers to a value, but is being used as a type here. Did you mean 'typeof y$'?
+browser/prelude-browser.ts(819,35): error TS2304: Cannot find name 'z$'.
 browser/prelude-browser.ts(822,7): error TS2554: Expected 2 arguments, but got 1.
 browser/prelude-browser.ts(825,7): error TS2554: Expected 2 arguments, but got 1.
-browser/prelude-browser.ts(825,27): error TS2503: Cannot find namespace 'Rx'.
-browser/prelude-browser.ts(825,51): error TS2503: Cannot find namespace 'Rx'.
+browser/prelude-browser.ts(827,11): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+browser/prelude-browser.ts(827,18): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 browser/prelude-browser.ts(837,7): error TS2554: Expected 2 arguments, but got 1.
+browser/prelude-browser.ts(837,27): error TS2304: Cannot find name 'Observable'.
+browser/prelude-browser.ts(837,43): error TS2304: Cannot find name 'Observable'.
 browser/prelude-browser.ts(846,9): error TS2554: Expected 2 arguments, but got 1.
 browser/prelude-browser.ts(864,7): error TS2554: Expected 2 arguments, but got 1.
 browser/prelude-browser.ts(875,7): error TS2554: Expected 2 arguments, but got 1.
@@ -196,39 +188,30 @@ browser/prelude-browser.ts(1012,10): error TS2554: Expected 2 arguments, but got
 browser/prelude-browser.ts(1022,10): error TS2554: Expected 2 arguments, but got 1.
 browser/prelude-browser.ts(1032,13): error TS2554: Expected 2 arguments, but got 1.
 browser/prelude-browser.ts(1042,8): error TS2554: Expected 2 arguments, but got 1.
-browser/prelude-browser.ts(1067,37): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 browser/prelude-browser.ts(1078,10): error TS2554: Expected 1 arguments, but got 0.
 browser/prelude-browser.ts(1083,9): error TS2554: Expected 2 arguments, but got 1.
+browser/prelude-browser.ts(1084,20): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(splitter: { [Symbol.split](string: string, limit?: number): string[]; }, limit?: number): string[]', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type '{ [Symbol.split](string: string, limit?: number): string[]; }'.
+      Property '[Symbol.split]' is missing in type 'String' but required in type '{ [Symbol.split](string: string, limit?: number): string[]; }'.
+  Overload 2 of 2, '(separator: string | RegExp, limit?: number): string[]', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'string | RegExp'.
 browser/prelude-browser.ts(1086,8): error TS2554: Expected 2 arguments, but got 1.
-browser/prelude-browser.ts(1096,13): error TS2339: Property 'join' does not exist on type 'string'.
 browser/prelude-browser.ts(1116,10): error TS2554: Expected 2 arguments, but got 1.
-browser/prelude-browser.ts(1133,44): error TS2769: No overload matches this call.
-  The last overload gave the following error.
-    Argument of type '(arg$: number, lower: number, upper: number) => string' is not assignable to parameter of type '(substring: string, ...args: any[]) => string'.
-      Types of parameters 'arg$' and 'substring' are incompatible.
-        Type 'string' is not assignable to type 'number'.
-browser/prelude-browser.ts(1134,33): error TS2339: Property 'length' does not exist on type 'number'.
-browser/prelude-browser.ts(1136,15): error TS2339: Property 'toLowerCase' does not exist on type 'number'.
-browser/prelude-browser.ts(1137,27): error TS2769: No overload matches this call.
-  The last overload gave the following error.
-    Argument of type '(arg$: number, upper: number[]) => any' is not assignable to parameter of type '(substring: string, ...args: any[]) => string'.
-      Types of parameters 'arg$' and 'substring' are incompatible.
-        Type 'string' is not assignable to type 'number'.
-browser/prelude-browser.ts(1141,20): error TS2339: Property 'toLowerCase' does not exist on type 'number[]'.
-browser/prelude-browser.ts(1160,37): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+browser/prelude-browser.ts(1128,50): error TS2304: Cannot find name 'lower'.
+browser/prelude-browser.ts(1128,60): error TS2304: Cannot find name 'upper'.
 browser/prelude-browser.ts(1171,10): error TS2554: Expected 1 arguments, but got 0.
 browser/prelude-browser.ts(1184,10): error TS2554: Expected 2 arguments, but got 1.
+browser/prelude-browser.ts(1184,43): error TS2304: Cannot find name 'Any'.
 browser/prelude-browser.ts(1187,13): error TS2554: Expected 2 arguments, but got 1.
-browser/prelude-browser.ts(1339,37): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+browser/prelude-browser.ts(1187,32): error TS2304: Cannot find name 'Int'.
+browser/prelude-browser.ts(1187,40): error TS2304: Cannot find name 'a'.
 browser/prelude-browser.ts(1350,10): error TS2554: Expected 1 arguments, but got 0.
 lib/Func.ts(3,9): error TS2554: Expected 2 arguments, but got 1.
 lib/Func.ts(7,10): error TS2554: Expected 2 arguments, but got 1.
 lib/Func.ts(9,8): error TS2554: Expected 2 arguments, but got 1.
-lib/Func.ts(13,22): error TS2304: Cannot find name 'Graph'.
-lib/Func.ts(17,17): error TS2304: Cannot find name 'Graph'.
 lib/Func.ts(23,8): error TS2554: Expected 2 arguments, but got 1.
 lib/Func.ts(57,10): error TS2393: Duplicate function implementation.
-lib/Func.ts(57,37): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/Func.ts(68,10): error TS2554: Expected 1 arguments, but got 0.
 lib/List.ts(3,8): error TS2554: Expected 2 arguments, but got 1.
 lib/List.ts(11,7): error TS2554: Expected 2 arguments, but got 1.
@@ -239,38 +222,24 @@ lib/List.ts(58,13): error TS2554: Expected 2 arguments, but got 1.
 lib/List.ts(68,8): error TS2554: Expected 2 arguments, but got 1.
 lib/List.ts(77,35): error TS2304: Cannot find name 'T'.
 lib/List.ts(80,27): error TS2304: Cannot find name 'T'.
+lib/List.ts(86,27): error TS2304: Cannot find name 'T'.
 lib/List.ts(89,30): error TS2304: Cannot find name 'T'.
-lib/List.ts(95,28): error TS2304: Cannot find name 'T'.
-lib/List.ts(98,30): error TS2304: Cannot find name 'T'.
 lib/List.ts(112,12): error TS2554: Expected 2 arguments, but got 1.
 lib/List.ts(126,16): error TS2554: Expected 2 arguments, but got 1.
 lib/List.ts(134,18): error TS2554: Expected 2 arguments, but got 1.
 lib/List.ts(137,9): error TS2554: Expected 2 arguments, but got 1.
-lib/List.ts(137,29): error TS2304: Cannot find name 'a'.
-lib/List.ts(137,40): error TS2304: Cannot find name 'b'.
-lib/List.ts(137,49): error TS2304: Cannot find name 'c'.
 lib/List.ts(145,10): error TS2554: Expected 2 arguments, but got 1.
-lib/List.ts(145,29): error TS2304: Cannot find name 'A'.
-lib/List.ts(145,36): error TS2749: 'List' refers to a value, but is being used as a type here. Did you mean 'typeof List'?
-lib/List.ts(145,41): error TS2304: Cannot find name 'A'.
 lib/List.ts(148,11): error TS2554: Expected 2 arguments, but got 1.
 lib/List.ts(161,13): error TS2554: Expected 2 arguments, but got 1.
-lib/List.ts(172,30): error TS2304: Cannot find name 'T'.
-lib/List.ts(187,27): error TS2749: 'List' refers to a value, but is being used as a type here. Did you mean 'typeof List'?
-lib/List.ts(187,32): error TS2304: Cannot find name 'A'.
-lib/List.ts(207,29): error TS2749: 'List' refers to a value, but is being used as a type here. Did you mean 'typeof List'?
-lib/List.ts(207,34): error TS2304: Cannot find name 'Int'.
+lib/List.ts(187,33): error TS2304: Cannot find name 'T'.
+lib/List.ts(207,35): error TS2304: Cannot find name 'T'.
 lib/List.ts(246,11): error TS2554: Expected 2 arguments, but got 1.
 lib/List.ts(260,11): error TS2554: Expected 2 arguments, but got 1.
-lib/List.ts(274,30): error TS2304: Cannot find name 'T'.
 lib/List.ts(294,7): error TS2554: Expected 2 arguments, but got 1.
 lib/List.ts(304,7): error TS2554: Expected 2 arguments, but got 1.
-lib/List.ts(314,27): error TS2304: Cannot find name 'T'.
 lib/List.ts(325,12): error TS2554: Expected 2 arguments, but got 1.
 lib/List.ts(326,27): error TS2345: Argument of type 'Function' is not assignable to parameter of type '(a: any, b: any) => number'.
 lib/List.ts(328,10): error TS2554: Expected 2 arguments, but got 1.
-lib/List.ts(329,39): error TS2304: Cannot find name 'T'.
-lib/List.ts(329,45): error TS2304: Cannot find name 'T'.
 lib/List.ts(388,13): error TS2554: Expected 2 arguments, but got 1.
 lib/List.ts(399,13): error TS2554: Expected 2 arguments, but got 1.
 lib/List.ts(410,16): error TS2554: Expected 2 arguments, but got 1.
@@ -279,9 +248,7 @@ lib/List.ts(428,9): error TS2554: Expected 2 arguments, but got 1.
 lib/List.ts(432,10): error TS2554: Expected 2 arguments, but got 1.
 lib/List.ts(439,9): error TS2554: Expected 2 arguments, but got 1.
 lib/List.ts(442,8): error TS2554: Expected 2 arguments, but got 1.
-lib/List.ts(442,45): error TS2304: Cannot find name 'T'.
 lib/List.ts(449,8): error TS2554: Expected 2 arguments, but got 1.
-lib/List.ts(449,39): error TS2304: Cannot find name 'T'.
 lib/List.ts(456,11): error TS2554: Expected 2 arguments, but got 1.
 lib/List.ts(459,13): error TS2554: Expected 2 arguments, but got 1.
 lib/List.ts(471,13): error TS2554: Expected 2 arguments, but got 1.
@@ -289,11 +256,10 @@ lib/List.ts(483,8): error TS2554: Expected 2 arguments, but got 1.
 lib/List.ts(486,13): error TS2554: Expected 2 arguments, but got 1.
 lib/List.ts(487,24): error TS2554: Expected 0 arguments, but got 2.
 lib/List.ts(489,7): error TS2554: Expected 2 arguments, but got 1.
-lib/List.ts(489,33): error TS2304: Cannot find name 'T'.
-lib/List.ts(489,47): error TS2304: Cannot find name 'T'.
 lib/List.ts(503,11): error TS2554: Expected 2 arguments, but got 1.
+lib/List.ts(503,44): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/List.ts(503,55): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/List.ts(566,6): error TS2554: Expected 2 arguments, but got 1.
-lib/List.ts(566,43): error TS2304: Cannot find name 'T'.
 lib/List.ts(573,13): error TS2554: Expected 2 arguments, but got 1.
 lib/List.ts(583,15): error TS2554: Expected 2 arguments, but got 1.
 lib/List.ts(594,13): error TS2554: Expected 2 arguments, but got 1.
@@ -301,14 +267,18 @@ lib/List.ts(604,15): error TS2554: Expected 2 arguments, but got 1.
 lib/List.ts(687,10): error TS2393: Duplicate function implementation.
 lib/List.ts(698,10): error TS2554: Expected 1 arguments, but got 0.
 lib/Num.ts(3,7): error TS2554: Expected 2 arguments, but got 1.
+lib/Num.ts(3,27): error TS2749: 'y$' refers to a value, but is being used as a type here. Did you mean 'typeof y$'?
+lib/Num.ts(3,35): error TS2304: Cannot find name 'z$'.
 lib/Num.ts(6,7): error TS2554: Expected 2 arguments, but got 1.
 lib/Num.ts(22,8): error TS2554: Expected 2 arguments, but got 1.
 lib/Num.ts(25,7): error TS2554: Expected 2 arguments, but got 1.
+lib/Num.ts(25,27): error TS2749: 'y$' refers to a value, but is being used as a type here. Did you mean 'typeof y$'?
+lib/Num.ts(25,35): error TS2304: Cannot find name 'z$'.
 lib/Num.ts(28,7): error TS2554: Expected 2 arguments, but got 1.
 lib/Num.ts(31,7): error TS2554: Expected 2 arguments, but got 1.
-lib/Num.ts(31,27): error TS2304: Cannot find name 'Observable'.
-lib/Num.ts(31,48): error TS2304: Cannot find name 'Observable'.
 lib/Num.ts(43,7): error TS2554: Expected 2 arguments, but got 1.
+lib/Num.ts(43,27): error TS2304: Cannot find name 'Observable'.
+lib/Num.ts(43,43): error TS2304: Cannot find name 'Observable'.
 lib/Num.ts(52,9): error TS2554: Expected 2 arguments, but got 1.
 lib/Num.ts(70,7): error TS2554: Expected 2 arguments, but got 1.
 lib/Num.ts(81,7): error TS2554: Expected 2 arguments, but got 1.
@@ -323,25 +293,25 @@ lib/Obj.ts(97,10): error TS2554: Expected 2 arguments, but got 1.
 lib/Obj.ts(107,13): error TS2554: Expected 2 arguments, but got 1.
 lib/Obj.ts(117,8): error TS2554: Expected 2 arguments, but got 1.
 lib/Obj.ts(142,10): error TS2393: Duplicate function implementation.
-lib/Obj.ts(142,37): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/Obj.ts(153,10): error TS2554: Expected 1 arguments, but got 0.
 lib/Str.ts(3,9): error TS2554: Expected 2 arguments, but got 1.
+lib/Str.ts(4,20): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(splitter: { [Symbol.split](string: string, limit?: number): string[]; }, limit?: number): string[]', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type '{ [Symbol.split](string: string, limit?: number): string[]; }'.
+  Overload 2 of 2, '(separator: string | RegExp, limit?: number): string[]', gave the following error.
+    Argument of type 'String' is not assignable to parameter of type 'string | RegExp'.
 lib/Str.ts(6,8): error TS2554: Expected 2 arguments, but got 1.
-lib/Str.ts(7,18): error TS2345: Argument of type 'String' is not assignable to parameter of type 'string'.
-  'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 lib/Str.ts(36,10): error TS2554: Expected 2 arguments, but got 1.
-lib/Str.ts(53,44): error TS2769: No overload matches this call.
-  The last overload gave the following error.
-    Argument of type '(arg$: number, lower: number, upper: number) => string' is not assignable to parameter of type '(substring: string, ...args: any[]) => string'.
-      Types of parameters 'arg$' and 'substring' are incompatible.
-        Type 'string' is not assignable to type 'number'.
-lib/Str.ts(54,33): error TS2339: Property 'length' does not exist on type 'number'.
-lib/Str.ts(56,15): error TS2339: Property 'toLowerCase' does not exist on type 'number'.
+lib/Str.ts(48,50): error TS2304: Cannot find name 'lower'.
+lib/Str.ts(48,60): error TS2304: Cannot find name 'upper'.
 lib/Str.ts(80,10): error TS2393: Duplicate function implementation.
 lib/Str.ts(91,10): error TS2554: Expected 1 arguments, but got 0.
 lib/index.ts(11,10): error TS2554: Expected 2 arguments, but got 1.
+lib/index.ts(11,32): error TS2749: 'Str' refers to a value, but is being used as a type here. Did you mean 'typeof Str'?
+lib/index.ts(11,40): error TS2304: Cannot find name 'Any'.
 lib/index.ts(14,13): error TS2554: Expected 2 arguments, but got 1.
+lib/index.ts(14,32): error TS2304: Cannot find name 'Int'.
+lib/index.ts(14,40): error TS2304: Cannot find name 'a'.
 lib/index.ts(166,10): error TS2393: Duplicate function implementation.
-lib/index.ts(166,37): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/index.ts(177,10): error TS2554: Expected 1 arguments, but got 0.
 

@@ -9,5 +9,5 @@ declare class Emitter {
 }
 declare function removeListeners(fn: Function, listeners: Array<Function>): any;
 declare function mixin(target: any): any;
-declare function copy(target: any, provider: any, keys: string[]): void;
+declare function copy(target: Object, provider: Object, keys: string[]): void;
 declare function define(obj: any, key: string, val: any): void;

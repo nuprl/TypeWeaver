@@ -1,2 +1,2 @@
-declare const _default: (symbol: Symbol) => any;
+declare const _default: (symbol: symbol) => any;
 export default _default;

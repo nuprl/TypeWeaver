@@ -4,7 +4,6 @@ benchmarks/index.ts(15,18): error TS2307: Cannot find module 'bigi' or its corre
 benchmarks/index.ts(16,28): error TS2307: Cannot find module 'js-big-integer' or its corresponding type declarations.
 benchmarks/index.ts(17,52): error TS2307: Cannot find module 'biginteger' or its corresponding type declarations.
 benchmarks/index.ts(18,33): error TS2307: Cannot find module 'xorshift.js' or its corresponding type declarations.
-benchmarks/index.ts(87,27): error TS2304: Cannot find name 'Bot'.
 benchmarks/index.ts(110,11): error TS2339: Property 'a10base' does not exist on type '{}'.
 benchmarks/index.ts(111,11): error TS2339: Property 'a16base' does not exist on type '{}'.
 benchmarks/index.ts(114,11): error TS2339: Property 'a1' does not exist on type '{}'.
@@ -65,135 +64,61 @@ benchmarks/index.ts(165,11): error TS2339: Property 'b7j' does not exist on type
 benchmarks/index.ts(166,11): error TS2339: Property 'as7' does not exist on type '{}'.
 benchmarks/index.ts(166,25): error TS2339: Property 'a7' does not exist on type '{}'.
 benchmarks/index.ts(166,45): error TS2339: Property 'a7' does not exist on type '{}'.
-benchmarks/index.ts(174,30): error TS2304: Cannot find name 'Fixture'.
-benchmarks/index.ts(201,28): error TS2304: Cannot find name 'Fixture'.
-benchmarks/index.ts(213,31): error TS2304: Cannot find name 'Fixture'.
-benchmarks/index.ts(216,30): error TS2304: Cannot find name 'Fixture'.
-benchmarks/index.ts(219,30): error TS2304: Cannot find name 'Fixture'.
-benchmarks/index.ts(222,28): error TS2304: Cannot find name 'Fixture'.
-benchmarks/index.ts(225,30): error TS2304: Cannot find name 'Fixture'.
+benchmarks/index.ts(207,47): error TS2304: Cannot find name 'Fixture'.
 benchmarks/index.ts(228,47): error TS2304: Cannot find name 'Fixture'.
-benchmarks/index.ts(246,28): error TS2304: Cannot find name 'Fixture'.
+benchmarks/index.ts(249,30): error TS2304: Cannot find name 'Fixture'.
 benchmarks/index.ts(252,47): error TS2304: Cannot find name 'Fixture'.
-benchmarks/index.ts(258,31): error TS2304: Cannot find name 'Fixture'.
-benchmarks/index.ts(261,30): error TS2304: Cannot find name 'Fixture'.
-benchmarks/index.ts(264,30): error TS2304: Cannot find name 'Fixture'.
-benchmarks/index.ts(267,28): error TS2304: Cannot find name 'Fixture'.
-benchmarks/index.ts(270,28): error TS2304: Cannot find name 'Fixture'.
-benchmarks/index.ts(273,30): error TS2304: Cannot find name 'Fixture'.
-benchmarks/index.ts(276,47): error TS2304: Cannot find name 'Fixture'.
-benchmarks/index.ts(282,31): error TS2304: Cannot find name 'Fixture'.
-benchmarks/index.ts(285,30): error TS2304: Cannot find name 'Fixture'.
-benchmarks/index.ts(288,30): error TS2304: Cannot find name 'Fixture'.
-benchmarks/index.ts(297,30): error TS2304: Cannot find name 'Fixture'.
 benchmarks/index.ts(300,47): error TS2304: Cannot find name 'Fixture'.
 benchmarks/index.ts(306,31): error TS2304: Cannot find name 'Fixture'.
-benchmarks/index.ts(312,30): error TS2304: Cannot find name 'Fixture'.
-benchmarks/index.ts(315,30): error TS2304: Cannot find name 'Fixture'.
-benchmarks/index.ts(318,28): error TS2304: Cannot find name 'Fixture'.
-benchmarks/index.ts(321,28): error TS2304: Cannot find name 'Fixture'.
-benchmarks/index.ts(324,30): error TS2304: Cannot find name 'Fixture'.
-benchmarks/index.ts(327,47): error TS2304: Cannot find name 'Fixture'.
-benchmarks/index.ts(339,30): error TS2304: Cannot find name 'Fixture'.
-benchmarks/index.ts(342,30): error TS2304: Cannot find name 'Fixture'.
-benchmarks/index.ts(351,30): error TS2304: Cannot find name 'Fixture'.
-benchmarks/index.ts(360,31): error TS2304: Cannot find name 'Fixture'.
-benchmarks/index.ts(363,30): error TS2304: Cannot find name 'Fixture'.
-benchmarks/index.ts(366,30): error TS2304: Cannot find name 'Fixture'.
-benchmarks/index.ts(369,28): error TS2304: Cannot find name 'Fixture'.
-benchmarks/index.ts(372,28): error TS2304: Cannot find name 'Fixture'.
-benchmarks/index.ts(375,30): error TS2304: Cannot find name 'Fixture'.
+benchmarks/index.ts(333,31): error TS2304: Cannot find name 'Fixture'.
+benchmarks/index.ts(354,47): error TS2304: Cannot find name 'Fixture'.
 benchmarks/index.ts(378,47): error TS2304: Cannot find name 'Fixture'.
 benchmarks/index.ts(384,31): error TS2304: Cannot find name 'Fixture'.
-benchmarks/index.ts(387,30): error TS2304: Cannot find name 'Fixture'.
-benchmarks/index.ts(390,30): error TS2304: Cannot find name 'Fixture'.
-benchmarks/index.ts(393,28): error TS2304: Cannot find name 'Fixture'.
-benchmarks/index.ts(396,30): error TS2304: Cannot find name 'Fixture'.
 benchmarks/index.ts(399,47): error TS2304: Cannot find name 'Fixture'.
-benchmarks/index.ts(408,30): error TS2304: Cannot find name 'Fixture'.
-benchmarks/index.ts(453,31): error TS2304: Cannot find name 'Fixture'.
-benchmarks/index.ts(462,31): error TS2304: Cannot find name 'Fixture'.
-benchmarks/index.ts(471,31): error TS2304: Cannot find name 'GcdFixture'.
 benchmarks/index.ts(480,31): error TS2304: Cannot find name 'Fixture'.
 benchmarks/index.ts(487,13): error TS2339: Property 'a1' does not exist on type '{}'.
 benchmarks/index.ts(493,13): error TS2339: Property 'a1j' does not exist on type '{}'.
 lib/bn.ts(12,10): error TS2339: Property 'super_' does not exist on type 'Function'.
-lib/bn.ts(71,14): error TS2339: Property 'cmp' does not exist on type 'number'.
-lib/bn.ts(76,14): error TS2339: Property 'cmp' does not exist on type 'number'.
+lib/bn.ts(70,32): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
+lib/bn.ts(70,43): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
+lib/bn.ts(75,32): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
+lib/bn.ts(75,43): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
+lib/bn.ts(80,77): error TS2304: Cannot find name 'Endian'.
 lib/bn.ts(89,9): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
 lib/bn.ts(92,5): error TS2554: Expected 2 arguments, but got 1.
 lib/bn.ts(94,21): error TS2339: Property 'toString' does not exist on type 'never'.
 lib/bn.ts(101,24): error TS2339: Property 'length' does not exist on type 'number'.
 lib/bn.ts(128,7): error TS2554: Expected 2 arguments, but got 1.
 lib/bn.ts(145,5): error TS2554: Expected 2 arguments, but got 1.
-lib/bn.ts(145,26): error TS2339: Property 'length' does not exist on type 'number'.
-lib/bn.ts(146,16): error TS2339: Property 'length' does not exist on type 'number'.
-lib/bn.ts(152,36): error TS2339: Property 'length' does not exist on type 'number'.
-lib/bn.ts(161,23): error TS2339: Property 'length' does not exist on type 'number'.
-lib/bn.ts(172,37): error TS2339: Property 'length' does not exist on type 'number'.
-lib/bn.ts(212,37): error TS2339: Property 'length' does not exist on type 'number'.
-lib/bn.ts(224,23): error TS2339: Property 'length' does not exist on type 'number'.
-lib/bn.ts(225,26): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
-lib/bn.ts(236,32): error TS2339: Property 'length' does not exist on type 'number'.
-lib/bn.ts(237,70): error TS2339: Property 'length' does not exist on type 'number'.
-lib/bn.ts(238,26): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
-lib/bn.ts(327,44): error TS2304: Cannot find name 'WordArray'.
-lib/bn.ts(338,10): error TS2339: Property 'words' does not exist on type 'Uint32Array'.
-lib/bn.ts(338,22): error TS2339: Property 'words' does not exist on type 'Uint32Array'.
-lib/bn.ts(339,10): error TS2540: Cannot assign to 'length' because it is a read-only property.
-lib/bn.ts(340,10): error TS2339: Property 'negative' does not exist on type 'Uint32Array'.
-lib/bn.ts(340,25): error TS2339: Property 'negative' does not exist on type 'Uint32Array'.
-lib/bn.ts(341,10): error TS2339: Property 'red' does not exist on type 'Uint32Array'.
-lib/bn.ts(341,20): error TS2339: Property 'red' does not exist on type 'Uint32Array'.
-lib/bn.ts(345,10): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Uint32Array'.
+lib/bn.ts(327,44): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
+lib/bn.ts(337,24): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
+lib/bn.ts(337,33): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
+lib/bn.ts(344,46): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
 lib/bn.ts(349,13): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/bn.ts(349,13): error TS2554: Expected 3 arguments, but got 1.
 lib/bn.ts(475,24): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
-lib/bn.ts(566,48): error TS2304: Cannot find name 'TClass'.
-lib/bn.ts(566,62): error TS2304: Cannot find name 'NativeUInt'.
-lib/bn.ts(723,27): error TS2339: Property 'bitLength' does not exist on type 'number'.
-lib/bn.ts(729,21): error TS2339: Property 'words' does not exist on type 'number'.
-lib/bn.ts(785,30): error TS2339: Property 'length' does not exist on type 'number'.
-lib/bn.ts(789,29): error TS2339: Property 'length' does not exist on type 'number'.
-lib/bn.ts(790,43): error TS2339: Property 'words' does not exist on type 'number'.
+lib/bn.ts(722,29): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
+lib/bn.ts(784,43): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
+lib/bn.ts(796,41): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
 lib/bn.ts(797,5): error TS2554: Expected 2 arguments, but got 1.
-lib/bn.ts(797,33): error TS2339: Property 'negative' does not exist on type 'number'.
-lib/bn.ts(803,27): error TS2339: Property 'length' does not exist on type 'number'.
-lib/bn.ts(804,16): error TS2339: Property 'clone' does not exist on type 'number'.
-lib/bn.ts(808,27): error TS2339: Property 'length' does not exist on type 'number'.
-lib/bn.ts(809,16): error TS2339: Property 'clone' does not exist on type 'number'.
-lib/bn.ts(816,27): error TS2339: Property 'length' does not exist on type 'number'.
-lib/bn.ts(823,43): error TS2339: Property 'words' does not exist on type 'number'.
+lib/bn.ts(802,39): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
+lib/bn.ts(807,41): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
+lib/bn.ts(813,45): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
+lib/bn.ts(831,43): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
 lib/bn.ts(832,5): error TS2554: Expected 2 arguments, but got 1.
-lib/bn.ts(832,33): error TS2339: Property 'negative' does not exist on type 'number'.
-lib/bn.ts(838,27): error TS2339: Property 'length' does not exist on type 'number'.
-lib/bn.ts(839,16): error TS2339: Property 'clone' does not exist on type 'number'.
-lib/bn.ts(843,27): error TS2339: Property 'length' does not exist on type 'number'.
-lib/bn.ts(844,16): error TS2339: Property 'clone' does not exist on type 'number'.
-lib/bn.ts(852,27): error TS2339: Property 'length' does not exist on type 'number'.
+lib/bn.ts(837,41): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
+lib/bn.ts(842,43): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
+lib/bn.ts(848,45): error TS2304: Cannot find name 'BigNumber'.
+lib/bn.ts(875,43): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
 lib/bn.ts(876,5): error TS2554: Expected 2 arguments, but got 1.
-lib/bn.ts(876,33): error TS2339: Property 'negative' does not exist on type 'number'.
-lib/bn.ts(882,27): error TS2339: Property 'length' does not exist on type 'number'.
-lib/bn.ts(883,16): error TS2339: Property 'clone' does not exist on type 'number'.
-lib/bn.ts(887,27): error TS2339: Property 'length' does not exist on type 'number'.
-lib/bn.ts(888,16): error TS2339: Property 'clone' does not exist on type 'number'.
+lib/bn.ts(881,41): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
+lib/bn.ts(886,43): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
 lib/bn.ts(893,5): error TS2554: Expected 2 arguments, but got 1.
 lib/bn.ts(925,5): error TS2554: Expected 2 arguments, but got 1.
-lib/bn.ts(946,36): error TS2339: Property 'negative' does not exist on type 'number'.
-lib/bn.ts(953,43): error TS2339: Property 'negative' does not exist on type 'number'.
-lib/bn.ts(954,11): error TS2339: Property 'negative' does not exist on type 'number'.
-lib/bn.ts(956,11): error TS2339: Property 'negative' does not exist on type 'number'.
-lib/bn.ts(962,27): error TS2339: Property 'length' does not exist on type 'number'.
-lib/bn.ts(999,13): error TS2339: Property 'negative' does not exist on type 'number'.
-lib/bn.ts(1000,11): error TS2339: Property 'negative' does not exist on type 'number'.
-lib/bn.ts(1002,11): error TS2339: Property 'negative' does not exist on type 'number'.
-lib/bn.ts(1004,20): error TS2339: Property 'negative' does not exist on type 'number'.
-lib/bn.ts(1006,17): error TS2339: Property 'sub' does not exist on type 'number'.
-lib/bn.ts(1011,27): error TS2339: Property 'length' does not exist on type 'number'.
-lib/bn.ts(1013,16): error TS2339: Property 'clone' does not exist on type 'number'.
-lib/bn.ts(1019,13): error TS2339: Property 'negative' does not exist on type 'number'.
-lib/bn.ts(1020,11): error TS2339: Property 'negative' does not exist on type 'number'.
-lib/bn.ts(1022,11): error TS2339: Property 'negative' does not exist on type 'number'.
+lib/bn.ts(942,43): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
+lib/bn.ts(997,41): error TS2304: Cannot find name 'BigNumber'.
+lib/bn.ts(1017,43): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
+lib/bn.ts(1083,41): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
 lib/bn.ts(1087,30): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
 lib/bn.ts(1087,39): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
 lib/bn.ts(1087,48): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
@@ -205,60 +130,40 @@ lib/bn.ts(1200,25): error TS2339: Property 'negative' does not exist on type 'Ui
 lib/bn.ts(1200,40): error TS2339: Property 'negative' does not exist on type 'Uint8Array'.
 lib/bn.ts(1201,9): error TS2540: Cannot assign to 'length' because it is a read-only property.
 lib/bn.ts(1699,11): error TS2540: Cannot assign to 'length' because it is a read-only property.
-lib/bn.ts(1709,28): error TS2304: Cannot find name 'BigNumber'.
-lib/bn.ts(1709,44): error TS2304: Cannot find name 'BigNumber'.
-lib/bn.ts(1709,60): error TS2304: Cannot find name 'BigNumber'.
+lib/bn.ts(1709,28): error TS2304: Cannot find name 'Big'.
+lib/bn.ts(1709,38): error TS2304: Cannot find name 'Big'.
+lib/bn.ts(1709,48): error TS2304: Cannot find name 'Big'.
 lib/bn.ts(1750,30): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
 lib/bn.ts(1750,39): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
 lib/bn.ts(1750,48): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
-lib/bn.ts(1759,33): error TS2339: Property 'length' does not exist on type 'number'.
-lib/bn.ts(1760,35): error TS2339: Property 'length' does not exist on type 'number'.
-lib/bn.ts(1761,31): error TS2345: Argument of type 'number' is not assignable to parameter of type 'Uint8Array'.
-lib/bn.ts(1806,51): error TS2304: Cannot find name 'RBT'.
-lib/bn.ts(1806,61): error TS2304: Cannot find name 'RWS'.
-lib/bn.ts(1806,71): error TS2304: Cannot find name 'IWS'.
-lib/bn.ts(1806,82): error TS2304: Cannot find name 'RTWS'.
-lib/bn.ts(1806,94): error TS2304: Cannot find name 'ITWS'.
-lib/bn.ts(1806,103): error TS2304: Cannot find name 'usize'.
-lib/bn.ts(1813,55): error TS2304: Cannot find name 'ReadStream'.
-lib/bn.ts(1813,74): error TS2304: Cannot find name 'WriteStream'.
-lib/bn.ts(1813,95): error TS2304: Cannot find name 'ReadTransformStream'.
-lib/bn.ts(1813,124): error TS2304: Cannot find name 'WriteTransformStream'.
-lib/bn.ts(1813,164): error TS2304: Cannot find name 'ReadableByteStream'.
+lib/bn.ts(1757,45): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
+lib/bn.ts(1757,54): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
 lib/bn.ts(1916,5): error TS2554: Expected 2 arguments, but got 1.
 lib/bn.ts(1917,5): error TS2554: Expected 2 arguments, but got 1.
-lib/bn.ts(1930,36): error TS2339: Property 'length' does not exist on type 'number'.
-lib/bn.ts(1930,46): error TS2339: Property 'length' does not exist on type 'number'.
-lib/bn.ts(1944,20): error TS2339: Property 'words' does not exist on type 'number[]'.
-lib/bn.ts(1947,23): error TS2339: Property 'words' does not exist on type 'number'.
-lib/bn.ts(1947,32): error TS2339: Property 'length' does not exist on type 'number'.
-lib/bn.ts(1948,23): error TS2339: Property 'words' does not exist on type 'number'.
-lib/bn.ts(1948,32): error TS2339: Property 'length' does not exist on type 'number'.
-lib/bn.ts(1964,9): error TS2339: Property 'negative' does not exist on type 'number[]'.
-lib/bn.ts(1964,22): error TS2339: Property 'negative' does not exist on type 'number'.
-lib/bn.ts(1964,35): error TS2339: Property 'negative' does not exist on type 'number'.
-lib/bn.ts(1965,20): error TS2339: Property 'length' does not exist on type 'number'.
-lib/bn.ts(1965,31): error TS2339: Property 'length' does not exist on type 'number'.
-lib/bn.ts(1966,16): error TS2339: Property '_strip' does not exist on type 'number[]'.
+lib/bn.ts(1944,20): error TS2339: Property 'words' does not exist on type 'Int32Array'.
+lib/bn.ts(1947,23): error TS2339: Property 'words' does not exist on type 'Int32Array'.
+lib/bn.ts(1948,23): error TS2339: Property 'words' does not exist on type 'Int32Array'.
+lib/bn.ts(1964,9): error TS2339: Property 'negative' does not exist on type 'Int32Array'.
+lib/bn.ts(1964,22): error TS2339: Property 'negative' does not exist on type 'Int32Array'.
+lib/bn.ts(1964,35): error TS2339: Property 'negative' does not exist on type 'Int32Array'.
+lib/bn.ts(1965,9): error TS2540: Cannot assign to 'length' because it is a read-only property.
+lib/bn.ts(1966,16): error TS2339: Property '_strip' does not exist on type 'Int32Array'.
 lib/bn.ts(1970,41): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
 lib/bn.ts(1971,15): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/bn.ts(1971,15): error TS2554: Expected 3 arguments, but got 1.
-lib/bn.ts(1977,43): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
 lib/bn.ts(1978,15): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/bn.ts(1978,15): error TS2554: Expected 3 arguments, but got 1.
+lib/bn.ts(1979,45): error TS2339: Property 'length' does not exist on type 'number'.
 lib/bn.ts(1992,5): error TS2554: Expected 2 arguments, but got 1.
 lib/bn.ts(1993,5): error TS2554: Expected 2 arguments, but got 1.
+lib/bn.ts(2030,41): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
 lib/bn.ts(2032,32): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/bn.ts(2032,32): error TS2554: Expected 3 arguments, but got 1.
 lib/bn.ts(2053,5): error TS2554: Expected 2 arguments, but got 1.
 lib/bn.ts(2092,5): error TS2554: Expected 2 arguments, but got 1.
 lib/bn.ts(2100,5): error TS2554: Expected 2 arguments, but got 1.
-lib/bn.ts(2103,12): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lib/bn.ts(2103,20): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lib/bn.ts(2119,21): error TS2339: Property 'words' does not exist on type 'true'.
-lib/bn.ts(2121,19): error TS2339: Property 'length' does not exist on type 'true'.
-lib/bn.ts(2145,19): error TS2339: Property 'words' does not exist on type 'true'.
-lib/bn.ts(2145,37): error TS2339: Property 'length' does not exist on type 'true'.
+lib/bn.ts(2119,21): error TS2339: Property 'words' does not exist on type 'number[]'.
+lib/bn.ts(2145,19): error TS2339: Property 'words' does not exist on type 'number[]'.
 lib/bn.ts(2158,5): error TS2554: Expected 2 arguments, but got 1.
 lib/bn.ts(2182,5): error TS2554: Expected 2 arguments, but got 1.
 lib/bn.ts(2198,5): error TS2554: Expected 2 arguments, but got 1.
@@ -266,25 +171,14 @@ lib/bn.ts(2228,5): error TS2554: Expected 2 arguments, but got 1.
 lib/bn.ts(2229,5): error TS2554: Expected 2 arguments, but got 1.
 lib/bn.ts(2269,5): error TS2554: Expected 2 arguments, but got 1.
 lib/bn.ts(2270,5): error TS2554: Expected 2 arguments, but got 1.
-lib/bn.ts(2315,19): error TS2339: Property 'length' does not exist on type 'number'.
-lib/bn.ts(2322,25): error TS2339: Property 'length' does not exist on type 'number'.
-lib/bn.ts(2324,24): error TS2339: Property 'words' does not exist on type 'number'.
+lib/bn.ts(2314,59): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
 lib/bn.ts(2338,5): error TS2554: Expected 2 arguments, but got 1.
-lib/bn.ts(2351,35): error TS2339: Property 'length' does not exist on type 'number'.
-lib/bn.ts(2357,17): error TS2339: Property 'words' does not exist on type 'number'.
-lib/bn.ts(2357,25): error TS2339: Property 'length' does not exist on type 'number'.
-lib/bn.ts(2361,13): error TS2339: Property 'ushln' does not exist on type 'number'.
-lib/bn.ts(2363,15): error TS2339: Property 'words' does not exist on type 'number'.
-lib/bn.ts(2363,23): error TS2339: Property 'length' does not exist on type 'number'.
-lib/bn.ts(2367,26): error TS2339: Property 'length' does not exist on type 'number'.
+lib/bn.ts(2350,51): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
 lib/bn.ts(2370,9): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
 lib/bn.ts(2371,11): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/bn.ts(2371,11): error TS2554: Expected 3 arguments, but got 1.
-lib/bn.ts(2388,27): error TS2339: Property 'length' does not exist on type 'number'.
-lib/bn.ts(2389,20): error TS2339: Property 'length' does not exist on type 'number'.
 lib/bn.ts(2414,9): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
 lib/bn.ts(2428,47): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
-lib/bn.ts(2428,57): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
 lib/bn.ts(2429,5): error TS2554: Expected 2 arguments, but got 1.
 lib/bn.ts(2433,14): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/bn.ts(2433,14): error TS2554: Expected 3 arguments, but got 1.
@@ -296,15 +190,17 @@ lib/bn.ts(2510,16): error TS2350: Only a void function can be called with the 'n
 lib/bn.ts(2510,16): error TS2554: Expected 3 arguments, but got 1.
 lib/bn.ts(2516,14): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/bn.ts(2516,14): error TS2554: Expected 3 arguments, but got 1.
-lib/bn.ts(2546,20): error TS2339: Property 'ushrn' does not exist on type 'number'.
-lib/bn.ts(2547,18): error TS2339: Property 'andln' does not exist on type 'number'.
+lib/bn.ts(2524,41): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
+lib/bn.ts(2529,41): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
+lib/bn.ts(2533,43): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
+lib/bn.ts(2538,51): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
 lib/bn.ts(2561,5): error TS2554: Expected 2 arguments, but got 1.
+lib/bn.ts(2578,45): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
 lib/bn.ts(2582,5): error TS2554: Expected 2 arguments, but got 1.
+lib/bn.ts(2595,43): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
+lib/bn.ts(2599,41): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
 lib/bn.ts(2600,5): error TS2554: Expected 2 arguments, but got 1.
-lib/bn.ts(2600,14): error TS2339: Property 'negative' does not exist on type 'bigint'.
 lib/bn.ts(2601,5): error TS2554: Expected 2 arguments, but got 1.
-lib/bn.ts(2601,15): error TS2339: Property 'isZero' does not exist on type 'bigint'.
-lib/bn.ts(2604,15): error TS2339: Property 'clone' does not exist on type 'bigint'.
 lib/bn.ts(2613,13): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/bn.ts(2613,13): error TS2554: Expected 3 arguments, but got 1.
 lib/bn.ts(2614,13): error TS2350: Only a void function can be called with the 'new' keyword.
@@ -320,80 +216,58 @@ lib/bn.ts(2694,14): error TS2350: Only a void function can be called with the 'n
 lib/bn.ts(2694,14): error TS2554: Expected 3 arguments, but got 1.
 lib/bn.ts(2695,14): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/bn.ts(2695,14): error TS2554: Expected 3 arguments, but got 1.
-lib/bn.ts(2747,41): error TS2304: Cannot find name 'BigNumber'.
+lib/bn.ts(2747,41): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
+lib/bn.ts(2787,43): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
 lib/bn.ts(2806,5): error TS2554: Expected 2 arguments, but got 1.
-lib/bn.ts(2868,36): error TS2339: Property 'negative' does not exist on type 'number'.
-lib/bn.ts(2869,36): error TS2339: Property 'negative' does not exist on type 'number'.
-lib/bn.ts(2879,27): error TS2339: Property 'length' does not exist on type 'number'.
-lib/bn.ts(2880,27): error TS2339: Property 'length' does not exist on type 'number'.
-lib/bn.ts(2885,19): error TS2339: Property 'words' does not exist on type 'number'.
-lib/bn.ts(2943,20): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
-lib/bn.ts(2949,16): error TS2339: Property 'convertTo' does not exist on type 'CanvasRenderingContext2D'.
-lib/bn.ts(3037,29): error TS2339: Property 'red' does not exist on type 'number'.
+lib/bn.ts(2867,41): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
+lib/bn.ts(2877,43): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
+lib/bn.ts(2934,39): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
+lib/bn.ts(2946,45): error TS2503: Cannot find namespace 'BN'.
+lib/bn.ts(2957,53): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
+lib/bn.ts(2962,51): error TS2503: Cannot find namespace 'BN'.
+lib/bn.ts(2967,47): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
+lib/bn.ts(2972,49): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
+lib/bn.ts(2977,47): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
+lib/bn.ts(2982,49): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
+lib/bn.ts(2987,47): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
+lib/bn.ts(2992,47): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
+lib/bn.ts(2998,49): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
+lib/bn.ts(3036,47): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
 lib/bn.ts(3054,14): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/bn.ts(3054,14): error TS2554: Expected 3 arguments, but got 2.
 lib/bn.ts(3056,14): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/bn.ts(3056,14): error TS2554: Expected 3 arguments, but got 1.
 lib/bn.ts(3062,15): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/bn.ts(3062,15): error TS2554: Expected 3 arguments, but got 1.
-lib/bn.ts(3076,13): error TS2339: Property 'iadd' does not exist on type 'number'.
-lib/bn.ts(3077,16): error TS2339: Property 'bitLength' does not exist on type 'number'.
-lib/bn.ts(3080,38): error TS2339: Property 'ucmp' does not exist on type 'number'.
-lib/bn.ts(3082,9): error TS2339: Property 'words' does not exist on type 'number'.
-lib/bn.ts(3083,9): error TS2339: Property 'length' does not exist on type 'number'.
-lib/bn.ts(3085,9): error TS2339: Property 'isub' does not exist on type 'number'.
-lib/bn.ts(3087,13): error TS2339: Property 'strip' does not exist on type 'number'.
-lib/bn.ts(3089,11): error TS2339: Property 'strip' does not exist on type 'number'.
-lib/bn.ts(3092,11): error TS2339: Property '_strip' does not exist on type 'number'.
-lib/bn.ts(3100,11): error TS2339: Property 'iushrn' does not exist on type 'Uint32Array'.
-lib/bn.ts(3104,16): error TS2339: Property 'imul' does not exist on type 'bigint'.
-lib/bn.ts(3121,14): error TS2339: Property 'words' does not exist on type 'string'.
-lib/bn.ts(3121,31): error TS2339: Property 'words' does not exist on type 'string'.
-lib/bn.ts(3123,12): error TS2540: Cannot assign to 'length' because it is a read-only property.
-lib/bn.ts(3126,13): error TS2339: Property 'words' does not exist on type 'string'.
-lib/bn.ts(3127,13): error TS2540: Cannot assign to 'length' because it is a read-only property.
-lib/bn.ts(3132,22): error TS2339: Property 'words' does not exist on type 'string'.
-lib/bn.ts(3133,12): error TS2339: Property 'words' does not exist on type 'string'.
-lib/bn.ts(3133,25): error TS2540: Cannot assign to 'length' because it is a read-only property.
-lib/bn.ts(3136,24): error TS2339: Property 'words' does not exist on type 'string'.
-lib/bn.ts(3137,13): error TS2339: Property 'words' does not exist on type 'string'.
-lib/bn.ts(3141,11): error TS2339: Property 'words' does not exist on type 'string'.
-lib/bn.ts(3143,13): error TS2540: Cannot assign to 'length' because it is a read-only property.
-lib/bn.ts(3145,13): error TS2540: Cannot assign to 'length' because it is a read-only property.
-lib/bn.ts(3151,9): error TS2339: Property 'words' does not exist on type 'number'.
-lib/bn.ts(3151,19): error TS2339: Property 'length' does not exist on type 'number'.
-lib/bn.ts(3152,9): error TS2339: Property 'words' does not exist on type 'number'.
-lib/bn.ts(3152,19): error TS2339: Property 'length' does not exist on type 'number'.
-lib/bn.ts(3153,9): error TS2339: Property 'length' does not exist on type 'number'.
-lib/bn.ts(3157,29): error TS2339: Property 'length' does not exist on type 'number'.
-lib/bn.ts(3158,19): error TS2339: Property 'words' does not exist on type 'number'.
-lib/bn.ts(3160,11): error TS2339: Property 'words' does not exist on type 'number'.
-lib/bn.ts(3165,13): error TS2339: Property 'words' does not exist on type 'number'.
-lib/bn.ts(3165,23): error TS2339: Property 'length' does not exist on type 'number'.
-lib/bn.ts(3166,11): error TS2339: Property 'length' does not exist on type 'number'.
-lib/bn.ts(3167,15): error TS2339: Property 'words' does not exist on type 'number'.
-lib/bn.ts(3167,25): error TS2339: Property 'length' does not exist on type 'number'.
-lib/bn.ts(3168,13): error TS2339: Property 'length' does not exist on type 'number'.
-lib/bn.ts(3202,29): error TS2339: Property 'length' does not exist on type 'number'.
-lib/bn.ts(3203,21): error TS2339: Property 'words' does not exist on type 'number'.
-lib/bn.ts(3207,11): error TS2339: Property 'words' does not exist on type 'number'.
-lib/bn.ts(3211,11): error TS2339: Property 'words' does not exist on type 'number'.
-lib/bn.ts(3211,21): error TS2339: Property 'length' does not exist on type 'number'.
-lib/bn.ts(3247,16): error TS2339: Property 'gtn' does not exist on type 'never'.
-lib/bn.ts(3254,14): error TS2339: Property 'negative' does not exist on type 'number'.
-lib/bn.ts(3255,14): error TS2339: Property 'red' does not exist on type 'number'.
-lib/bn.ts(3267,10): error TS2345: Argument of type 'number' is not assignable to parameter of type 'Uint32Array'.
-lib/bn.ts(3267,15): error TS2339: Property 'umod' does not exist on type 'number'.
-lib/bn.ts(3271,40): error TS2304: Cannot find name 'BigNumberish'.
-lib/bn.ts(3282,17): error TS2339: Property 'add' does not exist on type 'number'.
-lib/bn.ts(3292,17): error TS2339: Property 'iadd' does not exist on type 'number'.
-lib/bn.ts(3302,17): error TS2339: Property 'sub' does not exist on type 'number'.
-lib/bn.ts(3312,17): error TS2339: Property 'isub' does not exist on type 'number'.
-lib/bn.ts(3321,24): error TS2339: Property 'ushln' does not exist on type 'number'.
-lib/bn.ts(3326,24): error TS2339: Property 'imul' does not exist on type 'number'.
-lib/bn.ts(3331,24): error TS2339: Property 'mul' does not exist on type 'number'.
-lib/bn.ts(3334,42): error TS2304: Cannot find name 'Complex'.
-lib/bn.ts(3342,42): error TS2304: Cannot find name 'BigNumber'.
+lib/bn.ts(3067,53): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
+lib/bn.ts(3100,11): error TS2339: Property 'iushrn' does not exist on type 'Uint8Array'.
+lib/bn.ts(3103,49): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
+lib/bn.ts(3115,49): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
+lib/bn.ts(3115,61): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
+lib/bn.ts(3149,47): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
+lib/bn.ts(3199,49): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
+lib/bn.ts(3241,20): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
+lib/bn.ts(3253,50): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
+lib/bn.ts(3258,50): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
+lib/bn.ts(3258,57): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
+lib/bn.ts(3264,42): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
+lib/bn.ts(3271,40): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
+lib/bn.ts(3279,40): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
+lib/bn.ts(3279,47): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
+lib/bn.ts(3289,42): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
+lib/bn.ts(3289,49): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
+lib/bn.ts(3299,40): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
+lib/bn.ts(3299,47): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
+lib/bn.ts(3309,42): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
+lib/bn.ts(3309,49): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
+lib/bn.ts(3319,40): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
+lib/bn.ts(3324,42): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
+lib/bn.ts(3324,49): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
+lib/bn.ts(3329,40): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
+lib/bn.ts(3329,47): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
+lib/bn.ts(3334,42): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
+lib/bn.ts(3338,40): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
+lib/bn.ts(3342,42): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
 lib/bn.ts(3346,5): error TS2554: Expected 2 arguments, but got 1.
 lib/bn.ts(3350,28): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/bn.ts(3350,28): error TS2554: Expected 3 arguments, but got 1.
@@ -405,31 +279,28 @@ lib/bn.ts(3372,9): error TS2554: Expected 3 arguments, but got 1.
 lib/bn.ts(3387,7): error TS2554: Expected 2 arguments, but got 1.
 lib/bn.ts(3388,27): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/bn.ts(3388,27): error TS2554: Expected 3 arguments, but got 1.
-lib/bn.ts(3400,17): error TS2339: Property '_invmp' does not exist on type 'bigint'.
-lib/bn.ts(3410,13): error TS2339: Property 'isZero' does not exist on type 'number'.
+lib/bn.ts(3399,42): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
+lib/bn.ts(3409,40): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
+lib/bn.ts(3409,49): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
 lib/bn.ts(3410,30): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/bn.ts(3410,30): error TS2554: Expected 3 arguments, but got 1.
-lib/bn.ts(3411,13): error TS2339: Property 'cmpn' does not exist on type 'number'.
-lib/bn.ts(3411,37): error TS2339: Property 'clone' does not exist on type 'number'.
 lib/bn.ts(3415,14): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/bn.ts(3415,14): error TS2554: Expected 3 arguments, but got 1.
-lib/bn.ts(3424,21): error TS2339: Property 'bitLength' does not exist on type 'number'.
-lib/bn.ts(3429,18): error TS2339: Property 'length' does not exist on type 'number'.
-lib/bn.ts(3430,22): error TS2339: Property 'words' does not exist on type 'number'.
-lib/bn.ts(3458,17): error TS2339: Property 'umod' does not exist on type 'Uint8Array'.
-lib/bn.ts(3463,58): error TS2304: Cannot find name 'BigNumber'.
+lib/bn.ts(3457,54): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
+lib/bn.ts(3463,58): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
+lib/bn.ts(3473,33): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
+lib/bn.ts(3477,21): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
 lib/bn.ts(3485,14): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/bn.ts(3485,14): error TS2554: Expected 3 arguments, but got 1.
-lib/bn.ts(3496,26): error TS2339: Property 'ushln' does not exist on type 'number'.
-lib/bn.ts(3500,27): error TS2339: Property 'mul' does not exist on type 'number'.
-lib/bn.ts(3505,43): error TS2304: Cannot find name 'BigNumber'.
-lib/bn.ts(3505,57): error TS2304: Cannot find name 'BigNumber'.
-lib/bn.ts(3527,11): error TS2339: Property 'isZero' does not exist on type 'number'.
-lib/bn.ts(3527,25): error TS2339: Property 'isZero' does not exist on type 'number'.
+lib/bn.ts(3495,55): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
+lib/bn.ts(3499,59): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
+lib/bn.ts(3505,43): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
+lib/bn.ts(3505,50): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
+lib/bn.ts(3526,41): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
+lib/bn.ts(3526,48): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
 lib/bn.ts(3527,42): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/bn.ts(3527,42): error TS2554: Expected 3 arguments, but got 1.
-lib/bn.ts(3529,15): error TS2339: Property 'mul' does not exist on type 'number'.
-lib/bn.ts(3544,27): error TS2339: Property '_invmp' does not exist on type 'number'.
+lib/bn.ts(3542,43): error TS2749: 'BN' refers to a value, but is being used as a type here. Did you mean 'typeof BN'?
 util/genCombMulTo.ts(4,10): error TS2393: Duplicate function implementation.
 util/genCombMulTo10.ts(3,10): error TS2393: Duplicate function implementation.
 

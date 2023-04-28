@@ -1,2 +1,2 @@
-declare function setWith(object: any, path: any[], value: any, customizer: any): any;
+declare function setWith(object: any, path: string[], value: any, customizer: Function): any;
 export default setWith;

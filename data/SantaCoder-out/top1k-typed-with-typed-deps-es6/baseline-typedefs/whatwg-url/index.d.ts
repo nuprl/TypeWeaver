@@ -12,4 +12,4 @@ export declare const setThePassword: any;
 export declare const cannotHaveAUsernamePasswordPort: any;
 export declare const hasAnOpaquePath: any;
 export declare const percentDecodeString: (input: string) => Uint8Array;
-export declare const percentDecodeBytes: (input: string) => Uint8Array;
+export declare const percentDecodeBytes: (input: Uint8Array) => Uint8Array;

@@ -1,16 +1,13 @@
-lib/called-in-order.ts(8,32): error TS2304: Cannot find name 'SpyMap'.
-lib/called-in-order.ts(8,32): error TS4078: Parameter 'callMap' of exported function has or is using private name 'SpyMap'.
-lib/called-in-order.ts(8,45): error TS2304: Cannot find name 'Spy'.
-lib/called-in-order.ts(8,45): error TS4078: Parameter 'spy' of exported function has or is using private name 'Spy'.
-lib/called-in-order.ts(19,38): error TS2304: Cannot find name 'SpyMap'.
-lib/called-in-order.ts(19,38): error TS4078: Parameter 'callMap' of exported function has or is using private name 'SpyMap'.
-lib/called-in-order.ts(19,51): error TS2304: Cannot find name 'Spy'.
-lib/called-in-order.ts(19,51): error TS4078: Parameter 'spy' of exported function has or is using private name 'Spy'.
-lib/called-in-order.ts(19,78): error TS2304: Cannot find name 'Spy'.
-lib/called-in-order.ts(19,78): error TS4078: Parameter 'spies' of exported function has or is using private name 'Spy'.
+lib/called-in-order.ts(8,42): error TS2304: Cannot find name 'Spy'.
+lib/called-in-order.ts(8,42): error TS4078: Parameter 'spy' of exported function has or is using private name 'Spy'.
+lib/called-in-order.ts(19,38): error TS2304: Cannot find name 'SpyCallMap'.
+lib/called-in-order.ts(19,38): error TS4078: Parameter 'callMap' of exported function has or is using private name 'SpyCallMap'.
+lib/called-in-order.ts(19,55): error TS2304: Cannot find name 'SinonSpy'.
+lib/called-in-order.ts(19,55): error TS4078: Parameter 'spy' of exported function has or is using private name 'SinonSpy'.
+lib/called-in-order.ts(19,87): error TS2304: Cannot find name 'SinonSpy'.
+lib/called-in-order.ts(19,87): error TS4078: Parameter 'spies' of exported function has or is using private name 'SinonSpy'.
 lib/called-in-order.ts(49,31): error TS2304: Cannot find name 'Spy'.
 lib/called-in-order.ts(49,31): error TS4078: Parameter 'spies' of exported function has or is using private name 'Spy'.
-lib/every.ts(16,13): error TS2339: Property 'forEach' does not exist on type 'Object'.
 lib/function-name.ts(16,18): error TS2339: Property 'displayName' does not exist on type 'Function'.
 lib/order-by-first-call.ts(32,34): error TS2304: Cannot find name 'Spy'.
 lib/order-by-first-call.ts(32,34): error TS4078: Parameter 'spies' of exported function has or is using private name 'Spy'.

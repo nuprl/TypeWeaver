@@ -11,12 +11,12 @@ declare const _default: {
     fixModulesField: (data: any) => void;
     fixKeywordsField: (data: any) => void;
     fixVersionField: (data: any, strict: boolean) => boolean;
-    fixPeople: (data: Person) => void;
+    fixPeople: (data: any) => void;
     fixNameField: (data: any, options: any) => void;
-    fixDescriptionField: (data: any) => void;
+    fixDescriptionField: (data: PackageJson) => void;
     fixReadmeField: (data: any) => void;
     fixBugsField: (data: any) => void;
-    fixHomepageField: (data: any) => boolean;
-    fixLicenseField: (data: any) => any;
+    fixHomepageField: (data: PackageJson) => boolean;
+    fixLicenseField: (data: PackageJson) => any;
 };
 export default _default;

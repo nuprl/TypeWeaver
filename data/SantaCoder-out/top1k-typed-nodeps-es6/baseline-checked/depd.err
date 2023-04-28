@@ -2,23 +2,16 @@ benchmark/wrapfunction.ts(6,23): error TS2307: Cannot find module 'benchmark' or
 benchmark/wrapfunction.ts(8,24): error TS2307: Cannot find module 'beautify-benchmark' or its corresponding type declarations.
 benchmark/wrapproperty.ts(6,23): error TS2307: Cannot find module 'benchmark' or its corresponding type declarations.
 benchmark/wrapproperty.ts(8,24): error TS2307: Cannot find module 'beautify-benchmark' or its corresponding type declarations.
-index.ts(56,44): error TS2304: Cannot find name 'T'.
 index.ts(141,35): error TS2304: Cannot find name 'EventEmitter'.
 index.ts(154,15): error TS2339: Property 'noDeprecation' does not exist on type 'Process'.
 index.ts(251,18): error TS2769: No overload matches this call.
   The last overload gave the following error.
     Argument of type '"deprecation"' is not assignable to parameter of type 'Signals'.
-index.ts(268,23): error TS2339: Property 'getFileName' does not exist on type 'Node'.
-index.ts(269,23): error TS2339: Property 'getLineNumber' does not exist on type 'Node'.
-index.ts(270,23): error TS2339: Property 'getColumnNumber' does not exist on type 'Node'.
-index.ts(272,16): error TS2339: Property 'isEval' does not exist on type 'Node'.
-index.ts(273,21): error TS2339: Property 'getEvalOrigin' does not exist on type 'Node'.
+index.ts(267,38): error TS2304: Cannot find name 'NodeCallSite'.
 index.ts(278,8): error TS2339: Property 'callSite' does not exist on type 'any[]'.
 index.ts(279,8): error TS2339: Property 'name' does not exist on type 'any[]'.
-index.ts(279,24): error TS2339: Property 'getFunctionName' does not exist on type 'Node'.
-index.ts(288,32): error TS2304: Cannot find name 'Site'.
-index.ts(371,36): error TS2304: Cannot find name 'NodeCallSite'.
-index.ts(386,3): error TS2322: Type '(obj: any, stack: string[]) => string[]' is not assignable to type '(err: Error, stackTraces: CallSite[]) => any'.
+index.ts(288,32): error TS2304: Cannot find name 'CallSite'.
+index.ts(386,3): error TS2322: Type '(obj: Object, stack: string[]) => string[]' is not assignable to type '(err: Error, stackTraces: CallSite[]) => any'.
   Types of parameters 'stack' and 'stackTraces' are incompatible.
     Type 'CallSite[]' is not assignable to type 'string[]'.
       Type 'CallSite' is not assignable to type 'string'.

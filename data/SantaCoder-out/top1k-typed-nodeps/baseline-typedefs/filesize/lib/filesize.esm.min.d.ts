@@ -1,26 +1,36 @@
-declare function i(i: any, { bits: e, t, pad: o, r, base: b, a, round: n, s, locale, t, localeOptions, i, separator: l, r, spacer, t, symbols: c, i, standard: p, r, output: d, r, fullform: u, t, fullforms: g, t, exponent: B, t, roundingMethod: f, r, precision: h }: {
+declare function i(i: number, { bits: e, e, pad: o, o, base: b, b, round: n, n, locale: r, r, localeOptions: a, a, separator: l, l, spacer: s, s, symbols: c, c, standard: p, p, output: d, d, fullform: u, u, fullforms: g, g, exponent: B, B, roundingMethod: f, f, precision: h }: {
     bits?: boolean;
-    t: any;
+    e: any;
     pad?: boolean;
-    r: any;
+    o: any;
     base?: number;
-    a: any;
+    b: any;
     round?: number;
-    s: any;
+    n: any;
     locale?: string;
+    r: any;
     localeOptions?: {};
-    i: any;
+    a: any;
     separator?: string;
+    l: any;
     spacer?: string;
+    s: any;
     symbols?: {};
+    c: any;
     standard?: string;
+    p: any;
     output?: string;
+    d: any;
     fullform?: boolean;
+    u: any;
     fullforms?: any[];
+    g: any;
     exponent?: number;
+    B: any;
     roundingMethod?: string;
+    f: any;
     precision?: number;
-}, any: any): string | number | any[] | {
+}, i: any): string | number | any[] | {
     value: any;
     symbol: any;
     exponent: number;

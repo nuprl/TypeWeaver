@@ -1,2 +1,2 @@
-declare function uniqBy(array: any[], iteratee: any): any[];
+declare function uniqBy(array: any[], iteratee: Function): any[];
 export default uniqBy;

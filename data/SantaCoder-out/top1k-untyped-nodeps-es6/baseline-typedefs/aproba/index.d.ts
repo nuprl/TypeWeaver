@@ -1,2 +1,2 @@
 export default validate;
-declare function validate(rawSchemas: any, args: any): void;
+declare function validate(rawSchemas: string, args: string[]): void;

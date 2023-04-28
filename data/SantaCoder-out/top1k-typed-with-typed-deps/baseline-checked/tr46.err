@@ -2,14 +2,12 @@ index.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'regexes'.
 index.ts(6,9): error TS2451: Cannot redeclare block-scoped variable 'STATUS_MAPPING'.
 index.ts(12,57): error TS2304: Cannot find name 'Options'.
 index.ts(12,57): error TS4078: Parameter '{ useSTD3ASCIIRules }' of exported function has or is using private name 'Options'.
-index.ts(44,99): error TS2304: Cannot find name 'IOptions'.
-index.ts(44,99): error TS4078: Parameter '{ useSTD3ASCIIRules: useSTD3ASCIIRules, processingOption }' of exported function has or is using private name 'IOptions'.
-index.ts(49,42): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+index.ts(44,99): error TS2304: Cannot find name 'Options'.
+index.ts(44,99): error TS4078: Parameter '{ useSTD3ASCIIRules: useSTD3ASCIIRules, processingOption }' of exported function has or is using private name 'Options'.
 index.ts(80,176): error TS2304: Cannot find name 'Options'.
 index.ts(80,176): error TS4078: Parameter '{ checkHyphens: checkHyphens, checkBidi: checkBidi, checkJoiners: checkJoiners, processingOption: processingOption, useSTD3ASCIIRules }' of exported function has or is using private name 'Options'.
-index.ts(100,33): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
-index.ts(175,50): error TS2304: Cannot find name 'Options'.
-index.ts(175,50): error TS4078: Parameter 'options' of exported function has or is using private name 'Options'.
+index.ts(175,50): error TS2304: Cannot find name 'ProcessingOptions'.
+index.ts(175,50): error TS4078: Parameter 'options' of exported function has or is using private name 'ProcessingOptions'.
 scripts/generateMappingTable.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'fs'.
 scripts/generateMappingTable.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'path'.
 scripts/generateMappingTable.ts(5,7): error TS2451: Cannot redeclare block-scoped variable 'fetch'.
@@ -26,6 +24,20 @@ scripts/generateRegexes.ts(4,7): error TS2451: Cannot redeclare block-scoped var
 scripts/generateRegexes.ts(6,9): error TS2451: Cannot redeclare block-scoped variable 'unicodeVersion'.
 scripts/generateRegexes.ts(33,28): error TS2554: Expected 0 arguments, but got 1.
 scripts/generateRegexes.ts(39,7): error TS2451: Cannot redeclare block-scoped variable 'regexes'.
+scripts/generateRegexes.ts(44,20): error TS2345: Argument of type 'TemplateStringsArray' is not assignable to parameter of type 'string[]'.
+  Type 'TemplateStringsArray' is missing the following properties from type 'string[]': pop, push, reverse, shift, and 6 more.
+scripts/generateRegexes.ts(50,26): error TS2345: Argument of type 'TemplateStringsArray' is not assignable to parameter of type 'string[]'.
+scripts/generateRegexes.ts(54,15): error TS2345: Argument of type 'TemplateStringsArray' is not assignable to parameter of type 'string[]'.
+scripts/generateRegexes.ts(56,15): error TS2345: Argument of type 'TemplateStringsArray' is not assignable to parameter of type 'string[]'.
+scripts/generateRegexes.ts(61,16): error TS2345: Argument of type 'TemplateStringsArray' is not assignable to parameter of type 'string[]'.
+scripts/generateRegexes.ts(64,15): error TS2345: Argument of type 'TemplateStringsArray' is not assignable to parameter of type 'string[]'.
+scripts/generateRegexes.ts(65,15): error TS2345: Argument of type 'TemplateStringsArray' is not assignable to parameter of type 'string[]'.
+scripts/generateRegexes.ts(68,12): error TS2345: Argument of type 'TemplateStringsArray' is not assignable to parameter of type 'string[]'.
+scripts/generateRegexes.ts(84,12): error TS2345: Argument of type 'TemplateStringsArray' is not assignable to parameter of type 'string[]'.
+scripts/generateRegexes.ts(94,14): error TS2345: Argument of type 'TemplateStringsArray' is not assignable to parameter of type 'string[]'.
+scripts/generateRegexes.ts(95,14): error TS2345: Argument of type 'TemplateStringsArray' is not assignable to parameter of type 'string[]'.
+scripts/generateRegexes.ts(98,12): error TS2345: Argument of type 'TemplateStringsArray' is not assignable to parameter of type 'string[]'.
+scripts/generateRegexes.ts(112,12): error TS2345: Argument of type 'TemplateStringsArray' is not assignable to parameter of type 'string[]'.
 scripts/generateUnicodeCodePoints.ts(2,7): error TS2451: Cannot redeclare block-scoped variable 'fs'.
 scripts/generateUnicodeCodePoints.ts(9,3): error TS1108: A 'return' statement can only be used within a function body.
 scripts/getLatestTests.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'fs'.

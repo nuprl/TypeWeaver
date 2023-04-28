@@ -1,1 +1,1 @@
-export default function resolve(object: any, label: string): any;
+export default function resolve(object: any, label: any): any;

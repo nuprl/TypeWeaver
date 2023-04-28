@@ -1,2 +1,2 @@
-declare function filter(array: any[], predicate: any): any[];
+declare function filter(array: any[], predicate: Function): any[];
 export default filter;

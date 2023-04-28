@@ -2,36 +2,42 @@ src/cjs.ts(3,23): error TS2339: Property 'default' does not exist on type '{ ():
 src/index.ts(23,20): error TS2732: Cannot find module './options.json'. Consider using '--resolveJsonModule' to import module with '.json' extension.
 src/index.ts(35,20): error TS2339: Property 'attributes' does not exist on type '{}'.
 src/index.ts(39,20): error TS2339: Property 'base' does not exist on type '{}'.
-src/index.ts(58,65): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Request'.
-src/index.ts(63,50): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Request'.
-src/index.ts(87,43): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Request'.
-src/index.ts(105,51): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Request'.
-src/index.ts(146,42): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Request'.
-src/index.ts(157,43): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Request'.
-src/index.ts(173,51): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Request'.
-src/index.ts(193,38): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Request'.
 src/runtime/injectStylesIntoLinkTag.ts(8,14): error TS2304: Cannot find name '__webpack_nonce__'.
 src/runtime/injectStylesIntoLinkTag.ts(8,50): error TS2304: Cannot find name '__webpack_nonce__'.
-src/runtime/injectStylesIntoStyleTag.ts(16,29): error TS2304: Cannot find name 'Module'.
-src/runtime/injectStylesIntoStyleTag.ts(16,48): error TS2304: Cannot find name 'Options'.
-src/runtime/injectStylesIntoStyleTag.ts(41,39): error TS2345: Argument of type '{ css: Module; media: Module; sourceMap: Module; supports: Module; layer: Module; }' is not assignable to parameter of type 'HTMLElement'.
-  Type '{ css: Module; media: Module; sourceMap: Module; supports: Module; layer: Module; }' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 284 more.
-src/runtime/injectStylesIntoStyleTag.ts(58,53): error TS2304: Cannot find name 'ElementStyleOptions'.
-src/runtime/injectStylesIntoStyleTag.ts(66,28): error TS2339: Property 'css' does not exist on type 'HTMLElement'.
-src/runtime/injectStylesIntoStyleTag.ts(67,30): error TS2339: Property 'media' does not exist on type 'HTMLElement'.
-src/runtime/injectStylesIntoStyleTag.ts(68,34): error TS2339: Property 'sourceMap' does not exist on type 'HTMLElement'.
-src/runtime/injectStylesIntoStyleTag.ts(69,33): error TS2339: Property 'supports' does not exist on type 'HTMLElement'.
-src/runtime/injectStylesIntoStyleTag.ts(70,30): error TS2339: Property 'layer' does not exist on type 'HTMLElement'.
-src/runtime/insertStyleElement.ts(2,38): error TS2304: Cannot find name 'StyleOptions'.
-src/runtime/insertStyleElement.ts(2,38): error TS4078: Parameter 'options' of exported function has or is using private name 'StyleOptions'.
+src/runtime/injectStylesIntoStyleTag.ts(16,35): error TS2304: Cannot find name 'Module'.
+src/runtime/injectStylesIntoStyleTag.ts(16,53): error TS2304: Cannot find name 'Options'.
+src/runtime/injectStylesIntoStyleTag.ts(58,48): error TS2304: Cannot find name 'Options'.
+src/runtime/injectStylesIntoStyleTag.ts(66,28): error TS2339: Property 'css' does not exist on type 'Object'.
+src/runtime/injectStylesIntoStyleTag.ts(67,30): error TS2339: Property 'media' does not exist on type 'Object'.
+src/runtime/injectStylesIntoStyleTag.ts(68,34): error TS2339: Property 'sourceMap' does not exist on type 'Object'.
+src/runtime/injectStylesIntoStyleTag.ts(69,33): error TS2339: Property 'supports' does not exist on type 'Object'.
+src/runtime/injectStylesIntoStyleTag.ts(70,30): error TS2339: Property 'layer' does not exist on type 'Object'.
+src/runtime/injectStylesIntoStyleTag.ts(91,35): error TS2304: Cannot find name 'Module'.
+src/runtime/insertStyleElement.ts(2,38): error TS2304: Cannot find name 'StyleElementOptions'.
+src/runtime/insertStyleElement.ts(2,38): error TS4078: Parameter 'options' of exported function has or is using private name 'StyleElementOptions'.
 src/runtime/setAttributesWithAttributes.ts(4,12): error TS2304: Cannot find name '__webpack_nonce__'.
 src/runtime/setAttributesWithAttributes.ts(4,48): error TS2304: Cannot find name '__webpack_nonce__'.
+src/runtime/setAttributesWithAttributesAndNonce.ts(2,80): error TS2304: Cannot find name 'Attributes'.
+src/runtime/setAttributesWithAttributesAndNonce.ts(2,80): error TS4078: Parameter 'attributes' of exported function has or is using private name 'Attributes'.
 src/runtime/setAttributesWithoutAttributes.ts(4,12): error TS2304: Cannot find name '__webpack_nonce__'.
 src/runtime/setAttributesWithoutAttributes.ts(4,48): error TS2304: Cannot find name '__webpack_nonce__'.
+src/runtime/singletonStyleDomAPI.ts(13,85): error TS2304: Cannot find name 'CSSObject'.
 src/runtime/singletonStyleDomAPI.ts(52,20): error TS2339: Property 'styleSheet' does not exist on type 'HTMLStyleElement'.
 src/runtime/singletonStyleDomAPI.ts(53,18): error TS2339: Property 'styleSheet' does not exist on type 'HTMLStyleElement'.
 src/runtime/singletonStyleDomAPI.ts(76,26): error TS2304: Cannot find name 'Options'.
 src/runtime/singletonStyleDomAPI.ts(76,26): error TS4078: Parameter 'options' of exported function has or is using private name 'Options'.
+src/runtime/styleDomAPI.ts(2,57): error TS2304: Cannot find name 'Options'.
+src/runtime/styleDomAPI.ts(5,11): error TS2339: Property 'supports' does not exist on type 'Object'.
+src/runtime/styleDomAPI.ts(6,30): error TS2339: Property 'supports' does not exist on type 'Object'.
+src/runtime/styleDomAPI.ts(9,11): error TS2339: Property 'media' does not exist on type 'Object'.
+src/runtime/styleDomAPI.ts(10,26): error TS2339: Property 'media' does not exist on type 'Object'.
+src/runtime/styleDomAPI.ts(13,32): error TS2339: Property 'layer' does not exist on type 'Object'.
+src/runtime/styleDomAPI.ts(16,25): error TS2339: Property 'layer' does not exist on type 'Object'.
+src/runtime/styleDomAPI.ts(16,52): error TS2339: Property 'layer' does not exist on type 'Object'.
+src/runtime/styleDomAPI.ts(19,14): error TS2339: Property 'css' does not exist on type 'Object'.
+src/runtime/styleDomAPI.ts(25,11): error TS2339: Property 'media' does not exist on type 'Object'.
+src/runtime/styleDomAPI.ts(29,11): error TS2339: Property 'supports' does not exist on type 'Object'.
+src/runtime/styleDomAPI.ts(33,25): error TS2339: Property 'sourceMap' does not exist on type 'Object'.
 src/runtime/styleDomAPI.ts(56,26): error TS2304: Cannot find name 'Options'.
 src/runtime/styleDomAPI.ts(56,26): error TS4078: Parameter 'options' of exported function has or is using private name 'Options'.
 src/runtime/styleTagTransform.ts(3,20): error TS2339: Property 'styleSheet' does not exist on type 'HTMLStyleElement'.
@@ -46,8 +52,6 @@ src/utils.ts(78,66): error TS2304: Cannot find name 'LoaderContext'.
 src/utils.ts(78,66): error TS4078: Parameter 'loaderContext' of exported function has or is using private name 'LoaderContext'.
 src/utils.ts(117,70): error TS2304: Cannot find name 'LoaderContext'.
 src/utils.ts(117,70): error TS4078: Parameter 'loaderContext' of exported function has or is using private name 'LoaderContext'.
-src/utils.ts(155,59): error TS2552: Cannot find name 'InsertOptions'. Did you mean 'InsertPosition'?
-src/utils.ts(155,59): error TS4078: Parameter 'options' of exported function has or is using private name 'InsertOptions'.
 src/utils.ts(172,76): error TS2304: Cannot find name 'LoaderContext'.
 src/utils.ts(172,76): error TS4078: Parameter 'loaderContext' of exported function has or is using private name 'LoaderContext'.
 src/utils.ts(183,60): error TS2304: Cannot find name 'LoaderContext'.
@@ -56,14 +60,14 @@ src/utils.ts(258,59): error TS2304: Cannot find name 'LoaderContext'.
 src/utils.ts(258,59): error TS4078: Parameter 'loaderContext' of exported function has or is using private name 'LoaderContext'.
 src/utils.ts(288,65): error TS2304: Cannot find name 'LoaderContext'.
 src/utils.ts(288,65): error TS4078: Parameter 'loaderContext' of exported function has or is using private name 'LoaderContext'.
-src/utils.ts(337,42): error TS2304: Cannot find name 'StyleTagOptions'.
-src/utils.ts(337,42): error TS4078: Parameter 'options' of exported function has or is using private name 'StyleTagOptions'.
+src/utils.ts(337,42): error TS2304: Cannot find name 'Options'.
+src/utils.ts(337,42): error TS4078: Parameter 'options' of exported function has or is using private name 'Options'.
 src/utils.ts(346,63): error TS2304: Cannot find name 'LoaderContext'.
 src/utils.ts(346,63): error TS4078: Parameter 'loaderContext' of exported function has or is using private name 'LoaderContext'.
 src/utils.ts(355,67): error TS2304: Cannot find name 'LoaderContext'.
 src/utils.ts(355,67): error TS4078: Parameter 'loaderContext' of exported function has or is using private name 'LoaderContext'.
 src/utils.ts(364,65): error TS2304: Cannot find name 'LoaderContext'.
 src/utils.ts(364,65): error TS4078: Parameter 'loaderContext' of exported function has or is using private name 'LoaderContext'.
-src/utils.ts(364,89): error TS2304: Cannot find name 'LoaderOptions'.
-src/utils.ts(364,89): error TS4078: Parameter 'options' of exported function has or is using private name 'LoaderOptions'.
+src/utils.ts(364,89): error TS2304: Cannot find name 'Options'.
+src/utils.ts(364,89): error TS4078: Parameter 'options' of exported function has or is using private name 'Options'.
 

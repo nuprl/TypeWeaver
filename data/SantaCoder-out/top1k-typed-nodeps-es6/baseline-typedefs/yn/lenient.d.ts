@@ -1,1 +1,1 @@
-export default function lenient(input: any, default_: any): any;
+export default function lenient(input: string, default_: boolean): boolean;

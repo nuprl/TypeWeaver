@@ -1,2 +1,2 @@
-declare function keyBy(collection: any[], iteratee: any): any;
+declare function keyBy(collection: any[], iteratee: Function): any;
 export default keyBy;

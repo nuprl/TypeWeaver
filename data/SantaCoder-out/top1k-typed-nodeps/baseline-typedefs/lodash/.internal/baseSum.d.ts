@@ -1,2 +1,2 @@
-declare function baseSum(array: any[], iteratee: any): any;
+declare function baseSum(array: any[], iteratee: Function): any;
 export default baseSum;

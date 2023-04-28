@@ -24,52 +24,52 @@ declare const lexStates: {
     multiLineCommentAsterisk(): void;
     singleLineComment(): {
         type: string;
-        value: any;
+        value: string;
         line: any;
         column: any;
     };
     value(): {
         type: string;
-        value: any;
+        value: string;
         line: any;
         column: any;
     };
     identifierNameStartEscape(): void;
     identifierName(): {
         type: string;
-        value: any;
+        value: string;
         line: any;
         column: any;
     };
     identifierNameEscape(): void;
     sign(): {
         type: string;
-        value: any;
+        value: string;
         line: any;
         column: any;
     };
     zero(): {
         type: string;
-        value: any;
+        value: string;
         line: any;
         column: any;
     };
     decimalInteger(): {
         type: string;
-        value: any;
+        value: string;
         line: any;
         column: any;
     };
     decimalPointLeading(): void;
     decimalPoint(): {
         type: string;
-        value: any;
+        value: string;
         line: any;
         column: any;
     };
     decimalFraction(): {
         type: string;
-        value: any;
+        value: string;
         line: any;
         column: any;
     };
@@ -77,65 +77,65 @@ declare const lexStates: {
     decimalExponentSign(): void;
     decimalExponentInteger(): {
         type: string;
-        value: any;
+        value: string;
         line: any;
         column: any;
     };
     hexadecimal(): void;
     hexadecimalInteger(): {
         type: string;
-        value: any;
+        value: string;
         line: any;
         column: any;
     };
     string(): {
         type: string;
-        value: any;
+        value: string;
         line: any;
         column: any;
     };
     start(): {
         type: string;
-        value: any;
+        value: string;
         line: any;
         column: any;
     };
     beforePropertyName(): {
         type: string;
-        value: any;
+        value: string;
         line: any;
         column: any;
     };
     afterPropertyName(): {
         type: string;
-        value: any;
+        value: string;
         line: any;
         column: any;
     };
     beforePropertyValue(): void;
     afterPropertyValue(): {
         type: string;
-        value: any;
+        value: string;
         line: any;
         column: any;
     };
     beforeArrayValue(): {
         type: string;
-        value: any;
+        value: string;
         line: any;
         column: any;
     };
     afterArrayValue(): {
         type: string;
-        value: any;
+        value: string;
         line: any;
         column: any;
     };
     end(): never;
 };
-declare function newToken(type: string, value: any): {
+declare function newToken(type: string, value: string): {
     type: string;
-    value: any;
+    value: string;
     line: any;
     column: any;
 };

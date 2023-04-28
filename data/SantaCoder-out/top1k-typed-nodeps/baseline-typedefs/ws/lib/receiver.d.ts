@@ -24,4 +24,4 @@ declare class Receiver extends Writable {
     dataMessage(): any;
     controlMessage(data: any): any;
 }
-declare function error(ErrorCtor: any, message: string, prefix: string, statusCode: number, errorCode: string): any;
+declare function error(ErrorCtor: any, message: string, prefix: boolean, statusCode: number, errorCode: number): any;

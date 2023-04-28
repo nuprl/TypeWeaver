@@ -1,7 +1,11 @@
+example/dns.ts(14,46): error TS2304: Cannot find name 'Operation'.
 lib/retry.ts(1,5): error TS2300: Duplicate identifier 'RetryOperation'.
-lib/retry.ts(24,19): error TS2407: The right-hand side of a 'for...in' statement must be of type 'any', an object type or a type parameter, but here has type 'never'.
-lib/retry.ts(37,26): error TS2339: Property 'forever' does not exist on type 'never'.
+lib/retry.ts(3,39): error TS2304: Cannot find name 'RetryOptions'.
+lib/retry.ts(49,57): error TS2304: Cannot find name 'BackoffOptions'.
+lib/retry.ts(60,64): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 lib/retry_operation.ts(1,10): error TS2300: Duplicate identifier 'RetryOperation'.
+lib/retry_operation.ts(1,35): error TS2304: Cannot find name 'Timeouts'.
+lib/retry_operation.ts(1,35): error TS4078: Parameter 'timeouts' of exported function has or is using private name 'Timeouts'.
 lib/retry_operation.ts(1,54): error TS2304: Cannot find name 'RetryOptions'.
 lib/retry_operation.ts(1,54): error TS4078: Parameter 'options' of exported function has or is using private name 'RetryOptions'.
 lib/retry_operation.ts(95,71): error TS2304: Cannot find name 'TimeoutOps'.

@@ -10,5 +10,6 @@ base64js.min.ts(1,732): error TS2554: Expected 2 arguments, but got 1.
 bench/basic.ts(2,17): error TS2306: File 'index.ts' is not a module.
 bench/bench.ts(1,20): error TS2306: File 'index.ts' is not a module.
 bench/bench.ts(2,23): error TS2307: Cannot find module 'benchmark' or its corresponding type declarations.
-bench/bench.ts(20,32): error TS2339: Property 'error' does not exist on type 'EventTarget'.
+index.ts(128,28): error TS2345: Argument of type 'Uint8Array' is not assignable to parameter of type 'number[]'.
+  Type 'Uint8Array' is missing the following properties from type 'number[]': pop, push, concat, shift, and 5 more.
 

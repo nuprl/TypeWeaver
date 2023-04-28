@@ -1,6 +1,8 @@
 benchmark/check.ts(4,18): error TS2307: Cannot find module 'ansi-bold' or its corresponding type declarations.
 benchmark/code/arr-diff-3.0.0.ts(3,21): error TS2307: Cannot find module 'arr-flatten' or its corresponding type declarations.
-benchmark/code/forEach.ts(9,24): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
+benchmark/code/filter.ts(5,35): error TS2304: Cannot find name 'T'.
+benchmark/code/for.ts(3,35): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+benchmark/code/for.ts(3,50): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 benchmark/code/while-splice-for.ts(3,21): error TS2307: Cannot find module 'arr-flatten' or its corresponding type declarations.
 benchmark/code/while-splice-pop-flatten.ts(3,21): error TS2307: Cannot find module 'arr-flatten' or its corresponding type declarations.
 benchmark/code/while-splice.ts(6,34): error TS2304: Cannot find name 'T'.

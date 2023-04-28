@@ -1,4 +1,4 @@
-export declare function isNode(node: Node): any;
+export declare function isNode(node: any): any;
 export declare const isAttribute: any;
 export declare const isClassName: any;
 export declare const isCombinator: any;

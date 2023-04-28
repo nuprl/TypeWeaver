@@ -1,1 +1,1 @@
-export default function toURLEncodedForm(data: any, options: any): FormData;
+export default function toURLEncodedForm(data: Object, options: Object): FormData;

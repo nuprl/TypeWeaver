@@ -1,2 +1,2 @@
-declare var eos: (stream: ReadableStream, opts: any, callback: Function) => any;
+declare var eos: (stream: Readable, opts: Options, callback: Callback) => any;
 export default eos;

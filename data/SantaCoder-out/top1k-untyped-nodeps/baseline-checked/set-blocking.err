@@ -1,9 +1,0 @@
-index.ts(2,44): error TS2345: Argument of type '(stream: ReadableStream<any>) => void' is not assignable to parameter of type '(value: (WriteStream & { fd: 1; }) | (WriteStream & { fd: 2; }), index: number, array: ((WriteStream & { fd: 1; }) | (WriteStream & { ...; }))[]) => void'.
-  Types of parameters 'stream' and 'value' are incompatible.
-    Type '(WriteStream & { fd: 1; }) | (WriteStream & { fd: 2; })' is not assignable to type 'ReadableStream<any>'.
-      Type 'WriteStream & { fd: 1; }' is missing the following properties from type 'ReadableStream<any>': locked, cancel, getReader, pipeThrough, and 2 more.
-index.ts(3,16): error TS2339: Property '_handle' does not exist on type 'ReadableStream<any>'.
-index.ts(3,34): error TS2339: Property 'isTTY' does not exist on type 'ReadableStream<any>'.
-index.ts(3,57): error TS2339: Property '_handle' does not exist on type 'ReadableStream<any>'.
-index.ts(4,14): error TS2339: Property '_handle' does not exist on type 'ReadableStream<any>'.
-

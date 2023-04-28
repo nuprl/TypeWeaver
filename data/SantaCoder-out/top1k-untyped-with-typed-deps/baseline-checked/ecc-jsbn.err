@@ -2,49 +2,54 @@ index.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'crypto'.
 index.ts(4,9): error TS2451: Cannot redeclare block-scoped variable 'BigInteger'.
 index.ts(34,35): error TS2339: Property 'randomBytes' does not exist on type 'Crypto'.
 lib/ec.ts(9,9): error TS2451: Cannot redeclare block-scoped variable 'BigInteger'.
-lib/ec.ts(32,28): error TS2304: Cannot find name 'Fp'.
-lib/ec.ts(32,28): error TS4078: Parameter 'other' of exported function has or is using private name 'Fp'.
-lib/ec.ts(46,52): error TS2339: Property 'toBigInteger' does not exist on type 'bigint'.
+lib/ec.ts(32,28): error TS2749: 'ECFieldElementFp' refers to a value, but is being used as a type here. Did you mean 'typeof ECFieldElementFp'?
+lib/ec.ts(32,28): error TS4078: Parameter 'other' of exported function has or is using private name 'ECFieldElementFp'.
+lib/ec.ts(45,21): error TS2749: 'ECFieldElementFp' refers to a value, but is being used as a type here. Did you mean 'typeof ECFieldElementFp'?
+lib/ec.ts(45,21): error TS4078: Parameter 'b' of exported function has or is using private name 'ECFieldElementFp'.
 lib/ec.ts(49,26): error TS2749: 'ECFieldElementFp' refers to a value, but is being used as a type here. Did you mean 'typeof ECFieldElementFp'?
 lib/ec.ts(49,26): error TS4078: Parameter 'b' of exported function has or is using private name 'ECFieldElementFp'.
 lib/ec.ts(56,26): error TS2749: 'ECFieldElementFp' refers to a value, but is being used as a type here. Did you mean 'typeof ECFieldElementFp'?
 lib/ec.ts(56,26): error TS4078: Parameter 'b' of exported function has or is using private name 'ECFieldElementFp'.
 lib/ec.ts(67,24): error TS2749: 'ECFieldElementFp' refers to a value, but is being used as a type here. Did you mean 'typeof ECFieldElementFp'?
 lib/ec.ts(67,24): error TS4078: Parameter 'b' of exported function has or is using private name 'ECFieldElementFp'.
-lib/ec.ts(82,52): error TS2552: Cannot find name 'BigNumber'. Did you mean 'Number'?
+lib/ec.ts(83,15): error TS2339: Property 'shiftLeft' does not exist on type 'Uint8Array'.
 lib/ec.ts(94,27): error TS2749: 'ECCurveFp' refers to a value, but is being used as a type here. Did you mean 'typeof ECCurveFp'?
 lib/ec.ts(94,27): error TS4078: Parameter 'curve' of exported function has or is using private name 'ECCurveFp'.
-lib/ec.ts(127,31): error TS2304: Cannot find name 'PointFp'.
-lib/ec.ts(127,31): error TS4078: Parameter 'other' of exported function has or is using private name 'PointFp'.
-lib/ec.ts(160,24): error TS2304: Cannot find name 'PointFp'.
-lib/ec.ts(160,24): error TS4078: Parameter 'b' of exported function has or is using private name 'PointFp'.
-lib/ec.ts(278,29): error TS2304: Cannot find name 'BN'.
-lib/ec.ts(278,29): error TS4078: Parameter 'k' of exported function has or is using private name 'BN'.
-lib/ec.ts(306,9): error TS2339: Property 'bitLength' does not exist on type 'number'.
-lib/ec.ts(306,25): error TS2339: Property 'bitLength' does not exist on type 'number'.
-lib/ec.ts(306,44): error TS2339: Property 'bitLength' does not exist on type 'number'.
-lib/ec.ts(307,14): error TS2339: Property 'bitLength' does not exist on type 'number'.
-lib/ec.ts(313,11): error TS2339: Property 'testBit' does not exist on type 'number'.
-lib/ec.ts(314,13): error TS2339: Property 'testBit' does not exist on type 'number'.
-lib/ec.ts(320,13): error TS2339: Property 'testBit' does not exist on type 'number'.
+lib/ec.ts(127,31): error TS2749: 'ECPointFp' refers to a value, but is being used as a type here. Did you mean 'typeof ECPointFp'?
+lib/ec.ts(127,31): error TS4078: Parameter 'other' of exported function has or is using private name 'ECPointFp'.
+lib/ec.ts(160,24): error TS2749: 'ECPointFp' refers to a value, but is being used as a type here. Did you mean 'typeof ECPointFp'?
+lib/ec.ts(160,24): error TS4078: Parameter 'b' of exported function has or is using private name 'ECPointFp'.
+lib/ec.ts(280,9): error TS2339: Property 'signum' does not exist on type 'Uint8Array'.
+lib/ec.ts(283,13): error TS2339: Property 'multiply' does not exist on type 'Uint8Array'.
+lib/ec.ts(293,18): error TS2339: Property 'testBit' does not exist on type 'Uint8Array'.
+lib/ec.ts(304,47): error TS2749: 'ECPointFp' refers to a value, but is being used as a type here. Did you mean 'typeof ECPointFp'?
+lib/ec.ts(304,47): error TS4078: Parameter 'x' of exported function has or is using private name 'ECPointFp'.
+lib/ec.ts(306,9): error TS2551: Property 'bitLength' does not exist on type 'Uint8Array'. Did you mean 'byteLength'?
+lib/ec.ts(306,25): error TS2551: Property 'bitLength' does not exist on type 'Uint8Array'. Did you mean 'byteLength'?
+lib/ec.ts(306,44): error TS2551: Property 'bitLength' does not exist on type 'Uint8Array'. Did you mean 'byteLength'?
+lib/ec.ts(307,14): error TS2551: Property 'bitLength' does not exist on type 'Uint8Array'. Did you mean 'byteLength'?
+lib/ec.ts(313,11): error TS2339: Property 'testBit' does not exist on type 'Uint8Array'.
+lib/ec.ts(314,13): error TS2339: Property 'testBit' does not exist on type 'Uint8Array'.
+lib/ec.ts(320,13): error TS2339: Property 'testBit' does not exist on type 'Uint8Array'.
 lib/ec.ts(344,10): error TS2300: Duplicate identifier 'ECCurveFp'.
 lib/ec.ts(348,19): error TS2554: Expected 4 arguments, but got 3.
-lib/ec.ts(364,31): error TS2304: Cannot find name 'ECPoint'.
-lib/ec.ts(364,31): error TS4078: Parameter 'other' of exported function has or is using private name 'ECPoint'.
-lib/ec.ts(383,35): error TS2304: Cannot find name 'Point'.
-lib/ec.ts(383,35): error TS4078: Parameter 'p' of exported function has or is using private name 'Point'.
+lib/ec.ts(364,31): error TS2749: 'ECFieldElementFp' refers to a value, but is being used as a type here. Did you mean 'typeof ECFieldElementFp'?
+lib/ec.ts(364,31): error TS4078: Parameter 'other' of exported function has or is using private name 'ECFieldElementFp'.
+lib/ec.ts(383,35): error TS2304: Cannot find name 'ECPoint'.
+lib/ec.ts(383,35): error TS4078: Parameter 'p' of exported function has or is using private name 'ECPoint'.
 lib/ec.ts(438,14): error TS2554: Expected 4 arguments, but got 3.
 lib/ec.ts(446,14): error TS2554: Expected 4 arguments, but got 3.
 lib/ec.ts(458,9): error TS2339: Property 'isInfinity' does not exist on type 'Uint8Array'.
 lib/ec.ts(460,6): error TS2339: Property 'getX' does not exist on type 'Uint8Array'.
 lib/ec.ts(469,8): error TS2339: Property 'getY' does not exist on type 'Uint8Array'.
-lib/ec.ts(493,28): error TS2339: Property 'multiply' does not exist on type 'Uint8Array'.
-lib/ec.ts(498,14): error TS2339: Property 'bitLength' does not exist on type 'number'.
-lib/ec.ts(499,17): error TS2339: Property 'shiftRight' does not exist on type 'number'.
-lib/ec.ts(500,17): error TS2339: Property 'subtract' does not exist on type 'number'.
-lib/ec.ts(506,14): error TS2339: Property 'compareTo' does not exist on type 'number'.
-lib/ec.ts(507,13): error TS2339: Property 'subtract' does not exist on type 'number'.
-lib/ec.ts(510,11): error TS2339: Property 'mod' does not exist on type 'number'.
+lib/ec.ts(492,51): error TS2749: 'ECFieldElementFp' refers to a value, but is being used as a type here. Did you mean 'typeof ECFieldElementFp'?
+lib/ec.ts(492,73): error TS2749: 'ECFieldElementFp' refers to a value, but is being used as a type here. Did you mean 'typeof ECFieldElementFp'?
+lib/ec.ts(498,14): error TS2551: Property 'bitLength' does not exist on type 'Uint8Array'. Did you mean 'byteLength'?
+lib/ec.ts(499,17): error TS2339: Property 'shiftRight' does not exist on type 'Uint8Array'.
+lib/ec.ts(500,17): error TS2339: Property 'subtract' does not exist on type 'Uint8Array'.
+lib/ec.ts(506,14): error TS2339: Property 'compareTo' does not exist on type 'Uint8Array'.
+lib/ec.ts(507,13): error TS2339: Property 'subtract' does not exist on type 'Uint8Array'.
+lib/ec.ts(510,11): error TS2339: Property 'mod' does not exist on type 'Uint8Array'.
 lib/ec.ts(572,13): error TS2551: Property 'bitLength' does not exist on type 'Uint8Array'. Did you mean 'byteLength'?
 lib/ec.ts(573,13): error TS2339: Property 'getLowestSetBit' does not exist on type 'Uint8Array'.
 lib/ec.ts(584,11): error TS2339: Property 'testBit' does not exist on type 'Uint8Array'.

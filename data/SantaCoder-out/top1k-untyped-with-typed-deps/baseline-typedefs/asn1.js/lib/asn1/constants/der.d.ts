@@ -1,1 +1,1 @@
-declare function reverse(map: any): {};
+declare function reverse(map: Object): {};

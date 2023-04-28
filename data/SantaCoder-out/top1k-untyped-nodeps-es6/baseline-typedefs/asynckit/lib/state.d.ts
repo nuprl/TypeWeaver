@@ -1,5 +1,5 @@
 export default state;
-declare function state(list: any[], sortMethod: string): {
+declare function state(list: Array<any>, sortMethod: Function): {
     index: number;
     keyedList: string[];
     jobs: {};

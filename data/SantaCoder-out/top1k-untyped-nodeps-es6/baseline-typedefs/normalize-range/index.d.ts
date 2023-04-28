@@ -9,14 +9,14 @@ declare const _default: {
 export default _default;
 declare function wrapRange(min: number, max: number, value: number): number;
 declare function limitRange(min: number, max: number, value: number): number;
-declare function validateRange(min: number, max: number, value: number, minExclusive: number, maxExclusive: number): number;
-declare function testRange(min: number, max: number, value: number, minExclusive: number, maxExclusive: number): boolean;
+declare function validateRange(min: number, max: number, value: number, minExclusive: boolean, maxExclusive: boolean): number;
+declare function testRange(min: number, max: number, value: number, minExclusive: boolean, maxExclusive: boolean): boolean;
 declare function name(min: number, max: number, minExcl: boolean, maxExcl: boolean): string;
 declare function curry(min: number, max: number, minExclusive: boolean, maxExclusive: boolean): {
     wrap: any;
     limit: any;
-    validate: (value: string) => number;
-    test: (value: string) => boolean;
+    validate: (value: number) => number;
+    test: (value: number) => boolean;
     toString: any;
     name: any;
 };

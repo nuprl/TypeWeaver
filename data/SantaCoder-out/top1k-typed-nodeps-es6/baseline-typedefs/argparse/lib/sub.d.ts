@@ -1,1 +1,1 @@
-export default function sub(pattern: string, ...values: string[]): string;
+export default function sub(pattern: string, ...values: any[]): string;

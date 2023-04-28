@@ -2,7 +2,7 @@ declare function isBuffer(val: any): any;
 declare function isArrayBufferView(val: any): any;
 declare function forEach(obj: any, fn: Function, { allOwnKeys }: {
     allOwnKeys?: boolean;
-}, any: any): void;
+}, Object: any): void;
 declare function merge(Object: any): {};
 declare const _default: {
     isArray: (arg: any) => arg is any[];

@@ -1,18 +1,10 @@
-index.ts(15,30): error TS2304: Cannot find name 'GenSyncOptions'.
-index.ts(45,13): error TS2345: Argument of type 'unknown' is not assignable to parameter of type 'Generator<unknown, any, unknown>'.
-index.ts(63,56): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
-index.ts(71,56): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
-index.ts(75,25): error TS2345: Argument of type 'unknown' is not assignable to parameter of type 'Generator<unknown, any, unknown>'.
-  Type '{}' is missing the following properties from type 'Generator<unknown, any, unknown>': next, return, throw, [Symbol.iterator]
-index.ts(101,11): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
-index.ts(134,24): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+index.ts(15,30): error TS2304: Cannot find name 'GeneratorOptions'.
+index.ts(144,88): error TS2304: Cannot find name 'GeneratorOptions'.
+index.ts(144,88): error TS4078: Parameter '{ name: name, arity: arity, sync: sync, async: async, errback }' of exported function has or is using private name 'GeneratorOptions'.
 index.ts(147,3): error TS2554: Expected 4 arguments, but got 3.
-index.ts(153,7): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
-index.ts(205,74): error TS2304: Cannot find name 'FunctionOptions'.
-index.ts(205,74): error TS4078: Parameter '{ name: name, arity: arity, sync: sync, async }' of exported function has or is using private name 'FunctionOptions'.
-index.ts(295,7): error TS2367: This comparison appears to be unintentional because the types 'string' and 'unique symbol' have no overlap.
-index.ts(303,7): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+index.ts(205,83): error TS2304: Cannot find name 'Operation'.
+index.ts(205,83): error TS4078: Parameter '{ name: operationName, arity: arity, sync: sync, async }' of exported function has or is using private name 'Operation'.
+index.ts(206,30): error TS2345: Argument of type 'void' is not assignable to parameter of type 'string'.
 index.ts(308,16): error TS2304: Cannot find name 'value'.
 index.ts(316,13): error TS2304: Cannot find name 'value'.
-index.ts(318,7): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 

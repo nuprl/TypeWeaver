@@ -1,14 +1,6 @@
 ava.config.ts(1,25): error TS2307: Cannot find module '@ehmicky/dev-tasks/ava.config.js' or its corresponding type declarations.
 gulpfile.ts(1,15): error TS2307: Cannot find module '@ehmicky/dev-tasks' or its corresponding type declarations.
-src/main.ts(37,31): error TS2345: Argument of type '{ name: any; number: any; description: any; supported: boolean; action: any; forced: boolean; standard: any; }[]' is not assignable to parameter of type 'number[]'.
-  Type '{ name: any; number: any; description: any; supported: boolean; action: any; forced: boolean; standard: any; }' is not assignable to type 'number'.
-src/main.ts(49,11): error TS2339: Property 'name' does not exist on type 'Number'.
-src/main.ts(49,17): error TS2339: Property 'description' does not exist on type 'Number'.
-src/main.ts(49,30): error TS2339: Property 'supported' does not exist on type 'Number'.
-src/main.ts(49,41): error TS2339: Property 'action' does not exist on type 'Number'.
-src/main.ts(49,49): error TS2339: Property 'forced' does not exist on type 'Number'.
-src/main.ts(49,57): error TS2339: Property 'standard' does not exist on type 'Number'.
-src/main.ts(66,34): error TS2339: Property 'name' does not exist on type 'Number'.
-src/main.ts(72,44): error TS2339: Property 'number' does not exist on type 'number'.
+src/main.ts(42,62): error TS2304: Cannot find name 'Signal'.
+src/main.ts(65,63): error TS2304: Cannot find name 'Signal'.
 src/signals.ts(29,17): error TS2538: Type 'any' cannot be used as an index type.
 

@@ -6,6 +6,6 @@
  */
 declare var db: {};
 declare var mime: any;
-declare function addData(db: any, mime: string, source: any): void;
+declare function addData(db: Object, mime: Object, source: Object): void;
 declare function createTypeEntry(source: string): {};
 declare function setValue(obj: any, prop: string, value: any): void;

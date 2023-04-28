@@ -1,4 +1,4 @@
-export default function cargo(worker: Worker, concurrency: number, payload: any): {
+export default function cargo(worker: Function, concurrency: number, payload: number): {
     _tasks: import("./internal/DoublyLinkedList.js").default;
     _createTaskItem(data: any, callback: any): {
         data: any;
@@ -6,7 +6,7 @@ export default function cargo(worker: Worker, concurrency: number, payload: any)
     };
     [Symbol.iterator](): Generator<any, void, unknown>;
     concurrency: number;
-    payload: any;
+    payload: T;
     buffer: number;
     started: boolean;
     paused: boolean;

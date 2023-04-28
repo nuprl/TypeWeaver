@@ -1,34 +1,44 @@
-estraverse.ts(278,28): error TS2339: Property 'push' does not exist on type 'string'.
-estraverse.ts(281,24): error TS2339: Property 'push' does not exist on type 'string'.
-estraverse.ts(336,50): error TS2339: Property 'node' does not exist on type 'HTMLElement'.
+estraverse.ts(336,50): error TS2339: Property 'node' does not exist on type 'Element'.
 estraverse.ts(367,71): error TS2304: Cannot find name 'Visitor'.
-estraverse.ts(391,56): error TS2339: Property 'type' does not exist on type 'Node'.
-estraverse.ts(400,30): error TS2339: Property 'node' does not exist on type 'string'.
+estraverse.ts(394,35): error TS2304: Cannot find name 'NodeType'.
 estraverse.ts(407,76): error TS2304: Cannot find name 'Visitor'.
-estraverse.ts(493,76): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'string'.
-estraverse.ts(495,76): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'string'.
+estraverse.ts(493,93): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Function'.
 estraverse.ts(513,74): error TS2304: Cannot find name 'Visitor'.
-estraverse.ts(534,25): error TS2339: Property 'ref' does not exist on type 'HTMLElement'.
-estraverse.ts(536,31): error TS2339: Property 'ref' does not exist on type 'HTMLElement'.
-estraverse.ts(537,34): error TS2339: Property 'ref' does not exist on type 'HTMLElement'.
-estraverse.ts(651,72): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'string'.
-estraverse.ts(653,72): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'string'.
+estraverse.ts(534,25): error TS2339: Property 'ref' does not exist on type 'Element'.
+estraverse.ts(536,31): error TS2339: Property 'ref' does not exist on type 'Element'.
+estraverse.ts(537,34): error TS2339: Property 'ref' does not exist on type 'Element'.
+estraverse.ts(651,89): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Function'.
 estraverse.ts(668,44): error TS2304: Cannot find name 'Visitor'.
 estraverse.ts(673,43): error TS2304: Cannot find name 'Visitor'.
-estraverse.ts(678,42): error TS2304: Cannot find name 'CommentRange'.
-estraverse.ts(678,64): error TS2304: Cannot find name 'Token'.
+estraverse.ts(678,59): error TS2304: Cannot find name 'Token'.
 estraverse.ts(682,26): error TS2339: Property 'range' does not exist on type 'string'.
+estraverse.ts(682,45): error TS2339: Property 'range' does not exist on type 'Comment'.
+estraverse.ts(685,17): error TS2339: Property 'extendedRange' does not exist on type 'Comment'.
+estraverse.ts(685,42): error TS2339: Property 'range' does not exist on type 'Comment'.
+estraverse.ts(685,60): error TS2339: Property 'range' does not exist on type 'Comment'.
+estraverse.ts(688,21): error TS2339: Property 'extendedRange' does not exist on type 'Comment'.
+estraverse.ts(693,21): error TS2339: Property 'extendedRange' does not exist on type 'Comment'.
 estraverse.ts(699,78): error TS2304: Cannot find name 'Token'.
 estraverse.ts(703,19): error TS2339: Property 'range' does not exist on type 'Node'.
 estraverse.ts(712,54): error TS2339: Property 'range' does not exist on type 'Node'.
 estraverse.ts(715,22): error TS2339: Property 'leadingComments' does not exist on type 'Node'.
-estraverse.ts(760,36): error TS2503: Cannot find namespace 'ts'.
+estraverse.ts(721,46): error TS2345: Argument of type '{}' is not assignable to parameter of type 'Comment'.
+  Type '{}' is missing the following properties from type 'CharacterData': data, length, ownerDocument, appendData, and 59 more.
+estraverse.ts(732,57): error TS2339: Property 'range' does not exist on type 'Node'.
+estraverse.ts(736,59): error TS2339: Property 'range' does not exist on type 'Node'.
+estraverse.ts(737,35): error TS2339: Property 'leadingComments' does not exist on type 'Node'.
+estraverse.ts(738,34): error TS2339: Property 'leadingComments' does not exist on type 'Node'.
+estraverse.ts(740,30): error TS2339: Property 'leadingComments' does not exist on type 'Node'.
+estraverse.ts(752,62): error TS2339: Property 'range' does not exist on type 'Node'.
+estraverse.ts(765,30): error TS2339: Property 'range' does not exist on type 'Node'.
+estraverse.ts(769,30): error TS2339: Property 'range' does not exist on type 'Node'.
+estraverse.ts(770,35): error TS2339: Property 'trailingComments' does not exist on type 'Node'.
+estraverse.ts(771,34): error TS2339: Property 'trailingComments' does not exist on type 'Node'.
+estraverse.ts(773,30): error TS2339: Property 'trailingComments' does not exist on type 'Node'.
+estraverse.ts(785,62): error TS2339: Property 'range' does not exist on type 'Node'.
 gulpfile.ts(27,18): error TS2307: Cannot find module 'gulp' or its corresponding type declarations.
 gulpfile.ts(28,17): error TS2307: Cannot find module 'gulp-git' or its corresponding type declarations.
 gulpfile.ts(29,18): error TS2307: Cannot find module 'gulp-bump' or its corresponding type declarations.
 gulpfile.ts(30,20): error TS2307: Cannot find module 'gulp-filter' or its corresponding type declarations.
 gulpfile.ts(31,24): error TS2307: Cannot find module 'gulp-tag-version' or its corresponding type declarations.
-gulpfile.ts(68,50): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
-gulpfile.ts(69,50): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
-gulpfile.ts(70,50): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 

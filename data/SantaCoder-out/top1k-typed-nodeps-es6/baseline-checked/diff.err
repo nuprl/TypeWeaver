@@ -1,12 +1,14 @@
-src/convert/dmp.ts(2,46): error TS4078: Parameter 'changes' of exported function has or is using private name 'Change'.
-src/convert/xml.ts(1,46): error TS4078: Parameter 'changes' of exported function has or is using private name 'Change'.
-src/diff/character.ts(4,68): error TS4078: Parameter 'options' of exported function has or is using private name 'DiffOptions'.
-src/diff/word.ts(53,68): error TS4078: Parameter 'options' of exported function has or is using private name 'DiffOptions'.
+src/convert/xml.ts(1,46): error TS4078: Parameter 'changes' of exported function has or is using private name 'DiffChange'.
 src/diff/word.ts(58,77): error TS4078: Parameter 'options' of exported function has or is using private name 'DiffOptions'.
-src/patch/apply.ts(4,73): error TS1005: ',' expected.
-src/patch/apply.ts(132,39): error TS4078: Parameter 'uniDiff' of exported function has or is using private name 'UniDiff'.
-src/patch/apply.ts(132,57): error TS4078: Parameter 'options' of exported function has or is using private name 'ApplyPatchesOptions'.
-src/patch/create.ts(3,154): error TS4078: Parameter 'options' of exported function has or is using private name 'IOptions'.
+src/patch/apply.ts(4,53): error TS4078: Parameter 'uniDiff' of exported function has or is using private name 'UniDiff'.
+src/patch/apply.ts(4,74): error TS1005: ',' expected.
+src/patch/apply.ts(132,56): error TS4078: Parameter 'options' of exported function has or is using private name 'ApplyPatchesOptions'.
+src/patch/create.ts(107,35): error TS4078: Parameter 'diff' of exported function has or is using private name 'Diff'.
+src/patch/create.ts(138,158): error TS4078: Parameter 'options' of exported function has or is using private name 'PatchOptions'.
+src/patch/create.ts(142,126): error TS4078: Parameter 'options' of exported function has or is using private name 'PatchOptions'.
 src/patch/merge.ts(6,37): error TS4078: Parameter 'hunk' of exported function has or is using private name 'Hunk'.
 src/patch/parse.ts(1,57): error TS1005: ',' expected.
+src/util/params.ts(1,42): error TS4078: Parameter 'options' of exported function has or is using private name 'Options'.
+src/util/params.ts(1,61): error TS4078: Parameter 'defaults' of exported function has or is using private name 'Options'.
+tasks/version.ts(3,32): error TS4078: Parameter 'grunt' of exported function has or is using private name 'IGrunt'.
 

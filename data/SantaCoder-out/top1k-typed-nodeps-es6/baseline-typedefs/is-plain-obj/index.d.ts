@@ -1,1 +1,1 @@
-export default function isPlainObject(value: any): boolean;
+export default function isPlainObject(value: unknown): boolean;

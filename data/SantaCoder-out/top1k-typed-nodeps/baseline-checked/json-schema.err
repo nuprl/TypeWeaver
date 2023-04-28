@@ -3,10 +3,11 @@ lib/links.ts(6,41): error TS2304: Cannot find name 'define'.
 lib/links.ts(8,9): error TS2304: Cannot find name 'define'.
 lib/links.ts(22,9): error TS2339: Property 'cacheLinks' does not exist on type '{}'.
 lib/links.ts(23,9): error TS2339: Property 'getLink' does not exist on type '{}'.
-lib/links.ts(23,38): error TS2304: Cannot find name 'Relation'.
-lib/links.ts(23,58): error TS2304: Cannot find name 'Model'.
-lib/links.ts(23,73): error TS2304: Cannot find name 'Schema'.
+lib/links.ts(31,21): error TS2339: Property '__linkTemplates' does not exist on type 'Object'.
+lib/links.ts(34,28): error TS2339: Property 'links' does not exist on type 'Object'.
+lib/links.ts(36,39): error TS2304: Cannot find name 'Link'.
 lib/links.ts(46,14): error TS2339: Property 'cacheLinks' does not exist on type '{}'.
+lib/links.ts(47,11): error TS2339: Property '__linkTemplates' does not exist on type 'Object'.
 lib/links.ts(51,33): error TS2339: Property 'substitute' does not exist on type '{}'.
 lib/links.ts(54,9): error TS2339: Property 'substitute' does not exist on type '{}'.
 lib/validate.ts(15,16): error TS2304: Cannot find name 'define'.
@@ -17,16 +18,23 @@ lib/validate.ts(40,9): error TS2339: Property 'validate' does not exist on type 
 lib/validate.ts(41,10): error TS2300: Duplicate identifier 'validate'.
 lib/validate.ts(54,37): error TS2554: Expected 2 arguments, but got 3.
 lib/validate.ts(56,9): error TS2339: Property 'checkPropertyChange' does not exist on type '(instance: Object, schema: Object) => any'.
-lib/validate.ts(56,64): error TS2749: 'value' refers to a value, but is being used as a type here. Did you mean 'typeof value'?
-lib/validate.ts(56,98): error TS2749: 'schema' refers to a value, but is being used as a type here. Did you mean 'typeof schema'?
 lib/validate.ts(64,34): error TS2554: Expected 2 arguments, but got 3.
 lib/validate.ts(66,5): error TS2300: Duplicate identifier 'validate'.
 lib/validate.ts(66,24): error TS2339: Property '_validate' does not exist on type '(instance: Object, schema: Object) => any'.
+lib/validate.ts(69,26): error TS2339: Property 'changing' does not exist on type 'Object'.
+lib/validate.ts(71,27): error TS2304: Cannot find name 'Schema'.
 lib/validate.ts(110,8): error TS2358: The left-hand side of an 'instanceof' expression must be of type 'any', an object type or a type parameter.
 lib/validate.ts(123,6): error TS2554: Expected 4 arguments, but got 3.
-lib/validate.ts(222,35): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
-lib/validate.ts(245,41): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
-lib/validate.ts(248,63): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
-lib/validate.ts(257,42): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+lib/validate.ts(148,20): error TS2339: Property 'coerce' does not exist on type 'Object'.
+lib/validate.ts(149,28): error TS2339: Property 'coerce' does not exist on type 'Object'.
+lib/validate.ts(213,41): error TS2339: Property 'existingOnly' does not exist on type 'Object'.
+lib/validate.ts(219,17): error TS2339: Property 'coerce' does not exist on type 'Object'.
+lib/validate.ts(220,37): error TS2339: Property 'coerce' does not exist on type 'Object'.
+lib/validate.ts(228,17): error TS2339: Property 'filter' does not exist on type 'Object'.
+lib/validate.ts(242,16): error TS2339: Property 'coerce' does not exist on type 'Object'.
+lib/validate.ts(243,36): error TS2339: Property 'coerce' does not exist on type 'Object'.
+lib/validate.ts(256,40): error TS2339: Property '$schema' does not exist on type 'Object'.
+lib/validate.ts(257,31): error TS2339: Property '$schema' does not exist on type 'Object'.
 lib/validate.ts(261,9): error TS2339: Property 'mustBeValid' does not exist on type '(instance: Object, schema: Object) => any'.
+lib/validate.ts(261,40): error TS2304: Cannot find name 'IResult'.
 

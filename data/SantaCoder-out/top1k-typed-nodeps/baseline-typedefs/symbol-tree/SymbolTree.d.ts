@@ -2,7 +2,7 @@ declare const SymbolTreeNode: any;
 declare const TreePosition: any;
 declare const TreeIterator: any;
 declare function returnTrue(): boolean;
-declare function reverseArrayIndex(array: any[], reverseIndex: number): any;
+declare function reverseArrayIndex(array: Array<any>, reverseIndex: number): any;
 declare class SymbolTree {
     constructor(description: any);
     initialize(object: any): any;

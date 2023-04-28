@@ -5,4 +5,4 @@ declare var implementation: any;
 declare var getPolyfill: any;
 declare var shim: any;
 declare var bound: any;
-declare var boundMethod: (receiver: unknown) => any;
+declare var boundMethod: (receiver: any) => any;

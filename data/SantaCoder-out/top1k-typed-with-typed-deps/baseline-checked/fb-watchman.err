@@ -8,30 +8,21 @@ watchman/integration/capabilities.ts(48,3): error TS2304: Cannot find name 'resp
 watchman/integration/capabilities.ts(51,45): error TS2304: Cannot find name 'resp'.
 watchman/integration/case.ts(12,7): error TS2451: Cannot redeclare block-scoped variable 'os'.
 watchman/node/bser/index.ts(10,5): error TS2451: Cannot redeclare block-scoped variable 'os'.
-watchman/node/bser/index.ts(25,32): error TS2304: Cannot find name 'Int'.
-watchman/node/bser/index.ts(25,32): error TS4078: Parameter 'initsize' of exported function has or is using private name 'Int'.
 watchman/node/bser/index.ts(222,14): error TS2554: Expected 1 arguments, but got 0.
-watchman/node/bser/index.ts(466,16): error TS2339: Property 'toBuffer' does not exist on type 'number'.
-watchman/node/bser/index.ts(471,9): error TS2339: Property 'writeByte' does not exist on type 'Uint8Array'.
-watchman/node/bser/index.ts(472,9): error TS2339: Property 'append' does not exist on type 'Uint8Array'.
-watchman/node/bser/index.ts(477,7): error TS2339: Property 'writeByte' does not exist on type 'Uint8Array'.
-watchman/node/bser/index.ts(478,7): error TS2339: Property 'append' does not exist on type 'Uint8Array'.
-watchman/node/bser/index.ts(484,9): error TS2339: Property 'writeByte' does not exist on type 'Uint8Array'.
-watchman/node/bser/index.ts(485,9): error TS2339: Property 'writeInt' does not exist on type 'Uint8Array'.
-watchman/node/bser/index.ts(487,9): error TS2339: Property 'writeByte' does not exist on type 'Uint8Array'.
-watchman/node/bser/index.ts(488,9): error TS2339: Property 'writeInt' does not exist on type 'Uint8Array'.
-watchman/node/bser/index.ts(490,9): error TS2339: Property 'writeByte' does not exist on type 'Uint8Array'.
-watchman/node/bser/index.ts(491,9): error TS2339: Property 'writeInt' does not exist on type 'Uint8Array'.
-watchman/node/bser/index.ts(504,13): error TS2339: Property 'writeByte' does not exist on type 'Uint8Array'.
-watchman/node/bser/index.ts(505,13): error TS2339: Property 'writeDouble' does not exist on type 'Uint8Array'.
-watchman/node/bser/index.ts(509,11): error TS2339: Property 'writeByte' does not exist on type 'Uint8Array'.
-watchman/node/bser/index.ts(511,11): error TS2339: Property 'append' does not exist on type 'Uint8Array'.
-watchman/node/bser/index.ts(514,11): error TS2339: Property 'writeByte' does not exist on type 'Uint8Array'.
-watchman/node/bser/index.ts(518,13): error TS2339: Property 'writeByte' does not exist on type 'Uint8Array'.
-watchman/node/bser/index.ts(526,13): error TS2339: Property 'writeByte' does not exist on type 'Uint8Array'.
-watchman/node/bser/index.ts(533,11): error TS2339: Property 'writeByte' does not exist on type 'Uint8Array'.
+watchman/node/bser/index.ts(464,26): error TS2304: Cannot find name 'BserBuf'.
+watchman/node/bser/index.ts(464,26): error TS4078: Parameter 'buf' of exported function has or is using private name 'BserBuf'.
+watchman/node/bser/index.ts(464,40): error TS2749: 'Int64' refers to a value, but is being used as a type here. Did you mean 'typeof Int64'?
+watchman/node/bser/index.ts(464,40): error TS4078: Parameter 'val' of exported function has or is using private name 'Int64'.
+watchman/node/bser/index.ts(484,9): error TS2339: Property 'writeByte' does not exist on type 'Buffer'.
+watchman/node/bser/index.ts(485,9): error TS2551: Property 'writeInt' does not exist on type 'Buffer'. Did you mean 'writeInt8'?
+watchman/node/bser/index.ts(487,9): error TS2339: Property 'writeByte' does not exist on type 'Buffer'.
+watchman/node/bser/index.ts(488,9): error TS2551: Property 'writeInt' does not exist on type 'Buffer'. Did you mean 'writeInt8'?
+watchman/node/bser/index.ts(490,9): error TS2339: Property 'writeByte' does not exist on type 'Buffer'.
+watchman/node/bser/index.ts(491,9): error TS2551: Property 'writeInt' does not exist on type 'Buffer'. Did you mean 'writeInt8'?
+watchman/node/bser/index.ts(497,24): error TS2304: Cannot find name 'BserBuf'.
+watchman/node/bser/index.ts(497,24): error TS4078: Parameter 'buf' of exported function has or is using private name 'BserBuf'.
 watchman/node/bser/index.ts(571,13): error TS2554: Expected 1 arguments, but got 0.
-watchman/node/index.ts(69,30): error TS2304: Cannot find name 'Command'.
+watchman/node/index.ts(69,30): error TS2304: Cannot find name 'ClientCommand'.
 watchman/node/index.ts(89,11): error TS2322: Type 'string' is not assignable to type 'boolean'.
 watchman/node/index.ts(100,17): error TS2339: Property 'watchmanResponse' does not exist on type 'Error'.
 watchman/node/index.ts(165,15): error TS2339: Property 'code' does not exist on type 'Error'.
@@ -42,4 +33,5 @@ watchman/node/index.ts(192,5): error TS2322: Type 'string' is not assignable to 
 watchman/node/index.ts(212,15): error TS2339: Property 'watchmanResponse' does not exist on type 'Error'.
 watchman/node/index.ts(254,3): error TS2322: Type 'string[]' is not assignable to type 'string'.
 watchman/node/index.ts(255,3): error TS2322: Type 'string[]' is not assignable to type 'string'.
+watchman/node/index.ts(309,15): error TS2339: Property 'watchmanResponse' does not exist on type 'Error'.
 

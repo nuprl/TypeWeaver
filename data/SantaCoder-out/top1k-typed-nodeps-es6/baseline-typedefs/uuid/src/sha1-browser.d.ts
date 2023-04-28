@@ -1,2 +1,2 @@
-declare function sha1(bytes: Uint8Array): number[];
+declare function sha1(bytes: string): number[];
 export default sha1;

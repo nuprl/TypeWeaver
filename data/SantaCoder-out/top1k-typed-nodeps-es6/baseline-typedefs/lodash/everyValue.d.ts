@@ -1,2 +1,2 @@
-declare function everyValue(object: Object, predicate: any): boolean;
+declare function everyValue(object: any, predicate: any): boolean;
 export default everyValue;

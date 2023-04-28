@@ -1,2 +1,2 @@
-declare function arrayReduce(array: any[], iteratee: any, accumulator: any, initAccum: any): any;
+declare function arrayReduce(array: any[], iteratee: Function, accumulator: any, initAccum: boolean): any;
 export default arrayReduce;

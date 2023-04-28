@@ -1,2 +1,2 @@
-declare function isNull(value: any): boolean;
+declare function isNull(value: unknown): boolean;
 export default isNull;

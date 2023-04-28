@@ -1,2 +1,2 @@
-declare var boundMethod: (receiver: unknown) => any;
+declare var boundMethod: (receiver: any) => any;
 export default boundMethod;

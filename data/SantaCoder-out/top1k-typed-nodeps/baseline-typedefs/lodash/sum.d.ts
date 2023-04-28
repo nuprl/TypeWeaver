@@ -1,2 +1,2 @@
-declare function sum(array: number[]): any;
+declare function sum(array: any[]): any;
 export default sum;

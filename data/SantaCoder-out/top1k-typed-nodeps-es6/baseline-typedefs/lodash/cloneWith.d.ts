@@ -1,2 +1,2 @@
-declare function cloneWith(value: any, customizer: any): any;
+declare function cloneWith(value: any, customizer: Function): any;
 export default cloneWith;

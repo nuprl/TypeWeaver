@@ -4,14 +4,14 @@ declare const _default: {
     NFA: typeof NFA;
     DFA: typeof DFA;
     builders: {
-        alt: (first: any, ...fragments: any[]) => any;
+        alt: (first: NFAFragment, ...fragments: NFAFragment[]) => NFAFragment;
         char: (c: string) => NFA;
         e: () => NFA;
-        or: (first: Function, ...fragments: Function[]) => Function;
-        rep: (fragment: string) => string;
-        repExplicit: (fragment: Fragment) => NFA;
-        plusRep: (fragment: string) => string;
-        questionRep: (fragment: string) => string;
+        or: (first: import("./nfa/nfa-state").default, ...fragments: import("./nfa/nfa-state").default[]) => import("./nfa/nfa-state").default;
+        rep: (fragment: NFAFragment) => NFAFragment;
+        repExplicit: (fragment: NFAFragment) => NFA;
+        plusRep: (fragment: Fragment) => Fragment;
+        questionRep: (fragment: Fragment) => Fragment;
     };
     toNFA(regexp: any): any;
     toDFA(regexp: any): DFA;

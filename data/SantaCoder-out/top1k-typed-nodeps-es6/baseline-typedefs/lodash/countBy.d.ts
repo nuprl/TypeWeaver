@@ -1,2 +1,2 @@
-declare function countBy(collection: any[], iteratee: any): any;
+declare function countBy(collection: any[], iteratee: Function): any;
 export default countBy;

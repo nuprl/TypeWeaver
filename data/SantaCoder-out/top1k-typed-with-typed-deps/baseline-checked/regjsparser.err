@@ -1,4 +1,4 @@
-demo/main.ts(25,79): error TS2304: Cannot find name 'Character'.
+demo/main.ts(26,30): error TS2554: Expected 1 arguments, but got 0.
 parser.ts(270,38): error TS2304: Cannot find name 'Flags'.
 parser.ts(270,55): error TS2304: Cannot find name 'Features'.
 parser.ts(275,12): error TS2339: Property 'raw' does not exist on type 'Node'.
@@ -9,8 +9,7 @@ parser.ts(286,9): error TS2345: Argument of type '{ type: string; kind: string; 
   Object literal may only specify known properties, and 'type' does not exist in type 'Node'.
 parser.ts(297,9): error TS2345: Argument of type '{ type: string; kind: string; codePoint: number; range: number[]; }' is not assignable to parameter of type 'Node'.
   Object literal may only specify known properties, and 'type' does not exist in type 'Node'.
-parser.ts(329,52): error TS2304: Cannot find name 'Rule'.
-parser.ts(331,9): error TS2345: Argument of type '{ type: string; body: Rule[]; range: number[]; }' is not assignable to parameter of type 'Node'.
+parser.ts(331,9): error TS2345: Argument of type '{ type: string; body: Node[]; range: number[]; }' is not assignable to parameter of type 'Node'.
   Object literal may only specify known properties, and 'type' does not exist in type 'Node'.
 parser.ts(342,9): error TS2345: Argument of type '{ type: string; range: number[]; }' is not assignable to parameter of type 'Node'.
   Object literal may only specify known properties, and 'type' does not exist in type 'Node'.
@@ -18,121 +17,98 @@ parser.ts(352,9): error TS2345: Argument of type '{ type: string; value: string;
   Object literal may only specify known properties, and 'type' does not exist in type 'Node'.
 parser.ts(363,9): error TS2345: Argument of type '{ type: string; matchIndex: number; range: number[]; }' is not assignable to parameter of type 'Node'.
   Object literal may only specify known properties, and 'type' does not exist in type 'Node'.
-parser.ts(364,30): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
-parser.ts(366,32): error TS2339: Property 'length' does not exist on type 'number'.
 parser.ts(374,9): error TS2345: Argument of type '{ type: string; name: string; range: number[]; }' is not assignable to parameter of type 'Node'.
   Object literal may only specify known properties, and 'type' does not exist in type 'Node'.
 parser.ts(377,16): error TS2339: Property 'range' does not exist on type 'string'.
-parser.ts(385,9): error TS2345: Argument of type '{ type: string; behavior: string; body: boolean; range: string[]; }' is not assignable to parameter of type 'Node'.
+parser.ts(383,63): error TS2304: Cannot find name 'Raw'.
+parser.ts(385,9): error TS2345: Argument of type '{ type: string; behavior: string; body: Raw[]; range: number[]; }' is not assignable to parameter of type 'Node'.
   Object literal may only specify known properties, and 'type' does not exist in type 'Node'.
 parser.ts(402,9): error TS2345: Argument of type '{ type: string; min: number; max: number; greedy: boolean; body: null; symbol: string; range: number[]; }' is not assignable to parameter of type 'Node'.
   Object literal may only specify known properties, and 'type' does not exist in type 'Node'.
-parser.ts(417,9): error TS2345: Argument of type '{ type: string; body: string[]; range: string[]; }' is not assignable to parameter of type 'Node'.
+parser.ts(415,45): error TS2304: Cannot find name 'RawTerm'.
+parser.ts(417,9): error TS2345: Argument of type '{ type: string; body: RawTerm[]; range: number[]; }' is not assignable to parameter of type 'Node'.
   Object literal may only specify known properties, and 'type' does not exist in type 'Node'.
-parser.ts(428,9): error TS2345: Argument of type '{ type: string; kind: any; body: any; negative: boolean; range: string[]; }' is not assignable to parameter of type 'Node'.
+parser.ts(426,45): error TS2304: Cannot find name 'CharacterClassContents'.
+parser.ts(428,9): error TS2345: Argument of type '{ type: string; kind: any; body: any; negative: boolean; range: number[]; }' is not assignable to parameter of type 'Node'.
   Object literal may only specify known properties, and 'type' does not exist in type 'Node'.
-parser.ts(429,24): error TS2339: Property 'kind' does not exist on type 'string'.
-parser.ts(430,24): error TS2339: Property 'body' does not exist on type 'string'.
-parser.ts(441,15): error TS2339: Property 'codePoint' does not exist on type 'number'.
-parser.ts(441,31): error TS2339: Property 'codePoint' does not exist on type 'number'.
-parser.ts(442,54): error TS2339: Property 'raw' does not exist on type 'number'.
-parser.ts(442,70): error TS2339: Property 'raw' does not exist on type 'number'.
-parser.ts(446,9): error TS2345: Argument of type '{ type: string; min: number; max: number; range: number[]; }' is not assignable to parameter of type 'Node'.
+parser.ts(439,36): error TS2304: Cannot find name 'Char'.
+parser.ts(439,47): error TS2304: Cannot find name 'Char'.
+parser.ts(446,9): error TS2345: Argument of type '{ type: string; min: Char; max: Char; range: number[]; }' is not assignable to parameter of type 'Node'.
   Object literal may only specify known properties, and 'type' does not exist in type 'Node'.
 parser.ts(458,9): error TS2345: Argument of type '{ type: string; strings: string[]; range: number[]; }' is not assignable to parameter of type 'Node'.
   Object literal may only specify known properties, and 'type' does not exist in type 'Node'.
 parser.ts(466,9): error TS2345: Argument of type '{ type: string; characters: string; range: number[]; }' is not assignable to parameter of type 'Node'.
   Object literal may only specify known properties, and 'type' does not exist in type 'Node'.
-parser.ts(487,26): error TS2304: Cannot find name 'T'.
+parser.ts(473,16): error TS2339: Property 'type' does not exist on type 'Body'.
 parser.ts(489,9): error TS2554: Expected 4 arguments, but got 2.
-parser.ts(504,26): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 parser.ts(515,13): error TS2339: Property 'range' does not exist on type 'RegExpMatchArray'.
 parser.ts(516,13): error TS2339: Property 'range' does not exist on type 'RegExpMatchArray'.
 parser.ts(518,13): error TS2339: Property 'range' does not exist on type 'RegExpMatchArray'.
-parser.ts(556,37): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
-parser.ts(565,40): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
-parser.ts(565,56): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 parser.ts(584,11): error TS2554: Expected 4 arguments, but got 1.
 parser.ts(593,11): error TS2554: Expected 4 arguments, but got 1.
+parser.ts(610,17): error TS2345: Argument of type 'RegExp' is not assignable to parameter of type 'string'.
+parser.ts(612,24): error TS2345: Argument of type 'RegExp' is not assignable to parameter of type 'string'.
 parser.ts(624,9): error TS2554: Expected 4 arguments, but got 1.
-parser.ts(627,56): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+parser.ts(627,37): error TS2345: Argument of type 'ReadableStream<Uint8Array> | Body[]' is not assignable to parameter of type 'Raw[]'.
+  Type 'ReadableStream<Uint8Array>' is missing the following properties from type 'Raw[]': length, pop, push, concat, and 29 more.
+parser.ts(658,27): error TS2345: Argument of type 'string' is not assignable to parameter of type 'RegExp'.
 parser.ts(690,22): error TS2554: Expected 5 arguments, but got 4.
 parser.ts(694,22): error TS2554: Expected 5 arguments, but got 4.
 parser.ts(702,22): error TS2554: Expected 5 arguments, but got 4.
 parser.ts(756,15): error TS2554: Expected 1 arguments, but got 0.
 parser.ts(763,11): error TS2554: Expected 4 arguments, but got 1.
+parser.ts(770,57): error TS2345: Argument of type 'string' is not assignable to parameter of type 'RegExp'.
 parser.ts(776,48): error TS2339: Property 'range' does not exist on type 'Node'.
 parser.ts(777,15): error TS2339: Property 'name' does not exist on type 'Node'.
+parser.ts(786,27): error TS2345: Argument of type 'string' is not assignable to parameter of type 'RegExp'.
 parser.ts(810,11): error TS2554: Expected 4 arguments, but got 1.
 parser.ts(813,9): error TS2554: Expected 4 arguments, but got 1.
 parser.ts(816,7): error TS2322: Type 'string' is not assignable to type 'RegExpMatchArray'.
 parser.ts(821,9): error TS2554: Expected 4 arguments, but got 1.
 parser.ts(828,22): error TS2339: Property 'modifierFlags' does not exist on type 'Node'.
-parser.ts(839,25): error TS2339: Property 'kind' does not exist on type 'string'.
-parser.ts(840,32): error TS2551: Property 'codePoint' does not exist on type 'string'. Did you mean 'codePointAt'?
-parser.ts(841,19): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
-parser.ts(848,25): error TS2339: Property 'range' does not exist on type 'string'.
-parser.ts(849,25): error TS2551: Property 'codePoint' does not exist on type 'string'. Did you mean 'codePointAt'?
-parser.ts(850,25): error TS2339: Property 'type' does not exist on type 'string'.
-parser.ts(851,25): error TS2339: Property 'kind' does not exist on type 'string'.
-parser.ts(852,20): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Node'.
+parser.ts(836,59): error TS2304: Cannot find name 'UnicodeEscape'.
 parser.ts(887,18): error TS2554: Expected 4 arguments, but got 3.
 parser.ts(889,11): error TS2554: Expected 4 arguments, but got 3.
 parser.ts(901,18): error TS2554: Expected 4 arguments, but got 3.
 parser.ts(997,11): error TS2345: Argument of type '{ type: string; negative: boolean; value: any; range: any[]; raw: any; }' is not assignable to parameter of type 'Node'.
   Object literal may only specify known properties, and 'type' does not exist in type 'Node'.
 parser.ts(1013,37): error TS2345: Argument of type 'Node' is not assignable to parameter of type 'string'.
-parser.ts(1022,11): error TS2345: Argument of type 'Node' is not assignable to parameter of type 'string'.
 parser.ts(1050,16): error TS2554: Expected 4 arguments, but got 3.
 parser.ts(1072,9): error TS2554: Expected 1 arguments, but got 0.
-parser.ts(1074,32): error TS2339: Property 'codePoint' does not exist on type 'string | Node'.
-  Property 'codePoint' does not exist on type 'string'.
-parser.ts(1077,34): error TS2339: Property 'codePoint' does not exist on type 'string | Node'.
-  Property 'codePoint' does not exist on type 'string'.
 parser.ts(1089,7): error TS2554: Expected 1 arguments, but got 0.
 parser.ts(1090,26): error TS2554: Expected 1 arguments, but got 0.
 parser.ts(1116,9): error TS2554: Expected 4 arguments, but got 1.
 parser.ts(1125,9): error TS2345: Argument of type '{ type: string; value: string; range: number[]; }' is not assignable to parameter of type 'Node'.
   Object literal may only specify known properties, and 'type' does not exist in type 'Node'.
-parser.ts(1147,32): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+parser.ts(1135,15): error TS2367: This comparison appears to be unintentional because the types 'string' and 'number' have no overlap.
+parser.ts(1135,30): error TS2367: This comparison appears to be unintentional because the types 'string' and 'number' have no overlap.
+parser.ts(1136,10): error TS2365: Operator '>=' cannot be applied to types 'string' and 'number'.
+parser.ts(1136,22): error TS2365: Operator '<=' cannot be applied to types 'string' and 'number'.
+parser.ts(1137,10): error TS2365: Operator '>=' cannot be applied to types 'string' and 'number'.
+parser.ts(1137,22): error TS2365: Operator '<=' cannot be applied to types 'string' and 'number'.
+parser.ts(1138,11): error TS2365: Operator '>=' cannot be applied to types 'string' and 'number'.
+parser.ts(1138,69): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 parser.ts(1148,10): error TS2365: Operator '>=' cannot be applied to types 'string' and 'number'.
 parser.ts(1148,22): error TS2365: Operator '<=' cannot be applied to types 'string' and 'number'.
 parser.ts(1149,11): error TS2365: Operator '>=' cannot be applied to types 'string' and 'number'.
 parser.ts(1149,72): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 parser.ts(1171,15): error TS2554: Expected 1 arguments, but got 0.
-parser.ts(1187,48): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
-parser.ts(1191,49): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
-parser.ts(1204,19): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 parser.ts(1212,11): error TS2554: Expected 4 arguments, but got 1.
-parser.ts(1220,19): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
-parser.ts(1222,21): error TS2339: Property 'range' does not exist on type 'string'.
-parser.ts(1223,32): error TS2345: Argument of type 'string' is not assignable to parameter of type 'RegExpMatchArray'.
+parser.ts(1218,43): error TS2304: Cannot find name 'ClassAtom'.
+parser.ts(1223,32): error TS2345: Argument of type 'string' is not assignable to parameter of type 'string[]'.
 parser.ts(1227,11): error TS2554: Expected 4 arguments, but got 1.
 parser.ts(1234,11): error TS2554: Expected 4 arguments, but got 1.
-parser.ts(1238,30): error TS2322: Type 'string' is not assignable to type 'object'.
 parser.ts(1253,13): error TS2554: Expected 4 arguments, but got 1.
-parser.ts(1256,35): error TS2345: Argument of type 'string & Record<"codePoint", unknown>' is not assignable to parameter of type 'number'.
 parser.ts(1259,25): error TS2339: Property 'type' does not exist on type '{ kind: any; body: any[]; } | { kind: string; body: any; }'.
   Property 'type' does not exist on type '{ kind: any; body: any[]; }'.
 parser.ts(1267,9): error TS2554: Expected 4 arguments, but got 1.
 parser.ts(1281,9): error TS2554: Expected 4 arguments, but got 1.
-parser.ts(1284,19): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
-parser.ts(1291,37): error TS2345: Argument of type 'string | Node' is not assignable to parameter of type 'string'.
-  Type 'Node' is not assignable to type 'string'.
 parser.ts(1302,9): error TS2554: Expected 4 arguments, but got 1.
-parser.ts(1304,19): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
-parser.ts(1311,37): error TS2345: Argument of type 'string | Node' is not assignable to parameter of type 'string'.
-  Type 'Node' is not assignable to type 'string'.
-parser.ts(1319,32): error TS2345: Argument of type 'string' is not assignable to parameter of type 'RegExpMatchArray'.
+parser.ts(1319,32): error TS2345: Argument of type 'string' is not assignable to parameter of type 'string[]'.
 parser.ts(1336,11): error TS2554: Expected 4 arguments, but got 1.
-parser.ts(1369,26): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
-parser.ts(1371,26): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
-parser.ts(1377,23): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
-parser.ts(1381,23): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 parser.ts(1382,13): error TS2554: Expected 4 arguments, but got 1.
 parser.ts(1436,11): error TS2554: Expected 4 arguments, but got 3.
 parser.ts(1451,9): error TS2554: Expected 4 arguments, but got 2.
-parser.ts(1454,34): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 parser.ts(1463,9): error TS2554: Expected 4 arguments, but got 2.
 parser.ts(1484,11): error TS2554: Expected 4 arguments, but got 3.
 parser.ts(1511,16): error TS2554: Expected 4 arguments, but got 3.

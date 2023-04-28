@@ -13,14 +13,14 @@ declare const regexpTree: {
         NFA: typeof import("./interpreter/finite-automaton/nfa/nfa").default;
         DFA: typeof import("./interpreter/finite-automaton/dfa/dfa").default;
         builders: {
-            alt: (first: any, ...fragments: any[]) => any;
+            alt: (first: NFAFragment, ...fragments: NFAFragment[]) => NFAFragment;
             char: (c: string) => import("./interpreter/finite-automaton/nfa/nfa").default;
             e: () => import("./interpreter/finite-automaton/nfa/nfa").default;
-            or: (first: Function, ...fragments: Function[]) => Function;
-            rep: (fragment: string) => string;
-            repExplicit: (fragment: Fragment) => import("./interpreter/finite-automaton/nfa/nfa").default;
-            plusRep: (fragment: string) => string;
-            questionRep: (fragment: string) => string;
+            or: (first: import("./interpreter/finite-automaton/nfa/nfa-state").default, ...fragments: import("./interpreter/finite-automaton/nfa/nfa-state").default[]) => import("./interpreter/finite-automaton/nfa/nfa-state").default;
+            rep: (fragment: NFAFragment) => NFAFragment;
+            repExplicit: (fragment: NFAFragment) => import("./interpreter/finite-automaton/nfa/nfa").default;
+            plusRep: (fragment: Fragment) => Fragment;
+            questionRep: (fragment: Fragment) => Fragment;
         };
         toNFA(regexp: any): any;
         toDFA(regexp: any): import("./interpreter/finite-automaton/dfa/dfa").default;

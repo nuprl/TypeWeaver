@@ -1,3 +1,7 @@
 benchmark.ts(1,27): error TS2307: Cannot find module 'filter-obj' or its corresponding type declarations.
 benchmark.ts(31,1): error TS2554: Expected 3 arguments, but got 2.
+index.ts(17,9): error TS2349: This expression is not callable.
+  Type 'never' has no call signatures.
+index.ts(30,30): error TS2345: Argument of type '(key: any) => boolean' is not assignable to parameter of type 'string[]'.
+index.ts(33,29): error TS2345: Argument of type '(key: any, value: any, object: any) => boolean' is not assignable to parameter of type 'string[]'.
 

@@ -4,5 +4,5 @@ declare var defineProperty: <T>(o: T, p: PropertyKey, attributes: PropertyDescri
 declare var gOPD: (o: any, p: PropertyKey) => PropertyDescriptor;
 declare var isArray: (arr: any) => boolean;
 declare var isPlainObject: (obj: any) => any;
-declare var setProperty: (target: any, options: any) => void;
+declare var setProperty: (target: any, options: IPropertyOptions) => void;
 declare var getProperty: (obj: any, name: string) => any;

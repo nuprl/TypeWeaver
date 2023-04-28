@@ -1,2 +1,2 @@
-declare function differenceBy(array: any[], ...values: any[]): any[];
+declare function differenceBy(array: ArrayLike<any>, ...values: Array<any>): any[];
 export default differenceBy;

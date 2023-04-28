@@ -1,6 +1,5 @@
-/// <reference types="node" />
 declare const v5: {
-    (value: string, namespace: string, buf: Buffer, offset: number): string | Buffer;
+    (value: string, namespace: string, buf: Uint8Array, offset: number): string | Uint8Array;
     name: string;
     DNS: string;
     URL: string;

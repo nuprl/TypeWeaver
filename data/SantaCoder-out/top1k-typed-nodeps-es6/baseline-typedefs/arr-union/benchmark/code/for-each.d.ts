@@ -1,1 +1,1 @@
-export default function diff(init: any): any;
+export default function diff(init: any[]): any;

@@ -1,1 +1,1 @@
-export default function seq(...functions: any): (...args: any[]) => any;
+export default function seq(...functions: Array<Function>): (...args: any[]) => any;

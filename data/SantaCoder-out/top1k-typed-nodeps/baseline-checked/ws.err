@@ -45,9 +45,9 @@ examples/express-session-parse/index.ts(44,11): error TS2339: Property 'session'
 examples/express-session-parse/index.ts(47,14): error TS2339: Property 'send' does not exist on type 'Response'.
 examples/express-session-parse/index.ts(54,7): error TS2451: Cannot redeclare block-scoped variable 'server'.
 examples/express-session-parse/index.ts(59,7): error TS2451: Cannot redeclare block-scoped variable 'wss'.
-examples/express-session-parse/index.ts(61,41): error TS2503: Cannot find namespace 'http'.
-examples/express-session-parse/index.ts(61,71): error TS2503: Cannot find namespace 'net'.
-examples/express-session-parse/index.ts(79,56): error TS2503: Cannot find namespace 'http'.
+examples/express-session-parse/index.ts(61,41): error TS2304: Cannot find name 'IncomingMessage'.
+examples/express-session-parse/index.ts(61,66): error TS2304: Cannot find name 'Socket'.
+examples/express-session-parse/index.ts(79,56): error TS2304: Cannot find name 'IncomingMessage'.
 examples/express-session-parse/index.ts(84,6): error TS2339: Property 'on' does not exist on type 'WebSocket'.
 examples/express-session-parse/index.ts(91,6): error TS2339: Property 'on' does not exist on type 'WebSocket'.
 examples/express-session-parse/public/app.ts(19,9): error TS2339: Property 'onclick' does not exist on type 'Element'.
@@ -82,20 +82,14 @@ index.ts(11,11): error TS2339: Property 'WebSocketServer' does not exist on type
 index.ts(11,39): error TS2339: Property 'Server' does not exist on type '{ new (url: string | URL, protocols?: string | string[]): WebSocket; prototype: WebSocket; readonly CLOSED: number; readonly CLOSING: number; readonly CONNECTING: number; readonly OPEN: number; }'.
 lib/buffer-util.ts(3,9): error TS2451: Cannot redeclare block-scoped variable 'EMPTY_BUFFER'.
 lib/buffer-util.ts(13,10): error TS2451: Cannot redeclare block-scoped variable 'concat'.
-lib/buffer-util.ts(41,70): error TS2304: Cannot find name 'maskOffset'.
-lib/buffer-util.ts(41,70): error TS4078: Parameter 'offset' of exported function has or is using private name 'maskOffset'.
-lib/buffer-util.ts(41,90): error TS2304: Cannot find name 'maskLength'.
-lib/buffer-util.ts(41,90): error TS4078: Parameter 'length' of exported function has or is using private name 'maskLength'.
-lib/buffer-util.ts(43,5): error TS2322: Type 'number' is not assignable to type 'string'.
-lib/buffer-util.ts(43,5): error TS2542: Index signature in type 'String' only permits reading.
-lib/buffer-util.ts(43,26): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-lib/buffer-util.ts(43,38): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/buffer-util.ts(67,10): error TS2451: Cannot redeclare block-scoped variable 'toArrayBuffer'.
 lib/buffer-util.ts(83,10): error TS2451: Cannot redeclare block-scoped variable 'toBuffer'.
-lib/buffer-util.ts(84,12): error TS2339: Property 'readOnly' does not exist on type '(data: any) => any'.
-lib/buffer-util.ts(96,14): error TS2339: Property 'readOnly' does not exist on type '(data: any) => any'.
-lib/buffer-util.ts(116,30): error TS2345: Argument of type 'Uint8Array' is not assignable to parameter of type 'string'.
-lib/buffer-util.ts(121,47): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Buffer'.
+lib/buffer-util.ts(84,12): error TS2339: Property 'readOnly' does not exist on type '(data: Buffer) => any'.
+lib/buffer-util.ts(90,7): error TS2358: The left-hand side of an 'instanceof' expression must be of type 'any', an object type or a type parameter.
+lib/buffer-util.ts(93,28): error TS2339: Property 'buffer' does not exist on type 'never'.
+lib/buffer-util.ts(93,41): error TS2339: Property 'byteOffset' does not exist on type 'never'.
+lib/buffer-util.ts(93,58): error TS2339: Property 'byteLength' does not exist on type 'never'.
+lib/buffer-util.ts(96,14): error TS2339: Property 'readOnly' does not exist on type '(data: Buffer) => any'.
 lib/event-target.ts(3,9): error TS2451: Cannot redeclare block-scoped variable 'kForOnEventAttribute'.
 lib/event-target.ts(3,31): error TS2451: Cannot redeclare block-scoped variable 'kListener'.
 lib/event-target.ts(7,7): error TS2451: Cannot redeclare block-scoped variable 'kError'.
@@ -240,24 +234,24 @@ lib/receiver.ts(45,32): error TS2339: Property 'extensions' does not exist on ty
 lib/receiver.ts(46,32): error TS2339: Property 'isServer' does not exist on type '{}'.
 lib/receiver.ts(47,32): error TS2339: Property 'maxPayload' does not exist on type '{}'.
 lib/receiver.ts(48,42): error TS2339: Property 'skipUTF8Validation' does not exist on type '{}'.
-lib/receiver.ts(179,9): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'string'.
-lib/receiver.ts(192,9): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'string'.
-lib/receiver.ts(208,11): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'string'.
-lib/receiver.ts(219,11): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'string'.
-lib/receiver.ts(232,11): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'string'.
-lib/receiver.ts(245,11): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'string'.
-lib/receiver.ts(256,11): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'string'.
-lib/receiver.ts(267,11): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'string'.
-lib/receiver.ts(277,9): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'string'.
-lib/receiver.ts(292,11): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'string'.
-lib/receiver.ts(302,9): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'string'.
-lib/receiver.ts(353,9): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'string'.
-lib/receiver.ts(377,11): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'string'.
-lib/receiver.ts(469,15): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'string'.
-lib/receiver.ts(522,13): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'string'.
-lib/receiver.ts(553,11): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'string'.
-lib/receiver.ts(564,13): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'string'.
-lib/receiver.ts(576,13): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'string'.
+lib/receiver.ts(181,9): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+lib/receiver.ts(194,9): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+lib/receiver.ts(210,11): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+lib/receiver.ts(221,11): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+lib/receiver.ts(234,11): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+lib/receiver.ts(247,11): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+lib/receiver.ts(258,11): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+lib/receiver.ts(269,11): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+lib/receiver.ts(279,9): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+lib/receiver.ts(294,11): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+lib/receiver.ts(304,9): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+lib/receiver.ts(355,9): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+lib/receiver.ts(379,11): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+lib/receiver.ts(471,15): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+lib/receiver.ts(524,13): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+lib/receiver.ts(555,11): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+lib/receiver.ts(566,13): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+lib/receiver.ts(578,13): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 lib/sender.ts(5,7): error TS2451: Cannot redeclare block-scoped variable 'net'.
 lib/sender.ts(6,7): error TS2451: Cannot redeclare block-scoped variable 'tls'.
 lib/sender.ts(9,7): error TS2451: Cannot redeclare block-scoped variable 'PerMessageDeflate'.
@@ -277,16 +271,16 @@ lib/sender.ts(44,10): error TS2339: Property '_queue' does not exist on type 'Se
 lib/sender.ts(186,26): error TS2339: Property '_generateMask' does not exist on type 'Sender'.
 lib/sender.ts(188,24): error TS2339: Property '_maskBuffer' does not exist on type 'Sender'.
 lib/sender.ts(194,14): error TS2339: Property '_deflating' does not exist on type 'Sender'.
-lib/sender.ts(219,27): error TS2339: Property 'readOnly' does not exist on type '(data: any) => any'.
+lib/sender.ts(219,27): error TS2339: Property 'readOnly' does not exist on type '(data: Buffer) => any'.
 lib/sender.ts(229,26): error TS2339: Property '_generateMask' does not exist on type 'Sender'.
 lib/sender.ts(231,24): error TS2339: Property '_maskBuffer' does not exist on type 'Sender'.
 lib/sender.ts(237,14): error TS2339: Property '_deflating' does not exist on type 'Sender'.
-lib/sender.ts(262,27): error TS2339: Property 'readOnly' does not exist on type '(data: any) => any'.
+lib/sender.ts(262,27): error TS2339: Property 'readOnly' does not exist on type '(data: Buffer) => any'.
 lib/sender.ts(272,26): error TS2339: Property '_generateMask' does not exist on type 'Sender'.
 lib/sender.ts(274,24): error TS2339: Property '_maskBuffer' does not exist on type 'Sender'.
 lib/sender.ts(280,14): error TS2339: Property '_deflating' does not exist on type 'Sender'.
 lib/sender.ts(304,36): error TS2339: Property '_extensions' does not exist on type 'Sender'.
-lib/sender.ts(317,27): error TS2339: Property 'readOnly' does not exist on type '(data: any) => any'.
+lib/sender.ts(317,27): error TS2339: Property 'readOnly' does not exist on type '(data: Buffer) => any'.
 lib/sender.ts(320,14): error TS2339: Property '_firstFragment' does not exist on type 'Sender'.
 lib/sender.ts(321,12): error TS2339: Property '_firstFragment' does not exist on type 'Sender'.
 lib/sender.ts(333,12): error TS2339: Property '_compress' does not exist on type 'Sender'.
@@ -319,6 +313,8 @@ lib/sender.ts(471,12): error TS2339: Property '_socket' does not exist on type '
 lib/sender.ts(473,12): error TS2339: Property '_socket' does not exist on type 'Sender'.
 lib/stream.ts(11,10): error TS2393: Duplicate function implementation.
 lib/stream.ts(11,28): error TS2749: 'Duplex' refers to a value, but is being used as a type here. Did you mean 'typeof Duplex'?
+lib/stream.ts(49,56): error TS2304: Cannot find name 'DuplexOptions'.
+lib/stream.ts(49,56): error TS4078: Parameter 'options' of exported function has or is using private name 'DuplexOptions'.
 lib/stream.ts(60,6): error TS2339: Property 'on' does not exist on type 'WebSocket'.
 lib/stream.ts(64,32): error TS2339: Property 'pause' does not exist on type 'WebSocket'.
 lib/stream.ts(67,6): error TS2339: Property 'once' does not exist on type 'WebSocket'.
@@ -353,8 +349,8 @@ lib/websocket-server.ts(29,7): error TS2451: Cannot redeclare block-scoped varia
 lib/websocket-server.ts(261,7): error TS2554: Expected 3-4 arguments, but got 2.
 lib/websocket-server.ts(336,52): error TS2554: Expected 3-4 arguments, but got 2.
 lib/websocket-server.ts(369,39): error TS2554: Expected 3-4 arguments, but got 2.
-lib/websocket-server.ts(447,31): error TS2304: Cannot find name 'Server'.
-lib/websocket-server.ts(447,31): error TS4078: Parameter 'server' of exported function has or is using private name 'Server'.
+lib/websocket-server.ts(447,31): error TS2749: 'EventEmitter' refers to a value, but is being used as a type here. Did you mean 'typeof EventEmitter'?
+lib/websocket-server.ts(447,31): error TS4078: Parameter 'server' of exported function has or is using private name 'EventEmitter'.
 lib/websocket-server.ts(463,10): error TS2393: Duplicate function implementation.
 lib/websocket-server.ts(463,28): error TS2304: Cannot find name 'Server'.
 lib/websocket-server.ts(473,10): error TS2393: Duplicate function implementation.
@@ -396,8 +392,8 @@ lib/websocket.ts(367,22): error TS2345: Argument of type 'this' is not assignabl
 lib/websocket.ts(399,22): error TS2345: Argument of type 'this' is not assignable to parameter of type 'WebSocket'.
 lib/websocket.ts(452,22): error TS2345: Argument of type 'this' is not assignable to parameter of type 'WebSocket'.
 lib/websocket.ts(480,29): error TS2345: Argument of type 'this' is not assignable to parameter of type 'WebSocket'.
-lib/websocket.ts(637,92): error TS2304: Cannot find name 'Options'.
-lib/websocket.ts(637,92): error TS4078: Parameter 'options' of exported function has or is using private name 'Options'.
+lib/websocket.ts(637,92): error TS2304: Cannot find name 'ClientOptions'.
+lib/websocket.ts(637,92): error TS4078: Parameter 'options' of exported function has or is using private name 'ClientOptions'.
 lib/websocket.ts(666,7): error TS2358: The left-hand side of an 'instanceof' expression must be of type 'any', an object type or a type parameter.
 lib/websocket.ts(668,15): error TS2551: Property '_url' does not exist on type 'WebSocket'. Did you mean 'url'?
 lib/websocket.ts(676,15): error TS2551: Property '_url' does not exist on type 'WebSocket'. Did you mean 'url'?
@@ -427,21 +423,18 @@ lib/websocket.ts(983,15): error TS2339: Property 'setSocket' does not exist on t
 lib/websocket.ts(1001,13): error TS2551: Property '_readyState' does not exist on type 'WebSocket'. Did you mean 'readyState'?
 lib/websocket.ts(1002,13): error TS2339: Property 'emit' does not exist on type 'WebSocket'.
 lib/websocket.ts(1003,13): error TS2339: Property 'emitClose' does not exist on type 'WebSocket'.
-lib/websocket.ts(1013,30): error TS2503: Cannot find namespace 'net'.
-lib/websocket.ts(1013,30): error TS4078: Parameter 'options' of exported function has or is using private name 'net'.
-lib/websocket.ts(1025,30): error TS2304: Cannot find name 'ClientOptions'.
-lib/websocket.ts(1025,30): error TS4078: Parameter 'options' of exported function has or is using private name 'ClientOptions'.
+lib/websocket.ts(1025,30): error TS2503: Cannot find namespace 'tls'.
+lib/websocket.ts(1025,30): error TS4078: Parameter 'options' of exported function has or is using private name 'tls'.
 lib/websocket.ts(1044,10): error TS2393: Duplicate function implementation.
 lib/websocket.ts(1044,55): error TS2749: 'Duplex' refers to a value, but is being used as a type here. Did you mean 'typeof Duplex'?
-lib/websocket.ts(1044,72): error TS2304: Cannot find name 'Message'.
 lib/websocket.ts(1045,13): error TS2551: Property '_readyState' does not exist on type 'WebSocket'. Did you mean 'readyState'?
 lib/websocket.ts(1066,36): error TS2339: Property 'emit' does not exist on type 'WebSocket'.
 lib/websocket.ts(1067,36): error TS2339: Property 'emitClose' does not exist on type 'WebSocket'.
 lib/websocket.ts(1090,19): error TS2339: Property '_socket' does not exist on type 'WebSocket'.
 lib/websocket.ts(1090,38): error TS2339: Property '_sender' does not exist on type 'WebSocket'.
 lib/websocket.ts(1091,20): error TS2551: Property '_bufferedAmount' does not exist on type 'WebSocket'. Did you mean 'bufferedAmount'?
-lib/websocket.ts(1210,25): error TS2749: 'Readable' refers to a value, but is being used as a type here. Did you mean 'typeof Readable'?
-lib/websocket.ts(1210,25): error TS4078: Parameter 'stream' of exported function has or is using private name 'Readable'.
+lib/websocket.ts(1210,25): error TS2749: 'Duplex' refers to a value, but is being used as a type here. Did you mean 'typeof Duplex'?
+lib/websocket.ts(1210,25): error TS4078: Parameter 'stream' of exported function has or is using private name 'Duplex'.
 lib/websocket.ts(1295,10): error TS2393: Duplicate function implementation.
 ../../../../../src/weaver/src/node_modules/typescript/lib/lib.dom.d.ts(3767,11): error TS2300: Duplicate identifier 'CloseEvent'.
 ../../../../../src/weaver/src/node_modules/typescript/lib/lib.dom.d.ts(3776,13): error TS2300: Duplicate identifier 'CloseEvent'.

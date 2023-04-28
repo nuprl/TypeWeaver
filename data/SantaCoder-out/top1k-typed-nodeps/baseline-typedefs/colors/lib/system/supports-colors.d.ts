@@ -10,7 +10,7 @@ declare function translateLevel(level: number): false | {
     has16m: boolean;
 };
 declare function supportsColor(stream: NodeJS.WriteStream): number;
-declare function getSupportLevel(stream: ReadableStream): false | {
+declare function getSupportLevel(stream: NodeJS.WriteStream): false | {
     level: number;
     hasBasic: boolean;
     has256: boolean;

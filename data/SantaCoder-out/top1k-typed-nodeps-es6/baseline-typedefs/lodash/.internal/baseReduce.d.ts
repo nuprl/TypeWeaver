@@ -1,2 +1,2 @@
-declare function baseReduce(collection: any[], iteratee: any, accumulator: any, initAccum: any, eachFunc: any): any;
+declare function baseReduce(collection: any[], iteratee: Function, accumulator: any, initAccum: boolean, eachFunc: Function): any;
 export default baseReduce;

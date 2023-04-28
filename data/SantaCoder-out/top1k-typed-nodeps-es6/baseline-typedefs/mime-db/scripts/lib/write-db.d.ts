@@ -4,4 +4,4 @@
  * Copyright(c) 2015-2022 Douglas Christopher Wilson
  * MIT Licensed
  */
-export default function writeDatabaseSync(fileName: string, obj: any): void;
+export default function writeDatabaseSync(fileName: string, obj: Object): void;

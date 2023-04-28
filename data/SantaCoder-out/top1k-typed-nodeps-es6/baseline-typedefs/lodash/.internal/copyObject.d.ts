@@ -1,2 +1,2 @@
-declare function copyObject(source: any, props: string[], object: any, customizer: Function): any;
+declare function copyObject(source: Object, props: Array<string>, object: Object, customizer: Function): Object;
 export default copyObject;

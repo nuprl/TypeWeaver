@@ -66,10 +66,10 @@ lib/colors.ts(206,31): error TS2339: Property 'maps' does not exist on type '{}'
 lib/custom/american.ts(2,41): error TS2339: Property 'yellow' does not exist on type '"LIBERTY LIBERTY LIBERTY"'.
 lib/custom/american.ts(3,41): error TS2339: Property 'america' does not exist on type '"LIBERTY LIBERTY LIBERTY"'.
 lib/custom/american.ts(4,41): error TS2339: Property 'yellow' does not exist on type '"LIBERTY LIBERTY LIBERTY"'.
-lib/custom/trap.ts(1,64): error TS2304: Cannot find name 'Options'.
 lib/custom/trap.ts(4,3): error TS2322: Type 'string[]' is not assignable to type 'string'.
 lib/custom/trap.ts(35,8): error TS2339: Property 'forEach' does not exist on type 'string'.
 lib/custom/zalgo.ts(2,59): error TS2304: Cannot find name 'Options'.
+lib/custom/zalgo.ts(51,15): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
 lib/custom/zalgo.ts(70,5): error TS2322: Type 'string[]' is not assignable to type 'string'.
 lib/custom/zalgo.ts(71,15): error TS2407: The right-hand side of a 'for...in' statement must be of type 'any', an object type or a type parameter, but here has type 'string'.
 lib/extendStringPrototype.ts(1,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/SantaCoder-out/top1k-typed-nodeps-es6/baseline/colors/lib/colors"' has no default export.
@@ -78,13 +78,8 @@ lib/extendStringPrototype.ts(70,30): error TS2339: Property 'red' does not exist
 lib/extendStringPrototype.ts(70,64): error TS2339: Property 'magenta' does not exist on type 'string'.
 lib/index.ts(1,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/SantaCoder-out/top1k-typed-nodeps-es6/baseline/colors/lib/colors"' has no default export.
 lib/index.ts(23,73): error TS2339: Property 'zalgo' does not exist on type '"testing testing testing testing testing testing testing"'.
-lib/maps/america.ts(5,29): error TS2339: Property 'red' does not exist on type 'string[]'.
-lib/maps/america.ts(6,29): error TS2339: Property 'white' does not exist on type 'string[]'.
-lib/maps/america.ts(7,29): error TS2339: Property 'blue' does not exist on type 'string[]'.
-lib/maps/zebra.ts(3,42): error TS2339: Property 'inverse' does not exist on type 'string[]'.
 lib/styles.ts(93,9): error TS2339: Property 'open' does not exist on type 'any[]'.
 lib/styles.ts(94,9): error TS2339: Property 'close' does not exist on type 'any[]'.
-lib/system/has-flag.ts(31,31): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'string'.
 lib/system/supports-colors.ts(34,5): error TS2554: Expected 2 arguments, but got 1.
 lib/system/supports-colors.ts(34,28): error TS2554: Expected 2 arguments, but got 1.
 lib/system/supports-colors.ts(34,52): error TS2554: Expected 2 arguments, but got 1.
@@ -96,12 +91,5 @@ lib/system/supports-colors.ts(63,7): error TS2554: Expected 2 arguments, but got
 lib/system/supports-colors.ts(63,31): error TS2554: Expected 2 arguments, but got 1.
 lib/system/supports-colors.ts(64,10): error TS2554: Expected 2 arguments, but got 1.
 lib/system/supports-colors.ts(68,7): error TS2554: Expected 2 arguments, but got 1.
-lib/system/supports-colors.ts(72,25): error TS2339: Property 'isTTY' does not exist on type 'WritableStream'.
-lib/system/supports-colors.ts(143,29): error TS2345: Argument of type 'ReadableStream<any>' is not assignable to parameter of type 'WritableStream'.
-  Type 'ReadableStream<any>' is missing the following properties from type 'WritableStream': writable, write, end, addListener, and 14 more.
-lib/system/supports-colors.ts(149,27): error TS2345: Argument of type 'WriteStream & { fd: 1; }' is not assignable to parameter of type 'ReadableStream<any>'.
-  Type 'WriteStream & { fd: 1; }' is missing the following properties from type 'ReadableStream<any>': locked, cancel, getReader, pipeThrough, and 2 more.
-lib/system/supports-colors.ts(150,27): error TS2345: Argument of type 'WriteStream & { fd: 2; }' is not assignable to parameter of type 'ReadableStream<any>'.
-  Type 'WriteStream & { fd: 2; }' is missing the following properties from type 'ReadableStream<any>': locked, cancel, getReader, pipeThrough, and 2 more.
 safe.ts(9,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/SantaCoder-out/top1k-typed-nodeps-es6/baseline/colors/lib/colors"' has no default export.
 

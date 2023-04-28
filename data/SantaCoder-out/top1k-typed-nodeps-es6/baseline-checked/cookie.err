@@ -5,7 +5,10 @@ benchmark/parse.ts(5,23): error TS2307: Cannot find module 'benchmark' or its co
 benchmark/parse.ts(7,24): error TS2307: Cannot find module 'beautify-benchmark' or its corresponding type declarations.
 index.ts(47,38): error TS2304: Cannot find name 'Options'.
 index.ts(47,38): error TS4078: Parameter 'options' of exported function has or is using private name 'Options'.
+index.ts(111,53): error TS2304: Cannot find name 'Options'.
+index.ts(111,53): error TS4078: Parameter 'options' of exported function has or is using private name 'Options'.
 scripts/update-benchmark.ts(7,22): error TS2307: Cannot find module 'top-sites' or its corresponding type declarations.
-scripts/update-benchmark.ts(44,18): error TS2339: Property 'rootDomain' does not exist on type 'string'.
-scripts/update-benchmark.ts(54,42): error TS2339: Property 'rootDomain' does not exist on type 'string'.
+scripts/update-benchmark.ts(37,32): error TS2304: Cannot find name 'Site'.
+scripts/update-benchmark.ts(41,33): error TS2304: Cannot find name 'Site'.
+scripts/update-benchmark.ts(53,28): error TS2304: Cannot find name 'Site'.
 

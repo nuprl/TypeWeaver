@@ -1,4 +1,3 @@
-index.ts(56,44): error TS2304: Cannot find name 'T'.
 index.ts(103,10): error TS2393: Duplicate function implementation.
 index.ts(141,35): error TS2304: Cannot find name 'EventEmitter'.
 index.ts(141,35): error TS4078: Parameter 'emitter' of exported function has or is using private name 'EventEmitter'.
@@ -6,15 +5,13 @@ index.ts(154,15): error TS2339: Property 'noDeprecation' does not exist on type 
 index.ts(251,18): error TS2769: No overload matches this call.
   The last overload gave the following error.
     Argument of type '"deprecation"' is not assignable to parameter of type 'Signals'.
-index.ts(267,38): error TS2304: Cannot find name 'NodeCallSite'.
-index.ts(267,38): error TS4078: Parameter 'callSite' of exported function has or is using private name 'NodeCallSite'.
+index.ts(267,38): error TS2304: Cannot find name 'CallSite'.
+index.ts(267,38): error TS4078: Parameter 'callSite' of exported function has or is using private name 'CallSite'.
 index.ts(278,8): error TS2339: Property 'callSite' does not exist on type 'any[]'.
 index.ts(279,8): error TS2339: Property 'name' does not exist on type 'any[]'.
 index.ts(288,32): error TS2304: Cannot find name 'Site'.
 index.ts(288,32): error TS4078: Parameter 'site' of exported function has or is using private name 'Site'.
-index.ts(371,36): error TS2304: Cannot find name 'NodeCallSite'.
-index.ts(371,36): error TS4078: Parameter 'callSite' of exported function has or is using private name 'NodeCallSite'.
-index.ts(386,3): error TS2322: Type '(obj: any, stack: string[]) => string[]' is not assignable to type '(err: Error, stackTraces: CallSite[]) => any'.
+index.ts(386,3): error TS2322: Type '(obj: Object, stack: string[]) => string[]' is not assignable to type '(err: Error, stackTraces: CallSite[]) => any'.
   Types of parameters 'stack' and 'stackTraces' are incompatible.
     Type 'CallSite[]' is not assignable to type 'string[]'.
       Type 'CallSite' is not assignable to type 'string'.

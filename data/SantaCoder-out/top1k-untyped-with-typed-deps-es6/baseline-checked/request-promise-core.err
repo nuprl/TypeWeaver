@@ -1,5 +1,9 @@
 configure/request-next.ts(3,18): error TS2307: Cannot find module '../' or its corresponding type declarations.
+configure/request-next.ts(9,35): error TS2304: Cannot find name 'IOptions'.
+configure/request-next.ts(9,35): error TS4078: Parameter 'options' of exported function has or is using private name 'IOptions'.
 configure/request2.ts(3,18): error TS2307: Cannot find module '../' or its corresponding type declarations.
+configure/request2.ts(9,35): error TS2304: Cannot find name 'IOptions'.
+configure/request2.ts(9,35): error TS4078: Parameter 'options' of exported function has or is using private name 'IOptions'.
 gulpfile.ts(3,18): error TS2307: Cannot find module 'gulp' or its corresponding type declarations.
 gulpfile.ts(4,25): error TS2307: Cannot find module 'run-sequence' or its corresponding type declarations.
 gulpfile.ts(5,22): error TS2307: Cannot find module 'gulp-istanbul' or its corresponding type declarations.
@@ -10,6 +14,8 @@ gulpfile.ts(10,20): error TS2307: Cannot find module 'gulp-eslint' or its corres
 gulpfile.ts(12,18): error TS2307: Cannot find module 'chai' or its corresponding type declarations.
 lib/errors.ts(4,46): error TS2552: Cannot find name 'RequestOptions'. Did you mean 'IdleRequestOptions'?
 lib/errors.ts(4,46): error TS4078: Parameter 'options' of exported function has or is using private name 'RequestOptions'.
+lib/errors.ts(40,48): error TS2304: Cannot find name 'TransformOptions'.
+lib/errors.ts(40,48): error TS4078: Parameter 'options' of exported function has or is using private name 'TransformOptions'.
 lib/plumbing.ts(32,14): error TS2339: Property 'init' does not exist on type '{}'.
 lib/plumbing.ts(32,47): error TS2552: Cannot find name 'RequestOptions'. Did you mean 'IdleRequestOptions'?
 lib/plumbing.ts(46,22): error TS2339: Property 'callback' does not exist on type '{}'.

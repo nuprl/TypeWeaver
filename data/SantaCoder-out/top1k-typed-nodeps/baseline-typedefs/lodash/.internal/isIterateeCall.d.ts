@@ -1,2 +1,2 @@
-declare function isIterateeCall(value: any, index: number, object: any): boolean;
+declare function isIterateeCall(value: any, index: any, object: any): boolean;
 export default isIterateeCall;

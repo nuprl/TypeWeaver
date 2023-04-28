@@ -20,18 +20,19 @@ example/eventsource-polyfill.ts(272,9): error TS2339: Property 'binding' does no
 example/eventsource-polyfill.ts(276,9): error TS2339: Property 'cwd' does not exist on type '{}'.
 example/eventsource-polyfill.ts(277,9): error TS2339: Property 'chdir' does not exist on type '{}'.
 example/eventsource-polyfill.ts(280,9): error TS2339: Property 'umask' does not exist on type '{}'.
-example/eventsource-polyfill.ts(290,10): error TS2339: Property 'super_' does not exist on type 'Function'.
+example/eventsource-polyfill.ts(303,10): error TS2339: Property 'super_' does not exist on type 'Function'.
 example/eventsource-polyfill.ts(371,9): error TS2339: Property '__proto__' does not exist on type 'Uint8Array'.
 example/eventsource-polyfill.ts(372,16): error TS2339: Property 'foo' does not exist on type 'Uint8Array'.
-example/eventsource-polyfill.ts(393,10): error TS2339: Property '__proto__' does not exist on type 'Uint8Array'.
 example/eventsource-polyfill.ts(397,14): error TS2350: Only a void function can be called with the 'new' keyword.
 example/eventsource-polyfill.ts(397,14): error TS2554: Expected 3 arguments, but got 1.
-example/eventsource-polyfill.ts(399,10): error TS2540: Cannot assign to 'length' because it is a read-only property.
 example/eventsource-polyfill.ts(417,12): error TS2350: Only a void function can be called with the 'new' keyword.
-example/eventsource-polyfill.ts(436,7): error TS2339: Property '__proto__' does not exist on type 'any[]'.
-example/eventsource-polyfill.ts(440,22): error TS2304: Cannot find name 'Readable'.
-example/eventsource-polyfill.ts(499,45): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
-example/eventsource-polyfill.ts(547,3): error TS2740: Type 'Uint8Array' is missing the following properties from type 'Buffer': write, toJSON, equals, compare, and 66 more.
+example/eventsource-polyfill.ts(436,7): error TS2339: Property '__proto__' does not exist on type 'Uint8Array'.
+example/eventsource-polyfill.ts(445,45): error TS2358: The left-hand side of an 'instanceof' expression must be of type 'any', an object type or a type parameter.
+example/eventsource-polyfill.ts(446,28): error TS2345: Argument of type 'Uint8Array' is not assignable to parameter of type 'Uint8ArrayConstructor'.
+  Type 'Uint8Array' is missing the following properties from type 'Uint8ArrayConstructor': prototype, of, from
+example/eventsource-polyfill.ts(450,23): error TS2345: Argument of type 'Uint8Array' is not assignable to parameter of type 'Buffer'.
+  Type 'Uint8Array' is missing the following properties from type 'Buffer': write, toJSON, equals, compare, and 66 more.
+example/eventsource-polyfill.ts(453,21): error TS2345: Argument of type 'Uint8Array' is not assignable to parameter of type 'Buffer'.
 example/eventsource-polyfill.ts(549,35): error TS2769: No overload matches this call.
   Overload 1 of 3, '(string: string, encoding?: BufferEncoding): number', gave the following error.
     Argument of type 'string' is not assignable to parameter of type 'BufferEncoding'.
@@ -39,54 +40,34 @@ example/eventsource-polyfill.ts(549,35): error TS2769: No overload matches this 
     Argument of type 'string' is not assignable to parameter of type 'number'.
 example/eventsource-polyfill.ts(591,5): error TS2739: Type 'ArrayBuffer' is missing the following properties from type 'Uint8ArrayConstructor': prototype, BYTES_PER_ELEMENT, of, from
 example/eventsource-polyfill.ts(592,10): error TS2339: Property '__proto__' does not exist on type 'Uint8ArrayConstructor'.
+example/eventsource-polyfill.ts(595,5): error TS2322: Type 'Uint8Array' is not assignable to type 'Uint8ArrayConstructor'.
+example/eventsource-polyfill.ts(595,26): error TS2345: Argument of type 'Uint8ArrayConstructor' is not assignable to parameter of type 'Uint8Array'.
+  Type 'Uint8ArrayConstructor' is missing the following properties from type 'Uint8Array': buffer, byteLength, byteOffset, copyWithin, and 25 more.
 example/eventsource-polyfill.ts(644,17): error TS2554: Expected 3 arguments, but got 1.
 example/eventsource-polyfill.ts(699,19): error TS2554: Expected 3 arguments, but got 1.
-example/eventsource-polyfill.ts(728,38): error TS2358: The left-hand side of an 'instanceof' expression must be of type 'any', an object type or a type parameter.
 example/eventsource-polyfill.ts(749,16): error TS2554: Expected 2 arguments, but got 1.
 example/eventsource-polyfill.ts(760,33): error TS2554: Expected 2 arguments, but got 1.
+example/eventsource-polyfill.ts(827,12): error TS2678: Type '"utf-16le"' is not comparable to type 'BufferEncoding'.
+example/eventsource-polyfill.ts(832,9): error TS2322: Type 'string' is not assignable to type 'BufferEncoding'.
 example/eventsource-polyfill.ts(1007,18): error TS2554: Expected 3 arguments, but got 2.
-example/eventsource-polyfill.ts(1013,13): error TS2339: Property 'length' does not exist on type 'number'.
 example/eventsource-polyfill.ts(1016,25): error TS2345: Argument of type 'Buffer' is not assignable to parameter of type 'any[]'.
   Type 'Buffer' is missing the following properties from type 'any[]': pop, push, concat, shift, and 5 more.
 example/eventsource-polyfill.ts(1027,25): error TS2345: Argument of type 'Buffer' is not assignable to parameter of type 'any[]'.
 example/eventsource-polyfill.ts(1064,16): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'Buffer'.
   Type 'any[]' is missing the following properties from type 'Buffer': write, toJSON, equals, compare, and 73 more.
 example/eventsource-polyfill.ts(1077,18): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'Buffer'.
-example/eventsource-polyfill.ts(1094,64): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'string'.
-example/eventsource-polyfill.ts(1098,37): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
-example/eventsource-polyfill.ts(1129,21): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'Buffer'.
-example/eventsource-polyfill.ts(1133,21): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'Buffer'.
-example/eventsource-polyfill.ts(1141,44): error TS2345: Argument of type 'Uint8Array' is not assignable to parameter of type 'Buffer'.
-example/eventsource-polyfill.ts(1145,21): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'Buffer'.
+example/eventsource-polyfill.ts(1094,64): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'number'.
+example/eventsource-polyfill.ts(1098,64): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'number'.
 example/eventsource-polyfill.ts(1166,7): error TS2322: Type 'number' is not assignable to type 'string'.
 example/eventsource-polyfill.ts(1400,14): error TS2350: Only a void function can be called with the 'new' keyword.
 example/eventsource-polyfill.ts(1400,14): error TS2554: Expected 3 arguments, but got 2.
-example/eventsource-polyfill.ts(1414,7): error TS2365: Operator '>' cannot be applied to types 'string' and 'number'.
-example/eventsource-polyfill.ts(1420,38): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
-example/eventsource-polyfill.ts(1436,25): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
-example/eventsource-polyfill.ts(1449,38): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
-example/eventsource-polyfill.ts(1454,38): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
-example/eventsource-polyfill.ts(1459,38): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
-example/eventsource-polyfill.ts(1464,38): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
-example/eventsource-polyfill.ts(1473,38): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
-example/eventsource-polyfill.ts(1484,38): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
-example/eventsource-polyfill.ts(1502,38): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
-example/eventsource-polyfill.ts(1518,38): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
-example/eventsource-polyfill.ts(1524,38): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
-example/eventsource-polyfill.ts(1530,38): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
-example/eventsource-polyfill.ts(1536,38): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
-example/eventsource-polyfill.ts(1545,38): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
-example/eventsource-polyfill.ts(1554,38): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
-example/eventsource-polyfill.ts(1559,38): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
-example/eventsource-polyfill.ts(1564,38): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
-example/eventsource-polyfill.ts(1569,38): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 example/eventsource-polyfill.ts(1949,9): error TS2554: Expected 2 arguments, but got 1.
 example/eventsource-polyfill.ts(1949,21): error TS2350: Only a void function can be called with the 'new' keyword.
 example/eventsource-polyfill.ts(1949,21): error TS2554: Expected 3 arguments, but got 2.
+example/eventsource-polyfill.ts(2156,8): error TS2339: Property 'exports' does not exist on type 'string'.
 example/eventsource-polyfill.ts(2177,26): error TS2304: Cannot find name 'DuplexOptions'.
 example/eventsource-polyfill.ts(2178,41): error TS2350: Only a void function can be called with the 'new' keyword.
-example/eventsource-polyfill.ts(2214,24): error TS2749: 'Readable' refers to a value, but is being used as a type here. Did you mean 'typeof Readable'?
-example/eventsource-polyfill.ts(2225,25): error TS2304: Cannot find name 'T'.
+example/eventsource-polyfill.ts(2214,24): error TS2749: 'Duplex' refers to a value, but is being used as a type here. Did you mean 'typeof Duplex'?
 example/eventsource-polyfill.ts(2588,36): error TS2358: The left-hand side of an 'instanceof' expression must be of type 'any', an object type or a type parameter.
 example/eventsource-polyfill.ts(2641,5): error TS2322: Type 'string' is not assignable to type 'RegExpExecArray'.
 example/eventsource-polyfill.ts(2642,28): error TS2339: Property 'toLowerCase' does not exist on type 'RegExpExecArray'.
@@ -95,61 +76,15 @@ example/eventsource-polyfill.ts(2659,25): error TS2538: Type 'RegExpExecArray' c
 example/eventsource-polyfill.ts(2660,46): error TS2538: Type 'RegExpExecArray' cannot be used as an index type.
 example/eventsource-polyfill.ts(2805,21): error TS2403: Subsequent variable declarations must have the same type.  Variable 'l' must be of type 'any', but here has type 'number'.
 example/eventsource-polyfill.ts(2846,9): error TS2403: Subsequent variable declarations must have the same type.  Variable 'p' must be of type 'string', but here has type 'any'.
+example/eventsource-polyfill.ts(2857,25): error TS2749: 'Url' refers to a value, but is being used as a type here. Did you mean 'typeof Url'?
 example/eventsource-polyfill.ts(2862,33): error TS2554: Expected 3 arguments, but got 1.
 example/eventsource-polyfill.ts(2864,14): error TS2339: Property 'format' does not exist on type '{}'.
 example/eventsource-polyfill.ts(2888,7): error TS2322: Type 'string' is not assignable to type 'boolean'.
 example/eventsource-polyfill.ts(2906,5): error TS2322: Type 'string' is not assignable to type 'boolean'.
 example/eventsource-polyfill.ts(2909,5): error TS2322: Type 'string' is not assignable to type 'boolean'.
-example/eventsource-polyfill.ts(2933,19): error TS2345: Argument of type 'URL' is not assignable to parameter of type 'string'.
-example/eventsource-polyfill.ts(2952,26): error TS2339: Property 'hash' does not exist on type 'string'.
-example/eventsource-polyfill.ts(2955,16): error TS2339: Property 'href' does not exist on type 'string'.
-example/eventsource-polyfill.ts(2961,16): error TS2339: Property 'slashes' does not exist on type 'string'.
-example/eventsource-polyfill.ts(2961,37): error TS2339: Property 'protocol' does not exist on type 'string'.
-example/eventsource-polyfill.ts(2980,16): error TS2339: Property 'protocol' does not exist on type 'string'.
-example/eventsource-polyfill.ts(2980,37): error TS2339: Property 'protocol' does not exist on type 'string'.
-example/eventsource-polyfill.ts(2989,35): error TS2339: Property 'protocol' does not exist on type 'string'.
-example/eventsource-polyfill.ts(2999,32): error TS2339: Property 'protocol' does not exist on type 'string'.
-example/eventsource-polyfill.ts(3000,19): error TS2339: Property 'host' does not exist on type 'string'.
-example/eventsource-polyfill.ts(3000,54): error TS2339: Property 'protocol' does not exist on type 'string'.
-example/eventsource-polyfill.ts(3001,31): error TS2339: Property 'pathname' does not exist on type 'string'.
-example/eventsource-polyfill.ts(3002,43): error TS2339: Property 'host' does not exist on type 'string'.
-example/eventsource-polyfill.ts(3003,21): error TS2339: Property 'host' does not exist on type 'string'.
-example/eventsource-polyfill.ts(3003,36): error TS2339: Property 'host' does not exist on type 'string'.
-example/eventsource-polyfill.ts(3004,21): error TS2339: Property 'hostname' does not exist on type 'string'.
-example/eventsource-polyfill.ts(3004,40): error TS2339: Property 'hostname' does not exist on type 'string'.
-example/eventsource-polyfill.ts(3009,34): error TS2339: Property 'pathname' does not exist on type 'string'.
-example/eventsource-polyfill.ts(3012,29): error TS2339: Property 'query' does not exist on type 'string'.
-example/eventsource-polyfill.ts(3013,28): error TS2339: Property 'host' does not exist on type 'string'.
-example/eventsource-polyfill.ts(3014,28): error TS2339: Property 'auth' does not exist on type 'string'.
-example/eventsource-polyfill.ts(3015,32): error TS2339: Property 'hostname' does not exist on type 'string'.
-example/eventsource-polyfill.ts(3015,53): error TS2339: Property 'host' does not exist on type 'string'.
-example/eventsource-polyfill.ts(3016,28): error TS2339: Property 'port' does not exist on type 'string'.
-example/eventsource-polyfill.ts(3023,49): error TS2339: Property 'slashes' does not exist on type 'string'.
-example/eventsource-polyfill.ts(3030,20): error TS2339: Property 'host' does not exist on type 'string'.
-example/eventsource-polyfill.ts(3031,20): error TS2339: Property 'pathname' does not exist on type 'string'.
-example/eventsource-polyfill.ts(3031,41): error TS2339: Property 'pathname' does not exist on type 'string'.
-example/eventsource-polyfill.ts(3034,46): error TS2339: Property 'pathname' does not exist on type 'string'.
-example/eventsource-polyfill.ts(3037,26): error TS2339: Property 'pathname' does not exist on type 'string'.
-example/eventsource-polyfill.ts(3037,47): error TS2339: Property 'pathname' does not exist on type 'string'.
-example/eventsource-polyfill.ts(3053,18): error TS2339: Property 'protocol' does not exist on type 'string'.
-example/eventsource-polyfill.ts(3054,16): error TS2339: Property 'hostname' does not exist on type 'string'.
-example/eventsource-polyfill.ts(3055,16): error TS2339: Property 'port' does not exist on type 'string'.
-example/eventsource-polyfill.ts(3056,20): error TS2339: Property 'host' does not exist on type 'string'.
-example/eventsource-polyfill.ts(3057,54): error TS2339: Property 'host' does not exist on type 'string'.
-example/eventsource-polyfill.ts(3058,39): error TS2339: Property 'host' does not exist on type 'string'.
-example/eventsource-polyfill.ts(3060,16): error TS2339: Property 'host' does not exist on type 'string'.
-example/eventsource-polyfill.ts(3067,29): error TS2339: Property 'host' does not exist on type 'string'.
-example/eventsource-polyfill.ts(3067,46): error TS2339: Property 'host' does not exist on type 'string'.
-example/eventsource-polyfill.ts(3068,28): error TS2339: Property 'host' does not exist on type 'string'.
-example/eventsource-polyfill.ts(3069,33): error TS2339: Property 'hostname' does not exist on type 'string'.
-example/eventsource-polyfill.ts(3069,54): error TS2339: Property 'hostname' does not exist on type 'string'.
-example/eventsource-polyfill.ts(3070,32): error TS2339: Property 'hostname' does not exist on type 'string'.
-example/eventsource-polyfill.ts(3072,29): error TS2339: Property 'query' does not exist on type 'string'.
-example/eventsource-polyfill.ts(3082,29): error TS2339: Property 'query' does not exist on type 'string'.
-example/eventsource-polyfill.ts(3100,29): error TS2339: Property 'query' does not exist on type 'string'.
-example/eventsource-polyfill.ts(3129,32): error TS2339: Property 'host' does not exist on type 'string'.
-example/eventsource-polyfill.ts(3200,26): error TS2339: Property 'auth' does not exist on type 'string'.
-example/eventsource-polyfill.ts(3201,47): error TS2339: Property 'slashes' does not exist on type 'string'.
+example/eventsource-polyfill.ts(2931,35): error TS2749: 'Url' refers to a value, but is being used as a type here. Did you mean 'typeof Url'?
+example/eventsource-polyfill.ts(2931,50): error TS2749: 'Url' refers to a value, but is being used as a type here. Did you mean 'typeof Url'?
+example/eventsource-polyfill.ts(2936,50): error TS2749: 'Url' refers to a value, but is being used as a type here. Did you mean 'typeof Url'?
 example/eventsource-polyfill.ts(3210,5): error TS2322: Type 'string' is not assignable to type 'RegExpExecArray'.
 example/eventsource-polyfill.ts(3211,9): error TS2367: This comparison appears to be unintentional because the types 'RegExpExecArray' and 'string' have no overlap.
 example/eventsource-polyfill.ts(3212,24): error TS2339: Property 'substr' does not exist on type 'RegExpExecArray'.
@@ -162,36 +97,34 @@ example/eventsource-polyfill.ts(3261,15): error TS2769: No overload matches this
   Overload 2 of 2, '(...items: (string | ConcatArray<string>)[]): string[]', gave the following error.
     Argument of type 'symbol[]' is not assignable to parameter of type 'string | ConcatArray<string>'.
       Type 'symbol[]' is not assignable to type 'ConcatArray<string>'.
-example/eventsource-polyfill.ts(3294,34): error TS2304: Cannot find name 'Listener'.
 example/eventsource-polyfill.ts(3334,33): error TS2749: 'EventEmitter' refers to a value, but is being used as a type here. Did you mean 'typeof EventEmitter'?
 example/eventsource-polyfill.ts(3336,25): error TS2339: Property 'defaultMaxListeners' does not exist on type '{ (): void; EventEmitter: ...; init(): void; listenerCount(emitter: EventEmitter, type: string): any; }'.
 example/eventsource-polyfill.ts(3367,9): error TS2339: Property 'context' does not exist on type 'Error'.
-example/eventsource-polyfill.ts(3395,19): error TS2339: Property '_events' does not exist on type 'HTMLElement'.
-example/eventsource-polyfill.ts(3397,21): error TS2339: Property '_events' does not exist on type 'HTMLElement'.
-example/eventsource-polyfill.ts(3398,12): error TS2339: Property '_eventsCount' does not exist on type 'HTMLElement'.
-example/eventsource-polyfill.ts(3403,14): error TS2339: Property 'emit' does not exist on type 'HTMLElement'.
+example/eventsource-polyfill.ts(3393,17): error TS2345: Argument of type 'EventListenerOrEventListenerObject' is not assignable to parameter of type 'Function'.
+  Type 'EventListenerObject' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
+example/eventsource-polyfill.ts(3395,19): error TS2339: Property '_events' does not exist on type 'EventTarget'.
+example/eventsource-polyfill.ts(3397,21): error TS2339: Property '_events' does not exist on type 'EventTarget'.
+example/eventsource-polyfill.ts(3398,12): error TS2339: Property '_eventsCount' does not exist on type 'EventTarget'.
+example/eventsource-polyfill.ts(3403,14): error TS2339: Property 'emit' does not exist on type 'EventTarget'.
 example/eventsource-polyfill.ts(3404,28): error TS2339: Property 'listener' does not exist on type 'EventListenerOrEventListenerObject'.
   Property 'listener' does not exist on type 'EventListener'.
 example/eventsource-polyfill.ts(3404,48): error TS2339: Property 'listener' does not exist on type 'EventListenerOrEventListenerObject'.
   Property 'listener' does not exist on type 'EventListener'.
-example/eventsource-polyfill.ts(3408,23): error TS2339: Property '_events' does not exist on type 'HTMLElement'.
-example/eventsource-polyfill.ts(3416,14): error TS2339: Property '_eventsCount' does not exist on type 'HTMLElement'.
+example/eventsource-polyfill.ts(3408,23): error TS2339: Property '_events' does not exist on type 'EventTarget'.
+example/eventsource-polyfill.ts(3416,14): error TS2339: Property '_eventsCount' does not exist on type 'EventTarget'.
 example/eventsource-polyfill.ts(3440,9): error TS2339: Property 'emitter' does not exist on type 'Error'.
 example/eventsource-polyfill.ts(3441,9): error TS2339: Property 'type' does not exist on type 'Error'.
 example/eventsource-polyfill.ts(3442,9): error TS2339: Property 'count' does not exist on type 'Error'.
-example/eventsource-polyfill.ts(3457,54): error TS2304: Cannot find name 'Listener'.
+example/eventsource-polyfill.ts(3451,35): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'EventListenerOrEventListenerObject'.
+example/eventsource-polyfill.ts(3458,39): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'EventListenerOrEventListenerObject'.
 example/eventsource-polyfill.ts(3471,28): error TS2749: 'EventEmitter' refers to a value, but is being used as a type here. Did you mean 'typeof EventEmitter'?
-example/eventsource-polyfill.ts(3479,69): error TS2304: Cannot find name 'Listener'.
 example/eventsource-polyfill.ts(3599,23): error TS2339: Property '_events' does not exist on type 'EventTarget'.
 example/eventsource-polyfill.ts(3623,48): error TS2749: 'EventEmitter' refers to a value, but is being used as a type here. Did you mean 'typeof EventEmitter'?
-example/eventsource-polyfill.ts(3668,21): error TS2339: Property 'listener' does not exist on type 'Function'.
 example/eventsource-polyfill.ts(3673,24): error TS2749: 'EventEmitter' refers to a value, but is being used as a type here. Did you mean 'typeof EventEmitter'?
-example/eventsource-polyfill.ts(3687,61): error TS2345: Argument of type '{ once: boolean; }' is not assignable to parameter of type 'number'.
-example/eventsource-polyfill.ts(3689,61): error TS2345: Argument of type '{ once: boolean; }' is not assignable to parameter of type 'number'.
 example/eventsource-polyfill.ts(3694,49): error TS2749: 'EventEmitter' refers to a value, but is being used as a type here. Did you mean 'typeof EventEmitter'?
 example/eventsource-polyfill.ts(3700,50): error TS2749: 'EventEmitter' refers to a value, but is being used as a type here. Did you mean 'typeof EventEmitter'?
-example/eventsource-polyfill.ts(3702,15): error TS2339: Property 'once' does not exist on type 'number'.
-example/eventsource-polyfill.ts(3713,17): error TS2339: Property 'once' does not exist on type 'number'.
+example/eventsource-polyfill.ts(3700,105): error TS2304: Cannot find name 'ListenerFlags'.
+example/eventsource-polyfill.ts(3726,25): error TS2503: Cannot find namespace '__webpack_require__'.
 example/eventsource-polyfill.ts(3758,22): error TS2339: Property 'protocol' does not exist on type 'string'.
 example/eventsource-polyfill.ts(3759,18): error TS2339: Property 'hostname' does not exist on type 'string'.
 example/eventsource-polyfill.ts(3759,35): error TS2339: Property 'host' does not exist on type 'string'.
@@ -203,137 +136,114 @@ example/eventsource-polyfill.ts(3769,22): error TS2339: Property 'method' does n
 example/eventsource-polyfill.ts(3770,7): error TS2339: Property 'headers' does not exist on type 'string'.
 example/eventsource-polyfill.ts(3770,22): error TS2339: Property 'headers' does not exist on type 'string'.
 example/eventsource-polyfill.ts(3780,32): error TS2503: Cannot find namespace 'http'.
+example/eventsource-polyfill.ts(3828,25): error TS2503: Cannot find namespace '__webpack_require__'.
+example/eventsource-polyfill.ts(3828,83): error TS2503: Cannot find namespace '__webpack_require__'.
+example/eventsource-polyfill.ts(3910,47): error TS2304: Cannot find name 'Process'.
+example/eventsource-polyfill.ts(3958,31): error TS2351: This expression is not constructable.
+  Type 'Buffer' has no construct signatures.
+example/eventsource-polyfill.ts(3996,19): error TS2351: This expression is not constructable.
+  Type 'Buffer' has no construct signatures.
+example/eventsource-polyfill.ts(4073,19): error TS2351: This expression is not constructable.
+  Type 'Buffer' has no construct signatures.
+example/eventsource-polyfill.ts(4087,23): error TS2351: This expression is not constructable.
+  Type 'Buffer' has no construct signatures.
+example/eventsource-polyfill.ts(4102,18): error TS2351: This expression is not constructable.
+  Type 'Buffer' has no construct signatures.
+example/eventsource-polyfill.ts(4108,18): error TS2351: This expression is not constructable.
+  Type 'Buffer' has no construct signatures.
+example/eventsource-polyfill.ts(4117,20): error TS2351: This expression is not constructable.
+  Type 'Buffer' has no construct signatures.
+example/eventsource-polyfill.ts(4139,25): error TS2503: Cannot find namespace '__webpack_require__'.
+example/eventsource-polyfill.ts(4139,88): error TS2503: Cannot find namespace '__webpack_require__'.
 example/eventsource-polyfill.ts(4198,42): error TS2304: Cannot find name 'EventEmitter'.
 example/eventsource-polyfill.ts(4243,35): error TS2304: Cannot find name 'EventEmitter'.
 example/eventsource-polyfill.ts(4255,33): error TS2304: Cannot find name 'ReadableStateOptions'.
-example/eventsource-polyfill.ts(4255,63): error TS2749: 'Readable' refers to a value, but is being used as a type here. Did you mean 'typeof Readable'?
+example/eventsource-polyfill.ts(4255,63): error TS2749: 'Duplex' refers to a value, but is being used as a type here. Did you mean 'typeof Duplex'?
 example/eventsource-polyfill.ts(4332,28): error TS2304: Cannot find name 'ReadableOptions'.
 example/eventsource-polyfill.ts(4335,43): error TS2350: Only a void function can be called with the 'new' keyword.
 example/eventsource-polyfill.ts(4407,35): error TS2749: 'Readable' refers to a value, but is being used as a type here. Did you mean 'typeof Readable'?
-example/eventsource-polyfill.ts(4430,86): error TS2345: Argument of type 'false' is not assignable to parameter of type 'true'.
-example/eventsource-polyfill.ts(4432,42): error TS2345: Argument of type 'false' is not assignable to parameter of type 'true'.
-example/eventsource-polyfill.ts(4443,90): error TS2304: Cannot find name 'ReadableStreamDefaultControllerChunk'.
-example/eventsource-polyfill.ts(4444,13): error TS2339: Property 'flowing' does not exist on type 'ReadableStreamDefaultController<any>'.
-example/eventsource-polyfill.ts(4444,30): error TS2339: Property 'length' does not exist on type 'ReadableStreamDefaultController<any>'.
-example/eventsource-polyfill.ts(4444,53): error TS2339: Property 'sync' does not exist on type 'ReadableStreamDefaultController<any>'.
-example/eventsource-polyfill.ts(4445,12): error TS2339: Property 'emit' does not exist on type 'ReadableStream<any>'.
-example/eventsource-polyfill.ts(4446,12): error TS2339: Property 'read' does not exist on type 'ReadableStream<any>'.
-example/eventsource-polyfill.ts(4449,11): error TS2339: Property 'length' does not exist on type 'ReadableStreamDefaultController<any>'.
-example/eventsource-polyfill.ts(4449,27): error TS2339: Property 'objectMode' does not exist on type 'ReadableStreamDefaultController<any>'.
-example/eventsource-polyfill.ts(4450,27): error TS2339: Property 'buffer' does not exist on type 'ReadableStreamDefaultController<any>'.
-example/eventsource-polyfill.ts(4450,60): error TS2339: Property 'buffer' does not exist on type 'ReadableStreamDefaultController<any>'.
-example/eventsource-polyfill.ts(4452,15): error TS2339: Property 'needReadable' does not exist on type 'ReadableStreamDefaultController<any>'.
-example/eventsource-polyfill.ts(4457,30): error TS2304: Cannot find name 'ParserState'.
-example/eventsource-polyfill.ts(4472,30): error TS2304: Cannot find name 'State'.
+example/eventsource-polyfill.ts(4443,27): error TS2749: 'Readable' refers to a value, but is being used as a type here. Did you mean 'typeof Readable'?
+example/eventsource-polyfill.ts(4457,30): error TS2749: 'ReadableState' refers to a value, but is being used as a type here. Did you mean 'typeof ReadableState'?
+example/eventsource-polyfill.ts(4472,30): error TS2749: 'ReadableState' refers to a value, but is being used as a type here. Did you mean 'typeof ReadableState'?
 example/eventsource-polyfill.ts(4509,42): error TS2749: 'ReadableState' refers to a value, but is being used as a type here. Did you mean 'typeof ReadableState'?
-example/eventsource-polyfill.ts(4530,3): error TS2322: Type 'number' is not assignable to type 'string'.
-example/eventsource-polyfill.ts(4534,7): error TS2367: This comparison appears to be unintentional because the types 'string' and 'number' have no overlap.
-example/eventsource-polyfill.ts(4539,7): error TS2367: This comparison appears to be unintentional because the types 'string' and 'number' have no overlap.
-example/eventsource-polyfill.ts(4545,21): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
-example/eventsource-polyfill.ts(4548,7): error TS2367: This comparison appears to be unintentional because the types 'string' and 'number' have no overlap.
-example/eventsource-polyfill.ts(4580,44): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-example/eventsource-polyfill.ts(4601,43): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
-example/eventsource-polyfill.ts(4605,7): error TS2365: Operator '>' cannot be applied to types 'string' and 'number'.
-example/eventsource-polyfill.ts(4605,29): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
-example/eventsource-polyfill.ts(4609,5): error TS2322: Type 'number' is not assignable to type 'string'.
-example/eventsource-polyfill.ts(4611,21): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+example/eventsource-polyfill.ts(4530,16): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 example/eventsource-polyfill.ts(4628,29): error TS2749: 'Readable' refers to a value, but is being used as a type here. Did you mean 'typeof Readable'?
-example/eventsource-polyfill.ts(4628,46): error TS2304: Cannot find name 'State'.
+example/eventsource-polyfill.ts(4628,46): error TS2749: 'ReadableState' refers to a value, but is being used as a type here. Did you mean 'typeof ReadableState'?
 example/eventsource-polyfill.ts(4646,31): error TS2749: 'Readable' refers to a value, but is being used as a type here. Did you mean 'typeof Readable'?
 example/eventsource-polyfill.ts(4656,32): error TS2749: 'Readable' refers to a value, but is being used as a type here. Did you mean 'typeof Readable'?
 example/eventsource-polyfill.ts(4668,32): error TS2749: 'Readable' refers to a value, but is being used as a type here. Did you mean 'typeof Readable'?
 example/eventsource-polyfill.ts(4668,49): error TS2749: 'ReadableState' refers to a value, but is being used as a type here. Did you mean 'typeof ReadableState'?
 example/eventsource-polyfill.ts(4675,33): error TS2749: 'Readable' refers to a value, but is being used as a type here. Did you mean 'typeof Readable'?
 example/eventsource-polyfill.ts(4675,50): error TS2749: 'ReadableState' refers to a value, but is being used as a type here. Did you mean 'typeof ReadableState'?
-example/eventsource-polyfill.ts(4695,43): error TS2749: 'Readable' refers to a value, but is being used as a type here. Did you mean 'typeof Readable'?
+example/eventsource-polyfill.ts(4695,43): error TS2304: Cannot find name 'Writable'.
+example/eventsource-polyfill.ts(4713,38): error TS2339: Property 'end' does not exist on type 'Object'.
 example/eventsource-polyfill.ts(4719,31): error TS2749: 'Readable' refers to a value, but is being used as a type here. Did you mean 'typeof Readable'?
 example/eventsource-polyfill.ts(4719,53): error TS2304: Cannot find name 'UnpipeInfo'.
 example/eventsource-polyfill.ts(4830,27): error TS2749: 'Readable' refers to a value, but is being used as a type here. Did you mean 'typeof Readable'?
 example/eventsource-polyfill.ts(4842,45): error TS2749: 'Readable' refers to a value, but is being used as a type here. Did you mean 'typeof Readable'?
-example/eventsource-polyfill.ts(4897,7): error TS2367: This comparison appears to be unintentional because the types 'Event' and 'string' have no overlap.
-example/eventsource-polyfill.ts(4900,14): error TS2367: This comparison appears to be unintentional because the types 'Event' and 'string' have no overlap.
 example/eventsource-polyfill.ts(4917,33): error TS2749: 'Readable' refers to a value, but is being used as a type here. Did you mean 'typeof Readable'?
 example/eventsource-polyfill.ts(4934,25): error TS2749: 'Readable' refers to a value, but is being used as a type here. Did you mean 'typeof Readable'?
-example/eventsource-polyfill.ts(4934,42): error TS2304: Cannot find name 'State'.
+example/eventsource-polyfill.ts(4934,42): error TS2749: 'ReadableState' refers to a value, but is being used as a type here. Did you mean 'typeof ReadableState'?
 example/eventsource-polyfill.ts(4941,26): error TS2749: 'Readable' refers to a value, but is being used as a type here. Did you mean 'typeof Readable'?
 example/eventsource-polyfill.ts(4941,43): error TS2749: 'ReadableState' refers to a value, but is being used as a type here. Did you mean 'typeof ReadableState'?
-example/eventsource-polyfill.ts(4965,22): error TS2339: Property '_readableState' does not exist on type 'ReadableStream<any>'.
-example/eventsource-polyfill.ts(4967,34): error TS2339: Property 'read' does not exist on type 'ReadableStream<any>'.
-example/eventsource-polyfill.ts(4979,10): error TS2339: Property 'on' does not exist on type 'ReadableStream<any>'.
-example/eventsource-polyfill.ts(4989,10): error TS2339: Property 'on' does not exist on type 'ReadableStream<any>'.
-example/eventsource-polyfill.ts(4999,14): error TS2339: Property 'pause' does not exist on type 'ReadableStream<any>'.
-example/eventsource-polyfill.ts(5017,12): error TS2339: Property 'on' does not exist on type 'ReadableStream<any>'.
-example/eventsource-polyfill.ts(5026,14): error TS2339: Property 'resume' does not exist on type 'ReadableStream<any>'.
-example/eventsource-polyfill.ts(5050,37): error TS2304: Cannot find name 'State'.
-example/eventsource-polyfill.ts(5072,16): error TS2339: Property 'head' does not exist on type 'any[]'.
-example/eventsource-polyfill.ts(5074,16): error TS2339: Property 'head' does not exist on type 'any[]'.
-example/eventsource-polyfill.ts(5075,10): error TS2339: Property 'head' does not exist on type 'any[]'.
-example/eventsource-polyfill.ts(5075,27): error TS2339: Property 'head' does not exist on type 'any[]'.
-example/eventsource-polyfill.ts(5076,25): error TS2339: Property 'head' does not exist on type 'any[]'.
-example/eventsource-polyfill.ts(5081,74): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'Uint8Array'.
-  Type 'any[]' is missing the following properties from type 'Uint8Array': BYTES_PER_ELEMENT, buffer, byteLength, byteOffset, and 3 more.
-example/eventsource-polyfill.ts(5091,16): error TS2339: Property 'head' does not exist on type 'string[]'.
-example/eventsource-polyfill.ts(5103,26): error TS2339: Property 'head' does not exist on type 'string[]'.
-example/eventsource-polyfill.ts(5103,50): error TS2339: Property 'head' does not exist on type 'string[]'.
-example/eventsource-polyfill.ts(5103,62): error TS2339: Property 'tail' does not exist on type 'string[]'.
-example/eventsource-polyfill.ts(5105,14): error TS2339: Property 'head' does not exist on type 'string[]'.
-example/eventsource-polyfill.ts(5121,16): error TS2339: Property 'head' does not exist on type 'Uint8Array'.
-example/eventsource-polyfill.ts(5133,26): error TS2339: Property 'head' does not exist on type 'Uint8Array'.
-example/eventsource-polyfill.ts(5133,50): error TS2339: Property 'head' does not exist on type 'Uint8Array'.
-example/eventsource-polyfill.ts(5133,62): error TS2339: Property 'tail' does not exist on type 'Uint8Array'.
-example/eventsource-polyfill.ts(5135,14): error TS2339: Property 'head' does not exist on type 'Uint8Array'.
-example/eventsource-polyfill.ts(5142,8): error TS2540: Cannot assign to 'length' because it is a read-only property.
+example/eventsource-polyfill.ts(4964,23): error TS2749: 'Readable' refers to a value, but is being used as a type here. Did you mean 'typeof Readable'?
+example/eventsource-polyfill.ts(4973,45): error TS2749: 'Readable' refers to a value, but is being used as a type here. Did you mean 'typeof Readable'?
+example/eventsource-polyfill.ts(5050,37): error TS2749: 'ReadableState' refers to a value, but is being used as a type here. Did you mean 'typeof ReadableState'?
+example/eventsource-polyfill.ts(5090,48): error TS2304: Cannot find name 'List'.
+example/eventsource-polyfill.ts(5119,42): error TS2749: 'BufferList' refers to a value, but is being used as a type here. Did you mean 'typeof BufferList'?
 example/eventsource-polyfill.ts(5146,30): error TS2749: 'Readable' refers to a value, but is being used as a type here. Did you mean 'typeof Readable'?
 example/eventsource-polyfill.ts(5159,31): error TS2749: 'ReadableState' refers to a value, but is being used as a type here. Did you mean 'typeof ReadableState'?
 example/eventsource-polyfill.ts(5159,54): error TS2749: 'Readable' refers to a value, but is being used as a type here. Did you mean 'typeof Readable'?
+example/eventsource-polyfill.ts(5178,25): error TS2503: Cannot find namespace '__webpack_require__'.
+example/eventsource-polyfill.ts(5178,88): error TS2503: Cannot find namespace '__webpack_require__'.
+example/eventsource-polyfill.ts(5254,28): error TS2304: Cannot find name 'Duplex'.
+example/eventsource-polyfill.ts(5300,8): error TS2339: Property 'exports' does not exist on type 'string'.
+example/eventsource-polyfill.ts(5312,31): error TS2304: Cannot find name 'DuplexState'.
 example/eventsource-polyfill.ts(5318,5): error TS2554: Expected 3 arguments, but got 2.
-example/eventsource-polyfill.ts(5367,33): error TS2304: Cannot find name 'WritableStateOptions'.
-example/eventsource-polyfill.ts(5367,63): error TS2749: 'Duplex' refers to a value, but is being used as a type here. Did you mean 'typeof Duplex'?
+example/eventsource-polyfill.ts(5367,33): error TS2304: Cannot find name 'DuplexOptions'.
+example/eventsource-polyfill.ts(5367,56): error TS2749: 'Duplex' refers to a value, but is being used as a type here. Did you mean 'typeof Duplex'?
 example/eventsource-polyfill.ts(5517,28): error TS2304: Cannot find name 'WritableOptions'.
 example/eventsource-polyfill.ts(5528,12): error TS2350: Only a void function can be called with the 'new' keyword.
 example/eventsource-polyfill.ts(5554,32): error TS2749: 'Writable' refers to a value, but is being used as a type here. Did you mean 'typeof Writable'?
 example/eventsource-polyfill.ts(5564,29): error TS2304: Cannot find name 'Readable'.
 example/eventsource-polyfill.ts(5569,5): error TS2322: Type 'TypeError' is not assignable to type 'boolean'.
 example/eventsource-polyfill.ts(5571,5): error TS2322: Type 'TypeError' is not assignable to type 'boolean'.
-example/eventsource-polyfill.ts(5631,29): error TS2304: Cannot find name 'State'.
+example/eventsource-polyfill.ts(5631,29): error TS2749: 'WritableState' refers to a value, but is being used as a type here. Did you mean 'typeof WritableState'?
 example/eventsource-polyfill.ts(5651,32): error TS2749: 'Writable' refers to a value, but is being used as a type here. Did you mean 'typeof Writable'?
 example/eventsource-polyfill.ts(5651,49): error TS2749: 'WritableState' refers to a value, but is being used as a type here. Did you mean 'typeof WritableState'?
-example/eventsource-polyfill.ts(5653,39): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Buffer'.
-example/eventsource-polyfill.ts(5654,9): error TS2367: This comparison appears to be unintentional because the types 'string' and 'Buffer' have no overlap.
-example/eventsource-polyfill.ts(5657,7): error TS2322: Type 'Buffer' is not assignable to type 'string'.
+example/eventsource-polyfill.ts(5653,46): error TS2345: Argument of type 'string' is not assignable to parameter of type 'BufferEncoding'.
 example/eventsource-polyfill.ts(5690,26): error TS2749: 'Writable' refers to a value, but is being used as a type here. Did you mean 'typeof Writable'?
 example/eventsource-polyfill.ts(5690,43): error TS2749: 'WritableState' refers to a value, but is being used as a type here. Did you mean 'typeof WritableState'?
 example/eventsource-polyfill.ts(5699,31): error TS2749: 'Writable' refers to a value, but is being used as a type here. Did you mean 'typeof Writable'?
 example/eventsource-polyfill.ts(5699,48): error TS2749: 'WritableState' refers to a value, but is being used as a type here. Did you mean 'typeof WritableState'?
-example/eventsource-polyfill.ts(5723,36): error TS2304: Cannot find name 'WriteState'.
+example/eventsource-polyfill.ts(5699,93): error TS2304: Cannot find name 'NoParamCallback'.
+example/eventsource-polyfill.ts(5723,36): error TS2749: 'WritableState' refers to a value, but is being used as a type here. Did you mean 'typeof WritableState'?
 example/eventsource-polyfill.ts(5730,26): error TS2749: 'Writable' refers to a value, but is being used as a type here. Did you mean 'typeof Writable'?
-example/eventsource-polyfill.ts(5750,33): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'Function'.
 example/eventsource-polyfill.ts(5755,29): error TS2749: 'Writable' refers to a value, but is being used as a type here. Did you mean 'typeof Writable'?
 example/eventsource-polyfill.ts(5755,46): error TS2749: 'WritableState' refers to a value, but is being used as a type here. Did you mean 'typeof WritableState'?
 example/eventsource-polyfill.ts(5765,31): error TS2749: 'Writable' refers to a value, but is being used as a type here. Did you mean 'typeof Writable'?
 example/eventsource-polyfill.ts(5765,48): error TS2749: 'WritableState' refers to a value, but is being used as a type here. Did you mean 'typeof WritableState'?
-example/eventsource-polyfill.ts(5773,53): error TS2304: Cannot find name 'ReadableState'.
-example/eventsource-polyfill.ts(5777,14): error TS2339: Property '_writev' does not exist on type 'ReadableStream<any>'.
+example/eventsource-polyfill.ts(5773,53): error TS2749: 'WritableState' refers to a value, but is being used as a type here. Did you mean 'typeof WritableState'?
+example/eventsource-polyfill.ts(5777,14): error TS2339: Property '_writev' does not exist on type 'WritableStream<any>'.
 example/eventsource-polyfill.ts(5792,12): error TS2339: Property 'allBuffers' does not exist on type 'any[]'.
-example/eventsource-polyfill.ts(5864,28): error TS2304: Cannot find name 'State'.
 example/eventsource-polyfill.ts(5867,28): error TS2304: Cannot find name 'Readable'.
-example/eventsource-polyfill.ts(5867,45): error TS2304: Cannot find name 'State'.
-example/eventsource-polyfill.ts(5878,28): error TS2304: Cannot find name 'Transform'.
-example/eventsource-polyfill.ts(5878,46): error TS2304: Cannot find name 'State'.
-example/eventsource-polyfill.ts(5891,30): error TS2304: Cannot find name 'Readable'.
-example/eventsource-polyfill.ts(5891,47): error TS2304: Cannot find name 'State'.
+example/eventsource-polyfill.ts(5878,28): error TS2749: 'Writable' refers to a value, but is being used as a type here. Did you mean 'typeof Writable'?
+example/eventsource-polyfill.ts(5878,45): error TS2749: 'WritableState' refers to a value, but is being used as a type here. Did you mean 'typeof WritableState'?
+example/eventsource-polyfill.ts(5891,30): error TS2749: 'Writable' refers to a value, but is being used as a type here. Did you mean 'typeof Writable'?
+example/eventsource-polyfill.ts(5891,47): error TS2749: 'WritableState' refers to a value, but is being used as a type here. Did you mean 'typeof WritableState'?
 example/eventsource-polyfill.ts(5903,30): error TS2749: 'Writable' refers to a value, but is being used as a type here. Did you mean 'typeof Writable'?
 example/eventsource-polyfill.ts(5903,47): error TS2749: 'WritableState' refers to a value, but is being used as a type here. Did you mean 'typeof WritableState'?
 example/eventsource-polyfill.ts(5913,34): error TS2304: Cannot find name 'CorkReq'.
 example/eventsource-polyfill.ts(5913,50): error TS2749: 'WritableState' refers to a value, but is being used as a type here. Did you mean 'typeof WritableState'?
-example/eventsource-polyfill.ts(5936,25): error TS2304: Cannot find name 'T'.
 example/eventsource-polyfill.ts(6109,36): error TS2304: Cannot find name 'Utf8Stream'.
 example/eventsource-polyfill.ts(6142,36): error TS2304: Cannot find name 'Utf8Decoder'.
 example/eventsource-polyfill.ts(6167,9): error TS2339: Property 'copy' does not exist on type 'Uint8Array'.
 example/eventsource-polyfill.ts(6170,7): error TS2339: Property 'copy' does not exist on type 'Uint8Array'.
-example/eventsource-polyfill.ts(6365,29): error TS2304: Cannot find name 'TransformOptions'.
+example/eventsource-polyfill.ts(6365,29): error TS2304: Cannot find name 'DuplexOptions'.
 example/eventsource-polyfill.ts(6366,44): error TS2350: Only a void function can be called with the 'new' keyword.
-example/eventsource-polyfill.ts(6464,23): error TS2552: Cannot find name 'Readable'. Did you mean '_Readable'?
+example/eventsource-polyfill.ts(6464,23): error TS2749: 'Transform' refers to a value, but is being used as a type here. Did you mean 'typeof Transform'?
+example/eventsource-polyfill.ts(6481,25): error TS2503: Cannot find namespace '__webpack_require__'.
+example/eventsource-polyfill.ts(6481,83): error TS2503: Cannot find namespace '__webpack_require__'.
 example/eventsource-polyfill.ts(6486,10): error TS2339: Property 'EventSourcePolyfill' does not exist on type 'Window & typeof globalThis'.
 example/eventsource-polyfill.ts(6533,32): error TS2339: Property 'CONNECTING' does not exist on type '(url: string, eventSourceInitDict: EventSourceInit) => void'.
 example/eventsource-polyfill.ts(6534,60): error TS2339: Property 'headers' does not exist on type 'EventSourceInit'.
@@ -349,6 +259,7 @@ example/eventsource-polyfill.ts(6613,45): error TS2339: Property 'proxy' does no
 example/eventsource-polyfill.ts(6625,52): error TS2339: Property 'https' does not exist on type 'EventSourceInit'.
 example/eventsource-polyfill.ts(6626,47): error TS2339: Property 'https' does not exist on type 'EventSourceInit'.
 example/eventsource-polyfill.ts(6631,42): error TS2339: Property 'https' does not exist on type 'EventSourceInit'.
+example/eventsource-polyfill.ts(6643,69): error TS2503: Cannot find namespace 'http'.
 example/eventsource-polyfill.ts(6647,15): error TS2554: Expected 0 arguments, but got 2.
 example/eventsource-polyfill.ts(6648,9): error TS2554: Expected 1 arguments, but got 0.
 example/eventsource-polyfill.ts(6657,17): error TS2554: Expected 0 arguments, but got 2.
@@ -361,26 +272,42 @@ example/eventsource-polyfill.ts(6686,21): error TS2554: Expected 2 arguments, bu
 example/eventsource-polyfill.ts(6789,36): error TS2339: Property 'CLOSED' does not exist on type '(url: string, eventSourceInitDict: EventSourceInit) => void'.
 example/eventsource-polyfill.ts(6790,30): error TS2339: Property 'CLOSED' does not exist on type '(url: string, eventSourceInitDict: EventSourceInit) => void'.
 example/eventsource-polyfill.ts(6799,15): error TS2554: Expected 0 arguments, but got 2.
+example/eventsource-polyfill.ts(6840,8): error TS2339: Property 'exports' does not exist on type 'string'.
 example/eventsource-polyfill.ts(6905,14): error TS2339: Property '_listener' does not exist on type 'EventListener'.
-example/eventsource-polyfill.ts(6923,31): error TS2339: Property 'detail' does not exist on type 'Event'.
-example/eventsource-polyfill.ts(6937,14): error TS2339: Property '_listener' does not exist on type 'EventListener'.
-example/eventsource-polyfill.ts(7191,80): error TS2749: 'mLen' refers to a value, but is being used as a type here. Did you mean 'typeof mLen'?
+example/eventsource-polyfill.ts(6937,14): error TS2339: Property '_listener' does not exist on type 'Function'.
+example/eventsource-polyfill.ts(7128,28): error TS2345: Argument of type 'Uint8Array' is not assignable to parameter of type 'number[]'.
+  Type 'Uint8Array' is missing the following properties from type 'number[]': pop, push, concat, shift, and 5 more.
+example/eventsource-polyfill.ts(7246,25): error TS2503: Cannot find namespace '__webpack_require__'.
+example/eventsource-polyfill.ts(7325,28): error TS2304: Cannot find name 'T'.
+example/eventsource-polyfill.ts(7325,37): error TS2304: Cannot find name 'T'.
 example/eventsource-polyfill.ts(7456,28): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 example/eventsource-polyfill.ts(7456,44): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 example/eventsource-polyfill.ts(7603,3): error TS2322: Type 'any[]' is not assignable to type 'string'.
+example/eventsource-polyfill.ts(7785,25): error TS2503: Cannot find namespace 'webpack'.
+example/eventsource-polyfill.ts(7787,35): error TS2304: Cannot find name 'webpack$Module'.
+example/eventsource-polyfill.ts(7813,25): error TS2503: Cannot find namespace '__webpack_require__'.
+example/eventsource-polyfill.ts(7813,88): error TS2503: Cannot find namespace '__webpack_require__'.
+example/eventsource-polyfill.ts(7880,73): error TS2503: Cannot find namespace 'qs'.
 example/eventsource-polyfill.ts(7890,3): error TS2322: Type 'string[]' is not assignable to type 'string'.
-example/eventsource-polyfill.ts(7931,52): error TS2304: Cannot find name 'T'.
-example/eventsource-polyfill.ts(8006,52): error TS2304: Cannot find name 'T'.
+example/eventsource-polyfill.ts(7931,46): error TS2304: Cannot find name 'T'.
+example/eventsource-polyfill.ts(8011,29): error TS2345: Argument of type 'Function' is not assignable to parameter of type '(value: any, index: number, array: any[]) => unknown'.
+  Type 'Function' provides no match for the signature '(value: any, index: number, array: any[]): unknown'.
+example/eventsource-polyfill.ts(8030,25): error TS2503: Cannot find namespace '__webpack_require__'.
+example/eventsource-polyfill.ts(8030,57): error TS2503: Cannot find namespace '__webpack_require__'.
+example/eventsource-polyfill.ts(8030,101): error TS2503: Cannot find namespace '__webpack_require__'.
+example/eventsource-polyfill.ts(8041,35): error TS2503: Cannot find namespace 'http'.
+example/eventsource-polyfill.ts(8055,15): error TS2339: Property 'protocol' does not exist on type 'string'.
+example/eventsource-polyfill.ts(8056,12): error TS2339: Property 'protocol' does not exist on type 'string'.
+example/eventsource-polyfill.ts(8058,14): error TS2339: Property 'protocol' does not exist on type 'string'.
+example/eventsource-polyfill.ts(8059,43): error TS2339: Property 'protocol' does not exist on type 'string'.
+example/eventsource-polyfill.ts(8094,54): error TS2304: Cannot find name 'Options'.
 example/eventsource-polyfill.ts(8401,25): error TS2503: Cannot find namespace '__webpack_require__'.
-example/eventsource-polyfill.ts(8430,48): error TS2304: Cannot find name 'T'.
-example/eventsource-polyfill.ts(8437,54): error TS2304: Cannot find name 'T'.
+example/eventsource-polyfill.ts(8492,25): error TS2503: Cannot find namespace '__webpack_require__'.
 example/eventsource-polyfill.ts(8514,43): error TS2749: 'Timeout' refers to a value, but is being used as a type here. Did you mean 'typeof Timeout'?
 example/eventsource-polyfill.ts(8570,57): error TS2554: Expected 2 arguments, but got 1.
 example/eventsource-polyfill.ts(8604,24): error TS2304: Cannot find name 'Task'.
-example/eventsource-polyfill.ts(8675,23): error TS2339: Property 'source' does not exist on type 'Event'.
-example/eventsource-polyfill.ts(8676,30): error TS2339: Property 'data' does not exist on type 'Event'.
-example/eventsource-polyfill.ts(8677,23): error TS2339: Property 'data' does not exist on type 'Event'.
-example/eventsource-polyfill.ts(8678,37): error TS2339: Property 'data' does not exist on type 'Event'.
+example/eventsource-polyfill.ts(8768,8): error TS2339: Property 'exports' does not exist on type 'string'.
+example/eventsource-polyfill.ts(8865,8): error TS2339: Property 'exports' does not exist on type 'string'.
 example/eventsource-polyfill.ts(8877,46): error TS2350: Only a void function can be called with the 'new' keyword.
 example/eventsource-polyfill.ts(9054,20): error TS2554: Expected 2 arguments, but got 1.
 example/eventsource-polyfill.ts(9062,45): error TS2769: No overload matches this call.
@@ -389,12 +316,6 @@ example/eventsource-polyfill.ts(9062,45): error TS2769: No overload matches this
       Type 'string | number' is not assignable to type 'string'.
         Type 'number' is not assignable to type 'string'.
 example/eventsource-polyfill.ts(9082,20): error TS2554: Expected 2 arguments, but got 1.
-example/eventsource-polyfill.ts(9125,38): error TS2304: Cannot find name 'T'.
-example/eventsource-polyfill.ts(9128,13): error TS2339: Property 'toUpperCase' does not exist on type 'Set<T>'.
-example/eventsource-polyfill.ts(9129,15): error TS2538: Type 'Set<T>' cannot be used as an index type.
-example/eventsource-polyfill.ts(9132,14): error TS2538: Type 'Set<T>' cannot be used as an index type.
-example/eventsource-polyfill.ts(9137,14): error TS2538: Type 'Set<T>' cannot be used as an index type.
-example/eventsource-polyfill.ts(9140,17): error TS2538: Type 'Set<T>' cannot be used as an index type.
 example/eventsource-polyfill.ts(9159,34): error TS2339: Property 'depth' does not exist on type '{ seen: any[]; stylize: (str: string, styleType: string) => string; }'.
 example/eventsource-polyfill.ts(9160,34): error TS2339: Property 'colors' does not exist on type '{ seen: any[]; stylize: (str: string, styleType: string) => string; }'.
 example/eventsource-polyfill.ts(9163,9): error TS2339: Property 'showHidden' does not exist on type '{ seen: any[]; stylize: (str: string, styleType: string) => string; }'.
@@ -408,26 +329,34 @@ example/eventsource-polyfill.ts(9172,23): error TS2339: Property 'customInspect'
 example/eventsource-polyfill.ts(9172,43): error TS2339: Property 'customInspect' does not exist on type '{ seen: any[]; stylize: (str: string, styleType: string) => string; }'.
 example/eventsource-polyfill.ts(9173,11): error TS2339: Property 'colors' does not exist on type '{ seen: any[]; stylize: (str: string, styleType: string) => string; }'.
 example/eventsource-polyfill.ts(9174,36): error TS2339: Property 'depth' does not exist on type '{ seen: any[]; stylize: (str: string, styleType: string) => string; }'.
-example/eventsource-polyfill.ts(9351,31): error TS2304: Cannot find name 'FormatContext'.
-example/eventsource-polyfill.ts(9456,23): error TS2339: Property 'reduce' does not exist on type 'string'.
-example/eventsource-polyfill.ts(9458,13): error TS2339: Property 'indexOf' does not exist on type 'number'.
-example/eventsource-polyfill.ts(9459,23): error TS2339: Property 'replace' does not exist on type 'number'.
-example/eventsource-polyfill.ts(9466,19): error TS2339: Property 'join' does not exist on type 'string'.
-example/eventsource-polyfill.ts(9471,42): error TS2339: Property 'join' does not exist on type 'string'.
+example/eventsource-polyfill.ts(9238,27): error TS2304: Cannot find name 'InspectContext'.
+example/eventsource-polyfill.ts(9351,31): error TS2304: Cannot find name 'InspectContext'.
+example/eventsource-polyfill.ts(9375,27): error TS2304: Cannot find name 'FormatContext'.
+example/eventsource-polyfill.ts(9395,30): error TS2304: Cannot find name 'InspectContext'.
 example/eventsource-polyfill.ts(9622,9): error TS2300: Duplicate identifier 'fn'.
 example/eventsource-polyfill.ts(9632,12): error TS2300: Duplicate identifier 'fn'.
 example/eventsource-polyfill.ts(9680,15): error TS2339: Property 'reason' does not exist on type 'Error'.
+example/eventsource-polyfill.ts(9726,25): error TS2304: Cannot find name '__webpack_module_cache__'.
+example/eventsource-polyfill.ts(9726,50): error TS2304: Cannot find name 'moduleId'.
 example/sse-client.ts(1,5): error TS2300: Duplicate identifier 'EventSource'.
 example/sse-client.ts(1,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'EventSource' must be of type '{ new (url: string | URL, eventSourceInitDict?: EventSourceInit): EventSource; prototype: EventSource; readonly CLOSED: number; readonly CONNECTING: number; readonly OPEN: number; }', but here has type 'any'.
 lib/eventsource-polyfill.ts(1,5): error TS2300: Duplicate identifier 'EventSource'.
 lib/eventsource-polyfill.ts(1,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'EventSource' must be of type '{ new (url: string | URL, eventSourceInitDict?: EventSourceInit): EventSource; prototype: EventSource; readonly CLOSED: number; readonly CONNECTING: number; readonly OPEN: number; }', but here has type 'any'.
 lib/eventsource-polyfill.ts(4,10): error TS2339: Property 'EventSourcePolyfill' does not exist on type 'Window & typeof globalThis'.
 lib/eventsource.ts(35,10): error TS2300: Duplicate identifier 'EventSource'.
-lib/eventsource.ts(35,57): error TS2304: Cannot find name 'EventSourceInitDict'.
-lib/eventsource.ts(35,57): error TS4078: Parameter 'eventSourceInitDict' of exported function has or is using private name 'EventSourceInitDict'.
+lib/eventsource.ts(37,60): error TS2339: Property 'headers' does not exist on type 'EventSourceInit'.
 lib/eventsource.ts(58,11): error TS2554: Expected 0 arguments, but got 2.
 lib/eventsource.ts(58,40): error TS2345: Argument of type '{ message: string; }' is not assignable to parameter of type 'EventInit'.
   Object literal may only specify known properties, and 'message' does not exist in type 'EventInit'.
+lib/eventsource.ts(106,80): error TS2339: Property 'rejectUnauthorized' does not exist on type 'EventSourceInit'.
+lib/eventsource.ts(108,52): error TS2339: Property 'createConnection' does not exist on type 'EventSourceInit'.
+lib/eventsource.ts(109,54): error TS2339: Property 'createConnection' does not exist on type 'EventSourceInit'.
+lib/eventsource.ts(114,63): error TS2339: Property 'proxy' does not exist on type 'EventSourceInit'.
+lib/eventsource.ts(116,45): error TS2339: Property 'proxy' does not exist on type 'EventSourceInit'.
+lib/eventsource.ts(128,52): error TS2339: Property 'https' does not exist on type 'EventSourceInit'.
+lib/eventsource.ts(129,47): error TS2339: Property 'https' does not exist on type 'EventSourceInit'.
+lib/eventsource.ts(134,42): error TS2339: Property 'https' does not exist on type 'EventSourceInit'.
+lib/eventsource.ts(146,69): error TS2304: Cannot find name 'IncomingMessage'.
 lib/eventsource.ts(150,15): error TS2554: Expected 0 arguments, but got 2.
 lib/eventsource.ts(150,44): error TS2345: Argument of type '{ status: any; message: any; }' is not assignable to parameter of type 'EventInit'.
   Object literal may only specify known properties, and 'status' does not exist in type 'EventInit'.
@@ -445,10 +374,18 @@ lib/eventsource.ts(302,15): error TS2554: Expected 0 arguments, but got 2.
 lib/eventsource.ts(382,23): error TS2540: Cannot assign to 'CONNECTING' because it is a read-only property.
 lib/eventsource.ts(383,23): error TS2540: Cannot assign to 'OPEN' because it is a read-only property.
 lib/eventsource.ts(384,23): error TS2540: Cannot assign to 'CLOSED' because it is a read-only property.
-lib/eventsource.ts(408,14): error TS2339: Property '_listener' does not exist on type 'EventListener'.
+lib/eventsource.ts(405,1): error TS2322: Type '(type: string, listener: Function) => void' is not assignable to type '{ <K extends keyof EventSourceEventMap>(type: K, listener: (this: EventSource, ev: EventSourceEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void; (type: string, listener: (this: EventSource, event: MessageEvent<...>) => any, options?: boolean | AddEventListenerOptions): void; (type: string, list...'.
+  Types of parameters 'listener' and 'listener' are incompatible.
+    Type 'EventListenerOrEventListenerObject' is not assignable to type 'Function'.
+      Type 'EventListenerObject' is not assignable to type 'Function'.
+lib/eventsource.ts(408,14): error TS2339: Property '_listener' does not exist on type 'Function'.
 lib/eventsource.ts(420,1): error TS2322: Type '(event: Event) => void' is not assignable to type '(event: Event) => boolean'.
   Type 'void' is not assignable to type 'boolean'.
-lib/eventsource.ts(439,14): error TS2339: Property '_listener' does not exist on type 'EventListener'.
+lib/eventsource.ts(437,1): error TS2322: Type '(type: string, listener: Function) => void' is not assignable to type '{ <K extends keyof EventSourceEventMap>(type: K, listener: (this: EventSource, ev: EventSourceEventMap[K]) => any, options?: boolean | EventListenerOptions): void; (type: string, listener: (this: EventSource, event: MessageEvent<...>) => any, options?: boolean | EventListenerOptions): void; (type: string, listener: ...'.
+  Types of parameters 'listener' and 'listener' are incompatible.
+    Type 'EventListenerOrEventListenerObject' is not assignable to type 'Function'.
+      Type 'EventListenerObject' is not assignable to type 'Function'.
+lib/eventsource.ts(439,14): error TS2339: Property '_listener' does not exist on type 'Function'.
 lib/eventsource.ts(450,10): error TS2300: Duplicate identifier 'Event'.
 lib/eventsource.ts(467,10): error TS2300: Duplicate identifier 'MessageEvent'.
 ../../../../../src/weaver/src/node_modules/typescript/lib/lib.dom.d.ts(5184,11): error TS2300: Duplicate identifier 'Event'.

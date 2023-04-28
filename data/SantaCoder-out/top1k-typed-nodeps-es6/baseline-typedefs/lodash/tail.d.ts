@@ -1,2 +1,2 @@
-declare function tail(array: Array<any>): any[];
+declare function tail(array: any[]): any[];
 export default tail;

@@ -1,2 +1,2 @@
-declare function basePickBy(object: any, paths: string[], predicate: any): {};
+declare function basePickBy(object: any, paths: string[], predicate: Function): {};
 export default basePickBy;

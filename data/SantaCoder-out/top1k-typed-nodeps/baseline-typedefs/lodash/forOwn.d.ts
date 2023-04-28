@@ -1,2 +1,2 @@
-declare function forOwn(object: Object, iteratee: Function): void;
+declare function forOwn(object: any, iteratee: Function): void;
 export default forOwn;

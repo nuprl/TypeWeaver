@@ -1,2 +1,2 @@
-declare function toString(value: any): any;
+declare function toString(value: unknown): any;
 export default toString;

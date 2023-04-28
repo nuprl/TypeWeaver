@@ -5,4 +5,4 @@
  * Licensed under the MIT License.
  */
 declare var typeOf: any;
-declare function filter(arr: any[]): any[];
+declare function filter(arr: Array<any>): any[];

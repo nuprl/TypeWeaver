@@ -254,7 +254,7 @@ declare const SCRIPT_VALUE_TO_ALIASES: {
 declare const SCRIPT_VALUE_ALIASES_TO_VALUE: {};
 declare function inverseMap(data: any): {};
 declare function isValidName(name: string): boolean;
-declare function isValidValue(name: string, value: any): boolean;
+declare function isValidValue(name: string, value: string): boolean;
 declare function isAlias(name: string): boolean;
 declare function isGeneralCategoryName(name: string): boolean;
 declare function isScriptCategoryName(name: string): boolean;

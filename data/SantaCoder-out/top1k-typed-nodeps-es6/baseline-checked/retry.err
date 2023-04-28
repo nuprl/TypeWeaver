@@ -1,9 +1,12 @@
 example/dns.ts(2,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/SantaCoder-out/top1k-typed-nodeps-es6/baseline/retry/lib/retry"' has no default export.
+example/dns.ts(14,46): error TS2304: Cannot find name 'Operation'.
 example/stop.ts(1,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/SantaCoder-out/top1k-typed-nodeps-es6/baseline/retry/lib/retry"' has no default export.
-lib/retry.ts(3,44): error TS2304: Cannot find name 'TimeoutsOptions'.
-lib/retry.ts(24,19): error TS2407: The right-hand side of a 'for...in' statement must be of type 'any', an object type or a type parameter, but here has type 'never'.
-lib/retry.ts(37,26): error TS2339: Property 'forever' does not exist on type 'never'.
+lib/retry.ts(3,44): error TS2304: Cannot find name 'RetryOptions'.
+lib/retry.ts(12,43): error TS2304: Cannot find name 'RetryOptions'.
+lib/retry.ts(60,69): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+lib/retry_operation.ts(1,35): error TS2304: Cannot find name 'Timeouts'.
+lib/retry_operation.ts(1,35): error TS4078: Parameter 'timeouts' of exported function has or is using private name 'Timeouts'.
 lib/retry_operation.ts(1,54): error TS2304: Cannot find name 'RetryOptions'.
 lib/retry_operation.ts(1,54): error TS4078: Parameter 'options' of exported function has or is using private name 'RetryOptions'.
-lib/retry_operation.ts(95,71): error TS2304: Cannot find name 'TimeoutOptions'.
+lib/retry_operation.ts(95,71): error TS2304: Cannot find name 'TimeoutOps'.
 

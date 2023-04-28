@@ -1,2 +1,2 @@
-declare function isEqualWith(value: any, other: any, customizer: any): any;
+declare function isEqualWith(value: any, other: any, customizer: Function): any;
 export default isEqualWith;

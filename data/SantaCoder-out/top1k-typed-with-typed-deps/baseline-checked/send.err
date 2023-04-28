@@ -1,11 +1,9 @@
-index.ts(83,53): error TS2304: Cannot find name 'Options'.
-index.ts(83,53): error TS4078: Parameter 'options' of exported function has or is using private name 'Options'.
 index.ts(96,27): error TS2304: Cannot find name 'IncomingMessage'.
 index.ts(96,27): error TS4078: Parameter 'req' of exported function has or is using private name 'IncomingMessage'.
 index.ts(96,67): error TS2304: Cannot find name 'SendStreamOptions'.
 index.ts(96,67): error TS4078: Parameter 'options' of exported function has or is using private name 'SendStreamOptions'.
-index.ts(335,32): error TS2367: This comparison appears to be unintentional because the types 'RegExpExecArray' and 'string' have no overlap.
 index.ts(413,17): error TS2339: Property 'code' does not exist on type 'Error'.
+index.ts(506,49): error TS2304: Cannot find name 'ServerResponse'.
 index.ts(521,13): error TS2339: Property 'indexOf' does not exist on type 'string | number'.
   Property 'indexOf' does not exist on type 'number'.
 index.ts(534,29): error TS2345: Argument of type 'string | number' is not assignable to parameter of type 'string'.
@@ -14,25 +12,28 @@ index.ts(541,18): error TS2339: Property 'split' does not exist on type 'string 
   Property 'split' does not exist on type 'number'.
 index.ts(547,29): error TS2345: Argument of type 'string | number' is not assignable to parameter of type 'string'.
   Type 'number' is not assignable to type 'string'.
-index.ts(602,64): error TS2503: Cannot find namespace 'fs'.
+index.ts(602,64): error TS2304: Cannot find name 'Stats'.
 index.ts(663,38): error TS2554: Expected 3 arguments, but got 2.
 index.ts(691,8): error TS2339: Property 'start' does not exist on type '{}'.
 index.ts(692,8): error TS2339: Property 'end' does not exist on type '{}'.
+index.ts(717,52): error TS2304: Cannot find name 'Stats'.
+index.ts(718,20): error TS2339: Property 'code' does not exist on type 'Error'.
+index.ts(738,44): error TS2503: Cannot find namespace 'fs'.
 index.ts(740,38): error TS2554: Expected 1 arguments, but got 0.
+index.ts(766,42): error TS2503: Cannot find namespace 'fs'.
 index.ts(768,38): error TS2554: Expected 1 arguments, but got 0.
 index.ts(774,3): error TS2554: Expected 1 arguments, but got 0.
 index.ts(852,74): error TS2503: Cannot find namespace 'fs'.
 index.ts(893,29): error TS2304: Cannot find name 'IncomingMessage'.
 index.ts(893,29): error TS4078: Parameter 'res' of exported function has or is using private name 'IncomingMessage'.
-index.ts(945,38): error TS2339: Property 'start' does not exist on type 'string'.
-index.ts(945,58): error TS2339: Property 'end' does not exist on type 'string'.
+index.ts(945,38): error TS2339: Property 'start' does not exist on type 'Range'.
+index.ts(945,58): error TS2339: Property 'end' does not exist on type 'Range'.
 index.ts(1013,31): error TS2304: Cannot find name 'IncomingMessage'.
 index.ts(1013,31): error TS4078: Parameter 'res' of exported function has or is using private name 'IncomingMessage'.
 index.ts(1031,33): error TS2304: Cannot find name 'EventEmitter'.
 index.ts(1031,33): error TS4078: Parameter 'emitter' of exported function has or is using private name 'EventEmitter'.
-index.ts(1048,21): error TS2339: Property 'headersSent' does not exist on type 'Response'.
-index.ts(1049,19): error TS2551: Property '_header' does not exist on type 'Response'. Did you mean 'headers'?
-index.ts(1050,11): error TS2339: Property 'headersSent' does not exist on type 'Response'.
+index.ts(1047,28): error TS2304: Cannot find name 'ServerResponse'.
+index.ts(1047,28): error TS4078: Parameter 'res' of exported function has or is using private name 'ServerResponse'.
 index.ts(1136,27): error TS2304: Cannot find name 'ServerResponse'.
 index.ts(1136,27): error TS4078: Parameter 'res' of exported function has or is using private name 'ServerResponse'.
 

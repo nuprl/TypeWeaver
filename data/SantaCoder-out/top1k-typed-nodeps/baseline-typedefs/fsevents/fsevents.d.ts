@@ -16,7 +16,7 @@ declare function getInfo(path: string, flags: number): {
 declare function getFileType(flags: number): "file" | "directory" | "symlink";
 declare function anyIsTrue(obj: any): boolean;
 declare function getEventType(flags: number): "unknown" | "deleted" | "moved" | "created" | "modified" | "root-changed" | "cloned";
-declare function getFileChanges(flags: any): {
+declare function getFileChanges(flags: number): {
     inode: boolean;
     finder: boolean;
     access: boolean;

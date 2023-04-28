@@ -1,2 +1,2 @@
-declare function create(prototype: any, properties: any): any;
+declare function create(prototype: Object, properties: Object): any;
 export default create;

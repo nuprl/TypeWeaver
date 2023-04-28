@@ -1,1 +1,1 @@
-export default function arrayUniq(array: Array<any>): any[];
+export default function arrayUniq(array: any[]): any[];

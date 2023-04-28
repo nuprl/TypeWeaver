@@ -1,17 +1,19 @@
-lib/doctrine.ts(42,17): error TS2365: Operator '>=' cannot be applied to types 'string' and 'number'.
-lib/doctrine.ts(42,42): error TS2365: Operator '<=' cannot be applied to types 'string' and 'number'.
-lib/doctrine.ts(43,14): error TS2365: Operator '>=' cannot be applied to types 'string' and 'number'.
-lib/doctrine.ts(43,39): error TS2365: Operator '<=' cannot be applied to types 'string' and 'number'.
-lib/doctrine.ts(44,14): error TS2365: Operator '>=' cannot be applied to types 'string' and 'number'.
-lib/doctrine.ts(44,39): error TS2365: Operator '<=' cannot be applied to types 'string' and 'number'.
 lib/doctrine.ts(405,37): error TS2304: Cannot find name 'TagParserOptions'.
+lib/doctrine.ts(544,70): error TS2339: Property 'trim' does not exist on type 'any[]'.
+lib/doctrine.ts(555,70): error TS2339: Property 'trim' does not exist on type 'any[]'.
+lib/doctrine.ts(585,59): error TS2339: Property 'trim' does not exist on type 'any[]'.
+lib/doctrine.ts(597,61): error TS2339: Property 'trim' does not exist on type 'any[]'.
+lib/doctrine.ts(610,64): error TS2339: Property 'trim' does not exist on type 'any[]'.
+lib/doctrine.ts(626,59): error TS2339: Property 'trim' does not exist on type 'any[]'.
 lib/doctrine.ts(627,42): error TS2554: Expected 1 arguments, but got 2.
+lib/doctrine.ts(638,72): error TS2339: Property 'trim' does not exist on type 'any[]'.
 lib/doctrine.ts(753,38): error TS2554: Expected 0 arguments, but got 1.
-lib/doctrine.ts(826,50): error TS2304: Cannot find name 'Options'.
-lib/typed.ts(78,62): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+lib/doctrine.ts(776,36): error TS2304: Cannot find name 'Options'.
+lib/doctrine.ts(826,50): error TS2304: Cannot find name 'CommentParserOptions'.
 lib/typed.ts(81,32): error TS2749: 'Context' refers to a value, but is being used as a type here. Did you mean 'typeof Context'?
 lib/typed.ts(81,63): error TS2749: 'Token' refers to a value, but is being used as a type here. Did you mean 'typeof Token'?
 lib/typed.ts(101,18): error TS2339: Property 'range' does not exist on type 'Node'.
+lib/typed.ts(498,30): error TS2749: 'Token' refers to a value, but is being used as a type here. Did you mean 'typeof Token'?
 lib/typed.ts(529,17): error TS2554: Expected 2 arguments, but got 1.
 lib/typed.ts(534,13): error TS2345: Argument of type '{ type: any; elements: any; }' is not assignable to parameter of type 'Node'.
   Object literal may only specify known properties, and 'type' does not exist in type 'Node'.
@@ -106,6 +108,7 @@ lib/typed.ts(1053,17): error TS2345: Argument of type '{ type: any; expression: 
 lib/typed.ts(1060,13): error TS2554: Expected 2 arguments, but got 1.
 lib/typed.ts(1062,17): error TS2345: Argument of type '{ type: any; expression: any; }' is not assignable to parameter of type 'Node'.
   Object literal may only specify known properties, and 'type' does not exist in type 'Node'.
+lib/typed.ts(1070,42): error TS2304: Cannot find name 'ParseOptions'.
 lib/typed.ts(1127,22): error TS2339: Property 'type' does not exist on type 'Node'.
 lib/typed.ts(1155,35): error TS2339: Property 'elements' does not exist on type 'Node'.
 lib/typed.ts(1156,27): error TS2554: Expected 3 arguments, but got 2.

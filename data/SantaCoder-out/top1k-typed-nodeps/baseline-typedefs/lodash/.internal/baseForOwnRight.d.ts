@@ -1,2 +1,2 @@
-declare function baseForOwnRight(object: any, iteratee: any): any;
+declare function baseForOwnRight(object: any, iteratee: Function): any;
 export default baseForOwnRight;

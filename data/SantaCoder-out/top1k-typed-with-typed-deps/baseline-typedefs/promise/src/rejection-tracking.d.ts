@@ -4,4 +4,4 @@ declare var enabled: boolean;
 declare function disable(): void;
 declare function enable(options: any): void;
 declare function logError(id: string, error: any): void;
-declare function matchWhitelist(error: any, list: string[]): boolean;
+declare function matchWhitelist(error: Error, list: Array<Function>): boolean;
