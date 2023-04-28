@@ -14,7 +14,7 @@ class Model:
         max_tokens: int = 50,
         temperature: float = 0.2,
         top_p: float = 0.95,
-        max_context_length: int = 70
+        max_context_length: int = 400
     ):
         self.max_tokens = max_tokens
         self.temperature = temperature
