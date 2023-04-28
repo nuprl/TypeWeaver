@@ -41,7 +41,7 @@ function getDefaultAdapter() {
  *
  * @returns {string} A stringified version of the rawValue.
  */
-function stringifySafely(rawValue: any, parser: Parser, encoder: Encoder) {
+function stringifySafely(rawValue: any, parser: any, encoder: any) {
   if (utils.isString(rawValue)) {
     try {
       (parser || JSON.parse)(rawValue);
@@ -62,7 +62,7 @@ const defaults = {
 
   adapter: getDefaultAdapter(),
 
-  transformRequest: [function transformRequest(data: AxiosRequestConfig, headers: AxiosRequestConfig['headers']) {
+  transformRequest: [function transformRequest(data: any, headers: any) {
     const contentType = headers.getContentType() || '';
     const hasJSONContentType = contentType.indexOf('application/json') > -1;
     const isObjectPayload = utils.isObject(data);

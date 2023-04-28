@@ -36,20 +36,20 @@ import awaitify from './internal/awaitify.js'
  *     }
  * );
  */
-function whilst(test: any, iteratee: any, callback: any) {
+function whilst(test: Function, iteratee: Function, callback: Function) {
     callback = onlyOnce(callback);
     var _fn = wrapAsync(iteratee);
     var _test = wrapAsync(test);
     var results = [];
 
-    function next(err: Error, ...rest: any[]) {
+    function next(err: any, ...rest: any[]) {
         if (err) return callback(err);
         results = rest;
         if (err === false) return;
         _test(check);
     }
 
-    function check(err: Error, truth: boolean) {
+    function check(err: any, truth: boolean) {
         if (err) return callback(err);
         if (err === false) return;
         if (!truth) return callback(null, ...results);

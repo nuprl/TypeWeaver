@@ -58,18 +58,18 @@ function WriteStreamAtomic (path: string, options: WriteStreamOptions) {
 // data has been written to our target stream. So we suppress
 // finish from being emitted here, and only emit it after our
 // target stream is closed and we've moved everything around.
-WriteStreamAtomic.prototype.emit = function (event: MouseEvent) {
+WriteStreamAtomic.prototype.emit = function (event: any) {
   if (event === 'finish') return this.__atomicStream.end()
   return Writable.prototype.emit.apply(this, arguments)
 }
 
-WriteStreamAtomic.prototype._write = function (buffer: Buffer, encoding: string, cb: any) {
+WriteStreamAtomic.prototype._write = function (buffer: Buffer, encoding: string, cb: Function) {
   var flushed = this.__atomicStream.write(buffer, encoding)
   if (flushed) return cb()
   this.__atomicStream.once('drain', cb)
 }
 
-function handleOpen (writeStream: fs.WriteStream) {
+function handleOpen (writeStream: Writable) {
   return function (fd: number) {
     writeStream.emit('open', fd)
   }
@@ -92,7 +92,7 @@ function handleClose (writeStream: Writable) {
     fs.rename(writeStream.__atomicTmp, writeStream.__atomicTarget, iferr(trapWindowsEPERM, end))
   }
 
-  function trapWindowsEPERM (err: Error) {
+  function trapWindowsEPERM (err: any) {
     if (writeStream.__isWin &&
         err.syscall && err.syscall === 'rename' &&
         err.code && err.code === 'EPERM'
@@ -103,17 +103,17 @@ function handleClose (writeStream: Writable) {
     }
   }
 
-  function checkFileHashes (eperm: string) {
+  function checkFileHashes (eperm: boolean) {
     var inprocess = 2
     var tmpFileHash = crypto.createHash('sha512')
     var targetFileHash = crypto.createHash('sha512')
 
     fs.createReadStream(writeStream.__atomicTmp)
-      .on('data', function (data: string, enc: string) { tmpFileHash.update(data, enc) })
+      .on('data', function (data: Buffer, enc: string) { tmpFileHash.update(data, enc) })
       .on('error', fileHashError)
       .on('end', fileHashComplete)
     fs.createReadStream(writeStream.__atomicTarget)
-      .on('data', function (data: string, enc: string) { targetFileHash.update(data, enc) })
+      .on('data', function (data: any, enc: string) { targetFileHash.update(data, enc) })
       .on('error', fileHashError)
       .on('end', fileHashComplete)
 

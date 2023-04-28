@@ -112,7 +112,7 @@
         return ch < 0x80 ? IDENTIFIER_PART[ch] : ES5Regex.NonAsciiIdentifierPart.test(fromCodePoint(ch));
     }
 
-    function isIdentifierStartES6(ch: string) {
+    function isIdentifierStartES6(ch: number) {
         return ch < 0x80 ? IDENTIFIER_START[ch] : ES6Regex.NonAsciiIdentifierStart.test(fromCodePoint(ch));
     }
 

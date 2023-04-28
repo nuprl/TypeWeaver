@@ -91,6 +91,6 @@ import groupByLimit from './groupByLimit.js'
  * }
  *
  */
-export default function groupBy (coll: any, iteratee: any, callback: any) {
+export default function groupBy (coll: any[], iteratee: any, callback: any) {
     return groupByLimit(coll, Infinity, iteratee, callback)
 }

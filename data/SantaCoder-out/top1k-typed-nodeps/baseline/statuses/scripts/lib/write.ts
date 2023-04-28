@@ -8,7 +8,7 @@ module.exports = function write (path: string, obj: any) {
 
   fs.writeSync(fd, '{\n')
 
-  keys.forEach(function (key: string, i: number, arr: any[]) {
+  keys.forEach(function (key: string, i: number, arr: string[]) {
     fs.writeSync(fd, '  ' + JSON.stringify(key) +
       ': ' + JSON.stringify(obj[key]) +
       endLine.apply(this, arguments))
@@ -19,7 +19,7 @@ module.exports = function write (path: string, obj: any) {
   fs.closeSync(fd)
 }
 
-function endLine (val: number, index: number, array: number[]) {
+function endLine (val: string, index: number, array: string[]) {
   var comma = index + 1 === array.length
     ? ''
     : ','

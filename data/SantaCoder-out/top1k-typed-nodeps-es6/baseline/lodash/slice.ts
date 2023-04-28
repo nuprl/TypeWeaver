@@ -18,7 +18,7 @@
  * _.slice(array, 2)
  * // => [3, 4]
  */
-function slice(array: Array<any>, start: number, end: number) {
+function slice(array: any[], start: number, end: number) {
   let length = array == null ? 0 : array.length
   if (!length) {
     return []

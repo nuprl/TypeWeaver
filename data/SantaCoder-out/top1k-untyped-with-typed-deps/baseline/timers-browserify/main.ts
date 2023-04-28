@@ -12,7 +12,7 @@ exports.setInterval = function() {
   return new Timeout(apply.call(setInterval, scope, arguments), clearInterval);
 };
 exports.clearTimeout =
-exports.clearInterval = function(timeout: ITimeout) {
+exports.clearInterval = function(timeout: Timeout) {
   if (timeout) {
     timeout.close();
   }
@@ -38,7 +38,7 @@ exports.unenroll = function(item: any) {
   item._idleTimeout = -1;
 };
 
-exports._unrefActive = exports.active = function(item: IdleItem) {
+exports._unrefActive = exports.active = function(item: any) {
   clearTimeout(item._idleTimeoutId);
 
   var msecs = item._idleTimeout;

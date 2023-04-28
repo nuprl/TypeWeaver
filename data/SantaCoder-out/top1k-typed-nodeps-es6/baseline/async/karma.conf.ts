@@ -1,4 +1,4 @@
-export default function(config: karma.Config) {
+export default function(config: Config) {
     config.set({
         browsers: ['Firefox'],
         files: ['test/*.js'],

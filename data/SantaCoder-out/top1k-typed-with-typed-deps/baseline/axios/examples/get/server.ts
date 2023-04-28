@@ -25,7 +25,7 @@ const people = [
   }
 ];
 
-export default function (req: Request, res: Response) {
+export default function (req: http.IncomingMessage, res: http.ServerResponse) {
   res.writeHead(200, {
     'Content-Type': 'text/json'
   });

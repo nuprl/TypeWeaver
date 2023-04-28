@@ -9,7 +9,7 @@ import { inspect } from 'util';
 export default function sub(pattern: string, ...values: string[]) {
     let regex = /%(?:(%)|(-)?(\*)?(?:\((\w+)\))?([A-Za-z]))/g
 
-    let result = pattern.replace(regex, function (_: IToken, is_literal: boolean, is_left_align: boolean, is_padded: boolean, name: string, format: string) {
+    let result = pattern.replace(regex, function (_: number, is_literal: boolean, is_left_align: boolean, is_padded: boolean, name: string, format: string) {
         if (is_literal) return '%'
 
         let padded_count = 0

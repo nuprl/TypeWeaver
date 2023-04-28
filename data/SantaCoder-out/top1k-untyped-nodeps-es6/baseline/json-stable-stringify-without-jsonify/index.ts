@@ -1,4 +1,4 @@
-export default function (obj: any, opts: IOptions) {
+export default function (obj: any, opts: any) {
     if (!opts) opts = {};
     if (typeof opts === 'function') opts = { cmp: opts };
     var space = opts.space || '';
@@ -8,7 +8,7 @@ export default function (obj: any, opts: IOptions) {
 
     var cmp = opts.cmp && (function (f: any) {
         return function (node: Node) {
-            return function (a: number, b: number) {
+            return function (a: any, b: any) {
                 var aobj = { key: a, value: node[a] };
                 var bobj = { key: b, value: node[b] };
                 return f(aobj, bobj);

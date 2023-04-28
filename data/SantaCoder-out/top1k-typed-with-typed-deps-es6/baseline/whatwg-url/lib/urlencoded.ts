@@ -43,7 +43,7 @@ function parseUrlencodedString(input: string) {
 }
 
 // https://url.spec.whatwg.org/#concept-urlencoded-serializer
-function serializeUrlencoded(tuples: ITuple[], encodingOverride = undefined: string) {
+function serializeUrlencoded(tuples: any[], encodingOverride = undefined: string) {
   let encoding = "utf-8";
   if (encodingOverride !== undefined) {
     // TODO "get the output encoding", i.e. handle encoding labels vs. names.
@@ -76,7 +76,7 @@ function serializeUrlencoded(tuples: ITuple[], encodingOverride = undefined: str
   return output;
 }
 
-function strictlySplitByteSequence(buf: Uint8Array, cp: number) {
+function strictlySplitByteSequence(buf: Buffer, cp: number) {
   const list = [];
   let last = 0;
   let i = buf.indexOf(cp);
@@ -91,7 +91,7 @@ function strictlySplitByteSequence(buf: Uint8Array, cp: number) {
   return list;
 }
 
-function replaceByteInByteSequence(buf: Uint8Array, from: number, to: number) {
+function replaceByteInByteSequence(buf: Buffer, from: number, to: number) {
   let i = buf.indexOf(from);
   while (i >= 0) {
     buf[i] = to;

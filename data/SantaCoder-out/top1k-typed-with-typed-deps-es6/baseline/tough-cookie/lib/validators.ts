@@ -32,7 +32,7 @@ function isFunction(data: any) {
   return typeof data === "function";
 }
 
-function isNonEmptyString(data: string) {
+function isNonEmptyString(data: any) {
   return isString(data) && data !== "";
 }
 
@@ -40,7 +40,7 @@ function isDate(data: any) {
   return isInstanceStrict(data, Date) && isInteger(data.getTime());
 }
 
-function isEmptyString(data: string) {
+function isEmptyString(data: any) {
   return data === "" || (data instanceof String && data.toString() === "");
 }
 
@@ -59,12 +59,12 @@ function isInstanceStrict(data: any, prototype: any) {
   }
 }
 
-function isInteger(data: number) {
+function isInteger(data: any) {
   return typeof data === "number" && data % 1 === 0;
 }
 /* End validation functions */
 
-function validate(bool: boolean, cb: any, options: any) {
+function validate(bool: boolean, cb: Function, options: any) {
   if (!isFunction(cb)) {
     options = cb;
     cb = null;

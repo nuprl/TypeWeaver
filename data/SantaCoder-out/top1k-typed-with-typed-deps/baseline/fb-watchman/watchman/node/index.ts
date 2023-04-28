@@ -22,7 +22,7 @@ var unilateralTags = ['subscription', 'log'];
  *     If not provided, the Client locates the binary using the PATH specified
  *     by the node child_process's default env.
  */
-function Client(options: ClientOptions) {
+function Client(options: any) {
   var self = this;
   EE.call(this);
 
@@ -66,7 +66,7 @@ Client.prototype.cancelCommands = function(why: string) {
   }
 
   // Synthesize an error condition for any commands that were queued
-  cmds.forEach(function(cmd: ICommand) {
+  cmds.forEach(function(cmd: Command) {
     cmd.cb(error);
   });
 }
@@ -107,7 +107,7 @@ Client.prototype.connect = function() {
       // See if we can dispatch the next queued command, if any
       self.sendNextCommand();
     });
-    self.bunser.on('error', function(err: any) {
+    self.bunser.on('error', function(err: Error) {
       self.emit('error', err);
     });
 
@@ -117,7 +117,7 @@ Client.prototype.connect = function() {
       self.emit('connect');
       self.sendNextCommand();
     });
-    self.socket.on('error', function(err: Error) {
+    self.socket.on('error', function(err: any) {
       self.connecting = false;
       self.emit('error', err);
     });
@@ -188,7 +188,7 @@ Client.prototype.connect = function() {
   proc.stdout.on('data', function(data: string) {
     stdout.push(data);
   });
-  proc.stderr.on('data', function(data: string) {
+  proc.stderr.on('data', function(data: Buffer) {
     data = data.toString('utf8');
     stderr.push(data);
     console.error(data);
@@ -288,14 +288,14 @@ Client.prototype._synthesizeCapabilityCheck = function(
   return resp;
 }
 
-Client.prototype.capabilityCheck = function(caps: Capabilities, done: Function) {
+Client.prototype.capabilityCheck = function(caps: any, done: Function) {
   var optional = caps.optional || [];
   var required = caps.required || [];
   var self = this;
   this.command(['version', {
       optional: optional,
       required: required
-  }], function (error: Error, resp: AxiosResponse) {
+  }], function (error: any, resp: any) {
     if (error) {
       done(error);
       return;

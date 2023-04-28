@@ -30,7 +30,7 @@ LruCache.prototype.set = function(key: string, val: any) {
   return true
 }
 
-LruCache.prototype.used = function(node: INode) {
+LruCache.prototype.used = function(node: Node) {
   this.list.moveToFront(node)
 }
 
@@ -88,7 +88,7 @@ DoublyLinkedList.prototype.remove = function(node: Node) {
 }
 
 
-function DoublyLinkedNode(key: number, val: any) {
+function DoublyLinkedNode(key: any, val: any) {
   this.key = key
   this.val = val
   this.prev = null

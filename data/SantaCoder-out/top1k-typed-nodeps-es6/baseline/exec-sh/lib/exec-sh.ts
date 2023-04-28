@@ -26,7 +26,7 @@ function getShell () {
  * @param {Function} [callback]
  * @returns {ChildProcess}
  */
-function execSh (command: string, options: ExecOptions, callback: any) {
+function execSh (command: string, options: any, callback: Function) {
   if (Array.isArray(command)) {
     command = command.join(';')
   }
@@ -81,9 +81,9 @@ function execSh (command: string, options: ExecOptions, callback: any) {
   return child
 }
 
-execSh.promise = function (command: Command, options: CommandOptions) {
+execSh.promise = function (command: string, options: any) {
   return new Promise(function (resolve: any, reject: any) {
-    execSh(command, options, function (err: Error, stdout: string, stderr: string) {
+    execSh(command, options, function (err: any, stdout: any, stderr: any) {
       if (err) {
         err.stdout = stdout
         err.stderr = stderr

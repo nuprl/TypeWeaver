@@ -237,7 +237,7 @@ module.exports = [{
     ],
     setup(num) {
         tasks = [
-            function(cb: any) {
+            function(cb: Function) {
                 return cb(null, 1);
             }
         ].concat(_.range(num).map((i) => {
@@ -263,7 +263,7 @@ module.exports = [{
             dep1 (cb) { cb(null, 1); }
         };
         _.times(num, (n) => {
-            var task = ['dep' + (n+1), function(results: any, cb: any) {
+            var task = ['dep' + (n+1), function(results: number, cb: Function) {
                 setImmediate(cb, null, n);
             }];
             if (n > 2) task.unshift('dep' + n);
@@ -295,7 +295,7 @@ module.exports = [{
             });
         }
 
-        function worker(task: WorkerTask, callback: any) {
+        function worker(task: Task, callback: Function) {
             if (task.num === numEntries) {
                 return done();
             }
@@ -325,7 +325,7 @@ module.exports = [{
 
         var completedCnt = 0;
 
-        function worker(task: WorkerTask, callback: any) {
+        function worker(task: any, callback: any) {
             completedCnt++;
             if (completedCnt === numEntries) {
                 return done();
@@ -439,7 +439,7 @@ module.exports = [{
 }, {
     name: "ensureAsync async noWrap",
     fn(async, done) {
-        (function(cb: any) {
+        (function(cb: Function) {
             setImmediate(cb);
         }(done));
     }

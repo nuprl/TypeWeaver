@@ -6,7 +6,7 @@
  * @param {Object} source The object of property predicates to conform to.
  * @returns {boolean} Returns `true` if `object` conforms, else `false`.
  */
-function baseConformsTo(object: any, source: any, props: string[]) {
+function baseConformsTo(object: any, source: any, props: any) {
   let length = props.length
   if (object == null) {
     return !length

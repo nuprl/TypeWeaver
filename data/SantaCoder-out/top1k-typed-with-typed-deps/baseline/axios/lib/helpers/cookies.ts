@@ -8,7 +8,7 @@ export default platform.isStandardBrowserEnv ?
 // Standard browser envs support document.cookie
   (function standardBrowserEnv() {
     return {
-      write: function write(name: string, value: any, expires: number, path: string, domain: string, secure: boolean) {
+      write: function write(name: string, value: string, expires: number, path: string, domain: string, secure: boolean) {
         const cookie = [];
         cookie.push(name + '=' + encodeURIComponent(value));
 

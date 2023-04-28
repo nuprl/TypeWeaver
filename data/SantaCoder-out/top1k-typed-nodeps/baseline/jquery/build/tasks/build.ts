@@ -344,7 +344,7 @@ module.exports = function( grunt : any) {
 			if ( trackingAllowed ) {
 
 				// Track individuals
-				tracks.forEach( function( module : Module) {
+				tracks.forEach( function( module : any) {
 					const path = defaultPath.concat( [ "individual" ], module );
 
 					insight.track.apply( insight, path );
@@ -362,7 +362,7 @@ module.exports = function( grunt : any) {
 
 		// Ask for permission the first time
 		if ( insight.optOut === undefined ) {
-			insight.askPermission( null, function( _error: Error, result : string) {
+			insight.askPermission( null, function( _error: any, result : any) {
 				exec( result );
 			} );
 		} else {

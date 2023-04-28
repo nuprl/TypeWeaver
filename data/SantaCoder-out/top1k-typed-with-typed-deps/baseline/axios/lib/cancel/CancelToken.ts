@@ -108,7 +108,7 @@ class CancelToken {
    */
   static source() {
     let cancel;
-    const token = new CancelToken(function executor(c: ICommand) {
+    const token = new CancelToken(function executor(c: CancelToken) {
       cancel = c;
     });
     return {

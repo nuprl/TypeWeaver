@@ -47,7 +47,7 @@ export function klona(x: any) {
 
 	if (str === '[object Map]') {
 		tmp = new Map;
-		x.forEach(function (val: any, key: string) {
+		x.forEach(function (val: any, key: any) {
 			tmp.set(klona(key), klona(val));
 		});
 		return tmp;

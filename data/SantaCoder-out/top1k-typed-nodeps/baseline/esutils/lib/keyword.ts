@@ -27,7 +27,7 @@
 
     var code = require('./code');
 
-    function isStrictModeReservedWordES6(id: number) {
+    function isStrictModeReservedWordES6(id: string) {
         switch (id) {
         case 'implements':
         case 'interface':
@@ -51,7 +51,7 @@
         return isKeywordES6(id, strict);
     }
 
-    function isKeywordES6(id: number, strict: boolean) {
+    function isKeywordES6(id: string, strict: boolean) {
         if (strict && isStrictModeReservedWordES6(id)) {
             return true;
         }

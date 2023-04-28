@@ -26,18 +26,18 @@
 
     var estraverse = require('estraverse');
 
-    function isNode(node: any) {
+    function isNode(node: Node) {
         if (node == null) {
             return false;
         }
         return typeof node === 'object' && typeof node.type === 'string';
     }
 
-    function isProperty(nodeType: NodeType, key: string) {
+    function isProperty(nodeType: string, key: string) {
         return (nodeType === estraverse.Syntax.ObjectExpression || nodeType === estraverse.Syntax.ObjectPattern) && key === 'properties';
     }
 
-    function Visitor(visitor: VisitorInterface, options: VisitorOptions) {
+    function Visitor(visitor: Visitor, options: VisitorOptions) {
         options = options || {};
 
         this.__visitor = visitor ||  this;
@@ -109,7 +109,7 @@
 
     exports.version = require('./package.json').version;
     exports.Visitor = Visitor;
-    exports.visit = function (node: Node, visitor: Visitor<Node>, options: VisitorOptions) {
+    exports.visit = function (node: Node, visitor: Visitor, options: VisitOptions) {
         var v = new Visitor(visitor, options);
         v.visit(node);
     };

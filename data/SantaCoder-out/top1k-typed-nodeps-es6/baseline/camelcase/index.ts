@@ -51,7 +51,7 @@ const postProcess = (input, toUpperCase) => {
 		.replace(NUMBERS_AND_IDENTIFIER, m => toUpperCase(m));
 };
 
-export default function camelCase(input: string, options: CamelCaseOptions) {
+export default function camelCase(input: string, options: Options) {
 	if (!(typeof input === 'string' || Array.isArray(input))) {
 		throw new TypeError('Expected the input to be `string | string[]`');
 	}

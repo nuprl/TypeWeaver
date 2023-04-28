@@ -60,7 +60,7 @@ var DEPRECATED_BOOLEANS_SYNTAX = [
 
 var DEPRECATED_BASE60_SYNTAX = /^[-+]?[0-9_]+(?::[0-9_]+)+(?:\.[0-9_]*)?$/;
 
-function compileStyleMap(schema: Schema, map: StyleMap) {
+function compileStyleMap(schema: Schema, map: any) {
   var result, keys, index, length, tag, style, type;
 
   if (map === null) return {};
@@ -169,7 +169,7 @@ function generateNextLine(state: State, level: number) {
   return '\n' + common.repeat(' ', state.indent * level);
 }
 
-function testImplicitResolving(state: IState, str: string) {
+function testImplicitResolving(state: any, str: string) {
   var index, length, type;
 
   for (index = 0, length = state.implicitTypes.length; index < length; index += 1) {
@@ -204,7 +204,7 @@ function isPrintable(c: number) {
 // [26] b-char  ::= b-line-feed | b-carriage-return
 // Including s-white (for some reason, examples doesn't match specs in this aspect)
 // ns-char ::= c-printable - b-line-feed - b-carriage-return - c-byte-order-mark
-function isNsCharOrWhitespace(c: string) {
+function isNsCharOrWhitespace(c: number) {
   return isPrintable(c)
     && c !== CHAR_BOM
     // - b-char
@@ -392,7 +392,7 @@ function chooseScalarStyle(string, singleLineOnly, indentPerLevel, lineWidth,
 //    • No ending newline => unaffected; already using strip "-" chomping.
 //    • Ending newline    => removed then restored.
 //  Importantly, this keeps the "+" chomp indicator from gaining an extra line.
-function writeScalar(state: State, string: string, level: number, iskey: boolean, inblock: number) {
+function writeScalar(state: State, string: string, level: number, iskey: boolean, inblock: boolean) {
   state.dump = (function () {
     if (string.length === 0) {
       return state.quotingType === QUOTING_TYPE_DOUBLE ? '""' : "''";
@@ -499,7 +499,7 @@ function foldString(string: string, width: number) {
 // Picks the longest line under the limit each time,
 // otherwise settles for the shortest line over the limit.
 // NB. More-indented lines *cannot* be folded, as that would add an extra \n.
-function foldLine(line: number, width: number) {
+function foldLine(line: string, width: number) {
   if (line === '' || line[0] === ' ') return line;
 
   // Since a more-indented line adds a \n, breaks can't be followed by a space.
@@ -559,7 +559,7 @@ function escapeString(string: string) {
   return result;
 }
 
-function writeFlowSequence(state: FlowState, level: number, object: any) {
+function writeFlowSequence(state: State, level: number, object: any) {
   var _result = '',
       _tag    = state.tag,
       index,
@@ -587,7 +587,7 @@ function writeFlowSequence(state: FlowState, level: number, object: any) {
   state.dump = '[' + _result + ']';
 }
 
-function writeBlockSequence(state: BlockSequenceState, level: number, object: any, compact: boolean) {
+function writeBlockSequence(state: State, level: number, object: any, compact: boolean) {
   var _result = '',
       _tag    = state.tag,
       index,
@@ -624,7 +624,7 @@ function writeBlockSequence(state: BlockSequenceState, level: number, object: an
   state.dump = _result || '[]'; // Empty sequence if no valid values.
 }
 
-function writeFlowMapping(state: State, level: number, object: FlowMapping) {
+function writeFlowMapping(state: State, level: number, object: any) {
   var _result       = '',
       _tag          = state.tag,
       objectKeyList = Object.keys(object),
@@ -670,7 +670,7 @@ function writeFlowMapping(state: State, level: number, object: FlowMapping) {
   state.dump = '{' + _result + '}';
 }
 
-function writeBlockMapping(state: BlockMappingState, level: number, object: any, compact: boolean) {
+function writeBlockMapping(state: any, level: any, object: any, compact: any) {
   var _result       = '',
       _tag          = state.tag,
       objectKeyList = Object.keys(object),
@@ -794,7 +794,7 @@ function detectType(state: State, object: any, explicit: boolean) {
 // Serializes `object` and writes it to global `result`.
 // Returns true on success, or false on invalid object.
 //
-function writeNode(state: State, level: number, object: Node, block: Block, compact: boolean, iskey: boolean, isblockseq: boolean) {
+function writeNode(state: State, level: number, object: any, block: boolean, compact: boolean, iskey: boolean, isblockseq: boolean) {
   state.tag = null;
   state.dump = object;
 
@@ -901,7 +901,7 @@ function writeNode(state: State, level: number, object: Node, block: Block, comp
   return true;
 }
 
-function getDuplicateReferences(object: any, state: State) {
+function getDuplicateReferences(object: Object, state: State) {
   var objects = [],
       duplicatesIndexes = [],
       index,
@@ -915,7 +915,7 @@ function getDuplicateReferences(object: any, state: State) {
   state.usedDuplicates = new Array(length);
 }
 
-function inspectNode(object: any, objects: any[], duplicatesIndexes: any[]) {
+function inspectNode(object: any, objects: any[], duplicatesIndexes: number[]) {
   var objectKeyList,
       index,
       length;
@@ -944,7 +944,7 @@ function inspectNode(object: any, objects: any[], duplicatesIndexes: any[]) {
   }
 }
 
-function dump(input: any, options: DumpOptions) {
+function dump(input: any, options: any) {
   options = options || {};
 
   var state = new State(options);

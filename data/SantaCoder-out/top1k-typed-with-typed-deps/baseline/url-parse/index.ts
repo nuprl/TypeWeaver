@@ -96,7 +96,7 @@ var ignore = { hash: 1, query: 1 };
  * @returns {Object} lolcation object.
  * @public
  */
-function lolcation(loc: any) {
+function lolcation(loc: string) {
   var globalVar;
 
   if (typeof window !== 'undefined') globalVar = window;
@@ -164,7 +164,7 @@ function isSpecial(scheme: string) {
  * @return {ProtocolExtract} Extracted information.
  * @private
  */
-function extractProtocol(address: string, location: string) {
+function extractProtocol(address: string, location: Location) {
   address = trim(address);
   address = address.replace(CRHTLF, '');
   location = location || {};
@@ -447,7 +447,7 @@ function Url(address: string, location: Location, parser: Parser) {
  * @returns {URL} URL instance for chaining.
  * @public
  */
-function set(part: string, value: any, fn: any) {
+function set(part: string, value: any, fn: Function) {
   var url = this;
 
   switch (part) {
@@ -558,7 +558,7 @@ function set(part: string, value: any, fn: any) {
  * @returns {String} Compiled version of the URL.
  * @public
  */
-function toString(stringify: any) {
+function toString(stringify: boolean) {
   if (!stringify || 'function' !== typeof stringify) stringify = qs.stringify;
 
   var query

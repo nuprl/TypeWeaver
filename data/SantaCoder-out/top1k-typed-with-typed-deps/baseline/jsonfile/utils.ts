@@ -1,4 +1,4 @@
-function stringify (obj: any, { EOL = '\n': EOL2, finalEOL = true: EOL3, replacer = null: EOL4, spaces } = {}: EOL4) {
+function stringify (obj: any, { EOL = '\n': EOL, finalEOL = true: finalEOL, replacer = null: no, spaces } = {}: string) {
   const EOF = finalEOL ? EOL : ''
   const str = JSON.stringify(obj, replacer, spaces)
 

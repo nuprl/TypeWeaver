@@ -62,7 +62,7 @@ function parseurl (req: IncomingMessage) {
  * @public
  */
 
-function originalurl (req: express.Request) {
+function originalurl (req: Request) {
   var url = req.originalUrl
 
   if (typeof url !== 'string') {
@@ -150,7 +150,7 @@ function fastparse (str: string) {
  * @private
  */
 
-function fresh (url: string, parsedUrl: ParsedUrl) {
+function fresh (url: string, parsedUrl: URL) {
   return typeof parsedUrl === 'object' &&
     parsedUrl !== null &&
     (Url === undefined || parsedUrl instanceof Url) &&

@@ -22,7 +22,7 @@ import some from './some.js'
  * func(NaN)
  * // => false
  */
-function overSome(iteratees: Iterator<T>) {
+function overSome(iteratees: Function[]) {
   return function(...args: any[]) {
     return some(iteratees, (iteratee) => iteratee.apply(this, args))
   }

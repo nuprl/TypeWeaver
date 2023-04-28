@@ -61,7 +61,7 @@ function cloneArrayBuffer(val: ArrayBuffer) {
   return res;
 }
 
-function cloneTypedArray(val: TypedArray, deep: boolean) {
+function cloneTypedArray(val: any, deep: boolean) {
   return new val.constructor(val.buffer, val.byteOffset, val.length);
 }
 
@@ -72,7 +72,7 @@ function cloneBuffer(val: Buffer) {
   return buf;
 }
 
-function cloneSymbol(val: Symbol) {
+function cloneSymbol(val: any) {
   return valueOf ? Object(valueOf.call(val)) : {};
 }
 

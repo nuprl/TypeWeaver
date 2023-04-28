@@ -14,7 +14,7 @@ module.exports = parallel;
  * @param   {function} callback - invoked when all elements processed
  * @returns {function} - jobs terminator
  */
-function parallel(list: Array<any>, iterator: any, callback: any)
+function parallel(list: Array<any>, iterator: Function, callback: Function)
 {
   var state = initState(list);
 

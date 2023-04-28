@@ -119,7 +119,7 @@ export const processImportsField = function processImportsField(
  * @returns {FieldProcessor} field processor
  */
 function createFieldProcessor(treeRoot: TreeRoot, assertRequest: AssertRequest, assertTarget: AssertTarget) {
-	return function fieldProcessor(request: IFieldProcessorRequest, conditionNames: string[]) {
+	return function fieldProcessor(request: any, conditionNames: string[]) {
 		request = assertRequest(request);
 
 		const match = findMatch(request, treeRoot);
@@ -164,7 +164,7 @@ function createFieldProcessor(treeRoot: TreeRoot, assertRequest: AssertRequest, 
  * @param {string} request request
  * @returns {string} updated request
  */
-function assertExportsFieldRequest(request: google.cloud.automl.v1beta1.AutoMl.ExportEvaluatedExamplesRequest) {
+function assertExportsFieldRequest(request: string) {
 	if (request.charCodeAt(0) !== dotCode) {
 		throw new Error('Request should be relative path and start with "."');
 	}
@@ -183,7 +183,7 @@ function assertExportsFieldRequest(request: google.cloud.automl.v1beta1.AutoMl.E
  * @param {string} request request
  * @returns {string} updated request
  */
-function assertImportsFieldRequest(request: google.protobuf.IImportTypesRequest) {
+function assertImportsFieldRequest(request: any) {
 	if (request.charCodeAt(0) !== hashCode) {
 		throw new Error('Request should start with "#"');
 	}
@@ -204,7 +204,7 @@ function assertImportsFieldRequest(request: google.protobuf.IImportTypesRequest)
  * @param {string} exp export target
  * @param {boolean} expectFolder is folder expected
  */
-function assertExportTarget(exp: ExportTarget, expectFolder: boolean) {
+function assertExportTarget(exp: ExportTarget, expectFolder: string) {
 	if (
 		exp.charCodeAt(0) === slashCode ||
 		(exp.charCodeAt(0) === dotCode && exp.charCodeAt(1) !== slashCode)
@@ -235,7 +235,7 @@ function assertExportTarget(exp: ExportTarget, expectFolder: boolean) {
  * @param {string} imp import target
  * @param {boolean} expectFolder is folder expected
  */
-function assertImportTarget(imp: ImportTarget, expectFolder: boolean) {
+function assertImportTarget(imp: Import, expectFolder: string) {
 	const isFolder = imp.charCodeAt(imp.length - 1) === slashCode;
 
 	if (isFolder !== expectFolder) {
@@ -257,7 +257,7 @@ function assertImportTarget(imp: ImportTarget, expectFolder: boolean) {
  * @param {PathTreeNode} treeRoot path tree root
  * @returns {[MappingValue, number]|null} match or null, number is negative and one less when it's a folder mapping, number is request.length + 1 for direct mappings
  */
-function findMatch(request: Request, treeRoot: TreeRoot) {
+function findMatch(request: Request, treeRoot: Node) {
 	if (request.length === 0) {
 		const value = treeRoot.files.get("");
 
@@ -352,7 +352,7 @@ function findMatch(request: Request, treeRoot: TreeRoot) {
  * @param {ConditionalMapping|DirectMapping|null} mapping mapping
  * @returns {boolean} is conditional mapping
  */
-function isConditionalMapping(mapping: IConditionalMapping) {
+function isConditionalMapping(mapping: Mapping) {
 	return (
 		mapping !== null && typeof mapping === "object" && !Array.isArray(mapping)
 	);
@@ -507,7 +507,7 @@ function createNode() {
  * @param {string} path path
  * @param {MappingValue} target target
  */
-function walkPath(root: string, path: string, target: string) {
+function walkPath(root: Node, path: string, target: Node) {
 	if (path.length === 0) {
 		root.folder = target;
 		return;
@@ -630,7 +630,7 @@ function buildExportsFieldPathTree(field: Field) {
  * @param {ImportsField} field imports field
  * @returns {PathTreeNode} root
  */
-function buildImportsFieldPathTree(field: ImportField) {
+function buildImportsFieldPathTree(field: Field) {
 	const root = createNode();
 
 	const keys = Object.keys(field);

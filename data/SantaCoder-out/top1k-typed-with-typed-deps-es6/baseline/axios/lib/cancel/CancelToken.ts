@@ -108,7 +108,7 @@ class CancelToken {
    */
   static source() {
     let cancel;
-    const token = new CancelToken(function executor(c: any) {
+    const token = new CancelToken(function executor(c: CancelToken) {
       cancel = c;
     });
     return {

@@ -1,6 +1,6 @@
 module.exports = assert;
 
-function assert(val: boolean, msg: string) {
+function assert(val: any, msg: string) {
   if (!val)
     throw new Error(msg || 'Assertion failed');
 }

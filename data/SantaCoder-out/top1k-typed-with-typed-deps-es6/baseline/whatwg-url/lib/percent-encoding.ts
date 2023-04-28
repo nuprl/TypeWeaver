@@ -49,7 +49,7 @@ function isC0ControlPercentEncode(c: number) {
 
 // https://url.spec.whatwg.org/#fragment-percent-encode-set
 const extraFragmentPercentEncodeSet = new Set([p(" "), p("\""), p("<"), p(">"), p("`")]);
-function isFragmentPercentEncode(c: string) {
+function isFragmentPercentEncode(c: number) {
   return isC0ControlPercentEncode(c) || extraFragmentPercentEncodeSet.has(c);
 }
 

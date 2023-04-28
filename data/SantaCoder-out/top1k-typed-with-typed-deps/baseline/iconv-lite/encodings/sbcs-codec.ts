@@ -35,7 +35,7 @@ SBCSCodec.prototype.encoder = SBCSEncoder;
 SBCSCodec.prototype.decoder = SBCSDecoder;
 
 
-function SBCSEncoder(options: SBCSEncoderOptions, codec: Codec) {
+function SBCSEncoder(options: any, codec: any) {
     this.encodeBuf = codec.encodeBuf;
 }
 
@@ -55,7 +55,7 @@ function SBCSDecoder(options: any, codec: any) {
     this.decodeBuf = codec.decodeBuf;
 }
 
-SBCSDecoder.prototype.write = function(buf: Uint8Array) {
+SBCSDecoder.prototype.write = function(buf: Buffer) {
     // Strings are immutable in JS -> we use ucs2 buffer to speed up computations.
     var decodeBuf = this.decodeBuf;
     var newBuf = Buffer.alloc(buf.length*2);

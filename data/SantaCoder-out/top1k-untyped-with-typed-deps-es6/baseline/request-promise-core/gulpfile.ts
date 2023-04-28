@@ -43,7 +43,7 @@ gulp.task('watch', function () {
 
 });
 
-gulp.task('validate', function (done: Function) {
+gulp.task('validate', function (done: any) {
     runSequence('lint', 'test', done);
 });
 
@@ -62,7 +62,7 @@ gulp.task('lint', function () {
 
 });
 
-gulp.task('test', ['clean'], function (done: any) {
+gulp.task('test', ['clean'], function (done: Function) {
 
     var coverageVariable = '$$cov_' + new Date().getTime() + '$$';
 
@@ -75,7 +75,7 @@ gulp.task('test', ['clean'], function (done: any) {
 
             gulp.src(paths.specFiles)
                 .pipe(mocha())
-                .on('error', function (err: Error) {
+                .on('error', function (err: any) {
                     console.error(String(err));
                     console.error(chalk.bold.bgRed(' TESTS FAILED '));
                     done(new Error(' TESTS FAILED '));
@@ -106,11 +106,11 @@ gulp.task('clean-coverage', function (done: any) {
     rimraf('./coverage', done);
 });
 
-gulp.task('ci', function (done: any) {
+gulp.task('ci', function (done: Function) {
     runSequence('validate', 'coveralls', 'test-without-coverage', done);
 });
 
-gulp.task('ci-no-cov', function (done: any) {
+gulp.task('ci-no-cov', function (done: Function) {
     runSequence('validate', 'test-without-coverage', done);
 });
 

@@ -8,7 +8,7 @@
  * @param {Function} comparator The comparator invoked per element.
  * @returns {number} Returns the index of the matched value, else `-1`.
  */
-function baseIndexOfWith(array: any[], value: any, fromIndex: number, comparator: any) {
+function baseIndexOfWith(array: any[], value: any, fromIndex: number, comparator: Comparator<T>) {
   let index = fromIndex - 1
   const { length } = array
 

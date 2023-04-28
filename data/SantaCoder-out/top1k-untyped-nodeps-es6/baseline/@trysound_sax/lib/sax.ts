@@ -1,5 +1,5 @@
-;(function (sax: SaxParser) { // wrapper for non-node envs
-  sax.parser = function (strict: boolean, opt: any) { return new SAXParser(strict, opt) }
+;(function (sax: any) { // wrapper for non-node envs
+  sax.parser = function (strict: boolean, opt: Options) { return new SAXParser(strict, opt) }
   sax.SAXParser = SAXParser
 
   // When we pass the MAX_BUFFER_LENGTH position, start checking for buffer overruns.
@@ -40,7 +40,7 @@
     'closenamespace'
   ]
 
-  function SAXParser (strict: boolean, opt: any) {
+  function SAXParser (strict: boolean, opt: ParserOptions) {
     if (!(this instanceof SAXParser)) {
       return new SAXParser(strict, opt)
     }
@@ -518,7 +518,7 @@
     parser[event] && parser[event](data)
   }
 
-  function emitNode (parser: Parser, nodeType: number, data: any) {
+  function emitNode (parser: Parser, nodeType: string, data: any) {
     if (parser.textNode) closeText(parser)
     emit(parser, nodeType, data)
   }
@@ -529,7 +529,7 @@
     parser.textNode = ''
   }
 
-  function textopts (opt: TextOpts, text: string) {
+  function textopts (opt: string, text: string) {
     if (opt.trim) text = text.trim()
     if (opt.normalize) text = text.replace(/\s+/g, ' ')
     return text
@@ -673,7 +673,7 @@
 
       var parent = parser.tags[parser.tags.length - 1] || parser
       if (tag.ns && parent.ns !== tag.ns) {
-        Object.keys(tag.ns).forEach(function (p: NodeParser) {
+        Object.keys(tag.ns).forEach(function (p: Node) {
           emitNode(parser, 'onopennamespace', {
             prefix: p,
             uri: tag.ns[p]
@@ -858,7 +858,7 @@
     return result
   }
 
-  function write (chunk: string) {
+  function write (chunk: Buffer) {
     var parser = this
     if (this.error) {
       throw this.error

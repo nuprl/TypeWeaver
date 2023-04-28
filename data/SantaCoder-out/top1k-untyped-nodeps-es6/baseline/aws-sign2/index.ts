@@ -68,7 +68,7 @@ module.exports.authorization = authorization
  * @api private
  */
 
-function hmacSha1 (options: HmacSha1Options) {
+function hmacSha1 (options: HmacOptions) {
   return crypto.createHmac('sha1', options.secret).update(options.message).digest('base64')
 }
 
@@ -98,7 +98,7 @@ module.exports.sign = sign
  * @api private
  */
 
-function signQuery (options: SignQueryOptions) {
+function signQuery (options: Options) {
   options.message = queryStringToSign(options)
   return hmacSha1(options)
 }
@@ -121,7 +121,7 @@ module.exports.signQuery= signQuery
  * @api private
  */
 
-function stringToSign (options: IStringToSignOptions) {
+function stringToSign (options: Options) {
   var headers = options.amazonHeaders || ''
   if (headers) headers += '\n'
   var r = 
@@ -149,7 +149,7 @@ module.exports.stringToSign = stringToSign
  * @api private
  */
 
-function queryStringToSign (options: QueryStringToSignOptions){
+function queryStringToSign (options: any){
   return 'GET\n\n\n' + options.date + '\n' + options.resource
 }
 module.exports.queryStringToSign = queryStringToSign
@@ -168,7 +168,7 @@ module.exports.queryStringToSign = queryStringToSign
  * @api private
  */
 
-function canonicalizeHeaders (headers: any) {
+function canonicalizeHeaders (headers: Object) {
   var buf = []
     , fields = Object.keys(headers)
     ;

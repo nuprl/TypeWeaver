@@ -43,13 +43,13 @@ function percentDecodeString(input: string) {
 }
 
 // https://url.spec.whatwg.org/#c0-control-percent-encode-set
-function isC0ControlPercentEncode(c: string) {
+function isC0ControlPercentEncode(c: number) {
   return c <= 0x1F || c > 0x7E;
 }
 
 // https://url.spec.whatwg.org/#fragment-percent-encode-set
 const extraFragmentPercentEncodeSet = new Set([p(" "), p("\""), p("<"), p(">"), p("`")]);
-function isFragmentPercentEncode(c: string) {
+function isFragmentPercentEncode(c: number) {
   return isC0ControlPercentEncode(c) || extraFragmentPercentEncodeSet.has(c);
 }
 
@@ -73,13 +73,13 @@ function isPathPercentEncode(c: string) {
 // https://url.spec.whatwg.org/#userinfo-percent-encode-set
 const extraUserinfoPercentEncodeSet =
   new Set([p("/"), p(":"), p(";"), p("="), p("@"), p("["), p("\\"), p("]"), p("^"), p("|")]);
-function isUserinfoPercentEncode(c: string) {
+function isUserinfoPercentEncode(c: number) {
   return isPathPercentEncode(c) || extraUserinfoPercentEncodeSet.has(c);
 }
 
 // https://url.spec.whatwg.org/#component-percent-encode-set
 const extraComponentPercentEncodeSet = new Set([p("$"), p("%"), p("&"), p("+"), p(",")]);
-function isComponentPercentEncode(c: Component) {
+function isComponentPercentEncode(c: string) {
   return isUserinfoPercentEncode(c) || extraComponentPercentEncodeSet.has(c);
 }
 

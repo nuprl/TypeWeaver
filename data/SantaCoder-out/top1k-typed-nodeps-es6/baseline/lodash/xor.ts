@@ -17,7 +17,7 @@ import isArrayLikeObject from './isArrayLikeObject.js'
  * xor([2, 1], [2, 3])
  * // => [1, 3]
  */
-function xor(...arrays: any[]) {
+function xor(...arrays: number[][]) {
   return baseXor(arrays.filter(isArrayLikeObject))
 }
 

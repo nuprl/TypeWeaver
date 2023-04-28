@@ -7,7 +7,7 @@ var notifications = [
     muffinopts = { label: 'muffin', icon: 'muffin.png' },
     cakeopts = { label: 'cake', title: 'Cake is ready!', icon: 'cake.png', sticky: true };
 
-growly.register('Bakery', 'muffin.png', notifications, function(err: Error) {
+growly.register('Bakery', 'muffin.png', notifications, function(err: any) {
     if (err) { 
         console.log(err);
         return;

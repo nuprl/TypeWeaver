@@ -11,7 +11,7 @@ import envFormData from '../env/classes/FormData.js';
  *
  * @returns {boolean}
  */
-function isVisitable(thing: Thing) {
+function isVisitable(thing: any) {
   return utils.isPlainObject(thing) || utils.isArray(thing);
 }
 
@@ -35,9 +35,9 @@ function removeBrackets(key: string) {
  *
  * @returns {string} The path to the current key.
  */
-function renderKey(path: string, key: string, dots: number) {
+function renderKey(path: string, key: string, dots: boolean) {
   if (!path) return key;
-  return path.concat(key).map(function each(token: Token, i: number) {
+  return path.concat(key).map(function each(token: string, i: number) {
     // eslint-disable-next-line no-param-reassign
     token = removeBrackets(token);
     return !dots && i ? '[' + token + ']' : token;
@@ -51,7 +51,7 @@ function renderKey(path: string, key: string, dots: number) {
  *
  * @returns {boolean}
  */
-function isFlatArray(arr: any) {
+function isFlatArray(arr: any[]) {
   return utils.isArray(arr) && !arr.some(isVisitable);
 }
 
@@ -93,7 +93,7 @@ function isSpecCompliant(thing: any) {
  *
  * @returns
  */
-function toFormData(obj: any, formData: FormData, options: FormDataOptions) {
+function toFormData(obj: any, formData: FormData, options: any) {
   if (!utils.isObject(obj)) {
     throw new TypeError('target must be an object');
   }
@@ -106,7 +106,7 @@ function toFormData(obj: any, formData: FormData, options: FormDataOptions) {
     metaTokens: true,
     dots: false,
     indexes: false
-  }, false, function defined(option: Option<T>, source: Option<T>) {
+  }, false, function defined(option: string, source: any) {
     // eslint-disable-next-line no-eq-null,eqeqeq
     return !utils.isUndefined(source[option]);
   });
@@ -151,7 +151,7 @@ function toFormData(obj: any, formData: FormData, options: FormDataOptions) {
    *
    * @returns {boolean} return true to visit the each prop of the value recursively
    */
-  function defaultVisitor(value: any, key: string, path: Path) {
+  function defaultVisitor(value: any, key: string, path: string) {
     let arr = value;
 
     if (value && !path && typeof value === 'object') {
@@ -167,7 +167,7 @@ function toFormData(obj: any, formData: FormData, options: FormDataOptions) {
         // eslint-disable-next-line no-param-reassign
         key = removeBrackets(key);
 
-        arr.forEach(function each(el: any, index: number) {
+        arr.forEach(function each(el: HTMLElement, index: number) {
           !utils.isUndefined(el) && formData.append(
             // eslint-disable-next-line no-nested-ternary
             indexes === true ? renderKey([key], index, dots) : (indexes === null ? key : key + '[]'),
@@ -204,7 +204,7 @@ function toFormData(obj: any, formData: FormData, options: FormDataOptions) {
 
     stack.push(value);
 
-    utils.forEach(value, function each(el: any, key: string) {
+    utils.forEach(value, function each(el: HTMLElement, key: string) {
       const result = !utils.isUndefined(el) && visitor.call(
         formData, el, utils.isString(key) ? key.trim() : key, path, exposedHelpers
       );

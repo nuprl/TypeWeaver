@@ -8,7 +8,7 @@ import get from '../get.js'
  * @param {string[]} paths The property paths to pick.
  * @returns {Array} Returns the picked elements.
  */
-function baseAt(object: any, paths: string[]) {
+function baseAt(object: any[], paths: any[]) {
   let index = -1
   const length = paths.length
   const result = new Array(length)

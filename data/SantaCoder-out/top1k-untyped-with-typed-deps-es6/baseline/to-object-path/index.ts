@@ -9,7 +9,7 @@
 
 import typeOf from 'kind-of';
 
-export default function toPath(args: any) {
+export default function toPath(args: any[]) {
   if (typeOf(args) !== 'arguments') {
     args = arguments;
   }

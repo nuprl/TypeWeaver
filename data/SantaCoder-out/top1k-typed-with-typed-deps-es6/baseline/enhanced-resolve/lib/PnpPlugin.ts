@@ -9,7 +9,7 @@
 /** @typedef {import("./Resolver").ResolveStepHook} ResolveStepHook */
 /**
  * @typedef {Object} PnpApiImpl
- * @property {function(string: string, string: string, object: any): string} resolveToUnqualified
+ * @property {function(string: string, string: string, object: object): string} resolveToUnqualified
  */
 
 export default class PnpPlugin {

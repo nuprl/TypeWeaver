@@ -36,7 +36,7 @@ export default {
   }
 };
 
-function rewriteOpenZero(path: NodePath<ImportSpecifier>) {
+function rewriteOpenZero(path: NodePath<t.Expression>) {
   const {node} = path;
 
   if (node.from !== 0 || node.to) {
@@ -47,7 +47,7 @@ function rewriteOpenZero(path: NodePath<ImportSpecifier>) {
   delete node.from;
 }
 
-function rewriteOpenOne(path: NodePath<TSImportEqualsDeclaration>) {
+function rewriteOpenOne(path: NodePath<t.CallExpression>) {
   const {node} = path;
 
   if (node.from !== 1 || node.to) {
@@ -58,7 +58,7 @@ function rewriteOpenOne(path: NodePath<TSImportEqualsDeclaration>) {
   delete node.from;
 }
 
-function rewriteExactOne(path: NodePath<ExactOne>) {
+function rewriteExactOne(path: NodePath<t.CallExpression>) {
   const {node} = path;
 
   if (node.from !== 1 || node.to !== 1) {

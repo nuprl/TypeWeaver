@@ -39,7 +39,7 @@ const supportedProtocols = platform.protocols.map(protocol => {
  *
  * @returns {Object<string, any>}
  */
-function dispatchBeforeRedirect(options: AxiosRequestConfig) {
+function dispatchBeforeRedirect(options: DispatchOptions) {
   if (options.beforeRedirects.proxy) {
     options.beforeRedirects.proxy(options);
   }
@@ -57,7 +57,7 @@ function dispatchBeforeRedirect(options: AxiosRequestConfig) {
  *
  * @returns {http.ClientRequestArgs}
  */
-function setProxy(options: IProxyOptions, configProxy: IProxyConfig, location: string) {
+function setProxy(options: any, configProxy: any, location: any) {
   let proxy = configProxy;
   if (!proxy && proxy !== false) {
     const proxyUrl = getProxyForUrl(location);
@@ -99,7 +99,7 @@ function setProxy(options: IProxyOptions, configProxy: IProxyConfig, location: s
 
 /*eslint consistent-return:0*/
 export default function httpAdapter(config: AxiosRequestConfig) {
-  return new Promise(function dispatchHttpRequest(resolvePromise: any, rejectPromise: any) {
+  return new Promise(function dispatchHttpRequest(resolvePromise: Function, rejectPromise: Function) {
     let onCanceled;
     let data = config.data;
     const responseType = config.responseType;
@@ -128,7 +128,7 @@ export default function httpAdapter(config: AxiosRequestConfig) {
       emitter.removeAllListeners();
     }
 
-    function done(value: any, isRejected: boolean) {
+    function done(value: T, isRejected: boolean) {
       if (isDone) return;
 
       isDone = true;
@@ -141,7 +141,7 @@ export default function httpAdapter(config: AxiosRequestConfig) {
       isRejected ? rejectPromise(value) : resolvePromise(value);
     }
 
-    const resolve = function resolve(value: any) {
+    const resolve = function resolve(value: T) {
       done(value);
     };
 
@@ -361,7 +361,7 @@ export default function httpAdapter(config: AxiosRequestConfig) {
     }
 
     // Create the request
-    req = transport.request(options, function handleResponse(res: AxiosResponse) {
+    req = transport.request(options, function handleResponse(res: IncomingMessage) {
       if (req.destroyed) return;
 
       const streams = [res];
@@ -438,7 +438,7 @@ export default function httpAdapter(config: AxiosRequestConfig) {
         const responseBuffer = [];
         let totalResponseBytes = 0;
 
-        responseStream.on('data', function handleStreamData(chunk: Readable) {
+        responseStream.on('data', function handleStreamData(chunk: Buffer) {
           responseBuffer.push(chunk);
           totalResponseBytes += chunk.length;
 
@@ -467,7 +467,7 @@ export default function httpAdapter(config: AxiosRequestConfig) {
           reject(err);
         });
 
-        responseStream.on('error', function handleStreamError(err: Error) {
+        responseStream.on('error', function handleStreamError(err: any) {
           if (req.destroyed) return;
           reject(AxiosError.from(err, null, config, lastRequest));
         });
@@ -503,14 +503,14 @@ export default function httpAdapter(config: AxiosRequestConfig) {
     });
 
     // Handle errors
-    req.on('error', function handleRequestError(err: AxiosError) {
+    req.on('error', function handleRequestError(err: Error) {
       // @todo remove
       // if (req.aborted && err.code !== AxiosError.ERR_FR_TOO_MANY_REDIRECTS) return;
       reject(AxiosError.from(err, null, config, req));
     });
 
     // set tcp keep alive to prevent drop connection by peer
-    req.on('socket', function handleRequestSocket(socket: Socket) {
+    req.on('socket', function handleRequestSocket(socket: net.Socket) {
       // default interval of sending ack packet is 1 minute
       socket.setKeepAlive(true, 1000 * 60);
     });

@@ -303,7 +303,7 @@ Long.fromString = fromString;
  * @returns {!Long}
  * @inner
  */
-function fromValue(val: string, unsigned: boolean) {
+function fromValue(val: number, unsigned: boolean) {
   if (typeof val === 'number')
     return fromNumber(val, unsigned);
   if (typeof val === 'string')
@@ -642,7 +642,7 @@ LongPrototype.isEven = function isEven() {
  * @param {!Long|number|string} other Other value
  * @returns {boolean}
  */
-LongPrototype.equals = function equals(other: Long) {
+LongPrototype.equals = function equals(other: any) {
   if (!isLong(other))
     other = fromValue(other);
   if (this.unsigned !== other.unsigned && (this.high >>> 31) === 1 && (other.high >>> 31) === 1)
@@ -664,7 +664,7 @@ LongPrototype.eq = LongPrototype.equals;
  * @param {!Long|number|string} other Other value
  * @returns {boolean}
  */
-LongPrototype.notEquals = function notEquals(other: any) {
+LongPrototype.notEquals = function notEquals(other: T) {
   return !this.eq(/* validates */ other);
 };
 
@@ -830,7 +830,7 @@ LongPrototype.neg = LongPrototype.negate;
  * @param {!Long|number|string} addend Addend
  * @returns {!Long} Sum
  */
-LongPrototype.add = function add(addend: number) {
+LongPrototype.add = function add(addend: Long) {
   if (!isLong(addend))
     addend = fromValue(addend);
 
@@ -867,7 +867,7 @@ LongPrototype.add = function add(addend: number) {
  * @param {!Long|number|string} subtrahend Subtrahend
  * @returns {!Long} Difference
  */
-LongPrototype.subtract = function subtract(subtrahend: number) {
+LongPrototype.subtract = function subtract(subtrahend: Long) {
   if (!isLong(subtrahend))
     subtrahend = fromValue(subtrahend);
   return this.add(subtrahend.neg());
@@ -887,7 +887,7 @@ LongPrototype.sub = LongPrototype.subtract;
  * @param {!Long|number|string} multiplier Multiplier
  * @returns {!Long} Product
  */
-LongPrototype.multiply = function multiply(multiplier: BigNumber) {
+LongPrototype.multiply = function multiply(multiplier: BigNumberish) {
   if (this.isZero())
     return this;
   if (!isLong(multiplier))
@@ -973,7 +973,7 @@ LongPrototype.mul = LongPrototype.multiply;
  * @param {!Long|number|string} divisor Divisor
  * @returns {!Long} Quotient
  */
-LongPrototype.divide = function divide(divisor: BigNumber) {
+LongPrototype.divide = function divide(divisor: Long) {
   if (!isLong(divisor))
     divisor = fromValue(divisor);
   if (divisor.isZero())
@@ -1094,7 +1094,7 @@ LongPrototype.div = LongPrototype.divide;
  * @param {!Long|number|string} divisor Divisor
  * @returns {!Long} Remainder
  */
-LongPrototype.modulo = function modulo(divisor: number) {
+LongPrototype.modulo = function modulo(divisor: Long) {
   if (!isLong(divisor))
     divisor = fromValue(divisor);
 
@@ -1369,7 +1369,7 @@ LongPrototype.toUnsigned = function toUnsigned() {
  * @this {!Long}
  * @returns {!Array.<number>} Byte representation
  */
-LongPrototype.toBytes = function toBytes(le: number) {
+LongPrototype.toBytes = function toBytes(le: boolean) {
   return le ? this.toBytesLE() : this.toBytesBE();
 };
 

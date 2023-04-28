@@ -16,7 +16,7 @@ export default function normalize(str: string) {
 };
 
 
-function replace(str: string, pattern: RegExp, replacement: string) {
+function replace(str: string, pattern: string, replacement: string) {
   var i, from = 0;
 
   while (str.indexOf(pattern, from) !== -1) {

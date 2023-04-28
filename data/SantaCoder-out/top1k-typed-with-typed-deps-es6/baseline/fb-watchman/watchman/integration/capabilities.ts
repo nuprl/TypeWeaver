@@ -12,7 +12,7 @@ import watchman from 'fb-watchman';
 function optional() {
   var client = new watchman.Client();
   client.capabilityCheck({optional: ['will-never-exist']},
-      function (error: any, resp: AxiosResponse) {
+      function (error: any, resp: any) {
         assert.equal(error, null, 'no errors');
         assert.equal(resp.capabilities['will-never-exist'], false);
         client.end();
@@ -23,7 +23,7 @@ optional();
 function required() {
   var client = new watchman.Client();
   client.capabilityCheck({required: ['will-never-exist']},
-      function (error: any, resp: AxiosResponse) {
+      function (error: any, resp: any) {
         assert.equal('client required capability `will-never-exist` is not' +
                      ' supported by this server', error.message);
         client.end();

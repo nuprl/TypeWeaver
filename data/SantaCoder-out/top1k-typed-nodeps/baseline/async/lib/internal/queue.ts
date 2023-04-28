@@ -88,7 +88,7 @@ export default function queue(worker: Function, concurrency: number, payload: an
         }
     }
 
-    function _createCB(tasks: Task[]) {
+    function _createCB(tasks: Array<Function>) {
         return function (err: any, ...args: any[]) {
             numRunning -= 1;
 

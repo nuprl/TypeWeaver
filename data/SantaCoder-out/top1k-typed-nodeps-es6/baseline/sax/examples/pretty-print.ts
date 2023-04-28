@@ -16,7 +16,7 @@ printer.indent = function () {
     }
   }
 }
-printer.on('opentag', function (tag: Tag) {
+printer.on('opentag', function (tag: string) {
   this.indent()
   this.level++
   print('<' + tag.name)
@@ -49,7 +49,7 @@ printer.on('comment', function (comment: Comment) {
   print('<!--' + comment + '-->')
 })
 
-printer.on('error', function (error: Error) {
+printer.on('error', function (error: any) {
   console.error(error)
   throw error
 })

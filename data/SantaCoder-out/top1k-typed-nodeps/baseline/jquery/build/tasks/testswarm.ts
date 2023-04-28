@@ -1,6 +1,6 @@
 "use strict";
 
-module.exports = function( grunt : grunt.Task) {
+module.exports = function( grunt : any) {
 	grunt.registerTask( "testswarm", function( commit, configFile, projectName, browserSets,
 			timeout, testMode ) {
 		var jobName, config, tests,
@@ -31,7 +31,7 @@ module.exports = function( grunt : grunt.Task) {
 		if ( testMode === "basic" ) {
 			runs.basic = config.testUrl + commit + "/test/index.html?module=basic";
 		} else {
-			tests.forEach( function( test : Test) {
+			tests.forEach( function( test : Function) {
 				runs[ test ] = config.testUrl + commit + "/test/index.html?module=" + test;
 			} );
 		}

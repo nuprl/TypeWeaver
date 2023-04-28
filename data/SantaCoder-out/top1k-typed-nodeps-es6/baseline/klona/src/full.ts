@@ -1,4 +1,4 @@
-function set(obj: any, key: string, val: any) {
+function set(obj: Object, key: string, val: any) {
 	if (typeof val.value === 'object') val.value = klona(val.value);
 	if (!val.enumerable || val.get || val.set || !val.configurable || !val.writable || key === '__proto__') {
 		Object.defineProperty(obj, key, val);
@@ -21,7 +21,7 @@ export function klona(x: any) {
 		});
 	} else if (str === '[object Map]') {
 		tmp = new Map;
-		x.forEach(function (val: any, key: string) {
+		x.forEach(function (val: any, key: any) {
 			tmp.set(klona(key), klona(val));
 		});
 	} else if (str === '[object Date]') {

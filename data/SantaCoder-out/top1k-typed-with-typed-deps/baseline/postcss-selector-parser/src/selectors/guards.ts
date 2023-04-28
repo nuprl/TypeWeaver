@@ -28,7 +28,7 @@ const IS_TYPE = {
     [UNIVERSAL]: true,
 };
 
-export function isNode (node: any) {
+export function isNode (node: Node) {
     return (typeof node === "object" && IS_TYPE[node.type]);
 }
 

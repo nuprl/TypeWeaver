@@ -18,7 +18,7 @@
  * filterObject(object, (n) => !(n % 5))
  * // => [5, 10]
  */
-function filterObject(object: any, predicate: any) {
+function filterObject(object: Object, predicate: any) {
   object = Object(object)
   const result = []
 

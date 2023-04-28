@@ -1,6 +1,6 @@
 import through2 from 'through2';
 
-export default function (opts: IOptions) {
+export default function (opts: any) {
   if (opts.objectMode)
     return through2.obj(func)
   s = through2(func)
@@ -9,7 +9,7 @@ export default function (opts: IOptions) {
   }
   return s
 
-  function func (data: any, enc: string, done: any) {
+  function func (data: any, enc: any, done: any) {
     this.push(data, enc)
     done()
   }

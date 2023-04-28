@@ -1,4 +1,4 @@
-function RetryOperation(timeouts: number, options: RetryOptions) {
+function RetryOperation(timeouts: number[], options: RetryOptions) {
   // Compatibility for the old (timeouts, retryForever) signature
   if (typeof options === 'boolean') {
     options = { forever: options };
@@ -92,7 +92,7 @@ RetryOperation.prototype.retry = function(err: Error) {
   return true;
 };
 
-RetryOperation.prototype.attempt = function(fn: any, timeoutOps: any) {
+RetryOperation.prototype.attempt = function(fn: Function, timeoutOps: TimeoutOps) {
   this._fn = fn;
 
   if (timeoutOps) {
@@ -121,7 +121,7 @@ RetryOperation.prototype.try = function(fn: Function) {
   this.attempt(fn);
 };
 
-RetryOperation.prototype.start = function(fn: any) {
+RetryOperation.prototype.start = function(fn: Function) {
   console.log('Using RetryOperation.start() is deprecated');
   this.attempt(fn);
 };

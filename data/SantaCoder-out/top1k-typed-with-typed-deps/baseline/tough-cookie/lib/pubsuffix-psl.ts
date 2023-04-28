@@ -42,7 +42,7 @@ const SPECIAL_USE_DOMAINS = [
 
 const SPECIAL_TREATMENT_DOMAINS = ["localhost", "invalid"];
 
-function getPublicSuffix(domain: string, options = {}: GetPublicSuffixOptions) {
+function getPublicSuffix(domain: string, options = {}: Options) {
   const domainParts = domain.split(".");
   const topLevelDomain = domainParts[domainParts.length - 1];
   const allowSpecialUseDomain = !!options.allowSpecialUseDomain;

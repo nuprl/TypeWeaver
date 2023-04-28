@@ -22,7 +22,7 @@ function isTypedArray(arr: any) {
   )
 }
 
-function isStrictTypedArray(arr: TypedArray) {
+function isStrictTypedArray(arr: any) {
   return (
        arr instanceof Int8Array
     || arr instanceof Int16Array
@@ -36,6 +36,6 @@ function isStrictTypedArray(arr: TypedArray) {
   )
 }
 
-function isLooseTypedArray(arr: TypedArray) {
+function isLooseTypedArray(arr: any) {
   return names[toString.call(arr)]
 }

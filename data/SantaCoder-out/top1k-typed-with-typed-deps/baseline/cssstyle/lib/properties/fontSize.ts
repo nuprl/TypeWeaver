@@ -7,7 +7,7 @@ var parseMeasurement = require('../parsers').parseMeasurement;
 var absoluteSizes = ['xx-small', 'x-small', 'small', 'medium', 'large', 'x-large', 'xx-large'];
 var relativeSizes = ['larger', 'smaller'];
 
-module.exports.isValid = function(v: any) {
+module.exports.isValid = function(v: string) {
   var type = valueType(v.toLowerCase());
   return (
     type === TYPES.LENGTH ||

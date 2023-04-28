@@ -1,5 +1,5 @@
 // please no
-module['exports'] = function zalgo(text: string, options: ZalgoOptions) {
+module['exports'] = function zalgo(text: string, options: Options) {
   text = text || '   he is here   ';
   var soul = {
     'up': [
@@ -47,14 +47,14 @@ module['exports'] = function zalgo(text: string, options: ZalgoOptions) {
 
   function isChar(character: string) {
     var bool = false;
-    all.filter(function(i: number) {
+    all.filter(function(i: string) {
       bool = (i === character);
     });
     return bool;
   }
 
 
-  function heComes(text: string, options: IOptions) {
+  function heComes(text: string, options: any) {
     var result = '';
     var counts;
     var l;

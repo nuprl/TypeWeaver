@@ -69,7 +69,7 @@ var utilInspect = require('./util.inspect');
 var inspectCustom = utilInspect.custom;
 var inspectSymbol = isSymbol(inspectCustom) ? inspectCustom : null;
 
-module.exports = function inspect_(obj: any, options: InspectOptions, depth: number, seen: Set<string>) {
+module.exports = function inspect_(obj: any, options: any, depth: any, seen: any) {
     var opts = options || {};
 
     if (has(opts, 'quoteStyle') && (opts.quoteStyle !== 'single' && opts.quoteStyle !== 'double')) {
@@ -140,7 +140,7 @@ module.exports = function inspect_(obj: any, options: InspectOptions, depth: num
         return '[Circular]';
     }
 
-    function inspect(value: any, from: number, noIndent: boolean) {
+    function inspect(value: any, from: any, noIndent: boolean) {
         if (from) {
             seen = $arrSlice.call(seen);
             seen.push(from);
@@ -251,7 +251,7 @@ module.exports = function inspect_(obj: any, options: InspectOptions, depth: num
     return String(obj);
 };
 
-function wrapQuotes(s: string, defaultStyle: string, opts: IStyleOptions) {
+function wrapQuotes(s: string, defaultStyle: string, opts: Options) {
     var quoteChar = (opts.quoteStyle || defaultStyle) === 'double' ? '"' : "'";
     return quoteChar + s + quoteChar;
 }
@@ -313,7 +313,7 @@ function nameOf(f: Function) {
     return null;
 }
 
-function indexOf(xs: T[], x: T) {
+function indexOf(xs: Array<any>, x: any) {
     if (xs.indexOf) { return xs.indexOf(x); }
     for (var i = 0, l = xs.length; i < l; i++) {
         if (xs[i] === x) { return i; }
@@ -404,7 +404,7 @@ function isElement(x: any) {
     return typeof x.nodeName === 'string' && typeof x.getAttribute === 'function';
 }
 
-function inspectString(str: string, opts: InspectStringOptions) {
+function inspectString(str: string, opts: InspectOptions) {
     if (str.length > opts.maxStringLength) {
         var remaining = str.length - opts.maxStringLength;
         var trailer = '... ' + remaining + ' more character' + (remaining > 1 ? 's' : '');
@@ -436,7 +436,7 @@ function weakCollectionOf(type: string) {
     return type + ' { ? }';
 }
 
-function collectionOf(type: string, size: number, entries: any[], indent: number) {
+function collectionOf(type: string, size: number, entries: any[], indent: string) {
     var joinedEntries = indent ? indentedJoin(entries, indent) : $join.call(entries, ', ');
     return type + ' (' + size + ') {' + joinedEntries + '}';
 }
@@ -450,7 +450,7 @@ function singleLineValues(xs: string[]) {
     return true;
 }
 
-function getIndent(opts: IOptions, depth: number) {
+function getIndent(opts: Options, depth: number) {
     var baseIndent;
     if (opts.indent === '\t') {
         baseIndent = '\t';
@@ -471,7 +471,7 @@ function indentedJoin(xs: string[], indent: number) {
     return lineJoiner + $join.call(xs, ',' + lineJoiner) + '\n' + indent.prev;
 }
 
-function arrObjKeys(obj: any, inspect: any) {
+function arrObjKeys(obj: any, inspect: boolean) {
     var isArr = isArray(obj);
     var xs = [];
     if (isArr) {

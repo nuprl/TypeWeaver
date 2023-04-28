@@ -642,7 +642,7 @@ LongPrototype.isEven = function isEven() {
  * @param {!Long|number|string} other Other value
  * @returns {boolean}
  */
-LongPrototype.equals = function equals(other: Long) {
+LongPrototype.equals = function equals(other: any) {
   if (!isLong(other))
     other = fromValue(other);
   if (this.unsigned !== other.unsigned && (this.high >>> 31) === 1 && (other.high >>> 31) === 1)
@@ -779,7 +779,7 @@ LongPrototype.ge = LongPrototype.greaterThanOrEqual;
  * @returns {number} 0 if they are the same, 1 if the this is greater and -1
  *  if the given one is greater
  */
-LongPrototype.compare = function compare(other: Long) {
+LongPrototype.compare = function compare(other: any) {
   if (!isLong(other))
     other = fromValue(other);
   if (this.eq(other))
@@ -867,7 +867,7 @@ LongPrototype.add = function add(addend: number) {
  * @param {!Long|number|string} subtrahend Subtrahend
  * @returns {!Long} Difference
  */
-LongPrototype.subtract = function subtract(subtrahend: BigNumber) {
+LongPrototype.subtract = function subtract(subtrahend: number) {
   if (!isLong(subtrahend))
     subtrahend = fromValue(subtrahend);
   return this.add(subtrahend.neg());
@@ -973,7 +973,7 @@ LongPrototype.mul = LongPrototype.multiply;
  * @param {!Long|number|string} divisor Divisor
  * @returns {!Long} Quotient
  */
-LongPrototype.divide = function divide(divisor: number) {
+LongPrototype.divide = function divide(divisor: Long) {
   if (!isLong(divisor))
     divisor = fromValue(divisor);
   if (divisor.isZero())
@@ -1369,7 +1369,7 @@ LongPrototype.toUnsigned = function toUnsigned() {
  * @this {!Long}
  * @returns {!Array.<number>} Byte representation
  */
-LongPrototype.toBytes = function toBytes(le: number) {
+LongPrototype.toBytes = function toBytes(le: boolean) {
   return le ? this.toBytesLE() : this.toBytesBE();
 };
 

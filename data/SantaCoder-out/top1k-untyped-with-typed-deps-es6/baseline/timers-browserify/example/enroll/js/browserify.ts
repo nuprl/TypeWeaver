@@ -74,7 +74,7 @@ require.resolve = (function () {
             return loadAsFileSync(x + '/index');
         }
         
-        function loadNodeModulesSync (x: string, start: number) {
+        function loadNodeModulesSync (x: string, start: string) {
             var dirs = nodeModulesPathsSync(start);
             for (var i = 0; i < dirs.length; i++) {
                 var dir = dirs[i];
@@ -174,7 +174,7 @@ if (!process.nextTick) process.nextTick = (function () {
     ;
     
     if (canPost) {
-        window.addEventListener('message', function (ev: KeyboardEvent) {
+        window.addEventListener('message', function (ev: Event) {
             if (ev.source === window && ev.data === 'browserify-tick') {
                 ev.stopPropagation();
                 if (queue.length > 0) {

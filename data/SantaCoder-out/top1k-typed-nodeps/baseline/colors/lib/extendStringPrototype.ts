@@ -44,13 +44,13 @@ module['exports'] = function() {
   // Iterate through all default styles and colors
   //
   var x = Object.keys(colors.styles);
-  x.forEach(function(style: CSSStyleSheet) {
+  x.forEach(function(style: any) {
     addProperty(style, function() {
       return colors.stylize(this, style);
     });
   });
 
-  function applyTheme(theme: Theme) {
+  function applyTheme(theme: string) {
     //
     // Remark: This is a list of methods that exist
     // on String that you should not overwrite.
@@ -93,7 +93,7 @@ module['exports'] = function() {
     });
   }
 
-  colors.setTheme = function(theme: Theme) {
+  colors.setTheme = function(theme: string) {
     if (typeof theme === 'string') {
       console.log('colors.setTheme now only accepts an object, not a string. ' +
         'If you are trying to set a theme from a file, it is now your (the ' +

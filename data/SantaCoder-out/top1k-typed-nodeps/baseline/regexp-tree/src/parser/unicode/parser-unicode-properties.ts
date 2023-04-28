@@ -363,7 +363,7 @@ function getCanonicalName(name: string) {
   return null;
 }
 
-function getCanonicalValue(value: any) {
+function getCanonicalValue(value: string) {
   if (GENERAL_CATEGORY_VALUE_ALIASES_TO_VALUES.hasOwnProperty(value)) {
     return GENERAL_CATEGORY_VALUE_ALIASES_TO_VALUES[value];
   }

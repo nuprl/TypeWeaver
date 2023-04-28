@@ -28,7 +28,7 @@ import awaitify from './internal/awaitify.js'
  *         // Try getting the data from the first website
  *         callback(err, data);
  *     },
- *     function getDataFromSecondWebsite(callback: any) {
+ *     function getDataFromSecondWebsite(callback: Function) {
  *         // First website failed,
  *         // Try getting the data from the backup website
  *         callback(err, data);
@@ -40,7 +40,7 @@ import awaitify from './internal/awaitify.js'
  * });
  *
  */
-function tryEach(tasks: Task<any>[], callback: any) {
+function tryEach(tasks: Array<Function>, callback: Function) {
     var error = null;
     var result;
     return eachSeries(tasks, (task, taskCb) => {

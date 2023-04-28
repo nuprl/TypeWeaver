@@ -16,13 +16,13 @@ function assertEventName(eventName: string) {
 	}
 }
 
-function assertListener(listener: Listener) {
+function assertListener(listener: any) {
 	if (typeof listener !== 'function') {
 		throw new TypeError('listener must be a function');
 	}
 }
 
-function getListeners(instance: EventEmitter, eventName: string) {
+function getListeners(instance: any, eventName: string) {
 	const events = eventsMap.get(instance);
 	if (!events.has(eventName)) {
 		return;
@@ -31,7 +31,7 @@ function getListeners(instance: EventEmitter, eventName: string) {
 	return events.get(eventName);
 }
 
-function getEventProducers(instance: IEventInstance, eventName: string) {
+function getEventProducers(instance: any, eventName: string) {
 	const key = typeof eventName === 'string' || typeof eventName === 'symbol' || typeof eventName === 'number' ? eventName : anyProducer;
 	const producers = producersMap.get(instance);
 	if (!producers.has(key)) {
@@ -57,7 +57,7 @@ function enqueueProducers(instance: any, eventName: string, eventData: any) {
 	}
 }
 
-function iterator(instance: IModelInstance, eventNames: string[]) {
+function iterator(instance: any, eventNames: string) {
 	eventNames = Array.isArray(eventNames) ? eventNames : [eventNames];
 
 	let isFinished = false;
@@ -138,7 +138,7 @@ function iterator(instance: IModelInstance, eventNames: string[]) {
 	};
 }
 
-function defaultMethodNamesOrAssert(methodNames: string) {
+function defaultMethodNamesOrAssert(methodNames: string[]) {
 	if (methodNames === undefined) {
 		return allEmitteryMethods;
 	}

@@ -47,7 +47,7 @@ module.exports.isValid = function isValid(v: string) {
 };
 
 module.exports.definition = {
-  set: function(v: any) {
+  set: function(v: T) {
     this._setProperty('background-position', parse(v));
   },
   get: function() {

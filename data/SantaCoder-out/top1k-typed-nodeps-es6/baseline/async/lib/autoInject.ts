@@ -34,7 +34,7 @@ function stripComments(string: string) {
     return stripped;
 }
 
-function parseParams(func: string) {
+function parseParams(func: Function) {
     const src = stripComments(func.toString());
     let match = src.match(FN_ARGS);
     if (!match) {
@@ -85,7 +85,7 @@ function parseParams(func: string) {
  *
  * //  The example from `auto` can be rewritten as follows:
  * async.autoInject({
- *     get_data: function(callback: any) {
+ *     get_data: function(callback: Function) {
  *         // async code to get some data
  *         callback(null, 'data', 'converted to array');
  *     },
@@ -94,12 +94,12 @@ function parseParams(func: string) {
  *         // this is run at the same time as getting the data
  *         callback(null, 'folder');
  *     },
- *     write_file: function(get_data: GetData, make_folder: MakeFolder, callback: Callback<void>) {
+ *     write_file: function(get_data: any, make_folder: any, callback: any) {
  *         // once there is some data and the directory exists,
  *         // write the data to a file in the directory
  *         callback(null, 'filename');
  *     },
- *     email_link: function(write_file: any, callback: any) {
+ *     email_link: function(write_file: Function, callback: Function) {
  *         // once the file is written let's email a link to it...
  *         // write_file contains the filename returned by write_file.
  *         callback(null, {'file':write_file, 'email':'user@example.com'});
@@ -119,14 +119,14 @@ function parseParams(func: string) {
  * // depends on are still spread into arguments.
  * async.autoInject({
  *     //...
- *     write_file: ['get_data', 'make_folder', function(get_data: GetData, make_folder: MakeFolder, callback: Callback<void>) {
+ *     write_file: ['get_data', 'make_folder', function(get_data: any, make_folder: any, callback: any) {
  *         callback(null, 'filename');
  *     }],
  *     email_link: ['write_file', function(write_file: any, callback: any) {
  *         callback(null, {'file':write_file, 'email':'user@example.com'});
  *     }]
  *     //...
- * }, function(err: Error, results: any) {
+ * }, function(err: any, results: any) {
  *     console.log('err = ', err);
  *     console.log('email_link = ', results.email_link);
  * });
@@ -162,7 +162,7 @@ export default function autoInject(tasks: any, callback: any) {
             newTasks[key] = params.concat(newTask);
         }
 
-        function newTask(results: TaskResults, taskCb: any) {
+        function newTask(results: any, taskCb: any) {
             var newArgs = params.map(name => results[name])
             newArgs.push(taskCb);
             wrapAsync(taskFn)(...newArgs);

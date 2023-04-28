@@ -1,6 +1,6 @@
 'use strict';
 
-export default function union(init: any) {
+export default function union(init: T) {
   var len = arguments.length, i = 0;
 
   while (++i < len) {

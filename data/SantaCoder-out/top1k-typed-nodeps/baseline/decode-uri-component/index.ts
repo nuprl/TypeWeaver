@@ -3,7 +3,7 @@ var token = '%[a-f0-9]{2}';
 var singleMatcher = new RegExp(token, 'gi');
 var multiMatcher = new RegExp('(' + token + ')+', 'gi');
 
-function decodeComponents(components: string[], split: string) {
+function decodeComponents(components: string, split: string) {
 	try {
 		// Try to decode the entire string first
 		return decodeURIComponent(components.join(''));

@@ -9,7 +9,7 @@ import slice from '../slice.js'
  * @param {number} [end=array.length] The end position.
  * @returns {Array} Returns the cast slice.
  */
-function castSlice(array: Array<any>, start: number, end: number) {
+function castSlice(array: any[], start: number, end: number) {
   const { length } = array
   end = end === undefined ? length : end
   return (!start && end >= length) ? array : slice(array, start, end)

@@ -15,7 +15,7 @@ var UNDEFINED = valuePromise(undefined);
 var ZERO = valuePromise(0);
 var EMPTYSTRING = valuePromise('');
 
-function valuePromise(value: any) {
+function valuePromise(value: T) {
   var p = new Promise(Promise._noop);
   p._state = 1;
   p._value = value;
@@ -61,10 +61,10 @@ var iterableToArray = function (iterable: Iterable<T>) {
 Promise.all = function (arr: any[]) {
   var args = iterableToArray(arr);
 
-  return new Promise(function (resolve: any, reject: any) {
+  return new Promise(function (resolve: Function, reject: Function) {
     if (args.length === 0) return resolve([]);
     var remaining = args.length;
-    function res(i: number, val: number) {
+    function res(i: number, val: any) {
       if (val && (typeof val === 'object' || typeof val === 'function')) {
         if (val instanceof Promise && val.then === Promise.prototype.then) {
           while (val._state === 3) {
@@ -72,7 +72,7 @@ Promise.all = function (arr: any[]) {
           }
           if (val._state === 1) return res(i, val._value);
           if (val._state === 2) reject(val._value);
-          val.then(function (val: number) {
+          val.then(function (val: any) {
             res(i, val);
           }, reject);
           return;
@@ -127,7 +127,7 @@ Promise.reject = function (value: any) {
   });
 };
 
-Promise.race = function (values: any) {
+Promise.race = function (values: any[]) {
   return new Promise(function (resolve: any, reject: any) {
     iterableToArray(values).forEach(function(value: any){
       Promise.resolve(value).then(resolve, reject);

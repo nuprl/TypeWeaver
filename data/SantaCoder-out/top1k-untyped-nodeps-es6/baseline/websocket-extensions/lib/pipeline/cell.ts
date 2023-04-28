@@ -3,7 +3,7 @@
 import Functor from './functor';
 import Pledge from './pledge';
 
-var Cell = function(tuple: any) {
+var Cell = function(tuple: any[]) {
   this._ext     = tuple[0];
   this._session = tuple[1];
 
@@ -18,11 +18,11 @@ Cell.prototype.pending = function(direction: string) {
   if (!functor._stopped) functor.pending += 1;
 };
 
-Cell.prototype.incoming = function(error: any, message: string, callback: any, context: any) {
+Cell.prototype.incoming = function(error: any, message: any, callback: any, context: any) {
   this._exec('incoming', error, message, callback, context);
 };
 
-Cell.prototype.outgoing = function(error: Error, message: string, callback: Function, context: any) {
+Cell.prototype.outgoing = function(error: any, message: any, callback: any, context: any) {
   this._exec('outgoing', error, message, callback, context);
 };
 
@@ -32,7 +32,7 @@ Cell.prototype.close = function() {
   return this._closed;
 };
 
-Cell.prototype._exec = function(direction: number, error: string, message: string, callback: any, context: any) {
+Cell.prototype._exec = function(direction: string, error: string, message: string, callback: Function, context: any) {
   this._functors[direction].call(error, message, function(err: Error, msg: string) {
     if (err) err.message = this._ext.name + ': ' + err.message;
     callback.call(context, err, msg);

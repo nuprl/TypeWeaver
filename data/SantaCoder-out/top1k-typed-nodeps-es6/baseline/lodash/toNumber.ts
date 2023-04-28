@@ -41,7 +41,7 @@ const freeParseInt = parseInt
  * toNumber('3.2')
  * // => 3.2
  */
-function toNumber(value: any) {
+function toNumber(value: unknown) {
   if (typeof value === 'number') {
     return value
   }

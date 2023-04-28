@@ -19,7 +19,7 @@ import baseSortedIndexBy from './.internal/baseSortedIndexBy.js'
  * sortedLastIndexBy(objects, { 'n': 4 }, ({ n }) => n)
  * // => 1
  */
-function sortedLastIndexBy(array: Array<T>, value: T, iteratee: any) {
+function sortedLastIndexBy(array: Array<any>, value: any, iteratee: Function) {
   return baseSortedIndexBy(array, value, iteratee, true)
 }
 

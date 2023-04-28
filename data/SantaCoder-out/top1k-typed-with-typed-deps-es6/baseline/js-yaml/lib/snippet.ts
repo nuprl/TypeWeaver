@@ -5,7 +5,7 @@ import common from './common';
 
 
 // get snippet for a single line, respecting maxLength
-function getLine(buffer: IBuffer, lineStart: number, lineEnd: number, position: number, maxLineLength: number) {
+function getLine(buffer: string, lineStart: number, lineEnd: number, position: number, maxLineLength: number) {
   var head = '';
   var tail = '';
   var maxHalfLength = Math.floor(maxLineLength / 2) - 1;
@@ -32,7 +32,7 @@ function padStart(string: string, max: number) {
 }
 
 
-function makeSnippet(mark: string, options: SnippetOptions) {
+function makeSnippet(mark: Mark, options: SnippetOptions) {
   options = Object.create(options || null);
 
   if (!mark.buffer) return null;

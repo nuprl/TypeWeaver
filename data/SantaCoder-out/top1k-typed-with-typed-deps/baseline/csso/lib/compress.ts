@@ -4,7 +4,7 @@ import clean from './clean/index.js';
 import replace from './replace/index.js';
 import restructure from './restructure/index.js';
 
-function readChunk(input: Readable, specialComments: string[]) {
+function readChunk(input: ReadableStream, specialComments: string[]) {
     const children = new List();
     let nonSpaceTokenInBuffer = false;
     let protectedComment;
@@ -43,7 +43,7 @@ function readChunk(input: Readable, specialComments: string[]) {
     };
 }
 
-function compressChunk(ast: AST, firstAtrulesAllowed: number, num: number, options: any) {
+function compressChunk(ast: Node, firstAtrulesAllowed: boolean, num: num, options: Options) {
     options.logger(`Compress block #${num}`, null, true);
 
     let seed = 1;
@@ -91,7 +91,7 @@ function getCommentsOption(options: CommentOptions) {
     return comments;
 }
 
-function getRestructureOption(options: IRestructureOption) {
+function getRestructureOption(options: Options) {
     if ('restructure' in options) {
         return options.restructure;
     }
@@ -120,7 +120,7 @@ function wrapBlock(block: Block) {
     });
 }
 
-export default function compress(ast: AST, options: CompressOptions) {
+export default function compress(ast: Object, options: Object) {
     ast = ast || { type: 'StyleSheet', loc: null, children: new List() };
     options = options || {};
 

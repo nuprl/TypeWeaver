@@ -33,7 +33,7 @@ var SAMPLES_DIRECTORY = path.join(__dirname, 'samples');
 var SAMPLES = [];
 
 
-fs.readdirSync(SAMPLES_DIRECTORY).sort().forEach(function (sample: Sample) {
+fs.readdirSync(SAMPLES_DIRECTORY).sort().forEach(function (sample: any) {
   var filepath = path.join(SAMPLES_DIRECTORY, sample),
       extname  = path.extname(filepath),
       basename = path.basename(filepath, extname),
@@ -55,10 +55,10 @@ fs.readdirSync(SAMPLES_DIRECTORY).sort().forEach(function (sample: Sample) {
   });
 
 
-  IMPLS.forEach(function (impl: ITestImplementation) {
+  IMPLS.forEach(function (impl: Impl) {
     suite.add(impl.name, {
 
-      onCycle: function onCycle(event: IEvent<ICursor>) {
+      onCycle: function onCycle(event: any) {
         cursor.horizontalAbsolute();
         cursor.eraseLine();
         cursor.write(' > ' + event.target);
@@ -91,7 +91,7 @@ function select(patterns: string[]) {
     });
   }
 
-  SAMPLES.forEach(function (sample: Sample) {
+  SAMPLES.forEach(function (sample: any) {
     if (checkName(sample.name)) result.push(sample);
   });
 
@@ -104,14 +104,14 @@ function run(files: string[]) {
 
   if (selected.length > 0) {
     console.log('Selected samples: (%d of %d)', selected.length, SAMPLES.length);
-    selected.forEach(function (sample: Sample) {
+    selected.forEach(function (sample: any) {
       console.log(' > %s', sample.name);
     });
   } else {
     console.log("There isn't any sample matches any of these patterns: %s", util.inspect(files));
   }
 
-  selected.forEach(function (sample: SuiteSample) {
+  selected.forEach(function (sample: Sample) {
     sample.suite.run();
   });
 }

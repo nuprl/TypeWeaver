@@ -2,7 +2,7 @@
 
 var fs = require( "fs" );
 
-module.exports = function( grunt : grunt.Task) {
+module.exports = function( grunt : any) {
 	grunt.registerTask( "qunit_fixture", function() {
 		var dest = "./test/data/qunit-fixture.js";
 		fs.writeFileSync(

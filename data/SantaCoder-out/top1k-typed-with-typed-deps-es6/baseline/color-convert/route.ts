@@ -55,7 +55,7 @@ function deriveBFS(fromModel: Model) {
 }
 
 function link(from: string, to: string) {
-	return function (args: any) {
+	return function (args: T) {
 		return to(from(args));
 	};
 }

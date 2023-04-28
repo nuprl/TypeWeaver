@@ -6,7 +6,7 @@ import decodeUriComponentLib from 'decode-uri-component';
 
 
 function resolveUrl(/* ...urls */: string[]) {
-  return Array.prototype.reduce.call(arguments, function(resolved: ResolvedUrl, nextUrl: ResolvedUrl) {
+  return Array.prototype.reduce.call(arguments, function(resolved: any, nextUrl: string) {
     return urlLib.resolve(resolved, nextUrl)
   })
 }
@@ -20,7 +20,7 @@ function customDecodeUriComponent(string: string) {
   return decodeUriComponentLib(string.replace(/\+/g, "%2B"))
 }
 
-function callbackAsync(callback: Function, error: any, result: any) {
+function callbackAsync(callback: any, error: any, result: any) {
   setImmediate(function() { callback(error, result) })
 }
 
@@ -33,7 +33,7 @@ function parseMapToJSON(string: string, data: any) {
   }
 }
 
-function readSync(read: ReadFunction, url: string, data: string) {
+function readSync(read: any, url: string, data: any) {
   var readUrl = customDecodeUriComponent(url)
   try {
     return String(read(readUrl))
@@ -190,7 +190,7 @@ function resolveSourceMapHelper(code: string, codeUrl: string) {
 
 
 
-function resolveSources(map: SourceMapConsumer, mapUrl: string, read: boolean, options: ReadOptions, callback: any) {
+function resolveSources(map: Map, mapUrl: string, read: any, options: any, callback: any) {
   if (typeof options === "function") {
     callback = options
     options = {}
@@ -220,7 +220,7 @@ function resolveSources(map: SourceMapConsumer, mapUrl: string, read: boolean, o
       callbackAsync(done, null)
     } else {
       var readUrl = customDecodeUriComponent(fullUrl)
-      read(readUrl, function(error: any, source: any) {
+      read(readUrl, function(error: any, source: string) {
         result.sourcesContent[index] = error ? error : String(source)
         done()
       })
@@ -228,7 +228,7 @@ function resolveSources(map: SourceMapConsumer, mapUrl: string, read: boolean, o
   })
 }
 
-function resolveSourcesSync(map: SourceMapConsumer, mapUrl: string, read: boolean, options: ReadOptions) {
+function resolveSourcesSync(map: SourceMapConsumer, mapUrl: string, read: boolean, options: any) {
   var result = {
     sourcesResolved: [],
     sourcesContent:  []
@@ -259,7 +259,7 @@ function resolveSourcesSync(map: SourceMapConsumer, mapUrl: string, read: boolea
 
 var endingSlash = /\/?$/
 
-function resolveSourcesHelper(map: SourceMapConsumer, mapUrl: string, options: IMapOptions, fn: any) {
+function resolveSourcesHelper(map: Map, mapUrl: string, options: Options, fn: Function) {
   options = options || {}
   mapUrl = convertWindowsPath(mapUrl)
   var fullUrl
@@ -289,7 +289,7 @@ function resolveSourcesHelper(map: SourceMapConsumer, mapUrl: string, options: I
 
 
 
-function resolve(code: string, codeUrl: string, read: any, options: ResolveOptions, callback: ResolveCallback<ResolvedModule>) {
+function resolve(code: string, codeUrl: string, read: any, options: any, callback: any) {
   if (typeof options === "function") {
     callback = options
     options = {}

@@ -21,15 +21,15 @@ let view;
 
 let outdir = path.normalize(env.opts.destination);
 
-function find(spec: Spec) {
+function find(spec: any) {
     return helper.find(data, spec);
 }
 
-function tutoriallink(tutorial: Tutorial) {
+function tutoriallink(tutorial: string) {
     return helper.toTutorial(tutorial, null, { tag: 'em', classname: 'disabled', prefix: 'Tutorial: ' });
 }
 
-function getAncestorLinks(doclet: Doclet) {
+function getAncestorLinks(doclet: jsdoc.Doclet) {
     return helper.getAncestorLinks(data, doclet);
 }
 
@@ -42,7 +42,7 @@ function hashToLink(doclet: Doclet, hash: string) {
     return '<a href="' + url + '">' + hash + '</a>';
 }
 
-function needsSignature(doclet: Doclet) {
+function needsSignature(doclet: jsdoc.Doclet) {
     let needsSig = false;
 
     // function and class definitions always get a signature
@@ -63,7 +63,7 @@ function needsSignature(doclet: Doclet) {
     return needsSig;
 }
 
-function getSignatureAttributes(item: IItem) {
+function getSignatureAttributes(item: any) {
     const attributes = [];
 
     if (item.optional) {
@@ -96,13 +96,13 @@ function updateItemName(item: Item) {
     return itemName;
 }
 
-function addParamAttributes(params: IParamAttributes) {
+function addParamAttributes(params: any) {
     return params.filter(param => {
         return param.name && param.name.indexOf('.') === -1;
     }).map(updateItemName);
 }
 
-function buildItemTypeStrings(item: ItemType) {
+function buildItemTypeStrings(item: Item) {
     const types = [];
 
     if (item && item.type && item.type.names) {
@@ -114,7 +114,7 @@ function buildItemTypeStrings(item: ItemType) {
     return types;
 }
 
-function buildAttribsString(attribs: Attribs) {
+function buildAttribsString(attribs: Attributes) {
     let attribsString = '';
 
     if (attribs && attribs.length) {
@@ -124,7 +124,7 @@ function buildAttribsString(attribs: Attribs) {
     return attribsString;
 }
 
-function addNonParamAttributes(items: IAttribute[]) {
+function addNonParamAttributes(items: any[]) {
     let types = [];
 
     items.forEach(item => {
@@ -139,7 +139,7 @@ function addSignatureParams(f: Function) {
     f.signature = util.format( '%s(%s)', (f.signature || ''), params.join(', ') );
 }
 
-function addSignatureReturns(f: FunctionDeclaration) {
+function addSignatureReturns(f: Function) {
     const attribs = [];
     let attribsString = '';
     let returnTypes = [];
@@ -178,7 +178,7 @@ function addSignatureTypes(f: Function) {
         (types.length ? ' :' + types.join('|') : '') + '</span>';
 }
 
-function addAttribs(f: Feature) {
+function addAttribs(f: Function) {
     const attribs = helper.getAttribs(f);
     const attribsString = buildAttribsString(attribs);
 
@@ -224,7 +224,7 @@ function generate(type: string, title: string, docs: string, filename: string, r
     fs.writeFileSync(outpath, html, 'utf8');
 }
 
-function generateSourceFiles(sourceFiles: ISourceFile[], encoding: Encoding) {
+function generateSourceFiles(sourceFiles: string[], encoding: string) {
     encoding = encoding || 'utf8';
     const sourceFilenames = [];
     Object.keys(sourceFiles).forEach(file => {
@@ -259,7 +259,7 @@ function generateSourceFiles(sourceFiles: ISourceFile[], encoding: Encoding) {
  * check.
  * @param {Array.<module:jsdoc/doclet.Doclet>} modules - The array of module doclets to search.
  */
-function attachModuleSymbols(doclets: Doclet[], modules: ModuleInfo[]) {
+function attachModuleSymbols(doclets: Doclet[], modules: Module[]) {
     const symbols = {};
 
     // build a lookup table
@@ -289,7 +289,7 @@ function attachModuleSymbols(doclets: Doclet[], modules: ModuleInfo[]) {
     });
 }
 
-function buildMemberNav(items: MemberItem[], itemHeading: string, itemsSeen: number, linktoFn: any) {
+function buildMemberNav(items: any[], itemHeading: string, itemsSeen: number, linktoFn: any) {
     let nav = '';
 
     if (items && items.length) {
@@ -684,7 +684,7 @@ export const publish = (taffyData, opts, tutorials) => {
     });
 
     // TODO: move the tutorial functions to templateHelper.js
-    function generateTutorial(title: string, tutorial: Tutorial, filename: string) {
+    function generateTutorial(title: string, tutorial: string, filename: string) {
         const tutorialData = {
             title: title,
             header: tutorial.title,
@@ -701,7 +701,7 @@ export const publish = (taffyData, opts, tutorials) => {
     }
 
     // tutorials can have only one parent so there is no risk for loops
-    function saveChildren(node: TreeNode<any>) {
+    function saveChildren(node: Node) {
         node.children.forEach(child => {
             generateTutorial('Tutorial: ' + child.title, child, helper.tutorialToUrl(child.name));
             saveChildren(child);

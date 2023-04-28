@@ -3,7 +3,7 @@ var shift = require('stream-shift')
 
 module.exports = each
 
-function each (stream: Readable, fn: any, cb: any) {
+function each (stream: Readable, fn: Function, cb: Function) {
   var want = true
   var error = null
   var ended = false
@@ -16,7 +16,7 @@ function each (stream: Readable, fn: any, cb: any) {
   if (cb) eos(stream, {readable: true, writable: false}, done)
   return stream
 
-  function done (err: Error) {
+  function done (err: any) {
     if (!error) error = err
     ended = true
     if (!running) cb(error)

@@ -10,7 +10,7 @@ import debug from './debug';
 var events = ["abort", "aborted", "connect", "error", "socket", "timeout"];
 var eventHandlers = Object.create(null);
 events.forEach(function (event: Event) {
-  eventHandlers[event] = function (arg1: number, arg2: number, arg3: number) {
+  eventHandlers[event] = function (arg1: any, arg2: any, arg3: any) {
     this._redirectable.emit(event, arg1, arg2, arg3);
   };
 });
@@ -39,7 +39,7 @@ var WriteAfterEndError = createErrorType(
 );
 
 // An HTTP(S) request that can be redirected
-function RedirectableRequest(options: AxiosRequestConfig, responseCallback: any) {
+function RedirectableRequest(options: Options, responseCallback: any) {
   // Initialize the request
   Writable.call(this);
   this._sanitizeOptions(options);
@@ -58,7 +58,7 @@ function RedirectableRequest(options: AxiosRequestConfig, responseCallback: any)
 
   // React to responses of native requests
   var self = this;
-  this._onNativeResponse = function (response: AxiosResponse) {
+  this._onNativeResponse = function (response: any) {
     self._processResponse(response);
   };
 
@@ -231,7 +231,7 @@ RedirectableRequest.prototype.setTimeout = function (msecs: number, callback: Fu
   });
 });
 
-RedirectableRequest.prototype._sanitizeOptions = function (options: AxiosRequestConfig) {
+RedirectableRequest.prototype._sanitizeOptions = function (options: any) {
   // Ensure headers are always present
   if (!options.headers) {
     options.headers = {};
@@ -302,7 +302,7 @@ RedirectableRequest.prototype._performRequest = function () {
     var i = 0;
     var self = this;
     var buffers = this._requestBodyBuffers;
-    (function writeNext(error: Error) {
+    (function writeNext(error: any) {
       // Only write if this request has not been redirected yet
       /* istanbul ignore else */
       if (request === self._currentRequest) {
@@ -329,7 +329,7 @@ RedirectableRequest.prototype._performRequest = function () {
 };
 
 // Processes a response from the current native request
-RedirectableRequest.prototype._processResponse = function (response: AxiosResponse) {
+RedirectableRequest.prototype._processResponse = function (response: Response) {
   // Store the redirected response
   var statusCode = response.statusCode;
   if (this._options.trackRedirects) {
@@ -464,7 +464,7 @@ RedirectableRequest.prototype._processResponse = function (response: AxiosRespon
 };
 
 // Wraps the key/value object of protocols with redirect functionality
-function wrap(protocols: Protocol[]) {
+function wrap(protocols: any) {
   // Default settings
   var exports = {
     maxRedirects: 21,
@@ -479,7 +479,7 @@ function wrap(protocols: Protocol[]) {
     var wrappedProtocol = exports[scheme] = Object.create(nativeProtocol);
 
     // Executes a request, following redirects
-    function request(input: AxiosRequestConfig, options: AxiosRequestConfig, callback: AxiosRequestCallback<AxiosResponse>) {
+    function request(input: RequestInfo, options: RequestInit, callback: any) {
       // Parse parameters
       if (isString(input)) {
         var parsed;
@@ -524,7 +524,7 @@ function wrap(protocols: Protocol[]) {
     }
 
     // Executes a GET request, following redirects
-    function get(input: string, options: IGetOptions, callback: any) {
+    function get(input: string, options: any, callback: Function) {
       var wrappedRequest = wrappedProtocol.request(input, options, callback);
       wrappedRequest.end();
       return wrappedRequest;
@@ -562,7 +562,7 @@ function urlToOptions(urlObject: URL) {
   return options;
 }
 
-function removeMatchingHeaders(regex: RegExp, headers: string[]) {
+function removeMatchingHeaders(regex: RegExp, headers: Headers) {
   var lastValue;
   for (var header in headers) {
     if (regex.test(header)) {
@@ -574,9 +574,9 @@ function removeMatchingHeaders(regex: RegExp, headers: string[]) {
     undefined : String(lastValue).trim();
 }
 
-function createErrorType(code: number, message: string, baseClass: Error) {
+function createErrorType(code: number, message: string, baseClass: any) {
   // Create constructor
-  function CustomError(properties: ICustomErrorProperties) {
+  function CustomError(properties: any) {
     Error.captureStackTrace(this, this.constructor);
     Object.assign(this, properties || {});
     this.code = code;
@@ -590,7 +590,7 @@ function createErrorType(code: number, message: string, baseClass: Error) {
   return CustomError;
 }
 
-function abortRequest(request: XMLHttpRequest) {
+function abortRequest(request: Request) {
   for (var event of events) {
     request.removeListener(event, eventHandlers[event]);
   }
@@ -608,7 +608,7 @@ function isString(value: any) {
   return typeof value === "string" || value instanceof String;
 }
 
-function isFunction(value: any) {
+function isFunction(value: unknown) {
   return typeof value === "function";
 }
 

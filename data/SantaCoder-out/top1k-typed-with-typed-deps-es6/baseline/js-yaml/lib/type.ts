@@ -21,7 +21,7 @@ var YAML_NODE_KINDS = [
   'mapping'
 ];
 
-function compileStyleAliases(map: any) {
+function compileStyleAliases(map: StyleAliasMap) {
   var result = {};
 
   if (map !== null) {
@@ -35,7 +35,7 @@ function compileStyleAliases(map: any) {
   return result;
 }
 
-function Type(tag: number, options: TypeOptions) {
+function Type(tag: string, options: any) {
   options = options || {};
 
   Object.keys(options).forEach(function (name: string) {

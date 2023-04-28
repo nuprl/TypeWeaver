@@ -2,7 +2,7 @@
 
 const fs = require('graceful-fs')
 
-function symlinkType (srcpath: string, type: 'junction', callback: any) {
+function symlinkType (srcpath: string, type: string, callback: Function) {
   callback = (typeof type === 'function') ? type : callback
   type = (typeof type === 'function') ? false : type
   if (type) return callback(null, type)

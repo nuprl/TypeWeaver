@@ -14,7 +14,7 @@ Object.defineProperty(exports, '_vendors', {
 exports.name = null
 exports.isPR = null
 
-vendors.forEach(function (vendor: Vendor) {
+vendors.forEach(function (vendor: any) {
   const envs = Array.isArray(vendor.env) ? vendor.env : [vendor.env]
   const isCI = envs.every(function (obj: any) {
     return checkEnv(obj)

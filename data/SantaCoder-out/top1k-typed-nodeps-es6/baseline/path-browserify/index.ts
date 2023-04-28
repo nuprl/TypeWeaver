@@ -196,7 +196,7 @@ var posix = {
     return posix.normalize(joined);
   },
 
-  relative: function relative(from: Path, to: Path) {
+  relative: function relative(from: string, to: string) {
     assertPath(from);
     assertPath(to);
 
@@ -435,7 +435,7 @@ var posix = {
     return path.slice(startDot, end);
   },
 
-  format: function format(pathObject: IPathObject) {
+  format: function format(pathObject: PathObject) {
     if (pathObject === null || typeof pathObject !== 'object') {
       throw new TypeError('The "pathObject" argument must be of type Object. Received type ' + typeof pathObject);
     }

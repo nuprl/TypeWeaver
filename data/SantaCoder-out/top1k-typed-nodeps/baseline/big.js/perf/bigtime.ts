@@ -70,7 +70,7 @@ var arg, i, j, max, method, methodIndex, decimalPlaces, rounding, reps, start,
     //    return Math.random() > 0.5 ? r : '-' + r
     //},
 
-    getFastest = function (bn: BigNumber, bd: BigNumber) {
+    getFastest = function (bn: any, bd: any) {
         var r;
         if (Math.abs(bn - bd) > 2) {
             r = 'Big' + ((bn < bd)

@@ -51,7 +51,7 @@ function fromString (string: string, encoding: string) {
     : new Buffer(string, encoding)
 }
 
-function bufferFrom (value: string, encodingOrOffset: number, length: number) {
+function bufferFrom (value: any, encodingOrOffset: any, length: any) {
   if (typeof value === 'number') {
     throw new TypeError('"value" argument must not be a number')
   }

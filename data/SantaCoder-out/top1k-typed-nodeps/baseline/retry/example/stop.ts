@@ -27,7 +27,7 @@ function attemptAsyncOperation(someInput: any, cb: any) {
   });
 }
 
-attemptAsyncOperation('test input', function(err: any, errors: any[], result: any) {
+attemptAsyncOperation('test input', function(err: any, errors: any, result: any) {
   console.warn('err:');
   console.log(err);
 

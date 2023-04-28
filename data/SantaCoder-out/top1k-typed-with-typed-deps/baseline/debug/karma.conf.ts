@@ -1,4 +1,4 @@
-module.exports = function (config: IConfig) {
+module.exports = function (config: Config) {
 	config.set({
 		// Frameworks to use
 		// available frameworks: https://npmjs.org/browse/keyword/karma-adapter

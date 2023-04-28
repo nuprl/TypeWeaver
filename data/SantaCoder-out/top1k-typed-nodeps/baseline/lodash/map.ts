@@ -16,7 +16,7 @@
  * map([4, 8], square)
  * // => [16, 64]
  */
-function map(array: any[], iteratee: any) {
+function map(array: any[], iteratee: Function) {
   let index = -1
   const length = array == null ? 0 : array.length
   const result = new Array(length)

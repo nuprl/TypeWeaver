@@ -22,7 +22,7 @@ function addSchema (schema: Schema, arity: number) {
   if (group.indexOf(schema) === -1) group.push(schema)
 }
 
-function validate (rawSchemas: Schema[], args: SchemaArgs) {
+function validate (rawSchemas: any, args: any) {
   if (arguments.length !== 2) throw wrongNumberOfArgs(['SA'], arguments.length)
   if (!rawSchemas) throw missingRequiredArg(0, 'rawSchemas')
   if (!args) throw missingRequiredArg(1, 'args')

@@ -61,18 +61,18 @@ function cloneArrayBuffer(val: ArrayBuffer) {
   return res;
 }
 
-function cloneTypedArray(val: TypedArray, deep: boolean) {
+function cloneTypedArray(val: any, deep: boolean) {
   return new val.constructor(val.buffer, val.byteOffset, val.length);
 }
 
-function cloneBuffer(val: Uint8Array) {
+function cloneBuffer(val: Buffer) {
   const len = val.length;
   const buf = Buffer.allocUnsafe ? Buffer.allocUnsafe(len) : Buffer.from(len);
   val.copy(buf);
   return buf;
 }
 
-function cloneSymbol(val: Symbol) {
+function cloneSymbol(val: any) {
   return valueOf ? Object(valueOf.call(val)) : {};
 }
 

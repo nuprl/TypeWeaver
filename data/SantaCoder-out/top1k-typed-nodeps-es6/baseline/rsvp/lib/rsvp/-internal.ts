@@ -73,7 +73,7 @@ function handleOwnThenable(promise: Promise<any>, thenable: any) {
   }
 }
 
-export function handleMaybeThenable(promise: Promise<unknown>, maybeThenable: Promise<unknown>, then: any) {
+export function handleMaybeThenable(promise: Promise<any>, maybeThenable: any, then: any) {
   let isOwnThenable =
     maybeThenable.constructor === promise.constructor &&
     then === originalThen &&
@@ -88,7 +88,7 @@ export function handleMaybeThenable(promise: Promise<unknown>, maybeThenable: Pr
   }
 }
 
-export function resolve(promise: Promise<T>, value: T) {
+export function resolve(promise: Promise<any>, value: any) {
   if (promise === value) {
     fulfill(promise, value);
   } else if (objectOrFunction(value)) {
@@ -113,7 +113,7 @@ export function publishRejection(promise: Promise<any>) {
   publish(promise);
 }
 
-export function fulfill(promise: Promise<T>, value: T) {
+export function fulfill(promise: Promise<any>, value: any) {
   if (promise._state !== PENDING) { return; }
 
   promise._result = value;
@@ -135,7 +135,7 @@ export function reject(promise: Promise<any>, reason: any) {
   config.async(publishRejection, promise);
 }
 
-export function subscribe(parent: Observable<T>, child: Observable<U>, onFulfillment: any, onRejection: any) {
+export function subscribe(parent: any, child: any, onFulfillment: any, onRejection: any) {
   let subscribers = parent._subscribers;
   let length = subscribers.length;
 
@@ -150,7 +150,7 @@ export function subscribe(parent: Observable<T>, child: Observable<U>, onFulfill
   }
 }
 
-export function publish(promise: Promise<void>) {
+export function publish(promise: Promise<any>) {
   let subscribers = promise._subscribers;
   let settled = promise._state;
 
@@ -176,7 +176,7 @@ export function publish(promise: Promise<void>) {
   promise._subscribers.length = 0;
 }
 
-export function invokeCallback(state: State, promise: Promise<any>, callback: any, result: any) {
+export function invokeCallback(state: any, promise: any, callback: any, result: any) {
   let hasCallback = typeof callback === 'function';
   let value, succeeded = true, error;
 

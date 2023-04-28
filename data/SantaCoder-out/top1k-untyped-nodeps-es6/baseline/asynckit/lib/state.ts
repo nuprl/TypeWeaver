@@ -10,7 +10,7 @@ export default state;
  *                                     or `null` to keep them as is
  * @returns {object} - initial state object
  */
-function state(list: any, sortMethod: string)
+function state(list: any[], sortMethod: string)
 {
   var isNamedList = !Array.isArray(list)
     , initState =
@@ -27,7 +27,7 @@ function state(list: any, sortMethod: string)
   {
     // sort array keys based on it's values
     // sort object's keys just on own merit
-    initState.keyedList.sort(isNamedList ? sortMethod : function(a: any, b: any)
+    initState.keyedList.sort(isNamedList ? sortMethod : function(a: number, b: number)
     {
       return sortMethod(list[a], list[b]);
     });

@@ -46,14 +46,14 @@ function containsNamespace (str: string, namespace: string) {
  * Convert a data descriptor to accessor descriptor.
  */
 
-function convertDataDescriptorToAccessor (obj: DataDescriptor, prop: string, message: string) {
+function convertDataDescriptorToAccessor (obj: Object, prop: string, message: string) {
   var descriptor = Object.getOwnPropertyDescriptor(obj, prop)
   var value = descriptor.value
 
   descriptor.get = function getter () { return value }
 
   if (descriptor.writable) {
-    descriptor.set = function setter (val: any) { return (value = val) }
+    descriptor.set = function setter (val: T) { return (value = val) }
   }
 
   delete descriptor.value
@@ -82,7 +82,7 @@ function createArgumentsString (arity: number) {
  * Create stack string from stack.
  */
 
-function createStackString (stack: Stack) {
+function createStackString (stack: string[]) {
   var str = this.name + ': ' + this.namespace
 
   if (this.message) {
@@ -264,7 +264,7 @@ function log (message: string, site: string) {
  * Get call site location as array.
  */
 
-function callSiteLocation (callSite: CallSite) {
+function callSiteLocation (callSite: Node) {
   var file = callSite.getFileName() || '<anonymous>'
   var line = callSite.getLineNumber()
   var colm = callSite.getColumnNumber()
@@ -368,7 +368,7 @@ function formatColor (msg: string, caller: string, stack: string) {
  * Format call site location.
  */
 
-function formatLocation (callSite: CallSite) {
+function formatLocation (callSite: NodeCallSite) {
   return relative(basePath, callSite[0]) +
     ':' + callSite[1] +
     ':' + callSite[2]
@@ -402,7 +402,7 @@ function getStack () {
  * Capture call site stack from v8.
  */
 
-function prepareObjectStackTrace (obj: any, stack: any) {
+function prepareObjectStackTrace (obj: any, stack: string[]) {
   return stack
 }
 

@@ -23,7 +23,7 @@ function isDirectory(filepath: string, cb: any) {
     return;
   }
 
-  fs.stat(filepath, function(err: Error, stats: Stats) {
+  fs.stat(filepath, function(err: Error, stats: fs.Stats) {
     if (err) {
       if (err.code === 'ENOENT') {
         cb(null, false);

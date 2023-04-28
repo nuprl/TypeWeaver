@@ -37,11 +37,11 @@ inherits(EDE, Cipher);
 
 export default EDE;
 
-EDE.create = function create(options: IOptions) {
+EDE.create = function create(options: EDEOptions) {
   return new EDE(options);
 };
 
-EDE.prototype._update = function _update(inp: number, inOff: number, out: number, outOff: number) {
+EDE.prototype._update = function _update(inp: Uint8Array, inOff: number, out: Uint8Array, outOff: number) {
   var state = this._edeState;
 
   state.ciphers[0]._update(inp, inOff, out, outOff);

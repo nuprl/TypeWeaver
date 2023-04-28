@@ -11,7 +11,7 @@ function isObject(subject: any) {
 }
 
 
-function toArray(sequence: Sequence<T>) {
+function toArray(sequence: any) {
   if (Array.isArray(sequence)) return sequence;
   else if (isNothing(sequence)) return [];
 

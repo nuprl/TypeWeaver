@@ -17,7 +17,7 @@ function async(callback: Function)
   // check if async happened
   defer(function() { isAsync = true; });
 
-  return function async_callback(err: Error, result: any)
+  return function async_callback(err: any, result: any)
   {
     if (isAsync)
     {

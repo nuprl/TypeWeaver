@@ -12,9 +12,9 @@ function waterfallTest(done: Function) {
 
     for(var i = 0; i < 10000; i++) {
         functions.push((next) => {
-            function func1(cb: any) {return cb(); }
+            function func1(cb: Function) {return cb(); }
 
-            function func2(callback: any) {
+            function func2(callback: Function) {
                 callback();
                 //return next();  // Should be callback here.
             }

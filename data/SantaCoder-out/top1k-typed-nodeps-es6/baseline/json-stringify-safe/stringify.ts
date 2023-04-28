@@ -1,7 +1,7 @@
 export default stringify;
 export const getSerialize = serializer;
 
-function stringify(obj: any, replacer: any, spaces: number, cycleReplacer: any) {
+function stringify(obj: any, replacer: any, spaces: any, cycleReplacer: any) {
   return JSON.stringify(obj, serializer(replacer, cycleReplacer), spaces)
 }
 

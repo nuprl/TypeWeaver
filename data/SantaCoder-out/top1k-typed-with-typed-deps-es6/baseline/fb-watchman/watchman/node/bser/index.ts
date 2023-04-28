@@ -123,7 +123,7 @@ Accumulator.prototype.peekInt = function(size: number) {
   }
 }
 
-Accumulator.prototype.readInt = function(bytes: Uint8Array) {
+Accumulator.prototype.readInt = function(bytes: number) {
   var ival = this.peekInt(bytes);
   if (ival instanceof Int64 && isFinite(ival.valueOf())) {
     ival = ival.valueOf();
@@ -187,7 +187,7 @@ Accumulator.prototype.writeInt = function(value: number, size: number) {
   this.writeOffset += size;
 }
 
-Accumulator.prototype.writeDouble = function(value: BigNumber) {
+Accumulator.prototype.writeDouble = function(value: number) {
   this.reserve(8);
   if (isBigEndian) {
     this.buf.writeDoubleBE(value, this.writeOffset);
@@ -226,7 +226,7 @@ function BunserBuf() {
 util.inherits(BunserBuf, EE);
 exports.BunserBuf = BunserBuf;
 
-BunserBuf.prototype.append = function(buf: Uint8Array, synchronous: boolean) {
+BunserBuf.prototype.append = function(buf: Buffer, synchronous: boolean) {
   if (synchronous) {
     this.buf.append(buf);
     return this.process(synchronous);
@@ -404,7 +404,7 @@ BunserBuf.prototype.decodeString = function() {
 // we don't want to throw.  This is only true when we're reading
 // the PDU length from the PDU header; we'll set relaxSizeAsserts
 // in that case.
-BunserBuf.prototype.decodeInt = function(relaxSizeAsserts: RelaxSizeAsserts) {
+BunserBuf.prototype.decodeInt = function(relaxSizeAsserts: boolean) {
   if (relaxSizeAsserts && (this.buf.readAvail() < 1)) {
     return false;
   } else {
@@ -462,7 +462,7 @@ function byteswap64(buf: Buffer) {
   return swap;
 }
 
-function dump_int64(buf: number[], val: number) {
+function dump_int64(buf: Uint8Array, val: number) {
   // Get the raw bytes.  The Int64 buffer is big endian
   var be = val.toBuffer();
 
@@ -479,7 +479,7 @@ function dump_int64(buf: number[], val: number) {
   buf.append(le);
 }
 
-function dump_int(buf: number, val: number) {
+function dump_int(buf: Uint8Array, val: number) {
   var abs = Math.abs(val);
   if (abs <= MAX_INT8) {
     buf.writeByte(BSER_INT8);
@@ -495,7 +495,7 @@ function dump_int(buf: number, val: number) {
   }
 }
 
-function dump_any(buf: any, val: any) {
+function dump_any(buf: Buffer, val: any) {
   switch (typeof(val)) {
     case 'number':
       // check if it is an integer or a float

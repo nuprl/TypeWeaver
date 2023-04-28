@@ -6,7 +6,7 @@ var slice = require("./prototypes/array").slice;
 /**
  * @private
  */
-function comparator(a: string, b: string) {
+function comparator(a: any, b: any) {
     // uuid, won't ever be equal
     var aCall = a.getCall(0);
     var bCall = b.getCall(0);
@@ -29,7 +29,7 @@ function comparator(a: string, b: string) {
  * @param  {SinonProxy[] | SinonProxy} spies
  * @returns {SinonProxy[]}
  */
-function orderByFirstCall(spies: any[]) {
+function orderByFirstCall(spies: Spy[]) {
     return sort(slice(spies), comparator);
 }
 

@@ -9,7 +9,7 @@ if (process.platform === 'win32' || global.TESTING_WINDOWS) {
 module.exports = isexe
 isexe.sync = sync
 
-function isexe (path: string, options: IsexeOptions, cb: any) {
+function isexe (path: string, options: any, cb: any) {
   if (typeof options === 'function') {
     cb = options
     options = {}

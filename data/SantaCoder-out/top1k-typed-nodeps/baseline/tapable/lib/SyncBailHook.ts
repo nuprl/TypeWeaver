@@ -32,12 +32,12 @@ const TAP_PROMISE = () => {
 	throw new Error("tapPromise is not supported on a SyncBailHook");
 };
 
-const COMPILE = function(options: IOptions) {
+const COMPILE = function(options: any) {
 	factory.setup(this, options);
 	return factory.create(options);
 };
 
-function SyncBailHook(args = []: SyncBailHookArgs, name = undefined: string) {
+function SyncBailHook(args = []: any[], name = undefined: string) {
 	const hook = new Hook(args, name);
 	hook.constructor = SyncBailHook;
 	hook.tapAsync = TAP_ASYNC;

@@ -22,7 +22,7 @@
  * })
  * // => Logs 'b' then 'a' assuming `forOwn` logs 'a' then 'b'.
  */
-function forOwnRight(object: Object, iteratee: any) {
+function forOwnRight(object: any, iteratee: Function) {
   if (object == null) {
     return
   }

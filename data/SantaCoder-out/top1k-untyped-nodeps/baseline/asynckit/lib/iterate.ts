@@ -13,12 +13,12 @@ module.exports = iterate;
  * @param {object} state - current job status
  * @param {function} callback - invoked when all elements processed
  */
-function iterate(list: any, iterator: any, state: any, callback: any)
+function iterate(list: Array<any>, iterator: Function, state: any, callback: Function)
 {
   // store current index
   var key = state['keyedList'] ? state['keyedList'][state.index] : state.index;
 
-  state.jobs[key] = runJob(iterator, key, list[key], function(error: Error, output: IOutput)
+  state.jobs[key] = runJob(iterator, key, list[key], function(error: any, output: any)
   {
     // don't repeat yourself
     // skip secondary callbacks

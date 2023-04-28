@@ -5,16 +5,16 @@ import rneedsContext from "./var/rneedsContext.js";
 import "../selector.js";
 
 // Implement the identical functionality for filter and not
-function winnow( elements: Element[], qualifier: string, not : boolean) {
+function winnow( elements: Array<Element>, qualifier: string, not : boolean) {
 	if ( typeof qualifier === "function" ) {
-		return jQuery.grep( elements, function( elem: HTMLElement, i : number) {
+		return jQuery.grep( elements, function( elem: JQuery, i : number) {
 			return !!qualifier.call( elem, i, elem ) !== not;
 		} );
 	}
 
 	// Single element
 	if ( qualifier.nodeType ) {
-		return jQuery.grep( elements, function( elem : any) {
+		return jQuery.grep( elements, function( elem : HTMLElement) {
 			return ( elem === qualifier ) !== not;
 		} );
 	}
@@ -30,7 +30,7 @@ function winnow( elements: Element[], qualifier: string, not : boolean) {
 	return jQuery.filter( qualifier, elements, not );
 }
 
-jQuery.filter = function( expr: Expression, elems: Expression[], not : boolean) {
+jQuery.filter = function( expr: string, elems: JQuery, not : boolean) {
 	var elem = elems[ 0 ];
 
 	if ( not ) {

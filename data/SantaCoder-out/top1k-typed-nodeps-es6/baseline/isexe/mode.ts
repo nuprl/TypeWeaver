@@ -3,7 +3,7 @@ isexe.sync = sync
 
 import fs from 'fs';
 
-function isexe (path: string, options: IsexeOptions, cb: any) {
+function isexe (path: string, options: Options, cb: any) {
   fs.stat(path, function (er: Error, stat: fs.Stats) {
     cb(er, er ? false : checkStat(stat, options))
   })
@@ -13,11 +13,11 @@ function sync (path: string, options: SyncOptions) {
   return checkStat(fs.statSync(path), options)
 }
 
-function checkStat (stat: string, options: CheckStatOptions) {
+function checkStat (stat: string, options: Options) {
   return stat.isFile() && checkMode(stat, options)
 }
 
-function checkMode (stat: FS.Stats, options: FS.Stats.CheckModeOptions) {
+function checkMode (stat: fs.Stats, options: Options) {
   var mod = stat.mode
   var uid = stat.uid
   var gid = stat.gid

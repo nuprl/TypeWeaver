@@ -102,7 +102,7 @@ function getLanguagePriority(language: string, accepted: string[], index: number
  * @private
  */
 
-function specify(language: string, spec: Spec, index: number) {
+function specify(language: string, spec: any, index: number) {
   var p = parseLanguage(language)
   if (!p) return null;
   var s = 0;
@@ -146,7 +146,7 @@ function preferredLanguages(accept: string, provided: string[]) {
   });
 
   // sorted list of accepted languages
-  return priorities.filter(isQuality).sort(compareSpecs).map(function getLanguage(priority: number) {
+  return priorities.filter(isQuality).sort(compareSpecs).map(function getLanguage(priority: string[]) {
     return provided[priorities.indexOf(priority)];
   });
 }
@@ -174,6 +174,6 @@ function getFullLanguage(spec: LanguageSpec) {
  * @private
  */
 
-function isQuality(spec: QualitySpec) {
+function isQuality(spec: Spec) {
   return spec.q > 0;
 }

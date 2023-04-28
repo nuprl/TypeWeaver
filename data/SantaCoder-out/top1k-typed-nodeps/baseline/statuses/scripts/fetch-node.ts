@@ -8,8 +8,8 @@ var write = require('./lib/write')
 var URL = 'https://raw.githubusercontent.com/nodejs/node/master/lib/_http_server.js'
 var HEADERS = { 'User-Agent': 'nodejs/' + process.version + ' (' + process.platform + ', npm:statuses)' }
 
-https.get(URL, { headers: HEADERS }, function onResponse (res: AxiosResponse) {
-  getBody(res, true, function (err: Error, body: any) {
+https.get(URL, { headers: HEADERS }, function onResponse (res: IncomingMessage) {
+  getBody(res, true, function (err: any, body: any) {
     if (err) throw err
 
     var block = /STATUS_CODES\s*=\s*{([^}]+)};/m.exec(body)[1]

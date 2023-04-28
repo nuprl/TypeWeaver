@@ -160,6 +160,6 @@ import _parallel from './internal/parallel.js'
  * }
  *
  */
-export default function parallel(tasks: Task<any>[], callback: any) {
+export default function parallel(tasks: Array<Function>, callback: Function) {
     return _parallel(eachOf, tasks, callback);
 }

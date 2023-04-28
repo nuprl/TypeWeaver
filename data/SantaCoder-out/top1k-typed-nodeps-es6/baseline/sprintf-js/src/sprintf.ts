@@ -26,11 +26,11 @@
         return sprintf_format(sprintf_parse(key), arguments)
     }
 
-    function vsprintf(fmt: string, argv: string[]) {
+    function vsprintf(fmt: string, argv: any[]) {
         return sprintf.apply(null, [fmt].concat(argv || []))
     }
 
-    function sprintf_format(parse_tree: ParseTreeNode, argv: string[]) {
+    function sprintf_format(parse_tree: string, argv: any[]) {
         var cursor = 1, tree_length = parse_tree.length, arg, output = '', i, k, ph, pad, pad_character, pad_length, is_positive, sign
         for (i = 0; i < tree_length; i++) {
             if (typeof parse_tree[i] === 'string') {

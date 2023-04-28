@@ -475,7 +475,7 @@ function parseCookiePair(cookiePair: string, looseMode: boolean) {
   return c;
 }
 
-function parse(str: string, options: ParseOptions) {
+function parse(str: string, options: Options) {
   if (!options || typeof options !== "object") {
     options = {};
   }
@@ -645,7 +645,7 @@ function parse(str: string, options: ParseOptions) {
  * @param cookie
  * @returns boolean
  */
-function isSecurePrefixConditionMet(cookie: SecurePrefixCondition) {
+function isSecurePrefixConditionMet(cookie: Cookie) {
   validators.validate(validators.isObject(cookie), cookie);
   return !cookie.key.startsWith("__Secure-") || cookie.secure;
 }
@@ -661,7 +661,7 @@ function isSecurePrefixConditionMet(cookie: SecurePrefixCondition) {
  * @param cookie
  * @returns boolean
  */
-function isHostPrefixConditionMet(cookie: string) {
+function isHostPrefixConditionMet(cookie: Cookie) {
   validators.validate(validators.isObject(cookie));
   return (
     !cookie.key.startsWith("__Host-") ||
@@ -729,7 +729,7 @@ function fromJSON(str: string) {
  *     creation-times."
  */
 
-function cookieCompare(a: string, b: string) {
+function cookieCompare(a: Cookie, b: Cookie) {
   validators.validate(validators.isObject(a), a);
   validators.validate(validators.isObject(b), b);
   let cmp = 0;
@@ -1272,17 +1272,17 @@ class CookieJar {
     const store = this.store;
 
     if (!store.updateCookie) {
-      store.updateCookie = function(oldCookie: string, newCookie: string, cb: any) {
+      store.updateCookie = function(oldCookie: string, newCookie: string, cb: Function) {
         this.putCookie(newCookie, cb);
       };
     }
 
-    function withCookie(err: Error, oldCookie: string) {
+    function withCookie(err: Error, oldCookie: Cookie) {
       if (err) {
         return cb(err);
       }
 
-      const next = function(err: Error) {
+      const next = function(err: any) {
         if (err) {
           return cb(err);
         } else {
@@ -1354,7 +1354,7 @@ class CookieJar {
     const allPaths = !!options.allPaths;
     const store = this.store;
 
-    function matchingCookie(c: string) {
+    function matchingCookie(c: Cookie) {
       // "Either:
       //   The cookie's host-only-flag is true and the canonicalized
       //   request-host is identical to the cookie's domain.
@@ -1438,7 +1438,7 @@ class CookieJar {
   getCookieString(...args) {
     const cb = args.pop();
     validators.validate(validators.isFunction(cb), cb);
-    const next = function(err: Error, cookies: Cookies) {
+    const next = function(err: Error, cookies: any) {
       if (err) {
         cb(err);
       } else {
@@ -1458,7 +1458,7 @@ class CookieJar {
   getSetCookieStrings(...args) {
     const cb = args.pop();
     validators.validate(validators.isFunction(cb), cb);
-    const next = function(err: Error, cookies: Cookies) {
+    const next = function(err: any, cookies: any) {
       if (err) {
         cb(err);
       } else {
@@ -1623,7 +1623,7 @@ class CookieJar {
       let completedCount = 0;
       const removeErrors = [];
 
-      function removeCookieCb(removeErr: Error) {
+      function removeCookieCb(removeErr: any) {
         if (removeErr) {
           removeErrors.push(removeErr);
         }
@@ -1714,7 +1714,7 @@ CookieJar.fromJSON = CookieJar.deserializeSync;
 CookieJar.deserialize = fromCallback(CookieJar.deserialize);
 
 // Use a closure to provide a true imperative API for synchronous stores.
-function syncWrap(method: string) {
+function syncWrap(method: Function) {
   return function(...args: any[]) {
     if (!this.store.synchronous) {
       throw new Error(

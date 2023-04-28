@@ -14,7 +14,7 @@ var suite = new Suite({
 
 if (argv.dry) {
   console.log();
-  suite.dryRun(function(code: number, fixture: string) {
+  suite.dryRun(function(code: string, fixture: string) {
     console.log(cyan('%s > %s'), code.key, fixture.key);
     var args = require(fixture.path);
     var res = code.run.apply(null, args);

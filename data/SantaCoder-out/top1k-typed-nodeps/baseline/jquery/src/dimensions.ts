@@ -17,7 +17,7 @@ jQuery.each( { Height: "height", Width: "width" }, function( name: string, type 
 			var chainable = arguments.length && ( defaultExtra || typeof margin !== "boolean" ),
 				extra = defaultExtra || ( margin === true || value === true ? "margin" : "border" );
 
-			return access( this, function( elem: HTMLElement, type: string, value : string) {
+			return access( this, function( elem: HTMLElement, type: string, value : any) {
 				var doc;
 
 				if ( isWindow( elem ) ) {

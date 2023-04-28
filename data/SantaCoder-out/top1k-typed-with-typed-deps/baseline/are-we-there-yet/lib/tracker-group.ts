@@ -83,7 +83,7 @@ TrackerGroup.prototype.newItem = function (name: string, todo: Todo, weight: num
   return this.addUnit(new Tracker(name, todo), weight)
 }
 
-TrackerGroup.prototype.newStream = function (name: string, todo: Todo, weight: number) {
+TrackerGroup.prototype.newStream = function (name: string, todo: any, weight: number) {
   return this.addUnit(new TrackerStream(name, todo), weight)
 }
 
@@ -105,7 +105,7 @@ TrackerGroup.prototype.debug = function (depth: number) {
   depth = depth || 0
   var indent = depth ? buffer.slice(0, depth) : ''
   var output = indent + (this.name || 'top') + ': ' + this.completed() + '\n'
-  this.trackers.forEach(function (tracker: TrackerGroup) {
+  this.trackers.forEach(function (tracker: Tracker) {
     if (tracker instanceof TrackerGroup) {
       output += tracker.debug(depth + 1)
     } else {

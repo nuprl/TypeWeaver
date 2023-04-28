@@ -56,7 +56,7 @@ function normalizeName(name: string) {
   return name.toLowerCase()
 }
 
-function normalizeValue(value: string) {
+function normalizeValue(value: any) {
   if (typeof value !== 'string') {
     value = String(value)
   }
@@ -81,7 +81,7 @@ function iteratorFor(items: any[]) {
   return iterator
 }
 
-export function Headers(headers: any) {
+export function Headers(headers: HeadersInit) {
   this.map = {}
 
   if (headers instanceof Headers) {
@@ -99,7 +99,7 @@ export function Headers(headers: any) {
   }
 }
 
-Headers.prototype.append = function(name: string, value: any) {
+Headers.prototype.append = function(name: string, value: string) {
   name = normalizeName(name)
   value = normalizeValue(value)
   var oldValue = this.map[name]
@@ -133,7 +133,7 @@ Headers.prototype.forEach = function(callback: Function, thisArg: any) {
 
 Headers.prototype.keys = function() {
   var items = []
-  this.forEach(function(value: string, name: string) {
+  this.forEach(function(value: any, name: string) {
     items.push(name)
   })
   return iteratorFor(items)
@@ -141,7 +141,7 @@ Headers.prototype.keys = function() {
 
 Headers.prototype.values = function() {
   var items = []
-  this.forEach(function(value: any) {
+  this.forEach(function(value: T) {
     items.push(value)
   })
   return iteratorFor(items)
@@ -149,7 +149,7 @@ Headers.prototype.values = function() {
 
 Headers.prototype.entries = function() {
   var items = []
-  this.forEach(function(value: string, name: string) {
+  this.forEach(function(value: any, name: string) {
     items.push([name, value])
   })
   return iteratorFor(items)
@@ -159,7 +159,7 @@ if (support.iterable) {
   Headers.prototype[Symbol.iterator] = Headers.prototype.entries
 }
 
-function consumed(body: Readable) {
+function consumed(body: Response) {
   if (body.bodyUsed) {
     return Promise.reject(new TypeError('Already read'))
   }
@@ -167,7 +167,7 @@ function consumed(body: Readable) {
 }
 
 function fileReaderReady(reader: FileReader) {
-  return new Promise(function(resolve: any, reject: any) {
+  return new Promise(function(resolve: Function, reject: Function) {
     reader.onload = function() {
       resolve(reader.result)
     }
@@ -336,7 +336,7 @@ function normalizeMethod(method: string) {
   return methods.indexOf(upcased) > -1 ? upcased : method
 }
 
-export function Request(input: IRequest, options: IRequestOptions) {
+export function Request(input: RequestInput, options: RequestOptions) {
   if (!(this instanceof Request)) {
     throw new TypeError('Please use the "new" operator, this DOM object constructor cannot be called as a function.')
   }
@@ -403,7 +403,7 @@ Request.prototype.clone = function() {
   return new Request(this, {body: this._bodyInit})
 }
 
-function decode(body: Readable) {
+function decode(body: FormData) {
   var form = new FormData()
   body
     .trim()
@@ -445,7 +445,7 @@ function parseHeaders(rawHeaders: string) {
 
 Body.call(Request.prototype)
 
-export function Response(bodyInit: any, options: AxiosRequestConfig<AxiosResponseConfig>) {
+export function Response(bodyInit: any, options: any) {
   if (!(this instanceof Response)) {
     throw new TypeError('Please use the "new" operator, this DOM object constructor cannot be called as a function.')
   }
@@ -503,8 +503,8 @@ try {
   DOMException.prototype.constructor = DOMException
 }
 
-export function fetch(input: string, init: FetchInit) {
-  return new Promise(function(resolve: any, reject: any) {
+export function fetch(input: RequestInfo, init: RequestInit) {
+  return new Promise(function(resolve: Function, reject: Function) {
     var request = new Request(input, init)
 
     if (request.signal && request.signal.aborted) {

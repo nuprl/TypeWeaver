@@ -34,7 +34,7 @@ self.Flatted = (function (exports: any) {
     return _typeof(value) === primitive ? new Primitive(value) : value;
   };
 
-  var revive = function revive(input: any, parsed: any, output: any, $: any) {
+  var revive = function revive(input: string, parsed: any, output: string, $: CheerioStatic) {
     var lazy = [];
 
     for (var ke = keys(output), length = ke.length, y = 0; y < length; y++) {
@@ -65,13 +65,13 @@ self.Flatted = (function (exports: any) {
     return output;
   };
 
-  var set = function set(known: boolean, input: any, value: any) {
+  var set = function set(known: string[], input: string, value: string) {
     var index = Primitive(input.push(value) - 1);
     known.set(value, index);
     return index;
   };
 
-  var parse = function parse(text: string, reviver: Reviver<any>) {
+  var parse = function parse(text: string, reviver: any) {
     var input = $parse(text, Primitives).map(primitives);
     var value = input[0];
     var $ = reviver || noop;

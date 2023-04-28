@@ -11,7 +11,7 @@ var assign = function (target: any, source: any) {
 	}
 };
 
-export default function (validationDatum1/*: ValidationDatum, ...validationDatumN: ValidationDatum[], options */: ValidationDatum[]) {
+export default function (validationDatum1/*: ValidationDatum1, ...validationDatumN: ValidationDatumN, options */: ValidationOptions) {
 	var validationData = [validationDatum1];
 	var globalOptions;
 	if (arguments.length > 1) {

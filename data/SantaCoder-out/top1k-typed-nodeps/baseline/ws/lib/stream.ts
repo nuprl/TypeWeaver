@@ -8,7 +8,7 @@ const { Duplex } = require('stream');
  * @param {Duplex} stream The stream.
  * @private
  */
-function emitClose(stream: Readable) {
+function emitClose(stream: Duplex) {
   stream.emit('close');
 }
 
@@ -46,7 +46,7 @@ function duplexOnError(err: Error) {
  * @return {Duplex} The duplex stream
  * @public
  */
-function createWebSocketStream(ws: WebSocket, options: WebSocketStreamOptions) {
+function createWebSocketStream(ws: WebSocket, options: any) {
   let terminateOnDestroy = true;
 
   const duplex = new Duplex({
@@ -86,7 +86,7 @@ function createWebSocketStream(ws: WebSocket, options: WebSocketStreamOptions) {
     duplex.push(null);
   });
 
-  duplex._destroy = function (err: Error, callback: any) {
+  duplex._destroy = function (err: Error, callback: Function) {
     if (ws.readyState === ws.CLOSED) {
       callback(err);
       process.nextTick(emitClose, duplex);
@@ -140,7 +140,7 @@ function createWebSocketStream(ws: WebSocket, options: WebSocketStreamOptions) {
     if (ws.isPaused) ws.resume();
   };
 
-  duplex._write = function (chunk: string, encoding: string, callback: any) {
+  duplex._write = function (chunk: Buffer, encoding: string, callback: any) {
     if (ws.readyState === ws.CONNECTING) {
       ws.once('open', function open() {
         duplex._write(chunk, encoding, callback);

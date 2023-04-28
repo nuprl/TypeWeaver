@@ -38,7 +38,7 @@ function tokenStart (token: Token) {
     };
 }
 
-function tokenEnd (token: IToken) {
+function tokenEnd (token: Token) {
     return {
         line: token[TOKEN.END_LINE],
         column: token[TOKEN.END_COL],
@@ -59,7 +59,7 @@ function getSource (startLine: number, startColumn: number, endLine: number, end
     };
 }
 
-function getTokenSource (token: IToken) {
+function getTokenSource (token: Token) {
     return getSource(
         token[TOKEN.START_LINE],
         token[TOKEN.START_COL],
@@ -68,7 +68,7 @@ function getTokenSource (token: IToken) {
     );
 }
 
-function getTokenSourceSpan (startToken: Token, endToken: Token) {
+function getTokenSourceSpan (startToken: ts.Node, endToken: ts.Node) {
     if (!startToken) {
         return undefined;
     }
@@ -95,7 +95,7 @@ function unescapeProp (node: Node, prop: string) {
     return node;
 }
 
-function indexesOf (array: any[], item: any) {
+function indexesOf (array: Array<any>, item: any) {
     let i = -1;
     const indexes = [];
 

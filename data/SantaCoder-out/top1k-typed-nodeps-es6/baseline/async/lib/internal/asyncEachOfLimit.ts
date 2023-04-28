@@ -1,7 +1,7 @@
 import breakLoop from './breakLoop.js'
 
 // for async generators
-export default function asyncEachOfLimit(generator: AsyncIterableIterator<T>, limit: number, iteratee: any, callback: any) {
+export default function asyncEachOfLimit(generator: any, limit: any, iteratee: any, callback: any) {
     let done = false
     let canceled = false
     let awaiting = false
@@ -52,7 +52,7 @@ export default function asyncEachOfLimit(generator: AsyncIterableIterator<T>, li
         replenish()
     }
 
-    function handleError(err: Error) {
+    function handleError(err: any) {
         if (canceled) return
         awaiting = false
         done = true

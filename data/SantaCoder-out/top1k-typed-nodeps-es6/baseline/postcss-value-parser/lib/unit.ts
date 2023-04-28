@@ -45,7 +45,7 @@ function likeNumber(value: string) {
 
 // Consume a number
 // https://www.w3.org/TR/css-syntax-3/#consume-number
-export default function(value: number) {
+export default function(value: string) {
   var pos = 0;
   var length = value.length;
   var code;

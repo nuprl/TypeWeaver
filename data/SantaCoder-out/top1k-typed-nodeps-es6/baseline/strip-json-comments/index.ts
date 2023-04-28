@@ -16,7 +16,7 @@ const isEscaped = (jsonString, quotePosition) => {
 	return Boolean(backslashCount % 2);
 };
 
-export default function stripJsonComments(jsonString: string, {whitespace = true: any, trailingCommas = false} = {}: {}) {
+export default function stripJsonComments(jsonString: string, {whitespace = true: whitespace, trailingCommas = false} = {}: Options) {
 	if (typeof jsonString !== 'string') {
 		throw new TypeError(`Expected argument \`jsonString\` to be a \`string\`, got \`${typeof jsonString}\``);
 	}

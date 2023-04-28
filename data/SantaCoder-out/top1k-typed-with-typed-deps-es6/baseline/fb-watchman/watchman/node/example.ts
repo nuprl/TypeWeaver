@@ -18,7 +18,7 @@ client.on('error', function(error: any) {
   console.error('Error while talking to watchman: ', error);
 });
 
-client.capabilityCheck({required:['relative_root']}, function (error: any, resp: AxiosResponse) {
+client.capabilityCheck({required:['relative_root']}, function (error: any, resp: any) {
   if (error) {
     console.error('Error checking capabilities:', error);
     return;
@@ -94,7 +94,7 @@ client.command(['watch-project', process.cwd()], function(error: any, resp: any)
   // Note that this emits for all subscriptions.  If you have
   // subscriptions with different `fields` you will need to check
   // the subscription name and handle the differing data accordingly
-  client.on('subscription', function(resp: AxiosResponse) {
+  client.on('subscription', function(resp: any) {
     // Each entry in `resp.files` will have the fields you requested
     // in your subscription.  The default is:
     //  { name: 'example.js',

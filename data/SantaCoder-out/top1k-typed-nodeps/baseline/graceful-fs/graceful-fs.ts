@@ -99,7 +99,7 @@ if (process.env.TEST_GRACEFUL_FS_GLOBAL_PATCH && !fs.__patched) {
     fs.__patched = true;
 }
 
-function patch (fs: FS) {
+function patch (fs: any) {
   // Everything that references the open() function needs to be in here
   polyfills(fs)
   fs.gracefulify = patch
@@ -108,14 +108,14 @@ function patch (fs: FS) {
   fs.createWriteStream = createWriteStream
   var fs$readFile = fs.readFile
   fs.readFile = readFile
-  function readFile (path: string, options: ReadFileOptions, cb: any) {
+  function readFile (path: string, options: any, cb: any) {
     if (typeof options === 'function')
       cb = options, options = null
 
     return go$readFile(path, options, cb)
 
-    function go$readFile (path: string, options: ReadFileOptions, cb: any, startTime: number) {
-      return fs$readFile(path, options, function (err: Error) {
+    function go$readFile (path: string, options: any, cb: any, startTime: any) {
+      return fs$readFile(path, options, function (err: any) {
         if (err && (err.code === 'EMFILE' || err.code === 'ENFILE'))
           enqueue([go$readFile, [path, options, cb], err, startTime || Date.now(), Date.now()])
         else {
@@ -128,14 +128,14 @@ function patch (fs: FS) {
 
   var fs$writeFile = fs.writeFile
   fs.writeFile = writeFile
-  function writeFile (path: string, data: string, options: WriteFileOptions, cb: any) {
+  function writeFile (path: string, data: string, options: Object, cb: Function) {
     if (typeof options === 'function')
       cb = options, options = null
 
     return go$writeFile(path, data, options, cb)
 
-    function go$writeFile (path: string, data: any, options: WriteFileOptions, cb: any, startTime: number) {
-      return fs$writeFile(path, data, options, function (err: Error) {
+    function go$writeFile (path: string, data: string, options: any, cb: any, startTime: any) {
+      return fs$writeFile(path, data, options, function (err: any) {
         if (err && (err.code === 'EMFILE' || err.code === 'ENFILE'))
           enqueue([go$writeFile, [path, data, options, cb], err, startTime || Date.now(), Date.now()])
         else {
@@ -149,14 +149,14 @@ function patch (fs: FS) {
   var fs$appendFile = fs.appendFile
   if (fs$appendFile)
     fs.appendFile = appendFile
-  function appendFile (path: string, data: string, options: IFileWriteOptions, cb: any) {
+  function appendFile (path: string, data: string, options: any, cb: Function) {
     if (typeof options === 'function')
       cb = options, options = null
 
     return go$appendFile(path, data, options, cb)
 
-    function go$appendFile (path: string, data: string, options: AppendFileOptions, cb: any, startTime: number) {
-      return fs$appendFile(path, data, options, function (err: Error) {
+    function go$appendFile (path: string, data: string, options: any, cb: Function, startTime: number) {
+      return fs$appendFile(path, data, options, function (err: any) {
         if (err && (err.code === 'EMFILE' || err.code === 'ENFILE'))
           enqueue([go$appendFile, [path, data, options, cb], err, startTime || Date.now(), Date.now()])
         else {
@@ -170,7 +170,7 @@ function patch (fs: FS) {
   var fs$copyFile = fs.copyFile
   if (fs$copyFile)
     fs.copyFile = copyFile
-  function copyFile (src: string, dest: string, flags: number, cb: any) {
+  function copyFile (src: string, dest: string, flags: number, cb: Function) {
     if (typeof flags === 'function') {
       cb = flags
       flags = 0
@@ -178,7 +178,7 @@ function patch (fs: FS) {
     return go$copyFile(src, dest, flags, cb)
 
     function go$copyFile (src: string, dest: string, flags: number, cb: any, startTime: number) {
-      return fs$copyFile(src, dest, flags, function (err: Error) {
+      return fs$copyFile(src, dest, flags, function (err: any) {
         if (err && (err.code === 'EMFILE' || err.code === 'ENFILE'))
           enqueue([go$copyFile, [src, dest, flags, cb], err, startTime || Date.now(), Date.now()])
         else {
@@ -192,7 +192,7 @@ function patch (fs: FS) {
   var fs$readdir = fs.readdir
   fs.readdir = readdir
   var noReaddirOptionVersions = /^v[0-5]\./
-  function readdir (path: string, options: any, cb: any) {
+  function readdir (path: string, options: readdir.Options, cb: readdir.Callback) {
     if (typeof options === 'function')
       cb = options, options = null
 
@@ -202,7 +202,7 @@ function patch (fs: FS) {
           path, options, cb, startTime
         ))
       }
-      : function go$readdir (path: string, options: any, cb: any, startTime: number) {
+      : function go$readdir (path: string, options: any, cb: Function, startTime: number) {
         return fs$readdir(path, options, fs$readdirCallback(
           path, options, cb, startTime
         ))
@@ -210,8 +210,8 @@ function patch (fs: FS) {
 
     return go$readdir(path, options, cb)
 
-    function fs$readdirCallback (path: string, options: fs$readdirCallbackOptions, cb: any, startTime: number) {
-      return function (err: Error, files: string[]) {
+    function fs$readdirCallback (path: string, options: fs$readdirOptions, cb: fs$readdirCallback, startTime: number) {
+      return function (err: any, files: any) {
         if (err && (err.code === 'EMFILE' || err.code === 'ENFILE'))
           enqueue([
             go$readdir,
@@ -253,7 +253,7 @@ function patch (fs: FS) {
     get: function () {
       return ReadStream
     },
-    set: function (val: string) {
+    set: function (val: any) {
       ReadStream = val
     },
     enumerable: true,
@@ -263,7 +263,7 @@ function patch (fs: FS) {
     get: function () {
       return WriteStream
     },
-    set: function (val: string) {
+    set: function (val: any) {
       WriteStream = val
     },
     enumerable: true,
@@ -276,7 +276,7 @@ function patch (fs: FS) {
     get: function () {
       return FileReadStream
     },
-    set: function (val: string) {
+    set: function (val: any) {
       FileReadStream = val
     },
     enumerable: true,
@@ -287,14 +287,14 @@ function patch (fs: FS) {
     get: function () {
       return FileWriteStream
     },
-    set: function (val: string) {
+    set: function (val: any) {
       FileWriteStream = val
     },
     enumerable: true,
     configurable: true
   })
 
-  function ReadStream (path: string, options: ReadableOptions) {
+  function ReadStream (path: string, options: ReadStreamOptions) {
     if (this instanceof ReadStream)
       return fs$ReadStream.apply(this, arguments), this
     else
@@ -303,7 +303,7 @@ function patch (fs: FS) {
 
   function ReadStream$open () {
     var that = this
-    open(that.path, that.flags, that.mode, function (err: Error, fd: number) {
+    open(that.path, that.flags, that.mode, function (err: any, fd: any) {
       if (err) {
         if (that.autoClose)
           that.destroy()
@@ -317,7 +317,7 @@ function patch (fs: FS) {
     })
   }
 
-  function WriteStream (path: string, options: WriteStreamOptions) {
+  function WriteStream (path: string, options: any) {
     if (this instanceof WriteStream)
       return fs$WriteStream.apply(this, arguments), this
     else
@@ -337,24 +337,24 @@ function patch (fs: FS) {
     })
   }
 
-  function createReadStream (path: string, options: ReadableOptions) {
+  function createReadStream (path: string, options: any) {
     return new fs.ReadStream(path, options)
   }
 
-  function createWriteStream (path: string, options: WriteFileOptions) {
+  function createWriteStream (path: string, options: any) {
     return new fs.WriteStream(path, options)
   }
 
   var fs$open = fs.open
   fs.open = open
-  function open (path: string, flags: string, mode: number, cb: any) {
+  function open (path: string, flags: number, mode: number, cb: any) {
     if (typeof mode === 'function')
       cb = mode, mode = null
 
     return go$open(path, flags, mode, cb)
 
     function go$open (path: string, flags: number, mode: number, cb: any, startTime: number) {
-      return fs$open(path, flags, mode, function (err: Error, fd: number) {
+      return fs$open(path, flags, mode, function (err: any, fd: number) {
         if (err && (err.code === 'EMFILE' || err.code === 'ENFILE'))
           enqueue([go$open, [path, flags, mode, cb], err, startTime || Date.now(), Date.now()])
         else {

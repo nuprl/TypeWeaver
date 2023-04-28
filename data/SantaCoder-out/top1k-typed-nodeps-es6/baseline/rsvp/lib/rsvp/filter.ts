@@ -57,11 +57,11 @@ class FilterEnumerator extends MapEnumerator {
 
   let promises = [promise1, promise2, promise3];
 
-  let filterFn = function(item: any){
+  let filterFn = function(item: number){
     return item > 1;
   };
 
-  filter(promises, filterFn).then(function(result: number){
+  filter(promises, filterFn).then(function(result: number[]){
     // result is [ 2, 3 ]
   });
   ```
@@ -78,11 +78,11 @@ class FilterEnumerator extends MapEnumerator {
   let promise3 = reject(new Error('3'));
   let promises = [ promise1, promise2, promise3 ];
 
-  let filterFn = function(item: any){
+  let filterFn = function(item: number){
     return item > 1;
   };
 
-  filter(promises, filterFn).then(function(array: number[]){
+  filter(promises, filterFn).then(function(array: any){
     // Code here never runs because there are rejected promises!
   }, function(reason: any) {
     // reason.message === '2'
@@ -106,7 +106,7 @@ class FilterEnumerator extends MapEnumerator {
 
   let filterFn = function(user: User){
     // Here, Alice has permissions to create a blog post, but Bob does not.
-    return getPrivilegesForUser(user).then(function(privs: IAuthServicePrivate){
+    return getPrivilegesForUser(user).then(function(privs: any){
       return privs.can_create_blog_post === true;
     });
   };
@@ -130,13 +130,13 @@ class FilterEnumerator extends MapEnumerator {
   @return {Promise}
 */
 
-export default function filter(promises: Promise<T>[], filterFn: any, label: string) {
+export default function filter(promises: Promise<any>[], filterFn: any, label: string) {
   if (typeof filterFn !== 'function') {
     return Promise.reject(new TypeError("filter expects function as a second argument"), label);
   }
 
   return Promise.resolve(promises, label)
-    .then(function(promises: Promise<any>[]) {
+    .then(function(promises: Array<Promise<any>>) {
       if (!Array.isArray(promises)) {
         throw new TypeError("filter must be called with an array");
       }

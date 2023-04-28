@@ -21,7 +21,7 @@ var debugTestPort = debug('portfinder:testPort'),
 
 var internals = {};
 
-internals.testPort = function(options: IOptions, callback: any) {
+internals.testPort = function(options: any, callback: any) {
   if (!callback) {
     callback = options;
     options = {};
@@ -43,7 +43,7 @@ internals.testPort = function(options: IOptions, callback: any) {
     callback(null, options.port);
   }
 
-  function onError (err: any) {
+  function onError (err: Error) {
     debugTestPort("done w/ testPort(): failed", options.host, "w/ port", options.port, "with error", err.code);
 
     options.server.removeListener('listening', onListen);
@@ -115,12 +115,12 @@ exports.setHighestPort = function (port: number) {
 exports.basePath = '/tmp/portfinder'
 
 //
-// ### function getPort (options: IOptions, callback: any)
+// ### function getPort (options: any, callback: any)
 // #### @options {Object} Settings to use when finding the necessary port
 // #### @callback {function} Continuation to respond to when complete.
 // Responds with a unbound port on the current machine.
 //
-exports.getPort = function (options: IOptions, callback: any) {
+exports.getPort = function (options: any, callback: any) {
   if (!callback) {
     callback = options;
     options = {};
@@ -163,7 +163,7 @@ exports.getPort = function (options: IOptions, callback: any) {
         return next();
       }
     });
-  }, function(err: Error) {
+  }, function(err: any) {
 
     if (err) {
       debugGetPort("in eachSeries() result callback: err is", err);
@@ -214,11 +214,11 @@ exports.getPort = function (options: IOptions, callback: any) {
 };
 
 //
-// ### function getPortPromise (options: PortOptions)
+// ### function getPortPromise (options: any)
 // #### @options {Object} Settings to use when finding the necessary port
 // Responds a promise to an unbound port on the current machine.
 //
-exports.getPortPromise = function (options: IOptions) {
+exports.getPortPromise = function (options: any) {
   if (typeof Promise !== 'function') {
     throw Error('Native promise support is not available in this version of node.' +
       'Please install a polyfill and assign Promise to global.Promise before calling this method');
@@ -226,7 +226,7 @@ exports.getPortPromise = function (options: IOptions) {
   if (!options) {
     options = {};
   }
-  return new Promise(function(resolve: any, reject: any) {
+  return new Promise(function(resolve: Function, reject: Function) {
     exports.getPort(options, function(err: Error, port: number) {
       if (err) {
         return reject(err);
@@ -237,20 +237,20 @@ exports.getPortPromise = function (options: IOptions) {
 }
 
 //
-// ### function getPorts (count: number, options: GetPortsOptions, callback: any)
+// ### function getPorts (count: number, options: any, callback: any)
 // #### @count {Number} The number of ports to find
 // #### @options {Object} Settings to use when finding the necessary port
 // #### @callback {function} Continuation to respond to when complete.
 // Responds with an array of unbound ports on the current machine.
 //
-exports.getPorts = function (count: number, options: IOptions, callback: any) {
+exports.getPorts = function (count: number, options: any, callback: any) {
   if (!callback) {
     callback = options;
     options = {};
   }
 
   var lastPort = null;
-  _async.timesSeries(count, function(index: number, asyncCallback: any) {
+  _async.timesSeries(count, function(index: number, asyncCallback: Function) {
     if (lastPort) {
       options.port = exports.nextPort(lastPort);
     }
@@ -267,13 +267,13 @@ exports.getPorts = function (count: number, options: IOptions, callback: any) {
 };
 
 //
-// ### function getSocket (options: SocketOptions, callback: any)
+// ### function getSocket (options: any, callback: any)
 // #### @options {Object} Settings to use when finding the necessary port
 // #### @callback {function} Continuation to respond to when complete.
 // Responds with a unbound socket using the specified directory and base
 // name on the current machine.
 //
-exports.getSocket = function (options: IOptions, callback: any) {
+exports.getSocket = function (options: any, callback: any) {
   if (!callback) {
     callback = options;
     options = {};
@@ -286,7 +286,7 @@ exports.getSocket = function (options: IOptions, callback: any) {
   // Tests the specified socket
   //
   function testSocket () {
-    fs.stat(options.path, function (err: Error) {
+    fs.stat(options.path, function (err: any) {
       //
       // If file we're checking doesn't exist (thus, stating it emits ENOENT),
       // we should be OK with listening on this socket.
@@ -315,7 +315,7 @@ exports.getSocket = function (options: IOptions, callback: any) {
   // against the socket.
   //
   function createAndTestSocket (dir: string) {
-    mkdirp(dir, options.mod, function (err: Error) {
+    mkdirp(dir, options.mod, function (err: any) {
       if (err) {
         return callback(err);
       }
@@ -334,7 +334,7 @@ exports.getSocket = function (options: IOptions, callback: any) {
   function checkAndTestSocket () {
     var dir = path.dirname(options.path);
 
-    fs.stat(dir, function (err: Error, stats: Stats) {
+    fs.stat(dir, function (err: any, stats: any) {
       if (err || !stats.isDirectory()) {
         return createAndTestSocket(dir);
       }

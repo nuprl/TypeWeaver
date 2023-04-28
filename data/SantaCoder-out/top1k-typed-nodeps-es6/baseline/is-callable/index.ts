@@ -56,7 +56,7 @@ if (typeof document === 'object') {
 	// Firefox 3 canonicalized DDA to undefined when it's not accessed directly
 	var all = document.all;
 	if (toStr.call(all) === toStr.call(document.all)) {
-		isDDA = function isDocumentDotAll(value: string) {
+		isDDA = function isDocumentDotAll(value: any) {
 			/* globals document: false */
 			// in IE 6-8, typeof document.all is "object" and it's truthy
 			if ((isIE68 || !value) && (typeof value === 'undefined' || typeof value === 'object')) {

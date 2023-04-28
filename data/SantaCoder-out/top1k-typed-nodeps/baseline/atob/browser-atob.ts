@@ -1,7 +1,7 @@
 (function (w: Window) {
   "use strict";
 
-  function findBest(atobNative: Function) {
+  function findBest(atobNative: any) {
     // normal window
     if ('function' === typeof atobNative) { return atobNative; }
 

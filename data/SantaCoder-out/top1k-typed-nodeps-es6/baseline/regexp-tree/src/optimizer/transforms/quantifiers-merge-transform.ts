@@ -105,7 +105,7 @@ function isGreedyOpenRange(quantifier: Quantifier) {
     );
 }
 
-function extractFromTo(quantifier: string) {
+function extractFromTo(quantifier: Quantifier) {
   let from, to;
   if (quantifier.kind === '*') {
     from = 0;

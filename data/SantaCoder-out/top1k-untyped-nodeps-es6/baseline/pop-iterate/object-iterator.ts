@@ -4,7 +4,7 @@ import Iteration from './iteration';
 import ArrayIterator from './array-iterator';
 
 export default ObjectIterator;
-function ObjectIterator(iterable: any, start: number, stop: number, step: number) {
+function ObjectIterator(iterable: Iterable<any>, start: number, stop: number, step: number) {
     this.object = iterable;
     this.keysIterator = new ArrayIterator(Object.keys(iterable), start, stop, step);
 }

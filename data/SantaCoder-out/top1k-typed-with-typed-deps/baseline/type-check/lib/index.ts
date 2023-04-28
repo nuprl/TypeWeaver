@@ -4,7 +4,7 @@
   VERSION = '0.4.0';
   parseType = require('./parse-type');
   parsedTypeCheck = require('./check');
-  typeCheck = function(type: string, input: any, options: any){
+  typeCheck = function(type: string, input: string, options: any){
     return parsedTypeCheck(parseType(type), input, options);
   };
   module.exports = {

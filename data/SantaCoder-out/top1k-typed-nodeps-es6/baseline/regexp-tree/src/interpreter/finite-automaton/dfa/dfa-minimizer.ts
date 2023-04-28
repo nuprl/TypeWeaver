@@ -158,7 +158,7 @@ function minimize(dfa: DFA) {
   return dfa;
 }
 
-function sameRow(r1: any, r2: any) {
+function sameRow(r1: number, r2: number) {
   if (!r2) {
     return false;
   }
@@ -199,7 +199,7 @@ function areEquivalent(s1: string, s2: string, table: string, alphabet: string) 
 /**
  * Checks whether states go to the same set.
  */
-function goToSameSet(s1: string, s2: string, table: Table, symbol: Symbol) {
+function goToSameSet(s1: string, s2: string, table: string, symbol: string) {
   if (!currentTransitionMap[s1] || !currentTransitionMap[s2]) {
     return false;
   }

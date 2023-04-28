@@ -3,7 +3,7 @@
 'use strict';
 
 
-function formatError(exception: any, compact: boolean) {
+function formatError(exception: Error, compact: boolean) {
   var where = '', message = exception.reason || '(unknown reason)';
 
   if (!exception.mark) return message;

@@ -1,6 +1,6 @@
 module.exports = repeat;
 
-function repeat(ele: string, num: number) {
+function repeat(ele: any, num: number) {
   var arr = new Array(num);
 
   while (num--) {

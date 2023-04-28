@@ -18,7 +18,7 @@ var base2 = {
   namespace: ""
 };
 
-new function(_no_shrink_: boolean) { ///////////////  BEGIN: CLOSURE  ///////////////
+new function(_no_shrink_: bool) { ///////////////  BEGIN: CLOSURE  ///////////////
 
 // =========================================================================
 // base2/header.js
@@ -111,13 +111,13 @@ var Base = _subclass.call(Object, {
   
   extend: delegate(extend)
 }, Base = {
-  ancestorOf: function(klass: Class<any>) {
+  ancestorOf: function(klass: Function) {
     return _ancestorOf(this, klass);
   },
   
   extend: _subclass,
     
-  forEach: function(object: any, block: Block, context: BlockExecutionContext) {
+  forEach: function(object: any, block: any, context: any) {
     _Function_forEach(this, object, block, context);
   },
   
@@ -141,7 +141,7 @@ var Base = _subclass.call(Object, {
 // =========================================================================
 
 var Package = Base.extend({
-  constructor: function(_private: IExtendable, _public: IExtendable) {
+  constructor: function(_private: any, _public: any) {
     this.extend(_public);
     if (this.init) this.init();
     
@@ -183,7 +183,7 @@ var Package = Base.extend({
       };
     }
 
-    function lookup(names: string[]) {
+    function lookup(names: string) {
       names = names.split(".");
       var value = base2, i = 0;
       while (value && names[i] != null) {
@@ -235,7 +235,7 @@ var _moduleCount = 0;
 var Module = Abstract.extend(null, {
   namespace: "",
 
-  extend: function(_interface: IInterface, _static: IStatic) {
+  extend: function(_interface: any, _static: any) {
     // Extend a module to create a new module.
     var module = this.base();
     var index = _moduleCount++;
@@ -255,15 +255,15 @@ var Module = Abstract.extend(null, {
     return module;
   },
 
-  forEach: function(block: Blockly.Block, context: Blockly.BlockRenderingContext) {
-    _Function_forEach (Module, this.prototype, function(method: string, name: string) {
+  forEach: function(block: Block, context: Context) {
+    _Function_forEach (Module, this.prototype, function(method: Function, name: string) {
       if (typeOf(method) == "function") {
         block.call(context, this[name], name, this);
       }
     }, this);
   },
 
-  implement: function(_interface: IInterface) {
+  implement: function(_interface: any) {
     var module = this;
     var id = module.toString().slice(1, -1);
     if (typeof _interface == "function") {
@@ -332,7 +332,7 @@ function _staticModuleMethod(module: any, name: string) {
   };
 };
 
-function _moduleMethod(module: Module, name: string) {
+function _moduleMethod(module: any, name: string) {
   return function() {
     var args = _slice.call(arguments);
     args.unshift(this);
@@ -345,7 +345,7 @@ function _moduleMethod(module: Module, name: string) {
 // =========================================================================
 
 var Enumerable = Module.extend({
-  every: function(object: any, test: any, context: any) {
+  every: function(object: Object, test: Function, context: Object) {
     var result = true;
     try {
       forEach (object, function(value: any, key: string) {
@@ -378,7 +378,7 @@ var Enumerable = Module.extend({
     });
   },
   
-  map: function(object: any, block: any, context: any) {
+  map: function(object: Object, block: Object, context: Object) {
     var result = [], i = 0;
     forEach (object, function(value: any, key: string) {
       result[i++] = block.call(context, value, key, object);
@@ -419,7 +419,7 @@ var Enumerable = Module.extend({
 var _HASH = "#";
 
 var Map = Base.extend({
-  constructor: function(values: any) {
+  constructor: function(values: T) {
     if (values) this.merge(values);
   },
 
@@ -439,7 +439,7 @@ var Map = Base.extend({
     return copy;
   },
 
-  forEach: function(block: Blockly.Block, context: Blockly.BlockRenderingContext) {
+  forEach: function(block: Block, context: Context) {
     for (var key in this) if (key.indexOf(_HASH) == 0) {
       block.call(context, this[key], key.slice(1), this);
     }
@@ -467,9 +467,9 @@ var Map = Base.extend({
   /*@end @*/
   },
 
-  merge: function(values: any[]) {
+  merge: function(values: Array<T>) {
     var put = flip(this.put);
-    forEach (arguments, function(values: any) {
+    forEach (arguments, function(values: T[]) {
       forEach (values, put, this);
     }, this);
     return this;
@@ -498,7 +498,7 @@ var Map = Base.extend({
 
 Map.implement(Enumerable);
 
-Map.prototype.filter = function(test: Test, context: TestContext) {
+Map.prototype.filter = function(test: any, context: any) {
   return this.reduce(function(result: any, value: any, key: any) {
     if (!test.call(context, value, key, this)) {
       result.remove(key);
@@ -525,7 +525,7 @@ Map.prototype.filter = function(test: Test, context: TestContext) {
 var _KEYS = "~";
 
 var Collection = Map.extend({
-  constructor: function(values: Array2<any>) {
+  constructor: function(values: Array<T>) {
     this[_KEYS] = new Array2;
     this.base(values);
   },
@@ -548,7 +548,7 @@ var Collection = Map.extend({
     return copy;
   },
 
-  forEach: function(block: Blockly.Block, context: Blockly.BlockRenderingContext) {
+  forEach: function(block: Block, context: Context) {
     var keys = this[_KEYS];
     var length = keys.length;
     for (var i = 0; i < length; i++) {
@@ -581,7 +581,7 @@ var Collection = Map.extend({
     return this[typeof keyOrIndex == "number" ? "getAt" : "get"](keyOrIndex);
   },
 
-  put: function(key: string, item: any) {
+  put: function(key: string, item: T) {
     if (!this.has(key)) {
       this[_KEYS].push(String(key));
     }
@@ -689,7 +689,7 @@ var _RG_BACK_REF        = /\\(\d+)/g,
     _RG_LOOKUP_SIMPLE   = /^\$\d+$/;
 
 var RegGrp = Collection.extend({
-  constructor: function(values: string[], ignoreCase: boolean) {
+  constructor: function(values: Array, ignoreCase: Boolean) {
     this.base(values);
     this.ignoreCase = !!ignoreCase;
   },
@@ -737,9 +737,9 @@ var RegGrp = Collection.extend({
   
   toString: function() {
     var offset = 1;
-    return "(" + this.map(function(item: IItem) {
+    return "(" + this.map(function(item: any) {
       // Fix back references.
-      var expression = (item + "").replace(_RG_BACK_REF, function(match: Match, index: number) {
+      var expression = (item + "").replace(_RG_BACK_REF, function(match: RegExpExecArray, index: number) {
         return "\\" + (offset + Number(index));
       });
       offset += item.length + 1;
@@ -751,7 +751,7 @@ var RegGrp = Collection.extend({
   
   init: function() {
     forEach ("add,get,has,put,remove".split(","), function(name: string) {
-      _override(this, name, function(expression: Expression) {
+      _override(this, name, function(expression: string) {
         if (instanceOf(expression, RegExp)) {
           arguments[0] = expression.source;
         }
@@ -796,7 +796,7 @@ var RegGrp = Collection.extend({
     replacement: ""
   },
   
-  count: function(expression: Expression) {
+  count: function(expression: string) {
     // Count the number of sub-expressions in a RegExp/RegGrp.Item.
     expression = (expression + "").replace(_RG_ESCAPE_CHARS, "").replace(_RG_ESCAPE_BRACKETS, "");
     return match(expression, _RG_BRACKETS).length;
@@ -818,7 +818,7 @@ var lang = {
 // lang/assert.js
 // =========================================================================
 
-function assert(condition: boolean, message: string, ErrorClass: Error) {
+function assert(condition: boolean, message: string, ErrorClass: any) {
   if (!condition) {
     throw new (ErrorClass || Error)(message || "Assertion failed.");
   }
@@ -841,7 +841,7 @@ function assertType(object: any, type: string, message: string) {
 // lang/copy.js
 // =========================================================================
 
-function copy(object: any) {
+function copy(object: Object) {
   // a quick copy
   var copy = {};
   for (var i in object) {
@@ -862,7 +862,7 @@ function _dummy(){};
 // lang/extend.js
 // =========================================================================
 
-function base(object: any, args: any[]) {
+function base(object: Object, args: Array<any>) {
   return object.base.apply(object, args);
 };
 
@@ -917,7 +917,7 @@ function extend(object: any, source: any) { // or extend(object, key, value)
   return object;
 };
 
-function _ancestorOf(ancestor: any, fn: any) {
+function _ancestorOf(ancestor: HTMLElement, fn: any) {
   // Check if a function is in another function's inheritance chain.
   while (fn) {
     if (!fn.ancestor) return false;
@@ -927,7 +927,7 @@ function _ancestorOf(ancestor: any, fn: any) {
   return false;
 };
 
-function _override(object: any, name: string, method: Function) {
+function _override(object: Object, name: string, method: Function) {
   // Override an existing method.
   var ancestor = object[name];
   var superObject = base2.__prototyping; // late binding for prototypes
@@ -956,7 +956,7 @@ if (typeof StopIteration == "undefined") {
   StopIteration = new Error("StopIteration");
 }
 
-function forEach(object: any, block: any, context: any, fn: any) {
+function forEach(object: Object, block: Function, context: Object, fn: Function) {
   if (object == null) return;
   if (!fn) {
     if (typeof object == "function" && object.call) {
@@ -975,12 +975,12 @@ function forEach(object: any, block: any, context: any, fn: any) {
   _Function_forEach(fn || Object, object, block, context);
 };
 
-forEach.csv = function(string: string, block: Block, context: Context) {
+forEach.csv = function(string: string, block: Function, context: any) {
   forEach (csv(string), block, context);
 };
 
-forEach.detect = function(object: any, block: Block, context: any) {
-  forEach (object, function(value: string, key: string) {
+forEach.detect = function(object: any, block: any, context: any) {
+  forEach (object, function(value: any, key: string) {
     if (key.charAt(0) == "@") { // object detection
       if (detect(key.slice(1))) forEach (value, arguments.callee);
     } else block.call(context, value, key, object);
@@ -990,7 +990,7 @@ forEach.detect = function(object: any, block: Block, context: any) {
 // These are the two core enumeration methods. All other forEach methods
 //  eventually call one of these two.
 
-function _Array_forEach(array: any, block: any, context: any) {
+function _Array_forEach(array: Array<any>, block: Function, context: any) {
   if (array == null) array = global;
   var length = array.length || 0, i; // preserve length
   if (typeof array == "string") {
@@ -1010,7 +1010,7 @@ function _Array_forEach(array: any, block: any, context: any) {
   }
 };
 
-function _Function_forEach(fn: any, object: any, block: any, context: any) {
+function _Function_forEach(fn: Function, object: Object, block: Function, context: Object) {
   // http://code.google.com/p/base2/issues/detail?id=10
   
   // Run the test for Safari's buggy enumeration.
@@ -1020,7 +1020,7 @@ function _Function_forEach(fn: any, object: any, block: any, context: any) {
   for (var i in new Temp) count++;
   
   // Overwrite the main function the first time it is called.
-  _Function_forEach = (count > 1) ? function(fn: Function, object: any, block: any, context: any) {
+  _Function_forEach = (count > 1) ? function(fn: Function, object: Object, block: Function, context: Object) {
     // Safari fix (pre version 3)
     var processed = {};
     for (var key in object) {
@@ -1029,7 +1029,7 @@ function _Function_forEach(fn: any, object: any, block: any, context: any) {
         block.call(context, object[key], key, object);
       }
     }
-  } : function(fn: Function, object: any, block: any, context: any) {
+  } : function(fn: Function, object: Object, block: Function, context: Object) {
     // Enumerate an object and compare its keys with fn's prototype.
     for (var key in object) {
       if (fn.prototype[key] === undefined) {
@@ -1245,26 +1245,26 @@ var Array2 = _createObject2(
   Array,
   "concat,join,pop,push,reverse,shift,slice,sort,splice,unshift", // generics
   Enumerable, {
-    combine: function(keys: string[], values: string[]) {
+    combine: function(keys: string[], values: any[]) {
       // Combine two arrays to make a hash.
       if (!values) values = keys;
-      return Array2.reduce(keys, function(hash: any, key: any, index: number) {
+      return Array2.reduce(keys, function(hash: Object, key: String, index: Number) {
         hash[key] = values[index];
         return hash;
       }, {});
     },
 
-    contains: function(array: any[], item: any) {
+    contains: function(array: Array, item: any) {
       return Array2.indexOf(array, item) != -1;
     },
 
-    copy: function(array: any[]) {
+    copy: function(array: Array<T>) {
       var copy = _slice.call(array);
       if (!copy.swap) Array2(copy); // cast to Array2
       return copy;
     },
 
-    flatten: function(array: number[]) {
+    flatten: function(array: Array<T>) {
       var i = 0;
       return Array2.reduce(array, function(result: any, item: any) {
         if (Array2.like(item)) {
@@ -1278,7 +1278,7 @@ var Array2 = _createObject2(
     
     forEach: _Array_forEach,
     
-    indexOf: function(array: Array<any>, item: any, fromIndex: number) {
+    indexOf: function(array: Array, item: any, fromIndex: number) {
       var length = array.length;
       if (fromIndex == null) {
         fromIndex = 0;
@@ -1291,17 +1291,17 @@ var Array2 = _createObject2(
       return -1;
     },
     
-    insertAt: function(array: any[], index: number, item: any) {
+    insertAt: function(array: Array<T>, index: number, item: T) {
       Array2.splice(array, index, 0, item);
       return item;
     },
     
-    item: function(array: number[], index: number) {
+    item: function(array: Array<T>, index: number) {
       if (index < 0) index += array.length; // starting from the end
       return array[index];
     },
     
-    lastIndexOf: function(array: any[], item: any, fromIndex: number) {
+    lastIndexOf: function(array: Array<T>, item: T, fromIndex: number) {
       var length = array.length;
       if (fromIndex == null) {
         fromIndex = length - 1;
@@ -1314,7 +1314,7 @@ var Array2 = _createObject2(
       return -1;
     },
   
-    map: function(array: any, block: any, context: any) {
+    map: function(array: Array, block: Function, context: Object) {
       var result = [];
       Array2.forEach (array, function(item: any, index: number) {
         result[index] = block.call(context, item, index, array);
@@ -1322,16 +1322,16 @@ var Array2 = _createObject2(
       return result;
     },
 
-    remove: function(array: any[], item: any) {
+    remove: function(array: Array<T>, item: T) {
       var index = Array2.indexOf(array, item);
       if (index != -1) Array2.removeAt(array, index);
     },
 
-    removeAt: function(array: Array<any>, index: number) {
+    removeAt: function(array: Array<T>, index: number) {
       Array2.splice(array, index, 1);
     },
 
-    swap: function(array: number[], index1: number, index2: number) {
+    swap: function(array: Array<T>, index1: number, index2: number) {
       if (index1 < 0) index1 += array.length; // starting from the end
       if (index2 < 0) index2 += array.length;
       var temp = array[index1];
@@ -1482,7 +1482,7 @@ function format(string: string) {
   // Only %1 - %9 supported.
   var args = arguments;
   var pattern = new RegExp("%([1-" + (arguments.length - 1) + "])", "g");
-  return (string + "").replace(pattern, function(match: RegExpMatchArray, index: number) {
+  return (string + "").replace(pattern, function(match: string, index: number) {
     return args[index];
   });
 };
@@ -1527,7 +1527,7 @@ function II(i: number, ii: number) { // return second argument
   return ii;
 };
 
-function K(k: number) {
+function K(k: T) {
   return function() {
     return k;
   };
@@ -1556,7 +1556,7 @@ function compose() {
   };
 };
 
-function delegate(fn: Function, context: any) {
+function delegate(fn: Function, context: Object) {
   return function() {
     var args = _slice.call(arguments);
     args.unshift(this);

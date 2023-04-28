@@ -28,7 +28,7 @@ function hasOwnProperty(obj: any, prop: string) {
   return Object.prototype.hasOwnProperty.call(obj, prop);
 }
 
-module.exports = function(qs: string, sep: string, eq: string, options: string) {
+module.exports = function(qs: string, sep: string, eq: string, options: any) {
   sep = sep || '&';
   eq = eq || '=';
   var obj = {};

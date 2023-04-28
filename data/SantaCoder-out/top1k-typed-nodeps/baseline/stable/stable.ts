@@ -14,7 +14,7 @@
     return exec(arr.slice(), comp)
   };
 
-  stable.inplace = function (arr: string[], comp: string) {
+  stable.inplace = function (arr: any[], comp: any) {
     var result = exec(arr, comp);
 
     // This simply copies back if the result isn't in the original array,
@@ -57,7 +57,7 @@
   }
 
   // Run a single pass with the given chunk size.
-  var pass = function (arr: any[], comp: any, chk: any, result: any) {
+  var pass = function (arr: Array<T>, comp: any, chk: any, result: Array<T>) {
     var len = arr.length;
     var i = 0;
     // Step size / double chunk size.

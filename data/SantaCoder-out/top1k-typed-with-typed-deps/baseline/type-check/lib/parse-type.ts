@@ -2,7 +2,7 @@
 (function(){
   var identifierRegex, tokenRegex;
   identifierRegex = /[\$\w]+/;
-  function peek(tokens: Token[]){
+  function peek(tokens: Array<Token>){
     var token;
     token = tokens[0];
     if (token == null) {
@@ -10,7 +10,7 @@
     }
     return token;
   }
-  function consumeIdent(tokens: Token[]){
+  function consumeIdent(tokens: Array<Token>){
     var token;
     token = peek(tokens);
     if (!identifierRegex.test(token)) {
@@ -18,7 +18,7 @@
     }
     return tokens.shift();
   }
-  function consumeOp(tokens: Token[], op: string){
+  function consumeOp(tokens: Array, op: string){
     var token;
     token = peek(tokens);
     if (token !== op) {
@@ -26,7 +26,7 @@
     }
     return tokens.shift();
   }
-  function maybeConsumeOp(tokens: Token[], op: string){
+  function maybeConsumeOp(tokens: Array<Token>, op: string){
     var token;
     token = tokens[0];
     if (token === op) {
@@ -35,7 +35,7 @@
       return null;
     }
   }
-  function consumeArray(tokens: IToken[]){
+  function consumeArray(tokens: Array<Token>){
     var types;
     consumeOp(tokens, '[');
     if (peek(tokens) === ']') {
@@ -48,7 +48,7 @@
       of: types
     };
   }
-  function consumeTuple(tokens: TokenList){
+  function consumeTuple(tokens: Token[]){
     var components;
     components = [];
     consumeOp(tokens, '(');
@@ -92,7 +92,7 @@
       subset: subset
     };
   }
-  function consumeField(tokens: any){
+  function consumeField(tokens: Array<Token>){
     var key, types;
     key = consumeIdent(tokens);
     consumeOp(tokens, ':');
@@ -190,7 +190,7 @@
       throw new Error(e.message + " - Remaining tokens: " + JSON.stringify(tokens) + " - Initial input: '" + input + "'");
     }
   };
-  function in$(x: any, xs: any[]){
+  function in$(x: T, xs: T[]){
     var i = -1, l = xs.length >>> 0;
     while (++i < l) if (x === xs[i]) return true;
     return false;

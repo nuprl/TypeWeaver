@@ -1,7 +1,7 @@
 import isArrayLike from './isArrayLike.js'
 import getIterator from './getIterator.js'
 
-function createArrayIterator(coll: any) {
+function createArrayIterator(coll: any[]) {
     var i = -1;
     var len = coll.length;
     return function next() {
@@ -9,7 +9,7 @@ function createArrayIterator(coll: any) {
     }
 }
 
-function createES2015Iterator(iterator: Iterator<T>) {
+function createES2015Iterator(iterator: Iterator<any>) {
     var i = -1;
     return function next() {
         var item = iterator.next();

@@ -2,7 +2,7 @@
 
 var flatten = require('arr-flatten');
 
-module.exports = function diff(arr: any[], arrays: any[]) {
+module.exports = function diff(arr: any[], arrays: any[][]) {
   arrays = flatten([].slice.call(arguments, 1));
   var len = arrays.length;
   for (var i = 0; i < len; i++) {

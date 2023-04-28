@@ -1,7 +1,7 @@
 var elliptic = require('elliptic')
 var BN = require('bn.js')
 
-module.exports = function createECDH (curve: ECCurve) {
+module.exports = function createECDH (curve: string) {
   return new ECDH(curve)
 }
 
@@ -58,7 +58,7 @@ ECDH.prototype.generateKeys = function (enc: string, format: string) {
   return this.getPublicKey(enc, format)
 }
 
-ECDH.prototype.computeSecret = function (other: string, inenc: string, enc: string) {
+ECDH.prototype.computeSecret = function (other: Buffer, inenc: string, enc: string) {
   inenc = inenc || 'utf8'
   if (!Buffer.isBuffer(other)) {
     other = new Buffer(other, inenc)
@@ -84,7 +84,7 @@ ECDH.prototype.getPrivateKey = function (enc: string) {
   return formatReturnValue(this.keys.getPrivate(), enc)
 }
 
-ECDH.prototype.setPublicKey = function (pub: IPubSub, enc: string) {
+ECDH.prototype.setPublicKey = function (pub: any, enc: any) {
   enc = enc || 'utf8'
   if (!Buffer.isBuffer(pub)) {
     pub = new Buffer(pub, enc)
@@ -93,7 +93,7 @@ ECDH.prototype.setPublicKey = function (pub: IPubSub, enc: string) {
   return this
 }
 
-ECDH.prototype.setPrivateKey = function (priv: IEncryptionPrivate, enc: string) {
+ECDH.prototype.setPrivateKey = function (priv: any, enc: any) {
   enc = enc || 'utf8'
   if (!Buffer.isBuffer(priv)) {
     priv = new Buffer(priv, enc)
@@ -106,7 +106,7 @@ ECDH.prototype.setPrivateKey = function (priv: IEncryptionPrivate, enc: string) 
   return this
 }
 
-function formatReturnValue (bn: BigNumber, enc: number, len: number) {
+function formatReturnValue (bn: BN, enc: string, len: number) {
   if (!Array.isArray(bn)) {
     bn = bn.toArray()
   }

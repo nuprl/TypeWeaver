@@ -4,7 +4,7 @@ import pkg from './package.json';
 
 import babel from 'rollup-plugin-babel';
 
-export default function(grunt: Grunt) {
+export default function(grunt: any) {
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
@@ -92,7 +92,7 @@ export default function(grunt: Grunt) {
           expand: true,
           src: ['*.js', '!*.min.js'],
           dest: 'dist/',
-          rename: function(dest: string, src: string) {
+          rename: function(dest: any, src: any) {
             return dest + src.replace(/\.js$/, '.min.js');
           }
         }]

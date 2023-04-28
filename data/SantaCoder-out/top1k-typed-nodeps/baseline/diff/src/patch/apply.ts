@@ -1,7 +1,7 @@
 import {parsePatch} from './parse';
 import distanceIterator from '../util/distance-iterator';
 
-export function applyPatch(source: string, uniDiff: string, options = {}: ApplyPatchOptions) {
+export function applyPatch(source: string, uniDiff: string, options = {}: Options) {
   if (typeof uniDiff === 'string') {
     uniDiff = parsePatch(uniDiff);
   }
@@ -129,7 +129,7 @@ export function applyPatch(source: string, uniDiff: string, options = {}: ApplyP
 }
 
 // Wrapper that supports multiple file patches via callbacks.
-export function applyPatches(uniDiff: IUniDiff, options: IApplyPatchOptions) {
+export function applyPatches(uniDiff: UniDiff, options: Options) {
   if (typeof uniDiff === 'string') {
     uniDiff = parsePatch(uniDiff);
   }
@@ -147,7 +147,7 @@ export function applyPatches(uniDiff: IUniDiff, options: IApplyPatchOptions) {
       }
 
       let updatedContent = applyPatch(data, index, options);
-      options.patched(index, updatedContent, function(err: Error) {
+      options.patched(index, updatedContent, function(err: any) {
         if (err) {
           return options.complete(err);
         }

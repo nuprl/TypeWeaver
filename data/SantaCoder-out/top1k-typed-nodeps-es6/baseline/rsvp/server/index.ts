@@ -1,5 +1,5 @@
-export default function(app: express.Application) {
-  app.get('/', function(req: express.Request, res: express.Response) {
+export default function(app: any) {
+  app.get('/', function(req: Request, res: Response) {
     res.redirect('/test/');
   })
 };

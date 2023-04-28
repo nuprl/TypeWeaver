@@ -3,7 +3,7 @@
 import resolveException from '../lib/resolve-exception';
 import coerce from './coerce';
 
-export default function (value/*: number, options*/: number) {
+export default function (value/*: any, options*/: Options) {
 	var coerced = coerce(value);
 	if (coerced !== null) return coerced;
 	var options = arguments[1];

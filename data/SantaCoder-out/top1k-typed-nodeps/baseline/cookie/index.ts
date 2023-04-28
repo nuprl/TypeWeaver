@@ -44,7 +44,7 @@ var fieldContentRegExp = /^[\u0009\u0020-\u007e\u0080-\u00ff]+$/;
  * @public
  */
 
-function parse(str: string, options: ParseOptions) {
+function parse(str: string, options: Options) {
   if (typeof str !== 'string') {
     throw new TypeError('argument str must be a string');
   }
@@ -108,7 +108,7 @@ function parse(str: string, options: ParseOptions) {
  * @public
  */
 
-function serialize(name: string, val: any, options: SerializationOptions) {
+function serialize(name: string, val: any, options: any) {
   var opt = options || {};
   var enc = opt.encode || encode;
 
@@ -261,7 +261,7 @@ function isDate (val: any) {
  * @private
  */
 
-function tryDecode(str: string, decode: DecodeFunction) {
+function tryDecode(str: string, decode: any) {
   try {
     return decode(str);
   } catch (e) {

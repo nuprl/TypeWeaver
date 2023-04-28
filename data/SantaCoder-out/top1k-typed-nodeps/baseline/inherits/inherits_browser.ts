@@ -16,7 +16,7 @@ if (typeof Object.create === 'function') {
   };
 } else {
   // old school shim for old browsers
-  module.exports = function inherits(ctor: Function, superCtor: Function) {
+  module.exports = function inherits(ctor: any, superCtor: any) {
     if (superCtor) {
       ctor.super_ = superCtor
       var TempCtor = function () {}

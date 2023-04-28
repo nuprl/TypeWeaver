@@ -48,7 +48,7 @@ function rethrow() {
     }
   }
 
-  function missingCallback(err: Error) {
+  function missingCallback(err: any) {
     if (err) {
       if (process.throwDeprecation)
         throw err;  // Forgot a callback but don't know where? Use NODE_DEBUG=fs
@@ -63,7 +63,7 @@ function rethrow() {
   }
 }
 
-function maybeCallback(cb: any) {
+function maybeCallback(cb: Function) {
   return typeof cb === 'function' ? cb : rethrow();
 }
 
@@ -84,7 +84,7 @@ if (isWindows) {
   var splitRootRe = /^[\/]*/;
 }
 
-exports.realpathSync = function realpathSync(p: string, cache: Cache<string>) {
+exports.realpathSync = function realpathSync(p: string, cache: any) {
   // make p is absolute
   p = pathModule.resolve(p);
 
@@ -181,7 +181,7 @@ exports.realpathSync = function realpathSync(p: string, cache: Cache<string>) {
 };
 
 
-exports.realpath = function realpath(p: string, cache: Cache, cb: any) {
+exports.realpath = function realpath(p: string, cache: any, cb: any) {
   if (typeof cb !== 'function') {
     cb = maybeCallback(cache);
     cache = null;
@@ -219,7 +219,7 @@ exports.realpath = function realpath(p: string, cache: Cache, cb: any) {
 
     // On windows, check that the root exists. On unix there is no need.
     if (isWindows && !knownHard[base]) {
-      fs.lstat(base, function(err: Error) {
+      fs.lstat(base, function(err: any) {
         if (err) return cb(err);
         knownHard[base] = true;
         LOOP();
@@ -259,7 +259,7 @@ exports.realpath = function realpath(p: string, cache: Cache, cb: any) {
     return fs.lstat(base, gotStat);
   }
 
-  function gotStat(err: Error, stat: fs.Stats) {
+  function gotStat(err: any, stat: any) {
     if (err) return cb(err);
 
     // if not a symlink, skip to the next path part
@@ -278,17 +278,17 @@ exports.realpath = function realpath(p: string, cache: Cache, cb: any) {
         return gotTarget(null, seenLinks[id], base);
       }
     }
-    fs.stat(base, function(err: Error) {
+    fs.stat(base, function(err: any) {
       if (err) return cb(err);
 
-      fs.readlink(base, function(err: Error, target: any) {
+      fs.readlink(base, function(err: any, target: any) {
         if (!isWindows) seenLinks[id] = target;
         gotTarget(err, target);
       });
     });
   }
 
-  function gotTarget(err: Error, target: Target, base: Target) {
+  function gotTarget(err: any, target: any, base: any) {
     if (err) return cb(err);
 
     var resolvedLink = pathModule.resolve(previous, target);
@@ -296,7 +296,7 @@ exports.realpath = function realpath(p: string, cache: Cache, cb: any) {
     gotResolvedLink(resolvedLink);
   }
 
-  function gotResolvedLink(resolvedLink: ResolvedLink) {
+  function gotResolvedLink(resolvedLink: string) {
     // resolve the link, then start over
     p = pathModule.resolve(resolvedLink, p.slice(pos));
     start();

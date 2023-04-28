@@ -70,7 +70,7 @@ function constructYamlBinary(data: any) {
   return new Uint8Array(result);
 }
 
-function representYamlBinary(object /*: any, style*/: any) {
+function representYamlBinary(object /*: Uint8Array, style*/: any) {
   var result = '', bits = 0, idx, tail,
       max = object.length,
       map = BASE64_MAP;

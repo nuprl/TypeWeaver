@@ -28,17 +28,17 @@ import awaitify from './internal/awaitify.js'
  *         // next is suitable for passing to things that need a callback(err [, whatever]);
  *         // it will result in this function being called again.
  *     },
- *     function(err: Error) {
+ *     function(err: any) {
  *         // if next is called with a value in its first parameter, it will appear
  *         // in here as 'err', and execution will stop.
  *     }
  * );
  */
-function forever(fn: any, errback: any) {
+function forever(fn: Function, errback: Function) {
     var done = onlyOnce(errback);
     var task = wrapAsync(ensureAsync(fn));
 
-    function next(err: Error) {
+    function next(err: any) {
         if (err) return done(err);
         if (err === false) return;
         task(next);

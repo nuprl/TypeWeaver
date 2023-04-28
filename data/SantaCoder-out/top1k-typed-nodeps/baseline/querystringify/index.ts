@@ -10,7 +10,7 @@ var has = Object.prototype.hasOwnProperty
  * @returns {String|Null} The decoded string.
  * @api private
  */
-function decode(input: Uint8Array) {
+function decode(input: string) {
   try {
     return decodeURIComponent(input.replace(/\+/g, ' '));
   } catch (e) {
@@ -25,7 +25,7 @@ function decode(input: Uint8Array) {
  * @returns {String|Null} The encoded string.
  * @api private
  */
-function encode(input: any) {
+function encode(input: string) {
   try {
     return encodeURIComponent(input);
   } catch (e) {

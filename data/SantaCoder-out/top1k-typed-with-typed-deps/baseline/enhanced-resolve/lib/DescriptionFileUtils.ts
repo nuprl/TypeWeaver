@@ -94,7 +94,7 @@ function loadDescriptionFile(
 					});
 				}
 
-				function onJson(err: Error, content: any) {
+				function onJson(err: Error, content: string) {
 					if (err) {
 						if (resolveContext.log)
 							resolveContext.log(

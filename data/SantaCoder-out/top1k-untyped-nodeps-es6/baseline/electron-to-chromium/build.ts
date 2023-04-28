@@ -42,7 +42,7 @@ allElectronVersions
       throw error;
     }
   });
-  fs.writeFile(`${obj.file}.json`, JSON.stringify(obj.list), function (error: Error) {
+  fs.writeFile(`${obj.file}.json`, JSON.stringify(obj.list), function (error: any) {
     if (error) {
       throw error;
     }

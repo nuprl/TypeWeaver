@@ -5,7 +5,7 @@ export default createRBTree;
 var RED   = 0
 var BLACK = 1
 
-function RBNode(color: Color, key: number, value: any, left: RBNode, right: RBNode, count: number) {
+function RBNode(color: boolean, key: any, value: any, left: RBNode, right: RBNode, count: number) {
   this._color = color
   this.key = key
   this.value = value
@@ -18,7 +18,7 @@ function cloneNode(node: Node) {
   return new RBNode(node._color, node.key, node.value, node.left, node.right, node._count)
 }
 
-function repaint(color: string, node: Node) {
+function repaint(color: string, node: HTMLElement) {
   return new RBNode(color, node.key, node.value, node.left, node.right, node._count)
 }
 
@@ -26,7 +26,7 @@ function recount(node: Node) {
   node._count = 1 + (node.left ? node.left._count : 0) + (node.right ? node.right._count : 0)
 }
 
-function RedBlackTree(compare: any, root: any) {
+function RedBlackTree(compare: Function, root: Node) {
   this._compare = compare
   this.root = root
 }
@@ -230,7 +230,7 @@ proto.insert = function(key: string, value: any) {
 
 
 //Visit all nodes inorder
-function doVisitFull(visit: IVisitFull, node: INode) {
+function doVisitFull(visit: Visit, node: Node) {
   if(node.left) {
     var v = doVisitFull(visit, node.left)
     if(v) { return v }
@@ -279,7 +279,7 @@ function doVisit(lo: number, hi: number, compare: any, visit: any, node: any) {
 }
 
 
-proto.forEach = function rbTreeForEach(visit: any, lo: any, hi: any) {
+proto.forEach = function rbTreeForEach(visit: Function, lo: rbTree, hi: rbTree) {
   if(!this.root) {
     return
   }
@@ -359,7 +359,7 @@ proto.at = function(idx: number) {
   return new RedBlackTreeIterator(this, [])
 }
 
-proto.ge = function(key: string) {
+proto.ge = function(key: K) {
   var cmp = this._compare
   var n = this.root
   var stack = []
@@ -380,7 +380,7 @@ proto.ge = function(key: string) {
   return new RedBlackTreeIterator(this, stack)
 }
 
-proto.gt = function(key: string) {
+proto.gt = function(key: K) {
   var cmp = this._compare
   var n = this.root
   var stack = []
@@ -401,7 +401,7 @@ proto.gt = function(key: string) {
   return new RedBlackTreeIterator(this, stack)
 }
 
-proto.lt = function(key: string) {
+proto.lt = function(key: K) {
   var cmp = this._compare
   var n = this.root
   var stack = []
@@ -422,7 +422,7 @@ proto.lt = function(key: string) {
   return new RedBlackTreeIterator(this, stack)
 }
 
-proto.le = function(key: string) {
+proto.le = function(key: K) {
   var cmp = this._compare
   var n = this.root
   var stack = []
@@ -444,7 +444,7 @@ proto.le = function(key: string) {
 }
 
 //Finds the item with key if it exists
-proto.find = function(key: string) {
+proto.find = function(key: K) {
   var cmp = this._compare
   var n = this.root
   var stack = []
@@ -464,7 +464,7 @@ proto.find = function(key: string) {
 }
 
 //Removes item with key from tree
-proto.remove = function(key: string) {
+proto.remove = function(key: K) {
   var iter = this.find(key)
   if(iter) {
     return iter.remove()
@@ -473,7 +473,7 @@ proto.remove = function(key: string) {
 }
 
 //Returns the item at `key`
-proto.get = function(key: string) {
+proto.get = function(key: K) {
   var cmp = this._compare
   var n = this.root
   while(n) {
@@ -491,7 +491,7 @@ proto.get = function(key: string) {
 }
 
 //Iterator for red black tree
-function RedBlackTreeIterator(tree: RedBlackTree<any>, stack: RedBlackTreeIteratorStack<any>) {
+function RedBlackTreeIterator(tree: RedBlackTree, stack: Array<RedBlackTreeNode<T>>) {
   this.tree = tree
   this._stack = stack
 }
@@ -522,7 +522,7 @@ iproto.clone = function() {
 }
 
 //Swaps two nodes
-function swapNode(n: Node<any>, v: Node<any>) {
+function swapNode(n: Node, v: Node) {
   n.key = v.key
   n.value = v.value
   n.left = v.left
@@ -532,7 +532,7 @@ function swapNode(n: Node<any>, v: Node<any>) {
 }
 
 //Fix up a double black node in a tree
-function fixDoubleBlack(stack: Stack<number>) {
+function fixDoubleBlack(stack: Node<T>) {
   var n, p, s, z
   for(var i=stack.length-1; i>=0; --i) {
     n = stack[i]
@@ -771,7 +771,7 @@ iproto.remove = function() {
     }
     cstack[split-1].left = cstack[split]
   }
-  //console.log("stack=", cstack.map(function(v: any) { return v.value }))
+  //console.log("stack=", cstack.map(function(v: Node<T>) { return v.value }))
 
   //Remove leaf node
   n = cstack[cstack.length-1]

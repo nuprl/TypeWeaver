@@ -85,7 +85,7 @@ export default class DLL {
     }
 }
 
-function setInitial(dll: DLL, node: Node) {
+function setInitial(dll: any, node: any) {
     dll.length = 1;
     dll.head = dll.tail = node;
 }

@@ -22,7 +22,7 @@ import toInteger from './toInteger.js'
  * lastIndexOf([1, 2, 1, 2], 2, 2)
  * // => 1
  */
-function lastIndexOf(array: Array<T>, value: T, fromIndex: number) {
+function lastIndexOf(array: Array<any>, value: any, fromIndex: number) {
   const length = array == null ? 0 : array.length
   if (!length) {
     return -1

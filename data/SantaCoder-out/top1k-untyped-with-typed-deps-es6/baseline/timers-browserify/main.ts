@@ -13,7 +13,7 @@ export const setInterval = function() {
   return new Timeout(apply.call(setInterval, scope, arguments), clearInterval);
 };
 
-export const clearTimeout = exports.clearInterval = function(timeout: ITimeout) {
+export const clearTimeout = exports.clearInterval = function(timeout: Timeout) {
   if (timeout) {
     timeout.close();
   }
@@ -34,7 +34,7 @@ export const enroll = function(item: any, msecs: number) {
   item._idleTimeout = msecs;
 };
 
-export const unenroll = function(item: IdleItem) {
+export const unenroll = function(item: any) {
   clearTimeout(item._idleTimeoutId);
   item._idleTimeout = -1;
 };

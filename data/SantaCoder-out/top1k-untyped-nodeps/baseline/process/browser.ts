@@ -35,7 +35,7 @@ function defaultClearTimeout () {
         cachedClearTimeout = defaultClearTimeout;
     }
 } ())
-function runTimeout(fun: any) {
+function runTimeout(fun: Function) {
     if (cachedSetTimeout === setTimeout) {
         //normal enviroments in sane situations
         return setTimeout(fun, 0);
@@ -145,7 +145,7 @@ process.nextTick = function (fun: Function) {
 };
 
 // v8 likes predictible objects
-function Item(fun: Function, array: any[]) {
+function Item(fun: Function, array: Array<any>) {
     this.fun = fun;
     this.array = array;
 }

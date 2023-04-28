@@ -115,7 +115,7 @@ SHA512.prototype._prepareBlock = function _prepareBlock(msg: any, start: number)
   }
 };
 
-SHA512.prototype._update = function _update(msg: IMessage, start: number) {
+SHA512.prototype._update = function _update(msg: any, start: number) {
   this._prepareBlock(msg, start);
 
   var W = this.W;
@@ -263,7 +263,7 @@ function s0_512_lo(xh: number, xl: number) {
   return r;
 }
 
-function s1_512_hi(xh: number, xl: number) {
+function s1_512_hi(xh: Int32, xl: Int32) {
   var c0_hi = rotr64_hi(xh, xl, 14);
   var c1_hi = rotr64_hi(xh, xl, 18);
   var c2_hi = rotr64_hi(xl, xh, 9);  // 41

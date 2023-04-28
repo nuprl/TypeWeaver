@@ -79,7 +79,7 @@ function isError(val: any) {
   return val instanceof Error || (typeof val.message === 'string' && val.constructor && typeof val.constructor.stackTraceLimit === 'number');
 }
 
-function isDate(val: any) {
+function isDate(val: unknown) {
   if (val instanceof Date) return true;
   return typeof val.toDateString === 'function'
     && typeof val.getDate === 'function'

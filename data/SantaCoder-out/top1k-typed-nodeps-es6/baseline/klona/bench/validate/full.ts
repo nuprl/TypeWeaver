@@ -1,6 +1,6 @@
 import assert from 'assert';
 
-export default function (input: any, copy: any) {
+export default function (input: string, copy: boolean) {
 	// assert.deepStrictEqual(copy, input, 'initial copy');
 
 	// RegExp

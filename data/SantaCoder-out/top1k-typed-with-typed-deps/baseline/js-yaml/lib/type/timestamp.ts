@@ -19,7 +19,7 @@ var YAML_TIMESTAMP_REGEXP = new RegExp(
   '(?:[ \\t]*(Z|([-+])([0-9][0-9]?)' + // [8] tz [9] tz_sign [10] tz_hour
   '(?::([0-9][0-9]))?))?$');           // [11] tz_minute
 
-function resolveYamlTimestamp(data: any) {
+function resolveYamlTimestamp(data: string) {
   if (data === null) return false;
   if (YAML_DATE_REGEXP.exec(data) !== null) return true;
   if (YAML_TIMESTAMP_REGEXP.exec(data) !== null) return true;
@@ -75,7 +75,7 @@ function constructYamlTimestamp(data: string) {
   return date;
 }
 
-function representYamlTimestamp(object /*: any, style*/: string) {
+function representYamlTimestamp(object /*: Timestamp, style*/: any) {
   return object.toISOString();
 }
 

@@ -20,6 +20,6 @@ import mapValuesLimit from './mapValuesLimit.js'
  * Invoked with (err, result).
  * @returns {Promise} a promise, if no callback is passed
  */
-export default function mapValuesSeries(obj: any, iteratee: any, callback: any) {
+export default function mapValuesSeries(obj: any, iteratee: Function, callback: Function) {
     return mapValuesLimit(obj, 1, iteratee, callback)
 }

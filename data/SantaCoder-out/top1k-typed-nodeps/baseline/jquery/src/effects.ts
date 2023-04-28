@@ -63,7 +63,7 @@ function genFx( type: string, includeWidth : boolean) {
 	return attrs;
 }
 
-function createTween( value: number, prop: string, animation : Animation) {
+function createTween( value: any, prop: any, animation : any) {
 	var tween,
 		collection = ( Animation.tweeners[ prop ] || [] ).concat( Animation.tweeners[ "*" ] ),
 		index = 0,
@@ -77,7 +77,7 @@ function createTween( value: number, prop: string, animation : Animation) {
 	}
 }
 
-function defaultPrefilter( elem: Element, props: IStyleDeclaration, opts : IStyleDeclarationOptions) {
+function defaultPrefilter( elem: Element, props: Object, opts : Object) {
 	var prop, value, toggle, hooks, oldfire, propTween, restoreDisplay, display,
 		isBox = "width" in props || "height" in props,
 		anim = this,
@@ -245,7 +245,7 @@ function defaultPrefilter( elem: Element, props: IStyleDeclaration, opts : IStyl
 	}
 }
 
-function propFilter( props: any, specialEasing : any) {
+function propFilter( props: string[], specialEasing : any) {
 	var index, name, easing, value, hooks;
 
 	// camelCase, specialEasing and expand cssHook pass
@@ -282,7 +282,7 @@ function propFilter( props: any, specialEasing : any) {
 	}
 }
 
-function Animation( elem: HTMLElement, properties: AnimationProperties, options : AnimationOptions) {
+function Animation( elem: HTMLElement, properties: any, options : AnimationOptions) {
 	var result,
 		stopped,
 		index = 0,
@@ -414,7 +414,7 @@ jQuery.Animation = jQuery.extend( Animation, {
 		} ]
 	},
 
-	tweener: function( props: IProps, callback : Function) {
+	tweener: function( props: any, callback : any) {
 		if ( typeof props === "function" ) {
 			callback = props;
 			props = [ "*" ];
@@ -518,7 +518,7 @@ jQuery.fn.extend( {
 			this.queue( optall.queue, doAnimation );
 	},
 	stop: function( type: string, clearQueue: boolean, gotoEnd : boolean) {
-		var stopQueue = function( hooks : IHook[]) {
+		var stopQueue = function( hooks : any) {
 			var stop = hooks.stop;
 			delete hooks.stop;
 			stop( gotoEnd );
@@ -569,7 +569,7 @@ jQuery.fn.extend( {
 			}
 		} );
 	},
-	finish: function( type : boolean) {
+	finish: function( type : string) {
 		if ( type !== false ) {
 			type = type || "fx";
 		}
@@ -658,7 +658,7 @@ jQuery.fx.tick = function() {
 	fxNow = undefined;
 };
 
-jQuery.fx.timer = function( timer : number) {
+jQuery.fx.timer = function( timer : Timer) {
 	jQuery.timers.push( timer );
 	jQuery.fx.start();
 };

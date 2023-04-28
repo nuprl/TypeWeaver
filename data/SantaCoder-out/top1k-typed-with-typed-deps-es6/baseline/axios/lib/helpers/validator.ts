@@ -23,8 +23,8 @@ const deprecatedWarnings = {};
  *
  * @returns {function}
  */
-validators.transitional = function transitional(validator: Validator, version: number, message: string) {
-  function formatMessage(opt: IMessageFormatOptions, desc: IMessageDescriptor) {
+validators.transitional = function transitional(validator: Validator, version: string, message: string) {
+  function formatMessage(opt: string, desc: string) {
     return '[Axios v' + VERSION + '] Transitional option \'' + opt + '\'' + desc + (message ? '. ' + message : '');
   }
 
@@ -62,7 +62,7 @@ validators.transitional = function transitional(validator: Validator, version: n
  * @returns {object}
  */
 
-function assertOptions(options: IOptions, schema: ISchema, allowUnknown: boolean) {
+function assertOptions(options: any, schema: any, allowUnknown: boolean) {
   if (typeof options !== 'object') {
     throw new AxiosError('options must be an object', AxiosError.ERR_BAD_OPTION_VALUE);
   }

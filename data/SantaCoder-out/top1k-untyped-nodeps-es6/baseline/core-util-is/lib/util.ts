@@ -65,7 +65,7 @@ function isUndefined(arg: any) {
 }
 exports.isUndefined = isUndefined;
 
-function isRegExp(re: RegExp) {
+function isRegExp(re: any) {
   return objectToString(re) === '[object RegExp]';
 }
 exports.isRegExp = isRegExp;

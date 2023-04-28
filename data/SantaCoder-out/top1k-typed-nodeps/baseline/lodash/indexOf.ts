@@ -22,7 +22,7 @@ import toInteger from './toInteger.js'
  * indexOf([1, 2, 1, 2], 2, 2)
  * // => 3
  */
-function indexOf(array: Array<any>, value: any, fromIndex: number) {
+function indexOf(array: any[], value: any, fromIndex: number) {
   const length = array == null ? 0 : array.length
   if (!length) {
     return -1

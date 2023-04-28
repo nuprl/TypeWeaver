@@ -77,7 +77,7 @@ if (!Object.keys) {
 		}
 	};
 
-	keysShim = function keys(object: any) {
+	keysShim = function keys(object: Object) {
 		var isObject = object !== null && typeof object === 'object';
 		var isFunction = toStr.call(object) === '[object Function]';
 		var isArguments = isArgs(object);

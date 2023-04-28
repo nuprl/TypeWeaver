@@ -144,7 +144,7 @@ export default new Type('tag:yaml.org,2002:int', {
     octal:       function (obj: number) { return obj >= 0 ? '0o'  + obj.toString(8) : '-0o'  + obj.toString(8).slice(1); },
     decimal:     function (obj: any) { return obj.toString(10); },
     /* eslint-disable max-len */
-    hexadecimal: function (obj: any) { return obj >= 0 ? '0x' + obj.toString(16).toUpperCase() :  '-0x' + obj.toString(16).toUpperCase().slice(1); }
+    hexadecimal: function (obj: number) { return obj >= 0 ? '0x' + obj.toString(16).toUpperCase() :  '-0x' + obj.toString(16).toUpperCase().slice(1); }
   },
   defaultStyle: 'decimal',
   styleAliases: {

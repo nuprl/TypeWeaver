@@ -15,7 +15,7 @@ import stew from 'broccoli-stew';
 const env = stew.env;
 const map = stew.map;
 
-export default function (app: Express) {
+export default function (app: EmberApp) {
   const lib = funnel('lib', { destDir: 'lib' });
 
   const testDir = funnel('test', { destDir: 'test' });

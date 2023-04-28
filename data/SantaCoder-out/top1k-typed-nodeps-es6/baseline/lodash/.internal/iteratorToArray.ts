@@ -5,7 +5,7 @@
  * @param {Object} iterator The iterator to convert.
  * @returns {Array} Returns the converted array.
  */
-function iteratorToArray(iterator: Iterator<T>) {
+function iteratorToArray(iterator: Iterator<any>) {
   let data
   const result = []
 

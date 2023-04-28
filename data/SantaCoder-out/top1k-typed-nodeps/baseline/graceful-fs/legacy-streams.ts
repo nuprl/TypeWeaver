@@ -2,13 +2,13 @@ var Stream = require('stream').Stream
 
 module.exports = legacy
 
-function legacy (fs: FileSystem) {
+function legacy (fs: any) {
   return {
     ReadStream: ReadStream,
     WriteStream: WriteStream
   }
 
-  function ReadStream (path: string, options: ReadableOptions) {
+  function ReadStream (path: string, options: ReadStreamOptions) {
     if (!(this instanceof ReadStream)) return new ReadStream(path, options);
 
     Stream.call(this);
@@ -59,7 +59,7 @@ function legacy (fs: FileSystem) {
       return;
     }
 
-    fs.open(this.path, this.flags, this.mode, function (err: Error, fd: number) {
+    fs.open(this.path, this.flags, this.mode, function (err: any, fd: any) {
       if (err) {
         self.emit('error', err);
         self.readable = false;
@@ -72,7 +72,7 @@ function legacy (fs: FileSystem) {
     })
   }
 
-  function WriteStream (path: string, options: IWriteStreamOptions) {
+  function WriteStream (path: string, options: WriteStreamOptions) {
     if (!(this instanceof WriteStream)) return new WriteStream(path, options);
 
     Stream.call(this);

@@ -80,7 +80,7 @@ function Accepts (req: IncomingMessage) {
  */
 
 Accepts.prototype.type =
-Accepts.prototype.types = function (types_: IType[]) {
+Accepts.prototype.types = function (types_: any) {
   var types = types_
 
   // support flattened arguments
@@ -124,7 +124,7 @@ Accepts.prototype.types = function (types_: IType[]) {
  */
 
 Accepts.prototype.encoding =
-Accepts.prototype.encodings = function (encodings_: Encoding[]) {
+Accepts.prototype.encodings = function (encodings_: Array<string>) {
   var encodings = encodings_
 
   // support flattened arguments
@@ -192,7 +192,7 @@ Accepts.prototype.charsets = function (charsets_: string[]) {
 Accepts.prototype.lang =
 Accepts.prototype.langs =
 Accepts.prototype.language =
-Accepts.prototype.languages = function (languages_: ILanguages) {
+Accepts.prototype.languages = function (languages_: string[]) {
   var languages = languages_
 
   // support flattened arguments

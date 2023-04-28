@@ -15,7 +15,7 @@ function isSurrogatePair(msg: string, i: number) {
   return (msg.charCodeAt(i + 1) & 0xFC00) === 0xDC00;
 }
 
-function toArray(msg: any, enc: string) {
+function toArray(msg: any, enc: any) {
   if (Array.isArray(msg))
     return msg.slice();
   if (!msg)
@@ -79,7 +79,7 @@ function htonl(w: number) {
 }
 exports.htonl = htonl;
 
-function toHex32(msg: Uint8Array, endian: Endian) {
+function toHex32(msg: string, endian: string) {
   var res = '';
   for (var i = 0; i < msg.length; i++) {
     var w = msg[i];
@@ -91,7 +91,7 @@ function toHex32(msg: Uint8Array, endian: Endian) {
 }
 exports.toHex32 = toHex32;
 
-function zero2(word: number) {
+function zero2(word: string) {
   if (word.length === 1)
     return '0' + word;
   else
@@ -99,7 +99,7 @@ function zero2(word: number) {
 }
 exports.zero2 = zero2;
 
-function zero8(word: number) {
+function zero8(word: string) {
   if (word.length === 7)
     return '0' + word;
   else if (word.length === 6)
@@ -119,7 +119,7 @@ function zero8(word: number) {
 }
 exports.zero8 = zero8;
 
-function join32(msg: Uint8Array, start: number, end: number, endian: number) {
+function join32(msg: Uint8Array, start: number, end: number, endian: Endian) {
   var len = end - start;
   assert(len % 4 === 0);
   var res = new Array(len / 4);
@@ -135,7 +135,7 @@ function join32(msg: Uint8Array, start: number, end: number, endian: number) {
 }
 exports.join32 = join32;
 
-function split32(msg: Uint8Array, endian: "big") {
+function split32(msg: string, endian: string) {
   var res = new Array(msg.length * 4);
   for (var i = 0, k = 0; i < msg.length; i++, k += 4) {
     var m = msg[i];

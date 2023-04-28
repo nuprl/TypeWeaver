@@ -5,7 +5,7 @@
  * Released under the MIT License.
  */
 
-module.exports = function(str: string, options: IOptions) {
+module.exports = function(str: string, options: any) {
   options = options || {};
   if (str == null) {
     return str;

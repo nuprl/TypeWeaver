@@ -48,10 +48,10 @@ const {
 /**
  * @typedef {Object} FileSystem
  * @property {(function(string, FileSystemCallback<Buffer | string>): void) & function(string: string, object: any, FileSystemCallback<Buffer | string>: any): void} readFile
- * @property {(function(string, FileSystemCallback<(Buffer | string)[] | FileSystemDirent[]>): void) & function(string: string, object: any, FileSystemCallback<(Buffer | string: FileSystemDirent)[] | FileSystemDirent[]>): void} readdir
- * @property {((function(string, FileSystemCallback<object>): void) & function(string: string, object: any, FileSystemCallback<object>: FileSystemCallback<any>): void)=} readJson
+ * @property {(function(string, FileSystemCallback<(Buffer | string)[] | FileSystemDirent[]>): void) & function(string: string, object: any, FileSystemCallback<(Buffer | string: string)[] | FileSystemDirent[]>): void} readdir
+ * @property {((function(string, FileSystemCallback<object>): void) & function(string: string, object: object, FileSystemCallback<object>: void): void)=} readJson
  * @property {(function(string, FileSystemCallback<Buffer | string>): void) & function(string: string, object: any, FileSystemCallback<Buffer | string>: any): void} readlink
- * @property {(function(string, FileSystemCallback<FileSystemStats>): void) & function(string: string, object: any, FileSystemCallback<Buffer | string>: any): void=} lstat
+ * @property {(function(string, FileSystemCallback<FileSystemStats>): void) & function(string: string, object: any, FileSystemCallback<Buffer | string>: void): void=} lstat
  * @property {(function(string, FileSystemCallback<FileSystemStats>): void) & function(string: string, object: any, FileSystemCallback<Buffer | string>: any): void} stat
  */
 
@@ -59,9 +59,9 @@ const {
  * @typedef {Object} SyncFileSystem
  * @property {function(string: string, object=: any): Buffer | string} readFileSync
  * @property {function(string: string, object=: any): (Buffer | string)[] | FileSystemDirent[]} readdirSync
- * @property {(function(string: string, object=: any): object)=} readJsonSync
+ * @property {(function(string: string, object=: object): object)=} readJsonSync
  * @property {function(string: string, object=: any): Buffer | string} readlinkSync
- * @property {function(string: string, object=: any): FileSystemStats=} lstatSync
+ * @property {function(string: string, object=: Object): FileSystemStats=} lstatSync
  * @property {function(string: string, object=: any): FileSystemStats} statSync
  */
 
@@ -104,7 +104,7 @@ const {
  * @property {WriteOnlySet<string>=} missingDependencies dependencies that was not found on file system
  * @property {Set<StackEntry>=} stack set of hooks' calls. For instance, `resolve → parsedResolve → describedResolve`,
  * @property {(function(string: string): void)=} log log function
- * @property {(function (ResolveRequest: ResolveRequest): void)=} yield yield result, if provided plugins can return several results
+ * @property {(function (ResolveRequest: any): void)=} yield yield result, if provided plugins can return several results
  */
 
 /** @typedef {AsyncSeriesBailHook<[ResolveRequest, ResolveContext], ResolveRequest | null>} ResolveStepHook */
@@ -254,7 +254,7 @@ class Resolver {
 	 * @param {string} path context path
 	 * @param {string} request request string
 	 * @param {ResolveContext} resolveContext resolve context
-	 * @param {function(Error | null: void, (string|false: void)=, ResolveRequest=): void} callback callback function
+	 * @param {function(Error | null: Error, (string|false: string|false)=, ResolveRequest=): void} callback callback function
 	 * @returns {void}
 	 */
 	resolve(context, path, request, resolveContext, callback) {

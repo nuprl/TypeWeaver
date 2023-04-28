@@ -1,7 +1,7 @@
 "use strict";
 
 module.exports = Iteration;
-function Iteration(value: any, done: boolean, index: number) {
+function Iteration(value: T, done: boolean, index: number) {
     this.value = value;
     this.done = done;
     this.index = index;

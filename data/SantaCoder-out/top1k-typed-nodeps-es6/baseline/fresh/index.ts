@@ -30,7 +30,7 @@ export default fresh;
  * @public
  */
 
-function fresh (reqHeaders: any, resHeaders: any) {
+function fresh (reqHeaders: IncomingHttpHeaders, resHeaders: OutgoingHttpHeaders) {
   // fields
   var modifiedSince = reqHeaders['if-modified-since']
   var noneMatch = reqHeaders['if-none-match']

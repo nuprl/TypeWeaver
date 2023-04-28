@@ -1,4 +1,4 @@
-module['exports'] = function(colors: string[]) {
+module['exports'] = function(colors: Array<string>) {
   var available = ['underline', 'inverse', 'grey', 'yellow', 'red', 'green',
     'blue', 'white', 'cyan', 'magenta', 'brightYellow', 'brightRed',
     'brightGreen', 'brightBlue', 'brightWhite', 'brightCyan', 'brightMagenta'];

@@ -16,7 +16,7 @@ const INFINITY = 1 / 0
  * flattenDeep([1, [2, [3, [4]], 5]])
  * // => [1, 2, 3, 4, 5]
  */
-function flattenDeep(array: any) {
+function flattenDeep(array: any[]) {
   const length = array == null ? 0 : array.length
   return length ? baseFlatten(array, INFINITY) : []
 }

@@ -10,10 +10,10 @@ import Type from './type';
 function compileList(schema: Schema, name: string) {
   var result = [];
 
-  schema[name].forEach(function (currentType: number) {
+  schema[name].forEach(function (currentType: string) {
     var newIndex = result.length;
 
-    result.forEach(function (previousType: string, previousIndex: number) {
+    result.forEach(function (previousType: any, previousIndex: any) {
       if (previousType.tag === currentType.tag &&
           previousType.kind === currentType.kind &&
           previousType.multi === currentType.multi) {
@@ -59,7 +59,7 @@ function compileMap(/* lists... */: any[]) {
 }
 
 
-function Schema(definition: SchemaDefinition) {
+function Schema(definition: Object) {
   return this.extend(definition);
 }
 

@@ -31,7 +31,7 @@ export default {
 /**
  * Rewrites number ranges: [0-9] -> \d
  */
-function rewriteNumberRanges(path: NodePath<Node>) {
+function rewriteNumberRanges(path: NodePath<t.NumberLiteral>) {
   const {node} = path;
 
   node.expressions.forEach((expression, i) => {
@@ -50,7 +50,7 @@ function rewriteNumberRanges(path: NodePath<Node>) {
  * Thus, the ranges may go in any order, and other symbols/ranges
  * are kept untouched, e.g. [a-z_\dA-Z$] -> [\w$]
  */
-function rewriteWordRanges(path: IPath, hasIFlag: boolean, hasUFlag: boolean) {
+function rewriteWordRanges(path: NodePath<t.Node>, hasIFlag: boolean, hasUFlag: boolean) {
   const {node} = path;
 
   let numberPath = null;
@@ -142,7 +142,7 @@ const whitespaceRangeTests = [
     isCodePoint(node.to, 0x200a),
 ];
 
-function rewriteWhitespaceRanges(path: NodePath<Node>) {
+function rewriteWhitespaceRanges(path: NodePath<t.Node>) {
   const {node} = path;
 
   if (
@@ -175,7 +175,7 @@ function rewriteWhitespaceRanges(path: NodePath<Node>) {
     .forEach(path => path.remove());
 }
 
-function isFullNumberRange(node: Node) {
+function isFullNumberRange(node: t.Node) {
   return (
     node.type === 'ClassRange' &&
     node.from.value === '0' &&
@@ -183,7 +183,7 @@ function isFullNumberRange(node: Node) {
   );
 }
 
-function isChar(node: Node, value: string, kind = 'simple': 'simple') {
+function isChar(node: Node, value: string, kind = 'simple': 'complex') {
   return node.type === 'Char' && node.value === value && node.kind === kind;
 }
 
@@ -191,7 +191,7 @@ function isMetaChar(node: Node, value: string) {
   return isChar(node, value, 'meta');
 }
 
-function isLowerCaseRange(node: Node) {
+function isLowerCaseRange(node: t.Node) {
   return (
     node.type === 'ClassRange' &&
     node.from.value === 'a' &&

@@ -50,7 +50,7 @@ function error(type: string) {
  * item.
  * @returns {Array} A new array of values returned by the callback function.
  */
-function map(array: any[], fn: any) {
+function map(array: any[], fn: Function) {
 	const result = [];
 	let length = array.length;
 	while (length--) {
@@ -284,7 +284,7 @@ const decode = function(input: string) {
  * @param {String} input The string of Unicode symbols.
  * @returns {String} The resulting Punycode string of ASCII-only symbols.
  */
-const encode = function(input: string) {
+const encode = function(input: number) {
 	const output = [];
 
 	// Convert the input in UCS-2 to an array of Unicode code points.

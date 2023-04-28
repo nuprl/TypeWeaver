@@ -34,14 +34,14 @@ out_file.write(
 );
 out_file.write('/*\n *\n * https://www.w3.org/Style/CSS/all-properties.en.html\n */\n\n');
 
-function isModuleDotExports(node: Node) {
+function isModuleDotExports(node: t.Node) {
   return (
     t.isMemberExpression(node, { computed: false }) &&
     t.isIdentifier(node.object, { name: 'module' }) &&
     t.isIdentifier(node.property, { name: 'exports' })
   );
 }
-function isRequire(node: Node, filename: string) {
+function isRequire(node: t.Node, filename: string) {
   if (
     t.isCallExpression(node) &&
     t.isIdentifier(node.callee, { name: 'require' }) &&
@@ -102,7 +102,7 @@ function addFile(filename: string, dependencyPath: string) {
   if (!file) {
     externalDependencies.push(filename);
   } else {
-    file.dependencies.forEach(function(dependency: Dependency) {
+    file.dependencies.forEach(function(dependency: string) {
       addFile(dependency, dependencyPath.concat([filename]));
     });
     parsedFiles.push(parsedFilesByPath[filename]);
@@ -135,7 +135,7 @@ externalDependencies.forEach(function(filename: string, i: number) {
     ])
   );
 });
-function getRequireValue(node: Node, file: File) {
+function getRequireValue(node: t.Node, file: t.File) {
   var r, e;
   // replace require("./foo").bar with the named export from foo
   if (
@@ -202,7 +202,7 @@ parsedFiles.forEach(function(file: string) {
 
       // rename all top level variables to keep them local to the module
       if (t.isVariableDeclaration(path.node) && t.isProgram(path.parent)) {
-        path.node.declarations.forEach(function(declaration: NodePath<Node>) {
+        path.node.declarations.forEach(function(declaration: t.VariableDeclaration) {
           path.scope.rename(
             declaration.id.name,
             file.property + '_local_var_' + declaration.id.name
@@ -253,7 +253,7 @@ parsedFiles.forEach(function(file: string) {
   statements.push.apply(statements, file.ast.program.body);
 });
 var propertyDefinitions = [];
-parsedFiles.forEach(function(file: IFile) {
+parsedFiles.forEach(function(file: any) {
   var dashed = camelToDashed(file.property);
   propertyDefinitions.push(
     t.objectProperty(
@@ -285,7 +285,7 @@ statements.push(
   )
 );
 out_file.write(generate(t.program(statements)).code + '\n');
-out_file.end(function(err: Error) {
+out_file.end(function(err: any) {
   if (err) {
     throw err;
   }

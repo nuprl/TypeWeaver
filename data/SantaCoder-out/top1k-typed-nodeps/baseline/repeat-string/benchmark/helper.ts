@@ -39,7 +39,7 @@ function parseSection(str: string) {
   return createLines(tok, lines);
 }
 
-function createLines(tok: Token, lines: Line[]) {
+function createLines(tok: Token, lines: string[]) {
   var len = lines.length;
   var idx = -1;
   while (++idx < len) {
@@ -62,7 +62,7 @@ function createLines(tok: Token, lines: Line[]) {
   }
 }
 
-function format(tok: Token, max: number, diff: number) {
+function format(tok: string, max: number, diff: number) {
   return [tok.name.trim(), bar(tok, max, diff).trim(), '(' + tok.val + ' ops/sec)'];
 }
 
@@ -77,7 +77,7 @@ function parseStats(line: string) {
   return tok;
 }
 
-function values(obj: any) {
+function values(obj: Object) {
   var vals = [];
   for (var key in obj) {
     if (key === 'title') continue;
@@ -86,7 +86,7 @@ function values(obj: any) {
   return vals;
 }
 
-function bar(tok: Token, longest: number) {
+function bar(tok: Token, longest: string) {
   return repeat('█', (tok.num / longest) * 25);
 }
 

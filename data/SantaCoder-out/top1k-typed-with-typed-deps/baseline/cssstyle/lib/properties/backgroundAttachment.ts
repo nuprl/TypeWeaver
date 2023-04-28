@@ -10,7 +10,7 @@ var isValid = (module.exports.isValid = function isValid(v: any) {
 });
 
 module.exports.definition = {
-  set: function(v: any) {
+  set: function(v: string) {
     if (!isValid(v)) {
       return;
     }

@@ -141,7 +141,7 @@ export default (input, options = {}, fn) => {
   return node.stash;
 };
 
-function invert(obj: any) {
+function invert(obj: Object) {
   let inverted = {};
   for (const key of Object.keys(obj)) inverted[obj[key]] = key;
   return inverted;

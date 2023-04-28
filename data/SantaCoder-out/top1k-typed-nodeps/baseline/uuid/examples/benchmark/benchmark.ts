@@ -1,4 +1,4 @@
-export default function benchmark(uuid: string, Benchmark: BenchmarkClass) {
+export default function benchmark(uuid: string, Benchmark: any) {
   console.log('Starting. Tests take ~1 minute to run ...');
 
   function testParseAndStringify() {
@@ -20,7 +20,7 @@ export default function benchmark(uuid: string, Benchmark: BenchmarkClass) {
       .add('uuid.parse()', function () {
         uuid.parse('0f5abcd1-c194-47f3-905b-2df7263a084b');
       })
-      .on('cycle', function (event: MouseEvent) {
+      .on('cycle', function (event: any) {
         console.log(event.target.toString());
       })
       .on('complete', function () {
@@ -63,7 +63,7 @@ export default function benchmark(uuid: string, Benchmark: BenchmarkClass) {
       .add('uuid.v5()', function () {
         uuid.v5('hello.example.com', uuid.v5.DNS);
       })
-      .on('cycle', function (event: MouseEvent) {
+      .on('cycle', function (event: Event) {
         console.log(event.target.toString());
       })
       .on('complete', function () {

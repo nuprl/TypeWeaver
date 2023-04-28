@@ -1,6 +1,6 @@
 'use strict';
 
-export default function repeat(val: number, num: number) {
+export default function repeat(val: any, num: number) {
   var arr = [];
   var i = 0;
 

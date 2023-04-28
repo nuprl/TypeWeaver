@@ -1,7 +1,7 @@
 // call it on itself so we can test the export val for basic stuff
 export default colorSupport({ alwaysReturn: true }, colorSupport);
 
-function hasNone (obj: any, options: HasNoneOptions) {
+function hasNone (obj: any, options: any) {
   obj.level = 0
   obj.hasBasic = false
   obj.has256 = false
@@ -36,7 +36,7 @@ function has16m (obj: any) {
   return obj
 }
 
-function colorSupport (options: ColorSupportOptions, obj: any) {
+function colorSupport (options: Options, obj: any) {
   options = options || {}
 
   obj = obj || {}

@@ -6,7 +6,7 @@ var core = require('../'),
     isObjectLike = require('lodash/isObjectLike');
 
 
-module.exports = function (options: IOptions) {
+module.exports = function (options: Options) {
 
     var errorText = 'Please verify options'; // For better minification because this string is repeating
 
@@ -33,7 +33,7 @@ module.exports = function (options: IOptions) {
 
     var originalInit = options.request.Request.prototype.init;
 
-    options.request.Request.prototype.init = function RP$initInterceptor(requestOptions: AxiosRequestConfig) {
+    options.request.Request.prototype.init = function RP$initInterceptor(requestOptions: RP$RequestOptions) {
 
         // Init may be called again - currently in case of redirects
         if (isObjectLike(requestOptions) && !this._callback && !this._rp_promise) {

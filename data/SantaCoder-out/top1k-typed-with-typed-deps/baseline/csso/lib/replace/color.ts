@@ -243,7 +243,7 @@ function toHex(value: number) {
     return value.length === 1 ? '0' + value : value;
 }
 
-function parseFunctionArgs(functionArgs: FunctionArgs, count: number, rgb: number[]) {
+function parseFunctionArgs(functionArgs: FunctionArgs, count: number, rgb: string) {
     let cursor = functionArgs.head;
     let args = [];
     let wasValue = false;
@@ -320,7 +320,7 @@ function parseFunctionArgs(functionArgs: FunctionArgs, count: number, rgb: numbe
         args[0].type = 'Angle';
     }
 
-    return args.map(function(arg: number) {
+    return args.map(function(arg: any) {
         let value = Math.max(0, arg.value);
 
         switch (arg.type) {
@@ -353,7 +353,7 @@ function parseFunctionArgs(functionArgs: FunctionArgs, count: number, rgb: numbe
     });
 }
 
-export function compressFunction(node: Node, item: Node) {
+export function compressFunction(node: Node, item: Item) {
     let functionName = node.name;
     let args;
 
@@ -475,7 +475,7 @@ export function compressIdent(node: Node, item: Node) {
     }
 }
 
-export function compressHex(node: any, item: any) {
+export function compressHex(node: Node, item: Item) {
     let color = node.value.toLowerCase();
 
     // #112233 -> #123

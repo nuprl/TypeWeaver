@@ -3,7 +3,7 @@
 var parseNumber = require('../parsers').parseNumber;
 var POSITION_AT_SHORTHAND = require('../constants').POSITION_AT_SHORTHAND;
 
-module.exports.isValid = function isValid(v: string, positionAtFlexShorthand: number) {
+module.exports.isValid = function isValid(v: string, positionAtFlexShorthand: boolean) {
   return parseNumber(v) !== undefined && positionAtFlexShorthand === POSITION_AT_SHORTHAND.first;
 };
 

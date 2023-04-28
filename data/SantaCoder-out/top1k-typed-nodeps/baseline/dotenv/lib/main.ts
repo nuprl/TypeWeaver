@@ -52,7 +52,7 @@ function _resolveHome (envPath: string) {
 }
 
 // Populates process.env from .env file
-function config (options: IConfigOptions) {
+function config (options: Options) {
   let dotenvPath = path.resolve(process.cwd(), '.env')
   let encoding = 'utf8'
   const debug = Boolean(options && options.debug)

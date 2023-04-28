@@ -3,7 +3,7 @@
 import Module from 'module';
 import path from 'path';
 
-export default function requireFromString(code: string, filename: string, opts: ImportMetaOptions) {
+export default function requireFromString(code: string, filename: string, opts: any) {
 	if (typeof filename === 'object') {
 		opts = filename;
 		filename = undefined;

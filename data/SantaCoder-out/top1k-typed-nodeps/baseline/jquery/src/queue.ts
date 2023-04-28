@@ -71,7 +71,7 @@ jQuery.extend( {
 } );
 
 jQuery.fn.extend( {
-	queue: function( type: number, data : any) {
+	queue: function( type: string, data : any) {
 		var setter = 2;
 
 		if ( typeof type !== "string" ) {

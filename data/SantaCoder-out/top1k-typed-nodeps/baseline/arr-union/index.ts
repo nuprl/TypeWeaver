@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function union(init: any) {
+module.exports = function union(init: any[]) {
   if (!Array.isArray(init)) {
     throw new TypeError('arr-union expects the first argument to be an array.');
   }

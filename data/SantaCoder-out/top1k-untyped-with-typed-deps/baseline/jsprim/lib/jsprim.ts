@@ -131,7 +131,7 @@ function hasKey(obj: any, key: string)
 	return (Object.prototype.hasOwnProperty.call(obj, key));
 }
 
-function forEachKey(obj: any, callback: any)
+function forEachKey(obj: Object, callback: any)
 {
 	for (var key in obj) {
 		if (hasKey(obj, key)) {
@@ -171,12 +171,12 @@ function pluckv(obj: any, key: string)
  * depth).forEach(callback), except that the intermediate array is never
  * created.
  */
-function flattenIter(data: any, depth: number, callback: any)
+function flattenIter(data: any, depth: number, callback: Function)
 {
 	doFlattenIter(data, depth, [], callback);
 }
 
-function doFlattenIter(data: any, depth: number, accum: any, callback: any)
+function doFlattenIter(data: any, depth: number, accum: any[], callback: Function)
 {
 	var each;
 	var key;
@@ -214,7 +214,7 @@ function flattenObject(data: any, depth: number)
 	var key;
 
 	for (key in data) {
-		flattenObject(data[key], depth - 1).forEach(function (p: any) {
+		flattenObject(data[key], depth - 1).forEach(function (p: string[]) {
 			rv.push([ key ].concat(p));
 		});
 	}
@@ -233,7 +233,7 @@ function endsWith(str: string, suffix: string)
 	    str.length - suffix.length, suffix.length) == suffix);
 }
 
-function iso8601(d: number)
+function iso8601(d: Date)
 {
 	if (typeof (d) == 'number')
 		d = new Date(d);
@@ -329,7 +329,7 @@ var PI_CONV_LC = 0x57;
  * A stricter version of parseInt() that provides options for changing what
  * is an acceptable string (for example, disallowing trailing characters).
  */
-function parseInteger(str: string, uopts: ParseIntegerOptions)
+function parseInteger(str: string, uopts: UintOptions)
 {
 	mod_assert.string(str, 'str');
 	mod_assert.optionalObject(uopts, 'options');
@@ -505,7 +505,7 @@ function isSpace(c: number)
 /*
  * Determine which base a character indicates (e.g., 'x' indicates hex).
  */
-function prefixToBase(c: string)
+function prefixToBase(c: number)
 {
 	if (c === CP_b || c === CP_B) {
 		/* 0b/0B (binary) */
@@ -570,7 +570,7 @@ function randElt(arr: any[])
 	return (arr[Math.floor(Math.random() * arr.length)]);
 }
 
-function assertHrtime(a: number)
+function assertHrtime(a: hrtime)
 {
 	mod_assert.ok(a[0] >= 0 && a[1] >= 0,
 	    'negative numbers not allowed in hrtimes');
@@ -585,7 +585,7 @@ function assertHrtime(a: number)
  * becomes valuable, we can define a representation and extend the
  * implementation to support it.
  */
-function hrtimeDiff(a: number, b: number)
+function hrtimeDiff(a: Hrtime, b: Hrtime)
 {
 	assertHrtime(a);
 	assertHrtime(b);
@@ -608,7 +608,7 @@ function hrtimeDiff(a: number, b: number)
  * Convert a hrtime reading from the array format returned by Node's
  * process.hrtime() into a scalar number of nanoseconds.
  */
-function hrtimeNanosec(a: number)
+function hrtimeNanosec(a: HrTime)
 {
 	assertHrtime(a);
 
@@ -619,7 +619,7 @@ function hrtimeNanosec(a: number)
  * Convert a hrtime reading from the array format returned by Node's
  * process.hrtime() into a scalar number of microseconds.
  */
-function hrtimeMicrosec(a: number)
+function hrtimeMicrosec(a: hrtime)
 {
 	assertHrtime(a);
 
@@ -630,7 +630,7 @@ function hrtimeMicrosec(a: number)
  * Convert a hrtime reading from the array format returned by Node's
  * process.hrtime() into a scalar number of milliseconds.
  */
-function hrtimeMillisec(a: number)
+function hrtimeMillisec(a: hrtime)
 {
 	assertHrtime(a);
 
@@ -642,7 +642,7 @@ function hrtimeMillisec(a: number)
  * addition.  This function is useful for accumulating several hrtime intervals
  * into a counter.  Returns A.
  */
-function hrtimeAccum(a: number, b: number)
+function hrtimeAccum(a: Hrtime, b: Hrtime)
 {
 	assertHrtime(a);
 	assertHrtime(b);
@@ -672,7 +672,7 @@ function hrtimeAccum(a: number, b: number)
  * Add two hrtime readings A and B, returning the result as a new hrtime array.
  * Does not modify either input argument.
  */
-function hrtimeAdd(a: number, b: number)
+function hrtimeAdd(a: Hrtime, b: Hrtime)
 {
 	assertHrtime(a);
 
@@ -711,7 +711,7 @@ function extraProperties(obj: any, allowed: string[])
  * the union of these sets with "overrides" overriding "provided", and
  * "provided" overriding "defaults".  None of the input objects are modified.
  */
-function mergeObjects(provided: any, overrides: any, defaults: any)
+function mergeObjects(provided: Object, overrides: Object, defaults: Object)
 {
 	var rv, k;
 

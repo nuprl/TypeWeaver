@@ -28,7 +28,7 @@ const asyncResolver = ResolverFactory.createResolver({
 	extensions: [".js", ".json", ".node"],
 	fileSystem: nodeFileSystem
 });
-function resolve(context: ResolveContext, path: string, request: ResolvedRequest, resolveContext: ResolveContext, callback: any) {
+function resolve(context: any, path: string, request: string, resolveContext: any, callback: any) {
 	if (typeof context === "string") {
 		callback = resolveContext;
 		resolveContext = request;
@@ -48,7 +48,7 @@ const syncResolver = ResolverFactory.createResolver({
 	useSyncFileSystemCalls: true,
 	fileSystem: nodeFileSystem
 });
-function resolveSync(context: ResolveContext, path: string, request: ResolveRequest) {
+function resolveSync(context: string, path: string, request: string) {
 	if (typeof context === "string") {
 		request = path;
 		path = context;
@@ -57,13 +57,13 @@ function resolveSync(context: ResolveContext, path: string, request: ResolveRequ
 	return syncResolver.resolveSync(context, path, request);
 }
 
-function create(options: IOptions) {
+function create(options: Options) {
 	options = {
 		fileSystem: nodeFileSystem,
 		...options
 	};
 	const resolver = ResolverFactory.createResolver(options);
-	return function (context: ResolveContext, path: string, request: ResolveRequest, resolveContext: ResolveContext, callback: any) {
+	return function (context: any, path: string, request: any, resolveContext: any, callback: any) {
 		if (typeof context === "string") {
 			callback = resolveContext;
 			resolveContext = request;
@@ -78,14 +78,14 @@ function create(options: IOptions) {
 	};
 }
 
-function createSync(options: IOptions) {
+function createSync(options: SyncOptions) {
 	options = {
 		useSyncFileSystemCalls: true,
 		fileSystem: nodeFileSystem,
 		...options
 	};
 	const resolver = ResolverFactory.createResolver(options);
-	return function (context: Context, path: string, request: IncomingMessage) {
+	return function (context: any, path: string, request: any) {
 		if (typeof context === "string") {
 			request = path;
 			path = context;

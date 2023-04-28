@@ -14,7 +14,7 @@ function DelayedStream() {
 }
 util.inherits(DelayedStream, Stream);
 
-DelayedStream.create = function(source: any, options: any) {
+DelayedStream.create = function(source: Readable, options: any) {
   var delayedStream = new this();
 
   options = options || {};
@@ -65,7 +65,7 @@ DelayedStream.prototype.pause = function() {
 DelayedStream.prototype.release = function() {
   this._released = true;
 
-  this._bufferedEvents.forEach(function(args: any) {
+  this._bufferedEvents.forEach(function(args: any[]) {
     this.emit.apply(this, args);
   }.bind(this));
   this._bufferedEvents = [];
@@ -77,7 +77,7 @@ DelayedStream.prototype.pipe = function() {
   return r;
 };
 
-DelayedStream.prototype._handleEmit = function(args: ICommandArgs) {
+DelayedStream.prototype._handleEmit = function(args: any[]) {
   if (this._released) {
     this.emit.apply(this, args);
     return;

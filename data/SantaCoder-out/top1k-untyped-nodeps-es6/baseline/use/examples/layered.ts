@@ -19,7 +19,7 @@ var e = d.create('e');
 var f = e.create('f');
 
 a.children = [];
-a.use(function fn(config: IConfig) {
+a.use(function fn(config: any) {
   if (!config.name) return fn;
   a.children.push(config.name);
   return fn;

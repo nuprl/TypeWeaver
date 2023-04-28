@@ -15,6 +15,6 @@ import timesLimit from './timesLimit.js'
  * @param {Function} callback - see {@link module:Collections.map}.
  * @returns {Promise} a promise, if no callback is provided
  */
-export default function timesSeries (n: number, iteratee: any, callback: any) {
+export default function timesSeries (n: number, iteratee: Function, callback: Function) {
     return timesLimit(n, 1, iteratee, callback)
 }

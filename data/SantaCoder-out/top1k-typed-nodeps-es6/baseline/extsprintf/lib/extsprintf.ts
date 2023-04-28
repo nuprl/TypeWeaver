@@ -167,7 +167,7 @@ function jsSprintf(ofmt: string)
 	return (ret);
 }
 
-function jsError(fmtstr: string, convposn: number, curconv: number, reason: string) {
+function jsError(fmtstr: string, convposn: number, curconv: string, reason: string) {
 	mod_assert.equal(typeof (fmtstr), 'string');
 	mod_assert.equal(typeof (curconv), 'string');
 	mod_assert.equal(typeof (convposn), 'number');
@@ -183,7 +183,7 @@ function jsPrintf() {
 	jsFprintf.apply(null, args);
 }
 
-function jsFprintf(stream: string) {
+function jsFprintf(stream: TJSFile) {
 	var args = Array.prototype.slice.call(arguments, 1);
 	return (stream.write(jsSprintf.apply(this, args)));
 }

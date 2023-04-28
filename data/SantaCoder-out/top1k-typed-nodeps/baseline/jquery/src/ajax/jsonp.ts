@@ -18,7 +18,7 @@ jQuery.ajaxSetup( {
 } );
 
 // Detect, normalize options and install callbacks for jsonp requests
-jQuery.ajaxPrefilter( "jsonp", function( s: string, originalSettings: any, jqXHR : any) {
+jQuery.ajaxPrefilter( "jsonp", function( s: string, originalSettings: any, jqXHR : JQueryXHR) {
 
 	var callbackName, overwritten, responseContainer,
 		jsonProp = s.jsonp !== false && ( rjsonp.test( s.url ) ?
@@ -58,7 +58,7 @@ jQuery.ajaxPrefilter( "jsonp", function( s: string, originalSettings: any, jqXHR
 		responseContainer = arguments;
 	};
 
-	// Clean-up function (fires after converters: success)
+	// Clean-up function (fires after converters: jqXHR)
 	jqXHR.always( function() {
 
 		// If previous value didn't exist - remove it

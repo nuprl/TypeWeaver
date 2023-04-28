@@ -19,15 +19,15 @@ import wrapAsync from './internal/wrapAsync.js'
  * @example
  *
  * async.parallel([
- *     async.reflect(function(callback: any) {
+ *     async.reflect(function(callback: Function) {
  *         // do some stuff ...
  *         callback(null, 'one');
  *     }),
- *     async.reflect(function(callback: any) {
+ *     async.reflect(function(callback: Function) {
  *         // do some more stuff but error ...
  *         callback('bad stuff happened');
  *     }),
- *     async.reflect(function(callback: any) {
+ *     async.reflect(function(callback: Function) {
  *         // do some more stuff ...
  *         callback(null, 'two');
  *     })
@@ -42,7 +42,7 @@ import wrapAsync from './internal/wrapAsync.js'
  */
 export default function reflect(fn: Function) {
     var _fn = wrapAsync(fn);
-    return initialParams(function reflectOn(args: ReflectOnArgs, reflectCallback: ReflectCallback) {
+    return initialParams(function reflectOn(args: any[], reflectCallback: Function) {
         args.push((error, ...cbArgs) => {
             let retVal = {};
             if (error) {

@@ -1,7 +1,7 @@
 var duplexify = require('duplexify')
 var http = require('http')
 
-var request = function(opts: IOptions) {
+var request = function(opts: http.RequestOptions) {
   var req = http.request(opts)
   var dup = duplexify()
   dup.setWritable(req)

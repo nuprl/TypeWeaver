@@ -41,7 +41,7 @@ function merge(from: any, to: any) {
 
 // --- API
 
-function Writer(options: IWriterOptions) {
+function Writer(options: WriterOptions) {
   options = merge(DEFAULT_OPTS, options || {});
 
   this._buf = Buffer.alloc(options.size || 1024);
@@ -63,7 +63,7 @@ Object.defineProperty(Writer.prototype, 'buffer', {
   }
 });
 
-Writer.prototype.writeByte = function (b: boolean) {
+Writer.prototype.writeByte = function (b: any) {
   if (typeof (b) !== 'number')
     throw new TypeError('argument must be a Number');
 
@@ -117,7 +117,7 @@ Writer.prototype.writeEnumeration = function (i: number, tag: string) {
 };
 
 
-Writer.prototype.writeBoolean = function (b: boolean, tag: string) {
+Writer.prototype.writeBoolean = function (b: any, tag: string) {
   if (typeof (b) !== 'boolean')
     throw new TypeError('argument must be a Boolean');
   if (typeof (tag) !== 'number')
@@ -147,7 +147,7 @@ Writer.prototype.writeString = function (s: string, tag: string) {
 };
 
 
-Writer.prototype.writeBuffer = function (buf: Uint8Array, tag: number) {
+Writer.prototype.writeBuffer = function (buf: Buffer, tag: number) {
   if (typeof (tag) !== 'number')
     throw new TypeError('tag must be a number');
   if (!Buffer.isBuffer(buf))
@@ -161,7 +161,7 @@ Writer.prototype.writeBuffer = function (buf: Uint8Array, tag: number) {
 };
 
 
-Writer.prototype.writeStringArray = function (strings: string[]) {
+Writer.prototype.writeStringArray = function (strings: Array<string>) {
   if ((!strings instanceof Array))
     throw new TypeError('argument must be an Array[String]');
 

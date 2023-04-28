@@ -54,7 +54,7 @@ jQuery.fn.extend( {
 				val += "";
 
 			} else if ( Array.isArray( val ) ) {
-				val = jQuery.map( val, function( value : string) {
+				val = jQuery.map( val, function( value : any) {
 					return value == null ? "" : value + "";
 				} );
 			}
@@ -72,7 +72,7 @@ jQuery.fn.extend( {
 jQuery.extend( {
 	valHooks: {
 		select: {
-			get: function( elem : HTMLElement) {
+			get: function( elem : JQuery) {
 				var value, option, i,
 					options = elem.options,
 					index = elem.selectedIndex,
@@ -114,7 +114,7 @@ jQuery.extend( {
 				return values;
 			},
 
-			set: function( elem: HTMLElement, value : string) {
+			set: function( elem: JQuery, value : any) {
 				var optionSet, option,
 					options = elem.options,
 					values = jQuery.makeArray( value ),

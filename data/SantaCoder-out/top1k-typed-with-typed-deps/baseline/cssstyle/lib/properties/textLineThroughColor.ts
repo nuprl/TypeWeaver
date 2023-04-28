@@ -3,7 +3,7 @@
 var parseColor = require('../parsers').parseColor;
 
 module.exports.definition = {
-  set: function(v: any) {
+  set: function(v: number) {
     this._setProperty('text-line-through-color', parseColor(v));
   },
   get: function() {

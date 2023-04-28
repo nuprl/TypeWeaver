@@ -18,7 +18,7 @@ var version = "@VERSION",
 	rhtmlSuffix = /HTML$/i,
 
 	// Define a local copy of jQuery
-	jQuery = function( selector: string, context : any) {
+	jQuery = function( selector: string, context : Element) {
 
 		// The jQuery object is actually just the init constructor 'enhanced'
 		// Need init if jQuery is called (just allow error to be thrown if not included)
@@ -54,7 +54,7 @@ jQuery.fn = jQuery.prototype = {
 
 	// Take an array of elements and push it onto the stack
 	// (returning the new matched element set)
-	pushStack: function( elems : jQuery) {
+	pushStack: function( elems : Array<Element>) {
 
 		// Build a new jQuery matched element set
 		var ret = jQuery.merge( this.constructor(), elems );
@@ -72,7 +72,7 @@ jQuery.fn = jQuery.prototype = {
 	},
 
 	map: function( callback : Function) {
-		return this.pushStack( jQuery.map( this, function( elem: Element, i : number) {
+		return this.pushStack( jQuery.map( this, function( elem: T, i : number) {
 			return callback.call( elem, i, elem );
 		} ) );
 	},
@@ -198,7 +198,7 @@ jQuery.extend( {
 
 	noop: function() {},
 
-	isPlainObject: function( obj : any) {
+	isPlainObject: function( obj : Object) {
 		var proto, Ctor;
 
 		// Detect obvious negatives
@@ -219,7 +219,7 @@ jQuery.extend( {
 		return typeof Ctor === "function" && fnToString.call( Ctor ) === ObjectFunctionString;
 	},
 
-	isEmptyObject: function( obj : any) {
+	isEmptyObject: function( obj : Object) {
 		var name;
 
 		for ( name in obj ) {
@@ -230,7 +230,7 @@ jQuery.extend( {
 
 	// Evaluates a script in a provided context; falls back to the global one
 	// if not specified.
-	globalEval: function( code: number, options: ICompilerOptions, doc : ICompilerDiagnostic[]) {
+	globalEval: function( code: string, options: any, doc : any) {
 		DOMEval( code, { nonce: options && options.nonce }, doc );
 	},
 
@@ -257,7 +257,7 @@ jQuery.extend( {
 
 
 	// Retrieve the text value of an array of DOM nodes
-	text: function( elem : Node) {
+	text: function( elem : HTMLElement) {
 		var node,
 			ret = "",
 			i = 0,
@@ -284,7 +284,7 @@ jQuery.extend( {
 
 
 	// results is for internal usage only
-	makeArray: function( arr: any[], results : any[]) {
+	makeArray: function( arr: Array<any>, results : Array<any>) {
 		var ret = results || [];
 
 		if ( arr != null ) {
@@ -301,11 +301,11 @@ jQuery.extend( {
 		return ret;
 	},
 
-	inArray: function( elem: HTMLElement, arr: number[], i : number) {
+	inArray: function( elem: JQuery, arr: Array<JQuery>, i : number) {
 		return arr == null ? -1 : indexOf.call( arr, elem, i );
 	},
 
-	isXMLDoc: function( elem : HTMLElement) {
+	isXMLDoc: function( elem : Element) {
 		var namespace = elem && elem.namespaceURI,
 			docElem = elem && ( elem.ownerDocument || elem ).documentElement;
 
@@ -314,7 +314,7 @@ jQuery.extend( {
 		return !rhtmlSuffix.test( namespace || docElem && docElem.nodeName || "HTML" );
 	},
 
-	merge: function( first: number, second : number) {
+	merge: function( first: string, second : string) {
 		var len = +second.length,
 			j = 0,
 			i = first.length;
@@ -328,7 +328,7 @@ jQuery.extend( {
 		return first;
 	},
 
-	grep: function( elems: Array<HTMLElement>, callback: any, invert : boolean) {
+	grep: function( elems: JQuery, callback: any, invert : boolean) {
 		var callbackInverse,
 			matches = [],
 			i = 0,
@@ -348,7 +348,7 @@ jQuery.extend( {
 	},
 
 	// arg is for internal usage only
-	map: function( elems: string, callback: Function, arg : any) {
+	map: function( elems: JQuery, callback: any, arg : any) {
 		var length, value,
 			i = 0,
 			ret = [];

@@ -10,7 +10,7 @@ import slice from '../slice.js'
  * @param {boolean} [fromRight] Specify iterating from right to left.
  * @returns {Array} Returns the slice of `array`.
  */
-function baseWhile(array: Array<any>, predicate: any, isDrop: boolean, fromRight: boolean) {
+function baseWhile(array: any[], predicate: any, isDrop: boolean, fromRight: boolean) {
   const { length } = array
   let index = fromRight ? length : -1
 

@@ -58,7 +58,7 @@ ip.toBuffer = function (ip: string, buff: Buffer, offset: number) {
   return result;
 };
 
-ip.toString = function (buff: Uint8Array, offset: number, length: number) {
+ip.toString = function (buff: Buffer, offset: number, length: number) {
   offset = ~~offset;
   length = length || (buff.length - offset);
 
@@ -103,7 +103,7 @@ function _normalizeFamily(family: number) {
   return family ? family.toLowerCase() : 'ipv4';
 }
 
-ip.fromPrefixLen = function (prefixlen: number, family: string) {
+ip.fromPrefixLen = function (prefixlen: number, family: number) {
   if (prefixlen > 32) {
     family = 'ipv6';
   } else {
@@ -181,7 +181,7 @@ ip.cidr = function (cidrString: string) {
   return ip.mask(addr, mask);
 };
 
-ip.subnet = function (addr: string, mask: number) {
+ip.subnet = function (addr: number, mask: number) {
   const networkAddress = ip.toLong(ip.mask(addr, mask));
 
   // Calculate the mask's length.
@@ -243,7 +243,7 @@ ip.not = function (addr: string) {
   return ip.toString(buff);
 };
 
-ip.or = function (a: Buffer, b: Buffer) {
+ip.or = function (a: string, b: string) {
   a = ip.toBuffer(a);
   b = ip.toBuffer(b);
 
@@ -414,7 +414,7 @@ ip.toLong = function (ip: string) {
   return (ipl >>> 0);
 };
 
-ip.fromLong = function (ipl: IplImage) {
+ip.fromLong = function (ipl: number) {
   return (`${ipl >>> 24}.${
     ipl >> 16 & 255}.${
     ipl >> 8 & 255}.${

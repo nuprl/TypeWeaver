@@ -53,7 +53,7 @@ Object.defineProperty(Reader.prototype, 'buffer', {
  * @param {Boolean} peek true means don't move offset.
  * @return {Number} the next byte, null if not enough data.
  */
-Reader.prototype.readByte = function (peek: number) {
+Reader.prototype.readByte = function (peek: T) {
   if (this._size - this._offset < 1)
     return null;
 
@@ -157,7 +157,7 @@ Reader.prototype.readEnumeration = function () {
 };
 
 
-Reader.prototype.readString = function (tag: ASN1.TagClass, retbuf: Uint8Array) {
+Reader.prototype.readString = function (tag: ASN1Tag, retbuf: Buffer) {
   if (!tag)
     tag = ASN1.OctetString;
 

@@ -40,7 +40,7 @@ module.exports.match = mimeMatch
  * @public
  */
 
-function typeis (value: any, types_: any[]) {
+function typeis (value: any, types_: string) {
   var i
   var types = types_
 
@@ -89,7 +89,7 @@ function typeis (value: any, types_: any[]) {
  * @public
  */
 
-function hasbody (req: Request) {
+function hasbody (req: IncomingMessage) {
   return req.headers['transfer-encoding'] !== undefined ||
     !isNaN(req.headers['content-length'])
 }
@@ -254,7 +254,7 @@ function normalizeType (value: string) {
  * @private
  */
 
-function tryNormalizeType (value: any) {
+function tryNormalizeType (value: string) {
   if (!value) {
     return null
   }

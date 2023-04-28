@@ -1,6 +1,6 @@
 import {diffLines} from '../diff/line';
 
-export function structuredPatch(oldFileName: string, newFileName: string, oldStr: string, newStr: string, oldHeader: string, newHeader: string, options: IOptions) {
+export function structuredPatch(oldFileName: string, newFileName: string, oldStr: string, newStr: string, oldHeader: string, newHeader: string, options: any) {
   if (!options) {
     options = {};
   }
@@ -42,7 +42,7 @@ export function structuredPatch(oldFileName: string, newFileName: string, oldStr
       }
 
       // Output our changes
-      curRange.push(... lines.map(function(entry: IEntry) {
+      curRange.push(... lines.map(function(entry: any) {
         return (current.added ? '+' : '-') + entry;
       }));
 
@@ -135,10 +135,10 @@ export function formatPatch(diff: string) {
   return ret.join('\n') + '\n';
 }
 
-export function createTwoFilesPatch(oldFileName: string, newFileName: string, oldStr: string, newStr: string, oldHeader: string, newHeader: string, options: IOptions) {
+export function createTwoFilesPatch(oldFileName: string, newFileName: string, oldStr: string, newStr: string, oldHeader: string, newHeader: string, options: any) {
   return formatPatch(structuredPatch(oldFileName, newFileName, oldStr, newStr, oldHeader, newHeader, options));
 }
 
-export function createPatch(fileName: string, oldStr: string, newStr: string, oldHeader: string, newHeader: string, options: IOptions) {
+export function createPatch(fileName: string, oldStr: string, newStr: string, oldHeader: string, newHeader: string, options: any) {
   return createTwoFilesPatch(fileName, fileName, oldStr, newStr, oldHeader, newHeader, options);
 }

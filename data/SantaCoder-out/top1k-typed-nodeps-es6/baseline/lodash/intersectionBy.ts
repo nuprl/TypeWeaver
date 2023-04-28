@@ -20,7 +20,7 @@ import last from './last.js'
  * intersectionBy([2.1, 1.2], [2.3, 3.4], Math.floor)
  * // => [2.1]
  */
-function intersectionBy(...arrays: Array<Array<any>>) {
+function intersectionBy(...arrays: any[]) {
   let iteratee = last(arrays)
   const mapped = map(arrays, castArrayLikeObject)
 

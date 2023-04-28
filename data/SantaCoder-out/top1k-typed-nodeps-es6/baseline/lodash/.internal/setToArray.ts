@@ -5,7 +5,7 @@
  * @param {Object} set The set to convert.
  * @returns {Array} Returns the values.
  */
-function setToArray(set: Set<T>) {
+function setToArray(set: Set<any>) {
   let index = -1
   const result = new Array(set.size)
 

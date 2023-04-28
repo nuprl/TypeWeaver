@@ -11,7 +11,7 @@ var encodingFamilies = [
     {
         // Windows code pages http://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WINDOWS/ (+932, 936, 949, 950)
         encodings: [874, 1250, 1251, 1252, 1253, 1254, 1255, 1256, 1257, 1258],
-        convert: function(cp: ICommandProcessor) {
+        convert: function(cp: number) {
             return {
                 name: "windows-"+cp,
                 aliases: ["win"+cp, "cp"+cp, ""+cp],
@@ -33,7 +33,7 @@ var encodingFamilies = [
         // GCGID <-> GCUID (unicode) http://www-01.ibm.com/software/globalization/gcgid/gcgid.html
         encodings: [437, 737, 775, 850, 852, 855, 856, 857, 858, 860, 861, 862, 863, 864, 865, 866, 869,
                     922, 1046, 1124, 1125, 1129, 1133, 1161, 1162, 1163],
-        convert: function(cp: string) {
+        convert: function(cp: number) {
             return {
                 name: "CP"+cp,
                 aliases: ["ibm"+cp, "csibm"+cp, ""+cp],
@@ -58,7 +58,7 @@ var encodingFamilies = [
 var encodings = {};
 
 // Add all encodings from encodingFamilies.
-encodingFamilies.forEach(function(family: string){
+encodingFamilies.forEach(function(family: Family){
     family.encodings.forEach(function(encoding: string){
         if (family.convert)
             encoding = family.convert(encoding);
@@ -72,7 +72,7 @@ encodingFamilies.forEach(function(family: string){
         };
 
         if (encoding.aliases)
-            encoding.aliases.forEach(function(alias: string){
+            encoding.aliases.forEach(function(alias: String){
                 encodings[alias] = encodingName;
             });
     });
@@ -84,7 +84,7 @@ fs.writeFileSync(path.join(__dirname, "..", destFileName),
     "module.exports = "+JSON.stringify(encodings, undefined, "  "));
 
 
-function generateCharsString(encoding: Encoding) {
+function generateCharsString(encoding: string) {
     console.log("Generate encoding for " + encoding);
     var iconvToUtf8 = new Iconv(encoding, "UTF-8");
     var iconvFromUtf8 = new Iconv("UTF-8", encoding);

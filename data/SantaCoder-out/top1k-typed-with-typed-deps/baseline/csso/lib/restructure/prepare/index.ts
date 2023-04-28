@@ -2,7 +2,7 @@ import { walk, generate, keyword as resolveKeyword } from 'css-tree';
 import createDeclarationIndexer from './createDeclarationIndexer.js';
 import processSelector from './processSelector.js';
 
-export default function prepare(ast: AST, options: Options) {
+export default function prepare(ast: Object, options: Object) {
     const markDeclaration = createDeclarationIndexer();
 
     walk(ast, {
@@ -26,7 +26,7 @@ export default function prepare(ast: AST, options: Options) {
             if (resolveKeyword(node.name).basename === 'keyframes') {
                 node.block.avoidRulesMerge = true;  /* probably we don't need to prevent those merges for @keyframes
                                                        TODO: need to be checked */
-                node.block.children.forEach(function(rule: IRule) {
+                node.block.children.forEach(function(rule: Rule) {
                     rule.prelude.children.forEach(function(simpleselector: string) {
                         simpleselector.compareMarker = simpleselector.id;
                     });

@@ -1,5 +1,5 @@
 const through2 = require('through2')
-module.exports = function (opts: IReadOptions) {
+module.exports = function (opts: any) {
   if (opts.objectMode)
     return through2.obj(func)
   s = through2(func)
@@ -8,7 +8,7 @@ module.exports = function (opts: IReadOptions) {
   }
   return s
 
-  function func (data: any, enc: string, done: any) {
+  function func (data: any, enc: any, done: any) {
     this.push(data, enc)
     done()
   }

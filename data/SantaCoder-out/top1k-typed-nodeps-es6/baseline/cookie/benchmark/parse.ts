@@ -50,11 +50,11 @@ suite.add({
   fn: 'var val = cookie.parse(' + JSON.stringify(gencookies(100)) + ')'
 })
 
-suite.on('start', function onCycle (event: CycleEvent) {
+suite.on('start', function onCycle (event: Event) {
   process.stdout.write('  cookie.parse - generic\n\n')
 })
 
-suite.on('cycle', function onCycle (event: BenchmarkEvent) {
+suite.on('cycle', function onCycle (event: Event) {
   benchmarks.add(event.target)
 })
 

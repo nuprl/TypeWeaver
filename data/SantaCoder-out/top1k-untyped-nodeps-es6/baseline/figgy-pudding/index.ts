@@ -82,7 +82,7 @@ class FiggyPudding {
 }
 try {
   const util = require('util')
-  FiggyPudding.prototype[util.inspect.custom] = function (depth: number, opts: IOptions) {
+  FiggyPudding.prototype[util.inspect.custom] = function (depth: number, opts: any) {
     return (
       this[Symbol.toStringTag] + ' '
     ) + util.inspect(this.toJSON(), opts)
@@ -95,7 +95,7 @@ function BadKeyError (key: string) {
   ), {code: 'EBADKEY'})
 }
 
-function pudGet (pud: Pud, key: string, validate: boolean) {
+function pudGet (pud: any, key: string, validate: any) {
   let spec = pud.__specs[key]
   if (validate && !spec && (!pud.__opts.other || !pud.__opts.other(key))) {
     BadKeyError(key)
@@ -175,8 +175,8 @@ const proxyHandler = {
 }
 
 export default figgyPudding;
-function figgyPudding (specs: Specifications, opts: FiggyPuddingOptions) {
-  function factory (...providers: any[]) {
+function figgyPudding (specs: Object, opts: Object) {
+  function factory (...providers: Provider[]) {
     return new Proxy(new FiggyPudding(
       specs,
       opts,
@@ -186,7 +186,7 @@ function figgyPudding (specs: Specifications, opts: FiggyPuddingOptions) {
   return factory
 }
 
-function reverse (arr: number[]) {
+function reverse (arr: Array<any>) {
   const ret = []
   arr.forEach(x => ret.unshift(x))
   return ret

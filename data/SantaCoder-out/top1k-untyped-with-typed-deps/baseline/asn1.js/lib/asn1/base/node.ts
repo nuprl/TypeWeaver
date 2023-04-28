@@ -29,7 +29,7 @@ const overrided = [
   '_encodeNull', '_encodeInt', '_encodeBool'
 ];
 
-function Node(enc: Encoding, parent: Node, name: string) {
+function Node(enc: string, parent: Node, name: string) {
   const state = {};
   this._baseState = state;
 
@@ -91,20 +91,20 @@ Node.prototype._wrap = function wrap() {
   }, this);
 };
 
-Node.prototype._init = function init(body: any) {
+Node.prototype._init = function init(body: string) {
   const state = this._baseState;
 
   assert(state.parent === null);
   body.call(this);
 
   // Filter children
-  state.children = state.children.filter(function(child: IBaseState) {
+  state.children = state.children.filter(function(child: State) {
     return child._baseState.parent === this;
   }, this);
   assert.equal(state.children.length, 1, 'Root node can have only one child');
 };
 
-Node.prototype._useArgs = function useArgs(args: any) {
+Node.prototype._useArgs = function useArgs(args: any[]) {
   const state = this._baseState;
 
   // Filter children and args
@@ -120,7 +120,7 @@ Node.prototype._useArgs = function useArgs(args: any) {
     state.children = children;
 
     // Replace parent to maintain backward link
-    children.forEach(function(child: IBaseChild) {
+    children.forEach(function(child: Node) {
       child._baseState.parent = this;
     }, this);
   }
@@ -172,7 +172,7 @@ tags.forEach(function(tag: string) {
   };
 });
 
-Node.prototype.use = function use(item: IItem) {
+Node.prototype.use = function use(item: any) {
   assert(item);
   const state = this._baseState;
 
@@ -247,7 +247,7 @@ Node.prototype.any = function any() {
   return this;
 };
 
-Node.prototype.choice = function choice(obj: Choice) {
+Node.prototype.choice = function choice(obj: any) {
   const state = this._baseState;
 
   assert(state.choice === null);
@@ -259,7 +259,7 @@ Node.prototype.choice = function choice(obj: Choice) {
   return this;
 };
 
-Node.prototype.contains = function contains(item: any) {
+Node.prototype.contains = function contains(item: T) {
   const state = this._baseState;
 
   assert(state.use === null);
@@ -272,7 +272,7 @@ Node.prototype.contains = function contains(item: any) {
 // Decoding
 //
 
-Node.prototype._decode = function decode(input: string, options: DecodeOptions) {
+Node.prototype._decode = function decode(input: Uint8Array, options: Options) {
   const state = this._baseState;
 
   // Decode root node
@@ -446,7 +446,7 @@ Node.prototype._getUse = function _getUse(entity: Entity, obj: any) {
   return state.useDecoder;
 };
 
-Node.prototype._decodeChoice = function decodeChoice(input: string, options: IChoiceOptions) {
+Node.prototype._decodeChoice = function decodeChoice(input: Uint8Array, options: DecodeOptions) {
   const state = this._baseState;
   let result = null;
   let match = false;
@@ -478,11 +478,11 @@ Node.prototype._decodeChoice = function decodeChoice(input: string, options: ICh
 // Encoding
 //
 
-Node.prototype._createEncoderBuffer = function createEncoderBuffer(data: any) {
+Node.prototype._createEncoderBuffer = function createEncoderBuffer(data: Uint8Array) {
   return new EncoderBuffer(data, this.reporter);
 };
 
-Node.prototype._encode = function encode(data: any, reporter: Reporter, parent: any) {
+Node.prototype._encode = function encode(data: any, reporter: any, parent: any) {
   const state = this._baseState;
   if (state['default'] !== null && state['default'] === data)
     return;
@@ -497,7 +497,7 @@ Node.prototype._encode = function encode(data: any, reporter: Reporter, parent: 
   return result;
 };
 
-Node.prototype._encodeValue = function encode(data: any, reporter: Reporter, parent: any) {
+Node.prototype._encodeValue = function encode(data: any, reporter: any, parent: any) {
   const state = this._baseState;
 
   // Decode root node
@@ -529,7 +529,7 @@ Node.prototype._encodeValue = function encode(data: any, reporter: Reporter, par
     content = this._getUse(state.contains, parent)._encode(data, reporter);
     primitive = true;
   } else if (state.children) {
-    content = state.children.map(function(child: React.ReactNode) {
+    content = state.children.map(function(child: any) {
       if (child._baseState.tag === 'null_')
         return child._encode(null, reporter, data);
 
@@ -544,7 +544,7 @@ Node.prototype._encodeValue = function encode(data: any, reporter: Reporter, par
       reporter.leaveKey(prevKey);
 
       return res;
-    }, this).filter(function(child: IChild) {
+    }, this).filter(function(child: any) {
       return child;
     });
     content = this._createEncoderBuffer(content);
@@ -559,7 +559,7 @@ Node.prototype._encodeValue = function encode(data: any, reporter: Reporter, par
 
       const child = this.clone();
       child._baseState.implicit = null;
-      content = this._createEncoderBuffer(data.map(function(item: any) {
+      content = this._createEncoderBuffer(data.map(function(item: T) {
         const state = this._baseState;
 
         return this._getUse(state.args[0], data)._encode(item, reporter);
@@ -593,7 +593,7 @@ Node.prototype._encodeValue = function encode(data: any, reporter: Reporter, par
   return result;
 };
 
-Node.prototype._encodeChoice = function encodeChoice(data: Choice, reporter: Reporter) {
+Node.prototype._encodeChoice = function encodeChoice(data: any, reporter: Reporter) {
   const state = this._baseState;
 
   const node = state.choice[data.type];

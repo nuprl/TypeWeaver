@@ -7,7 +7,7 @@
  * @param {Function} assignFunc The function to assign values.
  * @returns {Object} Returns the new object.
  */
-function baseZipObject(props: IZipObject<any>, values: any[], assignFunc: any) {
+function baseZipObject(props: any[], values: any[], assignFunc: any) {
   let index = -1
   const length = props.length
   const valsLength = values.length

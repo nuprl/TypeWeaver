@@ -15,7 +15,7 @@ const identity = (value) => value
  * @param {string[]} orders The sort orders of `iteratees`.
  * @returns {Array} Returns the new sorted array.
  */
-function baseOrderBy(collection: ICollection<any>, iteratees: IIteratee<any>, orders: IOrder[]) {
+function baseOrderBy(collection: any, iteratees: any[], orders: any[]) {
   if (iteratees.length) {
     iteratees = iteratees.map((iteratee) => {
       if (Array.isArray(iteratee)) {

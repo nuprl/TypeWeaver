@@ -58,7 +58,7 @@ function sendResponse(res: Response, statusCode: number, body: any) {
   res.end();
 }
 
-function send200(res: Response, body: string) {
+function send200(res: Response, body: any) {
   sendResponse(res, 200, body || '<h1>OK</h1>');
 }
 

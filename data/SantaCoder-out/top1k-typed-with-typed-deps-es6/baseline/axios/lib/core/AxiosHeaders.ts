@@ -10,7 +10,7 @@ function normalizeHeader(header: string) {
   return header && String(header).trim().toLowerCase();
 }
 
-function normalizeValue(value: any) {
+function normalizeValue(value: string) {
   if (value === false || value == null) {
     return value;
   }
@@ -30,7 +30,7 @@ function parseTokens(str: string) {
   return tokens;
 }
 
-function matchHeaderValue(context: MatchContext, value: string, header: string, filter: string) {
+function matchHeaderValue(context: Context, value: string, header: string, filter: string) {
   if (utils.isFunction(filter)) {
     return filter.call(this, value, header);
   }
@@ -58,7 +58,7 @@ function buildAccessors(obj: any, header: string) {
 
   ['get', 'set', 'has'].forEach(methodName => {
     Object.defineProperty(obj, methodName + accessorName, {
-      value: function(arg1: string, arg2: number, arg3: number) {
+      value: function(arg1: any, arg2: any, arg3: any) {
         return this[methodName].call(this, header, arg1, arg2, arg3);
       },
       configurable: true
@@ -66,7 +66,7 @@ function buildAccessors(obj: any, header: string) {
   });
 }
 
-function findKey(obj: any, key: string) {
+function findKey(obj: Object, key: string) {
   key = key.toLowerCase();
   const keys = Object.keys(obj);
   let i = keys.length;
@@ -80,7 +80,7 @@ function findKey(obj: any, key: string) {
   return null;
 }
 
-function AxiosHeaders(headers: AxiosHeaders, defaults: AxiosRequestConfig) {
+function AxiosHeaders(headers: any, defaults: any) {
   headers && this.set(headers);
   this[$defaults] = defaults || null;
 }
@@ -122,7 +122,7 @@ Object.assign(AxiosHeaders.prototype, {
     return this;
   },
 
-  get: function(header: string, parser: any) {
+  get: function(header: string, parser: Function) {
     header = normalizeHeader(header);
 
     if (!header) return undefined;
@@ -152,7 +152,7 @@ Object.assign(AxiosHeaders.prototype, {
     }
   },
 
-  has: function(header: string, matcher: string) {
+  has: function(header: string, matcher: RegExp) {
     header = normalizeHeader(header);
 
     if (header) {
@@ -164,11 +164,11 @@ Object.assign(AxiosHeaders.prototype, {
     return false;
   },
 
-  delete: function(header: string, matcher: string) {
+  delete: function(header: string, matcher: RegExp) {
     const self = this;
     let deleted = false;
 
-    function deleteHeader(_header: string) {
+    function deleteHeader(_header: Header) {
       _header = normalizeHeader(_header);
 
       if (_header) {
@@ -251,7 +251,7 @@ Object.assign(AxiosHeaders, {
     const accessors = internals.accessors;
     const prototype = this.prototype;
 
-    function defineAccessor(_header: any) {
+    function defineAccessor(_header: string) {
       const lHeader = normalizeHeader(_header);
 
       if (!accessors[lHeader]) {

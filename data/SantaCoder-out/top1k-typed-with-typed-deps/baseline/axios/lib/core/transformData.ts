@@ -12,13 +12,13 @@ import AxiosHeaders from '../core/AxiosHeaders.js';
  *
  * @returns {*} The resulting transformed data
  */
-export default function transformData(fns: any[], response: any) {
+export default function transformData(fns: Function[], response: any) {
   const config = this || defaults;
   const context = response || config;
   const headers = AxiosHeaders.from(context.headers);
   let data = context.data;
 
-  utils.forEach(fns, function transform(fn: any) {
+  utils.forEach(fns, function transform(fn: Function) {
     data = fn.call(config, data, headers.normalize(), response ? response.status : undefined);
   });
 

@@ -43,7 +43,7 @@ HashSettled.prototype._setResultAt = setSettledResult;
     notAPromise: 4
   };
 
-  hashSettled(promises).then(function(hash: string){
+  hashSettled(promises).then(function(hash: any){
     // hash here is an object that looks like:
     // {
     //   myPromise: { state: 'fulfilled', value: 1 },
@@ -99,7 +99,7 @@ HashSettled.prototype._setResultAt = setSettledResult;
 
   let myObject = new MyConstructor();
 
-  hashSettled(myObject).then(function(hash: string){
+  hashSettled(myObject).then(function(hash: String){
     // protoProperty will not be present, instead you will just have an
     // object that looks like:
     // {

@@ -1,6 +1,6 @@
 // conditionally promisify a function.
 // only return a promise if a callback is omitted
-export default function awaitify (asyncFn: AsyncFunction, arity = asyncFn.length: number) {
+export default function awaitify (asyncFn: Function, arity = asyncFn.length: number) {
     if (!arity) throw new Error('arity is undefined')
     function awaitable (...args: any[]) {
         if (typeof args[arity - 1] === 'function') {

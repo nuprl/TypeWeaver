@@ -23,11 +23,11 @@ Object.keys(top).forEach(function (domain: string) {
   })
 })
 
-suite.on('start', function onCycle (event: CycleEvent) {
+suite.on('start', function onCycle (event: Event) {
   process.stdout.write('  cookie.parse - top sites\n\n')
 })
 
-suite.on('cycle', function onCycle (event: CycleEvent) {
+suite.on('cycle', function onCycle (event: Event) {
   benchmarks.add(event.target)
 })
 

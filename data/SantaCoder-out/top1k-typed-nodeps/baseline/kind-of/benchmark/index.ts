@@ -8,7 +8,7 @@ suite.run({
   fixtures: 'fixtures/*.js',
   code: 'code/{kind-of,lib-*}.js'
 })
-  .then(function(stats: WebpackStats) {
+  .then(function(stats: any) {
     write.sync(path.join(__dirname, 'stats.json'), JSON.stringify(stats, null, 2))
     write.sync(path.join(__dirname, 'stats.md'), suite.render(stats));
   })

@@ -2,7 +2,7 @@ import jQuery from "../core.js";
 import isAutoPx from "./isAutoPx.js";
 import rcssNum from "../var/rcssNum.js";
 
-function adjustCSS( elem: HTMLElement, prop: string, valueParts: string[], tween : number) {
+function adjustCSS( elem: HTMLElement, prop: string, valueParts: string[], tween : Tween) {
 	var adjusted, scale,
 		maxIterations = 20,
 		currentValue = tween ?

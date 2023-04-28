@@ -19,9 +19,9 @@
 NW.Dom.registerSelector(
   'jquery:child',
   /^\:((?:(nth|eq|lt|gt)\(([^()]*)\))|(?:even|odd|first|last))(.*)/i,
-  (function(global: Global) {
+  (function(global: any) {
 
-    return function(match: RegExpMatchArray, source: string, mode: string, callback: Function) {
+    return function(match: RegExpExecArray, source: string, mode: string, callback: Function) {
 
       var status = true,
       macro = mode ? NW.Dom.S_BODY : NW.Dom.M_BODY;
@@ -79,7 +79,7 @@ NW.Dom.registerSelector(
   /^\:(has|checkbox|file|image|password|radio|reset|submit|text|button|input|header|hidden|visible|parent)(?:\(\s*(["']*)?([^'"()]*)\2\s*\))?(.*)/i,
   (function(global: any) {
 
-    return function(match: RegExpMatchArray, source: string, mode: string, callback: any) {
+    return function(match: RegExpMatchArray, source: string, mode: string, callback: Function) {
 
       var status = true,
       macro = mode ? NW.Dom.S_BODY : NW.Dom.M_BODY;

@@ -43,7 +43,7 @@ var defer = typeof setImmediate === 'function'
  * @public
  */
 
-function onFinished (msg: IMessage, listener: IMessageListener) {
+function onFinished (msg: string, listener: any) {
   if (isFinished(msg) !== false) {
     defer(listener, null, msg)
     return msg
@@ -63,7 +63,7 @@ function onFinished (msg: IMessage, listener: IMessageListener) {
  * @public
  */
 
-function isFinished (msg: Message) {
+function isFinished (msg: any) {
   var socket = msg.socket
 
   if (typeof msg.finished === 'boolean') {
@@ -88,7 +88,7 @@ function isFinished (msg: Message) {
  * @private
  */
 
-function attachFinishedListener (msg: IMessage, callback: any) {
+function attachFinishedListener (msg: Message, callback: Function) {
   var eeMsg
   var eeSocket
   var finished = false
@@ -138,7 +138,7 @@ function attachFinishedListener (msg: IMessage, callback: any) {
  * @private
  */
 
-function attachListener (msg: Message, listener: Function) {
+function attachListener (msg: string, listener: Listener) {
   var attached = msg.__onFinished
 
   // create a private single listener with queue
@@ -158,7 +158,7 @@ function attachListener (msg: Message, listener: Function) {
  * @private
  */
 
-function createListener (msg: RPCMessage) {
+function createListener (msg: string) {
   function listener (err: Error) {
     if (msg.__onFinished === listener) msg.__onFinished = null
     if (!listener.queue) return
@@ -185,7 +185,7 @@ function createListener (msg: RPCMessage) {
  */
 
 // istanbul ignore next: node.js 0.8 patch
-function patchAssignSocket (res: AxiosResponse, callback: any) {
+function patchAssignSocket (res: IncomingMessage, callback: any) {
   var assignSocket = res.assignSocket
 
   if (typeof assignSocket !== 'function') return

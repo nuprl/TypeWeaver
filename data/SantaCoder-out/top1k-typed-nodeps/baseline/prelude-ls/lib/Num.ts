@@ -22,13 +22,13 @@ signum = function(x: number){
 quot = curry$(function(x: number, y: number){
   return ~~(x / y);
 });
-rem = curry$(function(x$: any, y$: any){
+rem = curry$(function(x$: number, y$: number){
   return x$ % y$;
 });
 div = curry$(function(x: number, y: number){
   return Math.floor(x / y);
 });
-mod = curry$(function(x$: any, y$: any){
+mod = curry$(function(x$: Observable<any>, y$: Observable<any>){
   var ref$;
   return ((x$) % (ref$ = y$) + ref$) % ref$;
 });
@@ -115,9 +115,9 @@ module.exports = {
   gcd: gcd,
   lcm: lcm
 };
-function curry$(f: Function, bound: any){
+function curry$(f: Function, bound: Array<any>){
   var context,
-  _curry = function(args: any) {
+  _curry = function(args: any[]) {
     return f.length > 1 ? function(){
       var params = args ? args.concat() : [];
       context = bound ? context || this : this;

@@ -22,7 +22,7 @@ import isAxiosError from './helpers/isAxiosError.js';
  *
  * @returns {Axios} A new instance of Axios
  */
-function createInstance(defaultConfig: IConfig) {
+function createInstance(defaultConfig: Config) {
   const context = new Axios(defaultConfig);
   const instance = bind(Axios.prototype.request, context);
 
@@ -33,7 +33,7 @@ function createInstance(defaultConfig: IConfig) {
   utils.extend(instance, context, {allOwnKeys: true});
 
   // Factory for creating new instances
-  instance.create = function create(instanceConfig: IInstanceConfig) {
+  instance.create = function create(instanceConfig: InstanceConfig) {
     return createInstance(mergeConfig(defaultConfig, instanceConfig));
   };
 

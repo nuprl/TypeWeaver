@@ -1,5 +1,5 @@
 const through2 = require('through2')
-module.exports = function (opts: IOptions) {
+module.exports = function (opts: any) {
   if (opts.objectMode)
     return through2.obj()
   s = through2()

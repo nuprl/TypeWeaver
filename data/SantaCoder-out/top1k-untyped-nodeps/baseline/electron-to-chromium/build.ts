@@ -37,7 +37,7 @@ allElectronVersions
   {list: chromiumVersions, file: "chromium-versions"},
   {list: chromiumFullVersions, file: "full-chromium-versions"},
 ].forEach((obj) => {
-  fs.writeFile(`${obj.file}.js`, `module.exports = ${makePrintable(obj.list)};`, function (error: Error) {
+  fs.writeFile(`${obj.file}.js`, `module.exports = ${makePrintable(obj.list)};`, function (error: any) {
     if (error) {
       throw error;
     }

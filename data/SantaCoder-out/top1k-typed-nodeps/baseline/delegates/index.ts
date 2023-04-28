@@ -13,7 +13,7 @@ module.exports = Delegator;
  * @api public
  */
 
-function Delegator(proto: any, target: any) {
+function Delegator(proto: Object, target: Object) {
   if (!(this instanceof Delegator)) return new Delegator(proto, target);
   this.proto = proto;
   this.target = target;

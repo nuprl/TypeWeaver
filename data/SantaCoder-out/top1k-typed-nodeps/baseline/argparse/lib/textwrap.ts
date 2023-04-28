@@ -348,7 +348,7 @@ class TextWrapper {
 
 // -- Convenience interface ---------------------------------------------
 
-function wrap(text: string, options = {}: WrapOptions) {
+function wrap(text: string, options = {}: Options) {
     /*
      *  Wrap a single paragraph of text, returning a list of wrapped lines.
      *
@@ -364,7 +364,7 @@ function wrap(text: string, options = {}: WrapOptions) {
     return w.wrap(text)
 }
 
-function fill(text: string, options = {}: FillOptions) {
+function fill(text: string, options = {}: Options) {
     /*
      *  Fill a single paragraph of text, returning a new string.
      *

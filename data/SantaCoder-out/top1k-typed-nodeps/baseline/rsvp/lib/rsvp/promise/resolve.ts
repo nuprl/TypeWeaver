@@ -10,7 +10,7 @@ import {
   ```javascript
   import Promise from 'rsvp';
 
-  let promise = new Promise(function(resolve: any, reject: any){
+  let promise = new Promise(function(resolve: Function, reject: Function){
     resolve(1);
   });
 
@@ -40,7 +40,7 @@ import {
   @return {Promise} a promise that will become fulfilled with the given
   `value`
 */
-export default function resolve(object: any, label: string) {
+export default function resolve(object: Object, label: string) {
   /*jshint validthis:true */
   let Constructor = this;
 

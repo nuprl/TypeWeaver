@@ -36,7 +36,7 @@ import wrapAsync from './internal/wrapAsync.js'
  * and a `priority` property, if this is a
  * [priorityQueue]{@link module:ControlFlow.priorityQueue} object.
  * Invoked with `queue.remove(testFn)`, where `testFn` is of the form
- * `function ({data: any, priority}: IMessage) {}` and returns a Boolean.
+ * `function ({data: any, priority}: any) {}` and returns a Boolean.
  * @property {Function} saturated - a function that sets a callback that is
  * called when the number of running workers hits the `concurrency` limit, and
  * further tasks will be queued.  If the callback is omitted, `q.saturated()`
@@ -54,7 +54,7 @@ import wrapAsync from './internal/wrapAsync.js'
  * when the last item from the `queue` has returned from the `worker`. If the
  * callback is omitted, `q.drain()` returns a promise for the next occurrence.
  * @property {Function} error - a function that sets a callback that is called
- * when a task errors. Has the signature `function(error: Error, task: Task)`. If the
+ * when a task errors. Has the signature `function(error: any, task: Task)`. If the
  * callback is omitted, `error()` returns a promise that rejects on the next
  * error.
  * @property {boolean} paused - a boolean for determining whether the queue is
@@ -109,7 +109,7 @@ import wrapAsync from './internal/wrapAsync.js'
  * @example
  *
  * // create a queue object with concurrency 2
- * var q = async.queue(function(task: Task, callback: any) {
+ * var q = async.queue(function(task: Task, callback: Function) {
  *     console.log('hello ' + task.name);
  *     callback();
  * }, 2);
@@ -122,19 +122,19 @@ import wrapAsync from './internal/wrapAsync.js'
  * await q.drain()
  *
  * // assign an error callback
- * q.error(function(err: Error, task: Task) {
+ * q.error(function(err: any, task: any) {
  *     console.error('task experienced an error');
  * });
  *
  * // add some items to the queue
- * q.push({name: 'foo'}, function(err: Error) {
+ * q.push({name: 'foo'}, function(err: any) {
  *     console.log('finished processing foo');
  * });
  * // callback is optional
  * q.push({name: 'bar'});
  *
  * // add some items to the queue (batch-wise)
- * q.push([{name: 'baz'},{name: 'bay'},{name: 'bax'}], function(err: Error) {
+ * q.push([{name: 'baz'},{name: 'bay'},{name: 'bax'}], function(err: any) {
  *     console.log('finished processing item');
  * });
  *

@@ -33,7 +33,7 @@ function encode(str: string) {
  *
  * @returns {void}
  */
-function AxiosURLSearchParams(params: AxiosURLSearchParamsOptions, options: AxiosRequestConfig<AxiosResponse<AxiosRequest>>) {
+function AxiosURLSearchParams(params: any, options: AxiosURLSearchParamsOptions) {
   this._pairs = [];
 
   params && toFormData(params, this, options);
@@ -41,11 +41,11 @@ function AxiosURLSearchParams(params: AxiosURLSearchParamsOptions, options: Axio
 
 const prototype = AxiosURLSearchParams.prototype;
 
-prototype.append = function append(name: string, value: any) {
+prototype.append = function append(name: string, value: string) {
   this._pairs.push([name, value]);
 };
 
-prototype.toString = function toString(encoder: IEncoder) {
+prototype.toString = function toString(encoder: Encoder) {
   const _encode = encoder ? function(value: any) {
     return encoder.call(this, value, encode);
   } : encode;

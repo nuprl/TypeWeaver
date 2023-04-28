@@ -21,7 +21,7 @@ export default onHeaders;
  * @private
  */
 
-function createWriteHead (prevWriteHead: number, listener: any) {
+function createWriteHead (prevWriteHead: Function, listener: Function) {
   var fired = false
 
   // return function with core name and argument list
@@ -53,7 +53,7 @@ function createWriteHead (prevWriteHead: number, listener: any) {
  * @public
  */
 
-function onHeaders (res: Response, listener: any) {
+function onHeaders (res: IncomingMessage, listener: any) {
   if (!res) {
     throw new TypeError('argument res is required')
   }
@@ -73,7 +73,7 @@ function onHeaders (res: Response, listener: any) {
  * @private
  */
 
-function setHeadersFromArray (res: Response, headers: string[]) {
+function setHeadersFromArray (res: Response, headers: Array<string>) {
   for (var i = 0; i < headers.length; i++) {
     res.setHeader(headers[i][0], headers[i][1])
   }
@@ -87,7 +87,7 @@ function setHeadersFromArray (res: Response, headers: string[]) {
  * @private
  */
 
-function setHeadersFromObject (res: Response, headers: any) {
+function setHeadersFromObject (res: ServerResponse, headers: any) {
   var keys = Object.keys(headers)
   for (var i = 0; i < keys.length; i++) {
     var k = keys[i]

@@ -5,7 +5,7 @@ var SlowBuffer = require('buffer').SlowBuffer;
 
 module.exports = bufferEq;
 
-function bufferEq(a: Uint8Array, b: Uint8Array) {
+function bufferEq(a: Buffer, b: Buffer) {
 
   // shortcutting on type is necessary for correctness
   if (!Buffer.isBuffer(a) || !Buffer.isBuffer(b)) {
@@ -28,7 +28,7 @@ function bufferEq(a: Uint8Array, b: Uint8Array) {
 }
 
 bufferEq.install = function() {
-  Buffer.prototype.equal = SlowBuffer.prototype.equal = function equal(that: BufferLike) {
+  Buffer.prototype.equal = SlowBuffer.prototype.equal = function equal(that: Uint8Array) {
     return bufferEq(this, that);
   };
 };

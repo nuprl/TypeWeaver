@@ -17,7 +17,7 @@ var HTMLFileBegin = '<!DOCTYPE html>\n<html lang="en">\n<head>\n';
 var HTMLFileHeadBodyJoin = '</head>\n<body>';
 var HTMLFileEnd = '</body>';
 
-function generateHTMLFile(filename: string, $page: HTMLPage, callback: any) {
+function generateHTMLFile(filename: string, $page: CheerioStatic, callback: any) {
     var methodName = filename.match(/\/(\w+)\.js\.html$/);
     if (methodName) {
         var $thisMethodDocLink = $page.find('#toc').find('a[href="'+docFilename+'#'+methodName[1]+'"]');
@@ -64,7 +64,7 @@ function combineFakeModules(files: string[], callback: any) {
     });
 }
 
-function applyPreCheerioFixes(data: Cheerio.Result) {
+function applyPreCheerioFixes(data: string) {
 
 
     var rIncorrectCFText = />ControlFlow</g;
@@ -110,7 +110,7 @@ function scrollSpyFix($page: JQuery, $nav: JQuery) {
     });
 }
 
-function fixToc(file: IFile, $page: IPage, moduleFiles: IModuleFiles) {
+function fixToc(file: string, $page: CheerioStatic, moduleFiles: string[]) {
     // remove `async` listing from toc
     $page.find('a[href="'+mainModuleFile+'"]').parent().remove();
 
@@ -141,7 +141,7 @@ function fixToc(file: IFile, $page: IPage, moduleFiles: IModuleFiles) {
     });
 }
 
-function fixFooter($page: JQuery<HTMLElement>) {
+function fixFooter($page: JQuery) {
     var $footer = $page.find('footer');
     $page.find(mainScrollableSection).append($footer);
 }

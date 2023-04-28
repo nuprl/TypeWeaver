@@ -62,7 +62,7 @@ function readFile(filename: string, encoding: string, callback: any) {
 
     var chunks = [];
 
-    process.stdin.on('data', function (chunk: Buffer) {
+    process.stdin.on('data', function (chunk: string) {
       chunks.push(chunk);
     });
 

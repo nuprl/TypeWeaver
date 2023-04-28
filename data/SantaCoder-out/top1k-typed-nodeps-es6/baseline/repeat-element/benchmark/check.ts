@@ -12,12 +12,12 @@ import repeat from '../';
 let fixtures = glob.sync(__dirname + '/fixtures/*.js').map(require);
 let expected = fixtures.map(fixture => repeat.apply(repeat, fixture).length);
 
-glob.sync(__dirname + '/code/*.js').forEach(function (fp: any) {
+glob.sync(__dirname + '/code/*.js').forEach(function (fp: string) {
   let fn = require(path.resolve(__dirname, 'code', fp));
   let name = path.basename(fp, path.extname(fp));
   let problems = [];
 
-  fixtures.forEach(function (fixture: Fixture<TestComponent>, idx: number) {
+  fixtures.forEach(function (fixture: any, idx: number) {
     let answer = fn.apply(fn, fixture).length;
 
     if (answer !== expected[idx]) {
@@ -30,7 +30,7 @@ glob.sync(__dirname + '/code/*.js').forEach(function (fp: any) {
   } else {
     console.log(' ' + chalk.bold.red('✖') + ' ' + chalk.bold(name));
 
-    problems.forEach(function (item: any, idx: number, arr: any[]) {
+    problems.forEach(function (item: any, idx: number, arr: any) {
       let str = item[0] + ' gave ' + item[1] + ', expected ' + item[2];
       console.log((idx === arr.length - 1 ? ' ┗ ' : ' ┣ ') + chalk.red(str));
     });

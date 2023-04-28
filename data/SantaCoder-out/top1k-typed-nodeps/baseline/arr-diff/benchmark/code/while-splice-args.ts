@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function(arr: any[], arrays: any[]) {
+module.exports = function(arr: any[], arrays: any[][]) {
   for (var i = 1; i < arguments.length; i++) {
     diff(arr, arguments[i]);
   }
@@ -16,7 +16,7 @@ function diff(one: any, two: any) {
   }
 }
 
-function remove(arr: Array<any>, ele: any) {
+function remove(arr: any[], ele: any) {
   var idx = arr.indexOf(ele);
   if (idx === -1) return;
   var item = arr.pop();

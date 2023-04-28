@@ -9,7 +9,7 @@
 
 var typeOf = require('kind-of');
 
-module.exports = function toPath(args: any) {
+module.exports = function toPath(args: any[]) {
   if (typeOf(args) !== 'arguments') {
     args = arguments;
   }

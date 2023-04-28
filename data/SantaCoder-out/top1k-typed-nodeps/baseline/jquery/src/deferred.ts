@@ -10,7 +10,7 @@ function Thrower( ex : any) {
 	throw ex;
 }
 
-function adoptValue( value: any, resolve: Function, reject: Function, noValue : boolean) {
+function adoptValue( value: any, resolve: any, reject: any, noValue : any) {
 	var method;
 
 	try {
@@ -71,8 +71,8 @@ jQuery.extend( {
 				pipe: function( /* fnDone: any, fnFail: any, fnProgress */ : any) {
 					var fns = arguments;
 
-					return jQuery.Deferred( function( newDefer : Deferred<any>) {
-						jQuery.each( tuples, function( _i: number, tuple : any) {
+					return jQuery.Deferred( function( newDefer : Deferred<T>) {
+						jQuery.each( tuples, function( _i: number, tuple : any[]) {
 
 							// Map tuples (progress, done, fail) to arguments (done, fail, progress)
 							var fn = typeof fns[ tuple[ 4 ] ] === "function" &&
@@ -101,7 +101,7 @@ jQuery.extend( {
 				},
 				then: function( onFulfilled: any, onRejected: any, onProgress : any) {
 					var maxDepth = 0;
-					function resolve( depth: number, deferred: Deferred<any>, handler: any, special : any) {
+					function resolve( depth: number, deferred: Deferred<T>, handler: Handler<T>, special : boolean) {
 						return function() {
 							var that = this,
 								args = arguments,
@@ -226,7 +226,7 @@ jQuery.extend( {
 						};
 					}
 
-					return jQuery.Deferred( function( newDefer : Deferred<any>) {
+					return jQuery.Deferred( function( newDefer : Deferred<T>) {
 
 						// progress_handlers.add( ... )
 						tuples[ 0 ][ 3 ].add(
@@ -273,7 +273,7 @@ jQuery.extend( {
 			deferred = {};
 
 		// Add list-specific methods
-		jQuery.each( tuples, function( i: number, tuple : any) {
+		jQuery.each( tuples, function( i: number, tuple : any[]) {
 			var list = tuple[ 2 ],
 				stateString = tuple[ 5 ];
 

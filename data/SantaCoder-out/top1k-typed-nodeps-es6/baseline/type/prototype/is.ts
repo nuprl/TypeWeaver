@@ -2,7 +2,7 @@
 
 import isObject from '../object/is';
 
-export default function (value: any) {
+export default function (value: unknown) {
 	if (!isObject(value)) return false;
 	try {
 		if (!value.constructor) return false;

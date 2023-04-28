@@ -46,7 +46,7 @@ const make = through2((options, transform, flush) => {
 // make me a reusable prototype that I can `new`, or implicitly `new`
 // with a constructor call
 const ctor = through2((options, transform, flush) => {
-  function Through2 (override: any) {
+  function Through2 (override: boolean) {
     if (!(this instanceof Through2)) {
       return new Through2(override)
     }
@@ -66,7 +66,7 @@ const ctor = through2((options, transform, flush) => {
   return Through2
 })
 
-const obj = through2(function (options: TransformOptions, transform: Transform, flush: any) {
+const obj = through2(function (options: TransformOptions, transform: TransformFunction, flush: TransformFlush) {
   const t2 = new Transform(Object.assign({ objectMode: true, highWaterMark: 16 }, options))
 
   t2._transform = transform

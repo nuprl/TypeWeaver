@@ -34,10 +34,10 @@ import seq from './seq.js'
  * }
  *
  * var add1mul3 = async.compose(mul3, add1);
- * add1mul3(4, function (err: Error, result: number) {
+ * add1mul3(4, function (err: any, result: number) {
  *     // result now equals 15
  * });
  */
-export default function compose(...args: any[]) {
+export default function compose(...args: Array<Function>) {
     return seq(...args.reverse());
 }

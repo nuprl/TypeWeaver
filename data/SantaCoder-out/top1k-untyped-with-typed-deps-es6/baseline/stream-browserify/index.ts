@@ -45,10 +45,10 @@ function Stream() {
   EE.call(this);
 }
 
-Stream.prototype.pipe = function(dest: string, options: IOptions) {
+Stream.prototype.pipe = function(dest: string, options: any) {
   var source = this;
 
-  function ondata(chunk: Uint8Array) {
+  function ondata(chunk: Buffer) {
     if (dest.writable) {
       if (false === dest.write(chunk) && source.pause) {
         source.pause();

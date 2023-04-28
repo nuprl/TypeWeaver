@@ -11,7 +11,7 @@ const NAN = 0 / 0
  * @param {*} value The value to process.
  * @returns {number} Returns the number.
  */
-function baseToNumber(value: string) {
+function baseToNumber(value: unknown) {
   if (typeof value === 'number') {
     return value
   }

@@ -21,7 +21,7 @@ import glob from 'glob';
 
 var groups = [], total = 0, warning1 = '/* ERROR: Rewrite using Buffer */\n', warning2 = '\\/\\* ERROR\\: Rewrite using Buffer \\*\\/\\n', length, i;
 
-fs.readFile(__dirname + '/package.json', 'utf8', function (err: Error, data: any) {
+fs.readFile(__dirname + '/package.json', 'utf8', function (err: any, data: any) {
   if (err) {
     throw err;
   }
@@ -391,13 +391,13 @@ function replace() {
 
 /* reads a file, runs replacement and writes it back */
 function processFile(file: string) {
-  fs.readFile(file, {encoding: 'utf8'}, function (err: Error, data: any) {
+  fs.readFile(file, {encoding: 'utf8'}, function (err: any, data: any) {
     if (err) {
       throw err;
     }
 
     /* run replacement twice, might need more runs */
-    fs.writeFile(file, data.replace(master, replace).replace(master, replace), function (err: Error) {
+    fs.writeFile(file, data.replace(master, replace).replace(master, replace), function (err: any) {
       if (err) {
         throw err;
       }
@@ -407,7 +407,7 @@ function processFile(file: string) {
 
 /* process file names from command line and process the identified files */
 for (i = 2, length = process.argv.length; i < length; i++) {
-  glob(process.argv[i], function (err: Error, matches: Match[]) {
+  glob(process.argv[i], function (err: Error, matches: string[]) {
     if (err) {
       throw err;
     }

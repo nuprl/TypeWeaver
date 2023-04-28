@@ -2,7 +2,7 @@
 
 var coerceToSafeInteger = require("../safe-integer/coerce");
 
-module.exports = function (value: number) {
+module.exports = function (value: unknown) {
 	value = coerceToSafeInteger(value);
 	if (!value) return value;
 	if (value < 0) return null;

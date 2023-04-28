@@ -7,7 +7,7 @@ import Node from '../base/node';
 // Import DER constants
 import der from '../constants/der';
 
-function DEREncoder(entity: Entity) {
+function DEREncoder(entity: any) {
   this.enc = 'der';
   this.name = entity.name;
   this.entity = entity;
@@ -94,7 +94,7 @@ DERNode.prototype._encodeStr = function encodeStr(str: string, tag: string) {
   }
 };
 
-DERNode.prototype._encodeObjid = function encodeObjid(id: any, values: any, relative: boolean) {
+DERNode.prototype._encodeObjid = function encodeObjid(id: number, values: any[], relative: number) {
   if (typeof id === 'string') {
     if (!values)
       return this.reporter.error('string objid given, but no values map found');
@@ -240,13 +240,13 @@ DERNode.prototype._encodeBool = function encodeBool(value: boolean) {
   return this._createEncoderBuffer(value ? 0xff : 0);
 };
 
-DERNode.prototype._use = function use(entity: Entity, obj: EntityObject) {
+DERNode.prototype._use = function use(entity: Entity, obj: any) {
   if (typeof entity === 'function')
     entity = entity(obj);
   return entity._getEncoder('der').tree;
 };
 
-DERNode.prototype._skipDefault = function skipDefault(dataBuffer: Buffer, reporter: Reporter, parent: IResource) {
+DERNode.prototype._skipDefault = function skipDefault(dataBuffer: Buffer, reporter: Reporter, parent: Node) {
   const state = this._baseState;
   let i;
   if (state['default'] === null)
@@ -268,7 +268,7 @@ DERNode.prototype._skipDefault = function skipDefault(dataBuffer: Buffer, report
 
 // Utility methods
 
-function encodeTag(tag: string, primitive: boolean, cls: string, reporter: Reporter) {
+function encodeTag(tag: string, primitive: boolean, cls: Class<any>, reporter: Reporter) {
   let res;
 
   if (tag === 'seqof')

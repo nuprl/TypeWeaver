@@ -258,7 +258,7 @@ exports.parseUrl = function parseUrl(val: string) {
   return 'url(' + str + ')';
 };
 
-exports.parseString = function parseString(val: string) {
+exports.parseString = function parseString(val: any) {
   var type = exports.valueType(val);
   if (type === exports.TYPES.NULL_OR_EMPTY_STR) {
     return val;
@@ -285,7 +285,7 @@ exports.parseString = function parseString(val: string) {
   return val;
 };
 
-exports.parseColor = function parseColor(val: string) {
+exports.parseColor = function parseColor(val: any) {
   var type = exports.valueType(val);
   if (type === exports.TYPES.NULL_OR_EMPTY_STR) {
     return val;
@@ -404,7 +404,7 @@ exports.parseColor = function parseColor(val: string) {
   return undefined;
 };
 
-exports.parseAngle = function parseAngle(val: number) {
+exports.parseAngle = function parseAngle(val: string) {
   var type = exports.valueType(val);
   if (type === exports.TYPES.NULL_OR_EMPTY_STR) {
     return val;
@@ -448,7 +448,7 @@ exports.parseKeyword = function parseKeyword(val: string, valid_keywords: string
 };
 
 // utility to translate from border-width to borderWidth
-var dashedToCamelCase = function(dashed: string) {
+var dashedToCamelCase = function(dashed: boolean) {
   var i;
   var camel = '';
   var nextCap = false;
@@ -540,7 +540,7 @@ exports.shorthandParser = function parse(v: string, shorthand_for: string) {
   }
   var parts = getParts(v);
   var valid = true;
-  parts.forEach(function(part: Part, i: number) {
+  parts.forEach(function(part: any, i: number) {
     var part_valid = false;
     Object.keys(shorthand_for).forEach(function(property: string) {
       if (shorthand_for[property].isValid(part, i)) {
@@ -615,7 +615,7 @@ exports.shorthandGetter = function(property: string, shorthand_for: string) {
 // if two, the first applies to the top and bottom, and the second to left and right
 // if three, the first applies to the top, the second to left and right, the third bottom
 // if four, top, right, bottom, left
-exports.implicitSetter = function(property_before: string, property_after: string, isValid: boolean, parser: Parser<T>) {
+exports.implicitSetter = function(property_before: any, property_after: any, isValid: boolean, parser: any) {
   property_after = property_after || '';
   if (property_after !== '') {
     property_after = '-' + property_after;
@@ -674,11 +674,11 @@ exports.implicitSetter = function(property_before: string, property_after: strin
 //  sub-parts are set.  If so, it sets the shorthand version and removes
 //  the individual parts from the cssText.
 //
-exports.subImplicitSetter = function(prefix: string, part: string, isValid: boolean, parser: any) {
+exports.subImplicitSetter = function(prefix: string, part: string, isValid: boolean, parser: Parser) {
   var property = prefix + '-' + part;
   var subparts = [prefix + '-top', prefix + '-right', prefix + '-bottom', prefix + '-left'];
 
-  return function(v: number) {
+  return function(v: any) {
     if (typeof v === 'number') {
       v = v.toString();
     }

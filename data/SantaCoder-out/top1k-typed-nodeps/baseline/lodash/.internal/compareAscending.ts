@@ -8,7 +8,7 @@ import isSymbol from '../isSymbol.js'
  * @param {*} other The other value to compare.
  * @returns {number} Returns the sort order indicator for `value`.
  */
-function compareAscending(value: number, other: number) {
+function compareAscending(value: any, other: any) {
   if (value !== other) {
     const valIsDefined = value !== undefined
     const valIsNull = value === null

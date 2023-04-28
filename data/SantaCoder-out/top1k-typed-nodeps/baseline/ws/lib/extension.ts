@@ -12,7 +12,7 @@ const { tokenChars } = require('./validation');
  *     parameter value
  * @private
  */
-function push(dest: string, name: string, elem: string) {
+function push(dest: any, name: string, elem: any) {
   if (dest[name] === undefined) dest[name] = [elem];
   else dest[name].push(elem);
 }
@@ -176,7 +176,7 @@ function parse(header: string) {
  * @return {String} A string representing the given object
  * @public
  */
-function format(extensions: IExtensionInfo[]) {
+function format(extensions: ExtensionMap) {
   return Object.keys(extensions)
     .map((extension) => {
       let configurations = extensions[extension];

@@ -66,7 +66,7 @@ const ctor = through2((options, transform, flush) => {
   return Through2
 })
 
-const obj = through2(function (options: IOptions, transform: ITransform, flush: any) {
+const obj = through2(function (options: TransformOptions, transform: TransformFunction, flush: TransformFlush) {
   const t2 = new Transform(Object.assign({ objectMode: true, highWaterMark: 16 }, options))
 
   t2._transform = transform

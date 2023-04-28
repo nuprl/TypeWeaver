@@ -16,7 +16,7 @@
  *
  * async.waterfall([
  *     async.constant(42),
- *     function (value: number, next: number) {
+ *     function (value: number, next: Function) {
  *         // value === 42
  *     },
  *     //...
@@ -25,7 +25,7 @@
  * async.waterfall([
  *     async.constant(filename, "utf8"),
  *     fs.readFile,
- *     function (fileData: any, next: any) {
+ *     function (fileData: FileData, next: Function) {
  *         //...
  *     }
  *     //...
@@ -34,7 +34,7 @@
  * async.auto({
  *     hostname: async.constant("https://server.net/"),
  *     port: findFreePort,
- *     launchServer: ["hostname", "port", function (options: IServerOptions, cb: any) {
+ *     launchServer: ["hostname", "port", function (options: any, cb: any) {
  *         startServer(options, cb);
  *     }],
  *     //...

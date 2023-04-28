@@ -2,7 +2,7 @@
   'use strict';
 
   // Utils
-  function assert (val: boolean, msg: string) {
+  function assert (val: any, msg: string) {
     if (!val) throw new Error(msg || 'Assertion failed');
   }
 
@@ -18,7 +18,7 @@
 
   // BN
 
-  function BN (number: number, base: number, endian: number) {
+  function BN (number: any, base: any, endian: any) {
     if (BN.isBN(number)) {
       return number;
     }
@@ -58,7 +58,7 @@
   } catch (e) {
   }
 
-  BN.isBN = function isBN (num: number) {
+  BN.isBN = function isBN (num: any) {
     if (num instanceof BN) {
       return true;
     }
@@ -77,7 +77,7 @@
     return right;
   };
 
-  BN.prototype._init = function init (number: number, base: number, endian: number) {
+  BN.prototype._init = function init (number: number, base: number, endian: string) {
     if (typeof number === 'number') {
       return this._initNumber(number, base, endian);
     }
@@ -110,7 +110,7 @@
     }
   };
 
-  BN.prototype._initNumber = function _initNumber (number: number, base: number, endian: number) {
+  BN.prototype._initNumber = function _initNumber (number: number, base: number, endian: string) {
     if (number < 0) {
       this.negative = 1;
       number = -number;
@@ -140,7 +140,7 @@
     this._initArray(this.toArray(), base, endian);
   };
 
-  BN.prototype._initArray = function _initArray (number: number, base: number, endian: number) {
+  BN.prototype._initArray = function _initArray (number: number, base: number, endian: string) {
     // Perhaps a Uint8Array
     assert(typeof number.length === 'number');
     if (number.length <= 0) {
@@ -207,7 +207,7 @@
     return r;
   }
 
-  BN.prototype._parseHex = function _parseHex (number: number, start: number, endian: number) {
+  BN.prototype._parseHex = function _parseHex (number: number, start: number, endian: string) {
     // Create possibly bigger array to ensure that it fits the number
     this.length = Math.ceil((number.length - start) / 6);
     this.words = new Array(this.length);
@@ -277,7 +277,7 @@
     return r;
   }
 
-  BN.prototype._parseBase = function _parseBase (number: number, base: number, start: number) {
+  BN.prototype._parseBase = function _parseBase (number: string, base: number, start: number) {
     // Initialize as zero
     this.words = [0];
     this.length = 1;
@@ -324,7 +324,7 @@
     this._strip();
   };
 
-  BN.prototype.copy = function copy (dest: ArrayLike<number>) {
+  BN.prototype.copy = function copy (dest: WordArray) {
     dest.words = new Array(this.length);
     for (var i = 0; i < this.length; i++) {
       dest.words[i] = this.words[i];
@@ -334,7 +334,7 @@
     dest.red = this.red;
   };
 
-  function move (dest: WordArray, src: WordArray) {
+  function move (dest: Uint32Array, src: Uint32Array) {
     dest.words = src.words;
     dest.length = src.length;
     dest.negative = src.negative;
@@ -554,23 +554,23 @@
   };
 
   if (Buffer) {
-    BN.prototype.toBuffer = function toBuffer (endian: 'little', length: number) {
+    BN.prototype.toBuffer = function toBuffer (endian: string, length: number) {
       return this.toArrayLike(Buffer, endian, length);
     };
   }
 
-  BN.prototype.toArray = function toArray (endian: Endianess, length: number) {
+  BN.prototype.toArray = function toArray (endian: string, length: number) {
     return this.toArrayLike(Array, endian, length);
   };
 
-  var allocate = function allocate (ArrayType: number, size: number) {
+  var allocate = function allocate (ArrayType: TClass, size: NativeUInt) {
     if (ArrayType.allocUnsafe) {
       return ArrayType.allocUnsafe(size);
     }
     return new ArrayType(size);
   };
 
-  BN.prototype.toArrayLike = function toArrayLike (ArrayType: any, endian: number, length: number) {
+  BN.prototype.toArrayLike = function toArrayLike (ArrayType: any, endian: string, length: number) {
     this._strip();
 
     var byteLength = this.byteLength();
@@ -1084,7 +1084,7 @@
     return this.clone().isub(num);
   };
 
-  function smallMulTo (self: BigNumber, num: BigNumber, out: BigNumber) {
+  function smallMulTo (self: BN, num: BN, out: BN) {
     out.negative = num.negative ^ self.negative;
     var len = (self.length + num.length) | 0;
     out.length = len;
@@ -1128,7 +1128,7 @@
   // TODO(indutny): it may be reasonable to omit it for users who don't need
   // to work with 256-bit numbers, otherwise it gives 20% improvement for 256-bit
   // multiplication (like elliptic secp256k1).
-  var comb10MulTo = function comb10MulTo (self: BigNumber, num: BigNumber, out: BigNumber) {
+  var comb10MulTo = function comb10MulTo (self: BigInteger, num: BigInteger, out: BigInteger) {
     var a = self.words;
     var b = num.words;
     var o = out.words;
@@ -1747,14 +1747,14 @@
     return out._strip();
   }
 
-  function jumboMulTo (self: BigNumber, num: BigNumber, out: BigNumber) {
+  function jumboMulTo (self: BN, num: BN, out: BN) {
     // Temporary disable, see https://github.com/indutny/bn.js/issues/211
     // var fftm = new FFTM();
     // return fftm.mulp(self, num, out);
     return bigMulTo(self, num, out);
   }
 
-  BN.prototype.mulTo = function mulTo (num: BigNumber, out: BigNumber) {
+  BN.prototype.mulTo = function mulTo (num: number, out: number[]) {
     var res;
     var len = this.length + num.length;
     if (this.length === 10 && num.length === 10) {
@@ -1803,14 +1803,14 @@
 
   // Performs "tweedling" phase, therefore 'emulating'
   // behaviour of the recursive algorithm
-  FFTM.prototype.permute = function permute (rbt: number, rws: number, iws: number, rtws: number, itws: number, N: number) {
+  FFTM.prototype.permute = function permute (rbt: RBT, rws: RWS, iws: IWS, rtws: RTWS, itws: ITWS, N: usize) {
     for (var i = 0; i < N; i++) {
       rtws[i] = rws[rbt[i]];
       itws[i] = iws[rbt[i]];
     }
   };
 
-  FFTM.prototype.transform = function transform (rws: number, iws: number, rtws: number, itws: number, N: number, rbt: number) {
+  FFTM.prototype.transform = function transform (rws: ReadStream[], iws: WriteStream[], rtws: ReadTransformStream[], itws: WriteTransformStream[], N: number, rbt: ReadableByteStream) {
     this.permute(rbt, rws, iws, rtws, itws, N);
 
     for (var s = 1; s < N; s <<= 1) {
@@ -1880,7 +1880,7 @@
     }
   };
 
-  FFTM.prototype.normalize13b = function normalize13b (ws: number, N: number) {
+  FFTM.prototype.normalize13b = function normalize13b (ws: number[], N: number) {
     var carry = 0;
     for (var i = 0; i < N / 2; i++) {
       var w = Math.round(ws[2 * i + 1] / N) * 0x2000 +
@@ -1899,7 +1899,7 @@
     return ws;
   };
 
-  FFTM.prototype.convert13b = function convert13b (ws: number, len: number, rws: number, N: number) {
+  FFTM.prototype.convert13b = function convert13b (ws: Uint8Array, len: number, rws: Uint8Array, N: number) {
     var carry = 0;
     for (var i = 0; i < len; i++) {
       carry = carry + (ws[i] | 0);
@@ -1926,7 +1926,7 @@
     return ph;
   };
 
-  FFTM.prototype.mulp = function mulp (x: number, y: number, out: number) {
+  FFTM.prototype.mulp = function mulp (x: number, y: number, out: number[]) {
     var N = 2 * this.guessLen13b(x.length, y.length);
 
     var rbt = this.makeRBT(N);
@@ -1967,21 +1967,21 @@
   };
 
   // Multiply `this` by `num`
-  BN.prototype.mul = function mul (num: BigNumber) {
+  BN.prototype.mul = function mul (num: BN) {
     var out = new BN(null);
     out.words = new Array(this.length + num.length);
     return this.mulTo(num, out);
   };
 
   // Multiply employing FFT
-  BN.prototype.mulf = function mulf (num: number) {
+  BN.prototype.mulf = function mulf (num: BN) {
     var out = new BN(null);
     out.words = new Array(this.length + num.length);
     return jumboMulTo(this, num, out);
   };
 
   // In-place Multiplication
-  BN.prototype.imul = function imul (num: BigNumber) {
+  BN.prototype.imul = function imul (num: number) {
     return this.clone().mulTo(num, this);
   };
 
@@ -2096,7 +2096,7 @@
   // Shift-right in-place
   // NOTE: `hint` is a lowest bit before trailing zeroes
   // NOTE: if `extended` is present - it will be filled with destroyed bits
-  BN.prototype.iushrn = function iushrn (bits: number, hint: number, extended: boolean) {
+  BN.prototype.iushrn = function iushrn (bits: number, hint: boolean, extended: boolean) {
     assert(typeof bits === 'number' && bits >= 0);
     var h;
     if (hint) {
@@ -2311,7 +2311,7 @@
     return this.clone().iabs();
   };
 
-  BN.prototype._ishlnsubmul = function _ishlnsubmul (num: BigNumber, mul: BigNumber, shift: BigNumber) {
+  BN.prototype._ishlnsubmul = function _ishlnsubmul (num: number, mul: number, shift: number) {
     var len = num.length + shift;
     var i;
 
@@ -2425,7 +2425,7 @@
   //       to `div` to request div only, or be absent to
   //       request both div & mod
   //       2) `positive` is true if unsigned mod is requested
-  BN.prototype.divmod = function divmod (num: BigNumber, mode: 'ceil', positive: boolean) {
+  BN.prototype.divmod = function divmod (num: BN, mode: BN, positive: boolean) {
     assert(!num.isZero());
 
     if (this.isZero()) {
@@ -2596,7 +2596,7 @@
     return this.clone().idivn(num);
   };
 
-  BN.prototype.egcd = function egcd (p: BigNumber) {
+  BN.prototype.egcd = function egcd (p: bigint) {
     assert(p.negative === 0);
     assert(!p.isZero());
 
@@ -2678,7 +2678,7 @@
   // This is reduced incarnation of the binary EEA
   // above, designated to invert members of the
   // _prime_ fields F(p) at a maximal speed
-  BN.prototype._invmp = function _invmp (p: BigNumber) {
+  BN.prototype._invmp = function _invmp (p: BN) {
     assert(p.negative === 0);
     assert(!p.isZero());
 
@@ -2943,7 +2943,7 @@
     return new Red(num);
   };
 
-  BN.prototype.toRed = function toRed (ctx: any) {
+  BN.prototype.toRed = function toRed (ctx: CanvasRenderingContext2D) {
     assert(!this.red, 'Already a number in reduction context');
     assert(this.negative === 0, 'red works only with positives');
     return ctx.convertTo(this)._forceRed(ctx);
@@ -2954,7 +2954,7 @@
     return this.red.convertFrom(this);
   };
 
-  BN.prototype._forceRed = function _forceRed (ctx: Context) {
+  BN.prototype._forceRed = function _forceRed (ctx: CanvasRenderingContext2D) {
     this.red = ctx;
     return this;
   };
@@ -3096,11 +3096,11 @@
     return r;
   };
 
-  MPrime.prototype.split = function split (input: Int8Array, out: Int8Array) {
+  MPrime.prototype.split = function split (input: Uint32Array, out: Uint32Array[]) {
     input.iushrn(this.n, 0, out);
   };
 
-  MPrime.prototype.imulK = function imulK (num: BigNumber) {
+  MPrime.prototype.imulK = function imulK (num: bigint) {
     return num.imul(this.k);
   };
 
@@ -3250,12 +3250,12 @@
     }
   }
 
-  Red.prototype._verify1 = function _verify1 (a: any) {
+  Red.prototype._verify1 = function _verify1 (a: number) {
     assert(a.negative === 0, 'red works only with positives');
     assert(a.red, 'red works only with red numbers');
   };
 
-  Red.prototype._verify2 = function _verify2 (a: number, b: number) {
+  Red.prototype._verify2 = function _verify2 (a: any, b: any) {
     assert((a.negative | b.negative) === 0, 'red works only with positives');
     assert(a.red && a.red === b.red,
       'red works only with red numbers');
@@ -3268,7 +3268,7 @@
     return a;
   };
 
-  Red.prototype.neg = function neg (a: BigNumber) {
+  Red.prototype.neg = function neg (a: BigNumberish) {
     if (a.isZero()) {
       return a.clone();
     }
@@ -3331,7 +3331,7 @@
     return this.imod(a.mul(b));
   };
 
-  Red.prototype.isqr = function isqr (a: BigNumber) {
+  Red.prototype.isqr = function isqr (a: Complex) {
     return this.imul(a, a.clone());
   };
 
@@ -3396,7 +3396,7 @@
     return r;
   };
 
-  Red.prototype.invm = function invm (a: Matrix4) {
+  Red.prototype.invm = function invm (a: bigint) {
     var inv = a._invmp(this.m);
     if (inv.negative !== 0) {
       inv.negative = 0;
@@ -3454,7 +3454,7 @@
     return res;
   };
 
-  Red.prototype.convertTo = function convertTo (num: BigNumber) {
+  Red.prototype.convertTo = function convertTo (num: BigInteger) {
     var r = num.umod(this.m);
 
     return r === num ? r.clone() : r;

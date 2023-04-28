@@ -22,11 +22,11 @@ function addRuleToMap(map: any, item: any, list: any, single: any) {
     map[name][id].append(list.remove(item));
 }
 
-function relocateAtrules(ast: AST, options: RelocateAtrulesOptions) {
+function relocateAtrules(ast: Object, options: Object) {
     const collected = Object.create(null);
     let topInjectPoint = null;
 
-    ast.children.forEach(function(node: AST_Node, item: AST_Node, list: AST_Node[]) {
+    ast.children.forEach(function(node: Node, item: Node, list: Node) {
         if (node.type === 'Atrule') {
             const name = resolveKeyword(node.name).basename;
 
@@ -65,11 +65,11 @@ function relocateAtrules(ast: AST, options: RelocateAtrulesOptions) {
     }
 };
 
-function isMediaRule(node: Node) {
+function isMediaRule(node: Rule) {
     return node.type === 'Atrule' && node.name === 'media';
 }
 
-function processAtrule(node: AST_Rule, item: AST_Rule_Item, list: AST_Rule_List) {
+function processAtrule(node: Node, item: Node, list: Node) {
     if (!isMediaRule(node)) {
         return;
     }
@@ -95,7 +95,7 @@ function processAtrule(node: AST_Rule, item: AST_Rule_Item, list: AST_Rule_List)
     }
 }
 
-export default function rejoinAtrule(ast: AST, options: AtruleOptions) {
+export default function rejoinAtrule(ast: Node, options: Options) {
     relocateAtrules(ast, options);
 
     walk(ast, {

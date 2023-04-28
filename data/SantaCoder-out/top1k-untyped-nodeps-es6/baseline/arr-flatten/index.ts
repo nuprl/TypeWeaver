@@ -11,7 +11,7 @@ export default function (arr: any[]) {
   return flat(arr, []);
 };
 
-function flat(arr: any[], res: any[]) {
+function flat(arr: Array<any>, res: Array<any>) {
   var i = 0, cur;
   var len = arr.length;
   for (; i < len; i++) {

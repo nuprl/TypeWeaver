@@ -15,7 +15,7 @@ import unzip from './unzip.js'
  * zip(['a', 'b'], [1, 2], [true, false])
  * // => [['a', 1, true], ['b', 2, false]]
  */
-function zip(...arrays: any[]) {
+function zip(...arrays: Array<any[]>) {
   return unzip(arrays)
 }
 

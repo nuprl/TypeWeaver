@@ -5,17 +5,17 @@ import "../event/trigger.js";
 
 jQuery.fn.extend( {
 
-	bind: function( types: IType[], data: IData, fn : any) {
+	bind: function( types: string, data: any, fn : Function) {
 		return this.on( types, null, data, fn );
 	},
-	unbind: function( types: string[], fn : Function) {
+	unbind: function( types: string, fn : Function) {
 		return this.off( types, null, fn );
 	},
 
-	delegate: function( selector: string, types: string[], data: any, fn : Function) {
+	delegate: function( selector: string, types: string, data: any, fn : any) {
 		return this.on( types, selector, data, fn );
 	},
-	undelegate: function( selector: string, types: string[], fn : Function) {
+	undelegate: function( selector: string, types: string, fn : Function) {
 
 		// ( namespace ) or ( selector, types [, fn] )
 		return arguments.length === 1 ?
@@ -23,7 +23,7 @@ jQuery.fn.extend( {
 			this.off( types, selector || "**", fn );
 	},
 
-	hover: function( fnOver: Function, fnOut : Function) {
+	hover: function( fnOver: any, fnOut : any) {
 		return this.mouseenter( fnOver ).mouseleave( fnOut || fnOver );
 	}
 } );

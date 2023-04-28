@@ -27,7 +27,7 @@ suite.add({
   fn: 'mylib.propa = mylib.propa'
 })
 
-suite.on('cycle', function onCycle (event: CycleEvent) {
+suite.on('cycle', function onCycle (event: Event) {
   benchmarks.add(event.target)
 })
 

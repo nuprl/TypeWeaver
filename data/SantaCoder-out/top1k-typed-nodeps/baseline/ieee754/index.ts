@@ -1,5 +1,5 @@
 /*! ieee754. BSD-3-Clause License. Feross Aboukhadijeh <https://feross.org/opensource> */
-exports.read = function (buffer: Uint8Array, offset: number, isLE: boolean, mLen: number, nBytes: number) {
+exports.read = function (buffer: Buffer, offset: number, isLE: boolean, mLen: number, nBytes: number) {
   let e, m
   const eLen = (nBytes * 8) - mLen - 1
   const eMax = (1 << eLen) - 1
@@ -40,7 +40,7 @@ exports.read = function (buffer: Uint8Array, offset: number, isLE: boolean, mLen
   return (s ? -1 : 1) * m * Math.pow(2, e - mLen)
 }
 
-exports.write = function (buffer: Uint8Array, value: number, offset: number, isLE: boolean, mLen: number, nBytes: number) {
+exports.write = function (buffer: Buffer, value: number, offset: number, isLE: mLen, mLen: number, nBytes: number) {
   let e, m, c
   let eLen = (nBytes * 8) - mLen - 1
   const eMax = (1 << eLen) - 1

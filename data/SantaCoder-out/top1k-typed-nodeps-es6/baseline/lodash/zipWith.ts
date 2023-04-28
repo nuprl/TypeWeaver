@@ -17,7 +17,7 @@ import unzipWith from './unzipWith.js'
  * zipWith([1, 2], [10, 20], [100, 200], (a, b, c) => a + b + c)
  * // => [111, 222]
  */
-function zipWith(...arrays: Array<any>) {
+function zipWith(...arrays: Array<any>[]) {
   const length = arrays.length
   let iteratee = length > 1 ? arrays[length - 1] : undefined
   iteratee = typeof iteratee === 'function' ? (arrays.pop(), iteratee) : undefined

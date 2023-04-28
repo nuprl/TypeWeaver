@@ -21,7 +21,7 @@ var rparentsprev = /^(?:parents|prev(?:Until|All))/,
 	};
 
 jQuery.fn.extend( {
-	has: function( target : jQuery.Event) {
+	has: function( target : any) {
 		var targets = jQuery( target, this ),
 			l = targets.length;
 
@@ -35,7 +35,7 @@ jQuery.fn.extend( {
 		} );
 	},
 
-	closest: function( selectors: string[], context : Node) {
+	closest: function( selectors: any, context : any) {
 		var cur,
 			i = 0,
 			l = this.length,
@@ -86,7 +86,7 @@ jQuery.fn.extend( {
 		);
 	},
 
-	add: function( selector: string, context : Node) {
+	add: function( selector: string, context : Element) {
 		return this.pushStack(
 			jQuery.uniqueSort(
 				jQuery.merge( this.get(), jQuery( selector, context ) )
@@ -101,7 +101,7 @@ jQuery.fn.extend( {
 	}
 } );
 
-function sibling( cur: Node, dir : "prev") {
+function sibling( cur: Node, dir : number) {
 	while ( ( cur = cur[ dir ] ) && cur.nodeType !== 1 ) {}
 	return cur;
 }
@@ -111,37 +111,37 @@ jQuery.each( {
 		var parent = elem.parentNode;
 		return parent && parent.nodeType !== 11 ? parent : null;
 	},
-	parents: function( elem : Node) {
+	parents: function( elem : HTMLElement) {
 		return dir( elem, "parentNode" );
 	},
-	parentsUntil: function( elem: HTMLElement, _i: number, until : number) {
+	parentsUntil: function( elem: HTMLElement, _i: number, until : HTMLElement) {
 		return dir( elem, "parentNode", until );
 	},
 	next: function( elem : Node) {
 		return sibling( elem, "nextSibling" );
 	},
-	prev: function( elem : Node) {
+	prev: function( elem : HTMLElement) {
 		return sibling( elem, "previousSibling" );
 	},
-	nextAll: function( elem : Node) {
+	nextAll: function( elem : HTMLElement) {
 		return dir( elem, "nextSibling" );
 	},
-	prevAll: function( elem : Node) {
+	prevAll: function( elem : HTMLElement) {
 		return dir( elem, "previousSibling" );
 	},
-	nextUntil: function( elem: HTMLElement, _i: number, until : number) {
+	nextUntil: function( elem: JQuery, _i: number, until : JQuery) {
 		return dir( elem, "nextSibling", until );
 	},
-	prevUntil: function( elem: HTMLElement, _i: number, until : number) {
+	prevUntil: function( elem: JQuery, _i: number, until : JQuery) {
 		return dir( elem, "previousSibling", until );
 	},
 	siblings: function( elem : HTMLElement) {
 		return siblings( ( elem.parentNode || {} ).firstChild, elem );
 	},
-	children: function( elem : Node) {
+	children: function( elem : HTMLElement) {
 		return siblings( elem.firstChild );
 	},
-	contents: function( elem : Node) {
+	contents: function( elem : HTMLElement) {
 		if ( elem.contentDocument != null &&
 
 			// Support: IE 11+

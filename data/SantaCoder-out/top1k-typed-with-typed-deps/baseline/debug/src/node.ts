@@ -228,7 +228,7 @@ function load() {
  * differently for a particular `debug` instance.
  */
 
-function init(debug: Debug) {
+function init(debug: any) {
 	debug.inspectOpts = {};
 
 	const keys = Object.keys(exports.inspectOpts);

@@ -30,7 +30,7 @@ import awaitify from './internal/awaitify.js'
  *
  * // asynchronous function that returns the file size in bytes
  * function getFileSizeInBytes(file: File, callback: any) {
- *     fs.stat(file, function(err: Error, stat: fs.Stats) {
+ *     fs.stat(file, function(err: Error, stat: Stats) {
  *         if (err) {
  *             return callback(err);
  *         }
@@ -74,8 +74,8 @@ import awaitify from './internal/awaitify.js'
  * );
  *
  * // descending order
- * async.sortBy(['bigfile.txt','mediumfile.txt','smallfile.txt'], function(file: string, callback: any) {
- *     getFileSizeInBytes(file, function(getFileSizeErr: Error, fileSize: number) {
+ * async.sortBy(['bigfile.txt','mediumfile.txt','smallfile.txt'], function(file: string, callback: Function) {
+ *     getFileSizeInBytes(file, function(getFileSizeErr: any, fileSize: number) {
  *         if (getFileSizeErr) {
  *             return callback(getFileSizeErr);
  *         }

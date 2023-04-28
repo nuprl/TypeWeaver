@@ -45,7 +45,7 @@ AllSettled.prototype._setResultAt = setSettledResult;
   let promise3 = RSVP.Promise.reject(new Error('3'));
   let promises = [ promise1, promise2, promise3 ];
 
-  RSVP.allSettled(promises).then(function(array: number[]){
+  RSVP.allSettled(promises).then(function(array: Array<T>){
     // array == [
     //   { state: 'fulfilled', value: 1 },
     //   { state: 'rejected', reason: Error },
@@ -70,7 +70,7 @@ AllSettled.prototype._setResultAt = setSettledResult;
   states of the constituent promises.
   */
 
-export default function allSettled(entries: IResolvedEntry[], label: string) {
+export default function allSettled(entries: Array<Promise<any>>, label: string) {
   if (!Array.isArray(entries)) {
     return Promise.reject(new TypeError("Promise.allSettled must be called with an array"), label);
   }

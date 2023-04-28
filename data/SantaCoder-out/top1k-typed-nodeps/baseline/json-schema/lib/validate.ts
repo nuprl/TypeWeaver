@@ -38,7 +38,7 @@ var primitiveConstructors = {
 	Date: Date
 }
 exports.validate = validate;
-function validate(/*Any*/instance: any,/*Object*/schema: any) {
+function validate(/*Any*/instance: Object,/*Object*/schema: Object) {
 		// Summary:
 		//  	To use the validator call JSONSchema.validate with an instance object and an optional schema object.
 		// 		If a schema is provided, it will be used to validate. If the instance object refers to a schema (self-validating),
@@ -53,7 +53,7 @@ function validate(/*Any*/instance: any,/*Object*/schema: any) {
 		//
 		return validate(instance, schema, {changing: false});//, coerce: false, existingOnly: false});
 	};
-exports.checkPropertyChange = function(/*Any*/value: any,/*Object*/schema: any, /*String*/property: string) {
+exports.checkPropertyChange = function(/*Any*/value: /*Object*/value,/*Object*/schema: /*Object*/schema, /*String*/property: String) {
 		// Summary:
 		// 		The checkPropertyChange method will check to see if an value can legally be in property with the given schema
 		// 		This is slightly different than the validate method in that it will fail if the schema is readonly and it will
@@ -68,12 +68,12 @@ var validate = exports._validate = function(/*Any*/instance: any,/*Object*/schem
 	if (!options) options = {};
 	var _changing = options.changing;
 
-	function getType(schema: Schema){
+	function getType(schema: any){
 		return schema.type || (primitiveConstructors[schema.name] == schema && schema.name.toLowerCase());
 	}
 	var errors = [];
 	// validate a value against a property definition
-	function checkProp(value: any, schema: any, path: any,i: number){
+	function checkProp(value: any, schema: any, path: string,i: number){
 
 		var l;
 		path += path ? typeof i == 'number' ? '[' + i + ']' : typeof i == 'undefined' ? '' : '.' + i : i;

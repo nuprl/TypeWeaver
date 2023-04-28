@@ -2,6 +2,6 @@
 
 var toString = {}.toString;
 
-export default Array.isArray || function (arr: any[]) {
+export default Array.isArray || function (arr: any) {
   return toString.call(arr) === '[object Array]';
 };

@@ -2,7 +2,7 @@
 
 const browsers = require('./browsers').browsers
 
-function unpackRegion(packed: number) {
+function unpackRegion(packed: string) {
   return Object.keys(packed).reduce((list, browser) => {
     let data = packed[browser]
     list[browsers[browser]] = Object.keys(data).reduce((memo, key) => {

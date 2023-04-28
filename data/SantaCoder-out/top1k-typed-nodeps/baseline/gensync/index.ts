@@ -26,11 +26,11 @@ module.exports = Object.assign(
     all: buildOperation({
       name: "all",
       arity: 1,
-      sync: function(args: ICommandArgs) {
+      sync: function(args: any[]) {
         const items = Array.from(args[0]);
         return items.map(item => evaluateSync(item));
       },
-      async: function(args: ICommandArgs, resolve: any, reject: any) {
+      async: function(args: any, resolve: any, reject: any) {
         const items = Array.from(args[0]);
 
         if (items.length === 0) {
@@ -57,7 +57,7 @@ module.exports = Object.assign(
     race: buildOperation({
       name: "race",
       arity: 1,
-      sync: function(args: ICommandArgs) {
+      sync: function(args: any[]) {
         const items = Array.from(args[0]);
         if (items.length === 0) {
           throw makeError("Must race at least 1 item", GENSYNC_RACE_NONEMPTY);
@@ -65,7 +65,7 @@ module.exports = Object.assign(
 
         return evaluateSync(items[0]);
       },
-      async: function(args: IResolveArgs, resolve: ResolveCallback<any>, reject: RejectCallback<any>) {
+      async: function(args: any[], resolve: Function, reject: Function) {
         const items = Array.from(args[0]);
         if (items.length === 0) {
           throw makeError("Must race at least 1 item", GENSYNC_RACE_NONEMPTY);
@@ -116,7 +116,7 @@ function makeFunctionAPI(genFn: Function) {
   return fns;
 }
 
-function assertTypeof(type: any, name: string, value: any, allowUndefined: boolean) {
+function assertTypeof(type: string, name: string, value: any, allowUndefined: boolean) {
   if (
     typeof value === type ||
     (allowUndefined && typeof value === "undefined")
@@ -178,10 +178,10 @@ function newGenerator({ name: name, arity: arity, sync: sync, async: async, errb
   return buildOperation({
     name,
     arity,
-    sync: function(args: any) {
+    sync: function(args: any[]) {
       return sync.apply(this, args);
     },
-    async: function(args: ICommandArgs, resolve: any, reject: any) {
+    async: function(args: any[], resolve: Function, reject: Function) {
       if (async) {
         async.apply(this, args).then(resolve, reject);
       } else if (errback) {
@@ -202,7 +202,7 @@ function wrapGenerator(genFn: GeneratorFunction) {
   });
 }
 
-function buildOperation({ name: operationName, arity: arity, sync: syncOperation, async }: OperationOptions) {
+function buildOperation({ name: name, arity: arity, sync: sync, async }: FunctionOptions) {
   return setFunctionMetadata(name, arity, function*(...args) {
     const resume = yield GENSYNC_START;
     if (!resume) {
@@ -254,7 +254,7 @@ function evaluateSync(gen: any) {
   return value;
 }
 
-function evaluateAsync(gen: any, resolve: any, reject: any) {
+function evaluateAsync(gen: Generator, resolve: any, reject: any) {
   (function step() {
     try {
       let value;
@@ -291,7 +291,7 @@ function evaluateAsync(gen: any, resolve: any, reject: any) {
   })();
 }
 
-function assertStart(value: number, gen: number) {
+function assertStart(value: string, gen: any) {
   if (value === GENSYNC_START) return;
 
   throwError(
@@ -304,7 +304,7 @@ function assertStart(value: number, gen: number) {
     )
   );
 }
-function assertSuspend({ value: value, done }: AssertSuspendArgs, gen: Generator<any>) {
+function assertSuspend({ value: any, done }: IteratorResult<any>, gen: any) {
   if (!done && value === GENSYNC_SUSPEND) return;
 
   throwError(
@@ -320,7 +320,7 @@ function assertSuspend({ value: value, done }: AssertSuspendArgs, gen: Generator
   );
 }
 
-function throwError(gen: any, err: any) {
+function throwError(gen: Generator, err: any) {
   // Call `.throw` so that users can step in a debugger to easily see which
   // 'yield' passed an unexpected value. If the `.throw` call didn't throw
   // back to the generator, we explicitly do it to stop the error

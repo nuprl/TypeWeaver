@@ -62,7 +62,7 @@ const defaults = {
 
   adapter: getDefaultAdapter(),
 
-  transformRequest: [function transformRequest(data: AxiosRequestConfig, headers: AxiosRequestConfig.headers) {
+  transformRequest: [function transformRequest(data: any, headers: any) {
     const contentType = headers.getContentType() || '';
     const hasJSONContentType = contentType.indexOf('application/json') > -1;
     const isObjectPayload = utils.isObject(data);
@@ -178,7 +178,7 @@ utils.forEach(['delete', 'get', 'head'], function forEachMethodNoData(method: st
   defaults.headers[method] = {};
 });
 
-utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method: any) {
+utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method: string) {
   defaults.headers[method] = utils.merge(DEFAULT_CONTENT_TYPE);
 });
 

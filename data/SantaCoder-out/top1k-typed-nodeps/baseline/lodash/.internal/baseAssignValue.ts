@@ -7,7 +7,7 @@
  * @param {string} key The key of the property to assign.
  * @param {*} value The value to assign.
  */
-function baseAssignValue(object: Object, key: string, value: any) {
+function baseAssignValue(object: any, key: string, value: any) {
   if (key == '__proto__') {
     Object.defineProperty(object, key, {
       'configurable': true,

@@ -25,7 +25,7 @@ function specifierIncluded(current: string, specifier: string) {
 	return op === '>=';
 }
 
-function matchesRange(current: Range, range: Range) {
+function matchesRange(current: number, range: number[]) {
 	var specifiers = range.split(/ ?&& ?/);
 	if (specifiers.length === 0) {
 		return false;

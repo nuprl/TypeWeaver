@@ -5,13 +5,13 @@
   cast = require('./cast');
   parseType = require('type-check').parseType;
   VERSION = '0.4.1';
-  parsedTypeParse = function(parsedType: ParsedType, string: string, options: ParseOptions){
+  parsedTypeParse = function(parsedType: string, string: string, options: any){
     options == null && (options = {});
     options.explicit == null && (options.explicit = false);
     options.customTypes == null && (options.customTypes = {});
     return cast(parseString(parsedType, string, options), parsedType, options);
   };
-  parse = function(type: string, string: string, options: IOptions){
+  parse = function(type: string, string: string, options: any){
     return parsedTypeParse(parseType(type), string, options);
   };
   module.exports = {

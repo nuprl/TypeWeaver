@@ -160,7 +160,7 @@ class NativeCompileCache {
       }
 
       // https://github.com/nodejs/node/blob/v10.15.3/lib/internal/modules/cjs/helpers.js#L28
-      function resolve(request: Request, options: ResolveOptions) {
+      function resolve(request: string, options: ResolveOptions) {
         return Module._resolveFilename(request, mod, false, options);
       }
       require.resolve = resolve;
@@ -168,7 +168,7 @@ class NativeCompileCache {
       // https://github.com/nodejs/node/blob/v10.15.3/lib/internal/modules/cjs/helpers.js#L37
       // resolve.resolve.paths was added in v8.9.0
       if (hasRequireResolvePaths) {
-        resolve.paths = function paths(request: any) {
+        resolve.paths = function paths(request: Request) {
           return Module._resolveLookupPaths(request, mod, true);
         };
       }

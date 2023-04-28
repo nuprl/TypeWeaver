@@ -1,6 +1,6 @@
 import fs from 'fs';
 
-function transform(file: any, next: any) {
+function transform(file: Vinyl, next: TransformCallback) {
 	console.log('convert "%s" ~> "%s"', file, next);
 
 	let code = fs.readFileSync(file, 'utf8');

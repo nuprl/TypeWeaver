@@ -41,7 +41,7 @@
     updateFragmentForSharing();
   }
 
-  function setResult(kind: "success", result: any, mismatchedComponents: any) {
+  function setResult(kind: string, result: any, mismatchedComponents: any) {
     const output = document.querySelector(`#${kind}-output`);
     const error = document.querySelector(`#${kind}-error`);
 
@@ -60,7 +60,7 @@
     }
   }
 
-  function setComponentElValue(componentEl: HTMLElement, value: any) {
+  function setComponentElValue(componentEl: HTMLElement, value: string) {
     // This shows up in Edge where username/password are undefined.
     const isNonString = typeof value !== "string";
     const isEmptyString = value === "";
@@ -75,7 +75,7 @@
     componentEl.classList.toggle("fail", isMismatched);
   }
 
-  function getMismatchedComponents(result1: IComponentResult, result2: IComponentResult) {
+  function getMismatchedComponents(result1: any, result2: any) {
     const mismatched = new Set();
     for (const component of components) {
       if (result1[component] !== result2[component]) {

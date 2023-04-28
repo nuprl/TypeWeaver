@@ -4,7 +4,7 @@ import utils from '../utils.js';
 import toFormData from './toFormData.js';
 import platform from '../platform/index.js';
 
-export default function toURLEncodedForm(data: any, options: AxiosRequestConfig) {
+export default function toURLEncodedForm(data: any, options: any) {
   return toFormData(data, new platform.classes.URLSearchParams(), Object.assign({
     visitor: function(value: any, key: string, path: string, helpers: any) {
       if (platform.isNode && utils.isBuffer(value)) {

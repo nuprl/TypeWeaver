@@ -5,7 +5,7 @@ import isValue from '../value/is';
 // Sanity BigInt support check
 BigInt(0);
 
-export default function (value: any) {
+export default function (value: T) {
 	if (!isValue(value)) return null;
 	if (typeof value === "bigint") return value;
 	try { return BigInt(value); }

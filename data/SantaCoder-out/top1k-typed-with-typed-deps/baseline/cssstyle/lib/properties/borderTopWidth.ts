@@ -4,7 +4,7 @@ var isValid = require('./borderWidth').isValid;
 module.exports.isValid = isValid;
 
 module.exports.definition = {
-  set: function(v: any) {
+  set: function(v: string) {
     if (isValid(v)) {
       this._setProperty('border-top-width', v);
     }

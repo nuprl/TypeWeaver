@@ -232,7 +232,7 @@
   } // Partial application for functional programming
 
 
-  filesize.partial = function (opt: IOptions) {
+  filesize.partial = function (opt: string) {
     return function (arg: number) {
       return filesize(arg, opt);
     };

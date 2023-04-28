@@ -6,7 +6,7 @@
  * @param {*} value The value to add.
  * @returns {Object} Returns `set`.
  */
-function addSetEntry(set: Set, value: any) {
+function addSetEntry(set: Set<any>, value: any) {
   // Don't return `set.add` because it's not chainable in IE 11.
   set.add(value)
   return set

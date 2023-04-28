@@ -32,7 +32,7 @@ function resolveYamlBinary(data: string) {
   return (bitlen % 8) === 0;
 }
 
-function constructYamlBinary(data: any) {
+function constructYamlBinary(data: string) {
   var idx, tailbits,
       input = data.replace(/[\r\n=]/g, ''), // remove CR/LF & padding to simplify scan
       max = input.length,

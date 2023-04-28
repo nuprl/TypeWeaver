@@ -14,11 +14,11 @@ function startWatcher(name: string, files: string[], folders: string[]) {
 		console.log(name, "change", path.relative(folder, file), mtime);
 	});
 
-	w.on("aggregated", function(changes: IChangeSet) {
+	w.on("aggregated", function(changes: any) {
 		var times = w.getTimes();
 		console.log(name, "aggregated", Array.from(changes, function(file: string) {
 			return path.relative(folder, file);
-		}), Object.keys(times).reduce(function(obj: any, file: any) {
+		}), Object.keys(times).reduce(function(obj: any, file: string) {
 			obj[path.relative(folder, file)] = times[file];
 			return obj
 		}, {}));

@@ -63,7 +63,7 @@
 
   // Ensures that nodes have the correct types.
   var assertTypeRegexMap = {};
-  function assertType(type: string, expected: string) {
+  function assertType(type: string, expected: any) {
     if (expected.indexOf('|') == -1) {
       if (type == expected) {
         return;
@@ -97,7 +97,7 @@
   }
 
   // Constructs a string by concatentating the output of each term.
-  function generateSequence(generator: Generator<T>, terms: Term[], /* optional */  separator: string) {
+  function generateSequence(generator: any, terms: any, /* optional */  separator: string) {
     var i = -1,
         length = terms.length,
         result = '',
@@ -156,13 +156,13 @@
 
   var atomType = 'anchor|characterClass|characterClassEscape|dot|group|reference|unicodePropertyEscape|value';
 
-  function generateAtom(node: AtomNode) {
+  function generateAtom(node: Node) {
     assertType(node.type, atomType);
 
     return generate(node);
   }
 
-  function generateCharacterClass(node: CharacterClassNode) {
+  function generateCharacterClass(node: Node) {
     assertType(node.type, 'characterClass');
 
     var kind = node.kind;
@@ -174,13 +174,13 @@
     ']';
   }
 
-  function generateCharacterClassEscape(node: CharacterClassExpression) {
+  function generateCharacterClassEscape(node: Node) {
     assertType(node.type, 'characterClassEscape');
 
     return '\\' + node.value;
   }
 
-  function generateCharacterClassRange(node: CharacterClassRangeNode) {
+  function generateCharacterClassRange(node: Node) {
     assertType(node.type, 'characterClassRange');
 
     var min = node.min,
@@ -193,19 +193,19 @@
     return generateClassAtom(min) + '-' + generateClassAtom(max);
   }
 
-  function generateClassAtom(node: ClassAtom) {
+  function generateClassAtom(node: Node) {
     assertType(node.type, 'anchor|characterClass|characterClassEscape|characterClassRange|dot|value|unicodePropertyEscape|classStrings');
 
     return generate(node);
   }
 
-  function generateClassStrings(node: ClassDeclaration) {
+  function generateClassStrings(node: Node) {
     assertType(node.type, 'classStrings');
 
     return '\\q{' + generateSequence(generateClassString, node.strings, '|') + '}';
   }
 
-  function generateClassString(node: ClassDeclaration) {
+  function generateClassString(node: Node) {
     assertType(node.type, 'classString');
 
     return generateSequence(generate, node.characters);
@@ -224,7 +224,7 @@
     return '.';
   }
 
-  function generateGroup(node: GroupNode) {
+  function generateGroup(node: Node) {
     assertType(node.type, 'group');
 
     var result = '';
@@ -265,7 +265,7 @@
     return node.value;
   }
 
-  function generateQuantifier(node: QuantifierNode) {
+  function generateQuantifier(node: Node) {
     assertType(node.type, 'quantifier');
 
     var quantifier = '',
@@ -314,13 +314,13 @@
     return generate(node);
   }
 
-  function generateUnicodePropertyEscape(node: Node) {
+  function generateUnicodePropertyEscape(node: t.Node) {
     assertType(node.type, 'unicodePropertyEscape');
 
     return '\\' + (node.negative ? 'P' : 'p') + '{' + node.value + '}';
   }
 
-  function generateValue(node: ValueNode) {
+  function generateValue(node: Node) {
     assertType(node.type, 'value');
 
     var kind = node.kind,

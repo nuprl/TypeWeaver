@@ -16,7 +16,7 @@ import Enumerator from '../enumerator';
   let promise3 = resolve(3);
   let promises = [ promise1, promise2, promise3 ];
 
-  Promise.all(promises).then(function(array: number[]){
+  Promise.all(promises).then(function(array: Array<number>){
     // The array here would be [ 1, 2, 3 ];
   });
   ```
@@ -35,7 +35,7 @@ import Enumerator from '../enumerator';
   let promise3 = reject(new Error("3"));
   let promises = [ promise1, promise2, promise3 ];
 
-  Promise.all(promises).then(function(array: number[]){
+  Promise.all(promises).then(function(array: Array<T>){
     // Code here never runs because there are rejected promises!
   }, function(error: any) {
     // error.message === "2"
@@ -51,7 +51,7 @@ import Enumerator from '../enumerator';
   fulfilled, or rejected if any of them become rejected.
   @static
 */
-export default function all(entries: IEntry[], label: string) {
+export default function all(entries: any[], label: string) {
   if (!Array.isArray(entries)) {
     return this.reject(new TypeError("Promise.all must be called with an array"), label);
   }

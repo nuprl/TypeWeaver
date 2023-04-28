@@ -1,4 +1,4 @@
-function isEqualLocals(a: Local, b: Local, isNamedExport: boolean) {
+function isEqualLocals(a: any, b: any, isNamedExport: boolean) {
   if ((!a && b) || (a && !b)) {
     return false;
   }

@@ -1,4 +1,4 @@
-;(function (globalScope: GlobalScope) {
+;(function (globalScope: any) {
   'use strict';
 
 
@@ -486,7 +486,7 @@
    * Return true if the value of this Decimal is equal to the value of `y`, otherwise return false.
    *
    */
-  P.equals = P.eq = function (y: any) {
+  P.equals = P.eq = function (y: T) {
     return this.cmp(y) === 0;
   };
 
@@ -506,7 +506,7 @@
    * false.
    *
    */
-  P.greaterThan = P.gt = function (y: any) {
+  P.greaterThan = P.gt = function (y: T) {
     return this.cmp(y) > 0;
   };
 
@@ -516,7 +516,7 @@
    * otherwise return false.
    *
    */
-  P.greaterThanOrEqualTo = P.gte = function (y: any) {
+  P.greaterThanOrEqualTo = P.gte = function (y: T) {
     var k = this.cmp(y);
     return k == 1 || k === 0;
   };
@@ -1084,7 +1084,7 @@
    * Return true if the value of this Decimal is less than `y`, otherwise return false.
    *
    */
-  P.lessThan = P.lt = function (y: any) {
+  P.lessThan = P.lt = function (y: T) {
     return this.cmp(y) < 0;
   };
 
@@ -1093,7 +1093,7 @@
    * Return true if the value of this Decimal is less than or equal to `y`, otherwise return false.
    *
    */
-  P.lessThanOrEqualTo = P.lte = function (y: any) {
+  P.lessThanOrEqualTo = P.lte = function (y: T) {
     return this.cmp(y) < 1;
   };
 
@@ -1128,7 +1128,7 @@
    * [base] {number|string|Decimal} The base of the logarithm.
    *
    */
-  P.logarithm = P.log = function (base: string) {
+  P.logarithm = P.log = function (base: any) {
     var isBase10, d, denominator, k, inf, num, sd, r,
       arg = this,
       Ctor = arg.constructor,
@@ -1986,7 +1986,7 @@
    * [rm] {number} Rounding mode. Integer, 0 to 8 inclusive.
    *
    */
-  P.toExponential = function (dp: number, rm: number) {
+  P.toExponential = function (dp: any, rm: any) {
     var str,
       x = this,
       Ctor = x.constructor;
@@ -2023,7 +2023,7 @@
    * (-0.5).toFixed(0) is '-0'.
    *
    */
-  P.toFixed = function (dp: number, rm: number) {
+  P.toFixed = function (dp: any, rm: any) {
     var str, y,
       x = this,
       Ctor = x.constructor;
@@ -2376,7 +2376,7 @@
    * [rm] {number} Rounding mode. Integer, 0 to 8 inclusive.
    *
    */
-  P.toPrecision = function (sd: string, rm: number) {
+  P.toPrecision = function (sd: string, rm: string) {
     var str,
       x = this,
       Ctor = x.constructor;
@@ -2517,7 +2517,7 @@
    */
 
 
-  function digitsToString(d: number) {
+  function digitsToString(d: number[]) {
     var i, k, ws,
       indexOfLastWord = d.length - 1,
       str = '',
@@ -2694,7 +2694,7 @@
       return x;
     }
 
-    function compare(a: any, b: any, aL: number, bL: number) {
+    function compare(a: any, b: any, aL: any, bL: any) {
       var i, r;
 
       if (aL != bL) {
@@ -3144,7 +3144,7 @@
 
 
   // Calculate the base 10 exponent from the base 1e7 exponent.
-  function getBase10Exponent(digits: number, e: number) {
+  function getBase10Exponent(digits: number[], e: number) {
     var w = digits[0];
 
     // Add the number of digits of the first word of the digits array.
@@ -3153,7 +3153,7 @@
   }
 
 
-  function getLn10(Ctor: Function, sd: string, pr: string) {
+  function getLn10(Ctor: any, sd: number, pr: number) {
     if (sd > LN10_PRECISION) {
 
       // Reset global state in case the exception is caught.
@@ -3165,13 +3165,13 @@
   }
 
 
-  function getPi(Ctor: any, sd: any, rm: any) {
+  function getPi(Ctor: Function, sd: number, rm: number) {
     if (sd > PI_PRECISION) throw Error(precisionLimitExceeded);
     return finalise(new Ctor(PI), sd, rm, true);
   }
 
 
-  function getPrecision(digits: number) {
+  function getPrecision(digits: number[]) {
     var w = digits.length - 1,
       len = w * LOG_BASE + 1;
 
@@ -3205,7 +3205,7 @@
    * Implements 'exponentiation by squaring'. Called by `pow` and `parseOther`.
    *
    */
-  function intPow(Ctor: Function, x: number, n: number, pr: number) {
+  function intPow(Ctor: any, x: number, n: mcl.Int, pr: mcl.CurveFp) {
     var isTruncated,
       r = new Ctor(1),
 
@@ -3248,7 +3248,7 @@
   /*
    * Handle `max` and `min`. `ltgt` is 'lt' or 'gt'.
    */
-  function maxOrMin(Ctor: Function, args: any[], ltgt: boolean) {
+  function maxOrMin(Ctor: Function, args: any[], ltgt: any) {
     var y,
       x = new Ctor(args[0]),
       i = 0;
@@ -4630,7 +4630,7 @@
    * y {number|string|Decimal}
    *
    */
-  function mul(x: BigNumber, y: BigNumber) {
+  function mul(x: number, y: number) {
     return new this(x).mul(y);
   }
 
@@ -4777,7 +4777,7 @@
    * x {number|string|Decimal}
    *
    */
-  function sign(x: BigNumber) {
+  function sign(x: bigint) {
     x = new this(x);
     return x.d ? (x.d[0] ? x.s : 0 * x.s) : x.s || NaN;
   }

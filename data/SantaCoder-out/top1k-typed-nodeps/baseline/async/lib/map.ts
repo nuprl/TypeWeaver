@@ -45,7 +45,7 @@ import awaitify from './internal/awaitify.js'
  *
  * // asynchronous function that returns the file size in bytes
  * function getFileSizeInBytes(file: File, callback: any) {
- *     fs.stat(file, function(err: Error, stat: fs.Stats) {
+ *     fs.stat(file, function(err: Error, stat: Stats) {
  *         if (err) {
  *             return callback(err);
  *         }
@@ -119,7 +119,7 @@ import awaitify from './internal/awaitify.js'
  * }
  *
  */
-function map (coll: any, iteratee: any, callback: any) {
+function map (coll: any[], iteratee: any, callback: any) {
     return _map(eachOf, coll, iteratee, callback)
 }
 export default awaitify(map, 3);

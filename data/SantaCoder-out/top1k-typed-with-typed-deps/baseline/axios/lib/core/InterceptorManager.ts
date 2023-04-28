@@ -60,7 +60,7 @@ class InterceptorManager {
    * @returns {void}
    */
   forEach(fn) {
-    utils.forEach(this.handlers, function forEachHandler(h: Handler<T>) {
+    utils.forEach(this.handlers, function forEachHandler(h: Handler) {
       if (h !== null) {
         fn(h);
       }

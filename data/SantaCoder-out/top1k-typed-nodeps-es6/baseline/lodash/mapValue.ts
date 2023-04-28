@@ -20,7 +20,7 @@
  * mapValue(users, ({ age }) => age)
  * // => { 'fred': 40, 'pebbles': 1 } (iteration order is not guaranteed)
  */
-function mapValue(object: any, iteratee: any) {
+function mapValue(object: any, iteratee: Function) {
   object = Object(object)
   const result = {}
 

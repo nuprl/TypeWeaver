@@ -36,7 +36,7 @@ const TAP_PROMISE = () => {
 	throw new Error("tapPromise is not supported on a SyncWaterfallHook");
 };
 
-const COMPILE = function(options: IOptions) {
+const COMPILE = function(options: any) {
 	factory.setup(this, options);
 	return factory.create(options);
 };

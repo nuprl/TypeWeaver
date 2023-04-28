@@ -13,7 +13,7 @@ function isRelativePath(str: string) {
 }
 
 // TODO simplify for the next major release
-function stringifyRequest(loaderContext: LoaderContext, request: Request) {
+function stringifyRequest(loaderContext: LoaderContext, request: string) {
   if (
     typeof loaderContext.utils !== "undefined" &&
     typeof loaderContext.utils.contextify === "function"
@@ -56,7 +56,7 @@ function stringifyRequest(loaderContext: LoaderContext, request: Request) {
   );
 }
 
-function getImportLinkAPICode(esModule: boolean, loaderContext: ImportContext) {
+function getImportLinkAPICode(esModule: boolean, loaderContext: LoaderContext) {
   const modulePath = stringifyRequest(
     loaderContext,
     `!${path.join(__dirname, "runtime/injectStylesIntoLinkTag.js")}`
@@ -67,7 +67,7 @@ function getImportLinkAPICode(esModule: boolean, loaderContext: ImportContext) {
     : `var API = require(${modulePath});`;
 }
 
-function getImportLinkContentCode(esModule: boolean, loaderContext: ImportLoaderContext, request: string) {
+function getImportLinkContentCode(esModule: boolean, loaderContext: LoaderContext, request: Request) {
   const modulePath = stringifyRequest(loaderContext, `!!${request}`);
 
   return esModule
@@ -75,7 +75,7 @@ function getImportLinkContentCode(esModule: boolean, loaderContext: ImportLoader
     : `var content = require(${modulePath});`;
 }
 
-function getImportStyleAPICode(esModule: boolean, loaderContext: ImportStyleAPICodeContext) {
+function getImportStyleAPICode(esModule: boolean, loaderContext: LoaderContext) {
   const modulePath = stringifyRequest(
     loaderContext,
     `!${path.join(__dirname, "runtime/injectStylesIntoStyleTag.js")}`
@@ -114,7 +114,7 @@ function getImportStyleDomAPICode(
     : `var domAPI = require(${isSingleton ? singletonAPI : styleAPI});`;
 }
 
-function getImportStyleContentCode(esModule: boolean, loaderContext: WebpackContext, request: string) {
+function getImportStyleContentCode(esModule: boolean, loaderContext: LoaderContext, request: Request) {
   const modulePath = stringifyRequest(loaderContext, `!!${request}`);
 
   return esModule
@@ -152,7 +152,7 @@ function getImportInsertBySelectorCode(
   return "";
 }
 
-function getInsertOptionCode(insertType: InsertType, options: InsertOptions) {
+function getInsertOptionCode(insertType: string, options: InsertOptions) {
   if (insertType === "selector") {
     const insert = options.insert ? JSON.stringify(options.insert) : '"head"';
 
@@ -169,7 +169,7 @@ function getInsertOptionCode(insertType: InsertType, options: InsertOptions) {
   return `options.insert = ${options.insert.toString()};`;
 }
 
-function getImportInsertStyleElementCode(esModule: boolean, loaderContext: any) {
+function getImportInsertStyleElementCode(esModule: boolean, loaderContext: LoaderContext) {
   const modulePath = stringifyRequest(
     loaderContext,
     `!${path.join(__dirname, "runtime/insertStyleElement.js")}`
@@ -180,7 +180,7 @@ function getImportInsertStyleElementCode(esModule: boolean, loaderContext: any) 
     : `var insertStyleElement = require(${modulePath});`;
 }
 
-function getStyleHmrCode(esModule: boolean, loaderContext: WebpackOptionsApplyContext, request: any, lazy: boolean) {
+function getStyleHmrCode(esModule: boolean, loaderContext: LoaderContext, request: Request, lazy: Boolean) {
   const modulePath = stringifyRequest(loaderContext, `!!${request}`);
 
   return `
@@ -255,7 +255,7 @@ if (module.hot) {
 `;
 }
 
-function getLinkHmrCode(esModule: string, loaderContext: WebpackContext, request: string) {
+function getLinkHmrCode(esModule: boolean, loaderContext: LoaderContext, request: Request) {
   const modulePath = stringifyRequest(loaderContext, `!!${request}`);
 
   return `
@@ -285,7 +285,7 @@ function getdomAPI(isAuto: boolean) {
   return isAuto ? "isOldIE() ? domAPISingleton : domAPI" : "domAPI";
 }
 
-function getImportIsOldIECode(esModule: boolean, loaderContext: WebpackOptionsApplyContext) {
+function getImportIsOldIECode(esModule: boolean, loaderContext: LoaderContext) {
   const modulePath = stringifyRequest(
     loaderContext,
     `!${path.join(__dirname, "runtime/isOldIE.js")}`
@@ -334,7 +334,7 @@ function getStyleTagTransformFnCode(
   return "";
 }
 
-function getStyleTagTransformFn(options: StyleTagTransformOptions, isSingleton: false) {
+function getStyleTagTransformFn(options: StyleOptions, isSingleton: boolean) {
   // Todo remove "function" type for styleTagTransform option in next major release, because code duplication occurs. Leave require.resolve()
   return isSingleton
     ? ""
@@ -343,7 +343,7 @@ function getStyleTagTransformFn(options: StyleTagTransformOptions, isSingleton: 
     : `options.styleTagTransform = styleTagTransformFn`;
 }
 
-function getExportStyleCode(esModule: boolean, loaderContext: WebpackContext, request: string) {
+function getExportStyleCode(esModule: boolean, loaderContext: LoaderContext, request: Request) {
   const modulePath = stringifyRequest(loaderContext, `!!${request}`);
 
   return esModule
@@ -352,7 +352,7 @@ function getExportStyleCode(esModule: boolean, loaderContext: WebpackContext, re
     : "module.exports = content && content.locals || {};";
 }
 
-function getExportLazyStyleCode(esModule: boolean, loaderContext: WebpackContext, request: string) {
+function getExportLazyStyleCode(esModule: boolean, loaderContext: LoaderContext, request: Request) {
   const modulePath = stringifyRequest(loaderContext, `!!${request}`);
 
   return esModule
@@ -361,7 +361,7 @@ function getExportLazyStyleCode(esModule: boolean, loaderContext: WebpackContext
     : "module.exports = exported;";
 }
 
-function getSetAttributesCode(esModule: boolean, loaderContext: WebpackOptionsApplyContext, options: BpackOptions) {
+function getSetAttributesCode(esModule: boolean, loaderContext: LoaderContext, options: LoaderOptions) {
   let modulePath;
 
   if (typeof options.attributes !== "undefined") {

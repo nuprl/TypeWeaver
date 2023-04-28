@@ -28,7 +28,7 @@ function bufferEq(a: Buffer, b: Buffer) {
 }
 
 bufferEq.install = function() {
-  Buffer.prototype.equal = SlowBuffer.prototype.equal = function equal(that: BufferLike) {
+  Buffer.prototype.equal = SlowBuffer.prototype.equal = function equal(that: Uint8Array) {
     return bufferEq(this, that);
   };
 };

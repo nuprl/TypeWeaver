@@ -25,7 +25,7 @@ iconv.encode = function encode(str: string, encoding: string, options: EncodeOpt
     return (trail && trail.length > 0) ? Buffer.concat([res, trail]) : res;
 }
 
-iconv.decode = function decode(buf: Buffer, encoding: string, options: DecodeOptions) {
+iconv.decode = function decode(buf: Buffer, encoding: string, options: Options) {
     if (typeof buf === 'string') {
         if (!iconv.skipDecodeWarning) {
             console.error('Iconv-lite warning: decode()-ing strings is deprecated. Refer to https://github.com/ashtuchkin/iconv-lite/wiki/Use-Buffers-when-decoding');
@@ -43,7 +43,7 @@ iconv.decode = function decode(buf: Buffer, encoding: string, options: DecodeOpt
     return trail ? (res + trail) : res;
 }
 
-iconv.encodingExists = function encodingExists(enc: Encoding) {
+iconv.encodingExists = function encodingExists(enc: string) {
     try {
         iconv.getCodec(enc);
         return true;
@@ -111,7 +111,7 @@ iconv._canonicalizeEncoding = function(encoding: string) {
     return (''+encoding).toLowerCase().replace(/:\d{4}$|[^0-9a-z]/g, "");
 }
 
-iconv.getEncoder = function getEncoder(encoding: Encoding, options: EncoderOptions) {
+iconv.getEncoder = function getEncoder(encoding: string, options: any) {
     var codec = iconv.getCodec(encoding),
         encoder = new codec.encoder(options, codec);
 
@@ -121,7 +121,7 @@ iconv.getEncoder = function getEncoder(encoding: Encoding, options: EncoderOptio
     return encoder;
 }
 
-iconv.getDecoder = function getDecoder(encoding: string, options: IOptions) {
+iconv.getDecoder = function getDecoder(encoding: string, options: Options) {
     var codec = iconv.getCodec(encoding),
         decoder = new codec.decoder(options, codec);
 
@@ -148,11 +148,11 @@ iconv.enableStreamingAPI = function enableStreamingAPI(stream_module: any) {
     iconv.IconvLiteDecoderStream = streams.IconvLiteDecoderStream;
 
     // Streaming API.
-    iconv.encodeStream = function encodeStream(encoding: Encoding, options: EncodeStreamOptions) {
+    iconv.encodeStream = function encodeStream(encoding: string, options: EncodeOptions) {
         return new iconv.IconvLiteEncoderStream(iconv.getEncoder(encoding, options), options);
     }
 
-    iconv.decodeStream = function decodeStream(encoding: string, options: DecodeOptions) {
+    iconv.decodeStream = function decodeStream(encoding: string, options: any) {
         return new iconv.IconvLiteDecoderStream(iconv.getDecoder(encoding, options), options);
     }
 

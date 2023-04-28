@@ -48,7 +48,7 @@ for (let type in db) {
   });
 }
 
-function writeTypesFile(types: IType[], path: string) {
+function writeTypesFile(types: string, path: string) {
   fs.writeFileSync(path, 'module.exports = ' + JSON.stringify(types) + ';');
 }
 

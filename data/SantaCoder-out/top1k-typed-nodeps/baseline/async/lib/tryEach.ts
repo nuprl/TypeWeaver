@@ -24,7 +24,7 @@ import awaitify from './internal/awaitify.js'
  * @returns {Promise} a promise, if no callback is passed
  * @example
  * async.tryEach([
- *     function getDataFromFirstWebsite(callback: any) {
+ *     function getDataFromFirstWebsite(callback: Function) {
  *         // Try getting the data from the first website
  *         callback(err, data);
  *     },
@@ -40,7 +40,7 @@ import awaitify from './internal/awaitify.js'
  * });
  *
  */
-function tryEach(tasks: Task[], callback: any) {
+function tryEach(tasks: Array<Function>, callback: Function) {
     var error = null;
     var result;
     return eachSeries(tasks, (task, taskCb) => {

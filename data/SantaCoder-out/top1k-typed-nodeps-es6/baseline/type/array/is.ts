@@ -10,7 +10,7 @@ if (typeof Array.isArray === "function") {
 	isArray = function (value: any) { return objectToString.call(value) === objectTaggedString; };
 }
 
-export default function (value: any) {
+export default function (value: unknown) {
 	if (!isArray(value)) return false;
 
 	// Sanity check (reject objects which do not expose common Array interface)

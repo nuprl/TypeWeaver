@@ -30,7 +30,7 @@
     };
 
     // Expand :: in an IPv6 address or address part consisting of `parts` groups.
-    function expandIPv6 (string: string, parts: string[]) {
+    function expandIPv6 (string: string, parts: number) {
         // More than one '::' means invalid adddress
         if (string.indexOf('::') !== string.lastIndexOf('::')) {
             return null;
@@ -104,7 +104,7 @@
     }
 
     // A generic CIDR (Classless Inter-Domain Routing) RFC1518 range matcher.
-    function matchCIDR (first: CIDR, second: CIDR, partSize: number, cidrBits: number) {
+    function matchCIDR (first: string, second: string, partSize: number, cidrBits: number) {
         if (first.length !== second.length) {
             throw new Error('ipaddr: cannot match CIDR for objects with different lengths');
         }
@@ -216,7 +216,7 @@
         };
 
         // Checks if this address matches other one within given CIDR range.
-        IPv4.prototype.match = function (other: IPRange, cidrRange: CIDRRange) {
+        IPv4.prototype.match = function (other: string, cidrRange: string) {
             let ref;
             if (cidrRange === undefined) {
                 ref = other;
@@ -565,7 +565,7 @@
         };
 
         // Checks if this address matches other one within given CIDR range.
-        IPv6.prototype.match = function (other: IPRange, cidrRange: CIDRRange) {
+        IPv6.prototype.match = function (other: any, cidrRange: string) {
             let ref;
 
             if (cidrRange === undefined) {
@@ -962,7 +962,7 @@
     // An utility function to ease named range matching. See examples below.
     // rangeList can contain both IPv4 and IPv6 subnet entries and will not throw errors
     // on matching IPv4 addresses to IPv6 ranges or vice versa.
-    ipaddr.subnetMatch = function (address: string, rangeList: RangeList, defaultName: string) {
+    ipaddr.subnetMatch = function (address: string, rangeList: string[], defaultName: string) {
         let i, rangeName, rangeSubnets, subnet;
 
         if (defaultName === undefined || defaultName === null) {

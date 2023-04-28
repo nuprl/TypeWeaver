@@ -21,7 +21,7 @@ function asciiCaseInsensitiveMatch(a: string, b: string) {
   return true;
 }
 
-function recordNamespaceInformation(element: string, map: any, prefixMap: any) {
+function recordNamespaceInformation(element: Element, map: NamespaceMap, prefixMap: NamespaceMap) {
   let defaultNamespaceAttrValue = null;
   for (let i = 0; i < element.attributes.length; ++i) {
     const attr = element.attributes[i];
@@ -146,7 +146,7 @@ function serializeDocumentFragment(
   return markup;
 }
 
-function serializeText(node: Node, namespace: string, prefixMap: any, requireWellFormed: boolean) {
+function serializeText(node: Node, namespace: string, prefixMap: PrefixMap, requireWellFormed: Boolean) {
   if (requireWellFormed && !XML_CHAR.test(node.data)) {
     throw new Error("Failed to serialize XML: text node data is not well-formed.");
   }
@@ -157,7 +157,7 @@ function serializeText(node: Node, namespace: string, prefixMap: any, requireWel
     .replace(/>/ug, "&gt;");
 }
 
-function serializeComment(node: Comment, namespace: string, prefixMap: any, requireWellFormed: boolean) {
+function serializeComment(node: Node, namespace: string, prefixMap: PrefixMap, requireWellFormed: Boolean) {
   if (requireWellFormed && !XML_CHAR.test(node.data)) {
     throw new Error("Failed to serialize XML: comment node data is not well-formed.");
   }
@@ -171,7 +171,7 @@ function serializeComment(node: Comment, namespace: string, prefixMap: any, requ
   return `<!--${node.data}-->`;
 }
 
-function serializeElement(node: Element, namespace: string, prefixMap: any, requireWellFormed: boolean, refs: Reference[]) {
+function serializeElement(node: Element, namespace: string, prefixMap: any, requireWellFormed: any, refs: any) {
   if (
     requireWellFormed &&
     (node.localName.includes(":") || !xnv.name(node.localName))
@@ -302,7 +302,7 @@ function serializeCDATASection(node: CDATASection) {
 /**
  * @param {{prefixIndex: number}} refs
  */
-function xmlSerialization(node: Node, namespace: string, prefixMap: any, requireWellFormed: boolean, refs: ReferenceTracker) {
+function xmlSerialization(node: Node, namespace: string, prefixMap: PrefixMap, requireWellFormed: Boolean, refs: any) {
   switch (node.nodeType) {
     case NODE_TYPES.ELEMENT_NODE:
       return serializeElement(

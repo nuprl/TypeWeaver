@@ -10,7 +10,7 @@ function generatePrefix(map: any, newNamespace: string, prefixIndex: number) {
   return generatedPrefix;
 }
 
-function preferredPrefixString(map: any, ns: string, preferredPrefix: string) {
+function preferredPrefixString(map: NamedNodeMap, ns: string, preferredPrefix: string) {
   const candidateList = map[ns];
   if (!candidateList) {
     return null;

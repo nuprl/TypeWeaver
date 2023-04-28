@@ -24,7 +24,7 @@ export function includeKeys(object: any, predicate: any) {
 	return result;
 }
 
-export function excludeKeys(object: any, predicate: any) {
+export function excludeKeys(object: Object, predicate: any) {
 	if (Array.isArray(predicate)) {
 		const set = new Set(predicate);
 		return includeKeys(object, key => !set.has(key));

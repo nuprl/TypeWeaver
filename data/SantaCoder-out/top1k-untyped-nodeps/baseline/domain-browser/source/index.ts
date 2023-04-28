@@ -11,7 +11,7 @@ module.exports = function() {
 	domain.createDomain = domain.create = function() {
 		var d = new events.EventEmitter();
 
-		function emitError(e: any) {
+		function emitError(e: Error) {
 			d.emit("error", e);
 		}
 
@@ -45,7 +45,7 @@ module.exports = function() {
 				}
 			};
 		};
-		d.run = function(fn: any) {
+		d.run = function(fn: Function) {
 			try {
 				fn();
 			} catch (err) {

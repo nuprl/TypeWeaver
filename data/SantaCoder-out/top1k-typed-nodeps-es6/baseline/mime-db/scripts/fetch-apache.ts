@@ -64,7 +64,7 @@ get(URL, function onResponse (err: Error, body: any) {
 /**
  * Append an extension to an object.
  */
-function appendExtension (obj: IExtension, extension: IExtension) {
+function appendExtension (obj: any, extension: string) {
   if (!obj.extensions) {
     obj.extensions = []
   }
@@ -77,7 +77,7 @@ function appendExtension (obj: IExtension, extension: IExtension) {
 /**
  * Append extensions to an object.
  */
-function appendExtensions (obj: any, extensions: any) {
+function appendExtensions (obj: any, extensions: any[]) {
   if (extensions.length === 0) {
     return
   }
@@ -94,7 +94,7 @@ function appendExtensions (obj: any, extensions: any) {
  * Get HTTPS resource.
  */
 function get (url: string, callback: any) {
-  https.get(url, function onResponse (res: AxiosResponse) {
+  https.get(url, function onResponse (res: IncomingMessage) {
     if (res.statusCode !== 200) {
       callback(new Error('got status code ' + res.statusCode + ' from ' + URL))
     } else {

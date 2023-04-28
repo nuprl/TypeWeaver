@@ -52,7 +52,7 @@ function buildParams( prefix: string, obj: any, traditional: boolean, add : bool
 
 // Serialize an array of form elements or a set of
 // key/values into a query string
-jQuery.param = function( a: number, traditional : boolean) {
+jQuery.param = function( a: any, traditional : boolean) {
 	var prefix,
 		s = [],
 		add = function( key: string, valueOrFunction : any) {
@@ -108,7 +108,7 @@ jQuery.fn.extend( {
 			return this.name && !jQuery( this ).is( ":disabled" ) &&
 				rsubmittable.test( this.nodeName ) && !rsubmitterTypes.test( type ) &&
 				( this.checked || !rcheckableType.test( type ) );
-		} ).map( function( _i: number, elem : JQuery<HTMLElement>) {
+		} ).map( function( _i: number, elem : HTMLElement) {
 			var val = jQuery( this ).val();
 
 			if ( val == null ) {
@@ -116,7 +116,7 @@ jQuery.fn.extend( {
 			}
 
 			if ( Array.isArray( val ) ) {
-				return jQuery.map( val, function( val : string) {
+				return jQuery.map( val, function( val : number) {
 					return { name: elem.name, value: val.replace( rCRLF, "\r\n" ) };
 				} );
 			}

@@ -17,7 +17,7 @@ var commander = require('commander'),
     length,
     i;
 
-fs.readFile(__dirname + '/package.json', 'utf8', function (err: Error, data: any) {
+fs.readFile(__dirname + '/package.json', 'utf8', function (err: any, data: any) {
   if (err) {
     throw err;
   }
@@ -184,7 +184,7 @@ for (i = 1, length = groups.length; i < length; i++) {
 }
 
 /* create the master RegExp, whis is the union of all the groups' expressions */
-master = new RegExp(groups.map(function (a: string) { return a[1]; }).join('|'), 'gm');
+master = new RegExp(groups.map(function (a: any) { return a[1]; }).join('|'), 'gm');
 
 /* replacement function for String.replace, receives 21 arguments */
 function replace() {
@@ -387,13 +387,13 @@ function replace() {
 
 /* reads a file, runs replacement and writes it back */
 function processFile(file: string) {
-  fs.readFile(file, {encoding: 'utf8'}, function (err: Error, data: any) {
+  fs.readFile(file, {encoding: 'utf8'}, function (err: any, data: any) {
     if (err) {
       throw err;
     }
 
     /* run replacement twice, might need more runs */
-    fs.writeFile(file, data.replace(master, replace).replace(master, replace), function (err: Error) {
+    fs.writeFile(file, data.replace(master, replace).replace(master, replace), function (err: any) {
       if (err) {
         throw err;
       }
@@ -403,7 +403,7 @@ function processFile(file: string) {
 
 /* process file names from command line and process the identified files */
 for (i = 2, length = process.argv.length; i < length; i++) {
-  glob(process.argv[i], function (err: Error, matches: Match[]) {
+  glob(process.argv[i], function (err: any, matches: any) {
     if (err) {
       throw err;
     }

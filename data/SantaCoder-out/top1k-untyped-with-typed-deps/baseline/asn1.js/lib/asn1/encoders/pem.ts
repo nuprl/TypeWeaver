@@ -4,14 +4,14 @@ const inherits = require('inherits');
 
 const DEREncoder = require('./der');
 
-function PEMEncoder(entity: string) {
+function PEMEncoder(entity: PEMEntity) {
   DEREncoder.call(this, entity);
   this.enc = 'pem';
 }
 inherits(PEMEncoder, DEREncoder);
 module.exports = PEMEncoder;
 
-PEMEncoder.prototype.encode = function encode(data: any, options: EncodeOptions) {
+PEMEncoder.prototype.encode = function encode(data: any, options: any) {
   const buf = DEREncoder.prototype.encode.call(this, data);
 
   const p = buf.toString('base64');

@@ -79,6 +79,6 @@ module.exports = function(qs: string, sep: string, eq: string, options: any) {
   return obj;
 };
 
-var isArray = Array.isArray || function (xs: number[]) {
+var isArray = Array.isArray || function (xs: List<A>) {
   return Object.prototype.toString.call(xs) === '[object Array]';
 };

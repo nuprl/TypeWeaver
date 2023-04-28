@@ -25,7 +25,7 @@ function decode(input: string) {
  * @returns {String|Null} The encoded string.
  * @api private
  */
-function encode(input: any) {
+function encode(input: string) {
   try {
     return encodeURIComponent(input);
   } catch (e) {

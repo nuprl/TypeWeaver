@@ -22,7 +22,7 @@ import basePullAll from './.internal/basePullAll.js'
  * console.log(array)
  * // => [{ 'x': 1, 'y': 2 }, { 'x': 5, 'y': 6 }]
  */
-function pullAllWith(array: Array<any>, values: Array<any>, comparator: any) {
+function pullAllWith(array: any[], values: any[], comparator: any) {
   return (array != null && array.length && values != null && values.length)
     ? basePullAll(array, values, undefined, comparator)
     : array

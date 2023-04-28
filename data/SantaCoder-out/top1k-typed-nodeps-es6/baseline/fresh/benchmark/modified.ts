@@ -27,11 +27,11 @@ suite.add({
   fn: 'var val = fresh({ \'if-modified-since\': \'Mon, 01 Jan 1990 00:00:00 GMT\' }, { \'last-modified\': \'Sat, 01 Jan 2000 00:00:00 GMT\' })'
 })
 
-suite.on('start', function onCycle (event: CycleEvent) {
+suite.on('start', function onCycle (event: any) {
   process.stdout.write('  modified\n\n')
 })
 
-suite.on('cycle', function onCycle (event: BenchmarkEvent) {
+suite.on('cycle', function onCycle (event: Event) {
   benchmarks.add(event.target)
 })
 

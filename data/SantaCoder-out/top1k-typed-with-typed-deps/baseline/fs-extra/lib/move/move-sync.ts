@@ -7,7 +7,7 @@ const removeSync = require('../remove').removeSync
 const mkdirpSync = require('../mkdirs').mkdirpSync
 const stat = require('../util/stat')
 
-function moveSync (src: string, dest: string, opts: MoveSyncOptions) {
+function moveSync (src: string, dest: string, opts: MoveOptions) {
   opts = opts || {}
   const overwrite = opts.overwrite || opts.clobber || false
 

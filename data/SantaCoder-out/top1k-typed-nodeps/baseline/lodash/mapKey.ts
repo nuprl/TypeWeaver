@@ -12,12 +12,12 @@
  * @see mapValue
  * @example
  *
- * mapKey({ 'a': 1, 'b': 2 }, function(value: string, key: string) {
+ * mapKey({ 'a': 1, 'b': 2 }, function(value: any, key: string) {
  *   return key + value
  * })
  * // => { 'a1': 1, 'b2': 2 }
  */
-function mapKey(object: any, iteratee: any) {
+function mapKey(object: Object, iteratee: Function) {
   object = Object(object)
   const result = {}
 

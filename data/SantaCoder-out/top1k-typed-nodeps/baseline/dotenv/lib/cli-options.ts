@@ -1,6 +1,6 @@
 const re = /^dotenv_config_(encoding|path|debug|override)=(.+)$/
 
-module.exports = function optionMatcher (args: any[]) {
+module.exports = function optionMatcher (args: string[]) {
   return args.reduce(function (acc: string, cur: string) {
     const matches = cur.match(re)
     if (matches) {

@@ -22,7 +22,7 @@ import last from './last.js'
  * intersectionWith(objects, others, isEqual)
  * // => [{ 'x': 1, 'y': 2 }]
  */
-function intersectionWith(...arrays: Array<Array<T>>) {
+function intersectionWith(...arrays: any[][]) {
   let comparator = last(arrays)
   const mapped = map(arrays, castArrayLikeObject)
 

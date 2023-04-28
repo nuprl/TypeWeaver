@@ -1,4 +1,4 @@
-module['exports'] = function(colors: string[]) {
+module['exports'] = function(colors: Array<string>) {
   return function(letter: string, i: number, exploded: string[]) {
     if (letter === ' ') return letter;
     switch (i%3) {

@@ -7,7 +7,7 @@
 
 'use strict';
 
-module.exports = function repeat(ele: HTMLElement, num: number) {
+module.exports = function repeat(ele: any, num: number) {
   if (Array.prototype.fill) {
     return new Array(num).fill(ele);
   }

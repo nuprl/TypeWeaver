@@ -1,7 +1,7 @@
 'use strict';
 
 
-function RequestError(cause: any, options: AxiosRequestConfig, response: AxiosResponse) {
+function RequestError(cause: Error, options: RequestOptions, response: Response) {
 
     this.name = 'RequestError';
     this.message = String(cause);
@@ -19,7 +19,7 @@ RequestError.prototype = Object.create(Error.prototype);
 RequestError.prototype.constructor = RequestError;
 
 
-function StatusCodeError(statusCode: number, body: any, options: AxiosRequestConfig, response: AxiosResponse) {
+function StatusCodeError(statusCode: number, body: any, options: any, response: any) {
 
     this.name = 'StatusCodeError';
     this.statusCode = statusCode;
@@ -37,7 +37,7 @@ StatusCodeError.prototype = Object.create(Error.prototype);
 StatusCodeError.prototype.constructor = StatusCodeError;
 
 
-function TransformError(cause: any, options: any, response: AxiosResponse) {
+function TransformError(cause: Error, options: Object, response: Object) {
 
     this.name = 'TransformError';
     this.message = String(cause);

@@ -57,7 +57,7 @@ colors.stripColors = colors.strip = function(str: string) {
 };
 
 // eslint-disable-next-line no-unused-vars
-var stylize = colors.stylize = function stylize(str: string, style: Style) {
+var stylize = colors.stylize = function stylize(str: string, style: string) {
   if (!colors.enabled) {
     return str+'';
   }
@@ -135,7 +135,7 @@ function applyStyle() {
     var code = ansiStyles[nestedStyles[i]];
     str = code.open + str.replace(code.closeRe, code.open) + code.close;
     if (newLinesPresent) {
-      str = str.replace(newLineRegex, function(match: RegExpMatchArray) {
+      str = str.replace(newLineRegex, function(match: string) {
         return code.close + match + code.open;
       });
     }
@@ -144,7 +144,7 @@ function applyStyle() {
   return str;
 }
 
-colors.setTheme = function(theme: Theme) {
+colors.setTheme = function(theme: string) {
   if (typeof theme === 'string') {
     console.log('colors.setTheme now only accepts an object, not a string.  ' +
       'If you are trying to set a theme from a file, it is now your (the ' +
@@ -183,7 +183,7 @@ function init() {
   return ret;
 }
 
-var sequencer = function sequencer(map: any, str: string) {
+var sequencer = function sequencer(map: Function, str: string) {
   var exploded = str.split('');
   exploded = exploded.map(map);
   return exploded.join('');

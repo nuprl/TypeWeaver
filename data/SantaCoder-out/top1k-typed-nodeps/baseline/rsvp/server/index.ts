@@ -1,5 +1,5 @@
-module.exports = function(app: Express.Application) {
-  app.get('/', function(req: any, res: any) {
+module.exports = function(app: any) {
+  app.get('/', function(req: Request, res: Response) {
     res.redirect('/test/');
   })
 };

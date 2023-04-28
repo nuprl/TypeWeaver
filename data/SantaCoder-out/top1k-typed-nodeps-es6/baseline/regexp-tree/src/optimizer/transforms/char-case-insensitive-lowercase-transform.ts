@@ -62,7 +62,7 @@ function isAZClassRange(classRange: string) {
     to.codePoint >= UPPER_A_CP && to.codePoint <= UPPER_Z_CP;
 }
 
-function displaySymbolAsValue(symbol: Symbol, node: Node) {
+function displaySymbolAsValue(symbol: ts.Symbol, node: ts.Node) {
   const codePoint = symbol.codePointAt(0);
   if (node.kind === 'decimal') {
     return '\\' + codePoint;

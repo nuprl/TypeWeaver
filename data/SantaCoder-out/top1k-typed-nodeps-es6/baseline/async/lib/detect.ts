@@ -42,7 +42,7 @@ import awaitify from './internal/awaitify.js'
  * }
  *
  * async.detect(['file3.txt','file2.txt','dir1/file1.txt'], fileExists,
- *    function(err: Error, result: any) {
+ *    function(err: any, result: any) {
  *        console.log(result);
  *        // dir1/file1.txt
  *        // result now equals the first file in the list that exists
@@ -73,7 +73,7 @@ import awaitify from './internal/awaitify.js'
  * }
  *
  */
-function detect(coll: any, iteratee: any, callback: any) {
+function detect(coll: any[], iteratee: Function, callback: Function) {
     return createTester(bool => bool, (res, item) => item)(eachOf, coll, iteratee, callback)
 }
 export default awaitify(detect, 3)

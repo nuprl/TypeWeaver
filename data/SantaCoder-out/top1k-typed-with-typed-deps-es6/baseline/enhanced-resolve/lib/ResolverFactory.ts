@@ -46,7 +46,7 @@ import UseFilePlugin from './UseFilePlugin';
 /** @typedef {string|string[]|false} AliasOptionNewRequest */
 /** @typedef {{[k: string]: AliasOptionNewRequest}} AliasOptions */
 /** @typedef {{[k: string]: string|string[] }} ExtensionAliasOptions */
-/** @typedef {{apply: function(Resolver): void} | function(this: Resolver: any, Resolver: any): void} Plugin */
+/** @typedef {{apply: function(Resolver): void} | function(this: Resolver: void, Resolver: void): void} Plugin */
 
 /**
  * @typedef {Object} UserResolveOptions
@@ -115,7 +115,7 @@ import UseFilePlugin from './UseFilePlugin';
  * @param {PnpApi | null=} option option
  * @returns {PnpApi | null} processed option
  */
-function processPnpApiOption(option: PnpApiOption) {
+function processPnpApiOption(option: string) {
 	if (
 		option === undefined &&
 		/** @type {NodeJS.ProcessVersions & {pnp: string}} */ versions.pnp
@@ -151,7 +151,7 @@ function normalizeAlias(alias: string) {
  * @param {UserResolveOptions} options input options
  * @returns {ResolveOptions} output options
  */
-function createOptions(options: IOptions) {
+function createOptions(options: any) {
 	const mainFieldsSet = new Set(options.mainFields || ["main"]);
 	const mainFields = [];
 
@@ -249,7 +249,7 @@ function createOptions(options: IOptions) {
  * @param {UserResolveOptions} options resolve options
  * @returns {Resolver} created resolver
  */
-export const createResolver = function (options: IOptions) {
+export const createResolver = function (options: any) {
 	const normalizedOptions = createOptions(options);
 
 	const {

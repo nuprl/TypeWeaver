@@ -62,7 +62,7 @@ import root from './.internal/root.js'
  * // Check for pending invocations.
  * const status = debounced.pending() ? "Pending..." : "Ready"
  */
-function debounce(func: Function, wait: number, options: DebounceOptions) {
+function debounce(func: Function, wait: number, options: any) {
   let lastArgs,
     lastThis,
     maxWait,
@@ -99,7 +99,7 @@ function debounce(func: Function, wait: number, options: DebounceOptions) {
     return result
   }
 
-  function startTimer(pendingFunc: any, wait: number) {
+  function startTimer(pendingFunc: Function, wait: number) {
     if (useRAF) {
       root.cancelAnimationFrame(timerId)
       return root.requestAnimationFrame(pendingFunc)

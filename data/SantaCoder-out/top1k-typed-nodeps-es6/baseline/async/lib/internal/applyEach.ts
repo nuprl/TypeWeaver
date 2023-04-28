@@ -1,8 +1,8 @@
 import wrapAsync from './wrapAsync.js'
 import awaitify from './awaitify.js'
 
-export default function (eachfn: any) {
-    return function applyEach(fns: any, ...callArgs: any[]) {
+export default function (eachfn: Function) {
+    return function applyEach(fns: Function[], ...callArgs: any[]) {
         const go = awaitify(function (callback: Function) {
             var that = this;
             return eachfn(fns, (fn, cb) => {

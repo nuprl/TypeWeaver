@@ -33,7 +33,7 @@ var BACKSPACE = String.fromCharCode(127);
 var CTRLC = '\u0003';
 var CTRLD = '\u0004';
 
-function getPass(opts: IGetPassOptions, cb: any) {
+function getPass(opts: any, cb: any) {
 	if (typeof (opts) === 'function' && cb === undefined) {
 		cb = opts;
 		opts = {};
@@ -45,7 +45,7 @@ function getPass(opts: IGetPassOptions, cb: any) {
 	if (opts.prompt === undefined)
 		opts.prompt = 'Password';
 
-	openTTY(function (err: Error, rfd: ReadFileCallback, wfd: WriteFileCallback, rtty: ReadFileCallback, wtty: WriteFileCallback) {
+	openTTY(function (err: any, rfd: any, wfd: any, rtty: any, wtty: any) {
 		if (err) {
 			cb(err);
 			return;
@@ -60,7 +60,7 @@ function getPass(opts: IGetPassOptions, cb: any) {
 		var pw = '';
 		rtty.on('data', onData);
 
-		function onData(data: string) {
+		function onData(data: Buffer) {
 			var str = data.toString('utf8');
 			for (var i = 0; i < str.length; ++i) {
 				var ch = str[i];
@@ -103,7 +103,7 @@ function getPass(opts: IGetPassOptions, cb: any) {
 }
 
 function openTTY(cb: any) {
-	mod_fs.open('/dev/tty', 'r+', function (err: Error, rttyfd: number) {
+	mod_fs.open('/dev/tty', 'r+', function (err: any, rttyfd: any) {
 		if ((err && (err.code === 'ENOENT' || err.code === 'EACCES')) ||
 		    (process.version.match(/^v0[.][0-8][.]/))) {
 			cb(null, undefined, undefined, process.stdin,
@@ -111,7 +111,7 @@ function openTTY(cb: any) {
 			return;
 		}
 		var rtty = new mod_tty.ReadStream(rttyfd);
-		mod_fs.open('/dev/tty', 'w+', function (err3: Error, wttyfd: number) {
+		mod_fs.open('/dev/tty', 'w+', function (err3: any, wttyfd: any) {
 			var wtty = new mod_tty.WriteStream(wttyfd);
 			if (err3) {
 				cb(err3);

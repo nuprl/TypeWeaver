@@ -14,7 +14,7 @@ module.exports = {
   // default warning function
   warn: function () {},
 
-  fixRepositoryField: function (data: IRepository) {
+  fixRepositoryField: function (data: any) {
     if (data.repositories) {
       this.warn('repositories')
       data.repository = data.repositories[0]
@@ -121,7 +121,7 @@ module.exports = {
       this.warn('nonArrayBundleDependencies')
       delete data[bd]
     } else if (data[bd]) {
-      data[bd] = data[bd].filter(function (filtered: IFilteredData) {
+      data[bd] = data[bd].filter(function (filtered: any) {
         if (!filtered || typeof filtered !== 'string') {
           this.warn('nonStringBundleDependency', filtered)
           return false
@@ -144,7 +144,7 @@ module.exports = {
     addOptionalDepsToDeps(data, this.warn)
     this.fixBundleDependenciesField(data)
 
-    ;['dependencies', 'devDependencies'].forEach(function (deps: any) {
+    ;['dependencies', 'devDependencies'].forEach(function (deps: string[]) {
       if (!(deps in data)) {
         return
       }
@@ -153,7 +153,7 @@ module.exports = {
         delete data[deps]
         return
       }
-      Object.keys(data[deps]).forEach(function (d: any) {
+      Object.keys(data[deps]).forEach(function (d: string) {
         var r = data[deps][d]
         if (typeof r !== 'string') {
           this.warn('nonStringDependency', d, JSON.stringify(r))
@@ -208,12 +208,12 @@ module.exports = {
     return true
   },
 
-  fixPeople: function (data: any) {
+  fixPeople: function (data: Person) {
     modifyPeople(data, unParsePerson)
     modifyPeople(data, parsePerson)
   },
 
-  fixNameField: function (data: any, options: AxiosRequestConfig) {
+  fixNameField: function (data: any, options: any) {
     if (typeof options === 'boolean') {
       options = { strict: options }
     } else if (typeof options === 'undefined') {
@@ -252,7 +252,7 @@ module.exports = {
     }
   },
 
-  fixReadmeField: function (data: Readme) {
+  fixReadmeField: function (data: any) {
     if (!data.readme) {
       this.warn('missingReadme')
       data.readme = 'ERROR: No README data found!'
@@ -356,7 +356,7 @@ function isValidScopedPackageName (spec: string) {
     rest[1] === encodeURIComponent(rest[1])
 }
 
-function isCorrectlyEncodedName (spec: INameSpec) {
+function isCorrectlyEncodedName (spec: Spec) {
   return !spec.match(/[/@\s+%:]/) &&
     spec === encodeURIComponent(spec)
 }
@@ -371,7 +371,7 @@ function ensureValidName (name: string, strict: boolean, allowLegacyCase: boolea
   }
 }
 
-function modifyPeople (data: ModifyPeopleInput, fn: any) {
+function modifyPeople (data: any, fn: Function) {
   if (data.author) {
     data.author = fn(data.author)
   }['maintainers', 'contributors'].forEach(function (set: string) {
@@ -415,7 +415,7 @@ function parsePerson (person: string) {
   return obj
 }
 
-function addOptionalDepsToDeps (data: IDependencyData, warn: any) {
+function addOptionalDepsToDeps (data: any, warn: Function) {
   var o = data.optionalDependencies
   if (!o) {
     return
@@ -427,7 +427,7 @@ function addOptionalDepsToDeps (data: IDependencyData, warn: any) {
   data.dependencies = d
 }
 
-function depObjectify (deps: Dependency[], type: string, warn: boolean) {
+function depObjectify (deps: string[], type: string, warn: boolean) {
   if (!deps) {
     return {}
   }
@@ -439,7 +439,7 @@ function depObjectify (deps: Dependency[], type: string, warn: boolean) {
   }
   warn('deprecatedArrayDependencies', type)
   var o = {}
-  deps.filter(function (d: string) {
+  deps.filter(function (d: any) {
     return typeof d === 'string'
   }).forEach(function (d: string) {
     d = d.trim().split(/(:?[@\s><=])/)
@@ -452,7 +452,7 @@ function depObjectify (deps: Dependency[], type: string, warn: boolean) {
   return o
 }
 
-function objectifyDeps (data: any, warn: any) {
+function objectifyDeps (data: any, warn: Function) {
   depTypes.forEach(function (type: string) {
     if (!data[type]) {
       return

@@ -17,7 +17,7 @@ function wrapIterator(iterator: Iterator<any>)
 {
   var stream = this;
 
-  return function(item: any, key: string, cb: any)
+  return function(item: any, key: any, cb: any)
   {
     var aborter
       , wrappedCb = async(wrapIteratorCallback.call(stream, cb, key))
@@ -75,7 +75,7 @@ function wrapIteratorCallback(callback: Function, key: string)
 {
   var stream = this;
 
-  return function(error: Error, output: IOutput)
+  return function(error: any, output: any)
   {
     // don't repeat yourself
     if (!(key in stream.jobs))
@@ -99,7 +99,7 @@ function wrapIteratorCallback(callback: Function, key: string)
  * @param {mixed} output - iterator output
  * @param {function} callback - callback that expects iterator results
  */
-function streamer(error: Error, output: string, callback: any)
+function streamer(error: Error, output: string, callback: Function)
 {
   if (error && !this.error)
   {
@@ -127,7 +127,7 @@ function streamer(error: Error, output: string, callback: any)
  * @param {mixed} output - iterator output
  * @param {function} callback - callback that expects final results
  */
-function finisher(error: Error, output: string, callback: any)
+function finisher(error: Error, output: string, callback: Function)
 {
   // signal end of the stream
   // only for successfully finished streams

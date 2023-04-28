@@ -96,7 +96,7 @@ var types = {
     }
 };
 
-function _setExports(ndebug: Ndebug) {
+function _setExports(ndebug: boolean) {
     var keys = Object.keys(types);
     var out;
 
@@ -104,7 +104,7 @@ function _setExports(ndebug: Ndebug) {
     if (process.env.NODE_NDEBUG) {
         out = noop;
     } else {
-        out = function (arg: any, msg: any) {
+        out = function (arg: any, msg: string) {
             if (!arg) {
                 _toss(msg, 'true', arg);
             }
@@ -118,7 +118,7 @@ function _setExports(ndebug: Ndebug) {
             return;
         }
         var type = types[k];
-        out[k] = function (arg: any, msg: any) {
+        out[k] = function (arg: any, msg: string) {
             if (!type.check(arg)) {
                 _toss(msg, k, type.operator, arg, type.actual);
             }
@@ -174,7 +174,7 @@ function _setExports(ndebug: Ndebug) {
         }
         var type = types[k];
         var expected = '[' + k + ']';
-        out[name] = function (arg: string, msg: string) {
+        out[name] = function (arg: any, msg: string) {
             if (arg === undefined || arg === null) {
                 return;
             }

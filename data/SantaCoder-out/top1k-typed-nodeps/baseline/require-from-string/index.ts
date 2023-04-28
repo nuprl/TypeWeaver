@@ -3,7 +3,7 @@
 var Module = require('module');
 var path = require('path');
 
-module.exports = function requireFromString(code: string, filename: string, opts: RequireOptions) {
+module.exports = function requireFromString(code: string, filename: string, opts: any) {
 	if (typeof filename === 'object') {
 		opts = filename;
 		filename = undefined;

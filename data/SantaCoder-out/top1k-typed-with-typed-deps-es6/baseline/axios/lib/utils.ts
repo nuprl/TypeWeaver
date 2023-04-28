@@ -230,7 +230,7 @@ const trim = (str) => str.trim ?
  * @param {Boolean} [allOwnKeys = false]
  * @returns {void}
  */
-function forEach(obj: any, fn: any, {allOwnKeys = false} = {}: any) {
+function forEach(obj: any, fn: Function, {allOwnKeys = false} = {}: any) {
   // Don't bother if no value provided
   if (obj === null || typeof obj === 'undefined') {
     return;
@@ -281,7 +281,7 @@ function forEach(obj: any, fn: any, {allOwnKeys = false} = {}: any) {
  *
  * @returns {Object} Result of all merge properties
  */
-function merge(/* obj1: any, obj2: any, obj3: any, ... */: any[]) {
+function merge(/* obj1: Object, obj2: Object, obj3: Object, ... */: Object[]) {
   const result = {};
   const assignValue = (val, key) => {
     if (isPlainObject(result[key]) && isPlainObject(val)) {

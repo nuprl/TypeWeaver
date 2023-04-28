@@ -7,7 +7,7 @@
 
 'use strict';
 
-export default function diff(arr/*: any[], arrays*/: any[]) {
+export default function diff(arr/*: Array<any>, arrays*/: Array<any>) {
   var len = arguments.length;
   var idx = 0;
   while (++idx < len) {
@@ -16,7 +16,7 @@ export default function diff(arr/*: any[], arrays*/: any[]) {
   return arr;
 };
 
-function diffArray(one: any, two: any) {
+function diffArray(one: any[], two: any[]) {
   if (!Array.isArray(two)) {
     return one.slice();
   }

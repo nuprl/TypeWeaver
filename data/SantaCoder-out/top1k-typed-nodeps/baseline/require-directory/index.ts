@@ -10,12 +10,12 @@ var fs = require('fs'),
     rename: function (name: string) {
       return name;
     },
-    visit: function (obj: any) {
+    visit: function (obj: T) {
       return obj;
     }
   };
 
-function checkFileInclusion(path: string, filename: string, options: CheckFileInclusionOptions) {
+function checkFileInclusion(path: string, filename: string, options: Options) {
   return (
     // verify file has valid extension
     (new RegExp('\\.(' + options.extensions.join('|') + ')$', 'i').test(filename)) &&
@@ -34,7 +34,7 @@ function checkFileInclusion(path: string, filename: string, options: CheckFileIn
   );
 }
 
-function requireDirectory(m: string, path: string, options: RequireDirectoryOptions) {
+function requireDirectory(m: NodeModule, path: string, options: RequireDirectoryOptions) {
   var retval = {};
 
   // path is optional

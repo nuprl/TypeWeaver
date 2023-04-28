@@ -17,7 +17,7 @@ function disable() {
 }
 
 exports.enable = enable;
-function enable(options: IEnableOptions) {
+function enable(options: any) {
   options = options || {};
   if (enabled) disable();
   enabled = true;
@@ -57,7 +57,7 @@ function enable(options: IEnableOptions) {
       };
     }
   };
-  function onUnhandled(id: string) {
+  function onUnhandled(id: number) {
     if (
       options.allRejections ||
       matchWhitelist(
@@ -106,8 +106,8 @@ function logError(id: string, error: any) {
   });
 }
 
-function matchWhitelist(error: string, list: string[]) {
-  return list.some(function (cls: Class<any>) {
+function matchWhitelist(error: any, list: string[]) {
+  return list.some(function (cls: any) {
     return error instanceof cls;
   });
 }

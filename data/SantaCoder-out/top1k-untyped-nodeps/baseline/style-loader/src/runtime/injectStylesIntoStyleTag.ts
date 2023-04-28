@@ -55,7 +55,7 @@ function modulesToDom(list: Module[], options: DomOptions) {
   return identifiers;
 }
 
-function addElementStyle(obj: HTMLElement, options: StyleOptions) {
+function addElementStyle(obj: HTMLElement, options: any) {
   const api = options.domAPI(options);
 
   api.update(obj);
@@ -88,7 +88,7 @@ module.exports = (list, options) => {
 
   let lastIdentifiers = modulesToDom(list, options);
 
-  return function update(newList: any) {
+  return function update(newList: any[]) {
     newList = newList || [];
 
     for (let i = 0; i < lastIdentifiers.length; i++) {

@@ -7,11 +7,11 @@ function throatInternal(size: number) {
   function run(fn: Function, self: any, args: any[]) {
     if ((s | 0) !== 0) {
       s = (s | 0) - 1;
-      return new Promise(function (resolve: any) {
+      return new Promise(function (resolve: Function) {
         resolve(fn.apply(self, args));
       }).then(onFulfill, onReject);
     }
-    return new Promise(function (resolve: any) {
+    return new Promise(function (resolve: Function) {
       queue.push(new Delayed(resolve, fn, self, args));
     }).then(runDelayed);
   }
@@ -25,11 +25,11 @@ function throatInternal(size: number) {
       onReject(ex);
     }
   }
-  function onFulfill(result: any) {
+  function onFulfill(result: T) {
     release();
     return result;
   }
-  function onReject(error: Error) {
+  function onReject(error: any) {
     release();
     throw error;
   }
@@ -45,7 +45,7 @@ function throatInternal(size: number) {
   return run;
 }
 
-function earlyBound(size: number, fn: any) {
+function earlyBound(size: number, fn: Function) {
   const run = throatInternal(size | 0);
   return function () {
     var args = new Array(arguments.length);
@@ -70,7 +70,7 @@ function lateBound(size: number) {
     return run(fn, this, args);
   };
 }
-module.exports = function throat(size: number, fn: any) {
+module.exports = function throat(size: number, fn: Function) {
   if (typeof size === 'function') {
     var temp = fn;
     fn = size;
@@ -95,7 +95,7 @@ module.exports = function throat(size: number, fn: any) {
 
 module.exports.default = module.exports;
 
-function Delayed(resolve: any, fn: any, self: any, args: any[]) {
+function Delayed(resolve: Function, fn: Function, self: any, args: any[]) {
   this.resolve = resolve;
   this.fn = fn;
   this.self = self || null;
@@ -111,7 +111,7 @@ function Queue() {
   this._shiftIndex = 0;
 }
 
-Queue.prototype.push = function (value: number) {
+Queue.prototype.push = function (value: T) {
   if (this._pushIndex === blockSize) {
     this._pushIndex = 0;
     this._s1[this._s1.length] = this._pushBlock = new Array(blockSize);

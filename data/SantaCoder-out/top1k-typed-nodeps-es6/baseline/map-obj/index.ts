@@ -57,7 +57,7 @@ const _mapObject = (object, mapper, options, isSeen = new WeakMap()) => {
 	return target;
 };
 
-export default function mapObject(object: any, mapper: any, options: any) {
+export default function mapObject(object: Object, mapper: any, options: any) {
 	if (!isObject(object)) {
 		throw new TypeError(`Expected an object, got \`${object}\` (${typeof object})`);
 	}

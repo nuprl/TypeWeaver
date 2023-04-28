@@ -96,7 +96,7 @@ import awaitify from './internal/awaitify.js'
  * }
  *
  */
-function every(coll: any, iteratee: any, callback: any) {
+function every(coll: any[], iteratee: Function, callback: Function) {
     return createTester(bool => !bool, res => !res)(eachOf, coll, iteratee, callback)
 }
 export default awaitify(every, 3);

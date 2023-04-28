@@ -42,7 +42,7 @@ function mixin(obj: any) {
  */
 
 Emitter.prototype.on =
-Emitter.prototype.addEventListener = function(event: Event, fn: Function){
+Emitter.prototype.addEventListener = function(event: string, fn: Function){
   this._callbacks = this._callbacks || {};
   (this._callbacks['$' + event] = this._callbacks['$' + event] || [])
     .push(fn);
@@ -83,7 +83,7 @@ Emitter.prototype.once = function(event: string, fn: Function){
 Emitter.prototype.off =
 Emitter.prototype.removeListener =
 Emitter.prototype.removeAllListeners =
-Emitter.prototype.removeEventListener = function(event: Event, fn: Function){
+Emitter.prototype.removeEventListener = function(event: any, fn: any){
   this._callbacks = this._callbacks || {};
 
   // all

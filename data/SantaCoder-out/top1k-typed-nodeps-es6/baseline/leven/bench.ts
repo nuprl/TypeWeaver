@@ -9,7 +9,7 @@ import levenshtein from 'levenshtein';
 import talisman from 'talisman/metrics/distance/levenshtein';
 import leven from './index.js';
 
-function run(function_: 'a') {
+function run(function_: any) {
 	function_('a', 'b');
 	function_('ab', 'ac');
 	function_('ac', 'bc');

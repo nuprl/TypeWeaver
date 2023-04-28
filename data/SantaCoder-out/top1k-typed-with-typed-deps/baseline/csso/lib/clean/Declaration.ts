@@ -1,6 +1,6 @@
 import { property } from 'css-tree';
 
-export default function cleanDeclartion(node: Node, item: Declaration, list: DeclarationList) {
+export default function cleanDeclartion(node: Node, item: Node, list: Node) {
     if (node.value.children && node.value.children.isEmpty) {
         list.remove(item);
         return;

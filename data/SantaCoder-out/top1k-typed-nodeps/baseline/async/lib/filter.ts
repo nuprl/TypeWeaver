@@ -70,7 +70,7 @@ import awaitify from './internal/awaitify.js'
  * }
  *
  */
-function filter (coll: any, iteratee: any, callback: any) {
+function filter (coll: any[], iteratee: Function, callback: Function) {
     return _filter(eachOf, coll, iteratee, callback)
 }
 export default awaitify(filter, 3);

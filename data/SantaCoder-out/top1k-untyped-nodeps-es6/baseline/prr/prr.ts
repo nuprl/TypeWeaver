@@ -5,7 +5,7 @@
   * License: MIT
   */
 
-(function (name: string, context: any, definition: any) {
+(function (name: string, context: any, definition: Function) {
   if (typeof module != 'undefined' && module.exports)
     module.exports = definition()
   else
@@ -13,19 +13,19 @@
 })('prr', this, function() {
 
   var setProperty = typeof Object.defineProperty == 'function'
-      ? function (obj: any, key: string, options: IOptions) {
+      ? function (obj: any, key: string, options: any) {
           Object.defineProperty(obj, key, options)
           return obj
         }
-      : function (obj: any, key: string, options: IOptions) { // < es5
+      : function (obj: any, key: any, options: any) { // < es5
           obj[key] = options.value
           return obj
         }
 
-    , makeOptions = function (value: any, options: IOptions) {
+    , makeOptions = function (value: any, options: any) {
         var oo = typeof options == 'object'
           , os = !oo && typeof options == 'string'
-          , op = function (p: IProperty<any>) {
+          , op = function (p: any) {
               return oo
                 ? !!options[p]
                 : os

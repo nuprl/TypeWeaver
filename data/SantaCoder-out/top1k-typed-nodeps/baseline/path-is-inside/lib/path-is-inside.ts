@@ -2,7 +2,7 @@
 
 var path = require("path");
 
-module.exports = function (thePath: string, potentialParent: IFile) {
+module.exports = function (thePath: string, potentialParent: string) {
     // For inside-directory checking, we want to allow trailing slashes, so normalize.
     thePath = stripTrailingSep(thePath);
     potentialParent = stripTrailingSep(potentialParent);

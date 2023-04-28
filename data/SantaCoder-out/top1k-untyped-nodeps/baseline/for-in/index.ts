@@ -7,7 +7,7 @@
 
 'use strict';
 
-module.exports = function forIn(obj: any, fn: any, thisArg: any) {
+module.exports = function forIn(obj: Object, fn: Function, thisArg: any) {
   for (var key in obj) {
     if (fn.call(thisArg, obj[key], key, obj) === false) {
       break;

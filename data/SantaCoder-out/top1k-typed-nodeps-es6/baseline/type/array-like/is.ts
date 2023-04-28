@@ -3,7 +3,7 @@
 import coerceToArrayLength from '../array-length/coerce';
 import isObject from '../object/is';
 
-export default function (value/*: any, options*/: Partial<Partial<any>>) {
+export default function (value/*: any, options*/: Options) {
 	if (!isObject(value)) {
 		var options = arguments[1];
 		if (isObject(options) && options.allowString && typeof value === "string") return true;

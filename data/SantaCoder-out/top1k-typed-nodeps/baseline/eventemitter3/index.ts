@@ -77,7 +77,7 @@ function addListener(emitter: EventEmitter, event: string, fn: Function, context
  * @param {(String|Symbol)} evt The Event name.
  * @private
  */
-function clearEvent(emitter: EventEmitter<any>, evt: string) {
+function clearEvent(emitter: EventEmitter, evt: string) {
   if (--emitter._eventsCount === 0) emitter._events = new Events();
   else delete emitter._events[evt];
 }
@@ -237,7 +237,7 @@ EventEmitter.prototype.on = function on(event: string, fn: Function, context: an
  * @returns {EventEmitter} `this`.
  * @public
  */
-EventEmitter.prototype.once = function once(event: string, fn: any, context: any) {
+EventEmitter.prototype.once = function once(event: string, fn: Function, context: any) {
   return addListener(this, event, fn, context, true);
 };
 

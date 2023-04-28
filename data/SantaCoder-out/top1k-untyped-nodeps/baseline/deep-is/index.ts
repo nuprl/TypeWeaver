@@ -47,7 +47,7 @@ function isArguments(object: any) {
   return Object.prototype.toString.call(object) == '[object Arguments]';
 }
 
-function isNumberNaN(value: number) {
+function isNumberNaN(value: any) {
   // NaN === NaN -> false
   return typeof value == 'number' && value !== value;
 }

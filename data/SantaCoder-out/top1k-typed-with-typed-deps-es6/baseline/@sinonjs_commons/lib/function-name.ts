@@ -6,7 +6,7 @@
  * @param  {Function} func
  * @returns {string}
  */
-export default function functionName(func: string) {
+export default function functionName(func: Function) {
     if (!func) {
         return "";
     }
@@ -19,7 +19,7 @@ export default function functionName(func: string) {
             // name. Does not rely on function decomposition to work - if it
             // doesn't debugging will be slightly less informative
             // (i.e. toString will say 'spy' rather than 'myFunc').
-            (String(func).match(/function ([^\s(]+: string)/) || [])[1]
+            (String(func).match(/function ([^\s(]+: any)/) || [])[1]
         );
     } catch (e) {
         // Stringify may fail and we might get an exception, as a last-last

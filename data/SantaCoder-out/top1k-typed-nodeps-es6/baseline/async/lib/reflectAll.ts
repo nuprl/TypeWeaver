@@ -21,7 +21,7 @@ import reflect from './reflect.js'
  *             callback(null, 'one');
  *         }, 200);
  *     },
- *     function(callback: any) {
+ *     function(callback: Function) {
  *         // do some more stuff but error ...
  *         callback(new Error('bad stuff happened'));
  *     },
@@ -48,7 +48,7 @@ import reflect from './reflect.js'
  *             callback(null, 'one');
  *         }, 200);
  *     },
- *     two: function(callback: any) {
+ *     two: function(callback: Function) {
  *         callback('two');
  *     },
  *     three: function(callback: Function) {
@@ -67,7 +67,7 @@ import reflect from './reflect.js'
  *     // results.three.value = 'three'
  * });
  */
-export default function reflectAll(tasks: Task[]) {
+export default function reflectAll(tasks: any) {
     var results;
     if (Array.isArray(tasks)) {
         results = tasks.map(reflect);

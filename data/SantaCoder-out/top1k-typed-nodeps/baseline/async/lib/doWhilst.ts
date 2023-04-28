@@ -25,7 +25,7 @@ import awaitify from './internal/awaitify.js'
  * `iteratee`'s callback. Invoked with (err, [results]);
  * @returns {Promise} a promise, if no callback is passed
  */
-function doWhilst(iteratee: any, test: any, callback: any) {
+function doWhilst(iteratee: Function, test: Function, callback: Function) {
     callback = onlyOnce(callback);
     var _fn = wrapAsync(iteratee);
     var _test = wrapAsync(test);

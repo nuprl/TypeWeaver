@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function(arr: number[]) {
+module.exports = function(arr: any[]) {
   var len = arr.length;
   var res = [];
   var o = {};

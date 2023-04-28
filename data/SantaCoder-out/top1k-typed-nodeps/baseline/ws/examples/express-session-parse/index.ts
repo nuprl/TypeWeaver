@@ -37,7 +37,7 @@ app.post('/login', function (req: Request, res: Response) {
   res.send({ result: 'OK', message: 'Session updated' });
 });
 
-app.delete('/logout', function (request: IncomingMessage, response: ServerResponse) {
+app.delete('/logout', function (request: Request, response: Response) {
   const ws = map.get(request.session.userId);
 
   console.log('Destroying session');
@@ -58,7 +58,7 @@ const server = http.createServer(app);
 //
 const wss = new WebSocketServer({ clientTracking: false, noServer: true });
 
-server.on('upgrade', function (request: IncomingMessage, socket: Socket, head: Buffer) {
+server.on('upgrade', function (request: http.IncomingMessage, socket: net.Socket, head: Buffer) {
   console.log('Parsing session from request...');
 
   sessionParser(request, {}, () => {
@@ -76,12 +76,12 @@ server.on('upgrade', function (request: IncomingMessage, socket: Socket, head: B
   });
 });
 
-wss.on('connection', function (ws: WebSocket, request: IncomingMessage) {
+wss.on('connection', function (ws: WebSocket, request: http.IncomingMessage) {
   const userId = request.session.userId;
 
   map.set(userId, ws);
 
-  ws.on('message', function (message: IMessage) {
+  ws.on('message', function (message: string) {
     //
     // Here we can now use session parameters.
     //

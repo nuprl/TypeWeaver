@@ -22,7 +22,7 @@ exec('npm update electron-releases && npm run build && npm test', {silent:true},
     exec('git commit -m "bump electron-releases"', {silent:true});
     exec('git push origin master', {silent:true});
 
-    exec('git status --porcelain', {silent:true}, function(code: string, stdout: string, stderr: string) {
+    exec('git status --porcelain', {silent:true}, function(code: number, stdout: string, stderr: string) {
       const indexHasUpdated = !!stdout.length;
       if(indexHasUpdated) {
         exec('git add versions.js full-versions.js chromium-versions.js full-chromium-versions.js versions.json full-versions.json chromium-versions.json full-chromium-versions.json', {silent:true});

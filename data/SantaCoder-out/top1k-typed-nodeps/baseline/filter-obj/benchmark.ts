@@ -24,7 +24,7 @@ const getPredicateKey = function (_: any, index: number) {
 	return `a${index}`;
 };
 
-const isEven = function (key: string, value: any) {
+const isEven = function (key: string, value: number) {
 	return value % 2 === 0;
 };
 

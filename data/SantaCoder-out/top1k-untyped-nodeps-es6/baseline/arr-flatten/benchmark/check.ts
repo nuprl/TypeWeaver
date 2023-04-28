@@ -13,11 +13,11 @@ import bold from 'ansi-bold';
 
 var fixtures = glob.sync(__dirname + '/fixtures/l*.js');
 
-glob.sync(__dirname + '/code/*.js').forEach(function (fp: Function) {
+glob.sync(__dirname + '/code/*.js').forEach(function (fp: string) {
   var fn = require(path.resolve(__dirname, 'code', fp));
   var name = path.basename(fp, path.extname(fp));
 
-  fixtures.forEach(function (fixture: Fixture<TestComponent>) {
+  fixtures.forEach(function (fixture: any) {
     console.log(bold(name) + ':', inspect(fn(require(fixture))));
   });
 });

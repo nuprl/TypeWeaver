@@ -4,7 +4,7 @@
  * implementations of `debug()`.
  */
 
-function setup(env: IEnvironment) {
+function setup(env: string) {
 	createDebug.debug = createDebug;
 	createDebug.default = createDebug;
 	createDebug.coerce = coerce;
@@ -159,7 +159,7 @@ function setup(env: IEnvironment) {
 	* @param {String} namespaces
 	* @api public
 	*/
-	function enable(namespaces: string[]) {
+	function enable(namespaces: string) {
 		createDebug.save(namespaces);
 		createDebug.namespaces = namespaces;
 

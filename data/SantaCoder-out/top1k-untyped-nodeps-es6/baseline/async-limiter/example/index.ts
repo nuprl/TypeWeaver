@@ -24,7 +24,7 @@ function done(result: any) {
 }
 
 // add jobs using the familiar Array API
-t.push(async function(cb: any) {
+t.push(async function(cb: Function) {
   await delay(random(200));
   done('two');
   cb();
@@ -36,14 +36,14 @@ t.push(
     done('four');
     cb();
   },
-  async function(cb: any) {
+  async function(cb: Function) {
     await delay(random(200));
     done('five');
     cb();
   }
 );
 
-t.unshift(async function(cb: any) {
+t.unshift(async function(cb: Function) {
   await delay(random(200));
   done('one');
   cb();

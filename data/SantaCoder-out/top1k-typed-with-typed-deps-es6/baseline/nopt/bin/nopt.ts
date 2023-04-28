@@ -46,7 +46,7 @@ if (parsed.help) {
       })]
     }
     return [t, type && type.name]
-  }).reduce(function (s: string, i: any) {
+  }).reduce(function (s: any, i: any) {
     s[i[0]] = i[1]
     return s
   }, {}))

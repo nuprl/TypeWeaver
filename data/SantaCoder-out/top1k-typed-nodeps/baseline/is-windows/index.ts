@@ -5,7 +5,7 @@
  * Released under the MIT License.
  */
 
-(function(factory: IFactory<any>) {
+(function(factory: any) {
   if (exports && typeof exports === 'object' && typeof module !== 'undefined') {
     module.exports = factory();
   } else if (typeof define === 'function' && define.amd) {

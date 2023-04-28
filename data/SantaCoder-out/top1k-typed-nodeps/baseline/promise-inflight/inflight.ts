@@ -10,12 +10,12 @@ try {
 
 const active = {}
 inflight.active = active
-function inflight (unique: string, doFly: boolean) {
-  return Bluebird.all([unique, doFly]).then(function (args: [string]) {
+function inflight (unique: string, doFly: Function) {
+  return Bluebird.all([unique, doFly]).then(function (args: any[]) {
     const unique = args[0]
     const doFly = args[1]
     if (Array.isArray(unique)) {
-      return Bluebird.all(unique).then(function (uniqueArr: number[]) {
+      return Bluebird.all(unique).then(function (uniqueArr: any[]) {
         return _inflight(uniqueArr.join(''), doFly)
       })
     } else {
@@ -23,9 +23,9 @@ function inflight (unique: string, doFly: boolean) {
     }
   })
 
-  function _inflight (unique: string, doFly: boolean) {
+  function _inflight (unique: string, doFly: Function) {
     if (!active[unique]) {
-      active[unique] = (new Bluebird(function (resolve: any) {
+      active[unique] = (new Bluebird(function (resolve: Function) {
         return resolve(doFly())
       }))
       active[unique].then(cleanup, cleanup)

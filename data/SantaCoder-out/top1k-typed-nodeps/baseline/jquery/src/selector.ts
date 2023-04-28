@@ -150,7 +150,7 @@ function selectorError( msg : string) {
 	throw new Error( "Syntax error, unrecognized expression: " + msg );
 }
 
-function find( selector: string, context: Node, results: Node[], seed : Node) {
+function find( selector: string, context: Element, results: Array<Element>, seed : number) {
 	var m, i, elem, nid, match, groups, newSelector,
 		newContext = context && context.ownerDocument,
 
@@ -405,10 +405,10 @@ function createDisabledPseudo( disabled : boolean) {
  * Returns a function to use in pseudos for positionals
  * @param {Function} fn
  */
-function createPositionalPseudo( fn : Function) {
-	return markFunction( function( argument : number) {
+function createPositionalPseudo( fn : any) {
+	return markFunction( function( argument : any) {
 		argument = +argument;
-		return markFunction( function( seed: number, matches : Array<Match>) {
+		return markFunction( function( seed: number, matches : Array<any>) {
 			var j,
 				matchIndexes = fn( [], seed.length, argument ),
 				i = matchIndexes.length;
@@ -428,7 +428,7 @@ function createPositionalPseudo( fn : Function) {
  * @param {Element|Object=} context
  * @returns {Element|Object|Boolean} The input node if acceptable, otherwise a falsy value
  */
-function testContext( context : any) {
+function testContext( context : Context) {
 	return context && typeof context.getElementsByTagName !== "undefined" && context;
 }
 
@@ -466,11 +466,11 @@ function setDocument( node : Node) {
 	}
 }
 
-find.matches = function( expr: Expression, elements : Expression[]) {
+find.matches = function( expr: string, elements : Array<HTMLElement>) {
 	return find( expr, null, null, elements );
 };
 
-find.matchesSelector = function( elem: HTMLElement, expr : string) {
+find.matchesSelector = function( elem: Element, expr : string) {
 	setDocument( elem );
 
 	if ( documentIsHTML &&
@@ -529,7 +529,7 @@ Expr = jQuery.expr = {
 	},
 
 	preFilter: {
-		ATTR: function( match : Match) {
+		ATTR: function( match : RegExpMatchArray) {
 			match[ 1 ] = match[ 1 ].replace( runescape, funescape );
 
 			// Move the given value to match[3] whether quoted or unquoted
@@ -543,7 +543,7 @@ Expr = jQuery.expr = {
 			return match.slice( 0, 4 );
 		},
 
-		CHILD: function( match : Match) {
+		CHILD: function( match : RegExpMatchArray) {
 
 			/* matches from matchExpr["CHILD"]
 				1 type (only|nth|...)
@@ -580,7 +580,7 @@ Expr = jQuery.expr = {
 			return match;
 		},
 
-		PSEUDO: function( match : Match) {
+		PSEUDO: function( match : RegExpMatchArray) {
 			var excess,
 				unquoted = !match[ 6 ] && match[ 2 ];
 
@@ -612,7 +612,7 @@ Expr = jQuery.expr = {
 	},
 
 	filter: {
-		ID: function( id : string) {
+		ID: function( id : number) {
 			var attrId = id.replace( runescape, funescape );
 			return function( elem : HTMLElement) {
 				return elem.getAttribute( "id" ) === attrId;
@@ -627,7 +627,7 @@ Expr = jQuery.expr = {
 					return true;
 				} :
 
-				function( elem : Node) {
+				function( elem : HTMLElement) {
 					return nodeName( elem, expectedNodeName );
 				};
 		},
@@ -638,7 +638,7 @@ Expr = jQuery.expr = {
 			return pattern ||
 				( pattern = new RegExp( "(^|" + whitespace + ")" + className +
 					"(" + whitespace + "|$)" ) ) &&
-				classCache( className, function( elem : string) {
+				classCache( className, function( elem : HTMLElement) {
 					return pattern.test(
 						typeof elem.className === "string" && elem.className ||
 							typeof elem.getAttribute !== "undefined" &&
@@ -688,7 +688,7 @@ Expr = jQuery.expr = {
 			};
 		},
 
-		CHILD: function( type: string, what: any, _argument: any, first: boolean, last : boolean) {
+		CHILD: function( type: string, what: string, _argument: any, first: any, last : any) {
 			var simple = type.slice( 0, 3 ) !== "nth",
 				forward = type.slice( -4 ) !== "last",
 				ofType = what === "of-type";
@@ -700,7 +700,7 @@ Expr = jQuery.expr = {
 					return !!elem.parentNode;
 				} :
 
-				function( elem: HTMLElement, _context: any, xml : any) {
+				function( elem: JQuery, _context: any, xml : any) {
 					var cache, outerCache, node, nodeIndex, start,
 						dir = simple !== forward ? "nextSibling" : "previousSibling",
 						parent = elem.parentNode,
@@ -798,7 +798,7 @@ Expr = jQuery.expr = {
 				};
 		},
 
-		PSEUDO: function( pseudo: string, argument : any) {
+		PSEUDO: function( pseudo: string, argument : string) {
 
 			// pseudo-class names are case-insensitive
 			// https://www.w3.org/TR/selectors/#pseudo-classes
@@ -819,7 +819,7 @@ Expr = jQuery.expr = {
 			if ( fn.length > 1 ) {
 				args = [ pseudo, pseudo, "", argument ];
 				return Expr.setFilters.hasOwnProperty( pseudo.toLowerCase() ) ?
-					markFunction( function( seed: number, matches : number) {
+					markFunction( function( seed: string, matches : Array<string>) {
 						var idx,
 							matched = fn( seed, argument ),
 							i = matched.length;
@@ -828,7 +828,7 @@ Expr = jQuery.expr = {
 							seed[ idx ] = !( matches[ idx ] = matched[ i ] );
 						}
 					} ) :
-					function( elem : any) {
+					function( elem : T) {
 						return fn( elem, 0, args );
 					};
 			}
@@ -850,7 +850,7 @@ Expr = jQuery.expr = {
 				matcher = compile( selector.replace( rtrim, "$1" ) );
 
 			return matcher[ expando ] ?
-				markFunction( function( seed: string, matches: string[], _context: any, xml : string) {
+				markFunction( function( seed: string, matches: string[], _context: any, xml : any) {
 					var elem,
 						unmatched = matcher( seed, null, xml, [] ),
 						i = seed.length;
@@ -862,7 +862,7 @@ Expr = jQuery.expr = {
 						}
 					}
 				} ) :
-				function( elem: Element, _context: any, xml : any) {
+				function( elem: JQuery, _context: any, xml : any) {
 					input[ 0 ] = elem;
 					matcher( input, null, xml, results );
 
@@ -874,7 +874,7 @@ Expr = jQuery.expr = {
 		} ),
 
 		has: markFunction( function( selector : string) {
-			return function( elem : Element) {
+			return function( elem : HTMLElement) {
 				return find( selector, elem ).length > 0;
 			};
 		} ),
@@ -977,11 +977,11 @@ Expr = jQuery.expr = {
 		},
 
 		// Element/input types
-		header: function( elem : HTMLElement) {
+		header: function( elem : Element) {
 			return rheader.test( elem.nodeName );
 		},
 
-		input: function( elem : HTMLElement) {
+		input: function( elem : Element) {
 			return rinputs.test( elem.nodeName );
 		},
 
@@ -999,7 +999,7 @@ Expr = jQuery.expr = {
 			return [ 0 ];
 		} ),
 
-		last: createPositionalPseudo( function( _matchIndexes: number[], length : number) {
+		last: createPositionalPseudo( function( _matchIndexes: Array<number>, length : number) {
 			return [ length - 1 ];
 		} ),
 
@@ -1007,7 +1007,7 @@ Expr = jQuery.expr = {
 			return [ argument < 0 ? argument + length : argument ];
 		} ),
 
-		even: createPositionalPseudo( function( matchIndexes: number[], length : number) {
+		even: createPositionalPseudo( function( matchIndexes: Array<number>, length : number) {
 			var i = 0;
 			for ( ; i < length; i += 2 ) {
 				matchIndexes.push( i );
@@ -1023,7 +1023,7 @@ Expr = jQuery.expr = {
 			return matchIndexes;
 		} ),
 
-		lt: createPositionalPseudo( function( matchIndexes: number[], length: number, argument : any) {
+		lt: createPositionalPseudo( function( matchIndexes: Array<number>, length: number, argument : any) {
 			var i;
 
 			if ( argument < 0 ) {
@@ -1040,7 +1040,7 @@ Expr = jQuery.expr = {
 			return matchIndexes;
 		} ),
 
-		gt: createPositionalPseudo( function( matchIndexes: number[], length: number, argument : string) {
+		gt: createPositionalPseudo( function( matchIndexes: number[], length: number, argument : any) {
 			var i = argument < 0 ? argument + length : argument;
 			for ( ; ++i < length; ) {
 				matchIndexes.push( i );
@@ -1137,7 +1137,7 @@ function tokenize( selector: string, parseOnly : boolean) {
 		tokenCache( selector, groups ).slice( 0 );
 }
 
-function toSelector( tokens : IToken[]) {
+function toSelector( tokens : string[]) {
 	var i = 0,
 		len = tokens.length,
 		selector = "";
@@ -1147,7 +1147,7 @@ function toSelector( tokens : IToken[]) {
 	return selector;
 }
 
-function addCombinator( matcher: Matcher, combinator: Matcher, base : Matcher) {
+function addCombinator( matcher: Matcher, combinator: string, base : Matcher) {
 	var dir = combinator.dir,
 		skip = combinator.next,
 		key = skip || dir,
@@ -1157,7 +1157,7 @@ function addCombinator( matcher: Matcher, combinator: Matcher, base : Matcher) {
 	return combinator.first ?
 
 		// Check against closest ancestor/preceding element
-		function( elem: HTMLElement, context: any, xml : any) {
+		function( elem: JQuery, context: JQuery, xml : any) {
 			while ( ( elem = elem[ dir ] ) ) {
 				if ( elem.nodeType === 1 || checkNonElements ) {
 					return matcher( elem, context, xml );
@@ -1167,7 +1167,7 @@ function addCombinator( matcher: Matcher, combinator: Matcher, base : Matcher) {
 		} :
 
 		// Check against all ancestor/preceding elements
-		function( elem: Element, context: any, xml : any) {
+		function( elem: JQuery, context: JQuery, xml : any) {
 			var oldCache, outerCache,
 				newCache = [ dirruns, doneName ];
 
@@ -1209,9 +1209,9 @@ function addCombinator( matcher: Matcher, combinator: Matcher, base : Matcher) {
 		};
 }
 
-function elementMatcher( matchers : Matcher[]) {
+function elementMatcher( matchers : Array<Matcher>) {
 	return matchers.length > 1 ?
-		function( elem: HTMLElement, context: any, xml : any) {
+		function( elem: Element, context: Document, xml : Document) {
 			var i = matchers.length;
 			while ( i-- ) {
 				if ( !matchers[ i ]( elem, context, xml ) ) {
@@ -1223,7 +1223,7 @@ function elementMatcher( matchers : Matcher[]) {
 		matchers[ 0 ];
 }
 
-function multipleContexts( selector: string, contexts: string[], results : string[]) {
+function multipleContexts( selector: string, contexts: Array<Document>, results : Array<Document>) {
 	var i = 0,
 		len = contexts.length;
 	for ( ; i < len; i++ ) {
@@ -1232,7 +1232,7 @@ function multipleContexts( selector: string, contexts: string[], results : strin
 	return results;
 }
 
-function condense( unmatched: string[], map: string[], filter: any, context: any, xml : any) {
+function condense( unmatched: any, map: any, filter: any, context: any, xml : any) {
 	var elem,
 		newUnmatched = [],
 		i = 0,
@@ -1253,14 +1253,14 @@ function condense( unmatched: string[], map: string[], filter: any, context: any
 	return newUnmatched;
 }
 
-function setMatcher( preFilter: any, selector: any, matcher: any, postFilter: any, postFinder: any, postSelector : any) {
+function setMatcher( preFilter: SelectorMatcher<T>, selector: Selector<T>, matcher: Matcher<T>, postFilter: PostFilter<T>, postFinder: PostFinder<T>, postSelector : (T)) {
 	if ( postFilter && !postFilter[ expando ] ) {
 		postFilter = setMatcher( postFilter );
 	}
 	if ( postFinder && !postFinder[ expando ] ) {
 		postFinder = setMatcher( postFinder, postSelector );
 	}
-	return markFunction( function( seed: string, results: string[], context: any, xml : string) {
+	return markFunction( function( seed: number, results: any[], context: any, xml : any) {
 		var temp, i, elem, matcherOut,
 			preMap = [],
 			postMap = [],
@@ -1360,13 +1360,13 @@ function matcherFromTokens( tokens : Token[]) {
 		i = leadingRelative ? 1 : 0,
 
 		// The foundational matcher ensures that elements are reachable from top-level context(s)
-		matchContext = addCombinator( function( elem : Element) {
+		matchContext = addCombinator( function( elem : HTMLElement) {
 			return elem === checkContext;
 		}, implicitRelative, true ),
 		matchAnyContext = addCombinator( function( elem : HTMLElement) {
 			return indexOf.call( checkContext, elem ) > -1;
 		}, implicitRelative, true ),
-		matchers = [ function( elem: HTMLElement, context: any, xml : string) {
+		matchers = [ function( elem: JQuery, context: JQuery, xml : any) {
 			var ret = ( !leadingRelative && ( xml || context !== outermostContext ) ) || (
 				( checkContext = context ).nodeType ?
 					matchContext( elem, context, xml ) :
@@ -1415,10 +1415,10 @@ function matcherFromTokens( tokens : Token[]) {
 	return elementMatcher( matchers );
 }
 
-function matcherFromGroupMatchers( elementMatchers: Matcher[], setMatchers : Matcher[]) {
+function matcherFromGroupMatchers( elementMatchers: Array<ElementMatcher>, setMatchers : Set<ElementMatcher>) {
 	var bySet = setMatchers.length > 0,
 		byElement = elementMatchers.length > 0,
-		superMatcher = function( seed: string, context: any, xml: string, results: any, outermost : boolean) {
+		superMatcher = function( seed: string, context: any, xml: any, results: any, outermost : boolean) {
 			var elem, j, matcher,
 				matchedCount = 0,
 				i = "0",
@@ -1537,7 +1537,7 @@ function matcherFromGroupMatchers( elementMatchers: Matcher[], setMatchers : Mat
 		superMatcher;
 }
 
-function compile( selector: string, match /* Internal Use Only */ : Match) {
+function compile( selector: string, match /* Internal Use Only */ : boolean) {
 	var i,
 		setMatchers = [],
 		elementMatchers = [],
@@ -1578,7 +1578,7 @@ function compile( selector: string, match /* Internal Use Only */ : Match) {
  * @param {Array} [results]
  * @param {Array} [seed] A set of elements to match against
  */
-function select( selector: string, context: Node, results: Node[], seed : Node) {
+function select( selector: string, context: Element, results: Array<Element>, seed : number) {
 	var i, tokens, token, type, find,
 		compiled = typeof selector === "function" && selector,
 		match = !seed && tokenize( ( selector = compiled.selector || selector ) );

@@ -55,7 +55,7 @@ function deleteFunctions(obj: any){
     }
 }
 
-module.exports = function serialize(obj: IResource, options: ISerializeOptions) {
+module.exports = function serialize(obj: any, options: any) {
     options || (options = {});
 
     // Backwards-compatibility for `space` as the second argument.
@@ -217,7 +217,7 @@ module.exports = function serialize(obj: IResource, options: ISerializeOptions) 
     // Replaces all occurrences of function, regexp, date, map and set placeholders in the
     // JSON string with their string representations. If the original value can
     // not be found, then `undefined` is used.
-    return str.replace(PLACE_HOLDER_REGEXP, function (match: Match, backSlash: boolean, type: string, valueIndex: number) {
+    return str.replace(PLACE_HOLDER_REGEXP, function (match: RegExpMatchArray, backSlash: string, type: string, valueIndex: number) {
         // The placeholder may not be preceded by a backslash. This is to prevent
         // replacing things like `"a\"@__R-<UID>-0__@"` and thus outputting
         // invalid JS.

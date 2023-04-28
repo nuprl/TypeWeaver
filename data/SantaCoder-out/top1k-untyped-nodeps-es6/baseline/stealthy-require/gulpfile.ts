@@ -33,12 +33,12 @@ function lint() {
 
 }
 
-function cleanCoverage(done: any) {
+function cleanCoverage(done: Function) {
     rimraf('./coverage', done);
 }
 
-function cleanResults(done: any) {
-    rimraf('./test/results', function (err: Error) {
+function cleanResults(done: Function) {
+    rimraf('./test/results', function (err: any) {
         if (err) {
             return done(err);
         }
@@ -55,7 +55,7 @@ function instrument() {
 function runTest() {
     return gulp.src(paths.specFiles)
         .pipe(mocha())
-        .on('error', function (err: Error) {
+        .on('error', function (err: any) {
             console.error(String(err));
             console.error(chalk.bold.bgRed(' TESTS FAILED '));
         })
@@ -70,7 +70,7 @@ function testNoCov() {
 
     return gulp.src(paths.specFiles)
         .pipe(mocha())
-        .on('error', function (err: Error) {
+        .on('error', function (err: any) {
             console.error(String(err));
             console.log(chalk.bold.bgRed(' TESTS FAILED '));
         });

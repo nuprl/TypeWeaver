@@ -13,7 +13,7 @@
 })('prr', this, function() {
 
   var setProperty = typeof Object.defineProperty == 'function'
-      ? function (obj: any, key: string, options: IOptions) {
+      ? function (obj: any, key: string, options: any) {
           Object.defineProperty(obj, key, options)
           return obj
         }
@@ -22,10 +22,10 @@
           return obj
         }
 
-    , makeOptions = function (value: any, options: IOptions) {
+    , makeOptions = function (value: any, options: any) {
         var oo = typeof options == 'object'
           , os = !oo && typeof options == 'string'
-          , op = function (p: IProperty<any>) {
+          , op = function (p: any) {
               return oo
                 ? !!options[p]
                 : os

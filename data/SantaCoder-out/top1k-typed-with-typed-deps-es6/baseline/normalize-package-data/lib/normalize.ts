@@ -26,7 +26,7 @@ function normalize (data: any, warn: boolean, strict: boolean) {
     strict = false
   }
   if (!warn || data.private) {
-    warn = function (msg: IMessage) { /* noop */ }
+    warn = function (msg: any) { /* noop */ }
   }
 
   if (data.scripts &&

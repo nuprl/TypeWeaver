@@ -17,7 +17,7 @@ var thingsToFix = fieldsToFix.map(function (fieldName: string) {
 // thingsToFix = (ucFirst(name) + "Field" for name in fieldsToFix)
 thingsToFix = thingsToFix.concat(otherThingsToFix)
 
-function normalize (data: any, warn: boolean, strict: boolean) {
+function normalize (data: any, warn: any, strict: any) {
   if (warn === true) {
     warn = null
     strict = true
@@ -26,7 +26,7 @@ function normalize (data: any, warn: boolean, strict: boolean) {
     strict = false
   }
   if (!warn || data.private) {
-    warn = function (msg: IMessage) { /* noop */ }
+    warn = function (msg: string) { /* noop */ }
   }
 
   if (data.scripts &&

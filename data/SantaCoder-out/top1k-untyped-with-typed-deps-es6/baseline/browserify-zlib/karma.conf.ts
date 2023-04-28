@@ -1,4 +1,4 @@
-export default function (karma: karma.Config) {
+export default function (karma: any) {
   karma.set({
     frameworks: ['mocha'],
     files: ['test/tmp/browserified.js'],

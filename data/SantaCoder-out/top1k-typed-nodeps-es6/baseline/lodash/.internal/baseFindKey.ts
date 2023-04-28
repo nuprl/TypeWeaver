@@ -8,7 +8,7 @@
  * @param {Function} eachFunc The function to iterate over `collection`.
  * @returns {*} Returns the found element or its key, else `undefined`.
  */
-function baseFindKey(collection: ICollection<any>, predicate: any, eachFunc: any) {
+function baseFindKey(collection: any[], predicate: any, eachFunc: any) {
   let result
   eachFunc(collection, (value, key, collection) => {
     if (predicate(value, key, collection)) {

@@ -34,7 +34,7 @@ const processFunction = (function_, options, proxy, unwrapped) => function (...a
 
 const filterCache = new WeakMap();
 
-export default function pify(input: any, options: IOptions) {
+export default function pify(input: any, options: any) {
 	options = {
 		exclude: [/.+(?:Sync|Stream)$/],
 		errorFirst: true,

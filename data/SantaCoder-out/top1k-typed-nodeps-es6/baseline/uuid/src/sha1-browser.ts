@@ -1,6 +1,6 @@
 // Adapted from Chris Veness' SHA1 code at
 // http://www.movable-type.co.uk/scripts/sha1.html
-function f(s: string, x: number, y: string, z: number) {
+function f(s: number, x: number, y: number, z: number) {
   switch (s) {
     case 0:
       return (x & y) ^ (~x & z);

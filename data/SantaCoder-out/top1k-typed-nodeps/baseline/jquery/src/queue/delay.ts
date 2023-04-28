@@ -8,7 +8,7 @@ jQuery.fn.delay = function( time: number, type : string) {
 	time = jQuery.fx ? jQuery.fx.speeds[ time ] || time : time;
 	type = type || "fx";
 
-	return this.queue( type, function( next: Function, hooks : any) {
+	return this.queue( type, function( next: Function, hooks : Array<Function>) {
 		var timeout = window.setTimeout( next, time );
 		hooks.stop = function() {
 			window.clearTimeout( timeout );

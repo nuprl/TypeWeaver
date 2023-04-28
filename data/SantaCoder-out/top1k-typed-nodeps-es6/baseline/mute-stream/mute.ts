@@ -4,7 +4,7 @@ export default MuteStream;
 
 // var out = new MuteStream(process.stdout)
 // argument auto-pipes
-function MuteStream (opts: IStreamOptions) {
+function MuteStream (opts: MuteStreamOptions) {
   Stream.apply(this)
   opts = opts || {}
   this.writable = this.readable = true
@@ -41,7 +41,7 @@ Object.defineProperty(MuteStream.prototype, '_onpipe', {
   configurable: true
 })
 
-function onPipe (src: any) {
+function onPipe (src: Readable) {
   this._src = src
 }
 
@@ -84,7 +84,7 @@ Object.defineProperty(MuteStream.prototype, 'columns', {
   }, enumerable: true, configurable: true })
 
 
-MuteStream.prototype.pipe = function (dest: string, options: IOptions) {
+MuteStream.prototype.pipe = function (dest: string, options: any) {
   this._dest = dest
   return Stream.prototype.pipe.call(this, dest, options)
 }
@@ -97,7 +97,7 @@ MuteStream.prototype.resume = function () {
   if (this._src) return this._src.resume()
 }
 
-MuteStream.prototype.write = function (c: string) {
+MuteStream.prototype.write = function (c: number) {
   if (this.muted) {
     if (!this.replace) return true
     if (c.match(/^\u001b/)) {

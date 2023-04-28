@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function diff(a: Array<number>, b: Array<number>, c: Array<number>) {
+module.exports = function diff(a: any, b: any, c: any) {
   var len = a.length;
   var arr = [];
   var rest;

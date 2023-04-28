@@ -2,7 +2,7 @@
 
 const fs = require('graceful-fs')
 
-function utimesMillis (path: string, atime: number, mtime: number, callback: any) {
+function utimesMillis (path: string, atime: number, mtime: number, callback: Function) {
   // if (!HAS_MILLIS_RES) return fs.utimes(path, atime, mtime, callback)
   fs.open(path, 'r+', (err, fd) => {
     if (err) return callback(err)

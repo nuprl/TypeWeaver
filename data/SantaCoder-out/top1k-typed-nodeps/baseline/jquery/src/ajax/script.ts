@@ -52,7 +52,7 @@ jQuery.ajaxTransport( "script", function( s : string) {
 	if ( canUseScriptTag( s ) ) {
 		var script, callback;
 		return {
-			send: function( _: string, complete : boolean) {
+			send: function( _: void, complete : Function) {
 				script = jQuery( "<script>" )
 					.attr( s.scriptAttrs || {} )
 					.prop( { charset: s.scriptCharset, src: s.url } )

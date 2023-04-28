@@ -11,7 +11,7 @@ import utils from '../utils.js';
  *
  * @returns {Object} New object resulting from merging config2 to config1
  */
-export default function mergeConfig(config1: IConfig, config2: IConfig) {
+export default function mergeConfig(config1: any, config2: any) {
   // eslint-disable-next-line no-param-reassign
   config2 = config2 || {};
   const config = {};
@@ -44,7 +44,7 @@ export default function mergeConfig(config1: IConfig, config2: IConfig) {
   }
 
   // eslint-disable-next-line consistent-return
-  function defaultToConfig2(prop: any) {
+  function defaultToConfig2(prop: string) {
     if (!utils.isUndefined(config2[prop])) {
       return getMergedValue(undefined, config2[prop]);
     } else if (!utils.isUndefined(config1[prop])) {

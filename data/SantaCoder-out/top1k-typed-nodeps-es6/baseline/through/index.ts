@@ -12,7 +12,7 @@ through.through = through
 //create a readable writable stream.
 
 function through (write: any, end: any, opts: any) {
-  write = write || function (data: any) { this.queue(data) }
+  write = write || function (data: T) { this.queue(data) }
   end = end || function () { this.queue(null) }
 
   var ended = false, destroyed = false, buffer = [], _ended = false
@@ -23,7 +23,7 @@ function through (write: any, end: any, opts: any) {
 //  stream.autoPause   = !(opts && opts.autoPause   === false)
   stream.autoDestroy = !(opts && opts.autoDestroy === false)
 
-  stream.write = function (data: any) {
+  stream.write = function (data: string) {
     write.call(this, data)
     return !stream.paused
   }

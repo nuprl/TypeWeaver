@@ -33,7 +33,7 @@ import queue from './internal/queue.js'
  * @example
  *
  * // create a cargoQueue object with payload 2 and concurrency 2
- * var cargoQueue = async.cargoQueue(function(tasks: Task[], callback: any) {
+ * var cargoQueue = async.cargoQueue(function(tasks: Array<Task>, callback: Function) {
  *     for (var i=0; i<tasks.length; i++) {
  *         console.log('hello ' + tasks[i].name);
  *     }
@@ -47,7 +47,7 @@ import queue from './internal/queue.js'
  * cargoQueue.push({name: 'bar'}, function(err: Error) {
  *     console.log('finished processing bar');
  * });
- * cargoQueue.push({name: 'baz'}, function(err: Error) {
+ * cargoQueue.push({name: 'baz'}, function(err: any) {
  *     console.log('finished processing baz');
  * });
  * cargoQueue.push({name: 'boo'}, function(err: Error) {

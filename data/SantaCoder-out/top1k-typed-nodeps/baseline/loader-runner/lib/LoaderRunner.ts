@@ -6,7 +6,7 @@ var fs = require("fs");
 var readFile = fs.readFile.bind(fs);
 var loadLoader = require("./loadLoader");
 
-function utf8BufferToString(buf: Uint8Array) {
+function utf8BufferToString(buf: Buffer) {
 	var str = buf.toString("utf-8");
 	if(str.charCodeAt(0) === 0xFEFF) {
 		return str.slice(1);
@@ -43,7 +43,7 @@ function dirname(path: string) {
 	return path.slice(0, idx);
 }
 
-function createLoaderObject(loader: any) {
+function createLoaderObject(loader: Loader) {
 	var obj = {
 		path: null,
 		query: null,
@@ -62,7 +62,7 @@ function createLoaderObject(loader: any) {
 		get: function() {
 			return obj.path.replace(/#/g, "\0#") + obj.query.replace(/#/g, "\0#") + obj.fragment;
 		},
-		set: function(value: string) {
+		set: function(value: any) {
 			if(typeof value === "string") {
 				var splittedRequest = parsePathQueryFragment(value);
 				obj.path = splittedRequest.path;
@@ -100,7 +100,7 @@ function createLoaderObject(loader: any) {
 	return obj;
 }
 
-function runSyncOrAsync(fn: any, context: any, args: any[], callback: any) {
+function runSyncOrAsync(fn: Function, context: any, args: any[], callback: any) {
 	var isSync = true;
 	var isDone = false;
 	var isError = false; // internal error
@@ -158,14 +158,14 @@ function runSyncOrAsync(fn: any, context: any, args: any[], callback: any) {
 
 }
 
-function convertArgs(args: string[], raw: string[]) {
+function convertArgs(args: string[], raw: boolean) {
 	if(!raw && Buffer.isBuffer(args[0]))
 		args[0] = utf8BufferToString(args[0]);
 	else if(raw && typeof args[0] === "string")
 		args[0] = Buffer.from(args[0], "utf-8");
 }
 
-function iteratePitchingLoaders(options: PitchingLoaderOptions, loaderContext: any, callback: any) {
+function iteratePitchingLoaders(options: LoaderOptions, loaderContext: LoaderContext, callback: Function) {
 	// abort after last loader
 	if(loaderContext.loaderIndex >= loaderContext.loaders.length)
 		return processResource(options, loaderContext, callback);
@@ -179,7 +179,7 @@ function iteratePitchingLoaders(options: PitchingLoaderOptions, loaderContext: a
 	}
 
 	// load loader module
-	loadLoader(currentLoaderObject, function(err: any) {
+	loadLoader(currentLoaderObject, function(err: Error) {
 		if(err) {
 			loaderContext.cacheable(false);
 			return callback(err);
@@ -211,13 +211,13 @@ function iteratePitchingLoaders(options: PitchingLoaderOptions, loaderContext: a
 	});
 }
 
-function processResource(options: ProcessResourceOptions, loaderContext: any, callback: any) {
+function processResource(options: LoaderOptions, loaderContext: LoaderContext, callback: any) {
 	// set loader index to last loader
 	loaderContext.loaderIndex = loaderContext.loaders.length - 1;
 
 	var resourcePath = loaderContext.resourcePath;
 	if(resourcePath) {
-		options.processResource(loaderContext, resourcePath, function(err: Error) {
+		options.processResource(loaderContext, resourcePath, function(err: any) {
 			if(err) return callback(err);
 			var args = Array.prototype.slice.call(arguments, 1);
 			options.resourceBuffer = args[0];
@@ -228,7 +228,7 @@ function processResource(options: ProcessResourceOptions, loaderContext: any, ca
 	}
 }
 
-function iterateNormalLoaders(options: WebpackOptions, loaderContext: WebpackOptions, args: WebpackOptions.CompilerOptions, callback: any) {
+function iterateNormalLoaders(options: LoaderContext, loaderContext: LoaderContext, args: any, callback: Function) {
 	if(loaderContext.loaderIndex < 0)
 		return callback(null, args);
 
@@ -248,7 +248,7 @@ function iterateNormalLoaders(options: WebpackOptions, loaderContext: WebpackOpt
 
 	convertArgs(args, currentLoaderObject.raw);
 
-	runSyncOrAsync(fn, loaderContext, args, function(err: Error) {
+	runSyncOrAsync(fn, loaderContext, args, function(err: any) {
 		if(err) return callback(err);
 
 		var args = Array.prototype.slice.call(arguments, 1);
@@ -256,12 +256,12 @@ function iterateNormalLoaders(options: WebpackOptions, loaderContext: WebpackOpt
 	});
 }
 
-exports.getContext = function getContext(resource: string) {
+exports.getContext = function getContext(resource: Resource) {
 	var path = parsePathQueryFragment(resource).path;
 	return dirname(path);
 };
 
-exports.runLoaders = function runLoaders(options: WebpackOptions, callback: WebpackCallback) {
+exports.runLoaders = function runLoaders(options: any, callback: any) {
 	// read options
 	var resource = options.resource || "";
 	var loaders = options.loaders || [];
@@ -303,10 +303,10 @@ exports.runLoaders = function runLoaders(options: WebpackOptions, callback: Webp
 	loaderContext.dependency = loaderContext.addDependency = function addDependency(file: string) {
 		fileDependencies.push(file);
 	};
-	loaderContext.addContextDependency = function addContextDependency(context: Context) {
+	loaderContext.addContextDependency = function addContextDependency(context: string) {
 		contextDependencies.push(context);
 	};
-	loaderContext.addMissingDependency = function addMissingDependency(context: Context) {
+	loaderContext.addMissingDependency = function addMissingDependency(context: BuildContext) {
 		missingDependencies.push(context);
 	};
 	loaderContext.getDependencies = function getDependencies() {
@@ -331,7 +331,7 @@ exports.runLoaders = function runLoaders(options: WebpackOptions, callback: Webp
 				return undefined;
 			return loaderContext.resourcePath.replace(/#/g, "\0#") + loaderContext.resourceQuery.replace(/#/g, "\0#") + loaderContext.resourceFragment;
 		},
-		set: function(value: number) {
+		set: function(value: any) {
 			var splittedResource = value && parsePathQueryFragment(value);
 			loaderContext.resourcePath = splittedResource ? splittedResource.path : undefined;
 			loaderContext.resourceQuery = splittedResource ? splittedResource.query : undefined;
@@ -341,7 +341,7 @@ exports.runLoaders = function runLoaders(options: WebpackOptions, callback: Webp
 	Object.defineProperty(loaderContext, "request", {
 		enumerable: true,
 		get: function() {
-			return loaderContext.loaders.map(function(o: IRequest<any>) {
+			return loaderContext.loaders.map(function(o: any) {
 				return o.request;
 			}).concat(loaderContext.resource || "").join("!");
 		}
@@ -351,7 +351,7 @@ exports.runLoaders = function runLoaders(options: WebpackOptions, callback: Webp
 		get: function() {
 			if(loaderContext.loaderIndex >= loaderContext.loaders.length - 1 && !loaderContext.resource)
 				return "";
-			return loaderContext.loaders.slice(loaderContext.loaderIndex + 1).map(function(o: IRequest) {
+			return loaderContext.loaders.slice(loaderContext.loaderIndex + 1).map(function(o: any) {
 				return o.request;
 			}).concat(loaderContext.resource || "").join("!");
 		}
@@ -359,7 +359,7 @@ exports.runLoaders = function runLoaders(options: WebpackOptions, callback: Webp
 	Object.defineProperty(loaderContext, "currentRequest", {
 		enumerable: true,
 		get: function() {
-			return loaderContext.loaders.slice(loaderContext.loaderIndex).map(function(o: IRequest) {
+			return loaderContext.loaders.slice(loaderContext.loaderIndex).map(function(o: any) {
 				return o.request;
 			}).concat(loaderContext.resource || "").join("!");
 		}
@@ -395,7 +395,7 @@ exports.runLoaders = function runLoaders(options: WebpackOptions, callback: Webp
 		resourceBuffer: null,
 		processResource: processResource
 	};
-	iteratePitchingLoaders(processOptions, loaderContext, function(err: Error, result: any) {
+	iteratePitchingLoaders(processOptions, loaderContext, function(err: any, result: any) {
 		if(err) {
 			return callback(err, {
 				cacheable: requestCacheable,

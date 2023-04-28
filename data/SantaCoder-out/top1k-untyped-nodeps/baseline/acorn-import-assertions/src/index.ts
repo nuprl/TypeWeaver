@@ -6,7 +6,7 @@ const space = " ".charCodeAt(0);
 const keyword = "assert";
 const FUNC_STATEMENT = 1, FUNC_HANGING_STATEMENT = 2, FUNC_NULLABLE_ID = 4
 
-export function importAssertions(Parser: ParserClass) {
+export function importAssertions(Parser: any) {
   // Use supplied version acorn version if present, to avoid
   // reference mismatches due to different acorn versions. This
   // allows this plugin to be used with Rollup which supplies

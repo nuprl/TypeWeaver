@@ -5,7 +5,7 @@
  * @param {Object} set The set to convert.
  * @returns {Array} Returns the value-value pairs.
  */
-function setToPairs(set: Set<T>) {
+function setToPairs(set: Set<any>) {
   let index = -1
   const result = new Array(set.size)
 

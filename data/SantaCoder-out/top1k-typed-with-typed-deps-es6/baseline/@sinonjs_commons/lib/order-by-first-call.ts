@@ -29,7 +29,7 @@ function comparator(a: any, b: any) {
  * @param  {SinonProxy[] | SinonProxy} spies
  * @returns {SinonProxy[]}
  */
-function orderByFirstCall(spies: any[]) {
+function orderByFirstCall(spies: Spy[]) {
     return sort(slice(spies), comparator);
 }
 

@@ -110,14 +110,14 @@
    * keys and one which is capable of safely using proxies as keys. See
    * comments below about HostWeakMap and DoubleWeakMap for details.
    *
-   * This function (which is a global: the, not exposed to guests: the) marks a
+   * This function (which is a global: any, not exposed to guests: any) marks a
    * WeakMap as permitted to do what is necessary to index all host
    * objects, at the cost of making it unsafe for proxies.
    *
    * Do not apply this function to anything which is not a genuine
    * fresh WeakMap.
    */
-  function weakMapPermitHostObjects(map: WeakMap<any>) {
+  function weakMapPermitHostObjects(map: any) {
     // identity of function used as a secret -- good enough and cheap
     if (map.permitHostObjects___) {
       map.permitHostObjects___(weakMapPermitHostObjects);
@@ -221,7 +221,7 @@
     var u8s = new Uint8Array(ab);
     crypto.getRandomValues(u8s);
     HIDDEN_NAME = HIDDEN_NAME_PREFIX + 'rand:' +
-      Array.prototype.map.call(u8s, function(u8: number) {
+      Array.prototype.map.call(u8s, function(u8: u8) {
         return (u8 % 36).toString(36);
       }).join('') + '___';
   }
@@ -302,7 +302,7 @@
    * force leaky map stored in the weak map, losing all the advantages
    * of weakness for these.
    */
-  function getHiddenRecord(key: string) {
+  function getHiddenRecord(key: any) {
     if (key !== Object(key)) {
       throw new TypeError('Not an object: ' + key);
     }
@@ -512,7 +512,7 @@
        * Return the value most recently associated with key, or
        * opt_default if none.
        */
-      value: function get(key: string, opt_default: T) {
+      value: function get(key: string, opt_default: any) {
         return this.get___(key, opt_default);
       },
       writable: true,
@@ -555,7 +555,7 @@
        * absent, whereas this {@code delete} method returns false if
        * the association was already absent.
        */
-      value: function remove(key: string) {
+      value: function remove(key: K) {
         return this.delete___(key);
       },
       writable: true,
@@ -615,7 +615,7 @@
 
         var dset;
         if (doubleWeakMapCheckSilentFailure) {
-          dset = function(key: string, value: any) {
+          dset = function(key: K, value: V) {
             hmap.set(key, value);
             if (!hmap.has(key)) {
               if (!omap) { omap = new OurWeakMap(); }

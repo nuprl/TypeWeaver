@@ -53,7 +53,7 @@
     // based on LLVM libc++ upper_bound / lower_bound
     // MIT License
 
-    function upperBound(array: number[], func: any) {
+    function upperBound(array: any[], func: any) {
         var diff, len, i, current;
 
         len = array.length;
@@ -239,7 +239,7 @@
         Remove: REMOVE
     };
 
-    function Reference(parent: Reference, key: string) {
+    function Reference(parent: any, key: string) {
         this.parent = parent;
         this.key = key;
     }
@@ -258,7 +258,7 @@
         }
     };
 
-    function Element(node: Node, path: Path, wrap: boolean, ref: Reference) {
+    function Element(node: Node, path: string, wrap: boolean, ref: any) {
         this.node = node;
         this.path = path;
         this.wrap = wrap;
@@ -324,7 +324,7 @@
         return this.__current.node;
     };
 
-    Controller.prototype.__execute = function __execute(callback: Function, element: any) {
+    Controller.prototype.__execute = function __execute(callback: Function, element: HTMLElement) {
         var previous, result;
 
         result = undefined;
@@ -364,7 +364,7 @@
         this.notify(REMOVE);
     };
 
-    Controller.prototype.__initialize = function(root: any, visitor: IVisitor<any>) {
+    Controller.prototype.__initialize = function(root: Node, visitor: Visitor) {
         this.visitor = visitor;
         this.root = root;
         this.__worklist = [];
@@ -384,18 +384,18 @@
         }
     };
 
-    function isNode(node: any) {
+    function isNode(node: Node) {
         if (node == null) {
             return false;
         }
         return typeof node === 'object' && typeof node.type === 'string';
     }
 
-    function isProperty(nodeType: NodeType, key: string) {
+    function isProperty(nodeType: string, key: string) {
         return (nodeType === Syntax.ObjectExpression || nodeType === Syntax.ObjectPattern) && 'properties' === key;
     }
   
-    function candidateExistsInLeaveList(leavelist: CandidateList, candidate: Candidate) {
+    function candidateExistsInLeaveList(leavelist: Array<string>, candidate: string) {
         for (var i = leavelist.length - 1; i >= 0; --i) {
             if (leavelist[i].node === candidate) {
                 return true;
@@ -404,7 +404,7 @@
         return false;
     }
 
-    Controller.prototype.traverse = function traverse(root: ITreeNode, visitor: ITreeNodeVisitor) {
+    Controller.prototype.traverse = function traverse(root: Node, visitor: Visitor) {
         var worklist,
             leavelist,
             element,
@@ -510,7 +510,7 @@
         }
     };
 
-    Controller.prototype.replace = function replace(root: Node, visitor: ReplaceVisitor) {
+    Controller.prototype.replace = function replace(root: Node, visitor: Visitor) {
         var worklist,
             leavelist,
             node,
@@ -665,17 +665,17 @@
         return outer.root;
     };
 
-    function traverse(root: AST, visitor: ASTVisitor) {
+    function traverse(root: Node, visitor: Visitor) {
         var controller = new Controller();
         return controller.traverse(root, visitor);
     }
 
-    function replace(root: AST.Root, visitor: AST.Visitor<AST.Node>) {
+    function replace(root: Node, visitor: Visitor) {
         var controller = new Controller();
         return controller.replace(root, visitor);
     }
 
-    function extendCommentRange(comment: CommentRange, tokens: CommentRange[]) {
+    function extendCommentRange(comment: CommentRange, tokens: Token[]) {
         var target;
 
         target = upperBound(tokens, function search(token: string) {
@@ -696,7 +696,7 @@
         return comment;
     }
 
-    function attachComments(tree: Tree, providedComments: Comment[], tokens: Token[]) {
+    function attachComments(tree: Node, providedComments: Comment[], tokens: Token[]) {
         // At first, we should calculate extended comment ranges.
         var comments = [], comment, len, i, cursor;
 
@@ -724,7 +724,7 @@
         // This is based on John Freeman's implementation.
         cursor = 0;
         traverse(tree, {
-            enter: function (node: Node) {
+            enter: function (node: any) {
                 var comment;
 
                 while (cursor < comments.length) {
@@ -757,7 +757,7 @@
 
         cursor = 0;
         traverse(tree, {
-            leave: function (node: Node) {
+            leave: function (node: ts.Node) {
                 var comment;
 
                 while (cursor < comments.length) {

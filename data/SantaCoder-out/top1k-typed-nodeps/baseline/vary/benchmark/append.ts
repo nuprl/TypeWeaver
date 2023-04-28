@@ -50,11 +50,11 @@ suite.add({
   fn: 'var header = vary.append("Accept, Accept-Encoding, Accept-Language", "X-Foo")'
 })
 
-suite.on('start', function onCycle (event: CycleEvent) {
+suite.on('start', function onCycle (event: any) {
   process.stdout.write('  append\n\n')
 })
 
-suite.on('cycle', function onCycle (event: BenchmarkEvent) {
+suite.on('cycle', function onCycle (event: Event) {
   benchmarks.add(event.target)
 })
 

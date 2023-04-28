@@ -55,7 +55,7 @@ const normalizeDataURL = (urlString, {stripHash}) => {
 	return `data:${normalizedMediaType.join(';')},${isBase64 ? data.trim() : data}${hash ? `#${hash}` : ''}`;
 };
 
-export default function normalizeUrl(urlString: string, options: IRequestOptions) {
+export default function normalizeUrl(urlString: string, options: NormalizeUrlOptions) {
 	options = {
 		defaultProtocol: 'http:',
 		normalizeProtocol: true,

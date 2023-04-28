@@ -28,7 +28,7 @@
  * eq(NaN, NaN)
  * // => true
  */
-function eq(value: T, other: T) {
+function eq(value: any, other: any) {
   return value === other || (value !== value && other !== other)
 }
 

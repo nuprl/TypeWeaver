@@ -12,7 +12,7 @@ function faultTolerantResolve(address: string, cb: any) {
   var operation = retry.operation(opts);
 
   operation.attempt(function(currentAttempt: number) {
-    dns.resolve(address, function(err: Error, addresses: Address[]) {
+    dns.resolve(address, function(err: any, addresses: any) {
       if (operation.retry(err)) {
         return;
       }
@@ -22,7 +22,7 @@ function faultTolerantResolve(address: string, cb: any) {
   });
 }
 
-faultTolerantResolve('nodejs.org', function(err: Error, errors: Error[], addresses: string[]) {
+faultTolerantResolve('nodejs.org', function(err: Error, errors: any, addresses: any) {
   console.warn('err:');
   console.log(err);
 

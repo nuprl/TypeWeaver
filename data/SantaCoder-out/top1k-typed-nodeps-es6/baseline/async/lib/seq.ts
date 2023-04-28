@@ -23,11 +23,11 @@ import { promiseCallback, PROMISE_SYMBOL } from './internal/promiseCallback.js'
  * // Part of an app, that fetches cats of the logged user.
  * // This example uses `seq` function to avoid overnesting and error
  * // handling clutter.
- * app.get('/cats', function(request: any, response: any) {
+ * app.get('/cats', function(request: http.IncomingMessage, response: http.ServerResponse) {
  *     var User = request.models.User;
  *     async.seq(
  *         User.get.bind(User),  // 'User.get' has signature (id, callback(err, data))
- *         function(user: User, fn: any) {
+ *         function(user: User, fn: Function) {
  *             user.getCats(fn);      // 'getCats' has signature (callback(err, data))
  *         }
  *     )(req.session.user_id, function (err: Error, cats: Cat[]) {

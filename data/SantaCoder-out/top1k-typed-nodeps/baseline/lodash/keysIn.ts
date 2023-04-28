@@ -20,7 +20,7 @@
  * _.keysIn(new Foo);
  * // => ['a', 'b', 'c'] (iteration order is not guaranteed)
  */
-function keysIn(object: any) {
+function keysIn(object: Object) {
   const result = []
   for (const key in object) {
     result.push(key)

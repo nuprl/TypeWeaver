@@ -60,7 +60,7 @@ function serializeActiveFile (absoluteName: string) {
 }
 
 // https://github.com/isaacs/node-graceful-fs/blob/master/polyfills.js#L315-L342
-function isChownErrOk (err: Error) {
+function isChownErrOk (err: any) {
   if (err.code === 'ENOSYS') {
     return true
   }
@@ -75,7 +75,7 @@ function isChownErrOk (err: Error) {
   return false
 }
 
-async function writeFileAsync (filename: string, data: string, options = {}: IOptions) {
+async function writeFileAsync (filename: string, data: string, options = {}: Promise<any>) {
   if (typeof options === 'string') {
     options = { encoding: options }
   }
@@ -177,7 +177,7 @@ async function writeFile (filename: string, data: string, options: WriteFileOpti
   return promise
 }
 
-function writeFileSync (filename: string, data: string, options: WriteFileOptions) {
+function writeFileSync (filename: string, data: string, options: any) {
   if (typeof options === 'string') {
     options = { encoding: options }
   } else if (!options) {

@@ -4,7 +4,7 @@ module.exports = Yallist
 Yallist.Node = Node
 Yallist.create = Yallist
 
-function Yallist (list: any) {
+function Yallist (list: Array<any>) {
   var self = this
   if (!(self instanceof Yallist)) {
     self = new Yallist()
@@ -15,7 +15,7 @@ function Yallist (list: any) {
   self.length = 0
 
   if (list && typeof list.forEach === 'function') {
-    list.forEach(function (item: any) {
+    list.forEach(function (item: T) {
       self.push(item)
     })
   } else if (arguments.length > 0) {
@@ -58,7 +58,7 @@ Yallist.prototype.removeNode = function (node: Node) {
   return next
 }
 
-Yallist.prototype.unshiftNode = function (node: Node) {
+Yallist.prototype.unshiftNode = function (node: Node<T>) {
   if (node === this.head) {
     return
   }
@@ -81,7 +81,7 @@ Yallist.prototype.unshiftNode = function (node: Node) {
   this.length++
 }
 
-Yallist.prototype.pushNode = function (node: Node) {
+Yallist.prototype.pushNode = function (node: Node<T>) {
   if (node === this.tail) {
     return
   }
@@ -206,7 +206,7 @@ Yallist.prototype.mapReverse = function (fn: Function, thisp: any) {
   return res
 }
 
-Yallist.prototype.reduce = function (fn: any, initial: any) {
+Yallist.prototype.reduce = function (fn: Function, initial: any) {
   var acc
   var walker = this.head
   if (arguments.length > 1) {
@@ -364,7 +364,7 @@ Yallist.prototype.reverse = function () {
   return this
 }
 
-function insert (self: Node, node: Node, value: any) {
+function insert (self: Trie, node: TrieNode, value: string) {
   var inserted = node === self.head ?
     new Node(value, null, node, self) :
     new Node(value, node, node.next, self)
@@ -381,7 +381,7 @@ function insert (self: Node, node: Node, value: any) {
   return inserted
 }
 
-function push (self: Array<any>, item: any) {
+function push (self: T, item: T) {
   self.tail = new Node(item, self.tail, null, self)
   if (!self.head) {
     self.head = self.tail
@@ -389,7 +389,7 @@ function push (self: Array<any>, item: any) {
   self.length++
 }
 
-function unshift (self: Array<any>, item: any) {
+function unshift (self: List<T>, item: T) {
   self.head = new Node(item, null, self.head, self)
   if (!self.tail) {
     self.tail = self.head
@@ -397,7 +397,7 @@ function unshift (self: Array<any>, item: any) {
   self.length++
 }
 
-function Node (value: any, prev: Node, next: Node, list: Node[]) {
+function Node (value: any, prev: Node, next: Node, list: List) {
   if (!(this instanceof Node)) {
     return new Node(value, prev, next, list)
   }

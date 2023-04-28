@@ -216,7 +216,7 @@ var stringToPath = function stringToPath(string: string) {
 		throw new $SyntaxError('invalid intrinsic syntax, expected opening `%`');
 	}
 	var result = [];
-	$replace(string, rePropName, function (match: MatchResult, number: number, quote: string, subString: string) {
+	$replace(string, rePropName, function (match: RegExpExecArray, number: number, quote: string, subString: string) {
 		result[result.length] = quote ? $replace(subString, reEscapeChar, '$1') : number || match;
 	});
 	return result;

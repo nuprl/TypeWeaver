@@ -1,16 +1,16 @@
 var bn = require('bn.js');
 var brorand = require('brorand');
 
-function MillerRabin(rand: number) {
+function MillerRabin(rand: IRandom) {
   this.rand = rand || new brorand.Rand();
 }
 module.exports = MillerRabin;
 
-MillerRabin.create = function create(rand: number) {
+MillerRabin.create = function create(rand: Function) {
   return new MillerRabin(rand);
 };
 
-MillerRabin.prototype._randbelow = function _randbelow(n: number) {
+MillerRabin.prototype._randbelow = function _randbelow(n: bigint) {
   var len = n.bitLength();
   var min_bytes = Math.ceil(len / 8);
 
@@ -29,7 +29,7 @@ MillerRabin.prototype._randrange = function _randrange(start: number, stop: numb
   return start.add(this._randbelow(size));
 };
 
-MillerRabin.prototype.test = function test(n: number, k: number, cb: any) {
+MillerRabin.prototype.test = function test(n: BigInteger, k: number, cb: any) {
   var len = n.bitLength();
   var red = bn.mont(n);
   var rone = new bn(1).toRed(red);

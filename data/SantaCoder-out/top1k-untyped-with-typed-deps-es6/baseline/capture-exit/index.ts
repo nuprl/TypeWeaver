@@ -102,21 +102,21 @@ export const captureExit = function() {
 
 export const _handlers = handlers;
 
-export const _flush = function(lastTime: number, code: number) {
+export const _flush = function(lastTime: number, code: string) {
   isExiting = true;
   var work = handlers.splice(0, handlers.length);
 
   return RSVP.Promise.resolve(lastTime).
     then(function() {
       var firstRejected;
-      return RSVP.allSettled(work.map(function(handler: any) {
+      return RSVP.allSettled(work.map(function(handler: Function) {
         return RSVP.resolve(handler.call(null, code)).catch(function(e: any) {
           if (!firstRejected) {
             firstRejected = e;
           }
           throw e;
         });
-      })).then(function(results: IResult<any>) {
+      })).then(function(results: any) {
         if (firstRejected) {
           throw firstRejected;
         }
@@ -124,7 +124,7 @@ export const _flush = function(lastTime: number, code: number) {
     });
 };
 
-export const onExit = function(cb: any) {
+export const onExit = function(cb: Function) {
   if (!exit) {
     throw new Error('Cannot install handler when exit is not captured.  Call `captureExit()` first');
   }

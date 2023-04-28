@@ -634,7 +634,7 @@ module.exports = WebSocket;
  *     not to skip UTF-8 validation for text and close messages
  * @private
  */
-function initAsClient(websocket: WebSocket, address: string, protocols: string[], options: IOptions) {
+function initAsClient(websocket: WebSocket, address: string, protocols: string[], options: Options) {
   const opts = {
     protocolVersion: protocolVersions[1],
     maxPayload: 100 * 1024 * 1024,
@@ -1010,7 +1010,7 @@ function emitErrorAndClose(websocket: WebSocket, err: Error) {
  * @return {net.Socket} The newly created socket used to start the connection
  * @private
  */
-function netConnect(options: IConnectOptions) {
+function netConnect(options: net.NetConnectOpts) {
   options.path = options.socketPath;
   return net.connect(options);
 }
@@ -1022,7 +1022,7 @@ function netConnect(options: IConnectOptions) {
  * @return {tls.TLSSocket} The newly created socket used to start the connection
  * @private
  */
-function tlsConnect(options: IConnectOptions) {
+function tlsConnect(options: ClientOptions) {
   options.path = undefined;
 
   if (!options.servername && options.servername !== '') {
@@ -1041,7 +1041,7 @@ function tlsConnect(options: IConnectOptions) {
  * @param {String} message The error message
  * @private
  */
-function abortHandshake(websocket: WebSocket, stream: Readable, message: string) {
+function abortHandshake(websocket: WebSocket, stream: Duplex, message: Message) {
   websocket._readyState = WebSocket.CLOSING;
 
   const err = new Error(message);
@@ -1077,7 +1077,7 @@ function abortHandshake(websocket: WebSocket, stream: Readable, message: string)
  * @param {Function} [cb] Callback
  * @private
  */
-function sendAfterClose(websocket: WebSocket, data: any, cb: any) {
+function sendAfterClose(websocket: WebSocket, data: any, cb: Function) {
   if (data) {
     const length = toBuffer(data).length;
 
@@ -1268,7 +1268,7 @@ function socketOnClose() {
  * @param {Buffer} chunk A chunk of data
  * @private
  */
-function socketOnData(chunk: string) {
+function socketOnData(chunk: Buffer) {
   if (!this[kWebSocket]._receiver.write(chunk)) {
     this.pause();
   }

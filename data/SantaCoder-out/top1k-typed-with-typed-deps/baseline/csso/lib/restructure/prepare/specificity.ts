@@ -8,7 +8,7 @@ function ensureSelectorList(node: Node) {
     return node;
 }
 
-function maxSpecificity(a: number, b: number) {
+function maxSpecificity(a: string, b: string) {
     for (let i = 0; i < 3; i++) {
         if (a[i] !== b[i]) {
             return a[i] > b[i] ? a : b;
@@ -27,7 +27,7 @@ function maxSelectorListSpecificity(selectorList: SelectorList) {
 
 // §16. Calculating a selector’s specificity
 // https://www.w3.org/TR/selectors-4/#specificity-rules
-function specificity(simpleSelector: string) {
+function specificity(simpleSelector: SimpleSelector) {
     let A = 0;
     let B = 0;
     let C = 0;

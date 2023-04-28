@@ -55,7 +55,7 @@ function makeReleaseCopies( Release : Release) {
 	} );
 }
 
-function makeArchives( Release: Releases, callback : any) {
+function makeArchives( Release: Release, callback : any) {
 
 	Release.chdir( Release.dir.repo );
 

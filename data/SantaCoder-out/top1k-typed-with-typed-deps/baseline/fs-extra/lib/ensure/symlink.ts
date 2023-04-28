@@ -19,7 +19,7 @@ const pathExists = require('../path-exists').pathExists
 
 const { areIdentical } = require('../util/stat')
 
-function createSymlink (srcpath: string, dstpath: string, type: "junction", callback: callback) {
+function createSymlink (srcpath: string, dstpath: string, type: string, callback: Function) {
   callback = (typeof type === 'function') ? type : callback
   type = (typeof type === 'function') ? false : type
 
@@ -36,7 +36,7 @@ function createSymlink (srcpath: string, dstpath: string, type: "junction", call
   })
 }
 
-function _createSymlink (srcpath: string, dstpath: string, type: 'junction', callback: callback) {
+function _createSymlink (srcpath: string, dstpath: string, type: string, callback: Function) {
   symlinkPaths(srcpath, dstpath, (err, relative) => {
     if (err) return callback(err)
     srcpath = relative.toDst
@@ -55,7 +55,7 @@ function _createSymlink (srcpath: string, dstpath: string, type: 'junction', cal
   })
 }
 
-function createSymlinkSync (srcpath: string, dstpath: string, type: 'junction') {
+function createSymlinkSync (srcpath: string, dstpath: string, type: string) {
   let stats
   try {
     stats = fs.lstatSync(dstpath)

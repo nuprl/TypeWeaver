@@ -19,7 +19,7 @@ export let isColorSupported =
 
 let nope = s => String(s)
 
-function color(open: boolean, close: boolean, closeRegexp: RegExp, restore = open: boolean) {
+function color(open: string, close: string, closeRegexp: RegExp, restore = open: string) {
   function func(s: string) {
     if (!s || !s.length) {
       if (s === '') {

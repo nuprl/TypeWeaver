@@ -45,7 +45,7 @@ function current(val: any) {
   return typeof val !== 'function';
 }
 
-function negation(val: boolean) {
+function negation(val: any) {
   if (val === null) {
     return true;
   }

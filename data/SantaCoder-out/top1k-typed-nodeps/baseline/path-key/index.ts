@@ -1,4 +1,4 @@
-export default function pathKey(options = {}: IPathKeyOptions) {
+export default function pathKey(options = {}: Options) {
 	const {
 		env = process.env,
 		platform = process.platform

@@ -19,7 +19,7 @@ for (var z = 1; z < 100; z++)
 suite
 // add tests
 
-.add('async.map', function(deferred: Deferred<any>)
+.add('async.map', function(deferred: any)
 {
   var total = 0;
 
@@ -32,7 +32,7 @@ suite
       cb(null, total);
     });
   },
-  function(err: Error, result: string)
+  function(err: Error, result: any)
   {
     assert.ifError(err);
     assert.equal(result[result.length - 1], expected);
@@ -41,7 +41,7 @@ suite
 }, {'defer': true})
 
 
-.add('asynckit.parallel', function(deferred: Deferred<any>)
+.add('asynckit.parallel', function(deferred: asynckit.Deferred<number>)
 {
   var total = 0;
 
@@ -54,7 +54,7 @@ suite
       cb(null, total);
     });
   },
-  function(err: Error, result: string)
+  function(err: Error, result: any)
   {
     assert.ifError(err);
     assert.equal(result[result.length - 1], expected);

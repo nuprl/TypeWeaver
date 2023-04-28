@@ -1,5 +1,5 @@
 // remove useless universal selector
-export default function cleanTypeSelector(node: Node, item: Node, list: Node[]) {
+export default function cleanTypeSelector(node: Node, item: Node, list: Node) {
     const name = item.data.name;
 
     // check it's a non-namespaced universal selector

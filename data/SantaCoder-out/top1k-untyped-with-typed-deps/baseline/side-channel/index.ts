@@ -20,7 +20,7 @@ var $mapHas = callBound('Map.prototype.has', true);
 *
 * That node is also moved to the head of the list, so that if it's accessed again we don't need to traverse the whole list. By doing so, all the recently used nodes can be accessed relatively quickly.
 */
-var listGetNode = function (list: string[], key: string) { // eslint-disable-line consistent-return
+var listGetNode = function (list: any[], key: string) { // eslint-disable-line consistent-return
 	for (var prev = list, curr; (curr = prev.next) !== null; prev = curr) {
 		if (curr.key === key) {
 			prev.next = curr.next;
@@ -48,7 +48,7 @@ var listSet = function (objects: any[], key: string, value: any) {
 		};
 	}
 };
-var listHas = function (objects: any, key: string) {
+var listHas = function (objects: Object[], key: string) {
 	return !!listGetNode(objects, key);
 };
 

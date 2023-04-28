@@ -9,7 +9,7 @@ if (process.platform === 'win32' || global.TESTING_WINDOWS) {
 export default isexe;
 isexe.sync = sync
 
-function isexe (path: string, options: IsexeOptions, cb: any) {
+function isexe (path: string, options: Options, cb: any) {
   if (typeof options === 'function') {
     cb = options
     options = {}
@@ -20,7 +20,7 @@ function isexe (path: string, options: IsexeOptions, cb: any) {
       throw new TypeError('callback not provided')
     }
 
-    return new Promise(function (resolve: any, reject: any) {
+    return new Promise(function (resolve: Function, reject: Function) {
       isexe(path, options || {}, function (er: Error, is: boolean) {
         if (er) {
           reject(er)

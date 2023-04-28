@@ -57,11 +57,11 @@ function isMeta(value: string) {
   return /^\\[dwsDWS]$/.test(value);
 }
 
-function getInverseMeta(value: number) {
+function getInverseMeta(value: string) {
   return /[dws]/.test(value) ? value.toUpperCase() : value.toLowerCase();
 }
 
-function hasAppropriateSiblings(path: NodePath<Node>) {
+function hasAppropriateSiblings(path: NodePath<t.Node>) {
   const {parent, index} = path;
 
   if (parent.type !== 'Alternative') {
@@ -88,6 +88,6 @@ function hasAppropriateSiblings(path: NodePath<Node>) {
 
 // Note: \{ and \} are always preserved to avoid `a[{]2[}]` turning
 // into `a{2}`.
-function shouldEscape(value: any) {
+function shouldEscape(value: string) {
   return /[*[()+?$./{}|]/.test(value);
 }

@@ -22,7 +22,7 @@ const extractICSS = (css, removeRules = true, mode = "auto") => {
   const icssImports = {};
   const icssExports = {};
 
-  function addImports(node: NodePath<TSImportEqualsDeclaration>, path: NodePath<TSImportEqualsDeclaration>) {
+  function addImports(node: t.Node, path: t.NodePath<t.Program>) {
     const unquoted = path.replace(/'|"/g, "");
     icssImports[unquoted] = Object.assign(
       icssImports[unquoted] || {},

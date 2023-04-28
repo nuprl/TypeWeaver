@@ -194,7 +194,7 @@ function bitRotateLeft(num: number, cnt: number) {
 /*
  * These functions implement the four basic operations the algorithm uses.
  */
-function md5cmn(q: string, a: string, b: string, x: string, s: string, t: string) {
+function md5cmn(q: number, a: number, b: number, x: number, s: number, t: number) {
   return safeAdd(bitRotateLeft(safeAdd(safeAdd(a, q), safeAdd(x, t)), s), b);
 }
 

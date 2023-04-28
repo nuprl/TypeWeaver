@@ -606,7 +606,7 @@ module.exports = Receiver;
  * @return {(Error|RangeError)} The error
  * @private
  */
-function error(ErrorCtor: Function, message: string, prefix: string, statusCode: number, errorCode: number) {
+function error(ErrorCtor: any, message: string, prefix: string, statusCode: number, errorCode: string) {
   const err = new ErrorCtor(
     prefix ? `Invalid WebSocket frame: ${message}` : message
   );

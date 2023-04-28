@@ -2,7 +2,7 @@
 
 import Type from '../type';
 
-function resolveYamlNull(data: any) {
+function resolveYamlNull(data: unknown) {
   if (data === null) return true;
 
   var max = data.length;
@@ -15,7 +15,7 @@ function constructYamlNull() {
   return null;
 }
 
-function isNull(object: any) {
+function isNull(object: unknown) {
   return object === null;
 }
 

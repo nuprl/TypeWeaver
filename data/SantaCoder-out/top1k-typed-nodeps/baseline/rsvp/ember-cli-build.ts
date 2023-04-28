@@ -13,7 +13,7 @@ const stew = require('broccoli-stew');
 const env = stew.env;
 const map = stew.map;
 
-module.exports = function (app: Express) {
+module.exports = function (app: EmberApp) {
   const lib = funnel('lib', { destDir: 'lib' });
 
   const testDir = funnel('test', { destDir: 'test' });

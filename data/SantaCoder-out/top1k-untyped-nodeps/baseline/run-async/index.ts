@@ -16,7 +16,7 @@ function isPromise(obj: any) {
  *                                return a Promise (Node >= 0.12) or call the callbacks.
  */
 
-var runAsync = module.exports = function (func: any, cb: any) {
+var runAsync = module.exports = function (func: Function, cb: Function) {
   cb = cb || function () {};
 
   return function () {
@@ -25,7 +25,7 @@ var runAsync = module.exports = function (func: any, cb: any) {
 
     var promise = new Promise(function (resolve: any, reject: any) {
       var resolved = false;
-      const wrappedResolve = function (value: string) {
+      const wrappedResolve = function (value: any) {
         if (resolved) {
           console.warn('Run-async promise already resolved.')
         }
@@ -53,7 +53,7 @@ var runAsync = module.exports = function (func: any, cb: any) {
             return function() {};
           }
           if (callbackConflict) {
-            console.warn('Run-async wrapped function (async: boolean) returned a promise.\nCalls to async() callback can have unexpected results.');
+            console.warn('Run-async wrapped function (async: Function) returned a promise.\nCalls to async() callback can have unexpected results.');
           }
           usingCallback = true;
           return function (err: Error, value: any) {
@@ -87,7 +87,7 @@ var runAsync = module.exports = function (func: any, cb: any) {
   }
 };
 
-runAsync.cb = function (func: Function, cb: any) {
+runAsync.cb = function (func: Function, cb: Function) {
   return runAsync(function () {
     var args = Array.prototype.slice.call(arguments);
     if (args.length === func.length - 1) {

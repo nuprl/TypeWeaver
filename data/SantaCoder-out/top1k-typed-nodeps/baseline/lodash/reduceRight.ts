@@ -20,7 +20,7 @@ import baseReduce from './.internal/baseReduce.js'
  * reduceRight(array, (flattened, other) => flattened.concat(other), [])
  * // => [4, 5, 2, 3, 0, 1]
  */
-function reduceRight(collection: any, iteratee: any, accumulator: any) {
+function reduceRight(collection: any[], iteratee: Function, accumulator: any) {
   const func = Array.isArray(collection) ? arrayReduceRight : baseReduce
   const initAccum = arguments.length < 3
   return func(collection, iteratee, accumulator, initAccum, baseEachRight)

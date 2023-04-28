@@ -13,7 +13,7 @@ var path = require('path');
 
 // Replace {{variable}} in `s` with the template data in `d`.
 function renderTemplate(s: string, d: any) {
-    return s.replace(/{{([a-zA-Z]+)}}/g, function onMatch(match: Match, key: string) {
+    return s.replace(/{{([a-zA-Z]+)}}/g, function onMatch(match: string, key: string) {
         return Object.prototype.hasOwnProperty.call(d, key) ? d[key] : match;
     });
 }
@@ -40,7 +40,7 @@ function space(n: number) {
     return s;
 }
 
-function makeIndent(arg: number, deflen: number, name: string) {
+function makeIndent(arg: string, deflen: number, name: string) {
     if (arg === null || arg === undefined) {
         return space(deflen);
     } else if (typeof arg === 'number') {
@@ -94,16 +94,16 @@ function optionKeyFromName(name: string) {
 
 // ---- Option types
 
-function parseBool(option: string, optstr: string, arg: string) {
+function parseBool(option: Option, optstr: string, arg: string) {
     return Boolean(arg);
 }
 
-function parseString(option: string, optstr: string, arg: string) {
+function parseString(option: Option, optstr: string, arg: string) {
     assert.string(arg, 'arg');
     return arg;
 }
 
-function parseNumber(option: string, optstr: string, arg: string) {
+function parseNumber(option: Option, optstr: string, arg: string) {
     assert.string(arg, 'arg');
     var num = Number(arg);
     if (isNaN(num)) {
@@ -255,7 +255,7 @@ var optionTypes = {
  *        the presence of '--' will stop option parsing, as all good
  *        option parsers should.
  */
-function Parser(config: ParserConfig) {
+function Parser(config: any) {
     assert.object(config, 'config');
     assert.arrayOfObject(config.options, 'config.options');
     assert.optionalBool(config.interspersed, 'config.interspersed');
@@ -350,7 +350,7 @@ function Parser(config: ParserConfig) {
     }
 }
 
-Parser.prototype.optionTakesArg = function optionTakesArg(option: Option<T>) {
+Parser.prototype.optionTakesArg = function optionTakesArg(option: string) {
     return optionTypes[option.type].takesArg;
 };
 
@@ -368,7 +368,7 @@ Parser.prototype.optionTakesArg = function optionTakesArg(option: Option<T>) {
  *      remaining args from `argv`) and `_order` (gives the order that
  *      options were specified).
  */
-Parser.prototype.parse = function parse(inputs: any) {
+Parser.prototype.parse = function parse(inputs: string) {
     var self = this;
 
     // Old API was `parse([argv, [slice]])`
@@ -389,7 +389,7 @@ Parser.prototype.parse = function parse(inputs: any) {
     var opts = {};
     var _order = [];
 
-    function addOpt(option: string, optstr: string, key: string, val: any, from: string) {
+    function addOpt(option: string, optstr: string, key: string, val: string, from: number) {
         var type = optionTypes[option.type];
         var parsedVal = type.parseArg(option, optstr, val);
         if (type.array) {
@@ -575,7 +575,7 @@ Parser.prototype.parse = function parse(inputs: any) {
     });
 
     // Apply default values.
-    this.options.forEach(function onOpt(o: IOption<T>) {
+    this.options.forEach(function onOpt(o: Option) {
         if (opts[o.key] === undefined) {
             if (o.default !== undefined) {
                 opts[o.key] = o.default;
@@ -621,7 +621,7 @@ Parser.prototype.parse = function parse(inputs: any) {
  *        bounds.
  * @returns {String}
  */
-Parser.prototype.help = function help(config: IConfig) {
+Parser.prototype.help = function help(config: Config) {
     config = config || {};
     assert.object(config, 'config');
 
@@ -651,7 +651,7 @@ Parser.prototype.help = function help(config: IConfig) {
 
     var lines = [];
     var maxWidth = 0;
-    this.options.forEach(function onOpt(o: IOptions) {
+    this.options.forEach(function onOpt(o: Option) {
         if (o.hidden) {
             return;
         }
@@ -702,7 +702,7 @@ Parser.prototype.help = function help(config: IConfig) {
         helpCol = Math.min(Math.max(helpCol, minHelpCol), maxHelpCol);
     }
     var i = -1;
-    this.options.forEach(function onOpt(o: IOption<T>) {
+    this.options.forEach(function onOpt(o: Option) {
         if (o.hidden) {
             return;
         }
@@ -750,7 +750,7 @@ Parser.prototype.help = function help(config: IConfig) {
             var type = optionTypes[o.type];
             var arg = o.helpArg || type.helpArg || 'ARG';
             var envs = (Array.isArray(o.env) ? o.env : [o.env]).map(
-                function onE(e: IEvent) {
+                function onE(e: Event) {
                     if (type.takesArg) {
                         return e + '=' + arg;
                     } else {
@@ -781,7 +781,7 @@ Parser.prototype.help = function help(config: IConfig) {
             );
         } else {
             // Do not wrap help description, but indent newlines appropriately.
-            var helpLines = help.split('\n').filter(function onLine(ln: number) {
+            var helpLines = help.split('\n').filter(function onLine(ln: string) {
                 return ln.length;
             });
             if (helpEnv !== '') {
@@ -872,7 +872,7 @@ const BASH_COMPLETION_TEMPLATE_PATH = path.join(
  *      See `specExtra` for providing Bash `complete_TYPE` functions, e.g.
  *      `complete_fruit` and `complete_veggie` in this example.
  */
-function bashCompletionSpecFromOptions(args: string[]) {
+function bashCompletionSpecFromOptions(args: Options) {
     assert.object(args, 'args');
     assert.object(args.options, 'args.options');
     assert.optionalString(args.context, 'args.context');
@@ -887,7 +887,7 @@ function bashCompletionSpecFromOptions(args: string[]) {
     var shortopts = [];
     var longopts = [];
     var optargs = [];
-    (args.options || []).forEach(function onOpt(o: IOptions) {
+    (args.options || []).forEach(function onOpt(o: any) {
         if (o.group !== undefined && o.group !== null) {
             // Skip group headers.
             return;
@@ -969,7 +969,7 @@ function bashCompletionSpecFromOptions(args: string[]) {
  *      See `specExtra` for providing Bash `complete_TYPE` functions, e.g.
  *      `complete_fruit` and `complete_veggie` in this example.
  */
-function bashCompletionFromOptions(args: string) {
+function bashCompletionFromOptions(args: string[]) {
     assert.object(args, 'args');
     assert.object(args.options, 'args.options');
     assert.string(args.name, 'args.name');
@@ -1007,7 +1007,7 @@ function createParser(config: ParserConfig) {
  *      `dashdash.Parser` and `dashdash.Parser.parse`: options, interspersed,
  *      argv, env, slice.
  */
-function parse(config_: IConfig) {
+function parse(config_: Config) {
     assert.object(config_, 'config');
     assert.optionalArrayOfString(config_.argv, 'config.argv');
     assert.optionalObject(config_.env, 'config.env');
@@ -1077,7 +1077,7 @@ function getOptionType(name: string) {
  *      > synopsisFromOpt({name: 'file', type: 'string', helpArg: 'FILE'});
  *      '[ --file=FILE ]'
  */
-function synopsisFromOpt(o: SynopsisFromOpt) {
+function synopsisFromOpt(o: any) {
     assert.object(o, 'o');
 
     if (Object.prototype.hasOwnProperty.call(o, 'group')) {

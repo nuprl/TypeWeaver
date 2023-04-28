@@ -15,7 +15,7 @@ import eq from './eq.js'
  * sortedIndexOf([4, 5, 5, 5, 6], 5)
  * // => 1
  */
-function sortedIndexOf(array: Array<T>, value: T) {
+function sortedIndexOf(array: Array<any>, value: any) {
   const length = array == null ? 0 : array.length
   if (length) {
     const index = baseSortedIndex(array, value)

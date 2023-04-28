@@ -31,7 +31,7 @@ const bower = gulp.task('bower', async function () {
   await fs.writeFile('bower.json', JSON.stringify(bower, null, 2));
 });
 
-async function getContributors(user: GitHubUser, repo: GitHubRepository, maxCount = 1: number) {
+async function getContributors(user: string, repo: string, maxCount = 1: number) {
   const contributors = (await axios.get(
     `https://api.github.com/repos/${encodeURIComponent(user)}/${encodeURIComponent(repo)}/contributors?per_page=${maxCount}`
   )).data;

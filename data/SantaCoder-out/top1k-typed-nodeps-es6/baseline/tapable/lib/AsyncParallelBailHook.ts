@@ -66,12 +66,12 @@ class AsyncParallelBailHookCodeFactory extends HookCodeFactory {
 
 const factory = new AsyncParallelBailHookCodeFactory();
 
-const COMPILE = function(options: IOptions) {
+const COMPILE = function(options: any) {
 	factory.setup(this, options);
 	return factory.create(options);
 };
 
-function AsyncParallelBailHook(args = []: any, name = undefined: string) {
+function AsyncParallelBailHook(args = []: any[], name = undefined: string) {
 	const hook = new Hook(args, name);
 	hook.constructor = AsyncParallelBailHook;
 	hook.compile = COMPILE;

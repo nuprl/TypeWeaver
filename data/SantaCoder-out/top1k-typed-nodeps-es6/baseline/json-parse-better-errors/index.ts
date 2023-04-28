@@ -1,7 +1,7 @@
 'use strict'
 
 export default parseJson;
-function parseJson (txt: string, reviver: Reviver<any>, context: any) {
+function parseJson (txt: string, reviver: any, context: any) {
   context = context || 20
   try {
     return JSON.parse(txt, reviver)

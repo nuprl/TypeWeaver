@@ -9,11 +9,11 @@ var request = require('request'),
 exports.getFile = function(url: string, cb: any) {
     var sourceDataFolder = path.join(__dirname, "source-data");
     var fullpath = path.join(sourceDataFolder, path.basename(url));
-    fs.readFile(fullpath, "utf8", function(err: Error, text: string) {
+    fs.readFile(fullpath, "utf8", function(err: any, text: string) {
         if (!err) return cb(null, text);
         if (err.code != "ENOENT") return cb(err);
-        request(url, errTo(cb, function(res: AxiosResponse, buf: Buffer) {
-            fs.mkdir(sourceDataFolder, function(err: Error) {
+        request(url, errTo(cb, function(res: any, buf: any) {
+            fs.mkdir(sourceDataFolder, function(err: any) {
                 if (err && err.code != "EEXIST") return cb(err);
                 fs.writeFile(fullpath, buf, errTo(cb, function() {
                     cb(null, buf.toString());
@@ -64,7 +64,7 @@ function arrToStr(arr: any[]) {
 // [0] = address of start of the chunk, hex string.
 // <str> - characters of the chunk.
 // <num> - increasing sequence of the length num, starting with prev character.
-exports.generateTable = function(dbcs: number, maxBytes: number) {
+exports.generateTable = function(dbcs: string, maxBytes: number) {
     var minSeqLen = 4;
     var table = [], range, block, seqLen;
     var max = 1 << ((maxBytes || 2) * 8);
@@ -105,10 +105,10 @@ exports.generateTable = function(dbcs: number, maxBytes: number) {
 }
 
 
-exports.writeTable = function(name: string, table: string) {
+exports.writeTable = function(name: string, table: any) {
     this.writeFile(name, "[\n" + table.map(function(a: any) {return JSON.stringify(a);}).join(",\n") + "\n]\n");
 }
 
-exports.writeFile = function(name: string, body: string) {
+exports.writeFile = function(name: string, body: any) {
     fs.writeFileSync(path.join(__dirname, "../encodings/tables", name + ".json"), body);
 }

@@ -9,17 +9,17 @@ var isFn = function (fn: any) {
   return typeof fn === 'function'
 }
 
-var isFS = function (stream: Readable) {
+var isFS = function (stream: ReadableStream) {
   if (!ancient) return false // newer node version do not need to care about fs is a special way
   if (!fs) return false // browser
   return (stream instanceof (fs.ReadStream || noop) || stream instanceof (fs.WriteStream || noop)) && isFn(stream.close)
 }
 
-var isRequest = function (stream: Readable) {
+var isRequest = function (stream: Stream) {
   return stream.setHeader && isFn(stream.abort)
 }
 
-var destroyer = function (stream: Readable, reading: boolean, writing: boolean, callback: any) {
+var destroyer = function (stream: ReadableStream, reading: boolean, writing: boolean, callback: any) {
   callback = once(callback)
 
   var closed = false
@@ -27,7 +27,7 @@ var destroyer = function (stream: Readable, reading: boolean, writing: boolean, 
     closed = true
   })
 
-  eos(stream, {readable: reading, writable: writing}, function (err: Error) {
+  eos(stream, {readable: reading, writable: writing}, function (err: any) {
     if (err) return callback(err)
     closed = true
     callback()
@@ -48,11 +48,11 @@ var destroyer = function (stream: Readable, reading: boolean, writing: boolean, 
   }
 }
 
-var call = function (fn: any) {
+var call = function (fn: Function) {
   fn()
 }
 
-var pipe = function (from: Observable<any>, to: Observable<any>) {
+var pipe = function (from: Observable<T>, to: Observable<T>) {
   return from.pipe(to)
 }
 

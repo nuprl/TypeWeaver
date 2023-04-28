@@ -43,7 +43,7 @@ function forwarded (req: IncomingMessage) {
  * @private
  */
 
-function getSocketAddr (req: Request) {
+function getSocketAddr (req: IncomingMessage) {
   return req.socket
     ? req.socket.remoteAddress
     : req.connection.remoteAddress

@@ -8,7 +8,7 @@
  * @param {number} fromIndex The index to search from.
  * @returns {number} Returns the index of the matched value, else `-1`.
  */
-function strictIndexOf(array: Array<any>, value: any, fromIndex: number) {
+function strictIndexOf(array: any[], value: any, fromIndex: number) {
   let index = fromIndex - 1
   const { length } = array
 

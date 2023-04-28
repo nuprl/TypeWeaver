@@ -2,7 +2,7 @@
 
 import unique from 'array-unique';
 
-export default function union(init: any) {
+export default function union(init: T) {
   var len = arguments.length;
 
   for (var i = 1; i < len; i++) {

@@ -7,7 +7,7 @@ import isIterateeCall from './isIterateeCall.js'
  * @param {Function} assigner The function to assign values.
  * @returns {Function} Returns the new assigner function.
  */
-function createAssigner(assigner: any) {
+function createAssigner(assigner: Assigner<any>) {
   return (object, ...sources) => {
     let index = -1
     let length = sources.length

@@ -14,7 +14,7 @@ import {
     reject(new Error('WHOOPS'));
   });
 
-  promise.then(function(value: string){
+  promise.then(function(value: any){
     // Code here doesn't run because the promise is rejected!
   }, function(reason: any){
     // reason.message === 'WHOOPS'
@@ -28,7 +28,7 @@ import {
 
   let promise = Promise.reject(new Error('WHOOPS'));
 
-  promise.then(function(value: number){
+  promise.then(function(value: any){
     // Code here doesn't run because the promise is rejected!
   }, function(reason: any){
     // reason.message === 'WHOOPS'

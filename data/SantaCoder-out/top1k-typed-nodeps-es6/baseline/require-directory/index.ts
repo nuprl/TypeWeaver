@@ -16,7 +16,7 @@ var defaultOptions = {
   }
 };
 
-function checkFileInclusion(path: string, filename: string, options: CheckFileInclusionOptions) {
+function checkFileInclusion(path: string, filename: string, options: Options) {
   return (
     // verify file has valid extension
     (new RegExp('\\.(' + options.extensions.join('|') + ')$', 'i').test(filename)) &&
@@ -35,7 +35,7 @@ function checkFileInclusion(path: string, filename: string, options: CheckFileIn
   );
 }
 
-function requireDirectory(m: string, path: string, options: RequireDirectoryOptions) {
+function requireDirectory(m: any, path: string, options: any) {
   var retval = {};
 
   // path is optional

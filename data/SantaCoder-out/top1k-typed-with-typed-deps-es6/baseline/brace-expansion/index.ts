@@ -163,7 +163,7 @@ function expand(str: string, isTop: boolean) {
         // x{{a,b}}y ==> x{a}y x{b}y
         n = expand(n[0], false).map(embrace);
         if (n.length === 1) {
-          return post.map(function(p: number) {
+          return post.map(function(p: string) {
             return m.pre + n[0] + p;
           });
         }

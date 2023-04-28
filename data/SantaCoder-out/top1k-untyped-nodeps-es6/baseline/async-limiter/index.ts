@@ -53,7 +53,7 @@ Object.defineProperty(Queue.prototype, 'length', {
 });
 
 // Simply adds a callback to the end of the job list
-Queue.prototype.onDone = function(cb: any) {
+Queue.prototype.onDone = function(cb: Function) {
   if (typeof cb === 'function') this.onDoneCbs.push(cb);
   // If there are no jobs in the queue, this will call `cb()` in the next tick.
   // This is intended for that there is predictable behavior even when running a

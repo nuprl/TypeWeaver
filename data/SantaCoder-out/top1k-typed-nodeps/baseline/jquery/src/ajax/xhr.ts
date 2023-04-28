@@ -12,12 +12,12 @@ var xhrSuccessStatus = {
 	0: 200
 };
 
-jQuery.ajaxTransport( function( options : IOptions) {
+jQuery.ajaxTransport( function( options : any) {
 	var callback;
 
 	// Cross domain only allowed if supported through XMLHttpRequest
 	return {
-		send: function( headers: XMLHttpRequestHeaders, complete : Function) {
+		send: function( headers: any, complete : Function) {
 			var i,
 				xhr = options.xhr();
 

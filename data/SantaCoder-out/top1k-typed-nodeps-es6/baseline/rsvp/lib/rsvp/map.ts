@@ -52,11 +52,11 @@ export class MapEnumerator extends Enumerator {
   let promise3 = resolve(3);
   let promises = [ promise1, promise2, promise3 ];
 
-  let mapFn = function(item: any){
+  let mapFn = function(item: number){
     return item + 1;
   };
 
-  map(promises, mapFn).then(function(result: number){
+  map(promises, mapFn).then(function(result: number[]){
     // result is [ 2, 3, 4 ]
   });
   ```
@@ -77,7 +77,7 @@ export class MapEnumerator extends Enumerator {
     return item + 1;
   };
 
-  map(promises, mapFn).then(function(array: any[]){
+  map(promises, mapFn).then(function(array: Array<any>){
     // Code here never runs because there are rejected promises!
   }, function(reason: any) {
     // reason.message === '2'
@@ -123,7 +123,7 @@ export default function map(promises: Promise<any>[], mapFn: any, label: string)
   }
 
   return Promise.resolve(promises, label)
-    .then(function(promises: Promise<any>[]) {
+    .then(function(promises: Promise<any>) {
       if (!Array.isArray(promises)) {
         throw new TypeError("map must be called with an array");
       }

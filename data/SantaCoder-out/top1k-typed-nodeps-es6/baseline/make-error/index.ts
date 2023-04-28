@@ -28,7 +28,7 @@ if (captureStackTrace === undefined) {
 
         return stack;
       },
-      set: function setStack(stack: Stack) {
+      set: function setStack(stack: string) {
         defineProperty(error, "stack", {
           configurable: true,
           value: stack,
@@ -75,7 +75,7 @@ BaseError.prototype = Object.create(Error.prototype, {
 
 // Sets the name of a function if possible (depends of the JS engine).
 var setFunctionName = (function () {
-  function setFunctionName(fn: string, name: string) {
+  function setFunctionName(fn: Function, name: string) {
     return defineProperty(fn, "name", {
       configurable: true,
       value: name,
@@ -92,7 +92,7 @@ var setFunctionName = (function () {
 
 // -------------------------------------------------------------------
 
-function makeError(constructor: Function, super_: any) {
+function makeError(constructor: Function, super_: Function) {
   if (super_ == null || super_ === Error) {
     super_ = BaseError;
   } else if (typeof super_ !== "function") {

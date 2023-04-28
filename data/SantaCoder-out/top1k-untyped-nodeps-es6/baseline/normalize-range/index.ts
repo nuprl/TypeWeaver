@@ -34,19 +34,19 @@ function testRange(min: number, max: number, value: number, minExclusive: number
   );
 }
 
-function name(min: number, max: number, minExcl: number, maxExcl: number) {
+function name(min: number, max: number, minExcl: boolean, maxExcl: boolean) {
   return (minExcl ? '(' : '[') + min + ',' + max + (maxExcl ? ')' : ']');
 }
 
-function curry(min: number, max: number, minExclusive: boolean, maxExclusive: number) {
+function curry(min: number, max: number, minExclusive: boolean, maxExclusive: boolean) {
   var boundNameFn = name.bind(null, min, max, minExclusive, maxExclusive);
   return {
     wrap: wrapRange.bind(null, min, max),
     limit: limitRange.bind(null, min, max),
-    validate: function(value: any) {
+    validate: function(value: string) {
       return validateRange(min, max, value, minExclusive, maxExclusive);
     },
-    test: function(value: number) {
+    test: function(value: string) {
       return testRange(min, max, value, minExclusive, maxExclusive);
     },
     toString: boundNameFn,

@@ -8,7 +8,7 @@ import is from './is';
 
 var invalidItemsLimit = 3;
 
-export default function (value/*: string, options*/: any) {
+export default function (value/*: any, options*/: any) {
 	var options = arguments[1];
 	var mainErrorMessage =
 		options && options.name

@@ -2,7 +2,7 @@
 
 import { PassThrough } from 'stream';
 
-export default function (/*streams...*/: ReadableStream<any>[]) {
+export default function (/*streams...*/: ReadableStream[]) {
   var sources = []
   var output  = new PassThrough({objectMode: true})
 
@@ -34,8 +34,8 @@ export default function (/*streams...*/: ReadableStream<any>[]) {
     return sources.length == 0;
   }
 
-  function remove (source: string) {
-    sources = sources.filter(function (it: any) { return it !== source })
+  function remove (source: any) {
+    sources = sources.filter(function (it: T) { return it !== source })
     if (!sources.length && output.readable) { output.end() }
   }
 };

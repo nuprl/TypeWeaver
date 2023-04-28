@@ -10,7 +10,7 @@ api.define = function define(name: string, body: Function) {
   return new Entity(name, body);
 };
 
-function Entity(name: string, body: any) {
+function Entity(name: string, body: Body) {
   this.name = name;
   this.body = body;
 
@@ -18,7 +18,7 @@ function Entity(name: string, body: any) {
   this.encoders = {};
 }
 
-Entity.prototype._createNamed = function createNamed(Base: any) {
+Entity.prototype._createNamed = function createNamed(Base: Function) {
   const name = this.name;
 
   function Generated(entity: Entity) {
@@ -40,7 +40,7 @@ Entity.prototype._getDecoder = function _getDecoder(enc: string) {
   return this.decoders[enc];
 };
 
-Entity.prototype.decode = function decode(data: string, enc: string, options: DecodeOptions) {
+Entity.prototype.decode = function decode(data: Buffer, enc: string, options: Options) {
   return this._getDecoder(enc).decode(data, options);
 };
 

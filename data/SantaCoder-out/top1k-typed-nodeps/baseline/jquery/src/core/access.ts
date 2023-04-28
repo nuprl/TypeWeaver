@@ -3,7 +3,7 @@ import toType from "../core/toType.js";
 
 // Multifunctional method to get and set values of a collection
 // The value/s can optionally be executed if it's a function
-var access = function( elems: string, fn: Function, key: string, value: any, chainable: boolean, emptyGet: any, raw : any) {
+var access = function( elems: any, fn: any, key: any, value: any, chainable: any, emptyGet: any, raw : any) {
 	var i = 0,
 		len = elems.length,
 		bulk = key == null;

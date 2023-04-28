@@ -79,7 +79,7 @@ import {
   @return {Promise} a promise which settles in the same way as the first passed
   promise to settle.
 */
-export default function race(entries: IEntry<any>[], label: string) {
+export default function race(entries: Array<Entry>, label: string) {
   /*jshint validthis:true */
   let Constructor = this;
 

@@ -49,7 +49,7 @@
         return false;
     }
 
-    function isIterationStatement(node: Node) {
+    function isIterationStatement(node: t.Node) {
         if (node == null) { return false; }
         switch (node.type) {
             case 'DoWhileStatement':
@@ -91,7 +91,7 @@
       return isStatement(node) || node != null && node.type === 'FunctionDeclaration';
     }
 
-    function trailingStatement(node: Node) {
+    function trailingStatement(node: ts.Node) {
         switch (node.type) {
         case 'IfStatement':
             if (node.alternate != null) {
@@ -109,7 +109,7 @@
         return null;
     }
 
-    function isProblematicIfStatement(node: Node) {
+    function isProblematicIfStatement(node: ts.IfStatement) {
         var current;
 
         if (node.type !== 'IfStatement') {

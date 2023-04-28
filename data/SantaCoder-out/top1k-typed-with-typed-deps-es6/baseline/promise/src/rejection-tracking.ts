@@ -17,14 +17,14 @@ function disable() {
 }
 
 exports.enable = enable;
-function enable(options: IEnableOptions) {
+function enable(options: Options) {
   options = options || {};
   if (enabled) disable();
   enabled = true;
   var id = 0;
   var displayId = 0;
   var rejections = {};
-  Promise._onHandle = function (promise: Promise<unknown>) {
+  Promise._onHandle = function (promise: Promise<any>) {
     if (
       promise._state === 2 && // IS REJECTED
       rejections[promise._rejectionId]
@@ -37,7 +37,7 @@ function enable(options: IEnableOptions) {
       delete rejections[promise._rejectionId];
     }
   };
-  Promise._onReject = function (promise: Promise<any>, err: Error) {
+  Promise._onReject = function (promise: any, err: any) {
     if (promise._deferredState === 0) { // not yet handled
       promise._rejectionId = id++;
       rejections[promise._rejectionId] = {
@@ -107,7 +107,7 @@ function logError(id: string, error: Error) {
 }
 
 function matchWhitelist(error: Error, list: string[]) {
-  return list.some(function (cls: Class<any>) {
+  return list.some(function (cls: any) {
     return error instanceof cls;
   });
 }

@@ -99,11 +99,11 @@ function get_terminal_size() {
     }
 }
 
-function hasattr(object: any, name: string) {
+function hasattr(object: Object, name: string) {
     return Object.prototype.hasOwnProperty.call(object, name)
 }
 
-function getattr(object: any, name: string, value: any) {
+function getattr(object: Object, name: string, value: any) {
     return hasattr(object, name) ? object[name] : value
 }
 
@@ -166,7 +166,7 @@ function _string_split(string: string, sep: string, maxsplit: number) {
     return result
 }
 
-function _array_equal(array1: number[], array2: number[]) {
+function _array_equal(array1: any[], array2: any[]) {
     if (array1.length !== array2.length) return false
     for (let i = 0; i < array1.length; i++) {
         if (array1[i] !== array2[i]) return false
@@ -183,7 +183,7 @@ function _array_remove(array: any[], item: any) {
 // normalize choices to array;
 // this isn't required in python because `in` and `map` operators work with anything,
 // but in js dealing with multiple types here is too clunky
-function _choices_to_array(choices: IChoice[]) {
+function _choices_to_array(choices: Array<Choice>) {
     if (choices === undefined) {
         return []
     } else if (Array.isArray(choices)) {
@@ -223,7 +223,7 @@ function _alias(object: any, from: string, to: string) {
 }
 
 // decorator that allows snake_case class methods to be called with camelCase and vice versa
-function _camelcase_alias(_class: string) {
+function _camelcase_alias(_class: any) {
     for (let name of Object.getOwnPropertyNames(_class.prototype)) {
         let camelcase = name.replace(/\w_[a-z]/g, s => s[0] + s[2].toUpperCase())
         if (camelcase !== name) _alias(_class.prototype, camelcase, name)
@@ -247,7 +247,7 @@ function _to_new_name(key: string) {
 
 // parse options
 let no_default = Symbol('no_default_value')
-function _parse_opts(args: string[], descriptor: ICommandDescriptor) {
+function _parse_opts(args: string[], descriptor: CommandDescriptor) {
     function get_name() {
         let stack = new Error().stack.split('\n')
             .map(x => x.match(/^    at (.*) \(.*\)$/))
@@ -422,7 +422,7 @@ function _AttributeHolder(cls = Object: any) {
 }
 
 
-function _copy_items(items: any) {
+function _copy_items(items: any[]) {
     if (items === undefined) {
         return []
     }
@@ -895,7 +895,7 @@ const HelpFormatter = _camelcase_alias(_callable(class HelpFormatter {
             result = default_metavar
         }
 
-        function format(tuple_size: number) {
+        function format(tuple_size: usize) {
             if (Array.isArray(result)) {
                 return result
             } else {
@@ -1116,7 +1116,7 @@ const MetavarTypeHelpFormatter = _camelcase_alias(_callable(class MetavarTypeHel
 // =====================
 // Options and Arguments
 // =====================
-function _get_action_name(argument: any) {
+function _get_action_name(argument: string) {
     if (argument === undefined) {
         return undefined
     } else if (argument.option_strings.length) {
@@ -2613,7 +2613,7 @@ const ArgumentParser = _camelcase_alias(_callable(class ArgumentParser extends _
             }
             return result
         })
-        this.register('type', 'float', function (x: string) {
+        this.register('type', 'float', function (x: any) {
             let result = Number(x)
             if (isNaN(result)) {
                 throw new TypeError(sub('could not convert string to float: %r', x))

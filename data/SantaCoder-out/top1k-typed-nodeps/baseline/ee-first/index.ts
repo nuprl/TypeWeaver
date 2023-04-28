@@ -21,7 +21,7 @@ module.exports = first
  * @public
  */
 
-function first (stuff: any, done: any) {
+function first (stuff: any, done: Function) {
   if (!Array.isArray(stuff)) {
     throw new TypeError('arg must be an array of [ee, events...] arrays')
   }
@@ -65,7 +65,7 @@ function first (stuff: any, done: any) {
     }
   }
 
-  function thunk (fn: any) {
+  function thunk (fn: Function) {
     done = fn
   }
 
@@ -79,7 +79,7 @@ function first (stuff: any, done: any) {
  * @private
  */
 
-function listener (event: 'error', done: any) {
+function listener (event: any, done: any) {
   return function onevent (arg1: any) {
     var args = new Array(arguments.length)
     var ee = this

@@ -20,7 +20,7 @@ import awaitify from './internal/awaitify.js'
  * `iteratee` functions have finished. Invoked with (err, results).
  * @returns {Promise} a promise, if no callback is passed
  */
-function rejectSeries (coll: Collection<any>, iteratee: any, callback: any) {
+function rejectSeries (coll: any[], iteratee: any, callback: any) {
     return _reject(eachOfSeries, coll, iteratee, callback)
 }
 export default awaitify(rejectSeries, 3);

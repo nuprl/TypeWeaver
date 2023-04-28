@@ -22,7 +22,7 @@ import wrapAsync from './internal/wrapAsync.js'
  * callback. Invoked with (err, [results]);
  * @returns {Promise} a promise, if no callback is passed
  */
-export default function doUntil(iteratee: any, test: any, callback: any) {
+export default function doUntil(iteratee: Function, test: Function, callback: Function) {
     const _test = wrapAsync(test)
     return doWhilst(iteratee, (...args) => {
         const cb = args.pop()

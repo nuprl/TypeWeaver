@@ -122,7 +122,7 @@ function fromVLQSigned(aValue: number) {
 /**
  * Returns the base 64 VLQ encoded value.
  */
-exports.encode = function base64VLQ_encode(aValue: any) {
+exports.encode = function base64VLQ_encode(aValue: number) {
   var encoded = "";
   var digit;
 

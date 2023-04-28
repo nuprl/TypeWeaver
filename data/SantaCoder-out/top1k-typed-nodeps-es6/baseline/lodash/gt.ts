@@ -19,7 +19,7 @@
  * gt(1, 3)
  * // => false
  */
-function gt(value: number, other: number) {
+function gt(value: any, other: any) {
   if (!(typeof value === 'string' && typeof other === 'string')) {
     value = +value
     other = +other

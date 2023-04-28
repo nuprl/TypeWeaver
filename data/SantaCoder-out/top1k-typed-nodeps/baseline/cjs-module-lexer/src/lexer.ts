@@ -2,7 +2,7 @@ let wasm;
 
 const isLE = new Uint8Array(new Uint16Array([1]).buffer)[0] === 1;
 
-export function parse (source: string, name = '@': '') {
+export function parse (source: string, name = '@': string) {
   if (!wasm)
     throw new Error('Not initialized');
 

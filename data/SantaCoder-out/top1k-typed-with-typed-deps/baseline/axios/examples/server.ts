@@ -62,7 +62,7 @@ function send200(res: Response, body: any) {
   sendResponse(res, 200, body || '<h1>OK</h1>');
 }
 
-function send404(res: Response, body: string) {
+function send404(res: Response, body: any) {
   sendResponse(res, 404, body || '<h1>Not Found</h1>');
 }
 

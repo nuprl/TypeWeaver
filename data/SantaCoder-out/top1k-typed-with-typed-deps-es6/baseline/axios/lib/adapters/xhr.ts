@@ -14,7 +14,7 @@ import platform from '../platform/index.js';
 import AxiosHeaders from '../core/AxiosHeaders.js';
 import speedometer from '../helpers/speedometer.js';
 
-function progressEventReducer(listener: any, isDownloadStream: boolean) {
+function progressEventReducer(listener: ProgressListener, isDownloadStream: boolean) {
   let bytesNotified = 0;
   const _speedometer = speedometer(50, 250);
 
@@ -43,7 +43,7 @@ function progressEventReducer(listener: any, isDownloadStream: boolean) {
 }
 
 export default function xhrAdapter(config: AxiosRequestConfig) {
-  return new Promise(function dispatchXhrRequest(resolve: any, reject: any) {
+  return new Promise(function dispatchXhrRequest(resolve: Function, reject: Function) {
     let requestData = config.data;
     const requestHeaders = AxiosHeaders.from(config.headers).normalize();
     const responseType = config.responseType;
@@ -97,7 +97,7 @@ export default function xhrAdapter(config: AxiosRequestConfig) {
         request
       };
 
-      settle(function _resolve(value: any) {
+      settle(function _resolve(value: T) {
         resolve(value);
         done();
       }, function _reject(err: any) {

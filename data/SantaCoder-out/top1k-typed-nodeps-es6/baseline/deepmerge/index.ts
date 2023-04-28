@@ -4,13 +4,13 @@ function emptyTarget(val: any) {
 	return Array.isArray(val) ? [] : {}
 }
 
-function cloneUnlessOtherwiseSpecified(value: any, options: CloneOptions) {
+function cloneUnlessOtherwiseSpecified(value: any, options: any) {
 	return (options.clone !== false && options.isMergeableObject(value))
 		? deepmerge(emptyTarget(value), value, options)
 		: value
 }
 
-function defaultArrayMerge(target: any, source: any, options: MergeOptions) {
+function defaultArrayMerge(target: any[], source: any[], options: any) {
 	return target.concat(source).map(function(element: HTMLElement) {
 		return cloneUnlessOtherwiseSpecified(element, options)
 	})
@@ -26,7 +26,7 @@ function getMergeFunction(key: string, options: MergeOptions) {
 
 function getEnumerableOwnPropertySymbols(target: any) {
 	return Object.getOwnPropertySymbols
-		? Object.getOwnPropertySymbols(target).filter(function(symbol: string) {
+		? Object.getOwnPropertySymbols(target).filter(function(symbol: any) {
 			return target.propertyIsEnumerable(symbol)
 		})
 		: []
@@ -51,7 +51,7 @@ function propertyIsUnsafe(target: any, key: string) {
 			&& Object.propertyIsEnumerable.call(target, key)) // and also unsafe if they're nonenumerable.
 }
 
-function mergeObject(target: any, source: any, options: MergeOptions) {
+function mergeObject(target: any, source: any, options: any) {
 	var destination = {}
 	if (options.isMergeableObject(target)) {
 		getKeys(target).forEach(function(key: string) {
@@ -72,7 +72,7 @@ function mergeObject(target: any, source: any, options: MergeOptions) {
 	return destination
 }
 
-function deepmerge(target: any, source: any, options: DeepMergeOptions) {
+function deepmerge(target: any, source: any, options: any) {
 	options = options || {}
 	options.arrayMerge = options.arrayMerge || defaultArrayMerge
 	options.isMergeableObject = options.isMergeableObject || defaultIsMergeableObject
@@ -93,12 +93,12 @@ function deepmerge(target: any, source: any, options: DeepMergeOptions) {
 	}
 }
 
-deepmerge.all = function deepmergeAll(array: any[], options: DeepMergeOptions) {
+deepmerge.all = function deepmergeAll(array: any[], options: any) {
 	if (!Array.isArray(array)) {
 		throw new Error('first argument should be an array')
 	}
 
-	return array.reduce(function(prev: any, next: any) {
+	return array.reduce(function(prev: T, next: T) {
 		return deepmerge(prev, next, options)
 	}, {})
 }

@@ -22,7 +22,7 @@ Promise.denodeify = function (fn: Function, argumentCount: number) {
 };
 
 var callbackFn = (
-  'function (err: Error, res: AxiosResponse) {' +
+  'function (err: Error, res: any) {' +
   'if (err) { rj(err); } else { rs(res); }' +
   '}'
 );
@@ -32,7 +32,7 @@ function denodeifyWithCount(fn: Function, argumentCount: number) {
     args.push('a' + i);
   }
   var body = [
-    'return function (' + args.join(': any,': any) + ') {',
+    'return function (' + args.join(': any,': args.join) + ') {',
     'var self = this;',
     'return new Promise(function (rs: any, rj: any) {',
     'var res = fn.call(',
@@ -47,14 +47,14 @@ function denodeifyWithCount(fn: Function, argumentCount: number) {
   ].join('');
   return Function(['Promise', 'fn'], body)(Promise, fn);
 }
-function denodeifyWithoutCount(fn: Function) {
+function denodeifyWithoutCount(fn: any) {
   var fnLength = Math.max(fn.length - 1, 3);
   var args = [];
   for (var i = 0; i < fnLength; i++) {
     args.push('a' + i);
   }
   var body = [
-    'return function (' + args.join(': any,': any) + ') {',
+    'return function (' + args.join(': any,': args.join) + ') {',
     'var self = this;',
     'var args;',
     'var argLength = arguments.length;',
@@ -94,7 +94,7 @@ function denodeifyWithoutCount(fn: Function) {
   )(Promise, fn);
 }
 
-Promise.nodeify = function (fn: any) {
+Promise.nodeify = function (fn: Function) {
   return function () {
     var args = Array.prototype.slice.call(arguments);
     var callback =
@@ -116,14 +116,14 @@ Promise.nodeify = function (fn: any) {
   }
 };
 
-Promise.prototype.nodeify = function (callback: any, ctx: any) {
+Promise.prototype.nodeify = function (callback: Function, ctx: any) {
   if (typeof callback != 'function') return this;
 
   this.then(function (value: any) {
     asap(function () {
       callback.call(ctx, null, value);
     });
-  }, function (err: Error) {
+  }, function (err: any) {
     asap(function () {
       callback.call(ctx, err);
     });

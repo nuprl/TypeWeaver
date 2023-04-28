@@ -39,7 +39,7 @@ suite.add({
   'setup': 'str = "\'>\'\\"\\"&>h<e>&<y>"'
 })
 
-suite.on('cycle', function onCycle (event: CycleEvent) {
+suite.on('cycle', function onCycle (event: Event) {
   benchmarks.add(event.target)
 })
 

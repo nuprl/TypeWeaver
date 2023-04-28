@@ -10,7 +10,7 @@ let token
 let key
 let root
 
-module.exports = function parse (text: string, reviver: Reviver<any>) {
+module.exports = function parse (text: string, reviver: any) {
     source = String(text)
     parseState = 'start'
     stack = []
@@ -39,7 +39,7 @@ module.exports = function parse (text: string, reviver: Reviver<any>) {
     return root
 }
 
-function internalize (holder: any, name: string, reviver: Reviver<any>) {
+function internalize (holder: any, name: string, reviver: any) {
     const value = holder[name]
     if (value != null && typeof value === 'object') {
         for (const key in value) {
@@ -683,7 +683,7 @@ const lexStates = {
     },
 }
 
-function newToken (type: "address", value: string) {
+function newToken (type: string, value: any) {
     return {
         type,
         value,
@@ -1016,7 +1016,7 @@ function pop () {
 // }
 
 // This code is unreachable.
-// function invalidLexState (state: LexState) {
+// function invalidLexState (state: number) {
 //     return new Error(`JSON5: invalid lex state '${state}'`)
 // }
 

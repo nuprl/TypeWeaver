@@ -37,7 +37,7 @@ function watch(path: string, since: number, handler: any) {
   };
 }
 
-function getInfo(path: string, flags: ReadonlyArray<string>) {
+function getInfo(path: string, flags: number) {
   return {
     path,
     flags,
@@ -68,7 +68,7 @@ function getEventType(flags: number) {
   if (anyIsTrue(flags)) return "modified";
   return "unknown";
 }
-function getFileChanges(flags: IFileChangesFlags) {
+function getFileChanges(flags: Flags) {
   return {
     inode: !!(events.ItemInodeMetaMod & flags),
     finder: !!(events.ItemFinderInfoMod & flags),

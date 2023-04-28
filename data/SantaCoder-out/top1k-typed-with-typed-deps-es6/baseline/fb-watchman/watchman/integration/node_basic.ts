@@ -14,11 +14,11 @@ var t = setTimeout(function () {
   assert.fail('timeout', null, 'timed out running test');
 }, 10000);
 
-client.on('error', function(error: Error) {
+client.on('error', function(error: any) {
   assert.fail(error, null, 'unexpected error');
 });
 
-client.command(['version'], function(error: Error, resp: AxiosResponse) {
+client.command(['version'], function(error: any, resp: any) {
   assert.equal(error, null, 'no errors');
   console.log('Talking to watchman version', resp.version);
   client.end();

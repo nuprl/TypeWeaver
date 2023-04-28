@@ -35,7 +35,7 @@ function disjunctionToList(node: Node) {
  *
  * [a, b, c, d] -> {{{a, b}, c}, d}
  */
-function listToDisjunction(list: any) {
+function listToDisjunction(list: string[]) {
   return list.reduce((left, right) => {
     return {
       type: 'Disjunction',
@@ -55,7 +55,7 @@ function listToDisjunction(list: any) {
  * {2,} -> {3,}
  * {2,3} -> {3,4}
  */
-function increaseQuantifierByOne(quantifier: number) {
+function increaseQuantifierByOne(quantifier: Quantifier) {
   if (quantifier.kind === '*') {
 
     quantifier.kind = '+';

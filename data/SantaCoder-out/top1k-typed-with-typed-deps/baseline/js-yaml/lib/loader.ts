@@ -31,11 +31,11 @@ var PATTERN_TAG_URI               = /^(?:!|[^,\[\]\{\}])(?:%[0-9a-f]{2}|[0-9a-z\
 
 function _class(obj: any) { return Object.prototype.toString.call(obj); }
 
-function is_EOL(c: number) {
+function is_EOL(c: string) {
   return (c === 0x0A/* LF */) || (c === 0x0D/* CR */);
 }
 
-function is_WHITE_SPACE(c: string) {
+function is_WHITE_SPACE(c: number) {
   return (c === 0x09/* Tab */) || (c === 0x20/* Space */);
 }
 
@@ -71,7 +71,7 @@ function fromHexCode(c: string) {
   return -1;
 }
 
-function escapedHexLen(c: string) {
+function escapedHexLen(c: number) {
   if (c === 0x78/* x */) { return 2; }
   if (c === 0x75/* u */) { return 4; }
   if (c === 0x55/* U */) { return 8; }
@@ -128,7 +128,7 @@ for (var i = 0; i < 256; i++) {
 }
 
 
-function State(input: any, options: any) {
+function State(input: string, options: any) {
   this.input = input;
 
   this.filename  = options['filename']  || null;
@@ -169,7 +169,7 @@ function State(input: any, options: any) {
 }
 
 
-function generateError(state: State, message: string) {
+function generateError(state: any, message: string) {
   var mark = {
     name:     state.filename,
     buffer:   state.input.slice(0, -1), // omit trailing \0
@@ -196,7 +196,7 @@ function throwWarning(state: State, message: string) {
 
 var directiveHandlers = {
 
-  YAML: function handleYamlDirective(state: State, name: string, args: string[]) {
+  YAML: function handleYamlDirective(state: State, name: string, args: string) {
 
     var match, major, minor;
 
@@ -229,7 +229,7 @@ var directiveHandlers = {
     }
   },
 
-  TAG: function handleTagDirective(state: State, name: string, args: any) {
+  TAG: function handleTagDirective(state: State, name: string, args: string[]) {
 
     var handle, prefix;
 
@@ -285,7 +285,7 @@ function captureSegment(state: State, start: number, end: number, checkJson: boo
   }
 }
 
-function mergeMappings(state: IState, destination: IState, source: IState, overridableKeys: IOverridableKeys) {
+function mergeMappings(state: any, destination: any, source: any, overridableKeys: any) {
   var sourceKeys, key, index, quantity;
 
   if (!common.isObject(source)) {
@@ -396,7 +396,7 @@ function readLineBreak(state: State) {
   state.firstTabInLine = -1;
 }
 
-function skipSeparationSpace(state: State, allowComments: boolean, checkIndent: boolean) {
+function skipSeparationSpace(state: ParserState, allowComments: boolean, checkIndent: boolean) {
   var lineBreaks = 0,
       ch = state.input.charCodeAt(state.position);
 
@@ -461,7 +461,7 @@ function testDocumentSeparator(state: State) {
   return false;
 }
 
-function writeFoldedLines(state: FoldState, count: number) {
+function writeFoldedLines(state: State, count: number) {
   if (count === 1) {
     state.result += ' ';
   } else if (count > 1) {
@@ -470,7 +470,7 @@ function writeFoldedLines(state: FoldState, count: number) {
 }
 
 
-function readPlainScalar(state: State, nodeIndent: number, withinFlowCollection: boolean) {
+function readPlainScalar(state: ParserState, nodeIndent: number, withinFlowCollection: boolean) {
   var preceding,
       following,
       captureStart,
@@ -579,7 +579,7 @@ function readPlainScalar(state: State, nodeIndent: number, withinFlowCollection:
   return false;
 }
 
-function readSingleQuotedScalar(state: State, nodeIndent: number) {
+function readSingleQuotedScalar(state: ParserState, nodeIndent: number) {
   var ch,
       captureStart, captureEnd;
 
@@ -624,7 +624,7 @@ function readSingleQuotedScalar(state: State, nodeIndent: number) {
   throwError(state, 'unexpected end of the stream within a single quoted scalar');
 }
 
-function readDoubleQuotedScalar(state: State, nodeIndent: number) {
+function readDoubleQuotedScalar(state: ParserState, nodeIndent: number) {
   var captureStart,
       captureEnd,
       hexLength,
@@ -815,7 +815,7 @@ function readFlowCollection(state: State, nodeIndent: number) {
   throwError(state, 'unexpected end of the stream within a flow collection');
 }
 
-function readBlockScalar(state: State, nodeIndent: number) {
+function readBlockScalar(state: ParserState, nodeIndent: number) {
   var captureStart,
       folding,
       chomping       = CHOMPING_CLIP,
@@ -958,7 +958,7 @@ function readBlockScalar(state: State, nodeIndent: number) {
   return true;
 }
 
-function readBlockSequence(state: State, nodeIndent: number) {
+function readBlockSequence(state: ParserState, nodeIndent: number) {
   var _line,
       _tag      = state.tag,
       _anchor   = state.anchor,
@@ -1028,7 +1028,7 @@ function readBlockSequence(state: State, nodeIndent: number) {
   return false;
 }
 
-function readBlockMapping(state: State, nodeIndent: number, flowIndent: number) {
+function readBlockMapping(state: ParserState, nodeIndent: number, flowIndent: number) {
   var following,
       allowCompact,
       _line,
@@ -1362,7 +1362,7 @@ function readAlias(state: State) {
   return true;
 }
 
-function composeNode(state: NodeState, parentIndent: number, nodeContext: NodeContext, allowToSeek: boolean, allowCompact: boolean) {
+function composeNode(state: State, parentIndent: number, nodeContext: NodeContext, allowToSeek: Boolean, allowCompact: Boolean) {
   var allowBlockStyles,
       allowBlockScalars,
       allowBlockCollections,
@@ -1541,7 +1541,7 @@ function composeNode(state: NodeState, parentIndent: number, nodeContext: NodeCo
   return state.tag !== null ||  state.anchor !== null || hasContent;
 }
 
-function readDocument(state: DocumentState) {
+function readDocument(state: State) {
   var documentStart = state.position,
       _position,
       directiveName,
@@ -1692,7 +1692,7 @@ function loadDocuments(input: string, options: LoadDocumentsOptions) {
 }
 
 
-function loadAll(input: string, iterator: any, options: any) {
+function loadAll(input: string, iterator: Function, options: any) {
   if (iterator !== null && typeof iterator === 'object' && typeof options === 'undefined') {
     options = iterator;
     iterator = null;
@@ -1710,7 +1710,7 @@ function loadAll(input: string, iterator: any, options: any) {
 }
 
 
-function load(input: string, options: ILoadOptions) {
+function load(input: string, options: Options) {
   var documents = loadDocuments(input, options);
 
   if (documents.length === 0) {

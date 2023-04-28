@@ -35,7 +35,7 @@ var instance = {
         offer    = [],
         index    = {};
 
-    this._inOrder.forEach(function(ext: string) {
+    this._inOrder.forEach(function(ext: Extension) {
       var session = ext.createClientSession();
       if (!session) return;
 
@@ -61,7 +61,7 @@ var instance = {
     var responses = Parser.parseHeader(header),
         sessions  = [];
 
-    responses.eachOffer(function(name: string, params: any) {
+    responses.eachOffer(function(name: string, params: any[]) {
       var record = this._index[name];
 
       if (!record)
@@ -93,7 +93,7 @@ var instance = {
         response = [],
         offers   = Parser.parseHeader(header);
 
-    this._inOrder.forEach(function(ext: string) {
+    this._inOrder.forEach(function(ext: Extension) {
       var offer = offers.byName(ext.name);
       if (offer.length === 0 || this._reserved(ext)) return;
 
@@ -111,7 +111,7 @@ var instance = {
     return response.length > 0 ? response.join(', ') : null;
   },
 
-  validFrameRsv: function(frame: Frame) {
+  validFrameRsv: function(frame: any) {
     var allowed = { rsv1: false, rsv2: false, rsv3: false },
         ext;
 
@@ -129,11 +129,11 @@ var instance = {
            (allowed.rsv3 || !frame.rsv3);
   },
 
-  processIncomingMessage: function(message: IMessage, callback: any, context: any) {
+  processIncomingMessage: function(message: string, callback: Function, context: any) {
     this._pipeline.processIncomingMessage(message, callback, context);
   },
 
-  processOutgoingMessage: function(message: IMessage, callback: any, context: any) {
+  processOutgoingMessage: function(message: string, callback: Function, context: any) {
     this._pipeline.processOutgoingMessage(message, callback, context);
   },
 

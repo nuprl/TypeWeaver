@@ -6,7 +6,7 @@ import isPrototype from '../prototype/is';
 // still early native implementation (e.g. in FF) predated symbols
 var objectToString = Object.prototype.toString, objectTaggedString = objectToString.call(new Map());
 
-export default function (value: boolean) {
+export default function (value: any) {
 	if (!value) return false;
 
 	// Sanity check (reject objects which do not expose common Promise interface)

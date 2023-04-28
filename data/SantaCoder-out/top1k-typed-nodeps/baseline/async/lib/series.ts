@@ -166,6 +166,6 @@ import eachOfSeries from './eachOfSeries.js'
  * }
  *
  */
-export default function series(tasks: Task[], callback: any) {
+export default function series(tasks: Array<Function>, callback: Function) {
     return _parallel(eachOfSeries, tasks, callback);
 }

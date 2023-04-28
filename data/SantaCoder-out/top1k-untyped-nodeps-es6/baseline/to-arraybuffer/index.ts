@@ -1,6 +1,6 @@
 import { Buffer } from 'buffer';
 
-export default function (buf: Uint8Array) {
+export default function (buf: Buffer) {
 	// If the buffer is backed by a Uint8Array, a faster version will work
 	if (buf instanceof Uint8Array) {
 		// If the buffer isn't a subarray, return the underlying ArrayBuffer

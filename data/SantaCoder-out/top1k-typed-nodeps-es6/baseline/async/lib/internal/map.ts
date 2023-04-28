@@ -1,6 +1,6 @@
 import wrapAsync from './wrapAsync.js'
 
-export default function _asyncMap(eachfn: any, arr: any[], iteratee: any, callback: any) {
+export default function _asyncMap(eachfn: Function, arr: any[], iteratee: Function, callback: Function) {
     arr = arr || [];
     var results = [];
     var counter = 0;

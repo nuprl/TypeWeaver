@@ -49,7 +49,7 @@ var
 originAnchor.href = location.href;
 
 // Base "constructor" for jQuery.ajaxPrefilter and jQuery.ajaxTransport
-function addToPrefiltersOrTransports( structure : ITransportStructure) {
+function addToPrefiltersOrTransports( structure : Structure) {
 
 	// dataTypeExpression is optional and defaults to "*"
 	return function( dataTypeExpression: string, func : Function) {
@@ -83,7 +83,7 @@ function addToPrefiltersOrTransports( structure : ITransportStructure) {
 }
 
 // Base inspection function for prefilters and transports
-function inspectPrefiltersOrTransports( structure: PrefilterStructure, options: PrefilterOptions, originalOptions: any, jqXHR : any) {
+function inspectPrefiltersOrTransports( structure: any, options: any, originalOptions: any, jqXHR : any) {
 
 	var inspected = {},
 		seekingTransport = ( structure === transports );
@@ -91,7 +91,7 @@ function inspectPrefiltersOrTransports( structure: PrefilterStructure, options: 
 	function inspect( dataType : string) {
 		var selected;
 		inspected[ dataType ] = true;
-		jQuery.each( structure[ dataType ] || [], function( _: any, prefilterOrFactory : any) {
+		jQuery.each( structure[ dataType ] || [], function( _: any, prefilterOrFactory : PrefilterOrFactory<T>) {
 			var dataTypeOrTransport = prefilterOrFactory( options, originalOptions, jqXHR );
 			if ( typeof dataTypeOrTransport === "string" &&
 				!seekingTransport && !inspected[ dataTypeOrTransport ] ) {
@@ -132,7 +132,7 @@ function ajaxExtend( target: any, src : any) {
  * - finds the right dataType (mediates between content-type and expected dataType)
  * - returns the corresponding response
  */
-function ajaxHandleResponses( s: string, jqXHR: XMLHttpRequest, responses : any) {
+function ajaxHandleResponses( s: string, jqXHR: JQueryXHR, responses : any) {
 
 	var ct, type, finalDataType, firstDataType,
 		contents = s.contents,
@@ -190,7 +190,7 @@ function ajaxHandleResponses( s: string, jqXHR: XMLHttpRequest, responses : any)
 /* Chain conversions given the request and the original response
  * Also sets the responseXXX fields on the jqXHR instance
  */
-function ajaxConvert( s: string, response: any, jqXHR: XMLHttpRequest, isSuccess : boolean) {
+function ajaxConvert( s: string, response: any, jqXHR: JQueryXHR, isSuccess : boolean) {
 	var conv2, current, conv, tmp, prev,
 		converters = {},
 
@@ -366,7 +366,7 @@ jQuery.extend( {
 	// Creates a full fledged settings object into target
 	// with both ajaxSettings and settings fields.
 	// If target is omitted, writes into ajaxSettings.
-	ajaxSetup: function( target: string, settings : ISettings) {
+	ajaxSetup: function( target: JQuery, settings : any) {
 		return settings ?
 
 			// Building a settings object
@@ -380,7 +380,7 @@ jQuery.extend( {
 	ajaxTransport: addToPrefiltersOrTransports( transports ),
 
 	// Main method
-	ajax: function( url: string, options : AxiosRequestConfig) {
+	ajax: function( url: string, options : any) {
 
 		// If url is an object, simulate pre-1.5 signature
 		if ( typeof url === "object" ) {
@@ -712,7 +712,7 @@ jQuery.extend( {
 		}
 
 		// Callback for when everything is done
-		function done( status: number, nativeStatusText: string, responses: any[], headers : any) {
+		function done( status: any, nativeStatusText: any, responses: any, headers : any) {
 			var isSuccess, success, error, response, modified,
 				statusText = nativeStatusText;
 
@@ -838,13 +838,13 @@ jQuery.extend( {
 		return jQuery.get( url, data, callback, "json" );
 	},
 
-	getScript: function( url: string, callback : Function) {
+	getScript: function( url: string, callback : any) {
 		return jQuery.get( url, undefined, callback, "script" );
 	}
 } );
 
-jQuery.each( [ "get", "post" ], function( _i: number, method : string) {
-	jQuery[ method ] = function( url: string, data: any, callback: Function, type : string) {
+jQuery.each( [ "get", "post" ], function( _i: number, method : any) {
+	jQuery[ method ] = function( url: string, data: any, callback: any, type : string) {
 
 		// Shift arguments if data argument was omitted
 		if ( typeof data === "function" ) {
@@ -864,7 +864,7 @@ jQuery.each( [ "get", "post" ], function( _i: number, method : string) {
 	};
 } );
 
-jQuery.ajaxPrefilter( function( s : string) {
+jQuery.ajaxPrefilter( function( s : any) {
 	var i;
 	for ( i in s.headers ) {
 		if ( i.toLowerCase() === "content-type" ) {

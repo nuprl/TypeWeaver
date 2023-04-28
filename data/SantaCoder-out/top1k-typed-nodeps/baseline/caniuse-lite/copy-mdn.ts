@@ -5,7 +5,7 @@ const bcd = require('@mdn/browser-compat-data')
 /**
  * This function maps the browser keys from @mdn/browser-compat-data, to caniuse's format.
  */
-function bcdBrowserToCanIUseBrowser(bcdBrowser: BcdBrowser) {
+function bcdBrowserToCanIUseBrowser(bcdBrowser: string) {
   let browser = bcdBrowser
 
   if (browser === 'samsunginternet_android') {
@@ -69,7 +69,7 @@ let unknown = {}
  * This function maps support data from @mdn/browser-compat-data, to caniuse's
  * format.
  */
-function bcdDataToCanIUseData(bcdData: string, title: string) {
+function bcdDataToCanIUseData(bcdData: BCDData, title: string) {
   let result = {
     title,
     spec: bcdData.spec_url,

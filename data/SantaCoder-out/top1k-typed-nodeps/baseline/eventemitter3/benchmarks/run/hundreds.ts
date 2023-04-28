@@ -74,7 +74,7 @@ for (i = 0; i < 10; i++) {
   for (i = 0; i < 10; i++) {
     ce.emit('event:' + i);
   }
-}).on('cycle', function cycle(e: any) {
+}).on('cycle', function cycle(e: Event) {
   console.log(e.target.toString());
 }).on('complete', function completed() {
   console.log('Fastest is %s', this.filter('fastest').map('name'));

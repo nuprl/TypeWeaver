@@ -35,14 +35,14 @@ import wrapAsync from './internal/wrapAsync.js'
  * var wrapped = async.timeout(myFunction, 1000);
  *
  * // call `wrapped` as you would `myFunction`
- * wrapped({ bar: 'bar' }, function(err: Error, data: any) {
+ * wrapped({ bar: 'bar' }, function(err: any, data: any) {
  *     // if `myFunction` takes < 1000 ms to execute, `err`
  *     // and `data` will have their expected values
  *
  *     // else `err` will be an Error with the code 'ETIMEDOUT'
  * });
  */
-export default function timeout(asyncFn: any, milliseconds: number, info: any) {
+export default function timeout(asyncFn: Function, milliseconds: number, info: string) {
     var fn = wrapAsync(asyncFn);
 
     return initialParams((args, callback) => {

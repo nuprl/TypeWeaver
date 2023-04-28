@@ -11,7 +11,7 @@ import baseAssignValue from './baseAssignValue.js'
  * @param {Function} [customizer] The function to customize copied values.
  * @returns {Object} Returns `object`.
  */
-function copyObject(source: any, props: string[], object: any, customizer: any) {
+function copyObject(source: any, props: string[], object: any, customizer: Function) {
   const isNew = !object
   object || (object = {})
 

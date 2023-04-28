@@ -64,7 +64,7 @@ import awaitify from './internal/awaitify.js'
  * }
  *
  */
-function reject (coll: any, iteratee: any, callback: any) {
+function reject (coll: any[], iteratee: Function, callback: Function) {
     return _reject(eachOf, coll, iteratee, callback)
 }
 export default awaitify(reject, 3);

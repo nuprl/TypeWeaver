@@ -7,23 +7,23 @@ var SIGNAL_FLUSH = (Buffer.from && Buffer.from !== Uint8Array.from)
   ? Buffer.from([0])
   : new Buffer([0])
 
-var onuncork = function(self: Worker, fn: Function) {
+var onuncork = function(self: Writable, fn: Function) {
   if (self._corked) self.once('uncork', fn)
   else fn()
 }
 
-var autoDestroy = function (self: IAutoDestroyable, err: any) {
+var autoDestroy = function (self: Duplex, err: any) {
   if (self._autoDestroy) self.destroy(err)
 }
 
-var destroyer = function(self: IStream, end: boolean) {
-  return function(err: Error) {
+var destroyer = function(self: Function, end: Function) {
+  return function(err: any) {
     if (err) autoDestroy(self, err.message === 'premature close' ? null : err)
     else if (end && !self._ended) self.end()
   }
 }
 
-var end = function(ws: WebSocket, fn: any) {
+var end = function(ws: WebSocket, fn: Function) {
   if (!ws) return fn()
   if (ws._writableState && ws._writableState.finished) return fn()
   if (ws._writableState) return ws.end(fn)
@@ -33,7 +33,7 @@ var end = function(ws: WebSocket, fn: any) {
 
 var noop = function() {}
 
-var toStreams2 = function(rs: Result<any>) {
+var toStreams2 = function(rs: any) {
   return new (stream.Readable)({objectMode:true, highWaterMark:16}).wrap(rs)
 }
 
@@ -175,7 +175,7 @@ Duplexify.prototype._forward = function() {
   this._forwarding = false
 }
 
-Duplexify.prototype.destroy = function(err: Error, cb: any) {
+Duplexify.prototype.destroy = function(err: any, cb: any) {
   if (!cb) cb = noop
   if (this.destroyed) return cb(null)
   this.destroyed = true
@@ -203,7 +203,7 @@ Duplexify.prototype._destroy = function(err: Error) {
   this.emit('close')
 }
 
-Duplexify.prototype._write = function(data: any, enc: string, cb: any) {
+Duplexify.prototype._write = function(data: Buffer, enc: string, cb: Function) {
   if (this.destroyed) return
   if (this._corked) return onuncork(this, this._write.bind(this, data, enc, cb))
   if (data === SIGNAL_FLUSH) return this._finish(cb)

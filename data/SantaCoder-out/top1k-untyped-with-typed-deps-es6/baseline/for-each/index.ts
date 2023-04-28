@@ -5,7 +5,7 @@ import isCallable from 'is-callable';
 var toStr = Object.prototype.toString;
 var hasOwnProperty = Object.prototype.hasOwnProperty;
 
-var forEachArray = function forEachArray(array: any[], iterator: any, receiver: any) {
+var forEachArray = function forEachArray(array: any[], iterator: Function, receiver: any) {
     for (var i = 0, len = array.length; i < len; i++) {
         if (hasOwnProperty.call(array, i)) {
             if (receiver == null) {
@@ -28,7 +28,7 @@ var forEachString = function forEachString(string: string, iterator: any, receiv
     }
 };
 
-var forEachObject = function forEachObject(object: any, iterator: any, receiver: any) {
+var forEachObject = function forEachObject(object: any, iterator: Function, receiver: any) {
     for (var k in object) {
         if (hasOwnProperty.call(object, k)) {
             if (receiver == null) {
@@ -40,7 +40,7 @@ var forEachObject = function forEachObject(object: any, iterator: any, receiver:
     }
 };
 
-var forEach = function forEach(list: ArrayLike<T>, iterator: any, thisArg: any) {
+var forEach = function forEach(list: any[], iterator: Function, thisArg: any) {
     if (!isCallable(iterator)) {
         throw new TypeError('iterator must be a function');
     }

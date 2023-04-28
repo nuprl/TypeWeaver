@@ -9,7 +9,7 @@ var objectToString = Object.prototype.toString;
 var errorTaggedStringRe = /^\[object .*(?:Error|Exception)\]$/
   , errorNameRe = /^[^\s]*(?:Error|Exception)$/;
 
-export default function (value: string) {
+export default function (value: any) {
 	if (!value) return false;
 
 	var name;

@@ -1,7 +1,7 @@
 export default function (req: Request, res: Response) {
   let data = '';
 
-  req.on('data', function (chunk: Buffer) {
+  req.on('data', function (chunk: string) {
     data += chunk;
   });
 

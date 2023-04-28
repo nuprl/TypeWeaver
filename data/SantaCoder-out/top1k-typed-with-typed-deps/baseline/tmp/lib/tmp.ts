@@ -55,7 +55,7 @@ let
  * @param {(Options|tmpNameCallback)} options options or callback
  * @param {?tmpNameCallback} callback the callback function
  */
-function tmpName(options: IOptions, callback: any) {
+function tmpName(options: Options, callback: any) {
   const
     args = _parseArguments(options, callback),
     opts = args[0],
@@ -73,7 +73,7 @@ function tmpName(options: IOptions, callback: any) {
       const name = _generateTmpName(opts);
 
       // check whether the path exists then retry if needed
-      fs.stat(name, function (err: Error) {
+      fs.stat(name, function (err: any) {
         /* istanbul ignore else */
         if (!err) {
           /* istanbul ignore else */
@@ -97,7 +97,7 @@ function tmpName(options: IOptions, callback: any) {
  * @returns {string} the generated random name
  * @throws {Error} if the options are invalid or could not generate a filename
  */
-function tmpNameSync(options: IOptions) {
+function tmpNameSync(options: Options) {
   const
     args = _parseArguments(options),
     opts = args[0];
@@ -123,7 +123,7 @@ function tmpNameSync(options: IOptions) {
  * @param {(Options|null|undefined|fileCallback)} options the config options or the callback function or null or undefined
  * @param {?fileCallback} callback
  */
-function file(options: FileOptions, callback: any) {
+function file(options: any, callback: any) {
   const
     args = _parseArguments(options, callback),
     opts = args[0],
@@ -140,7 +140,7 @@ function file(options: FileOptions, callback: any) {
       if (err) return cb(err);
 
       if (opts.discardDescriptor) {
-        return fs.close(fd, function _discardCallback(possibleErr: any) {
+        return fs.close(fd, function _discardCallback(possibleErr: Error) {
           // the chance of getting an error on close here is rather low and might occur in the most edgiest cases only
           return cb(possibleErr, name, undefined, _prepareTmpFileRemoveCallback(name, -1, opts, false));
         });
@@ -161,7 +161,7 @@ function file(options: FileOptions, callback: any) {
  * @returns {FileSyncObject} object consists of name, fd and removeCallback
  * @throws {Error} if cannot create a file
  */
-function fileSync(options: IFileSyncOptions) {
+function fileSync(options: Options) {
   const
     args = _parseArguments(options),
     opts = args[0];
@@ -188,7 +188,7 @@ function fileSync(options: IFileSyncOptions) {
  * @param {(Options|dirCallback)} options the options or the callback function
  * @param {?dirCallback} callback
  */
-function dir(options: IOptions, callback: any) {
+function dir(options: any, callback: any) {
   const
     args = _parseArguments(options, callback),
     opts = args[0],
@@ -238,7 +238,7 @@ function dirSync(options: DirSyncOptions) {
  * @private
  */
 function _removeFileAsync(fdPath: string, next: any) {
-  const _handler = function (err: Error) {
+  const _handler = function (err: any) {
     if (err && !_isENOENT(err)) {
       // reraise any unanticipated error
       return next(err);
@@ -293,7 +293,7 @@ function _removeFileSync(fdPath: string) {
  * @returns {fileCallback | fileCallbackSync}
  * @private
  */
-function _prepareTmpFileRemoveCallback(name: string, fd: number, opts: IFileCopyOptions, sync: boolean) {
+function _prepareTmpFileRemoveCallback(name: string, fd: number, opts: any, sync: boolean) {
   const removeCallbackSync = _prepareRemoveCallback(_removeFileSync, [fd, name], sync);
   const removeCallback = _prepareRemoveCallback(_removeFileAsync, [fd, name], sync, removeCallbackSync);
 
@@ -314,7 +314,7 @@ function _prepareTmpFileRemoveCallback(name: string, fd: number, opts: IFileCopy
  * @returns {Function} the callback
  * @private
  */
-function _prepareTmpDirRemoveCallback(name: string, opts: IPrepareTmpDirRemoveCallbackOptions, sync: boolean) {
+function _prepareTmpDirRemoveCallback(name: string, opts: any, sync: boolean) {
   const removeFunction = opts.unsafeCleanup ? rimraf : fs.rmdir.bind(fs);
   const removeFunctionSync = opts.unsafeCleanup ? FN_RIMRAF_SYNC : FN_RMDIR_SYNC;
   const removeCallbackSync = _prepareRemoveCallback(removeFunctionSync, name, sync);
@@ -337,7 +337,7 @@ function _prepareTmpDirRemoveCallback(name: string, opts: IPrepareTmpDirRemoveCa
  * @returns {cleanupCallback | cleanupCallbackSync}
  * @private
  */
-function _prepareRemoveCallback(removeFunction: any, fileOrDirName: string, sync: boolean, cleanupCallbackSync: any) {
+function _prepareRemoveCallback(removeFunction: any, fileOrDirName: any, sync: any, cleanupCallbackSync: any) {
   let called = false;
 
   // if sync is true, the next parameter will be ignored
@@ -440,7 +440,7 @@ function _isUndefined(obj: any) {
  * @returns {Array} parsed arguments
  * @private
  */
-function _parseArguments(options: IOptions, callback: any) {
+function _parseArguments(options: any, callback: any) {
   /* istanbul ignore else */
   if (typeof options === 'function') {
     return [{}, options];
@@ -467,7 +467,7 @@ function _parseArguments(options: IOptions, callback: any) {
  * @returns {string} the new random name according to opts
  * @private
  */
-function _generateTmpName(opts: IGenerateTmpNameOptions) {
+function _generateTmpName(opts: Options) {
 
   const tmpDir = opts.tmpdir;
 
@@ -499,7 +499,7 @@ function _generateTmpName(opts: IGenerateTmpNameOptions) {
  * @param {Options} options
  * @private
  */
-function _assertAndSanitizeOptions(options: IOptions) {
+function _assertAndSanitizeOptions(options: any) {
 
   options.tmpdir = _getTmpDir(options);
 
@@ -603,7 +603,7 @@ function _isEBADF(error: any) {
  *
  * @private
  */
-function _isENOENT(error: Error) {
+function _isENOENT(error: any) {
   return _isExpectedError(error, -ENOENT, 'ENOENT');
 }
 
@@ -625,7 +625,7 @@ function _isENOENT(error: Error) {
  * @param {string} code
  * @private
  */
-function _isExpectedError(error: any, errno: number, code: number) {
+function _isExpectedError(error: Error, errno: number, code: string) {
   return IS_WIN32 ? error.code === code : error.code === code && error.errno === errno;
 }
 
@@ -647,7 +647,7 @@ function setGracefulCleanup() {
  * @param {?Options} options
  * @returns {string} the currently configured tmp dir
  */
-function _getTmpDir(options: IOptions) {
+function _getTmpDir(options: Options) {
   return path.resolve(options && options.tmpdir || os.tmpdir());
 }
 

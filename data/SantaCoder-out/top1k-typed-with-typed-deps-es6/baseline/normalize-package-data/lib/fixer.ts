@@ -14,7 +14,7 @@ export default {
   // default warning function
   warn: function () {},
 
-  fixRepositoryField: function (data: IRepository[]) {
+  fixRepositoryField: function (data: any) {
     if (data.repositories) {
       this.warn('repositories')
       data.repository = data.repositories[0]
@@ -69,7 +69,7 @@ export default {
     }, this)
   },
 
-  fixFilesField: function (data: IFileChangeData) {
+  fixFilesField: function (data: any) {
     var files = data.files
     if (files && !Array.isArray(files)) {
       this.warn('nonArrayFiles')
@@ -86,7 +86,7 @@ export default {
     }
   },
 
-  fixBinField: function (data: BinResponse) {
+  fixBinField: function (data: any) {
     if (!data.bin) {
       return
     }
@@ -121,7 +121,7 @@ export default {
       this.warn('nonArrayBundleDependencies')
       delete data[bd]
     } else if (data[bd]) {
-      data[bd] = data[bd].filter(function (filtered: IFilteredResult<T>) {
+      data[bd] = data[bd].filter(function (filtered: any) {
         if (!filtered || typeof filtered !== 'string') {
           this.warn('nonStringBundleDependency', filtered)
           return false
@@ -153,7 +153,7 @@ export default {
         delete data[deps]
         return
       }
-      Object.keys(data[deps]).forEach(function (d: any) {
+      Object.keys(data[deps]).forEach(function (d: string) {
         var r = data[deps][d]
         if (typeof r !== 'string') {
           this.warn('nonStringDependency', d, JSON.stringify(r))
@@ -174,7 +174,7 @@ export default {
     }
   },
 
-  fixKeywordsField: function (data: IData) {
+  fixKeywordsField: function (data: any) {
     if (typeof data.keywords === 'string') {
       data.keywords = data.keywords.split(/,\s+/)
     }
@@ -213,7 +213,7 @@ export default {
     modifyPeople(data, parsePerson)
   },
 
-  fixNameField: function (data: any, options: AxiosRequestConfig) {
+  fixNameField: function (data: any, options: any) {
     if (typeof options === 'boolean') {
       options = { strict: options }
     } else if (typeof options === 'undefined') {
@@ -252,7 +252,7 @@ export default {
     }
   },
 
-  fixReadmeField: function (data: Readme) {
+  fixReadmeField: function (data: any) {
     if (!data.readme) {
       this.warn('missingReadme')
       data.readme = 'ERROR: No README data found!'
@@ -356,7 +356,7 @@ function isValidScopedPackageName (spec: string) {
     rest[1] === encodeURIComponent(rest[1])
 }
 
-function isCorrectlyEncodedName (spec: string) {
+function isCorrectlyEncodedName (spec: Spec) {
   return !spec.match(/[/@\s+%:]/) &&
     spec === encodeURIComponent(spec)
 }
@@ -371,7 +371,7 @@ function ensureValidName (name: string, strict: boolean, allowLegacyCase: boolea
   }
 }
 
-function modifyPeople (data: People, fn: any) {
+function modifyPeople (data: any, fn: Function) {
   if (data.author) {
     data.author = fn(data.author)
   }['maintainers', 'contributors'].forEach(function (set: string) {
@@ -415,7 +415,7 @@ function parsePerson (person: string) {
   return obj
 }
 
-function addOptionalDepsToDeps (data: IDependencyData, warn: any) {
+function addOptionalDepsToDeps (data: any, warn: any) {
   var o = data.optionalDependencies
   if (!o) {
     return
@@ -427,7 +427,7 @@ function addOptionalDepsToDeps (data: IDependencyData, warn: any) {
   data.dependencies = d
 }
 
-function depObjectify (deps: DepObject[], type: string, warn: any) {
+function depObjectify (deps: string[], type: string, warn: boolean) {
   if (!deps) {
     return {}
   }
@@ -452,7 +452,7 @@ function depObjectify (deps: DepObject[], type: string, warn: any) {
   return o
 }
 
-function objectifyDeps (data: any, warn: any) {
+function objectifyDeps (data: string, warn: Function) {
   depTypes.forEach(function (type: string) {
     if (!data[type]) {
       return
@@ -461,7 +461,7 @@ function objectifyDeps (data: any, warn: any) {
   })
 }
 
-function bugsTypos (bugs: Bugs, warn: boolean) {
+function bugsTypos (bugs: string[], warn: boolean) {
   if (!bugs) {
     return
   }

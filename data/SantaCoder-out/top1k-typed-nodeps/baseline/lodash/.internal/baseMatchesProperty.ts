@@ -18,7 +18,7 @@ const COMPARE_UNORDERED_FLAG = 2
  * @param {*} srcValue The value to match.
  * @returns {Function} Returns the new spec function.
  */
-function baseMatchesProperty(path: Path, srcValue: any) {
+function baseMatchesProperty(path: string, srcValue: any) {
   if (isKey(path) && isStrictComparable(srcValue)) {
     return matchesStrictComparable(toKey(path), srcValue)
   }

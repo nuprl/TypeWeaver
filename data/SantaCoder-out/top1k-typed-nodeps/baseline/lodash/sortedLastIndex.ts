@@ -16,7 +16,7 @@ import baseSortedIndex from './.internal/baseSortedIndex.js'
  * sortedLastIndex([4, 5, 5, 5, 6], 5)
  * // => 4
  */
-function sortedLastIndex(array: Array<T>, value: T) {
+function sortedLastIndex(array: any[], value: any) {
   return baseSortedIndex(array, value, true)
 }
 

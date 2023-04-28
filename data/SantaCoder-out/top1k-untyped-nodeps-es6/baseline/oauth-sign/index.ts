@@ -20,7 +20,7 @@ function rfc3986 (str: string) {
 // Maps object to bi-dimensional array
 // Converts { foo: 'A', bar: [ 'b', 'B' ]} to
 // [ ['foo', 'A'], ['bar', 'b'], ['bar', 'B'] ]
-function map (obj: any) {
+function map (obj: Object) {
   var key, val, arr = []
   for (key in obj) {
     val = obj[key]
@@ -37,7 +37,7 @@ function map (obj: any) {
 }
 
 // Compare function for sort
-function compare (a: number, b: number) {
+function compare (a: any, b: any) {
   return a > b ? 1 : a < b ? -1 : 0
 }
 
@@ -49,19 +49,19 @@ function generateBase (httpMethod: string, base_uri: string, params: any) {
   // http://tools.ietf.org/html/rfc5849#section-3.4.1.3.2
   var normalized = map(params)
   // 1.  First, the name and value of each parameter are encoded
-  .map(function (p: string) {
+  .map(function (p: string[]) {
     return [ rfc3986(p[0]), rfc3986(p[1] || '') ]
   })
   // 2.  The parameters are sorted by name, using ascending byte value
   //     ordering.  If two or more parameters share the same name, they
   //     are sorted by their value.
-  .sort(function (a: number, b: number) {
+  .sort(function (a: any, b: any) {
     return compare(a[0], b[0]) || compare(a[1], b[1])
   })
   // 3.  The name of each parameter is concatenated to its corresponding
   //     value using an "=" character (ASCII code 61) as a separator, even
   //     if the value is empty.
-  .map(function (p: string) { return p.join('=') })
+  .map(function (p: string[]) { return p.join('=') })
    // 4.  The sorted name/value pairs are concatenated together into a
    //     single string by using an "&" character (ASCII code 38) as
    //     separator.
@@ -76,7 +76,7 @@ function generateBase (httpMethod: string, base_uri: string, params: any) {
   return base
 }
 
-function hmacsign (httpMethod: string, base_uri: string, params: any, consumer_secret: string, token_secret: string) {
+function hmacsign (httpMethod: string, base_uri: string, params: any, consumer_secret: any, token_secret: any) {
   var base = generateBase(httpMethod, base_uri, params)
   var key = [
     consumer_secret || '',

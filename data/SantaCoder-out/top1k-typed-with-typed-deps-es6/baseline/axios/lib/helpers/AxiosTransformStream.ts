@@ -107,7 +107,7 @@ class AxiosTransformStream extends stream.Transform{
     const bytesThreshold = (maxRate / divider);
     const minChunkSize = internals.minChunkSize !== false ? Math.max(internals.minChunkSize, bytesThreshold * 0.01) : 0;
 
-    function pushChunk(_chunk: any, _callback: Function) {
+    function pushChunk(_chunk: any, _callback: any) {
       const bytes = Buffer.byteLength(_chunk);
       internals.bytesSeen += bytes;
       internals.bytes += bytes;
@@ -169,7 +169,7 @@ class AxiosTransformStream extends stream.Transform{
       } : _callback);
     };
 
-    transformChunk(chunk, function transformNextChunk(err: Error, _chunk: any) {
+    transformChunk(chunk, function transformNextChunk(err: Error, _chunk: string) {
       if (err) {
         return callback(err);
       }

@@ -38,7 +38,7 @@
         return ret;
     }
 
-    function isASCIIAlphanumeric(ch: string) {
+    function isASCIIAlphanumeric(ch: number) {
         return (ch >= 0x61  /* 'a' */ && ch <= 0x7A  /* 'z' */) ||
             (ch >= 0x41  /* 'A' */ && ch <= 0x5A  /* 'Z' */) ||
             (ch >= 0x30  /* '0' */ && ch <= 0x39  /* '9' */);
@@ -94,7 +94,7 @@
 
     var STAR_MATCHER = '(' + WHITESPACE + '*(?:\\*' + WHITESPACE + '?)?)(.+|[\r\n\u2028\u2029])';
 
-    function unwrapComment(doc: Document) {
+    function unwrapComment(doc: Comment) {
         // JSDoc comment is following form
         //   /**
         //    * .......
@@ -193,7 +193,7 @@
         // { { ok: string } }
         //
         // therefore, scanning type expression with balancing braces.
-        function parseType(title: string, last: number, addRange: any) {
+        function parseType(title: string, last: boolean, addRange: boolean) {
             var ch, brace, type, startIndex, direct = false;
 
 
@@ -253,7 +253,7 @@
             return typed.parseType(type, {startIndex: convertIndex(startIndex), range: addRange});
         }
 
-        function scanIdentifier(last: number) {
+        function scanIdentifier(last: string) {
             var identifier;
             if (!esutils.code.isIdentifierStartES5(source.charCodeAt(index)) && !source[index].match(/[0-9]/)) {
                 return null;
@@ -265,13 +265,13 @@
             return identifier;
         }
 
-        function skipWhiteSpace(last: number) {
+        function skipWhiteSpace(last: string) {
             while (index < last && (esutils.code.isWhiteSpace(source.charCodeAt(index)) || esutils.code.isLineTerminator(source.charCodeAt(index)))) {
                 advance();
             }
         }
 
-        function parseName(last: number, allowBrackets: boolean, allowNestedParams: boolean) {
+        function parseName(last: string, allowBrackets: boolean, allowNestedParams: boolean) {
             var name = '',
                 useBrackets,
                 insideString;
@@ -423,7 +423,7 @@
             var args = Array.prototype.slice.call(arguments, 1),
                 msg = errorText.replace(
                     /%(\d)/g,
-                    function (whole: number, index: number) {
+                    function (whole: string, index: number) {
                         utility.assert(index < args.length, 'Message reference must be in range');
                         return args[index];
                     }
@@ -468,7 +468,7 @@
             return true;
         };
 
-        TagParser.prototype._parseNamePath = function (optional: boolean) {
+        TagParser.prototype._parseNamePath = function (optional: String) {
             var name;
             name = parseName(this._last, sloppy && isAllowedOptional(this._title), true);
             if (!name) {
@@ -773,7 +773,7 @@
             return this._tag;
         };
 
-        function parseTag(options: ParseOptions) {
+        function parseTag(options: any) {
             var title, parser, tag;
 
             // skip to tag
@@ -823,7 +823,7 @@
             return preserveWhitespace ? description : description.trim();
         }
 
-        function parse(comment: string, options: ParseOptions) {
+        function parse(comment: string, options: Options) {
             var tags = [], tag, description, interestingTags, i, iz;
 
             if (options === undefined) {

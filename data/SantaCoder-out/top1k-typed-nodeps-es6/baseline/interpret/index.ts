@@ -63,14 +63,14 @@ function endsInSwcTsx(filename: string) {
 var cjsStub = path.join(__dirname, 'cjs-stub');
 var mjsStub = path.join(__dirname, 'mjs-stub');
 
-function isNodeModules(file: IFile) {
+function isNodeModules(file: string) {
   return path.relative(process.cwd(), file).includes('node_modules');
 }
 
 var extensions = {
   '.babel.js': {
     module: '@babel/register',
-    register: function (hook: IHook, config: IConfig) {
+    register: function (hook: Hook, config: any) {
       config = config || {
         rootMode: 'upward-optional',
         overrides: [{ only: [endsInBabelJs], presets: ['@babel/preset-env'] }],
@@ -81,7 +81,7 @@ var extensions = {
   },
   '.babel.jsx': {
     module: '@babel/register',
-    register: function (hook: Hook, config: Config) {
+    register: function (hook: HookContext, config: any) {
       config = config || {
         rootMode: 'upward-optional',
         overrides: [
@@ -98,7 +98,7 @@ var extensions = {
   '.babel.ts': [
     {
       module: '@babel/register',
-      register: function (hook: Hook<any>, config: IConfig) {
+      register: function (hook: Hook, config: any) {
         config = config || {
           rootMode: 'upward-optional',
           overrides: [
@@ -115,7 +115,7 @@ var extensions = {
   ],
   '.babel.tsx': {
     module: '@babel/register',
-    register: function (hook: Hook, config: IConfig) {
+    register: function (hook: HookContext, config: any) {
       config = config || {
         rootMode: 'upward-optional',
         overrides: [
@@ -155,7 +155,7 @@ var extensions = {
   },
   '.esbuild.jsx': {
     module: 'esbuild-register/dist/node',
-    register: function (mod: IModule, config: IConfig) {
+    register: function (mod: any, config: any) {
       config = config || {
         target: 'node' + process.version.slice(1),
         hookMatcher: endsInEsbuildJsx,
@@ -177,7 +177,7 @@ var extensions = {
   },
   '.esbuild.tsx': {
     module: 'esbuild-register/dist/node',
-    register: function (mod: IModule, config: IConfiguration) {
+    register: function (mod: any, config: any) {
       config = config || {
         target: 'node' + process.version.slice(1),
         hookMatcher: endsInEsbuildTsx,
@@ -201,7 +201,7 @@ var extensions = {
   '.jsx': [
     {
       module: '@babel/register',
-      register: function (hook: IHook, config: IConfig) {
+      register: function (hook: Hook, config: any) {
         config = config || {
           rootMode: 'upward-optional',
           overrides: [
@@ -225,7 +225,7 @@ var extensions = {
   '.node': null,
   '.sucrase.js': {
     module: 'sucrase/dist/register',
-    register: function (hook: IHook, config: IConfig) {
+    register: function (hook: Hook, config: any) {
       config = config || {
         matcher: endsInSucraseJs,
       };
@@ -235,7 +235,7 @@ var extensions = {
   },
   '.sucrase.jsx': {
     module: 'sucrase/dist/register',
-    register: function (hook: Hook, config: Config) {
+    register: function (hook: HookContext, config: any) {
       config = config || {
         matcher: endsInSucraseJsx,
       };
@@ -245,7 +245,7 @@ var extensions = {
   },
   '.sucrase.ts': {
     module: 'sucrase/dist/register',
-    register: function (hook: Hook, config: IConfig) {
+    register: function (hook: Hook, config: any) {
       config = config || {
         matcher: endsInSucraseTs,
       };
@@ -255,7 +255,7 @@ var extensions = {
   },
   '.sucrase.tsx': {
     module: 'sucrase/dist/register',
-    register: function (hook: IHook, config: IConfig) {
+    register: function (hook: HookContext, config: any) {
       config = config || {
         matcher: endsInSucraseTsx,
       };
@@ -265,7 +265,7 @@ var extensions = {
   },
   '.swc.js': {
     module: '@swc/register',
-    register: function (hook: IHook, config: IConfig) {
+    register: function (hook: Hook, config: any) {
       config = config || {
         only: [endsInSwcJs],
         ignore: [isNodeModules],
@@ -288,7 +288,7 @@ var extensions = {
   },
   '.swc.jsx': {
     module: '@swc/register',
-    register: function (hook: Hook, config: Config) {
+    register: function (hook: HookContext, config: any) {
       config = config || {
         only: [endsInSwcJsx],
         ignore: [isNodeModules],
@@ -312,7 +312,7 @@ var extensions = {
   },
   '.swc.ts': {
     module: '@swc/register',
-    register: function (hook: IHook, config: IConfig) {
+    register: function (hook: HookContext, config: any) {
       config = config || {
         only: [endsInSwcTs],
         ignore: [isNodeModules],
@@ -335,7 +335,7 @@ var extensions = {
   },
   '.swc.tsx': {
     module: '@swc/register',
-    register: function (hook: IHook, config: IConfig) {
+    register: function (hook: Hook, config: any) {
       config = config || {
         only: [endsInSwcTsx],
         ignore: [isNodeModules],
@@ -368,7 +368,7 @@ var extensions = {
     'sucrase/register/ts',
     {
       module: '@babel/register',
-      register: function (hook: IHook, config: IConfig) {
+      register: function (hook: Hook, config: any) {
         config = config || {
           rootMode: 'upward-optional',
           overrides: [
@@ -388,7 +388,7 @@ var extensions = {
     },
     {
       module: 'esbuild-register/dist/node',
-      register: function (mod: IModule, config: IConfig) {
+      register: function (mod: any, config: any) {
         config = config || {
           target: 'node' + process.version.slice(1),
           hookMatcher: endsInTs,
@@ -403,7 +403,7 @@ var extensions = {
     },
     {
       module: '@swc/register',
-      register: function (hook: Hook, config: IConfig) {
+      register: function (hook: Hook, config: any) {
         config = config || {
           only: [endsInTs],
           ignore: [isNodeModules],
@@ -431,7 +431,7 @@ var extensions = {
     'sucrase/register/tsx',
     {
       module: '@babel/register',
-      register: function (hook: Hook, config: Config) {
+      register: function (hook: Hook, config: any) {
         config = config || {
           rootMode: 'upward-optional',
           overrides: [
@@ -476,7 +476,7 @@ var extensions = {
     },
     {
       module: '@swc/register',
-      register: function (hook: Hook<any>, config: any) {
+      register: function (hook: Hook, config: any) {
         config = config || {
           only: [endsInTsx],
           ignore: [isNodeModules],
@@ -535,7 +535,7 @@ var jsVariantExtensions = [
 
 export default {
   extensions: extensions,
-  jsVariants: jsVariantExtensions.reduce(function (result: IExtensionResult, ext: IExtension) {
+  jsVariants: jsVariantExtensions.reduce(function (result: any, ext: string) {
     result[ext] = extensions[ext];
     return result;
   }, {}),

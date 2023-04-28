@@ -7,7 +7,7 @@
 
 'use strict';
 
-module.exports = function base(app: Express, options: IOptions) {
+module.exports = function base(app: Application, options: Options) {
   if (!isObject(app) && typeof app !== 'function') {
     throw new TypeError('expected an object or function');
   }
@@ -31,7 +31,7 @@ module.exports = function base(app: Express, options: IOptions) {
    * var use = require('use');
    *
    * // define a plugin
-   * function foo(app: any) {
+   * function foo(app: Application) {
    *   // do stuff
    * }
    *
@@ -92,7 +92,7 @@ module.exports = function base(app: Express, options: IOptions) {
    * `fns` array to be called by the `run` method.
    */
 
-  function use(type: "before", fn: any, options: any) {
+  function use(type: string, fn: Function, options: any) {
     var offset = 1;
 
     if (typeof type === 'string' || Array.isArray(type)) {

@@ -5,21 +5,21 @@ var fs = require('fs') // we only need fs to get the ReadStream and WriteStream 
 var noop = function () {}
 var ancient = /^v?\.0/.test(process.version)
 
-var isFn = function (fn: Function) {
+var isFn = function (fn: any) {
   return typeof fn === 'function'
 }
 
-var isFS = function (stream: Readable) {
+var isFS = function (stream: ReadableStream) {
   if (!ancient) return false // newer node version do not need to care about fs is a special way
   if (!fs) return false // browser
   return (stream instanceof (fs.ReadStream || noop) || stream instanceof (fs.WriteStream || noop)) && isFn(stream.close)
 }
 
-var isRequest = function (stream: Readable) {
+var isRequest = function (stream: Stream) {
   return stream.setHeader && isFn(stream.abort)
 }
 
-var destroyer = function (stream: Readable, reading: boolean, writing: boolean, callback: any) {
+var destroyer = function (stream: Readable, reading: boolean, writing: boolean, callback: Function) {
   callback = once(callback)
 
   var closed = false
@@ -27,7 +27,7 @@ var destroyer = function (stream: Readable, reading: boolean, writing: boolean, 
     closed = true
   })
 
-  eos(stream, {readable: reading, writable: writing}, function (err: Error) {
+  eos(stream, {readable: reading, writable: writing}, function (err: any) {
     if (err) return callback(err)
     closed = true
     callback()
@@ -48,7 +48,7 @@ var destroyer = function (stream: Readable, reading: boolean, writing: boolean, 
   }
 }
 
-var call = function (fn: any) {
+var call = function (fn: Function) {
   fn()
 }
 
@@ -67,7 +67,7 @@ var pump = function () {
   var destroys = streams.map(function (stream: Readable, i: number) {
     var reading = i < streams.length - 1
     var writing = i > 0
-    return destroyer(stream, reading, writing, function (err: Error) {
+    return destroyer(stream, reading, writing, function (err: any) {
       if (!error) error = err
       if (err) destroys.forEach(call)
       if (reading) return

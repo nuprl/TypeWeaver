@@ -4,7 +4,7 @@ const inherits = require('inherits');
 const Reporter = require('../base/reporter').Reporter;
 const Buffer = require('safer-buffer').Buffer;
 
-function DecoderBuffer(base: number, options: DecoderOptions) {
+function DecoderBuffer(base: Buffer, options: DecoderOptions) {
   Reporter.call(this, options);
   if (!Buffer.isBuffer(base)) {
     this.error('Input not Buffer');
@@ -43,7 +43,7 @@ DecoderBuffer.prototype.save = function save() {
   return { offset: this.offset, reporter: Reporter.prototype.save.call(this) };
 };
 
-DecoderBuffer.prototype.restore = function restore(save: boolean) {
+DecoderBuffer.prototype.restore = function restore(save: Save) {
   // Return skipped data
   const res = new DecoderBuffer(this.base);
   res.offset = save.offset;
@@ -66,7 +66,7 @@ DecoderBuffer.prototype.readUInt8 = function readUInt8(fail: boolean) {
     return this.error(fail || 'DecoderBuffer overrun');
 };
 
-DecoderBuffer.prototype.skip = function skip(bytes: number, fail: any) {
+DecoderBuffer.prototype.skip = function skip(bytes: number, fail: boolean) {
   if (!(this.offset + bytes <= this.length))
     return this.error(fail || 'DecoderBuffer overrun');
 
@@ -88,7 +88,7 @@ DecoderBuffer.prototype.raw = function raw(save: boolean) {
 function EncoderBuffer(value: any, reporter: Reporter) {
   if (Array.isArray(value)) {
     this.length = 0;
-    this.value = value.map(function(item: IEncoderBuffer) {
+    this.value = value.map(function(item: any) {
       if (!EncoderBuffer.isEncoderBuffer(item))
         item = new EncoderBuffer(item, reporter);
       this.length += item.length;
@@ -125,7 +125,7 @@ EncoderBuffer.isEncoderBuffer = function isEncoderBuffer(data: any) {
   return isCompatible;
 };
 
-EncoderBuffer.prototype.join = function join(out: string, offset: number) {
+EncoderBuffer.prototype.join = function join(out: Uint8Array, offset: number) {
   if (!out)
     out = Buffer.alloc(this.length);
   if (!offset)
@@ -135,7 +135,7 @@ EncoderBuffer.prototype.join = function join(out: string, offset: number) {
     return out;
 
   if (Array.isArray(this.value)) {
-    this.value.forEach(function(item: IItem) {
+    this.value.forEach(function(item: T) {
       item.join(out, offset);
       offset += item.length;
     });

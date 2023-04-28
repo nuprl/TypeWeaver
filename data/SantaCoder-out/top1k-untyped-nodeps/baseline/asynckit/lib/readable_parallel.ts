@@ -11,7 +11,7 @@ module.exports = ReadableParallel;
  * @param   {function} callback - invoked when all elements processed
  * @returns {stream.Readable#}
  */
-function ReadableParallel(list: any[], iterator: any, callback: any)
+function ReadableParallel(list: Array<any>, iterator: Function, callback: Function)
 {
   if (!(this instanceof ReadableParallel))
   {

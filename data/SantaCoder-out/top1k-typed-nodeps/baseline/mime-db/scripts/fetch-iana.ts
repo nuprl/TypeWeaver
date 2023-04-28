@@ -283,7 +283,7 @@ function * getTemplateBody (res) {
   var lines = body.split(/\r?\n/)
   var slurp = false
 
-  return lines.reduce(function (lines: string[], line: number) {
+  return lines.reduce(function (lines: string[], line: string) {
     line = line.replace(/=20$/, ' ')
 
     var prev = (lines[lines.length - 1] || '')
@@ -328,7 +328,7 @@ function appendToLine (line: string, str: string) {
   return trimmed + append
 }
 
-function concat (a: Array<any>, b: Array<any>) {
+function concat (a: any[], b: any[]) {
   return a.concat(b.filter(Boolean))
 }
 
@@ -391,7 +391,7 @@ function normalizeHeader (val: string) {
 }
 
 function parseReferences (reference: string) {
-  return getUrlReferences(reference).concat(getRfcReferences(reference).map(function (rfc: string) {
+  return getUrlReferences(reference).concat(getRfcReferences(reference).map(function (rfc: RFC) {
     return 'https://tools.ietf.org/rfc/' + rfc.toLowerCase() + '.txt'
   }))
 }

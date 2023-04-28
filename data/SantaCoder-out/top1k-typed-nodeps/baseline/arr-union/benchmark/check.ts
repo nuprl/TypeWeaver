@@ -9,12 +9,12 @@ var bold = require('ansi-bold');
  * result.
  */
 
-fs.readdirSync(__dirname + '/code').forEach(function (fp: Function) {
+fs.readdirSync(__dirname + '/code').forEach(function (fp: string) {
   var fn = require(path.resolve(__dirname, 'code', fp));
   var name = path.basename(fp, path.extname(fp));
 
   if (/./.test(name)) {
-    fs.readdirSync(__dirname + '/fixtures').forEach(function (fixture: Fixture<any>) {
+    fs.readdirSync(__dirname + '/fixtures').forEach(function (fixture: any) {
       fixture = path.resolve(__dirname, 'fixtures', fixture);
       if (/\.js$/.test(fixture)) {
         console.log(bold(name) + ':', fn.apply(null, require(fixture)));

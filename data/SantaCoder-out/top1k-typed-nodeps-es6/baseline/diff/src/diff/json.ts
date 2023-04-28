@@ -15,15 +15,15 @@ jsonDiff.castInput = function(value: any) {
 
   return typeof value === 'string' ? value : JSON.stringify(canonicalize(value, null, null, stringifyReplacer), stringifyReplacer, '  ');
 };
-jsonDiff.equals = function(left: number, right: number) {
+jsonDiff.equals = function(left: T, right: T) {
   return Diff.prototype.equals.call(jsonDiff, left.replace(/,([\r\n])/g, '$1'), right.replace(/,([\r\n])/g, '$1'));
 };
 
-export function diffJson(oldObj: any, newObj: any, options: DiffOptions) { return jsonDiff.diff(oldObj, newObj, options); }
+export function diffJson(oldObj: any, newObj: any, options: any) { return jsonDiff.diff(oldObj, newObj, options); }
 
 // This function handles the presence of circular references by bailing out when encountering an
 // object that is already on the "stack" of items being processed. Accepts an optional replacer
-export function canonicalize(obj: any, stack: any, replacementStack: any, replacer: any, key: string) {
+export function canonicalize(obj: any, stack: any[], replacementStack: any[], replacer: any, key: string) {
   stack = stack || [];
   replacementStack = replacementStack || [];
 

@@ -4,7 +4,7 @@ var isPrototype = require("../prototype/is");
 
 var dateValueOf = Date.prototype.valueOf;
 
-module.exports = function (value: boolean) {
+module.exports = function (value: any) {
 	if (!value) return false;
 
 	try {

@@ -32,7 +32,7 @@ import { promiseCallback, PROMISE_SYMBOL } from './internal/promiseCallback.js'
  *     })]
  * }, callback);
  */
-export default function retryable (opts: RetryableOptions, task: Task<any>) {
+export default function retryable (opts: RetryOptions, task: RetryTask) {
     if (!task) {
         task = opts;
         opts = null;
@@ -47,7 +47,7 @@ export default function retryable (opts: RetryableOptions, task: Task<any>) {
             args.push(callback)
             callback = promiseCallback()
         }
-        function taskFn(cb: Function) {
+        function taskFn(cb: Callback) {
             _task(...args, cb);
         }
 

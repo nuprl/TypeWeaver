@@ -28,7 +28,7 @@ const MAX_ARRAY_LENGTH = 4294967295
  * toLength('3.2')
  * // => 3
  */
-function toLength(value: number) {
+function toLength(value: any) {
   if (!value) {
     return 0
   }

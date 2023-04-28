@@ -23,7 +23,7 @@ function noop() {}
 // extract them to here.
 var LAST_ERROR = null;
 var IS_ERROR = {};
-function getThen(obj: Promise<T>) {
+function getThen(obj: any) {
   try {
     return obj.then;
   } catch (ex) {
@@ -40,7 +40,7 @@ function tryCallOne(fn: any, a: any) {
     return IS_ERROR;
   }
 }
-function tryCallTwo(fn: any, a: any, b: any) {
+function tryCallTwo(fn: Function, a: any, b: any) {
   try {
     fn(a, b);
   } catch (ex) {
@@ -78,14 +78,14 @@ Promise.prototype.then = function(onFulfilled: any, onRejected: any) {
   return res;
 };
 
-function safeThen(self: Promise<T>, onFulfilled: any, onRejected: any) {
-  return new self.constructor(function (resolve: any, reject: any) {
+function safeThen(self: Promise<any>, onFulfilled: any, onRejected: any) {
+  return new self.constructor(function (resolve: Function, reject: Function) {
     var res = new Promise(noop);
     res.then(resolve, reject);
     handle(self, new Handler(onFulfilled, onRejected, res));
   });
 }
-function handle(self: IWebSocket, deferred: IPromise<any>) {
+function handle(self: Promise, deferred: Deferred) {
   while (self._state === 3) {
     self = self._value;
   }
@@ -109,7 +109,7 @@ function handle(self: IWebSocket, deferred: IPromise<any>) {
   handleResolved(self, deferred);
 }
 
-function handleResolved(self: Promise<any>, deferred: Promise<any>) {
+function handleResolved(self: Deferred<T>, deferred: Deferred<T>) {
   asap(function() {
     var cb = self._state === 1 ? deferred.onFulfilled : deferred.onRejected;
     if (cb === null) {
@@ -128,7 +128,7 @@ function handleResolved(self: Promise<any>, deferred: Promise<any>) {
     }
   });
 }
-function resolve(self: Observable<T>, newValue: T) {
+function resolve(self: any, newValue: any) {
   // Promise Resolution Procedure: https://github.com/promises-aplus/promises-spec#the-promise-resolution-procedure
   if (newValue === self) {
     return reject(
@@ -162,7 +162,7 @@ function resolve(self: Observable<T>, newValue: T) {
   finale(self);
 }
 
-function reject(self: Promise<T>, newValue: any) {
+function reject(self: Promise, newValue: any) {
   self._state = 2;
   self._value = newValue;
   if (Promise._onReject) {
@@ -170,7 +170,7 @@ function reject(self: Promise<T>, newValue: any) {
   }
   finale(self);
 }
-function finale(self: ICommand) {
+function finale(self: Promise<any>) {
   if (self._deferredState === 1) {
     handle(self, self._deferreds);
     self._deferreds = null;
@@ -183,7 +183,7 @@ function finale(self: ICommand) {
   }
 }
 
-function Handler(onFulfilled: any, onRejected: any, promise: Promise<any>){
+function Handler(onFulfilled: Function, onRejected: Function, promise: Promise){
   this.onFulfilled = typeof onFulfilled === 'function' ? onFulfilled : null;
   this.onRejected = typeof onRejected === 'function' ? onRejected : null;
   this.promise = promise;
@@ -195,9 +195,9 @@ function Handler(onFulfilled: any, onRejected: any, promise: Promise<any>){
  *
  * Makes no guarantees about asynchrony.
  */
-function doResolve(fn: Function, promise: Promise<any>) {
+function doResolve(fn: Function, promise: any) {
   var done = false;
-  var res = tryCallTwo(fn, function (value: any) {
+  var res = tryCallTwo(fn, function (value: T) {
     if (done) return;
     done = true;
     resolve(promise, value);

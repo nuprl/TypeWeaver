@@ -4,7 +4,7 @@
 // grab a reference to node's real process object right away
 var process = global.process
 
-const processOk = function (process: IProcess) {
+const processOk = function (process: Process) {
   return process &&
     typeof process === 'object' &&
     typeof process.removeListener === 'function' &&
@@ -51,7 +51,7 @@ if (!processOk(process)) {
     emitter.infinite = true
   }
 
-  module.exports = function (cb: any, opts: IOptions) {
+  module.exports = function (cb: Function, opts: Object) {
     /* istanbul ignore if */
     if (!processOk(global.process)) {
       return function () {}
@@ -85,7 +85,7 @@ if (!processOk(process)) {
     }
     loaded = false
 
-    signals.forEach(function (sig: Signature) {
+    signals.forEach(function (sig: number) {
       try {
         process.removeListener(sig, sigListeners[sig])
       } catch (er) {}
@@ -153,7 +153,7 @@ if (!processOk(process)) {
     // handle it instead of us.
     emitter.count += 1
 
-    signals = signals.filter(function (sig: Signature) {
+    signals = signals.filter(function (sig: number) {
       try {
         process.on(sig, sigListeners[sig])
         return true
@@ -182,7 +182,7 @@ if (!processOk(process)) {
   }
 
   var originalProcessEmit = process.emit
-  var processEmit = function processEmit (ev: EventEmitter, arg: any) {
+  var processEmit = function processEmit (ev: string, arg: any) {
     if (ev === 'exit' && processOk(global.process)) {
       /* istanbul ignore else */
       if (arg !== undefined) {

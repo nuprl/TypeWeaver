@@ -4,7 +4,7 @@ export var hasQueueMicrotask = typeof queueMicrotask === 'function' && queueMicr
 export var hasSetImmediate = typeof setImmediate === 'function' && setImmediate;
 export var hasNextTick = typeof process === 'object' && typeof process.nextTick === 'function';
 
-export function fallback(fn: any) {
+export function fallback(fn: Function) {
     setTimeout(fn, 0);
 }
 

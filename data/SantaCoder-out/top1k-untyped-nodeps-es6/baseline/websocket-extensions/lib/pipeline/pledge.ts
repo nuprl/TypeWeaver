@@ -23,7 +23,7 @@ Pledge.all = function(list: Array<any>) {
   return pledge;
 };
 
-Pledge.prototype.then = function(callback: any) {
+Pledge.prototype.then = function(callback: Function) {
   if (this._complete) callback();
   else this._callbacks.push(callback);
 };

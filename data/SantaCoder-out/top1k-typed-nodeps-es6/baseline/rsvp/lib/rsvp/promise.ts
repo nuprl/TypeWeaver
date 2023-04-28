@@ -56,7 +56,7 @@ function needsNew() {
   ------------
 
   ```js
-  let promise = new Promise(function(resolve: any, reject: any) {
+  let promise = new Promise(function(resolve: Function, reject: Function) {
     // on success
     resolve(value);
 
@@ -79,7 +79,7 @@ function needsNew() {
 
   ```js
   function getJSON(url: string) {
-    return new Promise(function(resolve: any, reject: any){
+    return new Promise(function(resolve: Function, reject: Function){
       let xhr = new XMLHttpRequest();
 
       xhr.open('GET', url);
@@ -251,7 +251,7 @@ Promise.prototype._guidKey = guidKey;
   reason why the promise cannot be fulfilled.
 
   ```js
-  findUser().then(function(user: User){
+  findUser().then(function(user: any){
     // user is available
   }, function(reason: any){
     // user is unavailable, and you are given the reason why
@@ -395,13 +395,13 @@ Promise.prototype._guidKey = guidKey;
 
   }
 
-  findAuthor(function(author: string, err: Error){
+  findAuthor(function(author: Author, err: Error){
     if (err) {
       failure(err);
       // failure
     } else {
       try {
-        findBoooksByAuthor(author, function(books: Book[], err: any) {
+        findBoooksByAuthor(author, function(books: Array<Book>, err: any) {
           if (err) {
             failure(err);
           } else {

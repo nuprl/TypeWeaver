@@ -3,7 +3,7 @@
 import stringCoerce from '../string/coerce';
 import toShortString from './to-short-string';
 
-export default function (errorMessage: string, value: any, inputOptions: InputOptions) {
+export default function (errorMessage: string, value: any, inputOptions: any) {
 	if (inputOptions && inputOptions.errorMessage) {
 		errorMessage = stringCoerce(inputOptions.errorMessage);
 	}

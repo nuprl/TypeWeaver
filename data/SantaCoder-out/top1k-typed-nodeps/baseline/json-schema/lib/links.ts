@@ -20,7 +20,7 @@
 }(this, function () {// setup primitive classes to be JSON Schema types
 var exports = {};
 exports.cacheLinks = true;
-exports.getLink = function(relation: Relation, instance: any, schema: Schema){
+exports.getLink = function(relation: Relation, instance: Model, schema: Schema){
 	// gets the URI of the link for the given relation based on the instance and schema
 	// for example:
 	// getLink(
@@ -33,7 +33,7 @@ exports.getLink = function(relation: Relation, instance: any, schema: Schema){
 		links = {};
 		var schemaLinks = schema.links;
 		if(schemaLinks && schemaLinks instanceof Array){
-			schemaLinks.forEach(function(link: string){
+			schemaLinks.forEach(function(link: any){
 	/*			// TODO: allow for multiple same-name relations
 				if(links[link.rel]){
 					if(!(links[link.rel] instanceof Array)){
@@ -51,8 +51,8 @@ exports.getLink = function(relation: Relation, instance: any, schema: Schema){
 	return linkTemplate && exports.substitute(linkTemplate, instance);
 };
 
-exports.substitute = function(linkTemplate: any, instance: any){
-	return linkTemplate.replace(/\{([^\}]*)\}/g, function(t: string, property: string){
+exports.substitute = function(linkTemplate: string, instance: any){
+	return linkTemplate.replace(/\{([^\}]*)\}/g, function(t: any, property: string){
 			var value = instance[decodeURIComponent(property)];
 			if(value instanceof Array){
 				// the value is an array, it should produce a URI like /Table/(4,5,8) and store.get() should handle that as an array of values

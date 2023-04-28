@@ -9,7 +9,7 @@ var Pledge = function() {
 
 Pledge.QUEUE_SIZE = 4;
 
-Pledge.all = function(list: List<any>) {
+Pledge.all = function(list: Array<any>) {
   var pledge  = new Pledge(),
       pending = list.length,
       n       = pending;
@@ -23,7 +23,7 @@ Pledge.all = function(list: List<any>) {
   return pledge;
 };
 
-Pledge.prototype.then = function(callback: any) {
+Pledge.prototype.then = function(callback: Function) {
   if (this._complete) callback();
   else this._callbacks.push(callback);
 };

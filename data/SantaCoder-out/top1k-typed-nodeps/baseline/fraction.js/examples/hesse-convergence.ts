@@ -51,7 +51,7 @@ function grad(x: number) {
 }
 
 // A simple matrix multiplication helper
-function matrMult(m: Matrix4, v: Vector3) {
+function matrMult(m: number[][], v: number[]) {
 
   return [
   new Fraction(m[0]).mul(v[0]).add(new Fraction(m[1]).mul(v[1])),
@@ -60,7 +60,7 @@ function matrMult(m: Matrix4, v: Vector3) {
 }
 
 // A simple vector subtraction helper
-function vecSub(a: number[], b: number[]) {
+function vecSub(a: Fraction[], b: Fraction[]) {
 
   return [
   new Fraction(a[0]).sub(b[0]),
@@ -69,7 +69,7 @@ function vecSub(a: number[], b: number[]) {
 }
 
 // Main function, gets a vector and the actual index
-function run(V: number, j: number) {
+function run(V: any, j: any) {
 
   var t = H(V);
   //console.log("H(X)");

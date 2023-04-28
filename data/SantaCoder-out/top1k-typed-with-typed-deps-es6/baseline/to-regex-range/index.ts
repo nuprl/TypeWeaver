@@ -85,7 +85,7 @@ const toRegexRange = (min, max, options) => {
   return state.result;
 };
 
-function collatePatterns(neg: boolean, pos: boolean, options: CollatorOptions) {
+function collatePatterns(neg: boolean, pos: boolean, options: Options) {
   let onlyNegative = filterPatterns(neg, pos, '-', false, options) || [];
   let onlyPositive = filterPatterns(pos, neg, '', false, options) || [];
   let intersected = filterPatterns(neg, pos, '-?', true, options) || [];
@@ -126,7 +126,7 @@ function splitToRanges(min: number, max: number) {
  * @return {String}
  */
 
-function rangeToPattern(start: number, stop: number, options: PatternOptions) {
+function rangeToPattern(start: number, stop: number, options: RangeToPatternOptions) {
   if (start === stop) {
     return { pattern: start, count: [], digits: 0 };
   }
@@ -157,7 +157,7 @@ function rangeToPattern(start: number, stop: number, options: PatternOptions) {
   return { pattern, count: [count], digits };
 }
 
-function splitToPatterns(min: number, max: number, tok: string, options: ITokenOptions) {
+function splitToPatterns(min: number, max: number, tok: string, options: any) {
   let ranges = splitToRanges(min, max);
   let tokens = [];
   let start = min;
@@ -192,7 +192,7 @@ function splitToPatterns(min: number, max: number, tok: string, options: ITokenO
   return tokens;
 }
 
-function filterPatterns(arr: string[], comparison: string, prefix: string, intersection: boolean, options: IntersectionOptions) {
+function filterPatterns(arr: string[], comparison: string, prefix: string, intersection: boolean, options: any) {
   let result = [];
 
   for (let ele of arr) {
@@ -215,7 +215,7 @@ function filterPatterns(arr: string[], comparison: string, prefix: string, inter
  * Zip strings
  */
 
-function zip(a: number[], b: number[]) {
+function zip(a: any[], b: any[]) {
   let arr = [];
   for (let i = 0; i < a.length; i++) arr.push([a[i], b[i]]);
   return arr;
@@ -225,7 +225,7 @@ function compare(a: number, b: number) {
   return a > b ? 1 : b > a ? -1 : 0;
 }
 
-function contains(arr: Array<any>, key: any, val: any) {
+function contains(arr: Array<any>, key: string, val: any) {
   return arr.some(ele => ele[key] === val);
 }
 
@@ -245,7 +245,7 @@ function toQuantifier(digits: number) {
   return '';
 }
 
-function toCharacterClass(a: CharacterClass, b: CharacterClass, options: CharacterClassOptions) {
+function toCharacterClass(a: string, b: string, options: Options) {
   return `[${a}${(b - a === 1) ? '' : '-'}${b}]`;
 }
 
@@ -253,7 +253,7 @@ function hasPadding(str: string) {
   return /^-?(0+)\d/.test(str);
 }
 
-function padZeros(value: number, tok: number, options: any) {
+function padZeros(value: number, tok: string, options: Options) {
   if (!tok.isPadded) {
     return value;
   }

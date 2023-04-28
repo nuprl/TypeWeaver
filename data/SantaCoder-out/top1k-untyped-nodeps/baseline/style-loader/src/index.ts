@@ -125,7 +125,7 @@ ${getInsertOptionCode(insertType, options)}
 options.domAPI = ${getdomAPI(isAuto)};
 options.insertStyleElement = insertStyleElement;
 
-exported.use = function(insertOptions: InsertOptions) {
+exported.use = function(insertOptions: any) {
   options.options = insertOptions || {};
 
   if (!(refs++)) {

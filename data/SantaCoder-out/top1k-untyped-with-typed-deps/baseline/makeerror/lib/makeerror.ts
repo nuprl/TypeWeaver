@@ -12,7 +12,7 @@ BaseError.prototype.toString = function() {
 /**
  * Makes an Error function with the signature:
  *
- *   function(message: IMessage, data: IMessageData)
+ *   function(message: string, data: any)
  *
  * You'll typically do something like:
  *
@@ -40,7 +40,7 @@ function makeError(name: string, defaultMessage: string, defaultData: any) {
   if (defaultData.proto && !(defaultData.proto instanceof BaseError))
     throw new Error('The custom "proto" must be an Error created via makeError')
 
-  var CustomError = function(message: IMessage, data: IMessageData) {
+  var CustomError = function(message: string, data: any) {
     if (!(this instanceof CustomError)) return new CustomError(message, data)
 
     if (typeof message !== 'string' && !data) {

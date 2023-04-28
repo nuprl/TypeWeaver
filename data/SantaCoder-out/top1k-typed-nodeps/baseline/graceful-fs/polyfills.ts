@@ -26,7 +26,7 @@ if (typeof process.chdir === 'function') {
 
 module.exports = patch
 
-function patch (fs: Fs) {
+function patch (fs: any) {
   // (re-)implement some things that are known busted or missing.
 
   // lchmod, broken prior to 0.6.2
@@ -72,13 +72,13 @@ function patch (fs: Fs) {
 
   // if lchmod/lchown do not exist, then make them no-ops
   if (fs.chmod && !fs.lchmod) {
-    fs.lchmod = function (path: string, mode: number, cb: any) {
+    fs.lchmod = function (path: string, mode: number, cb: Function) {
       if (cb) process.nextTick(cb)
     }
     fs.lchmodSync = function () {}
   }
   if (fs.chown && !fs.lchown) {
-    fs.lchown = function (path: string, uid: number, gid: number, cb: any) {
+    fs.lchown = function (path: string, uid: number, gid: number, cb: Function) {
       if (cb) process.nextTick(cb)
     }
     fs.lchownSync = function () {}
@@ -95,7 +95,7 @@ function patch (fs: Fs) {
   // contention to be starved of CPU by node, so the contention doesn't resolve.
   if (platform === "win32") {
     fs.rename = typeof fs.rename !== 'function' ? fs.rename
-    : (function (fs$rename: fs.rename) {
+    : (function (fs$rename: any) {
       function rename (from: string, to: string, cb: any) {
         var start = Date.now()
         var backoff = 0;
@@ -104,7 +104,7 @@ function patch (fs: Fs) {
               && (er.code === "EACCES" || er.code === "EPERM")
               && Date.now() - start < 60000) {
             setTimeout(function() {
-              fs.stat(to, function (stater: Stater, st: Stater) {
+              fs.stat(to, function (stater: State, st: State) {
                 if (stater && stater.code === "ENOENT")
                   fs$rename(from, to, CB);
                 else
@@ -126,11 +126,11 @@ function patch (fs: Fs) {
   // if read() returns EAGAIN, then just try it again.
   fs.read = typeof fs.read !== 'function' ? fs.read
   : (function (fs$read: any) {
-    function read (fd: number, buffer: Uint8Array, offset: number, length: number, position: number, callback_: Function) {
+    function read (fd: number, buffer: Buffer, offset: number, length: number, position: number, callback_: any) {
       var callback
       if (callback_ && typeof callback_ === 'function') {
         var eagCounter = 0
-        callback = function (er: Error, _: any, __: any) {
+        callback = function (er: any, _: any, __: any) {
           if (er && er.code === 'EAGAIN' && eagCounter < 10) {
             eagCounter ++
             return fs$read.call(fs, fd, buffer, offset, length, position, callback)
@@ -147,7 +147,7 @@ function patch (fs: Fs) {
   })(fs.read)
 
   fs.readSync = typeof fs.readSync !== 'function' ? fs.readSync
-  : (function (fs$readSync) { return function (fd: number, buffer: Uint8Array, offset: number, length: number, position: number) {
+  : (function (fs$readSync) { return function (fd: number, buffer: Buffer, offset: number, length: number, position: number) {
     var eagCounter = 0
     while (true) {
       try {
@@ -162,27 +162,27 @@ function patch (fs: Fs) {
     }
   }})(fs.readSync)
 
-  function patchLchmod (fs: FS) {
-    fs.lchmod = function (path: string, mode: string, callback: any) {
+  function patchLchmod (fs: any) {
+    fs.lchmod = function (path: string, mode: number, callback: Function) {
       fs.open( path
              , constants.O_WRONLY | constants.O_SYMLINK
              , mode
-             , function (err: Error, fd: number) {
+             , function (err: any, fd: number) {
         if (err) {
           if (callback) callback(err)
           return
         }
         // prefer to return the chmod error, if one occurs,
         // but still try to close, and report closing errors if they occur.
-        fs.fchmod(fd, mode, function (err: Error) {
-          fs.close(fd, function(err2: Error) {
+        fs.fchmod(fd, mode, function (err: any) {
+          fs.close(fd, function(err2: any) {
             if (callback) callback(err || err2)
           })
         })
       })
     }
 
-    fs.lchmodSync = function (path: string, mode: string) {
+    fs.lchmodSync = function (path: string, mode: number) {
       var fd = fs.openSync(path, constants.O_WRONLY | constants.O_SYMLINK, mode)
 
       // prefer to return the chmod error, if one occurs,
@@ -205,16 +205,16 @@ function patch (fs: Fs) {
     }
   }
 
-  function patchLutimes (fs: FS) {
+  function patchLutimes (fs: any) {
     if (constants.hasOwnProperty("O_SYMLINK") && fs.futimes) {
       fs.lutimes = function (path: string, at: number, mt: number, cb: any) {
-        fs.open(path, constants.O_SYMLINK, function (er: Error, fd: fs.Fdi) {
+        fs.open(path, constants.O_SYMLINK, function (er: Error, fd: number) {
           if (er) {
             if (cb) cb(er)
             return
           }
-          fs.futimes(fd, at, mt, function (er: Error) {
-            fs.close(fd, function (er2: Error) {
+          fs.futimes(fd, at, mt, function (er: any) {
+            fs.close(fd, function (er2: any) {
               if (cb) cb(er || er2)
             })
           })
@@ -246,19 +246,19 @@ function patch (fs: Fs) {
     }
   }
 
-  function chmodFix (orig: fs.Stats) {
+  function chmodFix (orig: Function) {
     if (!orig) return orig
-    return function (target: any, mode: any, cb: any) {
-      return orig.call(fs, target, mode, function (er: Error) {
+    return function (target: string, mode: number, cb: Function) {
+      return orig.call(fs, target, mode, function (er: any) {
         if (chownErOk(er)) er = null
         if (cb) cb.apply(this, arguments)
       })
     }
   }
 
-  function chmodFixSync (orig: fs.Stats) {
+  function chmodFixSync (orig: Function) {
     if (!orig) return orig
-    return function (target: any, mode: any) {
+    return function (target: HTMLElement, mode: string) {
       try {
         return orig.call(fs, target, mode)
       } catch (er) {
@@ -268,17 +268,17 @@ function patch (fs: Fs) {
   }
 
 
-  function chownFix (orig: string) {
+  function chownFix (orig: Function) {
     if (!orig) return orig
-    return function (target: any, uid: string, gid: string, cb: any) {
-      return orig.call(fs, target, uid, gid, function (er: Error) {
+    return function (target: string, uid: number, gid: number, cb: Function) {
+      return orig.call(fs, target, uid, gid, function (er: any) {
         if (chownErOk(er)) er = null
         if (cb) cb.apply(this, arguments)
       })
     }
   }
 
-  function chownFixSync (orig: fs.ChownSync) {
+  function chownFixSync (orig: Function) {
     if (!orig) return orig
     return function (target: string, uid: number, gid: number) {
       try {
@@ -289,11 +289,11 @@ function patch (fs: Fs) {
     }
   }
 
-  function statFix (orig: string) {
+  function statFix (orig: any) {
     if (!orig) return orig
     // Older versions of Node erroneously returned signed integers for
     // uid + gid.
-    return function (target: any, options: any, cb: any) {
+    return function (target: string, options: any, cb: Function) {
       if (typeof options === 'function') {
         cb = options
         options = null
@@ -310,11 +310,11 @@ function patch (fs: Fs) {
     }
   }
 
-  function statFixSync (orig: fs.Stats) {
+  function statFixSync (orig: Function) {
     if (!orig) return orig
     // Older versions of Node erroneously returned signed integers for
     // uid + gid.
-    return function (target: any, options: any) {
+    return function (target: HTMLElement, options: any) {
       var stats = options ? orig.call(fs, target, options)
         : orig.call(fs, target)
       if (stats) {
@@ -337,7 +337,7 @@ function patch (fs: Fs) {
   //
   // When running as root, or if other types of errors are
   // encountered, then it's strict.
-  function chownErOk (er: Error) {
+  function chownErOk (er: any) {
     if (!er)
       return true
 

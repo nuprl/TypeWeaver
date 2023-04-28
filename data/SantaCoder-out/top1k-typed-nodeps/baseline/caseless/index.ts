@@ -1,7 +1,7 @@
-function Caseless (dict: Dictionary<string>) {
+function Caseless (dict: Object) {
   this.dict = dict || {}
 }
-Caseless.prototype.set = function (name: string, value: string, clobber: boolean) {
+Caseless.prototype.set = function (name: string, value: any, clobber: boolean) {
   if (typeof name === 'object') {
     for (var i in name) {
       this.set(i, name[i], value)
@@ -55,8 +55,8 @@ Caseless.prototype.del = function (name: string) {
   return changed === 0 ? true : deleted
 }
 
-module.exports = function (dict: Dict<Caseless>) {return new Caseless(dict)}
-module.exports.httpify = function (resp: AxiosResponse, headers: AxiosRequestConfig) {
+module.exports = function (dict: Object) {return new Caseless(dict)}
+module.exports.httpify = function (resp: any, headers: any) {
   var c = new Caseless(headers)
   resp.setHeader = function (key: string, value: any, clobber: boolean) {
     if (typeof value === 'undefined') return

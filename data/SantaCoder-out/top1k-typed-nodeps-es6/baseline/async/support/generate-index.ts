@@ -10,7 +10,7 @@ generateIndex(err => {
     if (err) throw err
 })
 
-function generateIndex(done: any) {
+function generateIndex(done: Function) {
     autoInject({
         entries: cb => readEntries(cb),
         aliases: cb => loadAliases(cb),
@@ -47,7 +47,7 @@ function readEntries (cb: any) {
     })
 }
 
-function renderTemplate(entries: IEntry[], aliases: IAlias[], template: ITemplate) {
+function renderTemplate(entries: Array<Entry>, aliases: Object, template: string) {
     return template
         .replace(
             `/*__imports__*/`,

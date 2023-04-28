@@ -22,7 +22,7 @@ function faultTolerantResolve(address: string, cb: any) {
   });
 }
 
-faultTolerantResolve('nodejs.org', function(err: Error, errors: Error[], addresses: Address[]) {
+faultTolerantResolve('nodejs.org', function(err: any, errors: any, addresses: any) {
   console.warn('err:');
   console.log(err);
 

@@ -1,6 +1,6 @@
 'use strict';
 
-export default function unique(init: any) {
+export default function unique(init: any[]) {
   var args = [].slice.call(arguments);
   var len = args.length;
 

@@ -3,7 +3,7 @@
 var isValid = (module.exports.isValid = require('./borderWidth').isValid);
 
 module.exports.definition = {
-  set: function(v: number) {
+  set: function(v: T) {
     if (isValid(v)) {
       this._setProperty('border-bottom-width', v);
     }

@@ -73,7 +73,7 @@ request(url, function(error: any, response: any, body: any) {
         ');\n'
     );
 
-    out_file.end(function(err: Error) {
+    out_file.end(function(err: any) {
       if (err) {
         throw err;
       }

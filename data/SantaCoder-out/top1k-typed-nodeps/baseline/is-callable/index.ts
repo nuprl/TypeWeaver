@@ -56,7 +56,7 @@ if (typeof document === 'object') {
 	// Firefox 3 canonicalized DDA to undefined when it's not accessed directly
 	var all = document.all;
 	if (toStr.call(all) === toStr.call(document.all)) {
-		isDDA = function isDocumentDotAll(value: string) {
+		isDDA = function isDocumentDotAll(value: unknown) {
 			/* globals document: false */
 			// in IE 6-8, typeof document.all is "object" and it's truthy
 			if ((isIE68 || !value) && (typeof value === 'undefined' || typeof value === 'object')) {
@@ -72,7 +72,7 @@ if (typeof document === 'object') {
 }
 
 module.exports = reflectApply
-	? function isCallable(value: any) {
+	? function isCallable(value: unknown) {
 		if (isDDA(value)) { return true; }
 		if (!value) { return false; }
 		if (typeof value !== 'function' && typeof value !== 'object') { return false; }
@@ -84,7 +84,7 @@ module.exports = reflectApply
 		}
 		return !isES6ClassFn(value);
 	}
-	: function isCallable(value: any) {
+	: function isCallable(value: unknown) {
 		if (isDDA(value)) { return true; }
 		if (!value) { return false; }
 		if (typeof value !== 'function' && typeof value !== 'object') { return false; }

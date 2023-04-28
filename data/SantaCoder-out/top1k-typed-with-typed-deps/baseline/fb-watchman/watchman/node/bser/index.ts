@@ -22,7 +22,7 @@ function nextPow2(size: number) {
 }
 
 // Expandable buffer that we can provide a size hint for
-function Accumulator(initsize: number) {
+function Accumulator(initsize: Int) {
   this.buf = Buffer.alloc(nextPow2(initsize || 8192));
   this.readOffset = 0;
   this.writeOffset = 0;
@@ -122,7 +122,7 @@ Accumulator.prototype.peekInt = function(size: number) {
   }
 }
 
-Accumulator.prototype.readInt = function(bytes: Uint8Array) {
+Accumulator.prototype.readInt = function(bytes: number) {
   var ival = this.peekInt(bytes);
   if (ival instanceof Int64 && isFinite(ival.valueOf())) {
     ival = ival.valueOf();
@@ -186,7 +186,7 @@ Accumulator.prototype.writeInt = function(value: number, size: number) {
   this.writeOffset += size;
 }
 
-Accumulator.prototype.writeDouble = function(value: BigNumber) {
+Accumulator.prototype.writeDouble = function(value: number) {
   this.reserve(8);
   if (isBigEndian) {
     this.buf.writeDoubleBE(value, this.writeOffset);
@@ -225,7 +225,7 @@ function BunserBuf() {
 util.inherits(BunserBuf, EE);
 exports.BunserBuf = BunserBuf;
 
-BunserBuf.prototype.append = function(buf: Uint8Array, synchronous: boolean) {
+BunserBuf.prototype.append = function(buf: Buffer, synchronous: boolean) {
   if (synchronous) {
     this.buf.append(buf);
     return this.process(synchronous);
@@ -403,7 +403,7 @@ BunserBuf.prototype.decodeString = function() {
 // we don't want to throw.  This is only true when we're reading
 // the PDU length from the PDU header; we'll set relaxSizeAsserts
 // in that case.
-BunserBuf.prototype.decodeInt = function(relaxSizeAsserts: RelaxSizeAsserts) {
+BunserBuf.prototype.decodeInt = function(relaxSizeAsserts: boolean) {
   if (relaxSizeAsserts && (this.buf.readAvail() < 1)) {
     return false;
   } else {
@@ -478,7 +478,7 @@ function dump_int64(buf: Uint8Array, val: number) {
   buf.append(le);
 }
 
-function dump_int(buf: number, val: number) {
+function dump_int(buf: Uint8Array, val: number) {
   var abs = Math.abs(val);
   if (abs <= MAX_INT8) {
     buf.writeByte(BSER_INT8);

@@ -35,7 +35,7 @@ const getAbortedReason = signal => {
 	return reason instanceof Error ? reason : getDOMException(reason);
 };
 
-export default function pTimeout(promise: Promise<T>, options: PTimeoutOptions) {
+export default function pTimeout(promise: Promise<any>, options: TimeoutOptions) {
 	const {
 		milliseconds,
 		fallback,

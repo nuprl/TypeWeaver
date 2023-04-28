@@ -26,7 +26,7 @@
  * func(10, 5)
  * // => [100, 10]
  */
-function overArgs(func: Function, transforms: any[]) {
+function overArgs(func: Function, transforms: Function[]) {
   const funcsLength = transforms.length
   return function(...args: any[]) {
     let index = -1

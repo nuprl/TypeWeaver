@@ -37,7 +37,7 @@ const Import = 0;
 const ExportAssign = 1;
 const ExportStar = 2;
 
-function parseCJS (source: string, name = '@': '') {
+function parseCJS (source: string, name = '@': string) {
   resetState();
   try {
     parseSource(source);
@@ -869,7 +869,7 @@ function tryParseModuleExportsDotAssign () {
   pos = revertPos;
 }
 
-function tryParseExportsDotAssign (assign: string) {
+function tryParseExportsDotAssign (assign: Node) {
   pos += 7;
   const revertPos = pos - 1;
   let ch = commentWhitespace();
@@ -1080,7 +1080,7 @@ const astralIdentifierCodes = [509,0,227,0,150,4,294,9,1368,2,2,1,6,3,41,2,5,0,1
 // This has a complexity linear to the value of the code. The
 // assumption is that looking up astral identifier characters is
 // rare.
-function isInAstralSet(code: number, set: number) {
+function isInAstralSet(code: number, set: number[]) {
   let pos = 0x10000
   for (let i = 0; i < set.length; i += 2) {
     pos += set[i]
@@ -1307,7 +1307,7 @@ function keywordStart (pos: number) {
   return pos === 0 || isBrOrWsOrPunctuatorNotDot(source.charCodeAt(pos - 1));
 }
 
-function readPrecedingKeyword (pos: number, match: string) {
+function readPrecedingKeyword (pos: number, match: RegExp) {
   if (pos < match.length - 1)
     return false;
   return source.startsWith(match, pos - match.length + 1) && (pos === 0 || isBrOrWsOrPunctuatorNotDot(source.charCodeAt(pos - match.length)));

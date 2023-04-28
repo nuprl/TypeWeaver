@@ -483,7 +483,7 @@ function socketOnError() {
  * @param {Object} [headers] Additional HTTP response headers
  * @private
  */
-function abortHandshake(socket: WebSocket, code: number, message: string, headers: any) {
+function abortHandshake(socket: Socket, code: number, message: string, headers: any) {
   //
   // The socket is writable unless the user destroyed or ended it before calling
   // `server.handleUpgrade()` or in the `verifyClient` function, which is a user
@@ -523,7 +523,7 @@ function abortHandshake(socket: WebSocket, code: number, message: string, header
  * @param {String} message The HTTP response body
  * @private
  */
-function abortHandshakeOrEmitwsClientError(server: WebSocketServer, req: http.IncomingMessage, socket: net.Socket, code: number, message: string) {
+function abortHandshakeOrEmitwsClientError(server: Server, req: IncomingMessage, socket: Socket, code: number, message: string) {
   if (server.listenerCount('wsClientError')) {
     const err = new Error(message);
     Error.captureStackTrace(err, abortHandshakeOrEmitwsClientError);

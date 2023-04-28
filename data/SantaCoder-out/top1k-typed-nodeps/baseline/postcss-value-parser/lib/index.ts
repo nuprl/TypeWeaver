@@ -2,7 +2,7 @@ var parse = require("./parse");
 var walk = require("./walk");
 var stringify = require("./stringify");
 
-function ValueParser(value: string) {
+function ValueParser(value: any) {
   if (this instanceof ValueParser) {
     this.nodes = parse(value);
     return this;
@@ -14,7 +14,7 @@ ValueParser.prototype.toString = function() {
   return Array.isArray(this.nodes) ? stringify(this.nodes) : "";
 };
 
-ValueParser.prototype.walk = function(cb: any, bubble: boolean) {
+ValueParser.prototype.walk = function(cb: Function, bubble: boolean) {
   walk(this.nodes, cb, bubble);
   return this;
 };

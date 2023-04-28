@@ -11,7 +11,7 @@ Diff.prototype = {
 
     let self = this;
 
-    function done(value: any) {
+    function done(value: T) {
       if (callback) {
         setTimeout(function() { callback(undefined, value); }, 0);
         return true;
@@ -174,7 +174,7 @@ Diff.prototype = {
   }
 };
 
-function buildValues(diff: string, components: string[], newString: string, oldString: string, useLongestToken: boolean) {
+function buildValues(diff: DiffResult, components: Component[], newString: string, oldString: string, useLongestToken: boolean) {
   let componentPos = 0,
       componentLen = components.length,
       newPos = 0,
@@ -185,7 +185,7 @@ function buildValues(diff: string, components: string[], newString: string, oldS
     if (!component.removed) {
       if (!component.added && useLongestToken) {
         let value = newString.slice(newPos, newPos + component.count);
-        value = value.map(function(value: number, i: number) {
+        value = value.map(function(value: any, i: number) {
           let oldValue = oldString[oldPos + i];
           return oldValue.length > value.length ? oldValue : value;
         });

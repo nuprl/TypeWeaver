@@ -92,7 +92,7 @@ function getNoMatchScore(value: any) {
 	return score;
 }
 
-export default function lenient(input: string, default_: number) {
+export default function lenient(input: any, default_: any) {
 	if (getYesMatchScore(input) >= YES_MATCH_SCORE_THRESHOLD) {
 		return true;
 	}

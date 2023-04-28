@@ -1,4 +1,4 @@
-function Caseless (dict: Dictionary<string>) {
+function Caseless (dict: any) {
   this.dict = dict || {}
 }
 Caseless.prototype.set = function (name: string, value: any, clobber: boolean) {
@@ -57,13 +57,13 @@ Caseless.prototype.del = function (name: string) {
 
 export default function (dict: any) {return new Caseless(dict)};
 
-export const httpify = function (resp: AxiosResponse, headers: AxiosRequestConfig) {
+export const httpify = function (resp: any, headers: any) {
   var c = new Caseless(headers)
   resp.setHeader = function (key: string, value: any, clobber: boolean) {
     if (typeof value === 'undefined') return
     return c.set(key, value, clobber)
   }
-  resp.hasHeader = function (key: string) {
+  resp.hasHeader = function (key: K) {
     return c.has(key)
   }
   resp.getHeader = function (key: string) {

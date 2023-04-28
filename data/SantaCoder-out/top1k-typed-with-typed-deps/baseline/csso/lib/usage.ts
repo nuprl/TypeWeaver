@@ -1,6 +1,6 @@
 const { hasOwnProperty } = Object.prototype;
 
-function buildMap(list: string[], caseInsensitive: boolean) {
+function buildMap(list: Array<string>, caseInsensitive: boolean) {
     const map = Object.create(null);
 
     if (!Array.isArray(list)) {

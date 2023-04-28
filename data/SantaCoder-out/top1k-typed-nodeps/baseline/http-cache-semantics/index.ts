@@ -66,7 +66,7 @@ function toNumberOrZero(s: string) {
 }
 
 // RFC 5861
-function isErrorResponse(response: AxiosResponse) {
+function isErrorResponse(response: Response) {
     // consider undefined response as faulty
     if(!response) {
         return true
@@ -89,7 +89,7 @@ function parseCacheControl(header: string) {
     return cc;
 }
 
-function formatCacheControl(cc: CacheControl) {
+function formatCacheControl(cc: string) {
     let parts = [];
     for (const k in cc) {
         const v = cc[k];

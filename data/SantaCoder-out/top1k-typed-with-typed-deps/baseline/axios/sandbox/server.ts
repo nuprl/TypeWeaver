@@ -4,7 +4,7 @@ import path from 'path';
 import http from 'http';
 let server;
 
-function pipeFileToResponse(res: Response, file: File, type: string) {
+function pipeFileToResponse(res: Response, file: string, type: string) {
   if (type) {
     res.writeHead(200, {
       'Content-Type': type

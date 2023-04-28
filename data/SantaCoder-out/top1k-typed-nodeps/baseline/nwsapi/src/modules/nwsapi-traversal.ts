@@ -18,7 +18,7 @@
   if (!(previousElement in root)) previousElement = 'previousSibling';
   if (!(parentElement in root)) parentElement = 'parentNode';
 
-  function walkElements(property: string, element: Element, expr: Expression) {
+  function walkElements(property: string, element: Element, expr: string) {
     var i = 0, isIndex = typeof expr == 'number';
     if (typeof expr == 'undefined') {
       isIndex = true;
@@ -42,7 +42,7 @@
    * @param {String | Number} expr CSS expression or an index
    * @return {HTMLElement | null}
    */
-  function up(element: IElement, expr: IExpression) {
+  function up(element: HTMLElement, expr: string) {
     return walkElements(parentElement, element, expr);
   }
   /**
@@ -51,7 +51,7 @@
    * @param {String | Number} expr CSS expression or an index
    * @return {HTMLElement | null}
    */
-  function next(element: any, expr: any) {
+  function next(element: Element, expr: string) {
     return walkElements(nextElement, element, expr);
   }
   /**
@@ -60,7 +60,7 @@
    * @param {String | Number} expr CSS expression or an index
    * @return {HTMLElement | null}
    */
-  function previous(element: IElement, expr: IExpression) {
+  function previous(element: HTMLElement, expr: string) {
     return walkElements(previousElement, element, expr);
   }
   /**

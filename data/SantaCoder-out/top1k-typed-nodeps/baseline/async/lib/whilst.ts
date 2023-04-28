@@ -31,7 +31,7 @@ import awaitify from './internal/awaitify.js'
  *             callback(null, count);
  *         }, 1000);
  *     },
- *     function (err: Error, n: number) {
+ *     function (err: any, n: number) {
  *         // 5 seconds have passed, n = 5
  *     }
  * );
@@ -42,7 +42,7 @@ function whilst(test: Function, iteratee: Function, callback: Function) {
     var _test = wrapAsync(test);
     var results = [];
 
-    function next(err: Error, ...rest: any[]) {
+    function next(err: any, ...rest: any[]) {
         if (err) return callback(err);
         results = rest;
         if (err === false) return;

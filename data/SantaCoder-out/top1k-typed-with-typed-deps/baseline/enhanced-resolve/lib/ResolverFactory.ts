@@ -48,7 +48,7 @@ const UseFilePlugin = require("./UseFilePlugin");
 /** @typedef {string|string[]|false} AliasOptionNewRequest */
 /** @typedef {{[k: string]: AliasOptionNewRequest}} AliasOptions */
 /** @typedef {{[k: string]: string|string[] }} ExtensionAliasOptions */
-/** @typedef {{apply: function(Resolver): void} | function(this: Resolver: any, Resolver: any): void} Plugin */
+/** @typedef {{apply: function(Resolver): void} | function(this: Resolver: Resolver, Resolver: Resolver): void} Plugin */
 
 /**
  * @typedef {Object} UserResolveOptions
@@ -153,7 +153,7 @@ function normalizeAlias(alias: string) {
  * @param {UserResolveOptions} options input options
  * @returns {ResolveOptions} output options
  */
-function createOptions(options: IOptions) {
+function createOptions(options: any) {
 	const mainFieldsSet = new Set(options.mainFields || ["main"]);
 	const mainFields = [];
 
@@ -251,7 +251,7 @@ function createOptions(options: IOptions) {
  * @param {UserResolveOptions} options resolve options
  * @returns {Resolver} created resolver
  */
-exports.createResolver = function (options: IOptions) {
+exports.createResolver = function (options: any) {
 	const normalizedOptions = createOptions(options);
 
 	const {

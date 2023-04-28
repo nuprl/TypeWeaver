@@ -1,13 +1,13 @@
 var BN = require('bn.js')
 var randomBytes = require('randombytes')
 
-function blind (priv: BlindPrivate) {
+function blind (priv: Buffer) {
   var r = getr(priv)
   var blinder = r.toRed(BN.mont(priv.modulus)).redPow(new BN(priv.publicExponent)).fromRed()
   return { blinder: blinder, unblinder: r.invm(priv.modulus) }
 }
 
-function getr (priv: BigNumber) {
+function getr (priv: RSAKeyPrivate) {
   var len = priv.modulus.byteLength()
   var r
   do {
@@ -16,7 +16,7 @@ function getr (priv: BigNumber) {
   return r
 }
 
-function crt (msg: string, priv: string) {
+function crt (msg: string, priv: Buffer) {
   var blinds = blind(priv)
   var len = priv.modulus.byteLength()
   var blinded = new BN(msg).mul(blinds.blinder).umod(priv.modulus)

@@ -42,7 +42,7 @@
   "use strict";
 
   // Set Identity function to downgrade BigInt to Number if needed
-  if (!BigInt) BigInt = function(n: number) { if (isNaN(n)) throw new Error(""); return n; };
+  if (!BigInt) BigInt = function(n: any) { if (isNaN(n)) throw new Error(""); return n; };
 
   const C_ONE = BigInt(1);
   const C_ZERO = BigInt(0);
@@ -62,7 +62,7 @@
     "d": C_ONE
   };
 
-  function assign(n: string, s: string) {
+  function assign(n: number, s: string) {
 
     try {
       n = BigInt(n);
@@ -294,7 +294,7 @@
     P["d"] = d < C_ZERO ? -d : d;
   };
 
-  function modpow(b: number, e: number, m: number) {
+  function modpow(b: bigint, e: bigint, m: bigint) {
 
     let r = C_ONE;
     for (; e > C_ZERO; b = (b * b) % m, e >>= C_ONE) {
@@ -454,7 +454,7 @@
      *
      * Ex: new Fraction("-17.(345)").mul(3) => 5776 / 111
      **/
-    "mul": function(a: Fraction, b: Fraction) {
+    "mul": function(a: string, b: string) {
 
       parse(a, b);
       return newFraction(
@@ -491,7 +491,7 @@
      *
      * Ex: new Fraction('4.(3)').mod([7, 8]) => (13/3) % (7/8) = (5/6)
      **/
-    "mod": function(a: number, b: number) {
+    "mod": function(a: any, b: any) {
 
       if (a === undefined) {
         return newFraction(this["s"] * this["n"] % this["d"], C_ONE);
@@ -632,7 +632,7 @@
      *
      * Ex: new Fraction(19.6).equals([98, 5]);
      **/
-    "equals": function(a: string, b: number) {
+    "equals": function(a: string, b: string) {
 
       parse(a, b);
       return this["s"] * this["n"] * P["d"] === P["s"] * P["n"] * this["d"]; // Same as compare() === 0

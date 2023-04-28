@@ -25,7 +25,7 @@ for (key in Buffer) {
 safer.Buffer.prototype = Buffer.prototype
 
 if (!Safer.from || Safer.from === Uint8Array.from) {
-  Safer.from = function (value: number, encodingOrOffset: number, length: number) {
+  Safer.from = function (value: string, encodingOrOffset: number, length: number) {
     if (typeof value === 'number') {
       throw new TypeError('The "value" argument must not be of type number. Received type ' + typeof value)
     }
@@ -37,7 +37,7 @@ if (!Safer.from || Safer.from === Uint8Array.from) {
 }
 
 if (!Safer.alloc) {
-  Safer.alloc = function (size: number, fill: number, encoding: Encoding) {
+  Safer.alloc = function (size: number, fill: string, encoding: string) {
     if (typeof size !== 'number') {
       throw new TypeError('The "size" argument must be of type number. Received type ' + typeof size)
     }

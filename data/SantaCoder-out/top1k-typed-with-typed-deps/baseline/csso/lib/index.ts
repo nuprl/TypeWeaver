@@ -4,7 +4,7 @@ import * as utils from './utils.js';
 
 const { parse, generate, compress } = syntax;
 
-function debugOutput(name: string, options: DebugOutputOptions, startTime: number, data: any) {
+function debugOutput(name: string, options: any, startTime: number, data: any) {
     if (options.debug) {
         console.error(`## ${name} done in %d ms\n`, Date.now() - startTime);
     }
@@ -12,7 +12,7 @@ function debugOutput(name: string, options: DebugOutputOptions, startTime: numbe
     return data;
 }
 
-function createDefaultLogger(level: LogLevel) {
+function createDefaultLogger(level: string) {
     let lastDebug;
 
     return function logger(title: string, ast: AST) {
@@ -38,7 +38,7 @@ function createDefaultLogger(level: LogLevel) {
     };
 }
 
-function buildCompressOptions(options: ICompressOptions) {
+function buildCompressOptions(options: CompressOptions) {
     options = { ...options };
 
     if (typeof options.logger !== 'function' && options.debug) {
@@ -48,7 +48,7 @@ function buildCompressOptions(options: ICompressOptions) {
     return options;
 }
 
-function runHandler(ast: AST, options: Options, handlers: Handler[]) {
+function runHandler(ast: AST, options: Options, handlers: Handlers) {
     if (!Array.isArray(handlers)) {
         handlers = [handlers];
     }
@@ -56,7 +56,7 @@ function runHandler(ast: AST, options: Options, handlers: Handler[]) {
     handlers.forEach(fn => fn(ast, options));
 }
 
-function minify(context: MinifyContext, source: string, options: MinifyOptions) {
+function minify(context: any, source: string, options: any) {
     options = options || {};
 
     const filename = options.filename || '<unknown>';
@@ -110,11 +110,11 @@ function minify(context: MinifyContext, source: string, options: MinifyOptions) 
     return result;
 }
 
-function minifyStylesheet(source: string, options: MinifyOptions) {
+function minifyStylesheet(source: string, options: Options) {
     return minify('stylesheet', source, options);
 }
 
-function minifyBlock(source: string, options: MinifyOptions) {
+function minifyBlock(source: string, options: Options) {
     return minify('declarationList', source, options);
 }
 

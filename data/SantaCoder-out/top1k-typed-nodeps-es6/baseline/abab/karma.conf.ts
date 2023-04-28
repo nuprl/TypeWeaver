@@ -2,7 +2,7 @@
 
 import webpack from 'webpack';
 
-export default function (config: IConfig) {
+export default function (config: Config) {
   config.set({
     basePath: "",
     files: ["./test/browser.js"],

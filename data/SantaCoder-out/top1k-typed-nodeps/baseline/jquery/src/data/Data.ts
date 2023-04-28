@@ -11,7 +11,7 @@ Data.uid = 1;
 
 Data.prototype = {
 
-	cache: function( owner : string) {
+	cache: function( owner : any) {
 
 		// Check if the owner object already has a cache
 		var value = owner[ this.expando ];
@@ -44,7 +44,7 @@ Data.prototype = {
 
 		return value;
 	},
-	set: function( owner: string, data: string, value : number) {
+	set: function( owner: string, data: string, value : any) {
 		var prop,
 			cache = this.cache( owner );
 
@@ -101,7 +101,7 @@ Data.prototype = {
 		// return the expected data based on which path was taken[*]
 		return value !== undefined ? value : key;
 	},
-	remove: function( owner: any, key : string) {
+	remove: function( owner: T, key : K) {
 		var i,
 			cache = owner[ this.expando ];
 
@@ -148,7 +148,7 @@ Data.prototype = {
 			}
 		}
 	},
-	hasData: function( owner : any) {
+	hasData: function( owner : Object) {
 		var cache = owner[ this.expando ];
 		return cache !== undefined && !jQuery.isEmptyObject( cache );
 	}

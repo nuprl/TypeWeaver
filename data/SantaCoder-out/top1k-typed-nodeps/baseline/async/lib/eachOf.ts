@@ -7,7 +7,7 @@ import wrapAsync from './internal/wrapAsync.js'
 import awaitify from './internal/awaitify.js'
 
 // eachOf implementation optimized for array-likes
-function eachOfArrayLike(coll: ArrayLike<any>, iteratee: any, callback: any) {
+function eachOfArrayLike(coll: any[], iteratee: Function, callback: Function) {
     callback = once(callback);
     var index = 0,
         completed = 0,

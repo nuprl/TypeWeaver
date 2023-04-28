@@ -13,7 +13,7 @@
  * @api public
  */
 
-export default function(a: any, b: any){
+export default function(a: Object, b: Object){
   if (a && b) {
     for (var key in b) {
       a[key] = b[key];

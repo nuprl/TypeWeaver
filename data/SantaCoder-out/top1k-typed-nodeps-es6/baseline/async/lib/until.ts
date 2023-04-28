@@ -40,7 +40,7 @@ import wrapAsync from './internal/wrapAsync.js'
  *     // all pages have been fetched
  * })
  */
-export default function until(test: any, iteratee: any, callback: any) {
+export default function until(test: Function, iteratee: Function, callback: Function) {
     const _test = wrapAsync(test)
     return whilst((cb) => _test((err, truth) => cb (err, !truth)), iteratee, callback);
 }

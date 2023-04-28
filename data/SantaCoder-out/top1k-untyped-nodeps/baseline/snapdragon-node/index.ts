@@ -551,7 +551,7 @@ class Node {
  * Simplified assertion. Throws an error is `value` is not true.
  */
 
-function assert(value: boolean, message: string) {
+function assert(value: any, message: string) {
   if (value !== true) throw new Error(message);
 }
 

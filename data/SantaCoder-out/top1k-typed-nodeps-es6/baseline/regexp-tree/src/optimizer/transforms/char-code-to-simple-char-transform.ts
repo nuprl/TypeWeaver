@@ -78,7 +78,7 @@ function isPrintableASCIIChar(codePoint: number) {
   return codePoint >= 0x20 && codePoint <= 0x7e;
 }
 
-function needsEscape(symbol: Symbol, parentType: SymbolType) {
+function needsEscape(symbol: string, parentType: string) {
   if (parentType === 'ClassRange' || parentType === 'CharacterClass') {
     return /[\]\\^-]/.test(symbol);
   }

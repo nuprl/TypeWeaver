@@ -25,7 +25,7 @@ exports.typeDefs =
     Date: { type: Date, validate: validateDate },
   }
 
-function nopt (types: IOptions, shorthands: IShorthands, args: IArguments, slice: number) {
+function nopt (types: Object, shorthands: Object, args: Array, slice: Number) {
   args = args || process.argv
   types = types || {}
   shorthands = shorthands || {}
@@ -125,7 +125,7 @@ function clean (data: any, types: any, typeDefs: any) {
       }
       debug('validated v', d, v, types[k])
       return d[k]
-    }).filter(function (v: any) {
+    }).filter(function (v: T) {
       return v !== remove
     })
 
@@ -145,7 +145,7 @@ function clean (data: any, types: any, typeDefs: any) {
   })
 }
 
-function validateString (data: any, k: string, val: any) {
+function validateString (data: any, k: string, val: string) {
   data[k] = String(val)
 }
 
@@ -171,7 +171,7 @@ function validatePath (data: any, k: string, val: any) {
   return true
 }
 
-function validateNumber (data: any, k: number, val: any) {
+function validateNumber (data: any, k: string, val: any) {
   debug('validate Number %j %j %j', k, val, isNaN(val))
   if (isNaN(val)) {
     return false
@@ -179,7 +179,7 @@ function validateNumber (data: any, k: number, val: any) {
   data[k] = +val
 }
 
-function validateDate (data: string, k: number, val: string) {
+function validateDate (data: any, k: string, val: any) {
   var s = Date.parse(val)
   debug('validate Date %j %j %j', k, val, s)
   if (isNaN(s)) {
@@ -188,7 +188,7 @@ function validateDate (data: string, k: number, val: string) {
   data[k] = new Date(val)
 }
 
-function validateBoolean (data: any, k: string, val: boolean) {
+function validateBoolean (data: any, k: string, val: any) {
   if (val instanceof Boolean) {
     val = val.valueOf()
   } else if (typeof val === 'string') {
@@ -205,7 +205,7 @@ function validateBoolean (data: any, k: string, val: boolean) {
   data[k] = val
 }
 
-function validateUrl (data: any, k: string, val: any) {
+function validateUrl (data: any, k: string, val: string) {
   // Changing this would be a breaking change in the npm cli
   /* eslint-disable-next-line node/no-deprecated-api */
   val = url.parse(String(val))
@@ -294,7 +294,7 @@ function validate (data: any, k: string, val: any, type: string, typeDefs: any) 
   return ok
 }
 
-function parse (args: string[], data: string, remain: string[], types: string[], shorthands: string[]) {
+function parse (args: string, data: any, remain: string[], types: string[], shorthands: string[]) {
   debug('parse', args, data, remain)
 
   var abbrevs = abbrev(Object.keys(types))
@@ -449,7 +449,7 @@ function parse (args: string[], data: string, remain: string[], types: string[],
   }
 }
 
-function resolveShort (arg: string, shorthands: AbbrShorthand[], shortAbbr: AbbrShorthand[], abbrevs: AbbrShorthand[]) {
+function resolveShort (arg: string, shorthands: any, shortAbbr: any, abbrevs: any) {
   // handle single-char shorthands glommed together, like
   // npm ls -glp, but only if there is one dash, and only if
   // all of the chars are single-char shorthands, and it's
@@ -476,7 +476,7 @@ function resolveShort (arg: string, shorthands: AbbrShorthand[], shortAbbr: Abbr
   if (!singles) {
     singles = Object.keys(shorthands).filter(function (s: string) {
       return s.length === 1
-    }).reduce(function (l: number, r: number) {
+    }).reduce(function (l: any, r: any) {
       l[r] = true
       return l
     }, {})
@@ -491,7 +491,7 @@ function resolveShort (arg: string, shorthands: AbbrShorthand[], shortAbbr: Abbr
   if (chrs.join('') === arg) {
     return chrs.map(function (c: string) {
       return shorthands[c]
-    }).reduce(function (l: number, r: number) {
+    }).reduce(function (l: T[], r: T[]) {
       return l.concat(r)
     }, [])
   }

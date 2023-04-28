@@ -4,14 +4,14 @@ import finalPropName from "../css/finalPropName.js";
 
 import "../css.js";
 
-function Tween( elem: HTMLElement, options: IOptions, prop: string, end: number, easing : string) {
+function Tween( elem: HTMLElement, options: any, prop: string, end: any, easing : string) {
 	return new Tween.prototype.init( elem, options, prop, end, easing );
 }
 jQuery.Tween = Tween;
 
 Tween.prototype = {
 	constructor: Tween,
-	init: function( elem: HTMLElement, options: AnimationOptions, prop: string, end: number, easing: string, unit : string) {
+	init: function( elem: HTMLElement, options: any, prop: string, end: any, easing: string, unit : string) {
 		this.elem = elem;
 		this.prop = prop;
 		this.easing = easing || jQuery.easing._default;
@@ -57,7 +57,7 @@ Tween.prototype.init.prototype = Tween.prototype;
 
 Tween.propHooks = {
 	_default: {
-		get: function( tween : TweenLite.Tween) {
+		get: function( tween : Tween) {
 			var result;
 
 			// Use a property on the element directly when it is not a DOM element,
@@ -76,7 +76,7 @@ Tween.propHooks = {
 			// Empty strings, null, undefined and "auto" are converted to 0.
 			return !result || result === "auto" ? 0 : result;
 		},
-		set: function( tween : TweenLite.Tween) {
+		set: function( tween : Tween) {
 
 			// Use step hook for back compat.
 			// Use cssHook if its there.

@@ -52,7 +52,7 @@ process.stdin.on("end", function() {
         }
 
         try {
-            forAllChars(converter, function(valid: boolean, inp: string, outp: string) {
+            forAllChars(converter, function(valid: boolean, inp: any, outp: any) {
                 res.isASCII = res.isASCII && (inp[0] >= 0x80 || (valid && (inp[0] == outp[0])));
                 res.isSBCS = res.isSBCS && (inp.length == 1);
                 res.isDBCS = res.isDBCS && (((inp.length == 1) && (inp[0] < 0x80 || !valid)) || ((inp.length == 2) && inp[0] >= 0x80));
@@ -91,7 +91,7 @@ process.stdin.resume();
 
 // Make all valid input combinations for a given encoding and call fn with it.
 // fn(valid, input, output)
-function forAllChars(converter: any, fn: any, origbuf: any, len: number) {
+function forAllChars(converter: any, fn: any, origbuf: any, len: any) {
     var buf = origbuf.slice(0, len);
     for (var i = 0; i < 0x100; i++) {
         buf[len-1] = i;

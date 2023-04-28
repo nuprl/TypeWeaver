@@ -3,7 +3,7 @@
 import { promisify } from 'util';
 
 const handler = {
-  get: function (target: any, prop: string, receiver: any) {
+  get: function (target: any, prop: any, receiver: any) {
     if (typeof target[prop] !== 'function') {
       return target[prop]
     }
@@ -14,7 +14,7 @@ const handler = {
     }
     return function () {
       return new Promise((resolve, reject) => {
-        Reflect.get(target, prop, receiver).apply(target, [...arguments, function (err: Error, result: any) {
+        Reflect.get(target, prop, receiver).apply(target, [...arguments, function (err: any, result: any) {
           if (err) {
             return reject(err)
           }

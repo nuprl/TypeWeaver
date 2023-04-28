@@ -103,38 +103,38 @@ async.eachSeries(versionNames, cloneVersion, (err) => {
     });
 });
 
-function runSuite(suite: TestSuite, callback: any) {
+function runSuite(suite: Suite, callback: any) {
     suite.on("complete", () => {
         callback();
     }).run({async: true});
 }
 
-function setDefaultOptions(suiteConfig: ITestConfig) {
+function setDefaultOptions(suiteConfig: SuiteConfig) {
     suiteConfig.args = suiteConfig.args || [[]];
     suiteConfig.setup = suiteConfig.setup || function () {};
     return suiteConfig;
 }
 
-function handleMultipleArgs(list: string[], suiteConfig: ITestConfig) {
+function handleMultipleArgs(list: Array<any>, suiteConfig: SuiteConfig) {
     return list.concat(suiteConfig.args.map((suiteArgs) => {
         return _.defaults({args: suiteArgs}, suiteConfig);
     }));
 }
 
-function setName(suiteConfig: ITestConfig) {
+function setName(suiteConfig: SuiteConfig) {
     suiteConfig.name = suiteConfig.name + "(" + suiteConfig.args.join(",") + ")";
     return suiteConfig;
 }
 
-function matchesGrep(suiteConfig: ITestConfig) {
+function matchesGrep(suiteConfig: SuiteConfig) {
     return !!grep.exec(suiteConfig.name);
 }
 
-function doesNotMatch(suiteConfig: ITestConfig) {
+function doesNotMatch(suiteConfig: SuiteConfig) {
     return !reject.exec(suiteConfig.name);
 }
 
-function createSuite(suiteConfig: ITestConfig) {
+function createSuite(suiteConfig: SuiteConfig) {
     var suite = new Benchmark.Suite();
     var errored = false;
 
@@ -203,7 +203,7 @@ function requireVersion(tag: string) {
     return require("./versions/" + tag + "/");
 }
 
-function cloneVersion(tag: string, callback: any) {
+function cloneVersion(tag: string, callback: Function) {
     if (tag === "current") return callback();
 
     var versionDir = __dirname + "/versions/" + tag;

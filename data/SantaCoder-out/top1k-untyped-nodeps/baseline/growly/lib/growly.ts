@@ -132,7 +132,7 @@ Growly.prototype.register = function(appname: string, appicon: string, notificat
  *
  * Example notification:
  *
- *     growl.notify('Stuffs broken!', { label: 'warning' }, function(err: Error, action: Action) {
+ *     growl.notify('Stuffs broken!', { label: 'warning' }, function(err: any, action: any) {
  *         console.log('Action:', action);
  *     });
  *
@@ -142,13 +142,13 @@ Growly.prototype.register = function(appname: string, appicon: string, notificat
  * @api public
  */
 
-Growly.prototype.notify = function(text: string, opts: ITextFileOptions, callback: any) {
+Growly.prototype.notify = function(text: string, opts: any, callback: Function) {
     var self = this,
         gntp;
 
     /* Lazy registration. */
     if (!this.registered) {
-        this.register(this.appname, function(err: Error) {
+        this.register(this.appname, function(err: any) {
             if (err) console.log(err);
             self.notify.call(self, text, opts, callback);
         });
@@ -177,7 +177,7 @@ Growly.prototype.notify = function(text: string, opts: ITextFileOptions, callbac
     gntp.add('Notification-Callback-Target', undefined);
     gntp.newline();
 
-    gntp.send(function(err: Error, resp: AxiosResponse) {
+    gntp.send(function(err: any, resp: any) {
         if (callback && err) {
             callback(err);
         } else if (callback && resp.state === 'CALLBACK') {

@@ -14,7 +14,7 @@ let _lastMSecs = 0;
 let _lastNSecs = 0;
 
 // See https://github.com/uuidjs/uuid for API details
-function v1(options: V1Options, buf: Uint8Array, offset: number) {
+function v1(options: any, buf: any, offset: any) {
   let i = (buf && offset) || 0;
   const b = buf || new Array(16);
 

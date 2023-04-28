@@ -1,4 +1,4 @@
-(function(window: Window, document: Document) {
+(function(window: any, document: any) {
 
   var inputs = document.getElementsByTagName('input');
   var textareas = document.getElementsByTagName('textarea');

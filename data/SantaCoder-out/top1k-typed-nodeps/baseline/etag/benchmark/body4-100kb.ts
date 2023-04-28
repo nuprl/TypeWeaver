@@ -42,11 +42,11 @@ suite.add({
   fn: 'var val = etag(string, {weak: true})'
 })
 
-suite.on('start', function onCycle (event: CycleEvent) {
+suite.on('start', function onCycle (event: Event) {
   process.stdout.write('  100KB body\n\n')
 })
 
-suite.on('cycle', function onCycle (event: BenchmarkEvent) {
+suite.on('cycle', function onCycle (event: Event) {
   benchmarks.add(event.target)
 })
 

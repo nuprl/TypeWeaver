@@ -46,15 +46,15 @@ class HookMap {
 	}
 }
 
-HookMap.prototype.tap = util.deprecate(function(key: string, options: IOptions, fn: any) {
+HookMap.prototype.tap = util.deprecate(function(key: string, options: any, fn: any) {
 	return this.for(key).tap(options, fn);
 }, "HookMap#tap(key,…) is deprecated. Use HookMap#for(key).tap(…) instead.");
 
-HookMap.prototype.tapAsync = util.deprecate(function(key: string, options: IOptions, fn: any) {
+HookMap.prototype.tapAsync = util.deprecate(function(key: string, options: any, fn: any) {
 	return this.for(key).tapAsync(options, fn);
 }, "HookMap#tapAsync(key,…) is deprecated. Use HookMap#for(key).tapAsync(…) instead.");
 
-HookMap.prototype.tapPromise = util.deprecate(function(key: string, options: IOptions, fn: any) {
+HookMap.prototype.tapPromise = util.deprecate(function(key: string, options: any, fn: any) {
 	return this.for(key).tapPromise(options, fn);
 }, "HookMap#tapPromise(key,…) is deprecated. Use HookMap#for(key).tapPromise(…) instead.");
 

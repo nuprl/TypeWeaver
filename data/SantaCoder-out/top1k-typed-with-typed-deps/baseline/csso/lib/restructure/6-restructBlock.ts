@@ -71,7 +71,7 @@ const NEEDLESS_TABLE = {
     'list-style-image': ['list-style']
 };
 
-function getPropertyFingerprint(propertyName: string, declaration: Declaration, fingerprints: Fingerprints) {
+function getPropertyFingerprint(propertyName: string, declaration: ts.Declaration, fingerprints: string[]) {
     const realName = resolveProperty(propertyName).basename;
 
     if (realName === 'background') {
@@ -200,7 +200,7 @@ function getPropertyFingerprint(propertyName: string, declaration: Declaration, 
     return propertyName + fingerprint;
 }
 
-function needless(props: NeedlessProps, declaration: Declaration, fingerprints: Fingerprints) {
+function needless(props: Object, declaration: Object, fingerprints: Object) {
     const property = resolveProperty(declaration.property);
 
     if (NEEDLESS_TABLE.hasOwnProperty(property.basename)) {
@@ -217,10 +217,10 @@ function needless(props: NeedlessProps, declaration: Declaration, fingerprints: 
     }
 }
 
-function processRule(rule: Rule, item: Item, list: List, props: ItemProps, fingerprints: Fingerprints) {
+function processRule(rule: Rule, item: Item, list: Item[], props: Props, fingerprints: Fingerprints) {
     const declarations = rule.block.children;
 
-    declarations.forEachRight(function(declaration: Declaration, declarationItem: DeclarationItem) {
+    declarations.forEachRight(function(declaration: any, declarationItem: any) {
         const { property } = declaration;
         const fingerprint = getPropertyFingerprint(property, declaration, fingerprints);
         const prev = props[fingerprint];

@@ -294,7 +294,7 @@
     P["d"] = d < C_ZERO ? -d : d;
   };
 
-  function modpow(b: BigNumber, e: BigNumber, m: BigNumber) {
+  function modpow(b: bigint, e: bigint, m: bigint) {
 
     let r = C_ONE;
     for (; e > C_ZERO; b = (b * b) % m, e >>= C_ONE) {
@@ -377,7 +377,7 @@
    * @param {number|Fraction=} a
    * @param {number=} b
    */
-  function Fraction(a: string, b: string) {
+  function Fraction(a: number, b: number) {
 
     parse(a, b);
 
@@ -468,7 +468,7 @@
      *
      * Ex: new Fraction("-17.(345)").inverse().div(3)
      **/
-    "div": function(a: string, b: string) {
+    "div": function(a: Fraction, b: Fraction) {
 
       parse(a, b);
       return newFraction(
@@ -491,7 +491,7 @@
      *
      * Ex: new Fraction('4.(3)').mod([7, 8]) => (13/3) % (7/8) = (5/6)
      **/
-    "mod": function(a: number, b: number) {
+    "mod": function(a: any, b: any) {
 
       if (a === undefined) {
         return newFraction(this["s"] * this["n"] % this["d"], C_ONE);
@@ -541,7 +541,7 @@
      *
      * Ex: new Fraction(5,8).lcm(3,7) => 15
      */
-    "lcm": function(a: string, b: number) {
+    "lcm": function(a: string, b: string) {
 
       parse(a, b);
 
@@ -670,7 +670,7 @@
      *
      * Ex: new Fraction('4.(3)').floor() => (4 / 1)
      **/
-    "floor": function(places: BigInt) {
+    "floor": function(places: number) {
 
       places = C_TEN ** BigInt(places || 0);
 

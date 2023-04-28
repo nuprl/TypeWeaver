@@ -2,7 +2,7 @@
 
 var isNative = /\.node$/;
 
-function forEach(obj: any, callback: Function) {
+function forEach(obj: Object, callback: Function) {
     for ( var key in obj ) {
         if (!Object.prototype.hasOwnProperty.call(obj, key)) {
             continue;
@@ -18,7 +18,7 @@ function assign(target: any, source: any) {
     return target;
 }
 
-function clearCache(requireCache: boolean) {
+function clearCache(requireCache: any) {
     forEach(requireCache, function (resolvedPath: string) {
         if (!isNative.test(resolvedPath)) {
             delete requireCache[resolvedPath];
@@ -26,7 +26,7 @@ function clearCache(requireCache: boolean) {
     });
 }
 
-export default function (requireCache: RequireCache, callback: any, callbackForModulesToKeep: any, module: any) {
+export default function (requireCache: any, callback: any, callbackForModulesToKeep: any, module: any) {
 
     var originalCache = assign({}, requireCache);
     clearCache(requireCache);

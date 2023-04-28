@@ -27,7 +27,7 @@ module.exports.Negotiator = Negotiator;
  * @public
  */
 
-function Negotiator(request: any) {
+function Negotiator(request: IncomingMessage) {
   if (!(this instanceof Negotiator)) {
     return new Negotiator(request);
   }
@@ -49,7 +49,7 @@ Negotiator.prototype.encoding = function encoding(available: string[]) {
   return set && set[0];
 };
 
-Negotiator.prototype.encodings = function encodings(available: Encoding[]) {
+Negotiator.prototype.encodings = function encodings(available: string[]) {
   return preferredEncodings(this.request.headers['accept-encoding'], available);
 };
 
@@ -62,12 +62,12 @@ Negotiator.prototype.languages = function languages(available: string[]) {
   return preferredLanguages(this.request.headers['accept-language'], available);
 };
 
-Negotiator.prototype.mediaType = function mediaType(available: string[]) {
+Negotiator.prototype.mediaType = function mediaType(available: Array<MediaType>) {
   var set = this.mediaTypes(available);
   return set && set[0];
 };
 
-Negotiator.prototype.mediaTypes = function mediaTypes(available: string[]) {
+Negotiator.prototype.mediaTypes = function mediaTypes(available: MediaTypes) {
   return preferredMediaTypes(this.request.headers.accept, available);
 };
 

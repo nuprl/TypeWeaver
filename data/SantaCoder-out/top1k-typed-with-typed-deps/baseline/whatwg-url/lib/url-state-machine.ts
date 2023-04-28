@@ -415,7 +415,7 @@ function findLongestZeroSequence(arr: number[]) {
   return maxIdx;
 }
 
-function serializeHost(host: Host) {
+function serializeHost(host: string) {
   if (typeof host === "number") {
     return serializeIPv4(host);
   }
@@ -653,7 +653,7 @@ URLStateMachine.prototype["parse path or authority"] = function parsePathOrAutho
   return true;
 };
 
-URLStateMachine.prototype["parse relative"] = function parseRelative(c: string) {
+URLStateMachine.prototype["parse relative"] = function parseRelative(c: Context) {
   this.url.scheme = this.base.scheme;
   if (c === p("/")) {
     this.state = "relative slash";
@@ -864,7 +864,7 @@ function startsWithWindowsDriveLetter(input: string, pointer: number) {
     (length === 2 || fileOtherwiseCodePoints.has(input[pointer + 2]));
 }
 
-URLStateMachine.prototype["parse file"] = function parseFile(c: Compiler) {
+URLStateMachine.prototype["parse file"] = function parseFile(c: Context) {
   this.url.scheme = "file";
   this.url.host = "";
 
@@ -924,7 +924,7 @@ URLStateMachine.prototype["parse file slash"] = function parseFileSlash(c: strin
   return true;
 };
 
-URLStateMachine.prototype["parse file host"] = function parseFileHost(c: CompilerHost, cStr: string) {
+URLStateMachine.prototype["parse file host"] = function parseFileHost(c: string, cStr: string) {
   if (isNaN(c) || c === p("/") || c === p("\\") || c === p("?") || c === p("#")) {
     --this.pointer;
     if (!this.stateOverride && isWindowsDriveLetterString(this.buffer)) {
@@ -1141,7 +1141,7 @@ function serializeURL(url: string, excludeFragment: boolean) {
   return output;
 }
 
-function serializeOrigin(tuple: OriginTuple) {
+function serializeOrigin(tuple: Origin) {
   let result = `${tuple.scheme}://`;
   result += serializeHost(tuple.host);
 
@@ -1152,7 +1152,7 @@ function serializeOrigin(tuple: OriginTuple) {
   return result;
 }
 
-function serializePath(url: string) {
+function serializePath(url: URL) {
   if (hasAnOpaquePath(url)) {
     return url.path;
   }
@@ -1203,7 +1203,7 @@ module.exports.serializeURLOrigin = function (url: string) {
   }
 };
 
-module.exports.basicURLParse = function (input: string, options: IOptions) {
+module.exports.basicURLParse = function (input: string, options: Options) {
   if (options === undefined) {
     options = {};
   }
@@ -1234,7 +1234,7 @@ module.exports.serializeInteger = function (integer: number) {
   return String(integer);
 };
 
-module.exports.parseURL = function (input: string, options: IOptions) {
+module.exports.parseURL = function (input: string, options: Options) {
   if (options === undefined) {
     options = {};
   }

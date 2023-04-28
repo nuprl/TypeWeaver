@@ -50,11 +50,11 @@ suite.add({
   setup: 'req = createReq(url)'
 })
 
-suite.on('start', function onCycle (event: CycleEvent) {
+suite.on('start', function onCycle (event: Event) {
   process.stdout.write('  Parsing URL ' + JSON.stringify(global.url) + ' on same request object\n\n')
 })
 
-suite.on('cycle', function onCycle (event: CycleEvent) {
+suite.on('cycle', function onCycle (event: Event) {
   benchmarks.add(event.target)
 })
 

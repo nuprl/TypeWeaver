@@ -48,7 +48,7 @@ CSSStyleDeclaration.prototype = {
    * @param {string} [priority=null] "important" or null
    * @see http://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSStyleDeclaration-setProperty
    */
-  setProperty: function(name: string, value: any, priority: number) {
+  setProperty: function(name: string, value: any, priority: string) {
     if (value === undefined) {
       return;
     }
@@ -69,7 +69,7 @@ CSSStyleDeclaration.prototype = {
     this[lowercaseName] = value;
     this._importants[lowercaseName] = priority;
   },
-  _setProperty: function(name: string, value: any, priority: number) {
+  _setProperty: function(name: string, value: string, priority: string) {
     if (value === undefined) {
       return;
     }
@@ -156,7 +156,7 @@ CSSStyleDeclaration.prototype = {
   /**
    *   http://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSStyleDeclaration-item
    */
-  item: function(index: number) {
+  item: function(index: string) {
     index = parseInt(index, 10);
     if (index < 0 || index >= this._length) {
       return '';

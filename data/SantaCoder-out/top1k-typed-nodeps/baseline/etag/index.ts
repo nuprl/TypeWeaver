@@ -36,7 +36,7 @@ var toString = Object.prototype.toString
  * @private
  */
 
-function entitytag (entity: Entity) {
+function entitytag (entity: string) {
   if (entity.length === 0) {
     // fast-path empty
     return '"0-2jmj7l5rSw0yVb/vlWAYkK/YBwk"'
@@ -67,7 +67,7 @@ function entitytag (entity: Entity) {
  * @public
  */
 
-function etag (entity: Entity, options: EtagOptions) {
+function etag (entity: any, options: any) {
   if (entity == null) {
     throw new TypeError('argument entity is required')
   }
@@ -123,7 +123,7 @@ function isstats (obj: any) {
  * @private
  */
 
-function stattag (stat: string) {
+function stattag (stat: Stat) {
   var mtime = stat.mtime.getTime().toString(16)
   var size = stat.size.toString(16)
 

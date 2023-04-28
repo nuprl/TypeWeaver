@@ -130,7 +130,7 @@ forEach(Object_keys(Script.prototype), function (name: string) {
     };
 });
 
-exports.isContext = function (context: Context) {
+exports.isContext = function (context: any) {
     return context instanceof Context;
 };
 

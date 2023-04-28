@@ -1,5 +1,5 @@
 /* istanbul ignore next  */
-function apply(styleElement: HTMLStyleElement, options: StyleApplyOptions, obj: any) {
+function apply(styleElement: HTMLElement, options: any, obj: any) {
   let css = "";
 
   if (obj.supports) {
@@ -53,7 +53,7 @@ function removeStyleElement(styleElement: HTMLStyleElement) {
 }
 
 /* istanbul ignore next  */
-function domAPI(options: DomAPIOptions) {
+function domAPI(options: Options) {
   const styleElement = options.insertStyleElement(options);
 
   return {

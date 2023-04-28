@@ -29,7 +29,7 @@ Reporter.prototype.restore = function restore(data: any) {
   state.path = state.path.slice(0, data.pathLen);
 };
 
-Reporter.prototype.enterKey = function enterKey(key: number) {
+Reporter.prototype.enterKey = function enterKey(key: string) {
   return this._reporterState.path.push(key);
 };
 
@@ -59,7 +59,7 @@ Reporter.prototype.enterObject = function enterObject() {
   return prev;
 };
 
-Reporter.prototype.leaveObject = function leaveObject(prev: State) {
+Reporter.prototype.leaveObject = function leaveObject(prev: Object) {
   const state = this._reporterState;
 
   const now = state.obj;

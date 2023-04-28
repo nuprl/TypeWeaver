@@ -10,7 +10,7 @@ if (!iteratorSymbol) {
 	throw new Error("Cannot initialize iterator/is due to Symbol.iterator not being implemented");
 }
 
-module.exports = function (value/*: string, options*/: any) {
+module.exports = function (value/*: any, options*/: any) {
 	var options = arguments[1];
 	if (!isObject(value)) {
 		if (!isObject(options) || !options.allowString || typeof value !== "string") return false;

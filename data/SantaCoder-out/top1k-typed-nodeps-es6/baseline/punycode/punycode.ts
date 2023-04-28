@@ -38,7 +38,7 @@ const stringFromCharCode = String.fromCharCode;
  * @param {String} type The error type.
  * @returns {Error} Throws a `RangeError` with the applicable error message.
  */
-function error(type: "invalid-argument") {
+function error(type: string) {
 	throw new RangeError(errors[type]);
 }
 
@@ -50,7 +50,7 @@ function error(type: "invalid-argument") {
  * item.
  * @returns {Array} A new array of values returned by the callback function.
  */
-function map(array: any[], fn: any) {
+function map(array: any[], fn: Function) {
 	const result = [];
 	let length = array.length;
 	while (length--) {
@@ -165,7 +165,7 @@ const basicToDigit = function(codePoint: number) {
  * used; else, the lowercase form is used. The behavior is undefined
  * if `flag` is non-zero and `digit` has no uppercase form.
  */
-const digitToBasic = function(digit: number, flag: number) {
+const digitToBasic = function(digit: number, flag: boolean) {
 	//  0..25 map to ASCII a..z or A..Z
 	// 26..35 map to ASCII 0..9
 	return digit + 22 + 75 * (digit < 26) - ((flag != 0) << 5);
@@ -284,7 +284,7 @@ const decode = function(input: string) {
  * @param {String} input The string of Unicode symbols.
  * @returns {String} The resulting Punycode string of ASCII-only symbols.
  */
-const encode = function(input: number) {
+const encode = function(input: string) {
 	const output = [];
 
 	// Convert the input in UCS-2 to an array of Unicode code points.

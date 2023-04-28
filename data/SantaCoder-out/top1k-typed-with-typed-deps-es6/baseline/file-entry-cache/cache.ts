@@ -53,7 +53,7 @@ export default {
        * @param  {String}  file  the filepath to check
        * @return {Boolean}       wheter or not the file has changed
        */
-      hasFileChanged: function (file: string) {
+      hasFileChanged: function (file: File) {
         return this.getFileDescriptor(file).changed;
       },
 
@@ -76,7 +76,7 @@ export default {
           notChangedFiles: [],
         };
 
-        me.normalizeEntries(files).forEach(function (entry: IFileEntry) {
+        me.normalizeEntries(files).forEach(function (entry: any) {
           if (entry.changed) {
             res.changedFiles.push(entry.key);
             return;
@@ -133,7 +133,7 @@ export default {
         return nEntry;
       },
 
-      _getFileDescriptorUsingChecksum: function (file: IFile) {
+      _getFileDescriptorUsingChecksum: function (file: string) {
         var meta = cache.getKey(file);
         var cacheExists = !!meta;
 
@@ -170,16 +170,16 @@ export default {
        * @param files {Array} the array of files to compare against the ones in the cache
        * @returns {Array}
        */
-      getUpdatedFiles: function (files: File[]) {
+      getUpdatedFiles: function (files: Array<File>) {
         var me = this;
         files = files || [];
 
         return me
           .normalizeEntries(files)
-          .filter(function (entry: IFileEntry) {
+          .filter(function (entry: any) {
             return entry.changed;
           })
-          .map(function (entry: IEntry) {
+          .map(function (entry: any) {
             return entry.key;
           });
       },
@@ -194,7 +194,7 @@ export default {
         files = files || [];
 
         var me = this;
-        var nEntries = files.map(function (file: IFile) {
+        var nEntries = files.map(function (file: any) {
           return me.getFileDescriptor(file);
         });
 

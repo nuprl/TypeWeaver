@@ -197,7 +197,7 @@ function getcontenttype (obj: any) {
  * @private
  */
 
-function qstring (val: string) {
+function qstring (val: any) {
   var str = String(val)
 
   // no need to quote tokens

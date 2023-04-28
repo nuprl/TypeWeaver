@@ -20,11 +20,11 @@ function stringify (val: any) {
   return JSON.stringify(val, null, 2)
 }
 
-got(CONST.URL, function (err: Error, data: any, res: AxiosResponse) {
+got(CONST.URL, function (err: any, data: any, res: any) {
   if (err) return exitOnError(err)
   var $ = cheerio.load(data)
 
-  var emojis = $('li').map(function (i: number, el: JQuery) {
+  var emojis = $('li').map(function (i: number, el: HTMLElement) {
     var emoji = $(this).text()
     log.debug('detected', emoji)
     return emoji

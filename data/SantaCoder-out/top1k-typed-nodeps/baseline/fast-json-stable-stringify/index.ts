@@ -1,13 +1,13 @@
 'use strict';
 
-module.exports = function (data: any, opts: AxiosRequestConfig) {
+module.exports = function (data: any, opts: any) {
     if (!opts) opts = {};
     if (typeof opts === 'function') opts = { cmp: opts };
     var cycles = (typeof opts.cycles === 'boolean') ? opts.cycles : false;
 
     var cmp = opts.cmp && (function (f: any) {
         return function (node: Node) {
-            return function (a: number, b: number) {
+            return function (a: any, b: any) {
                 var aobj = { key: a, value: node[a] };
                 var bobj = { key: b, value: node[b] };
                 return f(aobj, bobj);

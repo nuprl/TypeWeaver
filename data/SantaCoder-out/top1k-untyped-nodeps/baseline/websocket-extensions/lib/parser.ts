@@ -20,7 +20,7 @@ var Parser = {
 
     var values = header.match(EXT);
 
-    values.forEach(function(value: number) {
+    values.forEach(function(value: any) {
       var params = value.match(new RegExp(PARAM.source, 'g')),
           name   = params.shift(),
           offer  = {};
@@ -50,7 +50,7 @@ var Parser = {
     return offers;
   },
 
-  serializeParams: function(name: string, params: any) {
+  serializeParams: function(name: string, params: any[]) {
     var values = [];
 
     var print = function(key: string, value: any) {
@@ -78,7 +78,7 @@ var Offers = function() {
   this._inOrder = [];
 };
 
-Offers.prototype.push = function(name: string, params: any) {
+Offers.prototype.push = function(name: string, params: any[]) {
   if (!hasOwnProperty.call(this._byName, name))
     this._byName[name] = [];
 

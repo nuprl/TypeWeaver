@@ -5,7 +5,7 @@ import { every } from './prototypes/array';
 /**
  * @private
  */
-function hasCallsLeft(callMap: any, spy: any) {
+function hasCallsLeft(callMap: SpyMap, spy: Spy) {
     if (callMap[spy.id] === undefined) {
         callMap[spy.id] = 0;
     }
@@ -16,7 +16,7 @@ function hasCallsLeft(callMap: any, spy: any) {
 /**
  * @private
  */
-function checkAdjacentCalls(callMap: CallMap, spy: Spy, index: number, spies: Spy[]) {
+function checkAdjacentCalls(callMap: SpyMap, spy: Spy, index: number, spies: Spy[]) {
     var calledBeforeNext = true;
 
     if (index !== spies.length - 1) {
@@ -46,7 +46,7 @@ function checkAdjacentCalls(callMap: CallMap, spy: Spy, index: number, spies: Sp
  * @param  {SinonProxy[] | SinonProxy} spies An array of proxies, or several proxies as arguments
  * @returns {boolean} true when spies are called in order, false otherwise
  */
-function calledInOrder(spies: any[]) {
+function calledInOrder(spies: Spy[]) {
     var callMap = {};
     // eslint-disable-next-line no-underscore-dangle
     var _spies = arguments.length > 1 ? arguments : spies;

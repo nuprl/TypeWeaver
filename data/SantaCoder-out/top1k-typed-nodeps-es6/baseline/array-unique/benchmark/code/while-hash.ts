@@ -1,6 +1,6 @@
 'use strict';
 
-export default function(arr: number[]) {
+export default function(arr: any[]) {
   var i = arr.length;
 
   var hash = Object.create(null);

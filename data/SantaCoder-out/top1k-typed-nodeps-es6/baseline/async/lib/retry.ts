@@ -75,7 +75,7 @@ function constant(value: any) {
  * // try calling apiMethod only when error condition satisfies, all other
  * // errors will abort the retry control flow and return to final callback
  * async.retry({
- *   errorFilter: function(err: Error) {
+ *   errorFilter: function(err: any) {
  *     return err.message === 'Temporary error'; // only retry on a specific error
  *   }
  * }, apiMethod, function(err: Error, result: any) {
@@ -95,7 +95,7 @@ function constant(value: any) {
 const DEFAULT_TIMES = 5;
 const DEFAULT_INTERVAL = 0;
 
-export default function retry(opts: IRetryOptions, task: ITask, callback: any) {
+export default function retry(opts: RetryOptions, task: Function, callback: Function) {
     var options = {
         times: DEFAULT_TIMES,
         intervalFunc: constant(DEFAULT_INTERVAL)
@@ -133,7 +133,7 @@ export default function retry(opts: IRetryOptions, task: ITask, callback: any) {
     return callback[PROMISE_SYMBOL]
 }
 
-function parseTimes(acc: Times, t: string) {
+function parseTimes(acc: any, t: any) {
     if (typeof t === 'object') {
         acc.times = +t.times || DEFAULT_TIMES;
 

@@ -62,7 +62,7 @@ function runTimeout(fun: any) {
 
 
 }
-function runClearTimeout(marker: number) {
+function runClearTimeout(marker: any) {
     if (cachedClearTimeout === clearTimeout) {
         //normal enviroments in sane situations
         return clearTimeout(marker);
@@ -147,7 +147,7 @@ process.nextTick = function (fun: Function) {
 };
 
 // v8 likes predictible objects
-function Item(fun: Function, array: any) {
+function Item(fun: Function, array: Array<any>) {
     this.fun = fun;
     this.array = array;
 }

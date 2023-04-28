@@ -1,6 +1,6 @@
 "use strict";
 
-module.exports = function( grunt : grunt.grunt) {
+module.exports = function( grunt : any) {
 	var	fs = require( "fs" ),
 		filename = grunt.option( "filename" ),
 		distpaths = [

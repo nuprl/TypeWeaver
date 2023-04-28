@@ -136,7 +136,7 @@ function preferredCharsets(accept: string, provided: string[]) {
   });
 
   // sorted list of accepted charsets
-  return priorities.filter(isQuality).sort(compareSpecs).map(function getCharset(priority: number) {
+  return priorities.filter(isQuality).sort(compareSpecs).map(function getCharset(priority: string) {
     return provided[priorities.indexOf(priority)];
   });
 }
@@ -155,7 +155,7 @@ function compareSpecs(a: Spec, b: Spec) {
  * @private
  */
 
-function getFullCharset(spec: Spec) {
+function getFullCharset(spec: CharsetSpec) {
   return spec.charset;
 }
 
@@ -164,6 +164,6 @@ function getFullCharset(spec: Spec) {
  * @private
  */
 
-function isQuality(spec: QualitySpec) {
+function isQuality(spec: Spec) {
   return spec.q > 0;
 }

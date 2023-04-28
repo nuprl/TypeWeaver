@@ -52,7 +52,7 @@ export default function(worker: Worker, concurrency: number) {
     }
 
     // Override push to accept second parameter representing priority
-    q.push = function(data: any, priority = 0: number, callback: any) {
+    q.push = function(data: any, priority = 0: number, callback: Function) {
         return push(createDataItems(data, priority), callback);
     };
 

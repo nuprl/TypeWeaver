@@ -1,6 +1,6 @@
 import jQuery from "../ajax.js";
 
-jQuery._evalUrl = function( url: string, options: any, doc : string) {
+jQuery._evalUrl = function( url: string, options: any, doc : Document) {
 	return jQuery.ajax( {
 		url: url,
 
@@ -18,7 +18,7 @@ jQuery._evalUrl = function( url: string, options: any, doc : string) {
 		converters: {
 			"text script": function() {}
 		},
-		dataFilter: function( response : AxiosResponse) {
+		dataFilter: function( response : any) {
 			jQuery.globalEval( response, options, doc );
 		}
 	} );

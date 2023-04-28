@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function(arr: number[]) {
+module.exports = function(arr: any[]) {
   var set = [];
 
   for (var i = 0, len = arr.length; i < len; i++) {

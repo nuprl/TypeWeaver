@@ -144,7 +144,7 @@ function applyStyle() {
   return str;
 }
 
-colors.setTheme = function(theme: Theme) {
+colors.setTheme = function(theme: string) {
   if (typeof theme === 'string') {
     console.log('colors.setTheme now only accepts an object, not a string.  ' +
       'If you are trying to set a theme from a file, it is now your (the ' +
@@ -183,7 +183,7 @@ function init() {
   return ret;
 }
 
-var sequencer = function sequencer(map: any, str: string) {
+var sequencer = function sequencer(map: Function, str: string) {
   var exploded = str.split('');
   exploded = exploded.map(map);
   return exploded.join('');
@@ -201,7 +201,7 @@ colors.maps.rainbow = require('./maps/rainbow')(colors);
 colors.maps.random = require('./maps/random')(colors);
 
 for (var map in colors.maps) {
-  (function(map: any) {
+  (function(map: string) {
     colors[map] = function(str: string) {
       return sequencer(colors.maps[map], str);
     };

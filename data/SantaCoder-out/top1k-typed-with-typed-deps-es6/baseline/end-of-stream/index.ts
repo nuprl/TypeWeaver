@@ -2,15 +2,15 @@ import once from 'once';
 
 var noop = function() {};
 
-var isRequest = function(stream: Readable) {
+var isRequest = function(stream: ReadableStream) {
 	return stream.setHeader && typeof stream.abort === 'function';
 };
 
-var isChildProcess = function(stream: Readable) {
+var isChildProcess = function(stream: ReadableStream) {
 	return stream.stdio && Array.isArray(stream.stdio) && stream.stdio.length === 3
 };
 
-var eos = function(stream: Readable, opts: ReadableOptions, callback: any) {
+var eos = function(stream: ReadableStream, opts: any, callback: Function) {
 	if (typeof opts === 'function') return eos(stream, null, opts);
 	if (!opts) opts = {};
 

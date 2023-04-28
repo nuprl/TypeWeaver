@@ -130,7 +130,7 @@ function parse (header: string) {
  * @public
  */
 
-function vary (res: Response, field: string) {
+function vary (res: any, field: string) {
   if (!res || !res.getHeader || !res.setHeader) {
     // quack quack
     throw new TypeError('res argument is required')

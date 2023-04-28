@@ -23,12 +23,12 @@ class AsyncSeriesBailHookCodeFactory extends HookCodeFactory {
 
 const factory = new AsyncSeriesBailHookCodeFactory();
 
-const COMPILE = function(options: IOptions) {
+const COMPILE = function(options: any) {
 	factory.setup(this, options);
 	return factory.create(options);
 };
 
-function AsyncSeriesBailHook(args = []: any, name = undefined: string) {
+function AsyncSeriesBailHook(args = []: any[], name = undefined: string) {
 	const hook = new Hook(args, name);
 	hook.constructor = AsyncSeriesBailHook;
 	hook.compile = COMPILE;

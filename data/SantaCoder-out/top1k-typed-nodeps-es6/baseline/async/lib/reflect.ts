@@ -42,7 +42,7 @@ import wrapAsync from './internal/wrapAsync.js'
  */
 export default function reflect(fn: Function) {
     var _fn = wrapAsync(fn);
-    return initialParams(function reflectOn(args: any, reflectCallback: ReflectCallback) {
+    return initialParams(function reflectOn(args: any[], reflectCallback: Function) {
         args.push((error, ...cbArgs) => {
             let retVal = {};
             if (error) {

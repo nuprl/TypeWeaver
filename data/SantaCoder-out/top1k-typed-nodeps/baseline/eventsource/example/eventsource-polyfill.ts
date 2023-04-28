@@ -131,7 +131,7 @@ function defaultClearTimeout () {
         cachedClearTimeout = defaultClearTimeout;
     }
 } ())
-function runTimeout(fun: any) {
+function runTimeout(fun: Function) {
     if (cachedSetTimeout === setTimeout) {
         //normal enviroments in sane situations
         return setTimeout(fun, 0);
@@ -156,7 +156,7 @@ function runTimeout(fun: any) {
 
 
 }
-function runClearTimeout(marker: number) {
+function runClearTimeout(marker: any) {
     if (cachedClearTimeout === clearTimeout) {
         //normal enviroments in sane situations
         return clearTimeout(marker);
@@ -241,7 +241,7 @@ process.nextTick = function (fun: Function) {
 };
 
 // v8 likes predictible objects
-function Item(fun: Function, array: any[]) {
+function Item(fun: Function, array: Array<any>) {
     this.fun = fun;
     this.array = array;
 }
@@ -282,7 +282,7 @@ process.umask = function() { return 0; };
 
 /***/ }),
 /* 2 */
-/***/ (function(module: any, exports: any) {
+/***/ (function(module: NodeModule, exports: any) {
 
 if (typeof Object.create === 'function') {
   // implementation from standard node.js 'util' module
@@ -299,7 +299,7 @@ if (typeof Object.create === 'function') {
   };
 } else {
   // old school shim for old browsers
-  module.exports = function inherits(ctor: Function, superCtor: Function) {
+  module.exports = function inherits(ctor: any, superCtor: any) {
     ctor.super_ = superCtor
     var TempCtor = function () {}
     TempCtor.prototype = superCtor.prototype
@@ -383,7 +383,7 @@ function kMaxLength () {
     : 0x3fffffff
 }
 
-function createBuffer (that: BufferConstructor, length: number) {
+function createBuffer (that: Uint8Array, length: number) {
   if (kMaxLength() < length) {
     throw new RangeError('Invalid typed array length')
   }
@@ -412,7 +412,7 @@ function createBuffer (that: BufferConstructor, length: number) {
  * The `Uint8Array` prototype remains unmodified.
  */
 
-function Buffer (arg: number, encodingOrOffset: string, length: number) {
+function Buffer (arg: any, encodingOrOffset: any, length: any) {
   if (!Buffer.TYPED_ARRAY_SUPPORT && !(this instanceof Buffer)) {
     return new Buffer(arg, encodingOrOffset, length)
   }
@@ -432,12 +432,12 @@ function Buffer (arg: number, encodingOrOffset: string, length: number) {
 Buffer.poolSize = 8192 // not used by this implementation
 
 // TODO: Legacy, not needed anymore. Remove in next major version.
-Buffer._augment = function (arr: any) {
+Buffer._augment = function (arr: any[]) {
   arr.__proto__ = Buffer.prototype
   return arr
 }
 
-function from (that: IReadable, value: number, encodingOrOffset: string, length: number) {
+function from (that: Readable, value: any, encodingOrOffset: any, length: number) {
   if (typeof value === 'number') {
     throw new TypeError('"value" argument must not be a number')
   }
@@ -461,7 +461,7 @@ function from (that: IReadable, value: number, encodingOrOffset: string, length:
  * Buffer.from(buffer)
  * Buffer.from(arrayBuffer[, byteOffset[, length]])
  **/
-Buffer.from = function (value: number, encodingOrOffset: number, length: number) {
+Buffer.from = function (value: any, encodingOrOffset: number, length: number) {
   return from(null, value, encodingOrOffset, length)
 }
 
@@ -478,7 +478,7 @@ if (Buffer.TYPED_ARRAY_SUPPORT) {
   }
 }
 
-function assertSize (size: number) {
+function assertSize (size: any) {
   if (typeof size !== 'number') {
     throw new TypeError('"size" argument must be a number')
   } else if (size < 0) {
@@ -486,7 +486,7 @@ function assertSize (size: number) {
   }
 }
 
-function alloc (that: Buffer, size: number, fill: number, encoding: string) {
+function alloc (that: Uint8Array, size: number, fill: any, encoding: string) {
   assertSize(size)
   if (size <= 0) {
     return createBuffer(that, size)
@@ -506,11 +506,11 @@ function alloc (that: Buffer, size: number, fill: number, encoding: string) {
  * Creates a new filled Buffer instance.
  * alloc(size[, fill[, encoding]])
  **/
-Buffer.alloc = function (size: number, fill: number, encoding: string) {
+Buffer.alloc = function (size: number, fill: string, encoding: string) {
   return alloc(null, size, fill, encoding)
 }
 
-function allocUnsafe (that: any, size: number) {
+function allocUnsafe (that: Uint8Array, size: number) {
   assertSize(size)
   that = createBuffer(that, size < 0 ? 0 : checked(size) | 0)
   if (!Buffer.TYPED_ARRAY_SUPPORT) {
@@ -534,7 +534,7 @@ Buffer.allocUnsafeSlow = function (size: number) {
   return allocUnsafe(null, size)
 }
 
-function fromString (that: IBuffer, string: string, encoding: string) {
+function fromString (that: Buffer, string: string, encoding: string) {
   if (typeof encoding !== 'string' || encoding === '') {
     encoding = 'utf8'
   }
@@ -558,7 +558,7 @@ function fromString (that: IBuffer, string: string, encoding: string) {
   return that
 }
 
-function fromArrayLike (that: ArrayLike<number>, array: number[]) {
+function fromArrayLike (that: any, array: any) {
   var length = array.length < 0 ? 0 : checked(array.length) | 0
   that = createBuffer(that, length)
   for (var i = 0; i < length; i += 1) {
@@ -567,7 +567,7 @@ function fromArrayLike (that: ArrayLike<number>, array: number[]) {
   return that
 }
 
-function fromArrayBuffer (that: ArrayBuffer, array: number[], byteOffset: number, length: number) {
+function fromArrayBuffer (that: Uint8ArrayConstructor, array: ArrayBuffer, byteOffset: number, length: number) {
   array.byteLength // this throws if `array` is not a valid ArrayBuffer
 
   if (byteOffset < 0 || array.byteLength < byteOffset) {
@@ -648,7 +648,7 @@ Buffer.isBuffer = function isBuffer (b: any) {
   return !!(b != null && b._isBuffer)
 }
 
-Buffer.compare = function compare (a: number, b: number) {
+Buffer.compare = function compare (a: any, b: any) {
   if (!Buffer.isBuffer(a) || !Buffer.isBuffer(b)) {
     throw new TypeError('Arguments must be Buffers')
   }
@@ -839,7 +839,7 @@ function slowToString (encoding: string, start: number, end: number) {
 // Buffer instances.
 Buffer.prototype._isBuffer = true
 
-function swap (b: number, n: number, m: number) {
+function swap (b: any[], n: number, m: number) {
   var i = b[n]
   b[n] = b[m]
   b[m] = i
@@ -905,7 +905,7 @@ Buffer.prototype.inspect = function inspect () {
   return '<Buffer ' + str + '>'
 }
 
-Buffer.prototype.compare = function compare (target: number, start: number, end: number, thisStart: number, thisEnd: number) {
+Buffer.prototype.compare = function compare (target: any, start: any, end: any, thisStart: any, thisEnd: any) {
   if (!Buffer.isBuffer(target)) {
     throw new TypeError('Argument must be a Buffer')
   }
@@ -973,7 +973,7 @@ Buffer.prototype.compare = function compare (target: number, start: number, end:
 // - byteOffset - an index into `buffer`; will be clamped to an int32
 // - encoding - an optional encoding, relevant is val is a string
 // - dir - true for indexOf, false for lastIndexOf
-function bidirectionalIndexOf (buffer: Uint8Array, val: number, byteOffset: number, encoding: string, dir: string) {
+function bidirectionalIndexOf (buffer: Buffer, val: number, byteOffset: number, encoding: string, dir: string) {
   // Empty buffer means no match
   if (buffer.length === 0) return -1
 
@@ -1049,7 +1049,7 @@ function arrayIndexOf (arr: any[], val: any, byteOffset: number, encoding: strin
     }
   }
 
-  function read (buf: Uint8Array, i: number) {
+  function read (buf: Buffer, i: number) {
     if (indexSize === 1) {
       return buf[i]
     } else {
@@ -1086,15 +1086,15 @@ function arrayIndexOf (arr: any[], val: any, byteOffset: number, encoding: strin
   return -1
 }
 
-Buffer.prototype.includes = function includes (val: string, byteOffset: number, encoding: string) {
+Buffer.prototype.includes = function includes (val: any, byteOffset: number, encoding: string) {
   return this.indexOf(val, byteOffset, encoding) !== -1
 }
 
-Buffer.prototype.indexOf = function indexOf (val: string, byteOffset: number, encoding: string) {
+Buffer.prototype.indexOf = function indexOf (val: any, byteOffset: number, encoding: string) {
   return bidirectionalIndexOf(this, val, byteOffset, encoding, true)
 }
 
-Buffer.prototype.lastIndexOf = function lastIndexOf (val: any, byteOffset: number, encoding: string) {
+Buffer.prototype.lastIndexOf = function lastIndexOf (val: string, byteOffset: number, encoding: string) {
   return bidirectionalIndexOf(this, val, byteOffset, encoding, false)
 }
 
@@ -1133,7 +1133,7 @@ function asciiWrite (buf: Uint8Array, string: string, offset: number, length: nu
   return blitBuffer(asciiToBytes(string), buf, offset, length)
 }
 
-function latin1Write (buf: Uint8Array, string: string, offset: number, length: number) {
+function latin1Write (buf: Buffer, string: string, offset: number, length: number) {
   return asciiWrite(buf, string, offset, length)
 }
 
@@ -1141,7 +1141,7 @@ function base64Write (buf: Uint8Array, string: string, offset: number, length: n
   return blitBuffer(base64ToBytes(string), buf, offset, length)
 }
 
-function ucs2Write (buf: Uint8Array, string: string, offset: number, length: number) {
+function ucs2Write (buf: Buffer, string: string, offset: number, length: number) {
   return blitBuffer(utf16leToBytes(string, buf.length - offset), buf, offset, length)
 }
 
@@ -1224,7 +1224,7 @@ Buffer.prototype.toJSON = function toJSON () {
   }
 }
 
-function base64Slice (buf: Uint8Array, start: number, end: number) {
+function base64Slice (buf: Buffer, start: number, end: number) {
   if (start === 0 && end === buf.length) {
     return base64.fromByteArray(buf)
   } else {
@@ -1338,7 +1338,7 @@ function asciiSlice (buf: Uint8Array, start: number, end: number) {
   return ret
 }
 
-function latin1Slice (buf: Uint8Array, start: number, end: number) {
+function latin1Slice (buf: Buffer, start: number, end: number) {
   var ret = ''
   end = Math.min(buf.length, end)
 
@@ -1348,7 +1348,7 @@ function latin1Slice (buf: Uint8Array, start: number, end: number) {
   return ret
 }
 
-function hexSlice (buf: Uint8Array, start: number, end: number) {
+function hexSlice (buf: Buffer, start: number, end: number) {
   var len = buf.length
 
   if (!start || start < 0) start = 0
@@ -1361,7 +1361,7 @@ function hexSlice (buf: Uint8Array, start: number, end: number) {
   return out
 }
 
-function utf16leSlice (buf: Uint8Array, start: number, end: number) {
+function utf16leSlice (buf: Uint16Array, start: number, end: number) {
   var bytes = buf.slice(start, end)
   var res = ''
   for (var i = 0; i < bytes.length; i += 2) {
@@ -1409,7 +1409,7 @@ Buffer.prototype.slice = function slice (start: number, end: number) {
 /*
  * Need to make sure that buffer isn't trying to write out of bounds.
  */
-function checkOffset (offset: number, ext: number, length: number) {
+function checkOffset (offset: number, ext: string, length: number) {
   if ((offset % 1) !== 0 || offset < 0) throw new RangeError('offset is not uint')
   if (offset + ext > length) throw new RangeError('Trying to access beyond buffer length')
 }
@@ -1570,7 +1570,7 @@ Buffer.prototype.readDoubleBE = function readDoubleBE (offset: number, noAssert:
   return ieee754.read(this, offset, false, 52, 8)
 }
 
-function checkInt (buf: Uint8Array, value: number, offset: number, ext: number, max: number, min: number) {
+function checkInt (buf: Buffer, value: number, offset: number, ext: number, max: number, min: number) {
   if (!Buffer.isBuffer(buf)) throw new TypeError('"buffer" argument must be a Buffer instance')
   if (value > max || value < min) throw new RangeError('"value" argument is out of bounds')
   if (offset + ext > buf.length) throw new RangeError('Index out of range')
@@ -1623,7 +1623,7 @@ Buffer.prototype.writeUInt8 = function writeUInt8 (value: number, offset: number
   return offset + 1
 }
 
-function objectWriteUInt16 (buf: Uint8Array, value: number, offset: number, littleEndian: boolean) {
+function objectWriteUInt16 (buf: Buffer, value: number, offset: number, littleEndian: boolean) {
   if (value < 0) value = 0xffff + value + 1
   for (var i = 0, j = Math.min(buf.length - offset, 2); i < j; ++i) {
     buf[offset + i] = (value & (0xff << (8 * (littleEndian ? i : 1 - i)))) >>>
@@ -1657,7 +1657,7 @@ Buffer.prototype.writeUInt16BE = function writeUInt16BE (value: number, offset: 
   return offset + 2
 }
 
-function objectWriteUInt32 (buf: Uint8Array, value: number, offset: number, littleEndian: boolean) {
+function objectWriteUInt32 (buf: Buffer, value: number, offset: number, littleEndian: boolean) {
   if (value < 0) value = 0xffffffff + value + 1
   for (var i = 0, j = Math.min(buf.length - offset, 4); i < j; ++i) {
     buf[offset + i] = (value >>> (littleEndian ? i : 3 - i) * 8) & 0xff
@@ -1807,12 +1807,12 @@ Buffer.prototype.writeInt32BE = function writeInt32BE (value: number, offset: nu
   return offset + 4
 }
 
-function checkIEEE754 (buf: Uint8Array, value: number, offset: number, ext: number, max: number, min: number) {
+function checkIEEE754 (buf: Buffer, value: number, offset: number, ext: number, max: number, min: number) {
   if (offset + ext > buf.length) throw new RangeError('Index out of range')
   if (offset < 0) throw new RangeError('Index out of range')
 }
 
-function writeFloat (buf: Buffer, value: number, offset: number, littleEndian: boolean, noAssert: false) {
+function writeFloat (buf: Buffer, value: number, offset: number, littleEndian: boolean, noAssert: boolean) {
   if (!noAssert) {
     checkIEEE754(buf, value, offset, 4, 3.4028234663852886e+38, -3.4028234663852886e+38)
   }
@@ -1828,7 +1828,7 @@ Buffer.prototype.writeFloatBE = function writeFloatBE (value: number, offset: nu
   return writeFloat(this, value, offset, false, noAssert)
 }
 
-function writeDouble (buf: Buffer, value: number, offset: number, littleEndian: boolean, noAssert: false) {
+function writeDouble (buf: Buffer, value: number, offset: number, littleEndian: boolean, noAssert: boolean) {
   if (!noAssert) {
     checkIEEE754(buf, value, offset, 8, 1.7976931348623157E+308, -1.7976931348623157E+308)
   }
@@ -1845,7 +1845,7 @@ Buffer.prototype.writeDoubleBE = function writeDoubleBE (value: number, offset: 
 }
 
 // copy(targetBuffer, targetStart=0, sourceStart=0, sourceEnd=buffer.length)
-Buffer.prototype.copy = function copy (target: string, targetStart: number, start: number, end: number) {
+Buffer.prototype.copy = function copy (target: any, targetStart: number, start: number, end: number) {
   if (!start) start = 0
   if (!end && end !== 0) end = this.length
   if (targetStart >= target.length) targetStart = target.length
@@ -1897,7 +1897,7 @@ Buffer.prototype.copy = function copy (target: string, targetStart: number, star
 //    buffer.fill(number[, offset[, end]])
 //    buffer.fill(buffer[, offset[, end]])
 //    buffer.fill(string[, offset[, end]][, encoding])
-Buffer.prototype.fill = function fill (val: number, start: number, end: number, encoding: string) {
+Buffer.prototype.fill = function fill (val: any, start: number, end: number, encoding: string) {
   // Handle string cases:
   if (typeof val === 'string') {
     if (typeof start === 'string') {
@@ -2092,7 +2092,7 @@ function base64ToBytes (str: string) {
   return base64.toByteArray(base64clean(str))
 }
 
-function blitBuffer (src: Uint8Array, dst: Uint8Array, offset: number, length: number) {
+function blitBuffer (src: Buffer, dst: Buffer, offset: number, length: number) {
   for (var i = 0; i < length; ++i) {
     if ((i + offset >= dst.length) || (i >= src.length)) break
     dst[i + offset] = src[i]
@@ -2211,7 +2211,7 @@ function onend() {
   pna.nextTick(onEndNT, this);
 }
 
-function onEndNT(self: IStream) {
+function onEndNT(self: Readable) {
   self.end();
 }
 
@@ -2222,7 +2222,7 @@ Object.defineProperty(Duplex.prototype, 'destroyed', {
     }
     return this._readableState.destroyed && this._writableState.destroyed;
   },
-  set: function (value: any) {
+  set: function (value: T) {
     // we ignore the value if the stream
     // has not been initialized yet
     if (this._readableState === undefined || this._writableState === undefined) {
@@ -2236,7 +2236,7 @@ Object.defineProperty(Duplex.prototype, 'destroyed', {
   }
 });
 
-Duplex.prototype._destroy = function (err: Error, cb: any) {
+Duplex.prototype._destroy = function (err: any, cb: any) {
   this.push(null);
   this.end();
 
@@ -2314,7 +2314,7 @@ function isUndefined(arg: any) {
 }
 exports.isUndefined = isUndefined;
 
-function isRegExp(re: RegExp) {
+function isRegExp(re: any) {
   return objectToString(re) === '[object RegExp]';
 }
 exports.isRegExp = isRegExp;
@@ -2362,7 +2362,7 @@ function objectToString(o: any) {
 /***/ (function(module: any, exports: any, __webpack_require__: any) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(process: Process) {
+/* WEBPACK VAR INJECTION */(function(process: any) {
 
 if (typeof process === 'undefined' ||
     !process.version ||
@@ -2419,7 +2419,7 @@ var buffer = __webpack_require__(3)
 var Buffer = buffer.Buffer
 
 // alternative to using Object.keys for old browsers
-function copyProps (src: any, dst: any) {
+function copyProps (src: Object, dst: Object) {
   for (var key in src) {
     dst[key] = src[key]
   }
@@ -2432,7 +2432,7 @@ if (Buffer.from && Buffer.alloc && Buffer.allocUnsafe && Buffer.allocUnsafeSlow)
   exports.Buffer = SafeBuffer
 }
 
-function SafeBuffer (arg: number, encodingOrOffset: string, length: number) {
+function SafeBuffer (arg: any, encodingOrOffset: any, length: any) {
   return Buffer(arg, encodingOrOffset, length)
 }
 
@@ -2446,7 +2446,7 @@ SafeBuffer.from = function (arg: string, encodingOrOffset: number, length: numbe
   return Buffer(arg, encodingOrOffset, length)
 }
 
-SafeBuffer.alloc = function (size: number, fill: number, encoding: string) {
+SafeBuffer.alloc = function (size: number, fill: string, encoding: string) {
   if (typeof size !== 'number') {
     throw new TypeError('Argument must be a number')
   }
@@ -2928,7 +2928,7 @@ Url.prototype.resolve = function(relative: string) {
   return this.resolveObject(urlParse(relative, false, true)).format();
 };
 
-function urlResolveObject(source: string, relative: string) {
+function urlResolveObject(source: URL, relative: URL) {
   if (!source) return relative;
   return urlParse(source, false, true).resolveObject(relative);
 }
@@ -3266,7 +3266,7 @@ if (R && typeof R.ownKeys === 'function') {
   };
 }
 
-function ProcessEmitWarning(warning: string) {
+function ProcessEmitWarning(warning: any) {
   if (console && console.warn) console.warn(warning);
 }
 
@@ -3291,7 +3291,7 @@ EventEmitter.prototype._maxListeners = undefined;
 // added to it. This is a useful default which helps finding memory leaks.
 var defaultMaxListeners = 10;
 
-function checkListener(listener: IListener) {
+function checkListener(listener: Listener) {
   if (typeof listener !== 'function') {
     throw new TypeError('The "listener" argument must be of type Function. Received type ' + typeof listener);
   }
@@ -3385,7 +3385,7 @@ EventEmitter.prototype.emit = function emit(type: string) {
   return true;
 };
 
-function _addListener(target: EventTarget, type: string, listener: EventListener, prepend: boolean) {
+function _addListener(target: HTMLElement, type: string, listener: EventListenerOrEventListenerObject, prepend: boolean) {
   var m;
   var events;
   var existing;
@@ -3447,14 +3447,14 @@ function _addListener(target: EventTarget, type: string, listener: EventListener
   return target;
 }
 
-EventEmitter.prototype.addListener = function addListener(type: "error", listener: any) {
+EventEmitter.prototype.addListener = function addListener(type: string, listener: EventListenerOrEventListenerObject) {
   return _addListener(this, type, listener, false);
 };
 
 EventEmitter.prototype.on = EventEmitter.prototype.addListener;
 
 EventEmitter.prototype.prependListener =
-    function prependListener(type: "error", listener: any) {
+    function prependListener(type: string, listener: Listener) {
       return _addListener(this, type, listener, true);
     };
 
@@ -3476,7 +3476,7 @@ function _onceWrap(target: EventEmitter, type: string, listener: Function) {
   return wrapped;
 }
 
-EventEmitter.prototype.once = function once(type: string, listener: Function) {
+EventEmitter.prototype.once = function once(type: string, listener: Listener) {
   checkListener(listener);
   this.on(type, _onceWrap(this, type, listener));
   return this;
@@ -3595,7 +3595,7 @@ EventEmitter.prototype.removeAllListeners =
       return this;
     };
 
-function _listeners(target: EventEmitter, type: string, unwrap: boolean) {
+function _listeners(target: EventTarget, type: string, unwrap: boolean) {
   var events = target._events;
 
   if (events === undefined)
@@ -3656,13 +3656,13 @@ function arrayClone(arr: any[], n: number) {
   return copy;
 }
 
-function spliceOne(list: Array<any>, index: number) {
+function spliceOne(list: any[], index: number) {
   for (; index + 1 < list.length; index++)
     list[index] = list[index + 1];
   list.pop();
 }
 
-function unwrapListeners(arr: IListener[]) {
+function unwrapListeners(arr: Function[]) {
   var ret = new Array(arr.length);
   for (var i = 0; i < ret.length; ++i) {
     ret[i] = arr[i].listener || arr[i];
@@ -3672,7 +3672,7 @@ function unwrapListeners(arr: IListener[]) {
 
 function once(emitter: EventEmitter, name: string) {
   return new Promise(function (resolve: any, reject: any) {
-    function errorListener(err: Error) {
+    function errorListener(err: any) {
       emitter.removeListener(name, resolver);
       reject(err);
     }
@@ -3691,7 +3691,7 @@ function once(emitter: EventEmitter, name: string) {
   });
 }
 
-function addErrorHandlerIfEventEmitter(emitter: EventEmitter, handler: any, flags: number) {
+function addErrorHandlerIfEventEmitter(emitter: EventEmitter, handler: Function, flags: number) {
   if (typeof emitter.on === 'function') {
     eventTargetAgnosticAddListener(emitter, 'error', handler, flags);
   }
@@ -3727,7 +3727,7 @@ function eventTargetAgnosticAddListener(emitter: EventEmitter, name: string, lis
 
 var toString = {}.toString;
 
-module.exports = Array.isArray || function (arr: any[]) {
+module.exports = Array.isArray || function (arr: any) {
   return toString.call(arr) == '[object Array]';
 };
 
@@ -3744,7 +3744,7 @@ var url = __webpack_require__(8)
 
 var http = exports
 
-http.request = function (opts: IOptions, cb: any) {
+http.request = function (opts: string, cb: any) {
 	if (typeof opts === 'string')
 		opts = url.parse(opts)
 	else
@@ -3777,7 +3777,7 @@ http.request = function (opts: IOptions, cb: any) {
 	return req
 }
 
-http.get = function get (opts: IOptions, cb: any) {
+http.get = function get (opts: http.RequestOptions, cb: any) {
 	var req = http.request(opts, cb)
 	req.end()
 	return req
@@ -3907,7 +3907,7 @@ xhr = null // Help gc
 /* 13 */
 /***/ (function(module: any, exports: any, __webpack_require__: any) {
 
-/* WEBPACK VAR INJECTION */(function(process: IProcess, Buffer: IBuffer, global: IGlobal) {var capability = __webpack_require__(12)
+/* WEBPACK VAR INJECTION */(function(process: NodeJS.Process, Buffer: any, global: any) {var capability = __webpack_require__(12)
 var inherits = __webpack_require__(2)
 var stream = __webpack_require__(14)
 
@@ -3919,7 +3919,7 @@ var rStates = exports.readyStates = {
 	DONE: 4
 }
 
-var IncomingMessage = exports.IncomingMessage = function (xhr: XMLHttpRequest, response: string, mode: string, fetchTimer: number) {
+var IncomingMessage = exports.IncomingMessage = function (xhr: XMLHttpRequest, response: any, mode: string, fetchTimer: any) {
 	var self = this
 	stream.Readable.call(self)
 
@@ -3951,8 +3951,8 @@ var IncomingMessage = exports.IncomingMessage = function (xhr: XMLHttpRequest, r
 
 		if (capability.writableStream) {
 			var writable = new WritableStream({
-				write: function (chunk: string) {
-					return new Promise(function (resolve: any, reject: any) {
+				write: function (chunk: Buffer) {
+					return new Promise(function (resolve: Function, reject: Function) {
 						if (self._destroyed) {
 							reject()
 						} else if(self.push(new Buffer(chunk))) {
@@ -3967,14 +3967,14 @@ var IncomingMessage = exports.IncomingMessage = function (xhr: XMLHttpRequest, r
 					if (!self._destroyed)
 						self.push(null)
 				},
-				abort: function (err: Error) {
+				abort: function (err: any) {
 					if (!self._destroyed)
 						self.emit('error', err)
 				}
 			})
 
 			try {
-				response.body.pipeTo(writable).catch(function (err: Error) {
+				response.body.pipeTo(writable).catch(function (err: any) {
 					global.clearTimeout(fetchTimer)
 					if (!self._destroyed)
 						self.emit('error', err)
@@ -3995,7 +3995,7 @@ var IncomingMessage = exports.IncomingMessage = function (xhr: XMLHttpRequest, r
 				}
 				self.push(new Buffer(result.value))
 				read()
-			}).catch(function (err: Error) {
+			}).catch(function (err: any) {
 				global.clearTimeout(fetchTimer)
 				if (!self._destroyed)
 					self.emit('error', err)
@@ -4121,7 +4121,7 @@ IncomingMessage.prototype._onXHRProgress = function () {
 			reader.onload = function () {
 				self.push(null)
 			}
-			// reader.onerror = : any // TODO: this
+			// reader.onerror = : TODO // TODO: this
 			reader.readAsArrayBuffer(response)
 			break
 	}
@@ -4252,7 +4252,7 @@ function prependListener(emitter: EventEmitter, event: string, fn: Function) {
   if (!emitter._events || !emitter._events[event]) emitter.on(event, fn);else if (isArray(emitter._events[event])) emitter._events[event].unshift(fn);else emitter._events[event] = [fn, emitter._events[event]];
 }
 
-function ReadableState(options: ReadableStreamDefaultOptions, stream: Readable) {
+function ReadableState(options: ReadableStateOptions, stream: Readable) {
   Duplex = Duplex || __webpack_require__(4);
 
   options = options || {};
@@ -4370,7 +4370,7 @@ Object.defineProperty(Readable.prototype, 'destroyed', {
 
 Readable.prototype.destroy = destroyImpl.destroy;
 Readable.prototype._undestroy = destroyImpl.undestroy;
-Readable.prototype._destroy = function (err: Error, cb: any) {
+Readable.prototype._destroy = function (err: Error, cb: Function) {
   this.push(null);
   cb(err);
 };
@@ -4379,7 +4379,7 @@ Readable.prototype._destroy = function (err: Error, cb: any) {
 // This returns true if the highWaterMark has not been hit yet,
 // similar to how Writable.write() returns true if you should
 // write() some more.
-Readable.prototype.push = function (chunk: Buffer, encoding: string) {
+Readable.prototype.push = function (chunk: any, encoding: any) {
   var state = this._readableState;
   var skipChunkCheck;
 
@@ -4400,11 +4400,11 @@ Readable.prototype.push = function (chunk: Buffer, encoding: string) {
 };
 
 // Unshift should *always* be something directly out of read()
-Readable.prototype.unshift = function (chunk: string) {
+Readable.prototype.unshift = function (chunk: Buffer) {
   return readableAddChunk(this, chunk, null, true, false);
 };
 
-function readableAddChunk(stream: Readable, chunk: ReadableChunk, encoding: string, addToFront: boolean, skipChunkCheck: boolean) {
+function readableAddChunk(stream: Readable, chunk: any, encoding: string, addToFront: boolean, skipChunkCheck: boolean) {
   var state = stream._readableState;
   if (chunk === null) {
     state.reading = false;
@@ -4440,7 +4440,7 @@ function readableAddChunk(stream: Readable, chunk: ReadableChunk, encoding: stri
   return needMoreData(state);
 }
 
-function addChunk(stream: Readable, state: ChunkState, chunk: ReadableChunk, addToFront: boolean) {
+function addChunk(stream: ReadableStream, state: ReadableStreamDefaultController, chunk: ReadableStreamDefaultControllerChunk, addToFront: true) {
   if (state.flowing && state.length === 0 && !state.sync) {
     stream.emit('data', chunk);
     stream.read(0);
@@ -4454,7 +4454,7 @@ function addChunk(stream: Readable, state: ChunkState, chunk: ReadableChunk, add
   maybeReadMore(stream, state);
 }
 
-function chunkInvalid(state: State, chunk: Chunk) {
+function chunkInvalid(state: ParserState, chunk: string) {
   var er;
   if (!_isUint8Array(chunk) && typeof chunk !== 'string' && chunk !== undefined && !state.objectMode) {
     er = new TypeError('Invalid non-string/buffer chunk');
@@ -4525,7 +4525,7 @@ function howMuchToRead(n: number, state: ReadableState) {
 }
 
 // you can override either this method, or the async _read(n) below.
-Readable.prototype.read = function (n: number) {
+Readable.prototype.read = function (n: string) {
   debug('read', n);
   n = parseInt(n, 10);
   var state = this._readableState;
@@ -4625,7 +4625,7 @@ Readable.prototype.read = function (n: number) {
   return ret;
 };
 
-function onEofChunk(stream: Readable, state: EofChunkState) {
+function onEofChunk(stream: Readable, state: State) {
   if (state.ended) return;
   if (state.decoder) {
     var chunk = state.decoder.end();
@@ -4665,14 +4665,14 @@ function emitReadable_(stream: Readable) {
 // it's in progress.
 // However, if we're not ended, or reading, and the length < hwm,
 // then go ahead and try to read some more preemptively.
-function maybeReadMore(stream: Readable, state: State) {
+function maybeReadMore(stream: Readable, state: ReadableState) {
   if (!state.readingMore) {
     state.readingMore = true;
     pna.nextTick(maybeReadMore_, stream, state);
   }
 }
 
-function maybeReadMore_(stream: Readable, state: State) {
+function maybeReadMore_(stream: Readable, state: ReadableState) {
   var len = state.length;
   while (!state.reading && !state.flowing && !state.ended && state.length < state.highWaterMark) {
     debug('maybeReadMore read 0');
@@ -4692,7 +4692,7 @@ Readable.prototype._read = function (n: number) {
   this.emit('error', new Error('_read() is not implemented'));
 };
 
-Readable.prototype.pipe = function (dest: string, pipeOpts: IPipeOptions) {
+Readable.prototype.pipe = function (dest: Readable, pipeOpts: any) {
   var src = this;
   var state = this._readableState;
 
@@ -4827,7 +4827,7 @@ Readable.prototype.pipe = function (dest: string, pipeOpts: IPipeOptions) {
   return dest;
 };
 
-function pipeOnDrain(src: Observable<T>) {
+function pipeOnDrain(src: Readable) {
   return function () {
     var state = src._readableState;
     debug('pipeOnDrain', state.awaitDrain);
@@ -4839,7 +4839,7 @@ function pipeOnDrain(src: Observable<T>) {
   };
 }
 
-Readable.prototype.unpipe = function (dest: string) {
+Readable.prototype.unpipe = function (dest: Readable) {
   var state = this._readableState;
   var unpipeInfo = { hasUnpiped: false };
 
@@ -4891,7 +4891,7 @@ Readable.prototype.unpipe = function (dest: string) {
 
 // set up data events if they are asked for
 // Ensure readable listeners eventually get something
-Readable.prototype.on = function (ev: Event, fn: any) {
+Readable.prototype.on = function (ev: Event, fn: Function) {
   var res = Stream.prototype.on.call(this, ev, fn);
 
   if (ev === 'data') {
@@ -4914,7 +4914,7 @@ Readable.prototype.on = function (ev: Event, fn: any) {
 };
 Readable.prototype.addListener = Readable.prototype.on;
 
-function nReadingNextTick(self: any) {
+function nReadingNextTick(self: Readable) {
   debug('readable nexttick read 0');
   self.read(0);
 }
@@ -4938,7 +4938,7 @@ function resume(stream: Readable, state: State) {
   }
 }
 
-function resume_(stream: Readable, state: State) {
+function resume_(stream: Readable, state: ReadableState) {
   if (!state.reading) {
     debug('resume read 0');
     stream.read(0);
@@ -4961,7 +4961,7 @@ Readable.prototype.pause = function () {
   return this;
 };
 
-function flow(stream: Readable) {
+function flow(stream: ReadableStream) {
   var state = stream._readableState;
   debug('flow', state.flowing);
   while (state.flowing && stream.read() !== null) {}
@@ -4970,7 +4970,7 @@ function flow(stream: Readable) {
 // wrap an old-style stream as the async data source.
 // This is *not* part of the readable stream interface.
 // It is an ugly unfortunate mess of history.
-Readable.prototype.wrap = function (stream: Readable) {
+Readable.prototype.wrap = function (stream: ReadableStream) {
   var _this = this;
 
   var state = this._readableState;
@@ -5116,7 +5116,7 @@ function copyFromBufferString(n: number, list: string[]) {
 // Copies a specified amount of bytes from the list of buffered data chunks.
 // This function is designed to be inlinable, so please take care when making
 // changes to the function body.
-function copyFromBuffer(n: number, list: BufferList) {
+function copyFromBuffer(n: number, list: Uint8Array) {
   var ret = Buffer.allocUnsafe(n);
   var p = list.head;
   var c = 1;
@@ -5165,7 +5165,7 @@ function endReadableNT(state: ReadableState, stream: Readable) {
   }
 }
 
-function indexOf(xs: Array<T>, x: T) {
+function indexOf(xs: any[], x: any) {
   for (var i = 0, l = xs.length; i < l; i++) {
     if (xs[i] === x) return i;
   }
@@ -5193,7 +5193,7 @@ var pna = __webpack_require__(6);
 /*</replacement>*/
 
 // undocumented cb() API, needed for core, not for public API
-function destroy(err: Error, cb: any) {
+function destroy(err: any, cb: Function) {
   var _this = this;
 
   var readableDestroyed = this._readableState && this._readableState.destroyed;
@@ -5220,7 +5220,7 @@ function destroy(err: Error, cb: any) {
     this._writableState.destroyed = true;
   }
 
-  this._destroy(err || null, function (err: Error) {
+  this._destroy(err || null, function (err: any) {
     if (!cb && err) {
       pna.nextTick(emitErrorNT, _this, err);
       if (_this._writableState) {
@@ -5251,7 +5251,7 @@ function undestroy() {
   }
 }
 
-function emitErrorNT(self: EventEmitter, err: any) {
+function emitErrorNT(self: NodeJS.EventEmitter, err: Error) {
   self.emit('error', err);
 }
 
@@ -5265,7 +5265,7 @@ module.exports = {
 /***/ (function(module: any, exports: any, __webpack_require__: any) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(process: Process, setImmediate: Function, global: any) {// Copyright Joyent, Inc. and other Node contributors.
+/* WEBPACK VAR INJECTION */(function(process: any, setImmediate: any, global: any) {// Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
 // copy of this software and associated documentation files (the
@@ -5300,7 +5300,7 @@ var pna = __webpack_require__(6);
 module.exports = Writable;
 
 /* <replacement> */
-function WriteReq(chunk: Buffer, encoding: string, cb: any) {
+function WriteReq(chunk: any, encoding: any, cb: any) {
   this.chunk = chunk;
   this.encoding = encoding;
   this.callback = cb;
@@ -5309,7 +5309,7 @@ function WriteReq(chunk: Buffer, encoding: string, cb: any) {
 
 // It seems a linked list but it is not
 // there will be only 2 of these for each stream
-function CorkedRequest(state: CorkedState) {
+function CorkedRequest(state: any) {
   var _this = this;
 
   this.next = null;
@@ -5364,7 +5364,7 @@ util.inherits(Writable, Stream);
 
 function nop() {}
 
-function WritableState(options: WritableStreamOptions, stream: WritableStream) {
+function WritableState(options: WritableStateOptions, stream: Duplex) {
   Duplex = Duplex || __webpack_require__(4);
 
   options = options || {};
@@ -5551,7 +5551,7 @@ Writable.prototype.pipe = function () {
   this.emit('error', new Error('Cannot pipe, not readable'));
 };
 
-function writeAfterEnd(stream: Readable, cb: any) {
+function writeAfterEnd(stream: Writable, cb: Function) {
   var er = new Error('write after end');
   // TODO: defer error events consistently everywhere, not just the cb
   stream.emit('error', er);
@@ -5561,7 +5561,7 @@ function writeAfterEnd(stream: Readable, cb: any) {
 // Checks that a user-supplied chunk is valid, especially for the particular
 // mode the stream is in. Currently this means that `null` is never accepted
 // and undefined/non-string values are only allowed in object mode.
-function validChunk(stream: Readable, state: ChunkState, chunk: Readable, cb: any) {
+function validChunk(stream: Readable, state: any, chunk: any, cb: any) {
   var valid = true;
   var er = false;
 
@@ -5578,7 +5578,7 @@ function validChunk(stream: Readable, state: ChunkState, chunk: Readable, cb: an
   return valid;
 }
 
-Writable.prototype.write = function (chunk: Buffer, encoding: string, cb: any) {
+Writable.prototype.write = function (chunk: any, encoding: string, cb: any) {
   var state = this._writableState;
   var ret = false;
   var isBuf = !state.objectMode && _isUint8Array(chunk);
@@ -5628,7 +5628,7 @@ Writable.prototype.setDefaultEncoding = function setDefaultEncoding(encoding: st
   return this;
 };
 
-function decodeChunk(state: DecoderState, chunk: Uint8Array, encoding: string) {
+function decodeChunk(state: State, chunk: Buffer, encoding: string) {
   if (!state.objectMode && state.decodeStrings !== false && typeof chunk === 'string') {
     chunk = Buffer.from(chunk, encoding);
   }
@@ -5648,7 +5648,7 @@ Object.defineProperty(Writable.prototype, 'writableHighWaterMark', {
 // if we're already writing something, then just put this
 // in the queue, and wait our turn.  Otherwise, call _write
 // If we return false, then we need a drain event, so set that flag.
-function writeOrBuffer(stream: Writable, state: State, isBuf: boolean, chunk: Buffer, encoding: string, cb: any) {
+function writeOrBuffer(stream: Writable, state: WritableState, isBuf: boolean, chunk: string, encoding: string, cb: any) {
   if (!isBuf) {
     var newChunk = decodeChunk(state, chunk, encoding);
     if (chunk !== newChunk) {
@@ -5687,7 +5687,7 @@ function writeOrBuffer(stream: Writable, state: State, isBuf: boolean, chunk: Bu
   return ret;
 }
 
-function doWrite(stream: Writable, state: WriteState, writev: WritevArgs, len: number, chunk: Uint8Array, encoding: string, cb: any) {
+function doWrite(stream: Writable, state: WritableState, writev: any, len: number, chunk: any, encoding: string, cb: Function) {
   state.writelen = len;
   state.writecb = cb;
   state.writing = true;
@@ -5696,7 +5696,7 @@ function doWrite(stream: Writable, state: WriteState, writev: WritevArgs, len: n
   state.sync = false;
 }
 
-function onwriteError(stream: Writable, state: State, sync: boolean, er: Error, cb: any) {
+function onwriteError(stream: Writable, state: WritableState, sync: boolean, er: Error, cb: Function) {
   --state.pendingcb;
 
   if (sync) {
@@ -5720,7 +5720,7 @@ function onwriteError(stream: Writable, state: State, sync: boolean, er: Error, 
   }
 }
 
-function onwriteStateUpdate(state: State) {
+function onwriteStateUpdate(state: WriteState) {
   state.writing = false;
   state.writecb = null;
   state.length -= state.writelen;
@@ -5752,7 +5752,7 @@ function onwrite(stream: Writable, er: Error) {
   }
 }
 
-function afterWrite(stream: Writable, state: State, finished: boolean, cb: any) {
+function afterWrite(stream: Writable, state: WritableState, finished: Function, cb: Function) {
   if (!finished) onwriteDrain(stream, state);
   state.pendingcb--;
   cb();
@@ -5770,7 +5770,7 @@ function onwriteDrain(stream: Writable, state: WritableState) {
 }
 
 // if there's something in the buffer waiting, then process it
-function clearBuffer(stream: Readable, state: State) {
+function clearBuffer(stream: ReadableStream, state: ReadableState) {
   state.bufferProcessing = true;
   var entry = state.bufferedRequest;
 
@@ -5837,7 +5837,7 @@ Writable.prototype._write = function (chunk: Buffer, encoding: string, cb: any) 
 
 Writable.prototype._writev = null;
 
-Writable.prototype.end = function (chunk: Buffer, encoding: string, cb: any) {
+Writable.prototype.end = function (chunk: any, encoding: any, cb: any) {
   var state = this._writableState;
 
   if (typeof chunk === 'function') {
@@ -5875,7 +5875,7 @@ function callFinal(stream: Readable, state: State) {
     finishMaybe(stream, state);
   });
 }
-function prefinish(stream: Readable, state: PrefinishState) {
+function prefinish(stream: Transform, state: State) {
   if (!state.prefinished && !state.finalCalled) {
     if (typeof stream._final === 'function') {
       state.pendingcb++;
@@ -5900,7 +5900,7 @@ function finishMaybe(stream: Readable, state: State) {
   return need;
 }
 
-function endWritable(stream: Writable, state: State, cb: any) {
+function endWritable(stream: Writable, state: WritableState, cb: any) {
   state.ending = true;
   finishMaybe(stream, state);
   if (cb) {
@@ -5910,7 +5910,7 @@ function endWritable(stream: Writable, state: State, cb: any) {
   stream.writable = false;
 }
 
-function onCorkedFinish(corkReq: CorkRequest, state: CorkedState, err: any) {
+function onCorkedFinish(corkReq: CorkReq, state: WritableState, err: Error) {
   var entry = corkReq.entry;
   corkReq.entry = null;
   while (entry) {
@@ -5933,7 +5933,7 @@ Object.defineProperty(Writable.prototype, 'destroyed', {
     }
     return this._writableState.destroyed;
   },
-  set: function (value: any) {
+  set: function (value: T) {
     // we ignore the value if the stream
     // has not been initialized yet
     if (!this._writableState) {
@@ -5948,7 +5948,7 @@ Object.defineProperty(Writable.prototype, 'destroyed', {
 
 Writable.prototype.destroy = destroyImpl.destroy;
 Writable.prototype._undestroy = destroyImpl.undestroy;
-Writable.prototype._destroy = function (err: Error, cb: any) {
+Writable.prototype._destroy = function (err: Error, cb: Function) {
   this.end();
   cb(err);
 };
@@ -6065,7 +6065,7 @@ function StringDecoder(encoding: string) {
   this.lastChar = Buffer.allocUnsafe(nb);
 }
 
-StringDecoder.prototype.write = function (buf: Uint8Array) {
+StringDecoder.prototype.write = function (buf: Buffer) {
   if (buf.length === 0) return '';
   var r;
   var i;
@@ -6087,7 +6087,7 @@ StringDecoder.prototype.end = utf8End;
 StringDecoder.prototype.text = utf8Text;
 
 // Attempts to complete a partial non-UTF-8 character using bytes from a Buffer
-StringDecoder.prototype.fillLast = function (buf: Uint8Array) {
+StringDecoder.prototype.fillLast = function (buf: Buffer) {
   if (this.lastNeed <= buf.length) {
     buf.copy(this.lastChar, this.lastTotal - this.lastNeed, 0, this.lastNeed);
     return this.lastChar.toString(this.encoding, 0, this.lastTotal);
@@ -6106,7 +6106,7 @@ function utf8CheckByte(byte: number) {
 // Checks at most 3 bytes at the end of a Buffer in order to detect an
 // incomplete multi-byte UTF-8 character. The total number of bytes (2, 3, or 4)
 // needed to complete the UTF-8 character (if applicable) are returned.
-function utf8CheckIncomplete(self: Readable, buf: Uint8Array, i: number) {
+function utf8CheckIncomplete(self: Utf8Stream, buf: Uint8Array, i: number) {
   var j = buf.length - 1;
   if (j < i) return 0;
   var nb = utf8CheckByte(buf[j]);
@@ -6139,7 +6139,7 @@ function utf8CheckIncomplete(self: Readable, buf: Uint8Array, i: number) {
 // where all of the continuation bytes for a character exist in the same buffer.
 // It is also done this way as a slight performance increase instead of using a
 // loop.
-function utf8CheckExtraBytes(self: Readable, buf: Uint8Array, p: number) {
+function utf8CheckExtraBytes(self: Utf8Decoder, buf: Uint8Array, p: number) {
   if ((buf[0] & 0xC0) !== 0x80) {
     self.lastNeed = 0;
     return '\ufffd';
@@ -6174,7 +6174,7 @@ function utf8FillLast(buf: Uint8Array) {
 // Returns all complete UTF-8 characters in a Buffer. If the Buffer ended on a
 // partial character, the character's bytes are buffered until the required
 // number of bytes are available.
-function utf8Text(buf: Uint8Array, i: number) {
+function utf8Text(buf: Buffer, i: number) {
   var total = utf8CheckIncomplete(this, buf, i);
   if (!this.lastNeed) return buf.toString('utf8', i);
   this.lastTotal = total;
@@ -6185,7 +6185,7 @@ function utf8Text(buf: Uint8Array, i: number) {
 
 // For UTF-8, a replacement character is added when ending on a partial
 // character.
-function utf8End(buf: Uint8Array) {
+function utf8End(buf: Buffer) {
   var r = buf && buf.length ? this.write(buf) : '';
   if (this.lastNeed) return r + '\ufffd';
   return r;
@@ -6195,7 +6195,7 @@ function utf8End(buf: Uint8Array) {
 // number of bytes available, we need to check if we end on a leading/high
 // surrogate. In that case, we need to wait for the next two bytes in order to
 // decode the last character properly.
-function utf16Text(buf: Uint8Array, i: number) {
+function utf16Text(buf: Buffer, i: number) {
   if ((buf.length - i) % 2 === 0) {
     var r = buf.toString('utf16le', i);
     if (r) {
@@ -6218,7 +6218,7 @@ function utf16Text(buf: Uint8Array, i: number) {
 
 // For UTF-16LE we do not explicitly append special replacement characters if we
 // end on a partial character, we simply let v8 handle that.
-function utf16End(buf: Uint8Array) {
+function utf16End(buf: Buffer) {
   var r = buf && buf.length ? this.write(buf) : '';
   if (this.lastNeed) {
     var end = this.lastTotal - this.lastNeed;
@@ -6227,7 +6227,7 @@ function utf16End(buf: Uint8Array) {
   return r;
 }
 
-function base64Text(buf: Uint8Array, i: number) {
+function base64Text(buf: Buffer, i: number) {
   var n = (buf.length - i) % 3;
   if (n === 0) return buf.toString('base64', i);
   this.lastNeed = 3 - n;
@@ -6398,7 +6398,7 @@ function prefinish() {
   var _this = this;
 
   if (typeof this._flush === 'function') {
-    this._flush(function (er: Error, data: any) {
+    this._flush(function (er: any, data: any) {
       done(_this, er, data);
     });
   } else {
@@ -6406,7 +6406,7 @@ function prefinish() {
   }
 }
 
-Transform.prototype.push = function (chunk: string, encoding: string) {
+Transform.prototype.push = function (chunk: Buffer, encoding: string) {
   this._transformState.needTransform = false;
   return Duplex.prototype.push.call(this, chunk, encoding);
 };
@@ -6425,7 +6425,7 @@ Transform.prototype._transform = function (chunk: Buffer, encoding: string, cb: 
   throw new Error('_transform() is not implemented');
 };
 
-Transform.prototype._write = function (chunk: Buffer, encoding: string, cb: any) {
+Transform.prototype._write = function (chunk: any, encoding: any, cb: any) {
   var ts = this._transformState;
   ts.writecb = cb;
   ts.writechunk = chunk;
@@ -6452,10 +6452,10 @@ Transform.prototype._read = function (n: number) {
   }
 };
 
-Transform.prototype._destroy = function (err: Error, cb: any) {
+Transform.prototype._destroy = function (err: any, cb: any) {
   var _this2 = this;
 
-  Duplex.prototype._destroy.call(this, err, function (err2: Error) {
+  Duplex.prototype._destroy.call(this, err, function (err2: any) {
     cb(err2);
     _this2.emit('close');
   });
@@ -6495,7 +6495,7 @@ if (typeof window === 'object') {
 /* 22 */
 /***/ (function(module: any, exports: any, __webpack_require__: any) {
 
-/* WEBPACK VAR INJECTION */(function(process: Process, Buffer: any) {var parse = __webpack_require__(8).parse
+/* WEBPACK VAR INJECTION */(function(process: NodeJS.Process, Buffer: any) {var parse = __webpack_require__(8).parse
 var events = __webpack_require__(9)
 var https = __webpack_require__(31)
 var http = __webpack_require__(11)
@@ -6529,7 +6529,7 @@ function hasBom (buf: Buffer) {
  * @param {Object} [eventSourceInitDict] extra init params. See README for details.
  * @api public
  **/
-function EventSource (url: string, eventSourceInitDict: EventSourceInitDict) {
+function EventSource (url: string, eventSourceInitDict: EventSourceInit) {
   var readyState = EventSource.CONNECTING
   var headers = eventSourceInitDict && eventSourceInitDict.headers
   var hasNewOrigin = false
@@ -6549,7 +6549,7 @@ function EventSource (url: string, eventSourceInitDict: EventSourceInitDict) {
   self.reconnectInterval = 1000
   self.connectionInProgress = false
 
-  function onConnectionClosed (message: ConnectionClosedMessage) {
+  function onConnectionClosed (message: string) {
     if (readyState === EventSource.CLOSED) return
     readyState = EventSource.CONNECTING
     _emit('error', new Event('error', {message: message}))
@@ -6694,7 +6694,7 @@ function EventSource (url: string, eventSourceInitDict: EventSourceInitDict) {
       var newBufferSize = 0
       var bytesUsed = 0
 
-      res.on('data', function (chunk: Uint8Array) {
+      res.on('data', function (chunk: Buffer) {
         if (!buf) {
           buf = chunk
           if (hasBom(buf)) {
@@ -6768,7 +6768,7 @@ function EventSource (url: string, eventSourceInitDict: EventSourceInitDict) {
       })
     })
 
-    req.on('error', function (err: Error) {
+    req.on('error', function (err: any) {
       self.connectionInProgress = false
       onConnectionClosed(err.message)
     })
@@ -6792,7 +6792,7 @@ function EventSource (url: string, eventSourceInitDict: EventSourceInitDict) {
     if (req.xhr && req.xhr.abort) req.xhr.abort()
   }
 
-  function parseEventStreamLine (buf: Uint8Array, pos: number, fieldLength: number, lineLength: number) {
+  function parseEventStreamLine (buf: Buffer, pos: number, fieldLength: number, lineLength: number) {
     if (lineLength === 0) {
       if (data.length > 0) {
         var type = eventName || 'message'
@@ -6862,7 +6862,7 @@ EventSource.prototype.constructor = EventSource; // make stacktraces readable
      * @return {Mixed} the set function or undefined
      * @api private
      */
-    set: function set (listener: Listener<T>) {
+    set: function set (listener: Function) {
       this.removeAllListeners(method)
       this.addEventListener(method, listener)
     }
@@ -6899,7 +6899,7 @@ EventSource.prototype.close = function () {
  * @see http://dev.w3.org/html5/websockets/#the-websocket-interface
  * @api public
  */
-EventSource.prototype.addEventListener = function addEventListener (type: string, listener: EventListener) {
+EventSource.prototype.addEventListener = function addEventListener (type: string, listener: EventListenerOrEventListenerObject) {
   if (typeof listener === 'function') {
     // store a reference so we can return the original function again
     listener._listener = listener
@@ -6932,7 +6932,7 @@ EventSource.prototype.dispatchEvent = function dispatchEvent (event: Event) {
  * @see http://dev.w3.org/html5/websockets/#the-websocket-interface
  * @api public
  */
-EventSource.prototype.removeEventListener = function removeEventListener (type: string, listener: Function) {
+EventSource.prototype.removeEventListener = function removeEventListener (type: string, listener: EventListener) {
   if (typeof listener === 'function') {
     listener._listener = undefined
     this.removeListener(type, listener)
@@ -6945,7 +6945,7 @@ EventSource.prototype.removeEventListener = function removeEventListener (type: 
  * @see http://www.w3.org/TR/DOM-Level-3-Events/#interface-Event
  * @api private
  */
-function Event (type: string, optionalProperties: any) {
+function Event (type: string, optionalProperties: Object) {
   Object.defineProperty(this, 'type', { writable: false, value: type, enumerable: true })
   if (optionalProperties) {
     for (var f in optionalProperties) {
@@ -6962,7 +6962,7 @@ function Event (type: string, optionalProperties: any) {
  * @see http://www.w3.org/TR/webmessaging/#event-definitions
  * @api private
  */
-function MessageEvent (type: string, eventInitDict: any) {
+function MessageEvent (type: string, eventInitDict: MessageEventInit) {
   Object.defineProperty(this, 'type', { writable: false, value: type, enumerable: true })
   for (var f in eventInitDict) {
     if (eventInitDict.hasOwnProperty(f)) {
@@ -6978,7 +6978,7 @@ function MessageEvent (type: string, eventInitDict: any) {
  * @return {Object} a new object of headers
  * @api private
  */
-function removeUnsafeHeaders (headers: any) {
+function removeUnsafeHeaders (headers: Headers) {
   var safe = {}
   for (var key in headers) {
     if (reUnsafeHeader.test(key)) {
@@ -7152,10 +7152,10 @@ function fromByteArray (uint8: Uint8Array) {
 
 /***/ }),
 /* 24 */
-/***/ (function(module: any, exports: any) {
+/***/ (function(module: NodeModule, exports: any) {
 
 /*! ieee754. BSD-3-Clause License. Feross Aboukhadijeh <https://feross.org/opensource> */
-exports.read = function (buffer: Uint8Array, offset: number, isLE: boolean, mLen: number, nBytes: number) {
+exports.read = function (buffer: Buffer, offset: number, isLE: boolean, mLen: number, nBytes: number) {
   var e, m
   var eLen = (nBytes * 8) - mLen - 1
   var eMax = (1 << eLen) - 1
@@ -7188,7 +7188,7 @@ exports.read = function (buffer: Uint8Array, offset: number, isLE: boolean, mLen
   return (s ? -1 : 1) * m * Math.pow(2, e - mLen)
 }
 
-exports.write = function (buffer: Uint8Array, value: number, offset: number, isLE: boolean, mLen: number, nBytes: number) {
+exports.write = function (buffer: Buffer, value: number, offset: number, isLE: mLen, mLen: number, nBytes: number) {
   var e, m, c
   var eLen = (nBytes * 8) - mLen - 1
   var eMax = (1 << eLen) - 1
@@ -7310,7 +7310,7 @@ exports.write = function (buffer: Uint8Array, value: number, offset: number, isL
 	 * @param {String} type The error type.
 	 * @returns {Error} Throws a `RangeError` with the applicable error message.
 	 */
-	function error(type: "InvalidOperation") {
+	function error(type: string) {
 		throw new RangeError(errors[type]);
 	}
 
@@ -7322,7 +7322,7 @@ exports.write = function (buffer: Uint8Array, value: number, offset: number, isL
 	 * item.
 	 * @returns {Array} A new array of values returned by the callback function.
 	 */
-	function map(array: any[], fn: any) {
+	function map(array: Array<any>, fn: Function) {
 		var length = array.length;
 		var result = [];
 		while (length--) {
@@ -7450,7 +7450,7 @@ exports.write = function (buffer: Uint8Array, value: number, offset: number, isL
 	 * used; else, the lowercase form is used. The behavior is undefined
 	 * if `flag` is non-zero and `digit` has no uppercase form.
 	 */
-	function digitToBasic(digit: number, flag: boolean) {
+	function digitToBasic(digit: number, flag: number) {
 		//  0..25 map to ASCII a..z or A..Z
 		// 26..35 map to ASCII 0..9
 		return digit + 22 + 75 * (digit < 26) - ((flag != 0) << 5);
@@ -7478,7 +7478,7 @@ exports.write = function (buffer: Uint8Array, value: number, offset: number, isL
 	 * @param {String} input The Punycode string of ASCII-only symbols.
 	 * @returns {String} The resulting string of Unicode symbols.
 	 */
-	function decode(input: Uint8Array) {
+	function decode(input: string) {
 		// Don't use UCS-2
 		var output = [],
 		    inputLength = input.length,
@@ -7579,7 +7579,7 @@ exports.write = function (buffer: Uint8Array, value: number, offset: number, isL
 	 * @param {String} input The string of Unicode symbols.
 	 * @returns {String} The resulting Punycode string of ASCII-only symbols.
 	 */
-	function encode(input: number) {
+	function encode(input: string) {
 		var n,
 		    delta,
 		    handledCPCount,
@@ -7877,7 +7877,7 @@ function hasOwnProperty(obj: any, prop: string) {
   return Object.prototype.hasOwnProperty.call(obj, prop);
 }
 
-module.exports = function(qs: string, sep: string, eq: string, options: IParseOptions) {
+module.exports = function(qs: string, sep: string, eq: string, options: any) {
   sep = sep || '&';
   eq = eq || '=';
   var obj = {};
@@ -7928,7 +7928,7 @@ module.exports = function(qs: string, sep: string, eq: string, options: IParseOp
   return obj;
 };
 
-var isArray = Array.isArray || function (xs: number[]) {
+var isArray = Array.isArray || function (xs: Array<T>) {
   return Object.prototype.toString.call(xs) === '[object Array]';
 };
 
@@ -7977,7 +7977,7 @@ var stringifyPrimitive = function(v: any) {
   }
 };
 
-module.exports = function(obj: any, sep: string, eq: any, name: string) {
+module.exports = function(obj: any, sep: string, eq: string, name: string) {
   sep = sep || '&';
   eq = eq || '=';
   if (obj === null) {
@@ -7985,7 +7985,7 @@ module.exports = function(obj: any, sep: string, eq: any, name: string) {
   }
 
   if (typeof obj === 'object') {
-    return map(objectKeys(obj), function(k: number) {
+    return map(objectKeys(obj), function(k: string) {
       var ks = encodeURIComponent(stringifyPrimitive(k)) + eq;
       if (isArray(obj[k])) {
         return map(obj[k], function(v: any) {
@@ -8003,11 +8003,11 @@ module.exports = function(obj: any, sep: string, eq: any, name: string) {
          encodeURIComponent(stringifyPrimitive(obj));
 };
 
-var isArray = Array.isArray || function (xs: number[]) {
+var isArray = Array.isArray || function (xs: Array<T>) {
   return Object.prototype.toString.call(xs) === '[object Array]';
 };
 
-function map (xs: any, f: any) {
+function map (xs: any[], f: any) {
   if (xs.map) return xs.map(f);
   var res = [];
   for (var i = 0; i < xs.length; i++) {
@@ -8038,17 +8038,17 @@ for (var key in http) {
   if (http.hasOwnProperty(key)) https[key] = http[key]
 }
 
-https.request = function (params: IGetTagsForResourceInput, cb: any) {
+https.request = function (params: any, cb: any) {
   params = validateParams(params)
   return http.request.call(this, params, cb)
 }
 
-https.get = function (params: IDeleteResourcePolicyRequest, cb: any) {
+https.get = function (params: any, cb: any) {
   params = validateParams(params)
   return http.get.call(this, params, cb)
 }
 
-function validateParams (params: IParams) {
+function validateParams (params: any) {
   if (typeof params === 'string') {
     params = url.parse(params)
   }
@@ -8091,7 +8091,7 @@ function decideMode (preferBinary: boolean, useFetch: boolean) {
 	}
 }
 
-var ClientRequest = module.exports = function (opts: IOptions) {
+var ClientRequest = module.exports = function (opts: any) {
 	var self = this
 	stream.Writable.call(self)
 
@@ -8173,7 +8173,7 @@ ClientRequest.prototype._onFinish = function () {
 		if (capability.arraybuffer) {
 			body = toArrayBuffer(Buffer.concat(self._body))
 		} else if (capability.blobConstructor) {
-			body = new global.Blob(self._body.map(function (buffer: ArrayBuffer) {
+			body = new global.Blob(self._body.map(function (buffer: Buffer) {
 				return toArrayBuffer(buffer)
 			}), {
 				type: (headersObj['content-type'] || {}).value || ''
@@ -8222,10 +8222,10 @@ ClientRequest.prototype._onFinish = function () {
 			mode: 'cors',
 			credentials: opts.withCredentials ? 'include' : 'same-origin',
 			signal: signal
-		}).then(function (response: FetchEvent) {
+		}).then(function (response: Response) {
 			self._fetchResponse = response
 			self._connect()
-		}, function (reason: Error) {
+		}, function (reason: any) {
 			global.clearTimeout(self._fetchTimer)
 			if (!self._destroyed)
 				self.emit('error', reason)
@@ -8258,7 +8258,7 @@ ClientRequest.prototype._onFinish = function () {
 			}
 		}
 
-		headersList.forEach(function (header: any) {
+		headersList.forEach(function (header: string[]) {
 			xhr.setRequestHeader(header[0], header[1])
 		})
 
@@ -8336,7 +8336,7 @@ ClientRequest.prototype._connect = function () {
 	self.emit('response', self._response)
 }
 
-ClientRequest.prototype._write = function (chunk: Buffer, encoding: string, cb: any) {
+ClientRequest.prototype._write = function (chunk: Buffer, encoding: string, cb: Function) {
 	var self = this
 
 	self._body.push(chunk)
@@ -8355,7 +8355,7 @@ ClientRequest.prototype.abort = ClientRequest.prototype.destroy = function () {
 		self._fetchAbortController.abort()
 }
 
-ClientRequest.prototype.end = function (data: any, encoding: string, cb: any) {
+ClientRequest.prototype.end = function (data: Buffer, encoding: string, cb: Function) {
 	var self = this
 	if (typeof data === 'function') {
 		cb = data
@@ -8398,7 +8398,7 @@ var unsafeHeaders = [
 
 /***/ }),
 /* 33 */
-/***/ (function(module: any, exports: any) {
+/***/ (function(module: __webpack_require__.Module, exports: any) {
 
 /* (ignored) */
 
@@ -8414,7 +8414,7 @@ function _classCallCheck(instance: any, Constructor: any) { if (!(instance insta
 var Buffer = __webpack_require__(7).Buffer;
 var util = __webpack_require__(35);
 
-function copyBuffer(src: Uint8Array, target: Uint8Array, offset: number) {
+function copyBuffer(src: Buffer, target: Buffer, offset: number) {
   src.copy(target, offset);
 }
 
@@ -8427,7 +8427,7 @@ module.exports = function () {
     this.length = 0;
   }
 
-  BufferList.prototype.push = function push(v: any) {
+  BufferList.prototype.push = function push(v: T) {
     var entry = { data: v, next: null };
     if (this.length > 0) this.tail.next = entry;else this.head = entry;
     this.tail = entry;
@@ -8532,12 +8532,12 @@ exports.enroll = function(item: any, msecs: number) {
   item._idleTimeout = msecs;
 };
 
-exports.unenroll = function(item: IdleItem) {
+exports.unenroll = function(item: any) {
   clearTimeout(item._idleTimeoutId);
   item._idleTimeout = -1;
 };
 
-exports._unrefActive = exports.active = function(item: IdleItem) {
+exports._unrefActive = exports.active = function(item: any) {
   clearTimeout(item._idleTimeoutId);
 
   var msecs = item._idleTimeout;
@@ -8580,7 +8580,7 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
     var doc = global.document;
     var registerImmediate;
 
-    function setImmediate(callback: Function) {
+    function setImmediate(callback: any) {
       // Callback can either be a function or a string
       if (typeof callback !== "function") {
         callback = new Function("" + callback);
@@ -8623,7 +8623,7 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
         }
     }
 
-    function runIfPresent(handle: Function) {
+    function runIfPresent(handle: number) {
         // From the spec: "Wait until any invocations of this algorithm started before this one have completed."
         // So if we're currently running a task, we'll need to delay this invocation.
         if (currentlyRunningATask) {
@@ -8692,12 +8692,12 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 
     function installMessageChannelImplementation() {
         var channel = new MessageChannel();
-        channel.port1.onmessage = function(event: IMessageEvent) {
+        channel.port1.onmessage = function(event: MessageEvent) {
             var handle = event.data;
             runIfPresent(handle);
         };
 
-        registerImmediate = function(handle: number) {
+        registerImmediate = function(handle: any) {
             channel.port2.postMessage(handle);
         };
     }
@@ -8719,7 +8719,7 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
     }
 
     function installSetTimeoutImplementation() {
-        registerImmediate = function(handle: number) {
+        registerImmediate = function(handle: any) {
             setTimeout(runIfPresent, 0, handle);
         };
     }
@@ -8873,7 +8873,7 @@ util.inherits = __webpack_require__(2);
 
 util.inherits(PassThrough, Transform);
 
-function PassThrough(options: PassThroughOptions) {
+function PassThrough(options: any) {
   if (!(this instanceof PassThrough)) return new PassThrough(options);
 
   Transform.call(this, options);
@@ -8918,7 +8918,7 @@ module.exports = function (buf: Buffer) {
 
 /***/ }),
 /* 41 */
-/***/ (function(module: any, exports: any) {
+/***/ (function(module: NodeModule, exports: any) {
 
 module.exports = extend
 
@@ -9015,7 +9015,7 @@ module.exports = {
 /* 43 */
 /***/ (function(module: any, exports: any, __webpack_require__: any) {
 
-/* WEBPACK VAR INJECTION */(function(process: Process) {// Copyright Joyent, Inc. and other Node contributors.
+/* WEBPACK VAR INJECTION */(function(process: any) {// Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
 // copy of this software and associated documentation files (the
@@ -9047,7 +9047,7 @@ var getOwnPropertyDescriptors = Object.getOwnPropertyDescriptors ||
   };
 
 var formatRegExp = /%[sdj%]/g;
-exports.format = function(f: Function) {
+exports.format = function(f: string) {
   if (!isString(f)) {
     var objects = [];
     for (var i = 0; i < arguments.length; i++) {
@@ -9089,7 +9089,7 @@ exports.format = function(f: Function) {
 // Mark that a method should not be used.
 // Returns a modified function which warns once by default.
 // If --no-deprecation is set, then it is a no-op.
-exports.deprecate = function(fn: any, msg: string) {
+exports.deprecate = function(fn: Function, msg: string) {
   if (typeof process !== 'undefined' && process.noDeprecation === true) {
     return fn;
   }
@@ -9122,7 +9122,7 @@ exports.deprecate = function(fn: any, msg: string) {
 
 var debugs = {};
 var debugEnviron;
-exports.debuglog = function(set: ISet<string>) {
+exports.debuglog = function(set: Set<T>) {
   if (isUndefined(debugEnviron))
     debugEnviron = process.env.NODE_DEBUG || '';
   set = set.toUpperCase();
@@ -9149,7 +9149,7 @@ exports.debuglog = function(set: ISet<string>) {
  * @param {Object} opts Optional options object that alters the output.
  */
 /* legacy: obj, showHidden, depth, colors*/
-function inspect(obj: any, opts: InspectOptions) {
+function inspect(obj: any, opts: any) {
   // default options
   var ctx = {
     seen: [],
@@ -9207,7 +9207,7 @@ inspect.styles = {
 };
 
 
-function stylizeWithColor(str: string, styleType: StyleType) {
+function stylizeWithColor(str: string, styleType: string) {
   var style = inspect.styles[styleType];
 
   if (style) {
@@ -9219,7 +9219,7 @@ function stylizeWithColor(str: string, styleType: StyleType) {
 }
 
 
-function stylizeNoColor(str: string, styleType: StyleType) {
+function stylizeNoColor(str: string, styleType: string) {
   return str;
 }
 
@@ -9235,7 +9235,7 @@ function arrayToHash(array: any[]) {
 }
 
 
-function formatValue(ctx: FormatContext, value: any, recurseTimes: number) {
+function formatValue(ctx: any, value: any, recurseTimes: any) {
   // Provide a hook for user-specified inspect functions.
   // Check that value is an object with an inspect function on it
   if (ctx.customInspect &&
@@ -9372,7 +9372,7 @@ function formatError(value: any) {
 }
 
 
-function formatArray(ctx: FormatContext, value: any, recurseTimes: number, visibleKeys: string[], keys: string[]) {
+function formatArray(ctx: any, value: any, recurseTimes: any, visibleKeys: any, keys: any) {
   var output = [];
   for (var i = 0, l = value.length; i < l; ++i) {
     if (hasOwnProperty(value, String(i))) {
@@ -9392,7 +9392,7 @@ function formatArray(ctx: FormatContext, value: any, recurseTimes: number, visib
 }
 
 
-function formatProperty(ctx: FormatContext, value: any, recurseTimes: number, visibleKeys: string[], key: string, array: any) {
+function formatProperty(ctx: any, value: any, recurseTimes: any, visibleKeys: any, key: any, array: any) {
   var name, str, desc;
   desc = Object.getOwnPropertyDescriptor(value, key) || { value: value[key] };
   if (desc.get) {
@@ -9451,7 +9451,7 @@ function formatProperty(ctx: FormatContext, value: any, recurseTimes: number, vi
 }
 
 
-function reduceToSingleString(output: string, base: string, braces: boolean) {
+function reduceToSingleString(output: string, base: string, braces: string[]) {
   var numLinesEst = 0;
   var length = output.reduce(function(prev: number, cur: number) {
     numLinesEst++;
@@ -9514,7 +9514,7 @@ function isUndefined(arg: any) {
 }
 exports.isUndefined = isUndefined;
 
-function isRegExp(re: RegExp) {
+function isRegExp(re: any) {
   return isObject(re) && objectToString(re) === '[object RegExp]';
 }
 exports.isRegExp = isRegExp;
@@ -9585,7 +9585,7 @@ exports.log = function() {
  * Inherit the prototype methods from one constructor into another.
  *
  * The Function.prototype.inherits from lang.js rewritten as a standalone
- * function (not on Function.prototype: any). NOTE: If this file is to be loaded
+ * function (not on Function.prototype: https). NOTE: If this file is to be loaded
  * during bootstrapping this function needs to be rewritten using some native
  * functions as prototype setup using normal JavaScript does not work as
  * expected during bootstrapping (see mirror.js in r114903).
@@ -9614,7 +9614,7 @@ function hasOwnProperty(obj: any, prop: string) {
 
 var kCustomPromisifiedSymbol = typeof Symbol !== 'undefined' ? Symbol('util.promisify.custom') : undefined;
 
-exports.promisify = function promisify(original: any) {
+exports.promisify = function promisify(original: Function) {
   if (typeof original !== 'function')
     throw new TypeError('The "original" argument must be of type Function');
 
@@ -9631,7 +9631,7 @@ exports.promisify = function promisify(original: any) {
 
   function fn() {
     var promiseResolve, promiseReject;
-    var promise = new Promise(function (resolve: any, reject: any) {
+    var promise = new Promise(function (resolve: Function, reject: Function) {
       promiseResolve = resolve;
       promiseReject = reject;
     });
@@ -9723,7 +9723,7 @@ exports.callbackify = callbackify;
 
 /***/ }),
 /* 44 */
-/***/ (function(module: any, exports: any) {
+/***/ (function(module: NodeModule, exports: any) {
 
 module.exports = function isBuffer(arg: any) {
   return arg && typeof arg === 'object'

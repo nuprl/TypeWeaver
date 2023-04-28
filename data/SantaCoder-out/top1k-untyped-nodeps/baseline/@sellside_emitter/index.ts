@@ -227,7 +227,7 @@ Emitter.prototype.off;
  * Remove all instances of the given `fn` from listeners.
  */
 
-function removeListeners(fn: Function, listeners: EventEmitterListener[]) {
+function removeListeners(fn: Function, listeners: Array<Function>) {
   for (let i = 0; i < listeners.length; i++) {
     const listener = listeners[i];
     if (listener === fn || listener.fn === fn) {
@@ -249,7 +249,7 @@ function mixin(target: any) {
   return target;
 }
 
-function copy(target: string, provider: string, keys: string[]) {
+function copy(target: any, provider: any, keys: string[]) {
   for (const key of keys) {
     if (typeof provider[key] === 'function') {
       define(target, key, provider[key].bind(provider));

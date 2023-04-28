@@ -50,7 +50,7 @@ DES.prototype.deriveKeys = function deriveKeys(state: State, key: string) {
   }
 };
 
-DES.prototype._update = function _update(inp: number, inOff: number, out: number, outOff: number) {
+DES.prototype._update = function _update(inp: Uint8Array, inOff: number, out: Uint8Array, outOff: number) {
   var state = this._desState;
 
   var l = utils.readUInt32BE(inp, inOff);
@@ -73,7 +73,7 @@ DES.prototype._update = function _update(inp: number, inOff: number, out: number
   utils.writeUInt32BE(out, r, outOff + 4);
 };
 
-DES.prototype._pad = function _pad(buffer: Uint8Array, off: number) {
+DES.prototype._pad = function _pad(buffer: Buffer, off: number) {
   var value = buffer.length - off;
   for (var i = off; i < buffer.length; i++)
     buffer[i] = value;
@@ -81,7 +81,7 @@ DES.prototype._pad = function _pad(buffer: Uint8Array, off: number) {
   return true;
 };
 
-DES.prototype._unpad = function _unpad(buffer: Uint8Array) {
+DES.prototype._unpad = function _unpad(buffer: Buffer) {
   var pad = buffer[buffer.length - 1];
   for (var i = buffer.length - pad; i < buffer.length; i++)
     assert.equal(buffer[i], pad);
@@ -89,7 +89,7 @@ DES.prototype._unpad = function _unpad(buffer: Uint8Array) {
   return buffer.slice(0, buffer.length - pad);
 };
 
-DES.prototype._encrypt = function _encrypt(state: CipherState, lStart: number, rStart: number, out: number[], off: number) {
+DES.prototype._encrypt = function _encrypt(state: Uint8Array, lStart: number, rStart: number, out: Uint8Array, off: number) {
   var l = lStart;
   var r = rStart;
 
@@ -115,7 +115,7 @@ DES.prototype._encrypt = function _encrypt(state: CipherState, lStart: number, r
   utils.rip(r, l, out, off);
 };
 
-DES.prototype._decrypt = function _decrypt(state: CipherState, lStart: number, rStart: number, out: number[], off: number) {
+DES.prototype._decrypt = function _decrypt(state: any, lStart: number, rStart: number, out: any, off: number) {
   var l = rStart;
   var r = lStart;
 

@@ -1,7 +1,7 @@
 import duplexify from 'duplexify';
 import http from 'http';
 
-var request = function(opts: AxiosRequestConfig) {
+var request = function(opts: http.RequestOptions) {
   var req = http.request(opts)
   var dup = duplexify()
   dup.setWritable(req)

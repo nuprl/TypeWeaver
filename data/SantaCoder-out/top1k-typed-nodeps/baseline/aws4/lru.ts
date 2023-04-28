@@ -30,7 +30,7 @@ LruCache.prototype.set = function(key: string, val: any) {
   return true
 }
 
-LruCache.prototype.used = function(node: INode) {
+LruCache.prototype.used = function(node: Node) {
   this.list.moveToFront(node)
 }
 

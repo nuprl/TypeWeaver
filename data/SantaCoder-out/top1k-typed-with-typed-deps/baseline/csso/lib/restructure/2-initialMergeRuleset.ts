@@ -7,11 +7,11 @@ import {
     hasSimilarSelectors
 } from './utils.js';
 
-function processRule(node: RuleNode, item: RuleItem, list: RuleList) {
+function processRule(node: Node, item: RuleItem, list: RuleList) {
     const selectors = node.prelude.children;
     const declarations = node.block.children;
 
-    list.prevUntil(item.prev, function(prev: Node) {
+    list.prevUntil(item.prev, function(prev: RuleSet) {
         // skip non-ruleset node if safe
         if (prev.type !== 'Rule') {
             return unsafeToSkipNode.call(selectors, prev);
@@ -45,7 +45,7 @@ function processRule(node: RuleNode, item: RuleItem, list: RuleList) {
 // NOTE: direction should be left to right, since rulesets merge to left
 // ruleset. When direction right to left unmerged rulesets may prevent lookup
 // TODO: remove initial merge
-export default function initialMergeRule(ast: AST) {
+export default function initialMergeRule(ast: Node) {
     walk(ast, {
         visit: 'Rule',
         enter: processRule

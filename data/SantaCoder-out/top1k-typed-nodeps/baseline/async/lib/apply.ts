@@ -26,10 +26,10 @@
  *
  * // the same process without using apply
  * async.parallel([
- *     function(callback: any) {
+ *     function(callback: Function) {
  *         fs.writeFile('testfile1', 'test1', callback);
  *     },
- *     function(callback: any) {
+ *     function(callback: Function) {
  *         fs.writeFile('testfile2', 'test2', callback);
  *     }
  * ]);

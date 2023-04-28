@@ -25,7 +25,7 @@ exports.typeDefs =
     Date: { type: Date, validate: validateDate },
   }
 
-function nopt (types: string[], shorthands: string[], args: any[], slice: number) {
+function nopt (types: Object, shorthands: Object, args: Array, slice: Number) {
   args = args || process.argv
   types = types || {}
   shorthands = shorthands || {}
@@ -54,7 +54,7 @@ function nopt (types: string[], shorthands: string[], args: any[], slice: number
   return data
 }
 
-function clean (data: any, types: string[], typeDefs: any) {
+function clean (data: any, types: any, typeDefs: any) {
   typeDefs = typeDefs || exports.typeDefs
   var remove = {}
   var typeDefault = [false, true, null, String, Array]
@@ -125,7 +125,7 @@ function clean (data: any, types: string[], typeDefs: any) {
       }
       debug('validated v', d, v, types[k])
       return d[k]
-    }).filter(function (v: any) {
+    }).filter(function (v: T) {
       return v !== remove
     })
 
@@ -145,7 +145,7 @@ function clean (data: any, types: string[], typeDefs: any) {
   })
 }
 
-function validateString (data: string, k: string, val: any) {
+function validateString (data: any, k: string, val: any) {
   data[k] = String(val)
 }
 
@@ -188,7 +188,7 @@ function validateDate (data: any, k: string, val: any) {
   data[k] = new Date(val)
 }
 
-function validateBoolean (data: any, k: string, val: boolean) {
+function validateBoolean (data: any, k: string, val: any) {
   if (val instanceof Boolean) {
     val = val.valueOf()
   } else if (typeof val === 'string') {
@@ -205,7 +205,7 @@ function validateBoolean (data: any, k: string, val: boolean) {
   data[k] = val
 }
 
-function validateUrl (data: any, k: string, val: any) {
+function validateUrl (data: any, k: string, val: string) {
   // Changing this would be a breaking change in the npm cli
   /* eslint-disable-next-line node/no-deprecated-api */
   val = url.parse(String(val))
@@ -215,14 +215,14 @@ function validateUrl (data: any, k: string, val: any) {
   data[k] = val.href
 }
 
-function validateStream (data: any, k: number, val: any) {
+function validateStream (data: any, k: string, val: any) {
   if (!(val instanceof Stream)) {
     return false
   }
   data[k] = val
 }
 
-function validate (data: any, k: string, val: any, type: string, typeDefs: any) {
+function validate (data: any, k: string, val: any, type: string, typeDefs: string) {
   // arrays are lists of types.
   if (Array.isArray(type)) {
     for (let i = 0, l = type.length; i < l; i++) {
@@ -449,7 +449,7 @@ function parse (args: string[], data: string, remain: string[], types: string[],
   }
 }
 
-function resolveShort (arg: string, shorthands: AbbrShorthand[], shortAbbr: AbbrShorthand[], abbrevs: AbbrShorthand[]) {
+function resolveShort (arg: string, shorthands: string[], shortAbbr: string, abbrevs: string[]) {
   // handle single-char shorthands glommed together, like
   // npm ls -glp, but only if there is one dash, and only if
   // all of the chars are single-char shorthands, and it's
@@ -476,7 +476,7 @@ function resolveShort (arg: string, shorthands: AbbrShorthand[], shortAbbr: Abbr
   if (!singles) {
     singles = Object.keys(shorthands).filter(function (s: string) {
       return s.length === 1
-    }).reduce(function (l: number, r: number) {
+    }).reduce(function (l: any, r: any) {
       l[r] = true
       return l
     }, {})
@@ -491,7 +491,7 @@ function resolveShort (arg: string, shorthands: AbbrShorthand[], shortAbbr: Abbr
   if (chrs.join('') === arg) {
     return chrs.map(function (c: string) {
       return shorthands[c]
-    }).reduce(function (l: number, r: number) {
+    }).reduce(function (l: T[], r: T[]) {
       return l.concat(r)
     }, [])
   }

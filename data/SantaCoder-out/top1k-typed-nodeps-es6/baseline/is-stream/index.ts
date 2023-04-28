@@ -4,26 +4,26 @@ export function isStream(stream: any) {
 		&& typeof stream.pipe === 'function';
 }
 
-export function isWritableStream(stream: Readable) {
+export function isWritableStream(stream: any) {
 	return isStream(stream)
 		&& stream.writable !== false
 		&& typeof stream._write === 'function'
 		&& typeof stream._writableState === 'object';
 }
 
-export function isReadableStream(stream: ReadableStream) {
+export function isReadableStream(stream: unknown) {
 	return isStream(stream)
 		&& stream.readable !== false
 		&& typeof stream._read === 'function'
 		&& typeof stream._readableState === 'object';
 }
 
-export function isDuplexStream(stream: Readable) {
+export function isDuplexStream(stream: any) {
 	return isWritableStream(stream)
 		&& isReadableStream(stream);
 }
 
-export function isTransformStream(stream: Readable) {
+export function isTransformStream(stream: any) {
 	return isDuplexStream(stream)
 		&& typeof stream._transform === 'function';
 }

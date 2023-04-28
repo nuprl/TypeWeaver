@@ -70,15 +70,15 @@ Zlib.prototype.close = function () {
   this.dictionary = null
 }
 
-Zlib.prototype.write = function (flush: number, input: number, in_off: number, in_len: number, out: number, out_off: number, out_len: number) {
+Zlib.prototype.write = function (flush: any, input: any, in_off: any, in_len: any, out: any, out_off: any, out_len: any) {
   return this._write(true, flush, input, in_off, in_len, out, out_off, out_len)
 }
 
-Zlib.prototype.writeSync = function (flush: any, input: any, in_off: number, in_len: number, out: number, out_off: number, out_len: number) {
+Zlib.prototype.writeSync = function (flush: any, input: any, in_off: any, in_len: any, out: any, out_off: any, out_len: any) {
   return this._write(false, flush, input, in_off, in_len, out, out_off, out_len)
 }
 
-Zlib.prototype._write = function (async: boolean, flush: boolean, input: number, in_off: number, in_len: number, out: number, out_off: number, out_len: number) {
+Zlib.prototype._write = function (async: Async, flush: Flush, input: Uint8Array, in_off: number, in_len: number, out: Uint8Array, out_off: number, out_len: number) {
   assert.equal(arguments.length, 8)
 
   assert(this.init_done, 'write before init')
@@ -298,7 +298,7 @@ Zlib.prototype._error = function (message: string) {
   }
 }
 
-Zlib.prototype.init = function (windowBits: number, level: number, memLevel: number, strategy: number, dictionary: Dictionary) {
+Zlib.prototype.init = function (windowBits: number, level: number, memLevel: number, strategy: number, dictionary: string) {
   assert(arguments.length === 4 || arguments.length === 5, 'init(windowBits, level, memLevel, strategy, [dictionary])')
 
   assert(windowBits >= 8 && windowBits <= 15, 'invalid windowBits')
@@ -325,7 +325,7 @@ Zlib.prototype.reset = function () {
   this._setDictionary()
 }
 
-Zlib.prototype._init = function (level: number, windowBits: number, memLevel: number, strategy: string, dictionary: Dictionary) {
+Zlib.prototype._init = function (level: number, windowBits: number, memLevel: number, strategy: number, dictionary: number) {
   this.level = level
   this.windowBits = windowBits
   this.memLevel = memLevel

@@ -31,7 +31,7 @@ import wrapAsync from './internal/wrapAsync.js'
  * @returns {AsyncFunction} a memoized version of `fn`
  * @example
  *
- * var slow_fn = function(name: string, callback: any) {
+ * var slow_fn = function(name: string, callback: Function) {
  *     // do something
  *     callback(null, result);
  * };
@@ -42,7 +42,7 @@ import wrapAsync from './internal/wrapAsync.js'
  *     // callback
  * });
  */
-export default function memoize(fn: any, hasher = v => v: any) {
+export default function memoize(fn: Function, hasher = v => v: any) {
     var memo = Object.create(null);
     var queues = Object.create(null);
     var _fn = wrapAsync(fn);

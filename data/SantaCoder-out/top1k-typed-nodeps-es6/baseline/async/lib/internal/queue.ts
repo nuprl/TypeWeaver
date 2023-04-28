@@ -3,7 +3,7 @@ import setImmediate from './setImmediate.js'
 import DLL from './DoublyLinkedList.js'
 import wrapAsync from './wrapAsync.js'
 
-export default function queue(worker: WorkerFunction, concurrency: number, payload: any) {
+export default function queue(worker: Function, concurrency: number, payload: any[]) {
     if (concurrency == null) {
         concurrency = 1;
     }
@@ -89,7 +89,7 @@ export default function queue(worker: WorkerFunction, concurrency: number, paylo
     }
 
     function _createCB(tasks: Task[]) {
-        return function (err: Error, ...args: any[]) {
+        return function (err: any, ...args: any[]) {
             numRunning -= 1;
 
             for (var i = 0, l = tasks.length; i < l; i++) {

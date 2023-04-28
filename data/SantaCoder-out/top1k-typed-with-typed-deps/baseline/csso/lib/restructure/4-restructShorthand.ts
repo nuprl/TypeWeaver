@@ -77,7 +77,7 @@ class TRBL {
     getValueSequence(declaration, count) {
         const values = [];
         let iehack = '';
-        const hasBadValues = declaration.value.type !== 'Value' || declaration.value.children.some(function(child: IChild) {
+        const hasBadValues = declaration.value.type !== 'Value' || declaration.value.children.some(function(child: any) {
             let special = false;
 
             switch (child.type) {
@@ -325,11 +325,11 @@ class TRBL {
     }
 }
 
-function processRule(rule: Rule, shorts: ShortDeclarations, shortDeclarations: shortDeclarations, lastShortSelector: lastShortSelector) {
+function processRule(rule: Rule, shorts: string[], shortDeclarations: string[], lastShortSelector: string) {
     const declarations = rule.block.children;
     const selector = rule.prelude.children.first.id;
 
-    rule.block.children.forEachRight(function(declaration: Declaration, item: DeclarationItem) {
+    rule.block.children.forEachRight(function(declaration: Declaration, item: Declaration) {
         const property = declaration.property;
 
         if (!MAIN_PROPERTY.hasOwnProperty(property)) {
@@ -372,8 +372,8 @@ function processRule(rule: Rule, shorts: ShortDeclarations, shortDeclarations: s
     return lastShortSelector;
 }
 
-function processShorthands(shortDeclarations: ShorthandDeclaration[], markDeclaration: MarkDeclaration) {
-    shortDeclarations.forEach(function(item: string) {
+function processShorthands(shortDeclarations: Array<ShorthandDeclaration>, markDeclaration: MarkDeclaration) {
+    shortDeclarations.forEach(function(item: ShorthandItem) {
         const shorthand = item.shorthand;
 
         if (!shorthand.isOkToMinimize()) {
@@ -388,7 +388,7 @@ function processShorthands(shortDeclarations: ShorthandDeclaration[], markDeclar
     });
 }
 
-export default function restructBlock(ast: AST, indexer: BlockIndexer) {
+export default function restructBlock(ast: Block, indexer: Indexer) {
     const stylesheetMap = {};
     const shortDeclarations = [];
 

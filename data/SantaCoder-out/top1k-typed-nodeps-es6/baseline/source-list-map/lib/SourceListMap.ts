@@ -33,7 +33,7 @@ class SourceListMap {
 		} else if(generatedCode.getMappings && generatedCode.getGeneratedCode) {
 			this.children.push(generatedCode);
 		} else if(generatedCode.children) {
-			generatedCode.children.forEach(function(sln: IScriptLine) {
+			generatedCode.children.forEach(function(sln: Solution) {
 				this.children.push(sln);
 			}, this);
 		} else {
@@ -53,7 +53,7 @@ class SourceListMap {
 		} else if(generatedCode.getMappings && generatedCode.getGeneratedCode) {
 			this.children.unshift(generatedCode);
 		} else if(generatedCode.children) {
-			generatedCode.children.slice().reverse().forEach(function(sln: IScriptLine) {
+			generatedCode.children.slice().reverse().forEach(function(sln: Solution) {
 				this.children.unshift(sln);
 			}, this);
 		} else {
@@ -69,7 +69,7 @@ class SourceListMap {
 			});
 		});
 		const optimizedNodes = [];
-		normalizedNodes.forEach(function(sln: IScriptLine) {
+		normalizedNodes.forEach(function(sln: Solution) {
 			sln = sln.mapGeneratedCode(fn);
 			if(optimizedNodes.length === 0) {
 				optimizedNodes.push(sln);
@@ -87,17 +87,17 @@ class SourceListMap {
 	};
 
 	toString() {
-		return this.children.map(function(sln: IScriptLine) {
+		return this.children.map(function(sln: Solution) {
 			return sln.getGeneratedCode();
 		}).join("");
 	};
 
 	toStringWithSourceMap(options) {
 		const mappingsContext = new MappingsContext();
-		const source = this.children.map(function(sln: IScriptLine) {
+		const source = this.children.map(function(sln: Solution) {
 			return sln.getGeneratedCode();
 		}).join("");
-		const mappings = this.children.map(function(sln: IScriptLine) {
+		const mappings = this.children.map(function(sln: Solution) {
 			return sln.getMappings(mappingsContext);
 		}).join("");
 		const arrays = mappingsContext.getArrays();

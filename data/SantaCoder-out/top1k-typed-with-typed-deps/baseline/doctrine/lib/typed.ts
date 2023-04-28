@@ -78,7 +78,7 @@
         return '><(){}[],:*|?!='.indexOf(String.fromCharCode(ch)) === -1 && !esutils.code.isWhiteSpace(ch) && !esutils.code.isLineTerminator(ch);
     }
 
-    function Context(previous: Context, index: number, token: Token, value: BigNumber) {
+    function Context(previous: Context, index: number, token: Token, value: string) {
         this._previous = previous;
         this._index = index;
         this._token = token;
@@ -1067,7 +1067,7 @@
         return expr;
     }
 
-    function parseType(src: string, opt: ParseOptions) {
+    function parseType(src: string, opt: any) {
         var expr;
 
         source = src;
@@ -1094,7 +1094,7 @@
         return expr;
     }
 
-    function parseParamType(src: string, opt: ParseOptions) {
+    function parseParamType(src: string, opt: any) {
         var expr;
 
         source = src;
@@ -1290,7 +1290,7 @@
         return result;
     }
 
-    function stringify(node: Node, options: IParseOptions) {
+    function stringify(node: Node, options: Options) {
         if (options == null) {
             options = {};
         }

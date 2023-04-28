@@ -9,7 +9,7 @@ const SourceNode = require("./SourceNode");
 const CodeNode = require("./CodeNode");
 const SourceListMap = require("./SourceListMap");
 
-module.exports = function fromStringWithSourceMap(code: string, map: SourceMap) {
+module.exports = function fromStringWithSourceMap(code: string, map: string) {
 	const sources = map.sources;
 	const sourcesContent = map.sourcesContent;
 	const mappings = map.mappings.split(";");
@@ -43,7 +43,7 @@ module.exports = function fromStringWithSourceMap(code: string, map: SourceMap) 
 			nodes.push(currentNode);
 		}
 	}
-	mappings.forEach(function(mapping: IMapping, idx: number) {
+	mappings.forEach(function(mapping: Mapping, idx: number) {
 		let line = lines[idx];
 		if(typeof line === 'undefined') return;
 		if(idx !== lines.length - 1) line += "\n";
@@ -65,7 +65,7 @@ module.exports = function fromStringWithSourceMap(code: string, map: SourceMap) 
 		addCode(lines.slice(idx).join("\n"));
 	}
 	return new SourceListMap(nodes);
-	function processMapping(mapping: Mapping, line: number, ignore: boolean) {
+	function processMapping(mapping: Mapping, line: string, ignore: boolean) {
 		if(mapping.rest && mapping.rest[0] !== ",") {
 			base64VLQ.decode(mapping.rest, mapping);
 		}

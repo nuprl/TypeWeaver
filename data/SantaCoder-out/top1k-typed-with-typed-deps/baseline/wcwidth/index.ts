@@ -12,7 +12,7 @@ module.exports = function wcwidth(str: string) {
   return wcswidth(str, DEFAULTS)
 }
 
-module.exports.config = function(opts: IOptions) {
+module.exports.config = function(opts: Options) {
   opts = defaults(opts || {}, DEFAULTS)
   return function wcwidth(str: string) {
     return wcswidth(str, opts)
@@ -43,7 +43,7 @@ module.exports.config = function(opts: IOptions) {
  *  This implementation assumes that characters are encoded in ISO 10646.
 */
 
-function wcswidth(str: string, opts: WcswidthOpts) {
+function wcswidth(str: string, opts: Options) {
   if (typeof str !== 'string') return wcwidth(str, opts)
 
   var s = 0
@@ -56,7 +56,7 @@ function wcswidth(str: string, opts: WcswidthOpts) {
   return s
 }
 
-function wcwidth(ucs: string, opts: WcwidthOpts) {
+function wcwidth(ucs: number, opts: Options) {
   // test for 8-bit control characters
   if (ucs === 0) return opts.nul
   if (ucs < 32 || (ucs >= 0x7f && ucs < 0xa0)) return opts.control
@@ -81,7 +81,7 @@ function wcwidth(ucs: string, opts: WcwidthOpts) {
         (ucs >= 0x30000 && ucs <= 0x3fffd)));
 }
 
-function bisearch(ucs: UCS) {
+function bisearch(ucs: number) {
   var min = 0
   var max = combining.length - 1
   var mid

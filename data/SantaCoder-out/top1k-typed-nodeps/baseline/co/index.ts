@@ -40,14 +40,14 @@ co.wrap = function (fn: Function) {
  * @api public
  */
 
-function co(gen: Generator<T>) {
+function co(gen: Generator) {
   var ctx = this;
   var args = slice.call(arguments, 1);
 
   // we wrap everything in a promise to avoid promise chaining,
   // which leads to memory leak errors.
   // see https://github.com/tj/co/issues/180
-  return new Promise(function(resolve: any, reject: any) {
+  return new Promise(function(resolve: Function, reject: Function) {
     if (typeof gen === 'function') gen = gen.apply(ctx, args);
     if (!gen || typeof gen.next !== 'function') return resolve(gen);
 
@@ -95,7 +95,7 @@ function co(gen: Generator<T>) {
      * @api private
      */
 
-    function next(ret: any) {
+    function next(ret: IteratorResult<T>) {
       if (ret.done) return resolve(ret.value);
       var value = toPromise.call(ctx, ret.value);
       if (value && isPromise(value)) return value.then(onFulfilled, onRejected);
@@ -133,8 +133,8 @@ function toPromise(obj: any) {
 
 function thunkToPromise(fn: Function) {
   var ctx = this;
-  return new Promise(function (resolve: any, reject: any) {
-    fn.call(ctx, function (err: Error, res: AxiosResponse) {
+  return new Promise(function (resolve: Function, reject: Function) {
+    fn.call(ctx, function (err: Error, res: any) {
       if (err) return reject(err);
       if (arguments.length > 2) res = slice.call(arguments, 1);
       resolve(res);
@@ -181,7 +181,7 @@ function objectToPromise(obj: any){
   function defer(promise: Promise<any>, key: string) {
     // predefine the key in the result
     results[key] = undefined;
-    promises.push(promise.then(function (res: AxiosResponse) {
+    promises.push(promise.then(function (res: any) {
       results[key] = res;
     }));
   }

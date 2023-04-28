@@ -78,7 +78,7 @@ class Axios {
     // filter out skipped interceptors
     const requestInterceptorChain = [];
     let synchronousRequestInterceptors = true;
-    this.interceptors.request.forEach(function unshiftRequestInterceptors(interceptor: AxiosRequestInterceptor) {
+    this.interceptors.request.forEach(function unshiftRequestInterceptors(interceptor: Interceptor) {
       if (typeof interceptor.runWhen === 'function' && interceptor.runWhen(config) === false) {
         return;
       }
@@ -89,7 +89,7 @@ class Axios {
     });
 
     const responseInterceptorChain = [];
-    this.interceptors.response.forEach(function pushResponseInterceptors(interceptor: AxiosRequestConfig) {
+    this.interceptors.response.forEach(function pushResponseInterceptors(interceptor: Interceptor) {
       responseInterceptorChain.push(interceptor.fulfilled, interceptor.rejected);
     });
 
@@ -164,11 +164,11 @@ utils.forEach(['delete', 'get', 'head', 'options'], function forEachMethodNoData
   };
 });
 
-utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method: string) {
+utils.forEach(['post', 'put', 'patch'], function forEachMethodWithData(method: Function) {
   /*eslint func-names:0*/
 
   function generateHTTPMethod(isForm: boolean) {
-    return function httpMethod(url: string, data: AxiosRequestConfig, config: AxiosRequestConfig) {
+    return function httpMethod(url: string, data: any, config: any) {
       return this.request(mergeConfig(config || {}, {
         method,
         headers: isForm ? {

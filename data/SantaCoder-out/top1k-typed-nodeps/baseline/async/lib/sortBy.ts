@@ -30,7 +30,7 @@ import awaitify from './internal/awaitify.js'
  *
  * // asynchronous function that returns the file size in bytes
  * function getFileSizeInBytes(file: File, callback: any) {
- *     fs.stat(file, function(err: Error, stat: fs.Stats) {
+ *     fs.stat(file, function(err: Error, stat: Stats) {
  *         if (err) {
  *             return callback(err);
  *         }
@@ -56,8 +56,8 @@ import awaitify from './internal/awaitify.js'
  * // sorting order can be influenced:
  *
  * // ascending order
- * async.sortBy(['mediumfile.txt','smallfile.txt','bigfile.txt'], function(file: string, callback: any) {
- *     getFileSizeInBytes(file, function(getFileSizeErr: Error, fileSize: number) {
+ * async.sortBy(['mediumfile.txt','smallfile.txt','bigfile.txt'], function(file: string, callback: Function) {
+ *     getFileSizeInBytes(file, function(getFileSizeErr: any, fileSize: number) {
  *         if (getFileSizeErr) return callback(getFileSizeErr);
  *         callback(null, fileSize);
  *     });
@@ -74,8 +74,8 @@ import awaitify from './internal/awaitify.js'
  * );
  *
  * // descending order
- * async.sortBy(['bigfile.txt','mediumfile.txt','smallfile.txt'], function(file: string, callback: any) {
- *     getFileSizeInBytes(file, function(getFileSizeErr: Error, fileSize: number) {
+ * async.sortBy(['bigfile.txt','mediumfile.txt','smallfile.txt'], function(file: string, callback: Function) {
+ *     getFileSizeInBytes(file, function(getFileSizeErr: any, fileSize: any) {
  *         if (getFileSizeErr) {
  *             return callback(getFileSizeErr);
  *         }
@@ -152,7 +152,7 @@ import awaitify from './internal/awaitify.js'
  * }
  *
  */
-function sortBy (coll: Array<any>, iteratee: any, callback: any) {
+function sortBy (coll: any[], iteratee: any, callback: any) {
     var _iteratee = wrapAsync(iteratee);
     return map(coll, (x, iterCb) => {
         _iteratee(x, (err, criteria) => {
@@ -164,7 +164,7 @@ function sortBy (coll: Array<any>, iteratee: any, callback: any) {
         callback(null, results.sort(comparator).map(v => v.value));
     });
 
-    function comparator(left: T, right: T) {
+    function comparator(left: any, right: any) {
         var a = left.criteria, b = right.criteria;
         return a < b ? -1 : a > b ? 1 : 0;
     }

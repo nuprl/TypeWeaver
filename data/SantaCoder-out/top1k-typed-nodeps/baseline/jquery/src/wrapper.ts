@@ -8,7 +8,7 @@
  *
  * Date: @DATE
  */
-( function( global: Global, factory : Function) {
+( function( global: any, factory : any) {
 
 	"use strict";
 
@@ -34,7 +34,7 @@
 	}
 
 // Pass this if window is not defined yet
-} )( typeof window !== "undefined" ? window : this, function( window: Window, noGlobal : boolean) {
+} )( typeof window !== "undefined" ? window : this, function( window: any, noGlobal : any) {
 
 "use strict";
 

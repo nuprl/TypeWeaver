@@ -9,7 +9,7 @@ const unsafeToRemovePlusSignAfter = new Set([
     'UnicodeRange'
 ]);
 
-export function packNumber(value: number, item: number) {
+export function packNumber(value: number, item: Item) {
     // omit plus sign only if no prev or prev is safe type
     const regexp = item && item.prev !== null && unsafeToRemovePlusSignAfter.has(item.prev.data.type)
         ? KEEP_PLUSSIGN

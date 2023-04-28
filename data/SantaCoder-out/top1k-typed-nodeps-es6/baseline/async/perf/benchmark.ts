@@ -102,19 +102,19 @@ async.eachSeries(versionNames, cloneVersion, (err) => {
     });
 });
 
-function runSuite(suite: TestSuite, callback: any) {
+function runSuite(suite: Suite, callback: any) {
     suite.on("complete", () => {
         callback();
     }).run({async: true});
 }
 
-function setDefaultOptions(suiteConfig: ITestConfig) {
+function setDefaultOptions(suiteConfig: SuiteConfig) {
     suiteConfig.args = suiteConfig.args || [[]];
     suiteConfig.setup = suiteConfig.setup || function () {};
     return suiteConfig;
 }
 
-function handleMultipleArgs(list: string[], suiteConfig: ITestConfig) {
+function handleMultipleArgs(list: any[], suiteConfig: any) {
     return list.concat(suiteConfig.args.map((suiteArgs) => {
         return _.defaults({args: suiteArgs}, suiteConfig);
     }));
@@ -125,11 +125,11 @@ function setName(suiteConfig: SuiteConfig) {
     return suiteConfig;
 }
 
-function matchesGrep(suiteConfig: ITestConfig) {
+function matchesGrep(suiteConfig: SuiteConfig) {
     return !!grep.exec(suiteConfig.name);
 }
 
-function doesNotMatch(suiteConfig: ITestConfig) {
+function doesNotMatch(suiteConfig: SuiteConfig) {
     return !reject.exec(suiteConfig.name);
 }
 

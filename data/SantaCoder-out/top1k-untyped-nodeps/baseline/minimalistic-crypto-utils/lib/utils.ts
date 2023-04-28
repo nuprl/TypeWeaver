@@ -2,7 +2,7 @@
 
 var utils = exports;
 
-function toArray(msg: any, enc: string) {
+function toArray(msg: any, enc: any) {
   if (Array.isArray(msg))
     return msg.slice();
   if (!msg)
@@ -50,7 +50,7 @@ function toHex(msg: string) {
 }
 utils.toHex = toHex;
 
-utils.encode = function encode(arr: Uint8Array, enc: 'hex') {
+utils.encode = function encode(arr: Buffer[], enc: string) {
   if (enc === 'hex')
     return toHex(arr);
   else

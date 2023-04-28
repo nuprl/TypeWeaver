@@ -25,7 +25,7 @@ import wrapAsync from './internal/wrapAsync.js'
  * Invoked with (err, result).
  * @returns {Promise} a promise, if no callback is passed
  */
-function mapValuesLimit(obj: any, limit: number, iteratee: any, callback: any) {
+function mapValuesLimit(obj: any, limit: number, iteratee: Function, callback: Function) {
     callback = once(callback);
     var newObj = {};
     var _iteratee = wrapAsync(iteratee)

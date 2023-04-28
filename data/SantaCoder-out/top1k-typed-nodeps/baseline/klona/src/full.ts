@@ -21,7 +21,7 @@ export function klona(x: any) {
 		});
 	} else if (str === '[object Map]') {
 		tmp = new Map;
-		x.forEach(function (val: any, key: string) {
+		x.forEach(function (val: any, key: any) {
 			tmp.set(klona(key), klona(val));
 		});
 	} else if (str === '[object Date]') {

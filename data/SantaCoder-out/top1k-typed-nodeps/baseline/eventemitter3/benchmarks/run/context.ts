@@ -77,7 +77,7 @@ ce.on('foo', handle.bind(ctx));
   ce.emit('foo', 'bar');
   ce.emit('foo', 'bar', 'baz');
   ce.emit('foo', 'bar', 'baz', 'boom');
-}).on('cycle', function cycle(e: SyntheticEvent<HTMLButtonElement>) {
+}).on('cycle', function cycle(e: Event) {
   console.log(e.target.toString());
 }).on('complete', function completed() {
   console.log('Fastest is %s', this.filter('fastest').map('name'));

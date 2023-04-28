@@ -7,7 +7,7 @@ var aws4 = exports,
 
 // http://docs.amazonwebservices.com/general/latest/gr/signature-version-4.html
 
-function hmac(key: string, string: string, encoding: Encoding) {
+function hmac(key: string, string: string, encoding: string) {
   return crypto.createHmac('sha256', key).update(string, 'utf8').digest(encoding)
 }
 
@@ -17,7 +17,7 @@ function hash(string: string, encoding: string) {
 
 // This function assumes the string has already been percent encoded
 function encodeRfc3986(urlEncodedString: string) {
-  return urlEncodedString.replace(/[!'()*]/g, function(c: string) {
+  return urlEncodedString.replace(/[!'()*]/g, function(c: number) {
     return '%' + c.charCodeAt(0).toString(16).toUpperCase()
   })
 }
@@ -42,7 +42,7 @@ var HEADERS_TO_IGNORE = {
 
 // request: { path | body, [host], [method], [headers], [service], [region] }
 // credentials: { accessKeyId, secretAccessKey, [sessionToken] }
-function RequestSigner(request: AxiosRequestConfig, credentials: AxiosRequestCredentials) {
+function RequestSigner(request: Request, credentials: Credentials) {
 
   if (typeof request === 'string') request = url.parse(request)
 
@@ -74,7 +74,7 @@ function RequestSigner(request: AxiosRequestConfig, credentials: AxiosRequestCre
   this.isCodeCommitGit = this.service === 'codecommit' && request.method === 'GIT'
 }
 
-RequestSigner.prototype.matchHost = function(host: any) {
+RequestSigner.prototype.matchHost = function(host: string) {
   var match = (host || '').match(/([^\.]+)\.(?:([^\.]*)\.)?amazonaws\.com(\.cn)?$/)
   var hostParts = (match || []).slice(1, 3)
 
@@ -368,6 +368,6 @@ RequestSigner.prototype.formatPath = function() {
 
 aws4.RequestSigner = RequestSigner
 
-aws4.sign = function(request: AxiosRequestConfig, credentials: AxiosRequestCredentials) {
+aws4.sign = function(request: Request, credentials: Credentials) {
   return new RequestSigner(request, credentials).sign()
 }

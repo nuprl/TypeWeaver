@@ -13,7 +13,7 @@ if (hasSymbols) {
 		return symStringRegex.test(symToStr.call(value));
 	};
 
-	module.exports = function isSymbol(value: any) {
+	module.exports = function isSymbol(value: unknown) {
 		if (typeof value === 'symbol') {
 			return true;
 		}

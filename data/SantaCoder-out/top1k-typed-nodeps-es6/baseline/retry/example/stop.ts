@@ -27,7 +27,7 @@ function attemptAsyncOperation(someInput: any, cb: any) {
   });
 }
 
-attemptAsyncOperation('test input', function(err: any, errors: any, result: any) {
+attemptAsyncOperation('test input', function(err: Error, errors: Array<Error>, result: any) {
   console.warn('err:');
   console.log(err);
 
@@ -35,6 +35,6 @@ attemptAsyncOperation('test input', function(err: any, errors: any, result: any)
   console.log(result);
 });
 
-function failingAsyncOperation(input: any, cb: any) {
+function failingAsyncOperation(input: any, cb: Function) {
   return setImmediate(cb.bind(null, new Error('A fatal error')));
 }

@@ -2,7 +2,7 @@ import native from './native.js';
 import rng from './rng.js';
 import { unsafeStringify } from './stringify.js';
 
-function v4(options: V4Options, buf: Uint8Array, offset: number) {
+function v4(options: any, buf: any, offset: any) {
   if (native.randomUUID && !buf && !options) {
     return native.randomUUID();
   }

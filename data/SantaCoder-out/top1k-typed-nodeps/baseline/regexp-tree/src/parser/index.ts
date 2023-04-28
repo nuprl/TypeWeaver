@@ -18,7 +18,7 @@ const generatedParseFn = regexpTreeParser.parse.bind(regexpTreeParser);
  * Override original `regexpTreeParser.parse` to convert a value to a string,
  * since in regexp-tree we may pass strings, and RegExp instance.
  */
-regexpTreeParser.parse = function(regexp: RegExp, options: RegExpOptions) {
+regexpTreeParser.parse = function(regexp: RegExp, options: any) {
   return generatedParseFn(`${regexp}`, options);
 };
 

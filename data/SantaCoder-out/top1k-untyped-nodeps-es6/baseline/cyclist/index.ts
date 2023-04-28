@@ -13,7 +13,7 @@ var Cyclist = function (size: number) {
   this.values = new Array(size)
 }
 
-Cyclist.prototype.put = function (index: number, val: any) {
+Cyclist.prototype.put = function (index: number, val: T) {
   var pos = index & this.mask
   this.values[pos] = val
   return pos

@@ -3,7 +3,7 @@ var split, join, lines, unlines, words, unwords, chars, unchars, reverse, repeat
 split = curry$(function(sep: string, str: string){
   return str.split(sep);
 });
-join = curry$(function(sep: string, xs: any[]){
+join = curry$(function(sep: String, xs: Array<String>){
   return xs.join(sep);
 });
 lines = function(str: string){
@@ -12,7 +12,7 @@ lines = function(str: string){
   }
   return str.split('\n');
 };
-unlines = function(it: string){
+unlines = function(it: any){
   return it.join('\n');
 };
 words = function(str: string){
@@ -21,13 +21,13 @@ words = function(str: string){
   }
   return str.split(/[ ]+/);
 };
-unwords = function(it: string){
+unwords = function(it: any){
   return it.join(' ');
 };
 chars = function(it: string){
   return it.split('');
 };
-unchars = function(it: string){
+unchars = function(it: any){
   return it.join('');
 };
 reverse = function(str: string){
@@ -50,11 +50,11 @@ camelize = function(it: string){
   });
 };
 dasherize = function(str: string){
-  return str.replace(/([^-A-Z])([A-Z]+)/g, function(arg$: any, lower: number, upper: number){
+  return str.replace(/([^-A-Z])([A-Z]+)/g, function(arg$: number, lower: number, upper: number){
     return lower + "-" + (upper.length > 1
       ? upper
       : upper.toLowerCase());
-  }).replace(/^([A-Z]+)/, function(arg$: any, upper: any){
+  }).replace(/^([A-Z]+)/, function(arg$: string, upper: string){
     if (upper.length > 1) {
       return upper + "-";
     } else {
@@ -77,9 +77,9 @@ module.exports = {
   camelize: camelize,
   dasherize: dasherize
 };
-function curry$(f: Function, bound: any){
+function curry$(f: Function, bound: Array<any>){
   var context,
-  _curry = function(args: any) {
+  _curry = function(args: any[]) {
     return f.length > 1 ? function(){
       var params = args ? args.concat() : [];
       context = bound ? context || this : this;

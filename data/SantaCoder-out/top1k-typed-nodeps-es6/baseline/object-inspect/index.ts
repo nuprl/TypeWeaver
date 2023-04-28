@@ -69,7 +69,7 @@ import utilInspect from './util.inspect';
 var inspectCustom = utilInspect.custom;
 var inspectSymbol = isSymbol(inspectCustom) ? inspectCustom : null;
 
-export default function inspect_(obj: any, options: InspectOptions, depth: number, seen: Set<string>) {
+export default function inspect_(obj: any, options: any, depth: any, seen: any) {
     var opts = options || {};
 
     if (has(opts, 'quoteStyle') && (opts.quoteStyle !== 'single' && opts.quoteStyle !== 'double')) {
@@ -251,7 +251,7 @@ export default function inspect_(obj: any, options: InspectOptions, depth: numbe
     return String(obj);
 };
 
-function wrapQuotes(s: string, defaultStyle: string, opts: IOptions) {
+function wrapQuotes(s: string, defaultStyle: string, opts: Options) {
     var quoteChar = (opts.quoteStyle || defaultStyle) === 'double' ? '"' : "'";
     return quoteChar + s + quoteChar;
 }
@@ -353,7 +353,7 @@ function isWeakMap(x: any) {
     return false;
 }
 
-function isWeakRef(x: any) {
+function isWeakRef(x: unknown) {
     if (!weakRefDeref || !x || typeof x !== 'object') {
         return false;
     }
@@ -404,7 +404,7 @@ function isElement(x: any) {
     return typeof x.nodeName === 'string' && typeof x.getAttribute === 'function';
 }
 
-function inspectString(str: string, opts: InspectStringOptions) {
+function inspectString(str: string, opts: InspectOptions) {
     if (str.length > opts.maxStringLength) {
         var remaining = str.length - opts.maxStringLength;
         var trailer = '... ' + remaining + ' more character' + (remaining > 1 ? 's' : '');
@@ -436,7 +436,7 @@ function weakCollectionOf(type: string) {
     return type + ' { ? }';
 }
 
-function collectionOf(type: string, size: number, entries: any[], indent: number) {
+function collectionOf(type: string, size: number, entries: any[], indent: string) {
     var joinedEntries = indent ? indentedJoin(entries, indent) : $join.call(entries, ', ');
     return type + ' (' + size + ') {' + joinedEntries + '}';
 }
@@ -450,7 +450,7 @@ function singleLineValues(xs: string[]) {
     return true;
 }
 
-function getIndent(opts: IOptions, depth: number) {
+function getIndent(opts: Options, depth: number) {
     var baseIndent;
     if (opts.indent === '\t') {
         baseIndent = '\t';
@@ -465,13 +465,13 @@ function getIndent(opts: IOptions, depth: number) {
     };
 }
 
-function indentedJoin(xs: string[], indent: number) {
+function indentedJoin(xs: string[], indent: string) {
     if (xs.length === 0) { return ''; }
     var lineJoiner = '\n' + indent.prev + indent.base;
     return lineJoiner + $join.call(xs, ',' + lineJoiner) + '\n' + indent.prev;
 }
 
-function arrObjKeys(obj: any, inspect: any) {
+function arrObjKeys(obj: any, inspect: boolean) {
     var isArr = isArray(obj);
     var xs = [];
     if (isArr) {

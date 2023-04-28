@@ -6,7 +6,7 @@ var Buffer = require("safer-buffer").Buffer;
 
 exports.utf7 = Utf7Codec;
 exports.unicode11utf7 = 'utf7'; // Alias UNICODE-1-1-UTF-7
-function Utf7Codec(codecOptions: ICodecOptions, iconv: IIconv) {
+function Utf7Codec(codecOptions: any, iconv: any) {
     this.iconv = iconv;
 };
 
@@ -19,7 +19,7 @@ Utf7Codec.prototype.bomAware = true;
 
 var nonDirectChars = /[^A-Za-z0-9'\(\),-\.\/:\? \n\r\t]+/g;
 
-function Utf7Encoder(options: IOptions, codec: ICodec<any>) {
+function Utf7Encoder(options: any, codec: any) {
     this.iconv = codec.iconv;
 }
 
@@ -39,7 +39,7 @@ Utf7Encoder.prototype.end = function() {
 
 // -- Decoding
 
-function Utf7Decoder(options: IOptions, codec: ICodec) {
+function Utf7Decoder(options: any, codec: any) {
     this.iconv = codec.iconv;
     this.inBase64 = false;
     this.base64Accum = '';
@@ -54,7 +54,7 @@ var plusChar = '+'.charCodeAt(0),
     minusChar = '-'.charCodeAt(0),
     andChar = '&'.charCodeAt(0);
 
-Utf7Decoder.prototype.write = function(buf: Uint8Array) {
+Utf7Decoder.prototype.write = function(buf: Buffer) {
     var res = "", lastI = 0,
         inBase64 = this.inBase64,
         base64Accum = this.base64Accum;
@@ -130,7 +130,7 @@ Utf7Decoder.prototype.end = function() {
 
 
 exports.utf7imap = Utf7IMAPCodec;
-function Utf7IMAPCodec(codecOptions: IMapCodecOptions, iconv: IIconv) {
+function Utf7IMAPCodec(codecOptions: any, iconv: any) {
     this.iconv = iconv;
 };
 
@@ -141,7 +141,7 @@ Utf7IMAPCodec.prototype.bomAware = true;
 
 // -- Encoding
 
-function Utf7IMAPEncoder(options: IMapEncoderOptions, codec: IMapEncoder) {
+function Utf7IMAPEncoder(options: any, codec: any) {
     this.iconv = codec.iconv;
     this.inBase64 = false;
     this.base64Accum = Buffer.alloc(6);
@@ -215,7 +215,7 @@ Utf7IMAPEncoder.prototype.end = function() {
 
 // -- Decoding
 
-function Utf7IMAPDecoder(options: IMapDecoderOptions, codec: IMapDecoder) {
+function Utf7IMAPDecoder(options: any, codec: any) {
     this.iconv = codec.iconv;
     this.inBase64 = false;
     this.base64Accum = '';
@@ -224,7 +224,7 @@ function Utf7IMAPDecoder(options: IMapDecoderOptions, codec: IMapDecoder) {
 var base64IMAPChars = base64Chars.slice();
 base64IMAPChars[','.charCodeAt(0)] = true;
 
-Utf7IMAPDecoder.prototype.write = function(buf: Uint8Array) {
+Utf7IMAPDecoder.prototype.write = function(buf: Buffer) {
     var res = "", lastI = 0,
         inBase64 = this.inBase64,
         base64Accum = this.base64Accum;

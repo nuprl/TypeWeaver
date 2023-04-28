@@ -50,7 +50,7 @@ function isValidStatusCode(code: number) {
  * @return {Boolean} `true` if `buf` contains only correct UTF-8, else `false`
  * @public
  */
-function _isValidUTF8(buf: Uint8Array) {
+function _isValidUTF8(buf: Buffer) {
   const len = buf.length;
   let i = 0;
 
@@ -116,7 +116,7 @@ if (!process.env.WS_NO_UTF_8_VALIDATE) {
   try {
     const isValidUTF8 = require('utf-8-validate');
 
-    module.exports.isValidUTF8 = function (buf: Uint8Array) {
+    module.exports.isValidUTF8 = function (buf: Buffer) {
       return buf.length < 150 ? _isValidUTF8(buf) : isValidUTF8(buf);
     };
   } catch (e) {

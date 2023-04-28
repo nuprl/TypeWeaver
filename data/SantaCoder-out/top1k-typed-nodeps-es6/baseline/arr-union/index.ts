@@ -1,6 +1,6 @@
 'use strict';
 
-export default function union(init: any) {
+export default function union(init: any[]) {
   if (!Array.isArray(init)) {
     throw new TypeError('arr-union expects the first argument to be an array.');
   }

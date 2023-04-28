@@ -10,7 +10,7 @@ function calcSelectorLength(list: string[]) {
     return list.reduce((res, data) => res + data.id.length + 1, 0) - 1;
 }
 
-function calcDeclarationsLength(tokens: IToken[]) {
+function calcDeclarationsLength(tokens: Token[]) {
     let length = 0;
 
     for (const token of tokens) {
@@ -23,7 +23,7 @@ function calcDeclarationsLength(tokens: IToken[]) {
     );
 }
 
-function processRule(node: RuleNode, item: IRuleItem, list: IRuleList) {
+function processRule(node: Node, item: Node, list: Node) {
     const avoidRulesMerge = this.block !== null ? this.block.avoidRulesMerge : false;
     const selectors = node.prelude.children;
     const block = node.block;
@@ -167,7 +167,7 @@ function processRule(node: RuleNode, item: IRuleItem, list: IRuleList) {
     });
 }
 
-export default function restructRule(ast: AST.Rule) {
+export default function restructRule(ast: AST) {
     walk(ast, {
         visit: 'Rule',
         reverse: true,

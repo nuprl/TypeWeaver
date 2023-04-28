@@ -36,7 +36,7 @@
 
 	var object = {};
 	var hasOwnProperty = object.hasOwnProperty;
-	var extend = function(destination: any, source: any) {
+	var extend = function(destination: Object, source: Object) {
 		var key;
 		for (key in source) {
 			if (hasOwnProperty.call(source, key)) {
@@ -46,7 +46,7 @@
 		return destination;
 	};
 
-	var forEach = function(array: Array<any>, callback: any) {
+	var forEach = function(array: Array<T>, callback: any) {
 		var index = -1;
 		var length = array.length;
 		while (++index < length) {
@@ -153,7 +153,7 @@
 		return data;
 	};
 
-	var dataRemoveRange = function(data: IRangeData, rangeStart: number, rangeEnd: number) {
+	var dataRemoveRange = function(data: any, rangeStart: number, rangeEnd: number) {
 		if (rangeEnd < rangeStart) {
 			throw Error(ERRORS.rangeOrder);
 		}
@@ -219,7 +219,7 @@
 		return data;
 	};
 
-	 var dataAdd = function(data: number, codePoint: number) {
+	 var dataAdd = function(data: string, codePoint: number) {
 		// Iterate over the data per `(start, end)` pair.
 		var index = 0;
 		var start;
@@ -449,7 +449,7 @@
 		return false;
 	};
 
-	var dataIntersection = function(data: number[], codePoints: number[]) {
+	var dataIntersection = function(data: string, codePoints: number[]) {
 		var index = 0;
 		var length = codePoints.length;
 		var codePoint;
@@ -596,7 +596,7 @@
 		return '\\u{' + codePoint.toString(16).toUpperCase() + '}';
 	};
 
-	var symbolToCodePoint = function(symbol: Symbol) {
+	var symbolToCodePoint = function(symbol: string) {
 		var length = symbol.length;
 		var first = symbol.charCodeAt(0);
 		var second;
@@ -791,7 +791,7 @@
 		};
 	};
 
-	var optimizeSurrogateMappings = function(surrogateMappings: SurrogateMapping[]) {
+	var optimizeSurrogateMappings = function(surrogateMappings: any) {
 		var result = [];
 		var tmpLow = [];
 		var addLow = false;
@@ -850,7 +850,7 @@
 		return optimizeByLowSurrogates(result);
 	};
 
-	var optimizeByLowSurrogates = function(surrogateMappings: SurrogateMapping[]) {
+	var optimizeByLowSurrogates = function(surrogateMappings: any) {
 		if (surrogateMappings.length == 1) {
 			return surrogateMappings;
 		}
@@ -891,7 +891,7 @@
 		return surrogateMappings;
 	};
 
-	var surrogateSet = function(data: IData) {
+	var surrogateSet = function(data: any) {
 		// Exit early if `data` is an empty set.
 		if (!data.length) {
 			return [];
@@ -980,7 +980,7 @@
 		return optimizeSurrogateMappings(surrogateMappings);
 	};
 
-	var createSurrogateCharacterClasses = function(surrogateMappings: SurrogateMapping[]) {
+	var createSurrogateCharacterClasses = function(surrogateMappings: Array<Mapping>) {
 		var result = [];
 		forEach(surrogateMappings, function(surrogateMapping: SurrogateMapping) {
 			var highSurrogates = surrogateMapping[0];
@@ -993,7 +993,7 @@
 		return result.join('|');
 	};
 
-	var createCharacterClassesFromData = function(data: any, bmpOnly: boolean, hasUnicodeFlag: boolean) {
+	var createCharacterClassesFromData = function(data: string, bmpOnly: boolean, hasUnicodeFlag: boolean) {
 		if (hasUnicodeFlag) {
 			return createUnicodeCharacterClasses(data);
 		}
@@ -1051,7 +1051,7 @@
 	// `regenerate` can be used as a constructor (and new methods can be added to
 	// its prototype) but also as a regular function, the latter of which is the
 	// documented and most common usage. For that reason, it’s not capitalized.
-	var regenerate = function(value: string) {
+	var regenerate = function(value: any) {
 		if (arguments.length > 1) {
 			value = slice.call(arguments);
 		}
@@ -1080,7 +1080,7 @@
 				value = slice.call(arguments);
 			}
 			if (isArray(value)) {
-				forEach(value, function(item: any) {
+				forEach(value, function(item: T) {
 					$this.add(item);
 				});
 				return $this;
@@ -1105,7 +1105,7 @@
 				value = slice.call(arguments);
 			}
 			if (isArray(value)) {
-				forEach(value, function(item: any) {
+				forEach(value, function(item: T) {
 					$this.remove(item);
 				});
 				return $this;
@@ -1116,7 +1116,7 @@
 			);
 			return $this;
 		},
-		'addRange': function(start: number, end: number) {
+		'addRange': function(start: Date, end: Date) {
 			var $this = this;
 			$this.data = dataAddRange($this.data,
 				isNumber(start) ? start : symbolToCodePoint(start),
@@ -1156,7 +1156,7 @@
 			set.data = this.data.slice(0);
 			return set;
 		},
-		'toString': function(options: ICharacterClassOptions) {
+		'toString': function(options: any) {
 			var result = createCharacterClassesFromData(
 				this.data,
 				options ? options.bmpOnly : false,

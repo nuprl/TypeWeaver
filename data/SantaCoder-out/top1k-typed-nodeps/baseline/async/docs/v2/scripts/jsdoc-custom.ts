@@ -40,8 +40,8 @@ $(function initSearchBar() {
             url: 'https://api.github.com/search/issues?q=%QUERY+repo:caolan/async',
             cache: true,
             wildcard: '%QUERY',
-            transform: function(response: AxiosResponse) {
-                return $.map(response.items, function(issue: IIssue) {
+            transform: function(response: any) {
+                return $.map(response.items, function(issue: any) {
                     // if (issue.state !== 'open') {
                     //     return null;
                     // }
@@ -50,7 +50,7 @@ $(function initSearchBar() {
                         name: issue.number + ': ' + issue.title,
                         number: issue.number
                     };
-                }).sort(function(a: number, b: number) {
+                }).sort(function(a: any, b: any) {
                     return b.number - a.number;
                 });
             }
@@ -80,7 +80,7 @@ $(function initSearchBar() {
         templates: {
             header: '<h3 class="search-bar-header">Issues</h3>'
         }
-    }).on('typeahead:select', function(ev: IKeyboardEvent, suggestion: ITelemetrySuggestion) {
+    }).on('typeahead:select', function(ev: Event, suggestion: any) {
         var host;
         if (location.origin != "null") {
             host = location.origin;

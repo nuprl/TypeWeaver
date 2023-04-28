@@ -1,6 +1,6 @@
 'use strict';
 
-var ensureCallable = function (fn: any) {
+var ensureCallable = function (fn: Function) {
 	if (typeof fn !== 'function') throw new TypeError(fn + " is not a function");
 	return fn;
 };
@@ -64,7 +64,7 @@ module.exports = (function () {
 	// W3C Draft
 	// http://dvcs.w3.org/hg/webperf/raw-file/tip/specs/setImmediate/Overview.html
 	if (typeof setImmediate === 'function') {
-		return function (cb: Function) { setImmediate(ensureCallable(cb)); };
+		return function (cb: any) { setImmediate(ensureCallable(cb)); };
 	}
 
 	// Wide available standard

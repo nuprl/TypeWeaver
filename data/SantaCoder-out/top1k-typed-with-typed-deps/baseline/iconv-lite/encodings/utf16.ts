@@ -37,7 +37,7 @@ function Utf16BEDecoder() {
     this.overflowByte = -1;
 }
 
-Utf16BEDecoder.prototype.write = function(buf: Uint8Array) {
+Utf16BEDecoder.prototype.write = function(buf: Buffer) {
     if (buf.length == 0)
         return '';
 
@@ -74,7 +74,7 @@ Utf16BEDecoder.prototype.end = function() {
 // Encoder uses UTF-16LE and prepends BOM (which can be overridden with addBOM: false).
 
 exports.utf16 = Utf16Codec;
-function Utf16Codec(codecOptions: ICodecOptions, iconv: IIconv) {
+function Utf16Codec(codecOptions: any, iconv: any) {
     this.iconv = iconv;
 }
 
@@ -84,7 +84,7 @@ Utf16Codec.prototype.decoder = Utf16Decoder;
 
 // -- Encoding (pass-through)
 
-function Utf16Encoder(options: IOptions, codec: ICodec) {
+function Utf16Encoder(options: any, codec: any) {
     options = options || {};
     if (options.addBOM === undefined)
         options.addBOM = true;
@@ -102,7 +102,7 @@ Utf16Encoder.prototype.end = function() {
 
 // -- Decoding
 
-function Utf16Decoder(options: IDecoderOptions, codec: ICodec) {
+function Utf16Decoder(options: any, codec: any) {
     this.decoder = null;
     this.initialBufs = [];
     this.initialBufsLen = 0;
@@ -111,7 +111,7 @@ function Utf16Decoder(options: IDecoderOptions, codec: ICodec) {
     this.iconv = codec.iconv;
 }
 
-Utf16Decoder.prototype.write = function(buf: Uint8Array) {
+Utf16Decoder.prototype.write = function(buf: Buffer) {
     if (!this.decoder) {
         // Codec is not chosen yet. Accumulate initial bytes.
         this.initialBufs.push(buf);

@@ -22,7 +22,7 @@ import awaitify from './internal/awaitify.js'
  * depending on the values of the async tests. Invoked with (err, result).
  * @returns {Promise} a promise, if no callback provided
  */
-function everySeries(coll: Collection<any>, iteratee: any, callback: any) {
+function everySeries(coll: any[], iteratee: any, callback: any) {
     return createTester(bool => !bool, res => !res)(eachOfSeries, coll, iteratee, callback)
 }
 export default awaitify(everySeries, 3);

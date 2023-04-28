@@ -6,7 +6,7 @@ const mkdirsSync = require('../mkdirs').mkdirsSync
 const utimesMillisSync = require('../util/utimes').utimesMillisSync
 const stat = require('../util/stat')
 
-function copySync (src: string, dest: string, opts: CopyOptions) {
+function copySync (src: string, dest: string, opts: Object) {
   if (typeof opts === 'function') {
     opts = { filter: opts }
   }
@@ -29,19 +29,19 @@ function copySync (src: string, dest: string, opts: CopyOptions) {
   return handleFilterAndCopy(destStat, src, dest, opts)
 }
 
-function handleFilterAndCopy (destStat: Stat, src: Stat, dest: Stat, opts: Options) {
+function handleFilterAndCopy (destStat: fs.Stats, src: string, dest: string, opts: any) {
   if (opts.filter && !opts.filter(src, dest)) return
   const destParent = path.dirname(dest)
   if (!fs.existsSync(destParent)) mkdirsSync(destParent)
   return getStats(destStat, src, dest, opts)
 }
 
-function startCopy (destStat: Stat, src: Path, dest: Path, opts: CopyOptions) {
+function startCopy (destStat: Stats, src: string, dest: string, opts: any) {
   if (opts.filter && !opts.filter(src, dest)) return
   return getStats(destStat, src, dest, opts)
 }
 
-function getStats (destStat: Stats, src: Stats, dest: Stats, opts: Options) {
+function getStats (destStat: Stats, src: string, dest: string, opts: any) {
   const statSync = opts.dereference ? fs.statSync : fs.lstatSync
   const srcStat = statSync(src)
 
@@ -55,12 +55,12 @@ function getStats (destStat: Stats, src: Stats, dest: Stats, opts: Options) {
   throw new Error(`Unknown file: ${src}`)
 }
 
-function onFile (srcStat: FS.Stats, destStat: FS.Stats, src: string, dest: string, opts: IOptions) {
+function onFile (srcStat: fs.Stats, destStat: fs.Stats, src: string, dest: string, opts: any) {
   if (!destStat) return copyFile(srcStat, src, dest, opts)
   return mayCopyFile(srcStat, src, dest, opts)
 }
 
-function mayCopyFile (srcStat: FS.Stats, src: string, dest: string, opts: IOverwriteOptions) {
+function mayCopyFile (srcStat: fs.Stats, src: string, dest: string, opts: CopyOptions) {
   if (opts.overwrite) {
     fs.unlinkSync(dest)
     return copyFile(srcStat, src, dest, opts)
@@ -69,7 +69,7 @@ function mayCopyFile (srcStat: FS.Stats, src: string, dest: string, opts: IOverw
   }
 }
 
-function copyFile (srcStat: FS.Stats, src: string, dest: string, opts: CopyOptions) {
+function copyFile (srcStat: fs.Stats, src: string, dest: string, opts: any) {
   fs.copyFileSync(src, dest)
   if (opts.preserveTimestamps) handleTimestamps(srcStat.mode, src, dest)
   return setDestMode(dest, srcStat.mode)
@@ -91,11 +91,11 @@ function makeFileWritable (dest: string, srcMode: number) {
   return setDestMode(dest, srcMode | 0o200)
 }
 
-function setDestMode (dest: number, srcMode: number) {
+function setDestMode (dest: string, srcMode: number) {
   return fs.chmodSync(dest, srcMode)
 }
 
-function setDestTimestamps (src: number, dest: number) {
+function setDestTimestamps (src: string, dest: string) {
   // The initial srcStat.atime cannot be trusted
   // because it is modified by the read(2) system call
   // (See https://nodejs.org/api/fs.html#fs_stat_time_values)
@@ -103,7 +103,7 @@ function setDestTimestamps (src: number, dest: number) {
   return utimesMillisSync(dest, updatedSrcStat.atime, updatedSrcStat.mtime)
 }
 
-function onDir (srcStat: Stat, destStat: Stat, src: string, dest: string, opts: IOptions) {
+function onDir (srcStat: any, destStat: any, src: any, dest: any, opts: any) {
   if (!destStat) return mkDirAndCopy(srcStat.mode, src, dest, opts)
   return copyDir(src, dest, opts)
 }
@@ -114,18 +114,18 @@ function mkDirAndCopy (srcMode: number, src: string, dest: string, opts: any) {
   return setDestMode(dest, srcMode)
 }
 
-function copyDir (src: string, dest: string, opts: CopyOptions) {
+function copyDir (src: string, dest: string, opts: any) {
   fs.readdirSync(src).forEach(item => copyDirItem(item, src, dest, opts))
 }
 
-function copyDirItem (item: ICopyDirItem, src: string, dest: string, opts: IOptions) {
+function copyDirItem (item: any, src: string, dest: string, opts: any) {
   const srcItem = path.join(src, item)
   const destItem = path.join(dest, item)
   const { destStat } = stat.checkPathsSync(srcItem, destItem, 'copy', opts)
   return startCopy(destStat, srcItem, destItem, opts)
 }
 
-function onLink (destStat: Stat, src: Stat, dest: Stat, opts: LinkOpts) {
+function onLink (destStat: Stats, src: string, dest: string, opts: LinkOptions) {
   let resolvedSrc = fs.readlinkSync(src)
   if (opts.dereference) {
     resolvedSrc = path.resolve(process.cwd(), resolvedSrc)

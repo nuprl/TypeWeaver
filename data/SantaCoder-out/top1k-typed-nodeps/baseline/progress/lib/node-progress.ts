@@ -114,7 +114,7 @@ ProgressBar.prototype.tick = function(len: number, tokens: string[]){
  * @api public
  */
 
-ProgressBar.prototype.render = function (tokens: IToken[], force: boolean) {
+ProgressBar.prototype.render = function (tokens: string[], force: boolean) {
   force = force !== undefined ? force : false;
   if (tokens) this.tokens = tokens;
 
@@ -192,7 +192,7 @@ ProgressBar.prototype.render = function (tokens: IToken[], force: boolean) {
  * @api public
  */
 
-ProgressBar.prototype.update = function (ratio: number, tokens: BigNumber) {
+ProgressBar.prototype.update = function (ratio: number, tokens: number) {
   var goal = Math.floor(ratio * this.total);
   var delta = goal - this.curr;
 
@@ -205,7 +205,7 @@ ProgressBar.prototype.update = function (ratio: number, tokens: BigNumber) {
  * @api public
  */
 
-ProgressBar.prototype.interrupt = function (message: IMessage) {
+ProgressBar.prototype.interrupt = function (message: string) {
   // clear the current line
   this.stream.clearLine();
   // move the cursor to the start of the line

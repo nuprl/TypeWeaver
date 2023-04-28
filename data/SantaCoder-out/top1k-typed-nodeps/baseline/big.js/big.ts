@@ -193,7 +193,7 @@
    * rm {number} Rounding mode: 0 (down), 1 (half-up), 2 (half-even) or 3 (up).
    * [more] {boolean} Whether the result of division was truncated.
    */
-  function round(x: number, sd: number, rm: number, more: boolean) {
+  function round(x: BigJS, sd: number, rm: number, more: boolean) {
     var xc = x.c;
 
     if (rm === UNDEFINED) rm = x.constructor.RM;
@@ -258,7 +258,7 @@
    * Return a string representing the value of Big x in normal or exponential notation.
    * Handles P.toExponential, P.toFixed, P.toJSON, P.toPrecision, P.toString and P.valueOf.
    */
-  function stringify(x: BigNumberish, doExponential: boolean, isNonzero: boolean) {
+  function stringify(x: BigJS, doExponential: boolean, isNonzero: boolean) {
     var e = x.e,
       s = x.c.join(''),
       n = s.length;
@@ -303,7 +303,7 @@
    *       -1 if the value of this Big is less than the value of Big y, or
    *        0 if they have the same value.
    */
-  P.cmp = function (y: BigNumber) {
+  P.cmp = function (y: number) {
     var isneg,
       x = this,
       xc = x.c,
@@ -450,7 +450,7 @@
   /*
    * Return true if the value of this Big is equal to the value of Big y, otherwise return false.
    */
-  P.eq = function (y: any) {
+  P.eq = function (y: T) {
     return this.cmp(y) === 0;
   };
 
@@ -459,7 +459,7 @@
    * Return true if the value of this Big is greater than the value of Big y, otherwise return
    * false.
    */
-  P.gt = function (y: any) {
+  P.gt = function (y: T) {
     return this.cmp(y) > 0;
   };
 
@@ -468,7 +468,7 @@
    * Return true if the value of this Big is greater than or equal to the value of Big y, otherwise
    * return false.
    */
-  P.gte = function (y: any) {
+  P.gte = function (y: T) {
     return this.cmp(y) > -1;
   };
 
@@ -476,7 +476,7 @@
   /*
    * Return true if the value of this Big is less than the value of Big y, otherwise return false.
    */
-  P.lt = function (y: any) {
+  P.lt = function (y: T) {
     return this.cmp(y) < 0;
   };
 
@@ -485,7 +485,7 @@
    * Return true if the value of this Big is less than or equal to the value of Big y, otherwise
    * return false.
    */
-  P.lte = function (y: number) {
+  P.lte = function (y: T) {
     return this.cmp(y) < 1;
   };
 
@@ -910,7 +910,7 @@
    * dp? {number} Decimal places: integer, 0 to MAX_DP inclusive.
    * rm? {number} Rounding mode: 0 (down), 1 (half-up), 2 (half-even) or 3 (up).
    */
-  P.toExponential = function (dp: number, rm: number) {
+  P.toExponential = function (dp: Decimal, rm: RoundingMode) {
     var x = this,
       n = x.c[0];
 
@@ -936,7 +936,7 @@
    * (-0).toFixed(0) is '0', but (-0.1).toFixed(0) is '-0'.
    * (-0).toFixed(1) is '0.0', but (-0.01).toFixed(1) is '-0.0'.
    */
-  P.toFixed = function (dp: number, rm: number) {
+  P.toFixed = function (dp: any, rm: any) {
     var x = this,
       n = x.c[0];
 

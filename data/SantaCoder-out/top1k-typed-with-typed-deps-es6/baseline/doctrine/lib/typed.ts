@@ -78,7 +78,7 @@
         return '><(){}[],:*|?!='.indexOf(String.fromCharCode(ch)) === -1 && !esutils.code.isWhiteSpace(ch) && !esutils.code.isLineTerminator(ch);
     }
 
-    function Context(previous: Context, index: number, token: Token, value: number) {
+    function Context(previous: Context, index: number, token: Token, value: string) {
         this._previous = previous;
         this._index = index;
         this._token = token;
@@ -1094,7 +1094,7 @@
         return expr;
     }
 
-    function parseParamType(src: string, opt: ParseParamTypeOptions) {
+    function parseParamType(src: string, opt: any) {
         var expr;
 
         source = src;

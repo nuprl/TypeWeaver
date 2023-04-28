@@ -10,14 +10,14 @@ module.exports = async;
  * @param   {function} callback - callback to invoke
  * @returns {function} - augmented callback
  */
-function async(callback: Function)
+function async(callback: any)
 {
   var isAsync = false;
 
   // check if async happened
   defer(function() { isAsync = true; });
 
-  return function async_callback(err: any, result: any)
+  return function async_callback(err: Error, result: any)
   {
     if (isAsync)
     {

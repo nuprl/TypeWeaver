@@ -53,7 +53,7 @@ function restoreScript( elem : HTMLElement) {
 	return elem;
 }
 
-function cloneCopyEvent( src: Event, dest : Event) {
+function cloneCopyEvent( src: any, dest : any) {
 	var i, l, type, pdataOld, udataOld, udataCur, events;
 
 	if ( dest.nodeType !== 1 ) {
@@ -85,7 +85,7 @@ function cloneCopyEvent( src: Event, dest : Event) {
 	}
 }
 
-function domManip( collection: Node, args: Node[], callback: Function, ignored : boolean) {
+function domManip( collection: any, args: any, callback: any, ignored : any) {
 
 	// Flatten any nested arrays
 	args = flat( args );
@@ -170,7 +170,7 @@ function domManip( collection: Node, args: Node[], callback: Function, ignored :
 	return collection;
 }
 
-function remove( elem: Node, selector: string, keepData : boolean) {
+function remove( elem: Element, selector: string, keepData : boolean) {
 	var node,
 		nodes = selector ? jQuery.filter( selector, elem ) : elem,
 		i = 0;
@@ -196,7 +196,7 @@ jQuery.extend( {
 		return html;
 	},
 
-	clone: function( elem: HTMLElement, dataAndEvents: DataAndEvents, deepDataAndEvents : DeepDataAndEvents) {
+	clone: function( elem: HTMLElement, dataAndEvents: any, deepDataAndEvents : any) {
 		var i, l, srcElements, destElements,
 			clone = elem.cloneNode( true ),
 			inPage = isAttached( elem );
@@ -245,7 +245,7 @@ jQuery.extend( {
 		return clone;
 	},
 
-	cleanData: function( elems : Array<HTMLElement>) {
+	cleanData: function( elems : Array<Element>) {
 		var data, elem, type,
 			special = jQuery.event.special,
 			i = 0;
@@ -353,7 +353,7 @@ jQuery.fn.extend( {
 		return this;
 	},
 
-	clone: function( dataAndEvents: DataAndEvents, deepDataAndEvents : DataAndEvents) {
+	clone: function( dataAndEvents: any, deepDataAndEvents : any) {
 		dataAndEvents = dataAndEvents == null ? false : dataAndEvents;
 		deepDataAndEvents = deepDataAndEvents == null ? dataAndEvents : deepDataAndEvents;
 
@@ -362,8 +362,8 @@ jQuery.fn.extend( {
 		} );
 	},
 
-	html: function( value : any) {
-		return access( this, function( value : string) {
+	html: function( value : T) {
+		return access( this, function( value : any) {
 			var elem = this[ 0 ] || {},
 				i = 0,
 				l = this.length;
@@ -426,7 +426,7 @@ jQuery.each( {
 	insertBefore: "before",
 	insertAfter: "after",
 	replaceAll: "replaceWith"
-}, function( name: string, original : any) {
+}, function( name: string, original : Function) {
 	jQuery.fn[ name ] = function( selector : string) {
 		var elems,
 			ret = [],

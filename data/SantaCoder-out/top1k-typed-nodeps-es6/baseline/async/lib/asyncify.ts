@@ -31,7 +31,7 @@ import { isAsync } from './internal/wrapAsync.js'
  * async.waterfall([
  *     async.apply(fs.readFile, filename, "utf8"),
  *     async.asyncify(JSON.parse),
- *     function (data: any, next: any) {
+ *     function (data: any, next: Function) {
  *         // data is the result of parsing the text.
  *         // If there was a parsing error, it would have been caught.
  *     }
@@ -43,7 +43,7 @@ import { isAsync } from './internal/wrapAsync.js'
  *     async.asyncify(function (contents: any) {
  *         return db.model.create(contents);
  *     }),
- *     function (model: Model, next: NextFunction) {
+ *     function (model: Model, next: Function) {
  *         // `model` is the instantiated model object.
  *         // If there was an error, this function would be skipped.
  *     }
@@ -60,14 +60,14 @@ import { isAsync } from './internal/wrapAsync.js'
  */
 export default function asyncify(func: Function) {
     if (isAsync(func)) {
-        return function (...args/*: any[], callback*/: any) {
+        return function (...args/*: any[], callback*/: Function) {
             const callback = args.pop()
             const promise = func.apply(this, args)
             return handlePromise(promise, callback)
         }
     }
 
-    return initialParams(function (args: ICommandArgs, callback: any) {
+    return initialParams(function (args: any[], callback: Function) {
         var result;
         try {
             result = func.apply(this, args);
@@ -83,7 +83,7 @@ export default function asyncify(func: Function) {
     });
 }
 
-function handlePromise(promise: Promise<any>, callback: any) {
+function handlePromise(promise: Promise<any>, callback: Function) {
     return promise.then(value => {
         invokeCallback(callback, null, value);
     }, err => {

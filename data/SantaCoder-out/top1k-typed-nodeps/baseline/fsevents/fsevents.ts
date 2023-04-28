@@ -37,7 +37,7 @@ function watch(path: string, since: number, handler: any) {
   };
 }
 
-function getInfo(path: string, flags: IReadonly<IReadonlyArray<string>>) {
+function getInfo(path: string, flags: number) {
   return {
     path,
     flags,
@@ -47,7 +47,7 @@ function getInfo(path: string, flags: IReadonly<IReadonlyArray<string>>) {
   };
 }
 
-function getFileType(flags: string) {
+function getFileType(flags: number) {
   if (events.ItemIsFile & flags) return "file";
   if (events.ItemIsDir & flags) return "directory";
   if (events.ItemIsSymlink & flags) return "symlink";
@@ -68,7 +68,7 @@ function getEventType(flags: number) {
   if (anyIsTrue(flags)) return "modified";
   return "unknown";
 }
-function getFileChanges(flags: FileChangesFlags) {
+function getFileChanges(flags: any) {
   return {
     inode: !!(events.ItemInodeMetaMod & flags),
     finder: !!(events.ItemFinderInfoMod & flags),

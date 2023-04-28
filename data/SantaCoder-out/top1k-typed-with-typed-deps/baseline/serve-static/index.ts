@@ -69,7 +69,7 @@ function serveStatic (root: string, options: ServeStaticOptions) {
     ? createRedirectDirectoryListener()
     : createNotFoundDirectoryListener()
 
-  return function serveStatic (req: Request, res: Response, next: NextFunction) {
+  return function serveStatic (req: IncomingMessage, res: ServerResponse, next: Function) {
     if (req.method !== 'GET' && req.method !== 'HEAD') {
       if (fallthrough) {
         return next()
@@ -112,7 +112,7 @@ function serveStatic (root: string, options: ServeStaticOptions) {
     }
 
     // forward errors
-    stream.on('error', function error (err: Error) {
+    stream.on('error', function error (err: any) {
       if (forwardError || !(err.statusCode < 500)) {
         next(err)
         return

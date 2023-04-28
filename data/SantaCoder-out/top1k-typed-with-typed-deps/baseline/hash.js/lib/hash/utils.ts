@@ -15,7 +15,7 @@ function isSurrogatePair(msg: string, i: number) {
   return (msg.charCodeAt(i + 1) & 0xFC00) === 0xDC00;
 }
 
-function toArray(msg: any, enc: string) {
+function toArray(msg: any, enc: any) {
   if (Array.isArray(msg))
     return msg.slice();
   if (!msg)
@@ -79,7 +79,7 @@ function htonl(w: number) {
 }
 exports.htonl = htonl;
 
-function toHex32(msg: string, endian: number) {
+function toHex32(msg: string, endian: 'big') {
   var res = '';
   for (var i = 0; i < msg.length; i++) {
     var w = msg[i];
@@ -99,7 +99,7 @@ function zero2(word: string) {
 }
 exports.zero2 = zero2;
 
-function zero8(word: number) {
+function zero8(word: string) {
   if (word.length === 7)
     return '0' + word;
   else if (word.length === 6)
@@ -119,7 +119,7 @@ function zero8(word: number) {
 }
 exports.zero8 = zero8;
 
-function join32(msg: number, start: number, end: number, endian: number) {
+function join32(msg: Uint8Array, start: number, end: number, endian: Endian) {
   var len = end - start;
   assert(len % 4 === 0);
   var res = new Array(len / 4);
@@ -135,7 +135,7 @@ function join32(msg: number, start: number, end: number, endian: number) {
 }
 exports.join32 = join32;
 
-function split32(msg: Uint8Array, endian: Endian) {
+function split32(msg: Buffer, endian: string) {
   var res = new Array(msg.length * 4);
   for (var i = 0, k = 0; i < msg.length; i++, k += 4) {
     var m = msg[i];
@@ -185,7 +185,7 @@ function sum32_5(a: number, b: number, c: number, d: number, e: number) {
 }
 exports.sum32_5 = sum32_5;
 
-function sum64(buf: Uint8Array, pos: number, ah: number, al: number) {
+function sum64(buf: Buffer, pos: number, ah: number, al: number) {
   var bh = buf[pos];
   var bl = buf[pos + 1];
 

@@ -12,7 +12,7 @@ export default function wcwidth(str: string) {
   return wcswidth(str, DEFAULTS)
 };
 
-export const config = function(opts: IOptions) {
+export const config = function(opts: Options) {
   opts = defaults(opts || {}, DEFAULTS)
   return function wcwidth(str: string) {
     return wcswidth(str, opts)
@@ -43,7 +43,7 @@ export const config = function(opts: IOptions) {
  *  This implementation assumes that characters are encoded in ISO 10646.
 */
 
-function wcswidth(str: string, opts: WCSWidthOptions) {
+function wcswidth(str: string, opts: Options) {
   if (typeof str !== 'string') return wcwidth(str, opts)
 
   var s = 0
@@ -56,7 +56,7 @@ function wcswidth(str: string, opts: WCSWidthOptions) {
   return s
 }
 
-function wcwidth(ucs: string, opts: WcwidthOptions) {
+function wcwidth(ucs: number, opts: Options) {
   // test for 8-bit control characters
   if (ucs === 0) return opts.nul
   if (ucs < 32 || (ucs >= 0x7f && ucs < 0xa0)) return opts.control

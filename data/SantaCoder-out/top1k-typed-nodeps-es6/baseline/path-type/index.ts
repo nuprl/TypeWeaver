@@ -1,6 +1,6 @@
 import fs, {promises as fsPromises} from 'fs';
 
-async function isType(fsStatType: "FILE", statsMethodName: "isFile", filePath: path.join) {
+async function isType(fsStatType: number, statsMethodName: string, filePath: string) {
 	if (typeof filePath !== 'string') {
 		throw new TypeError(`Expected a string, got ${typeof filePath}`);
 	}
@@ -17,7 +17,7 @@ async function isType(fsStatType: "FILE", statsMethodName: "isFile", filePath: p
 	}
 }
 
-function isTypeSync(fsStatType: "unknown", statsMethodName: "unknown", filePath: "unknown") {
+function isTypeSync(fsStatType: number, statsMethodName: string, filePath: string) {
 	if (typeof filePath !== 'string') {
 		throw new TypeError(`Expected a string, got ${typeof filePath}`);
 	}

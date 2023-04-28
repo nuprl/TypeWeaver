@@ -19,7 +19,7 @@ export function calcLineCount(hunk: Hunk) {
   }
 }
 
-export function merge(mine: IMergeable, theirs: IMergeable, base: IMergeable) {
+export function merge(mine: any, theirs: any, base: any) {
   mine = loadPatch(mine, base);
   theirs = loadPatch(theirs, base);
 
@@ -110,7 +110,7 @@ function loadPatch(param: string, base: string) {
   return param;
 }
 
-function fileNameChanged(patch: IFilePatch) {
+function fileNameChanged(patch: Patch) {
   return patch.newFileName && patch.newFileName !== patch.oldFileName;
 }
 
@@ -136,7 +136,7 @@ function cloneHunk(hunk: Hunk, offset: number) {
   };
 }
 
-function mergeLines(hunk: Hunk, mineOffset: number, mineLines: number, theirOffset: number, theirLines: number) {
+function mergeLines(hunk: Hunk, mineOffset: number, mineLines: string[], theirOffset: number, theirLines: string[]) {
   // This will generally result in a conflicted hunk, but there are cases where the context
   // is the only overlap where we can successfully merge the content here.
   let mine = {offset: mineOffset, lines: mineLines, index: 0},
@@ -185,7 +185,7 @@ function mergeLines(hunk: Hunk, mineOffset: number, mineLines: number, theirOffs
   calcLineCount(hunk);
 }
 
-function mutualChange(hunk: Hunk, mine: string, their: string) {
+function mutualChange(hunk: Hunk, mine: Hunk, their: Hunk) {
   let myChanges = collectChange(mine),
       theirChanges = collectChange(their);
 
@@ -208,7 +208,7 @@ function mutualChange(hunk: Hunk, mine: string, their: string) {
   conflict(hunk, myChanges, theirChanges);
 }
 
-function removal(hunk: Hunk, mine: boolean, their: boolean, swap: boolean) {
+function removal(hunk: Hunk, mine: Hunk, their: Hunk, swap: boolean) {
   let myChanges = collectChange(mine),
       theirChanges = collectContext(their, myChanges);
   if (theirChanges.merged) {
@@ -218,7 +218,7 @@ function removal(hunk: Hunk, mine: boolean, their: boolean, swap: boolean) {
   }
 }
 
-function conflict(hunk: Hunk, mine: string, their: string) {
+function conflict(hunk: Hunk, mine: Hunk, their: Hunk) {
   hunk.conflict = true;
   hunk.lines.push({
     conflict: true,
@@ -262,7 +262,7 @@ function collectChange(state: State) {
 
   return ret;
 }
-function collectContext(state: State, matchChanges: MatchChanges) {
+function collectContext(state: State, matchChanges: boolean) {
   let changes = [],
       merged = [],
       matchIndex = 0,
@@ -321,12 +321,12 @@ function collectContext(state: State, matchChanges: MatchChanges) {
   };
 }
 
-function allRemoves(changes: any) {
-  return changes.reduce(function(prev: boolean, change: boolean) {
+function allRemoves(changes: Change[]) {
+  return changes.reduce(function(prev: string, change: string) {
     return prev && change[0] === '-';
   }, true);
 }
-function skipRemoveSuperset(state: IState, removeChanges: IRemoveChanges, delta: number) {
+function skipRemoveSuperset(state: State, removeChanges: Change[], delta: number) {
   for (let i = 0; i < delta; i++) {
     let changeContent = removeChanges[removeChanges.length - delta + i].substr(1);
     if (state.lines[state.index + i] !== ' ' + changeContent) {

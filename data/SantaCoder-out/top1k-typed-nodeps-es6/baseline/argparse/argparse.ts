@@ -104,7 +104,7 @@ function hasattr(object: any, name: string) {
     return Object.prototype.hasOwnProperty.call(object, name)
 }
 
-function getattr(object: any, name: string, value: any) {
+function getattr(object: Object, name: string, value: any) {
     return hasattr(object, name) ? object[name] : value
 }
 
@@ -112,7 +112,7 @@ function setattr(object: any, name: string, value: any) {
     object[name] = value
 }
 
-function setdefault(object: any, name: string, value: any) {
+function setdefault(object: Object, name: string, value: any) {
     if (!hasattr(object, name)) object[name] = value
     return object[name]
 }
@@ -175,7 +175,7 @@ function _array_equal(array1: any[], array2: any[]) {
     return true
 }
 
-function _array_remove(array: Array<any>, item: any) {
+function _array_remove(array: any[], item: any) {
     let idx = array.indexOf(item)
     if (idx === -1) throw new TypeError(sub('%r not in list', item))
     array.splice(idx, 1)
@@ -184,7 +184,7 @@ function _array_remove(array: Array<any>, item: any) {
 // normalize choices to array;
 // this isn't required in python because `in` and `map` operators work with anything,
 // but in js dealing with multiple types here is too clunky
-function _choices_to_array(choices: IChoice[]) {
+function _choices_to_array(choices: string[]) {
     if (choices === undefined) {
         return []
     } else if (Array.isArray(choices)) {
@@ -199,7 +199,7 @@ function _choices_to_array(choices: IChoice[]) {
 }
 
 // decorator that allows a class to be called without new
-function _callable(cls: Class<any>) {
+function _callable(cls: any) {
     let result = { // object is needed for inferred class name
         [cls.name]: function (...args: any[]) {
             let this_class = new.target === result || !new.target
@@ -224,7 +224,7 @@ function _alias(object: any, from: string, to: string) {
 }
 
 // decorator that allows snake_case class methods to be called with camelCase and vice versa
-function _camelcase_alias(_class: string) {
+function _camelcase_alias(_class: any) {
     for (let name of Object.getOwnPropertyNames(_class.prototype)) {
         let camelcase = name.replace(/\w_[a-z]/g, s => s[0] + s[2].toUpperCase())
         if (camelcase !== name) _alias(_class.prototype, camelcase, name)
@@ -248,7 +248,7 @@ function _to_new_name(key: string) {
 
 // parse options
 let no_default = Symbol('no_default_value')
-function _parse_opts(args: string[], descriptor: ICommandDescriptor) {
+function _parse_opts(args: string[], descriptor: CommandDescriptor) {
     function get_name() {
         let stack = new Error().stack.split('\n')
             .map(x => x.match(/^    at (.*) \(.*\)$/))
@@ -423,7 +423,7 @@ function _AttributeHolder(cls = Object: any) {
 }
 
 
-function _copy_items(items: any) {
+function _copy_items(items: any[]) {
     if (items === undefined) {
         return []
     }
@@ -896,7 +896,7 @@ const HelpFormatter = _camelcase_alias(_callable(class HelpFormatter {
             result = default_metavar
         }
 
-        function format(tuple_size: number) {
+        function format(tuple_size: usize) {
             if (Array.isArray(result)) {
                 return result
             } else {
@@ -2607,7 +2607,7 @@ const ArgumentParser = _camelcase_alias(_callable(class ArgumentParser extends _
         this.register('type', undefined, identity)
         this.register('type', null, identity)
         this.register('type', 'auto', identity)
-        this.register('type', 'int', function (x: string) {
+        this.register('type', 'int', function (x: any) {
             let result = Number(x)
             if (!Number.isInteger(result)) {
                 throw new TypeError(sub('could not convert string to int: %r', x))

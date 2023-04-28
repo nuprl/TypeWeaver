@@ -1,6 +1,6 @@
 'use strict';
 
-var traverse = module.exports = function (schema: Schema, opts: SchemaOptions, cb: any) {
+var traverse = module.exports = function (schema: Schema, opts: Options, cb: Function) {
   // Legacy support for v0.3.1 and earlier.
   if (typeof opts == 'function') {
     cb = opts;
@@ -64,7 +64,7 @@ traverse.skipKeywords = {
 };
 
 
-function _traverse(opts: SchemaTraverseOptions, pre: SchemaTraverseCallback<SchemaNode>, post: SchemaNodeCallback<SchemaNode>, schema: SchemaNode, jsonPtr: string, rootSchema: Schema, parentJsonPtr: string, parentKeyword: string, parentSchema: Schema, keyIndex: number) {
+function _traverse(opts: TraverseOpts, pre: any, post: any, schema: any, jsonPtr: any, rootSchema: any, parentJsonPtr: string, parentKeyword: string, parentSchema: Schema, keyIndex: number) {
   if (schema && typeof schema == 'object' && !Array.isArray(schema)) {
     pre(schema, jsonPtr, rootSchema, parentJsonPtr, parentKeyword, parentSchema, keyIndex);
     for (var key in schema) {

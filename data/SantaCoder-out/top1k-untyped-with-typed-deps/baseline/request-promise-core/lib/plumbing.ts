@@ -7,7 +7,7 @@ var errors = require('./errors.js'),
     isUndefined = require('lodash/isUndefined');
 
 
-module.exports = function (options: IOptions) {
+module.exports = function (options: any) {
 
     var errorText = 'Please verify options'; // For better minification because this string is repeating
 
@@ -29,7 +29,7 @@ module.exports = function (options: IOptions) {
 
     var plumbing = {};
 
-    plumbing.init = function (requestOptions: AxiosRequestConfig) {
+    plumbing.init = function (requestOptions: RequestOptions) {
 
         var self = this;
 
@@ -60,7 +60,7 @@ module.exports = function (options: IOptions) {
     };
 
     plumbing.defaultTransformations = {
-        HEAD: function (body: AxiosResponse, response: AxiosResponse, resolveWithFullResponse: true) {
+        HEAD: function (body: any, response: any, resolveWithFullResponse: any) {
             return resolveWithFullResponse ? response : response.headers;
         }
     };
@@ -90,10 +90,10 @@ module.exports = function (options: IOptions) {
 
             if (isFunction(self._rp_options.transform) && self._rp_options.transform2xxOnly === false) {
 
-                (new PromiseImpl(function (resolve: any) {
+                (new PromiseImpl(function (resolve: Function) {
                     resolve(self._rp_options.transform(body, response, self._rp_options.resolveWithFullResponse)); // transform may return a Promise
                 }))
-                    .then(function (transformedResponse: AxiosResponse<AxiosResponse<any>>) {
+                    .then(function (transformedResponse: any) {
                         self._rp_reject(new errors.StatusCodeError(response.statusCode, body, self._rp_options, transformedResponse));
                     })
                     .catch(function (transformErr: any) {
@@ -108,13 +108,13 @@ module.exports = function (options: IOptions) {
 
             if (isFunction(self._rp_options.transform) && (is2xx || self._rp_options.transform2xxOnly === false)) {
 
-                (new PromiseImpl(function (resolve: any) {
+                (new PromiseImpl(function (resolve: Function) {
                     resolve(self._rp_options.transform(body, response, self._rp_options.resolveWithFullResponse)); // transform may return a Promise
                 }))
-                    .then(function (transformedResponse: AxiosResponse<AxiosResponse<any>>) {
+                    .then(function (transformedResponse: any) {
                         self._rp_resolve(transformedResponse);
                     })
-                    .catch(function (transformErr: Error) {
+                    .catch(function (transformErr: any) {
                         self._rp_reject(new errors.TransformError(transformErr, self._rp_options, response));
                     });
 
@@ -132,7 +132,7 @@ module.exports = function (options: IOptions) {
 
     };
 
-    plumbing.exposePromiseMethod = function (exposeTo: any, bindTo: any, promisePropertyKey: string, methodToExpose: string, exposeAs: string) {
+    plumbing.exposePromiseMethod = function (exposeTo: any, bindTo: any, promisePropertyKey: any, methodToExpose: any, exposeAs: string) {
 
         exposeAs = exposeAs || methodToExpose;
 
@@ -147,7 +147,7 @@ module.exports = function (options: IOptions) {
 
     };
 
-    plumbing.exposePromise = function (exposeTo: any, bindTo: any, promisePropertyKey: string, exposeAs: string) {
+    plumbing.exposePromise = function (exposeTo: any, bindTo: any, promisePropertyKey: any, exposeAs: any) {
 
         exposeAs = exposeAs || 'promise';
 

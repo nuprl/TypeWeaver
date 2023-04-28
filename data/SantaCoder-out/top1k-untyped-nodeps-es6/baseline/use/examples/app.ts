@@ -2,7 +2,7 @@
 import util from 'util';
 import plugins from 'base-plugins';
 
-function Factory(config: IConfig) {
+function Factory(config: Config) {
   this.use = function(fn: Function) {
     fn.call(this, this);
     return this;
@@ -81,7 +81,7 @@ Field.prototype.field = function(key: string, val: any) {
 
 
 var multi = new Multi();
-multi.use(function fn(app: any) {
+multi.use(function fn(app: App) {
   if (!app.isItem) return fn;
   console.log(app)
 });

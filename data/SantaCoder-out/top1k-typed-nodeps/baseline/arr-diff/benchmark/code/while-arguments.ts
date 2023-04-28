@@ -2,7 +2,7 @@
 
 module.exports = diff;
 
-function diff(arr/*: any[], arrays*/: any[]) {
+function diff(arr/*: Array<any>, arrays*/: Array<any>) {
   var len = arguments.length;
   var idx = 0;
   while (++idx < len) {

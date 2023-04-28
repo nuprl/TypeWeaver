@@ -1,4 +1,4 @@
-export default function indentString(string: string, count = 1: number, options = {}: IOptions) {
+export default function indentString(string: string, count = 1: number, options = {}: Options) {
 	const {
 		indent = ' ',
 		includeEmptyLines = false

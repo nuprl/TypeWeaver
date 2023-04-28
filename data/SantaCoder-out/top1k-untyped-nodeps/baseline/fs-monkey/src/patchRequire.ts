@@ -34,7 +34,7 @@ function stripBOM(content: string) {
  * @param {boolean} [unixifyPaths=false]
  * @param {Object} Module Module loader to patch.
  */
-export default function patchRequire(vol: IFileSystemVolume, unixifyPaths = false: boolean, Module = require('module': any)) {
+export default function patchRequire(vol: Volume, unixifyPaths = false: boolean, Module = require('module': any)) {
 
     // ensure all paths are corrected before use.
     if(isWin32 && unixifyPaths) {
@@ -158,13 +158,13 @@ export default function patchRequire(vol: IFileSystemVolume, unixifyPaths = fals
 
 
     // Native extension for .js
-    Module._extensions['.js'] = function(module: Module, filename: string) {
+    Module._extensions['.js'] = function(module: string, filename: string) {
         let content = vol.readFileSync(filename, 'utf8');
         module._compile(stripBOM(content), filename);
     };
 
     // Native extension for .json
-    Module._extensions['.json'] = function(module: Module, filename: string) {
+    Module._extensions['.json'] = function(module: string, filename: string) {
         let content = vol.readFileSync(filename, 'utf8');
         try {
             module.exports = JSON.parse(stripBOM(content));
@@ -175,7 +175,7 @@ export default function patchRequire(vol: IFileSystemVolume, unixifyPaths = fals
     };
 
     let warned = true;
-    Module._findPath = function(request: any, paths: string[], isMain: boolean) {
+    Module._findPath = function(request: any, paths: any, isMain: any) {
         if (path.isAbsolute(request)) {
             paths = [''];
         } else if (!paths || paths.length === 0) {

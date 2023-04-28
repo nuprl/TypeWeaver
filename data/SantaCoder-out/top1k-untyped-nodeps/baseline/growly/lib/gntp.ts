@@ -12,7 +12,7 @@ var nl = '\r\n';
  * @api private
  */
 
-function GNTP(type: string, opts: GNTPOptions) {
+function GNTP(type: string, opts: GNTPOpts) {
     opts = opts || {};
     this.type = type;
     this.host = opts.host || 'localhost';
@@ -44,7 +44,7 @@ function GNTP(type: string, opts: GNTPOptions) {
  * @api private
  */
 
-GNTP.prototype.parseResp = function(resp: AxiosResponse) {
+GNTP.prototype.parseResp = function(resp: any) {
     var parsed = {}, head, body;
     resp = resp.slice(0, resp.indexOf(nl + nl)).split(nl);
     head = resp[0];
@@ -154,14 +154,14 @@ GNTP.prototype.send = function(callback: Function) {
     socket.on('connect', function() {
         socket.write(self.request);
 
-        self.resources.forEach(function(res: IResponse) {
+        self.resources.forEach(function(res: Response) {
             socket.write(res.header);
             socket.write(res.file);
             socket.write(nl + nl);
         });
     });
 
-    socket.on('data', function(data: string) {
+    socket.on('data', function(data: Buffer) {
         resp += data.toString();
 
         /* Wait until we have a complete response which is signaled by two CRLF's. */

@@ -14,7 +14,7 @@ function CBCState(iv: Uint8Array) {
 }
 
 function instantiate(Base: any) {
-  function CBC(options: IOptions) {
+  function CBC(options: any) {
     Base.call(this, options);
     this._cbcInit();
   }
@@ -26,7 +26,7 @@ function instantiate(Base: any) {
     CBC.prototype[key] = proto[key];
   }
 
-  CBC.create = function create(options: IOptions) {
+  CBC.create = function create(options: CBCOptions) {
     return new CBC(options);
   };
 
@@ -40,7 +40,7 @@ proto._cbcInit = function _cbcInit() {
   this._cbcState = state;
 };
 
-proto._update = function _update(inp: number, inOff: number, out: number, outOff: number) {
+proto._update = function _update(inp: Uint8Array, inOff: number, out: Uint8Array, outOff: number) {
   var state = this._cbcState;
   var superProto = this.constructor.super_.prototype;
 

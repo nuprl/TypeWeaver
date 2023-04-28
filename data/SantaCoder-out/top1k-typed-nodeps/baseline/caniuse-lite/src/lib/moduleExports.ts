@@ -1,6 +1,6 @@
 const t = require('@babel/types')
 
-function moduleExports(expression: Expression) {
+function moduleExports(expression: string) {
   return t.expressionStatement(
     t.assignmentExpression(
       '=',

@@ -32,7 +32,7 @@ module.exports = destroy
  * @public
  */
 
-function destroy (stream: Readable, suppress: boolean) {
+function destroy (stream: ReadableStream, suppress: boolean) {
   if (isFsReadStream(stream)) {
     destroyReadStream(stream)
   } else if (isZlibStream(stream)) {
@@ -75,7 +75,7 @@ function destroyReadStream (stream: Readable) {
  * @private
  */
 
-function closeZlibStream (stream: zlib.Zlib.Raw) {
+function closeZlibStream (stream: Zlib.Gunzip) {
   if (stream._hadError === true) {
     var prop = stream._binding === null
       ? '_binding'
@@ -105,7 +105,7 @@ function closeZlibStream (stream: zlib.Zlib.Raw) {
  * @private
  */
 
-function destroyZlibStream (stream: ZlibStream) {
+function destroyZlibStream (stream: Zlib) {
   if (typeof stream.destroy === 'function') {
     // node.js core bug work-around
     // istanbul ignore if: node.js 0.8

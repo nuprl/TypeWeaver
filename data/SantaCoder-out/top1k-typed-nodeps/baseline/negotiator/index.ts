@@ -27,7 +27,7 @@ module.exports.Negotiator = Negotiator;
  * @public
  */
 
-function Negotiator(request: any) {
+function Negotiator(request: IncomingMessage) {
   if (!(this instanceof Negotiator)) {
     return new Negotiator(request);
   }
@@ -44,7 +44,7 @@ Negotiator.prototype.charsets = function charsets(available: string[]) {
   return preferredCharsets(this.request.headers['accept-charset'], available);
 };
 
-Negotiator.prototype.encoding = function encoding(available: number) {
+Negotiator.prototype.encoding = function encoding(available: string[]) {
   var set = this.encodings(available);
   return set && set[0];
 };

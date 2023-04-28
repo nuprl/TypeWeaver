@@ -223,7 +223,7 @@ convert.rgb.xyz = function (rgb: number[]) {
 	return [x * 100, y * 100, z * 100];
 };
 
-convert.rgb.lab = function (rgb: number[]) {
+convert.rgb.lab = function (rgb: Color) {
 	const xyz = convert.rgb.xyz(rgb);
 	let x = xyz[0];
 	let y = xyz[1];
@@ -244,7 +244,7 @@ convert.rgb.lab = function (rgb: number[]) {
 	return [l, a, b];
 };
 
-convert.hsl.rgb = function (hsl: number[]) {
+convert.hsl.rgb = function (hsl: HSL) {
 	const h = hsl[0] / 360;
 	const s = hsl[1] / 100;
 	const l = hsl[2] / 100;
@@ -292,7 +292,7 @@ convert.hsl.rgb = function (hsl: number[]) {
 	return rgb;
 };
 
-convert.hsl.hsv = function (hsl: number[]) {
+convert.hsl.hsv = function (hsl: HSL) {
 	const h = hsl[0];
 	let s = hsl[1] / 100;
 	let l = hsl[2] / 100;
@@ -308,7 +308,7 @@ convert.hsl.hsv = function (hsl: number[]) {
 	return [h, sv * 100, v * 100];
 };
 
-convert.hsv.rgb = function (hsv: number[]) {
+convert.hsv.rgb = function (hsv: HSV) {
 	const h = hsv[0] / 60;
 	const s = hsv[1] / 100;
 	let v = hsv[2] / 100;
@@ -336,7 +336,7 @@ convert.hsv.rgb = function (hsv: number[]) {
 	}
 };
 
-convert.hsv.hsl = function (hsv: number[]) {
+convert.hsv.hsl = function (hsv: HSV) {
 	const h = hsv[0];
 	const s = hsv[1] / 100;
 	const v = hsv[2] / 100;
@@ -355,7 +355,7 @@ convert.hsv.hsl = function (hsv: number[]) {
 };
 
 // http://dev.w3.org/csswg/css-color/#hwb-to-rgb
-convert.hwb.rgb = function (hwb: number[]) {
+convert.hwb.rgb = function (hwb: HWBColor) {
 	const h = hwb[0] / 360;
 	let wh = hwb[1] / 100;
 	let bl = hwb[2] / 100;
@@ -397,7 +397,7 @@ convert.hwb.rgb = function (hwb: number[]) {
 	return [r * 255, g * 255, b * 255];
 };
 
-convert.cmyk.rgb = function (cmyk: number) {
+convert.cmyk.rgb = function (cmyk: number[]) {
 	const c = cmyk[0] / 100;
 	const m = cmyk[1] / 100;
 	const y = cmyk[2] / 100;
@@ -410,7 +410,7 @@ convert.cmyk.rgb = function (cmyk: number) {
 	return [r * 255, g * 255, b * 255];
 };
 
-convert.xyz.rgb = function (xyz: number[]) {
+convert.xyz.rgb = function (xyz: XYZ) {
 	const x = xyz[0] / 100;
 	const y = xyz[1] / 100;
 	const z = xyz[2] / 100;
@@ -462,7 +462,7 @@ convert.xyz.lab = function (xyz: number[]) {
 	return [l, a, b];
 };
 
-convert.lab.xyz = function (lab: number[]) {
+convert.lab.xyz = function (lab: Lab) {
 	const l = lab[0];
 	const a = lab[1];
 	const b = lab[2];
@@ -508,7 +508,7 @@ convert.lab.lch = function (lab: number[]) {
 	return [l, c, h];
 };
 
-convert.lch.lab = function (lch: any) {
+convert.lch.lab = function (lch: LCHColor) {
 	const l = lch[0];
 	const c = lch[1];
 	const h = lch[2];
@@ -520,7 +520,7 @@ convert.lch.lab = function (lch: any) {
 	return [l, a, b];
 };
 
-convert.rgb.ansi16 = function (args: any, saturation = null: number) {
+convert.rgb.ansi16 = function (args: number[], saturation = null: number) {
 	const [r, g, b] = args;
 	let value = saturation === null ? convert.rgb.hsv(args)[2] : saturation; // Hsv -> ansi16 optimization
 
@@ -542,13 +542,13 @@ convert.rgb.ansi16 = function (args: any, saturation = null: number) {
 	return ansi;
 };
 
-convert.hsv.ansi16 = function (args: ICommandArgs) {
+convert.hsv.ansi16 = function (args: any) {
 	// Optimization here; we already know the value and don't need to get
 	// it converted for us.
 	return convert.rgb.ansi16(convert.hsv.rgb(args), args[2]);
 };
 
-convert.rgb.ansi256 = function (args: any) {
+convert.rgb.ansi256 = function (args: number[]) {
 	const r = args[0];
 	const g = args[1];
 	const b = args[2];
@@ -575,7 +575,7 @@ convert.rgb.ansi256 = function (args: any) {
 	return ansi;
 };
 
-convert.ansi16.rgb = function (args: number[]) {
+convert.ansi16.rgb = function (args: any[]) {
 	args = args[0];
 
 	let color = args % 10;
@@ -599,7 +599,7 @@ convert.ansi16.rgb = function (args: number[]) {
 	return [r, g, b];
 };
 
-convert.ansi256.rgb = function (args: ICommandArgs) {
+convert.ansi256.rgb = function (args: any) {
 	args = args[0];
 
 	// Handle greyscale
@@ -618,7 +618,7 @@ convert.ansi256.rgb = function (args: ICommandArgs) {
 	return [r, g, b];
 };
 
-convert.rgb.hex = function (args: ICommandArgs) {
+convert.rgb.hex = function (args: any) {
 	const integer = ((Math.round(args[0]) & 0xFF) << 16)
 		+ ((Math.round(args[1]) & 0xFF) << 8)
 		+ (Math.round(args[2]) & 0xFF);
@@ -627,7 +627,7 @@ convert.rgb.hex = function (args: ICommandArgs) {
 	return '000000'.substring(string.length) + string;
 };
 
-convert.hex.rgb = function (args: ICommandArgs) {
+convert.hex.rgb = function (args: any) {
 	const match = args.toString(16).match(/[a-f0-9]{6}|[a-f0-9]{3}/i);
 	if (!match) {
 		return [0, 0, 0];
@@ -683,7 +683,7 @@ convert.rgb.hcg = function (rgb: number[]) {
 	return [hue * 360, chroma * 100, grayscale * 100];
 };
 
-convert.hsl.hcg = function (hsl: any) {
+convert.hsl.hcg = function (hsl: HSL) {
 	const s = hsl[1] / 100;
 	const l = hsl[2] / 100;
 
@@ -697,7 +697,7 @@ convert.hsl.hcg = function (hsl: any) {
 	return [hsl[0], c * 100, f * 100];
 };
 
-convert.hsv.hcg = function (hsv: number[]) {
+convert.hsv.hcg = function (hsv: HSV) {
 	const s = hsv[1] / 100;
 	const v = hsv[2] / 100;
 
@@ -711,7 +711,7 @@ convert.hsv.hcg = function (hsv: number[]) {
 	return [hsv[0], c * 100, f * 100];
 };
 
-convert.hcg.rgb = function (hcg: number[]) {
+convert.hcg.rgb = function (hcg: HcgColor) {
 	const h = hcg[0] / 360;
 	const c = hcg[1] / 100;
 	const g = hcg[2] / 100;
@@ -752,7 +752,7 @@ convert.hcg.rgb = function (hcg: number[]) {
 	];
 };
 
-convert.hcg.hsv = function (hcg: any) {
+convert.hcg.hsv = function (hcg: HcgColor) {
 	const c = hcg[1] / 100;
 	const g = hcg[2] / 100;
 
@@ -766,7 +766,7 @@ convert.hcg.hsv = function (hcg: any) {
 	return [hcg[0], f * 100, v * 100];
 };
 
-convert.hcg.hsl = function (hcg: any) {
+convert.hcg.hsl = function (hcg: HcgColor) {
 	const c = hcg[1] / 100;
 	const g = hcg[2] / 100;
 
@@ -783,14 +783,14 @@ convert.hcg.hsl = function (hcg: any) {
 	return [hcg[0], s * 100, l * 100];
 };
 
-convert.hcg.hwb = function (hcg: number[]) {
+convert.hcg.hwb = function (hcg: HcgColor) {
 	const c = hcg[1] / 100;
 	const g = hcg[2] / 100;
 	const v = c + g * (1.0 - c);
 	return [hcg[0], (v - c) * 100, (1 - v) * 100];
 };
 
-convert.hwb.hcg = function (hwb: number[]) {
+convert.hwb.hcg = function (hwb: HWBColor) {
 	const w = hwb[1] / 100;
 	const b = hwb[2] / 100;
 	const v = 1 - b;
@@ -808,29 +808,29 @@ convert.apple.rgb = function (apple: Apple) {
 	return [(apple[0] / 65535) * 255, (apple[1] / 65535) * 255, (apple[2] / 65535) * 255];
 };
 
-convert.rgb.apple = function (rgb: number) {
+convert.rgb.apple = function (rgb: string) {
 	return [(rgb[0] / 255) * 65535, (rgb[1] / 255) * 65535, (rgb[2] / 255) * 65535];
 };
 
-convert.gray.rgb = function (args: ICommandArgs) {
+convert.gray.rgb = function (args: any[]) {
 	return [args[0] / 100 * 255, args[0] / 100 * 255, args[0] / 100 * 255];
 };
 
-convert.gray.hsl = function (args: any) {
+convert.gray.hsl = function (args: number[]) {
 	return [0, 0, args[0]];
 };
 
 convert.gray.hsv = convert.gray.hsl;
 
-convert.gray.hwb = function (gray: number) {
+convert.gray.hwb = function (gray: number[]) {
 	return [0, 100, gray[0]];
 };
 
-convert.gray.cmyk = function (gray: number) {
+convert.gray.cmyk = function (gray: number[]) {
 	return [0, 0, 0, gray[0]];
 };
 
-convert.gray.lab = function (gray: number) {
+convert.gray.lab = function (gray: Color) {
 	return [gray[0], 0, 0];
 };
 

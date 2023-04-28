@@ -22,7 +22,7 @@ Reporter.prototype.save = function save() {
   return { obj: state.obj, pathLen: state.path.length };
 };
 
-Reporter.prototype.restore = function restore(data: ReporterState) {
+Reporter.prototype.restore = function restore(data: any) {
   const state = this._reporterState;
 
   state.obj = data.obj;
@@ -39,7 +39,7 @@ Reporter.prototype.exitKey = function exitKey(index: number) {
   state.path = state.path.slice(0, index - 1);
 };
 
-Reporter.prototype.leaveKey = function leaveKey(index: number, key: string, value: any) {
+Reporter.prototype.leaveKey = function leaveKey(index: number, key: string, value: string) {
   const state = this._reporterState;
 
   this.exitKey(index);
@@ -59,7 +59,7 @@ Reporter.prototype.enterObject = function enterObject() {
   return prev;
 };
 
-Reporter.prototype.leaveObject = function leaveObject(prev: ReporterState) {
+Reporter.prototype.leaveObject = function leaveObject(prev: Object) {
   const state = this._reporterState;
 
   const now = state.obj;

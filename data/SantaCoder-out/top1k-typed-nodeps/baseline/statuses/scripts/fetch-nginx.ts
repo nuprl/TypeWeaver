@@ -8,8 +8,8 @@ var write = require('./lib/write')
 var URL = 'https://hg.nginx.org/nginx/raw-file/default/src/http/ngx_http_header_filter_module.c'
 var HEADERS = { 'User-Agent': 'nodejs/' + process.version + ' (' + process.platform + ', npm:statuses)' }
 
-https.get(URL, { headers: HEADERS }, function onResponse (res: Response) {
-  getBody(res, true, function (err: Error, body: any) {
+https.get(URL, { headers: HEADERS }, function onResponse (res: IncomingMessage) {
+  getBody(res, true, function (err: any, body: any) {
     if (err) throw err
 
     var block = /ngx_http_status_lines\[] = {([^}]+)};/m.exec(body)[1]

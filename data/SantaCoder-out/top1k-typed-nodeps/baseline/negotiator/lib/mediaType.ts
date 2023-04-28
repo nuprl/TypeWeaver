@@ -115,7 +115,7 @@ function getMediaTypePriority(type: string, accepted: string[], index: number) {
  * @private
  */
 
-function specify(type: string, spec: Spec, index: number) {
+function specify(type: string, spec: any, index: number) {
   var p = parseMediaType(type);
   var s = 0;
 
@@ -195,7 +195,7 @@ function compareSpecs(a: Spec, b: Spec) {
  * @private
  */
 
-function getFullType(spec: ITypeSpec) {
+function getFullType(spec: any) {
   return spec.type + '/' + spec.subtype;
 }
 

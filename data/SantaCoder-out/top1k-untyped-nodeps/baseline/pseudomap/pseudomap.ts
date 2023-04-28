@@ -44,7 +44,7 @@ PseudoMap.prototype.set = function (k: string, v: any) {
   set(this._data, k, v)
 }
 
-PseudoMap.prototype.delete = function (k: number) {
+PseudoMap.prototype.delete = function (k: string) {
   var res = find(this._data, k)
   if (res) {
     delete this._data[res._index]
@@ -84,7 +84,7 @@ function same (a: any, b: any) {
   return a === b || a !== a && b !== b
 }
 
-function Entry (k: string, v: any, i: number) {
+function Entry (k: any, v: any, i: any) {
   this.key = k
   this.value = v
   this._index = i

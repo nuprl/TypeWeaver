@@ -12,7 +12,7 @@ function PEMDecoder(entity: string) {
 inherits(PEMDecoder, DERDecoder);
 module.exports = PEMDecoder;
 
-PEMDecoder.prototype.decode = function decode(data: Uint8Array, options: DecodeOptions) {
+PEMDecoder.prototype.decode = function decode(data: Buffer, options: DecodeOptions) {
   const lines = data.toString().split(/[\r\n]+/g);
 
   const label = options.label.toUpperCase();

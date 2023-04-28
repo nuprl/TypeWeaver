@@ -278,7 +278,7 @@
     P["d"] = Math.abs(d);
   };
 
-  function modpow(b: BigNumber, e: BigNumber, m: BigNumber) {
+  function modpow(b: number, e: number, m: number) {
 
     var r = 1;
     for (; e > 0; b = (b * b) % m, e >>= 1) {
@@ -363,7 +363,7 @@
    * @param {number|Fraction=} a
    * @param {number=} b
    */
-  function Fraction(a: string, b: string) {
+  function Fraction(a: number, b: number) {
 
     parse(a, b);
 
@@ -412,7 +412,7 @@
      *
      * Ex: new Fraction({n: 2, d: 3}).add("14.9") => 467 / 30
      **/
-    "add": function(a: string, b: string) {
+    "add": function(a: Fraction, b: Fraction) {
 
       parse(a, b);
       return newFraction(
@@ -426,7 +426,7 @@
      *
      * Ex: new Fraction({n: 2, d: 3}).add("14.9") => -427 / 30
      **/
-    "sub": function(a: Fraction, b: Fraction) {
+    "sub": function(a: number, b: number) {
 
       parse(a, b);
       return newFraction(
@@ -440,7 +440,7 @@
      *
      * Ex: new Fraction("-17.(345)").mul(3) => 5776 / 111
      **/
-    "mul": function(a: number, b: number) {
+    "mul": function(a: Fraction, b: Fraction) {
 
       parse(a, b);
       return newFraction(
@@ -668,7 +668,7 @@
      *
      * Ex: new Fraction(19.6).equals([98, 5]);
      **/
-    "equals": function(a: string, b: number) {
+    "equals": function(a: string, b: string) {
 
       parse(a, b);
       return this["s"] * this["n"] * P["d"] === P["s"] * P["n"] * this["d"]; // Same as compare() === 0
@@ -737,7 +737,7 @@
      *
      * Ex: new Fraction("1.'3'").toFraction(true) => "4 1/3"
      **/
-    'toFraction': function(excludeWhole: boolean) {
+    'toFraction': function(excludeWhole: Boolean) {
 
       var whole, str = "";
       var n = this["n"];

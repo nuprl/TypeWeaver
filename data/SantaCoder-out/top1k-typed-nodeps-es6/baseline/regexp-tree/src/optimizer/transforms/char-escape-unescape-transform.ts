@@ -48,7 +48,7 @@ function shouldUnescape(path: string, hasXFlag: boolean) {
 /**
  * \], \\, \^, \-
  */
-function preservesInCharClass(value: string, index: number, parent: string) {
+function preservesInCharClass(value: string, index: number, parent: RegExp) {
   if (value === '^') {
     // Avoid [\^a] turning into [^a]
     return index === 0 && !parent.negative;
@@ -76,7 +76,7 @@ function preservesEscape(value: string, index: number, parent: string, hasXFlag:
   return /[*[()+?^$./\\|]/.test(value);
 }
 
-function consumeNumbers(startIndex: number, parent: number, rtl: boolean) {
+function consumeNumbers(startIndex: number, parent: Node, rtl: boolean) {
   let i = startIndex;
   let siblingNode =
     (rtl ? i >= 0 : i < parent.expressions.length) && parent.expressions[i];

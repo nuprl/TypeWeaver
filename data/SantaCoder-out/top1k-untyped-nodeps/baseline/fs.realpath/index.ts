@@ -21,7 +21,7 @@ function newError (er: Error) {
   )
 }
 
-function realpath (p: string, cache: Cache, cb: any) {
+function realpath (p: string, cache: Object, cb: Function) {
   if (ok) {
     return origRealpath(p, cache, cb)
   }
@@ -39,7 +39,7 @@ function realpath (p: string, cache: Cache, cb: any) {
   })
 }
 
-function realpathSync (p: string, cache: Cache<string>) {
+function realpathSync (p: string, cache: Object) {
   if (ok) {
     return origRealpathSync(p, cache)
   }

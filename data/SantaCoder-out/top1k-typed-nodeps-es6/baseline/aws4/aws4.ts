@@ -6,7 +6,7 @@ var aws4 = exports, credentialsCache = lru(1000);
 
 // http://docs.amazonwebservices.com/general/latest/gr/signature-version-4.html
 
-function hmac(key: string, string: string, encoding: Encoding) {
+function hmac(key: Buffer, string: string, encoding: string) {
   return crypto.createHmac('sha256', key).update(string, 'utf8').digest(encoding)
 }
 
@@ -41,7 +41,7 @@ var HEADERS_TO_IGNORE = {
 
 // request: { path | body, [host], [method], [headers], [service], [region] }
 // credentials: { accessKeyId, secretAccessKey, [sessionToken] }
-function RequestSigner(request: AxiosRequestConfig, credentials: AxiosRequestCredentials) {
+function RequestSigner(request: Request, credentials: Credentials) {
 
   if (typeof request === 'string') request = url.parse(request)
 
@@ -367,6 +367,6 @@ RequestSigner.prototype.formatPath = function() {
 
 aws4.RequestSigner = RequestSigner
 
-aws4.sign = function(request: AxiosRequestConfig, credentials: AxiosRequestCredentials) {
+aws4.sign = function(request: Request, credentials: Credentials) {
   return new RequestSigner(request, credentials).sign()
 }

@@ -13,13 +13,13 @@ import { unsafeToSkipNode, isEqualDeclarations} from './utils.js';
     b { ... }
 */
 
-function processRule(node: RuleNode, item: RuleItem, list: RuleList) {
+function processRule(node: Node, item: Node, list: Node) {
     const selectors = node.prelude.children;
     const declarations = node.block.children;
     const nodeCompareMarker = selectors.first.compareMarker;
     const skippedCompareMarkers = {};
 
-    list.nextUntil(item.next, function(next: any, nextItem: any) {
+    list.nextUntil(item.next, function(next: Function, nextItem: any) {
         // skip non-ruleset node if safe
         if (next.type !== 'Rule') {
             return unsafeToSkipNode.call(selectors, next);

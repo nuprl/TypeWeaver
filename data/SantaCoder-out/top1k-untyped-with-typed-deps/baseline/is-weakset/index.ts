@@ -10,7 +10,7 @@ var $setHas = callBound('WeakSet.prototype.has', true);
 if ($setHas) {
 	var $mapHas = callBound('WeakMap.prototype.has', true);
 
-	module.exports = function isWeakSet(x: any) {
+	module.exports = function isWeakSet(x: unknown) {
 		if (!x || typeof x !== 'object') {
 			return false;
 		}

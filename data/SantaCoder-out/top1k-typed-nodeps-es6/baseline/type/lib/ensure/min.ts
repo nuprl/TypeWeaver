@@ -2,7 +2,7 @@
 
 import resolveException from '../resolve-exception';
 
-export default function (value: any, coerced: any, options: IOptions) {
+export default function (value: any, coerced: any, options: any) {
 	if (coerced >= options.min) return coerced;
 	var errorMessage =
 		options && options.name

@@ -15,7 +15,7 @@
     },
     Int: {
       typeOf: 'Number',
-      validate: function(it: number){
+      validate: function(it: any){
         return !isItNaN(it) && it % 1 === 0;
       }
     },
@@ -27,7 +27,7 @@
     },
     Date: {
       typeOf: 'Date',
-      validate: function(it: any){
+      validate: function(it: Date){
         return !isItNaN(it.getTime());
       }
     }
@@ -41,7 +41,7 @@
       return checkMultiple(it, type.of, options);
     }, input);
   }
-  function checkTuple(input: any, type: string, options: any){
+  function checkTuple(input: any, type: any, options: any){
     var i, i$, ref$, len$, types;
     i = 0;
     for (i$ = 0, len$ = (ref$ = type.of).length; i$ < len$; ++i$) {
@@ -53,7 +53,7 @@
     }
     return input.length <= i;
   }
-  function checkFields(input: any, type: string, options: any){
+  function checkFields(input: string, type: string, options: any){
     var inputKeys, numInputKeys, k, numOfKeys, key, ref$, types;
     inputKeys = {};
     numInputKeys = 0;
@@ -73,7 +73,7 @@
     }
     return type.subset || numInputKeys === numOfKeys;
   }
-  function checkStructure(input: string, type: string, options: ICheckStructureOptions){
+  function checkStructure(input: any, type: string, options: any){
     if (!(input instanceof Object)) {
       return false;
     }
@@ -110,15 +110,15 @@
       throw new Error("No type defined. Input: " + input + ".");
     }
   }
-  function checkMultiple(input: string, types: string[], options: CheckMultipleOptions){
+  function checkMultiple(input: string, types: string[], options: any){
     if (toString$.call(types).slice(8, -1) !== 'Array') {
       throw new Error("Types must be in an array. Input: " + input + ".");
     }
-    return any(function(it: any){
+    return any(function(it: string){
       return check(input, it, options);
     }, types);
   }
-  module.exports = function(parsedType: IParsedType, input: IInput, options: IParseOptions){
+  module.exports = function(parsedType: any, input: any, options: any){
     options == null && (options = {});
     if (options.customTypes == null) {
       options.customTypes = {};

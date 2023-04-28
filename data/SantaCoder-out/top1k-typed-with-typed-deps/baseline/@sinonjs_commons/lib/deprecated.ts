@@ -45,7 +45,7 @@ exports.defaultMsg = function(packageName: string, funcName: string) {
  * @param  {string} msg
  * @returns {undefined}
  */
-exports.printWarning = function(msg: RPCMessage) {
+exports.printWarning = function(msg: string) {
     /* istanbul ignore next */
     if (typeof process === "object" && process.emitWarning) {
         // Emit Warnings in Node

@@ -1,6 +1,6 @@
 'use strict';
 
-export const readUInt32BE = function readUInt32BE(bytes: number, off: number) {
+export const readUInt32BE = function readUInt32BE(bytes: Buffer, off: number) {
   var res =  (bytes[0 + off] << 24) |
              (bytes[1 + off] << 16) |
              (bytes[2 + off] << 8) |
@@ -70,7 +70,7 @@ export const rip = function rip(inL: number, inR: number, out: number, off: numb
   out[off + 1] = outR >>> 0;
 };
 
-export const pc1 = function pc1(inL: number, inR: number, out: number, off: number) {
+export const pc1 = function pc1(inL: Uint32Array, inR: Uint32Array, out: Uint32Array, off: number) {
   var outL = 0;
   var outR = 0;
 
@@ -244,7 +244,7 @@ export const permute = function permute(num: number) {
   return out >>> 0;
 };
 
-export const padSplit = function padSplit(num: number, size: number, group: number) {
+export const padSplit = function padSplit(num: number, size: number, group: string) {
   var str = num.toString(2);
   while (str.length < size)
     str = '0' + str;

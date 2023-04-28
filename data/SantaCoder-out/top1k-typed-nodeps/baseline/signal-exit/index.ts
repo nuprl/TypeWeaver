@@ -4,7 +4,7 @@
 // grab a reference to node's real process object right away
 var process = global.process
 
-const processOk = function (process: IProcess) {
+const processOk = function (process: Process) {
   return process &&
     typeof process === 'object' &&
     typeof process.removeListener === 'function' &&
@@ -51,7 +51,7 @@ if (!processOk(process)) {
     emitter.infinite = true
   }
 
-  module.exports = function (cb: any, opts: any) {
+  module.exports = function (cb: Function, opts: Object) {
     /* istanbul ignore if */
     if (!processOk(global.process)) {
       return function () {}
@@ -85,7 +85,7 @@ if (!processOk(process)) {
     }
     loaded = false
 
-    signals.forEach(function (sig: Signature) {
+    signals.forEach(function (sig: string) {
       try {
         process.removeListener(sig, sigListeners[sig])
       } catch (er) {}
@@ -96,7 +96,7 @@ if (!processOk(process)) {
   }
   module.exports.unload = unload
 
-  var emit = function emit (event: string, code: number, signal: number) {
+  var emit = function emit (event: string, code: string, signal: string) {
     /* istanbul ignore if */
     if (emitter.emitted[event]) {
       return
@@ -107,7 +107,7 @@ if (!processOk(process)) {
 
   // { <signal>: <listener fn>, ... }
   var sigListeners = {}
-  signals.forEach(function (sig: string) {
+  signals.forEach(function (sig: number) {
     sigListeners[sig] = function listener () {
       /* istanbul ignore if */
       if (!processOk(global.process)) {
@@ -153,7 +153,7 @@ if (!processOk(process)) {
     // handle it instead of us.
     emitter.count += 1
 
-    signals = signals.filter(function (sig: Signature) {
+    signals = signals.filter(function (sig: string) {
       try {
         process.on(sig, sigListeners[sig])
         return true
@@ -182,7 +182,7 @@ if (!processOk(process)) {
   }
 
   var originalProcessEmit = process.emit
-  var processEmit = function processEmit (ev: EventEmitter, arg: any) {
+  var processEmit = function processEmit (ev: string, arg: any) {
     if (ev === 'exit' && processOk(global.process)) {
       /* istanbul ignore else */
       if (arg !== undefined) {

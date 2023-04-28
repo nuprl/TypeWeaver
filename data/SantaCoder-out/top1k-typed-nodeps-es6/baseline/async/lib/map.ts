@@ -119,7 +119,7 @@ import awaitify from './internal/awaitify.js'
  * }
  *
  */
-function map (coll: any, iteratee: any, callback: any) {
+function map (coll: any[], iteratee: Function, callback: Function) {
     return _map(eachOf, coll, iteratee, callback)
 }
 export default awaitify(map, 3);

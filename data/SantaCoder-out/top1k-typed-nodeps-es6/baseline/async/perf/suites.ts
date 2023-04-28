@@ -220,7 +220,7 @@ export default [{
     ],
     setup(num) {
         tasks = _.range(num).map(() => {
-            return function(cb: Function) {
+            return function(cb: any) {
                 setImmediate(cb);
             };
         });
@@ -237,11 +237,11 @@ export default [{
     ],
     setup(num) {
         tasks = [
-            function(cb: any) {
+            function(cb: Function) {
                 return cb(null, 1);
             }
         ].concat(_.range(num).map((i) => {
-            return function(arg: any, cb: any) {
+            return function(arg: any, cb: Function) {
                 setImmediate(() => {
                     cb(null, i);
                 });
@@ -263,7 +263,7 @@ export default [{
             dep1 (cb) { cb(null, 1); }
         };
         _.times(num, (n) => {
-            var task = ['dep' + (n+1), function(results: Array<any>, cb: any) {
+            var task = ['dep' + (n+1), function(results: number, cb: Function) {
                 setImmediate(cb, null, n);
             }];
             if (n > 2) task.unshift('dep' + n);
@@ -295,7 +295,7 @@ export default [{
             });
         }
 
-        function worker(task: Task, callback: any) {
+        function worker(task: any, callback: any) {
             if (task.num === numEntries) {
                 return done();
             }
@@ -325,7 +325,7 @@ export default [{
 
         var completedCnt = 0;
 
-        function worker(task: WorkerTask, callback: any) {
+        function worker(task: any, callback: any) {
             completedCnt++;
             if (completedCnt === numEntries) {
                 return done();
@@ -439,7 +439,7 @@ export default [{
 }, {
     name: "ensureAsync async noWrap",
     fn(async, done) {
-        (function(cb: any) {
+        (function(cb: Function) {
             setImmediate(cb);
         }(done));
     }

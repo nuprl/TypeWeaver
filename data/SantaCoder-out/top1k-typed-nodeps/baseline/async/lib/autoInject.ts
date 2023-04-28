@@ -34,7 +34,7 @@ function stripComments(string: string) {
     return stripped;
 }
 
-function parseParams(func: string) {
+function parseParams(func: Function) {
     const src = stripComments(func.toString());
     let match = src.match(FN_ARGS);
     if (!match) {
@@ -85,16 +85,16 @@ function parseParams(func: string) {
  *
  * //  The example from `auto` can be rewritten as follows:
  * async.autoInject({
- *     get_data: function(callback: any) {
+ *     get_data: function(callback: Function) {
  *         // async code to get some data
  *         callback(null, 'data', 'converted to array');
  *     },
- *     make_folder: function(callback: any) {
+ *     make_folder: function(callback: Function) {
  *         // async code to create a directory to store a file in
  *         // this is run at the same time as getting the data
  *         callback(null, 'folder');
  *     },
- *     write_file: function(get_data: GetDataCallback, make_folder: MakeFolderCallback, callback: any) {
+ *     write_file: function(get_data: Function, make_folder: Function, callback: Function) {
  *         // once there is some data and the directory exists,
  *         // write the data to a file in the directory
  *         callback(null, 'filename');
@@ -119,7 +119,7 @@ function parseParams(func: string) {
  * // depends on are still spread into arguments.
  * async.autoInject({
  *     //...
- *     write_file: ['get_data', 'make_folder', function(get_data: GetData, make_folder: MakeFolder, callback: Callback<any>) {
+ *     write_file: ['get_data', 'make_folder', function(get_data: any, make_folder: any, callback: any) {
  *         callback(null, 'filename');
  *     }],
  *     email_link: ['write_file', function(write_file: any, callback: any) {
@@ -131,7 +131,7 @@ function parseParams(func: string) {
  *     console.log('email_link = ', results.email_link);
  * });
  */
-export default function autoInject(tasks: any, callback: Function) {
+export default function autoInject(tasks: any, callback: any) {
     var newTasks = {};
 
     Object.keys(tasks).forEach(key => {
@@ -162,7 +162,7 @@ export default function autoInject(tasks: any, callback: Function) {
             newTasks[key] = params.concat(newTask);
         }
 
-        function newTask(results: TaskResults, taskCb: any) {
+        function newTask(results: any, taskCb: any) {
             var newArgs = params.map(name => results[name])
             newArgs.push(taskCb);
             wrapAsync(taskFn)(...newArgs);

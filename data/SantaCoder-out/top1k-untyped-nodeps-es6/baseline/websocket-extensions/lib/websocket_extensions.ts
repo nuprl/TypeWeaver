@@ -35,7 +35,7 @@ var instance = {
         offer    = [],
         index    = {};
 
-    this._inOrder.forEach(function(ext: IExtension) {
+    this._inOrder.forEach(function(ext: Extension) {
       var session = ext.createClientSession();
       if (!session) return;
 
@@ -61,7 +61,7 @@ var instance = {
     var responses = Parser.parseHeader(header),
         sessions  = [];
 
-    responses.eachOffer(function(name: string, params: any) {
+    responses.eachOffer(function(name: string, params: any[]) {
       var record = this._index[name];
 
       if (!record)
@@ -88,12 +88,12 @@ var instance = {
     this._pipeline = new Pipeline(sessions);
   },
 
-  generateResponse: function(header: string) {
+  generateResponse: function(header: any) {
     var sessions = [],
         response = [],
         offers   = Parser.parseHeader(header);
 
-    this._inOrder.forEach(function(ext: string) {
+    this._inOrder.forEach(function(ext: Extension) {
       var offer = offers.byName(ext.name);
       if (offer.length === 0 || this._reserved(ext)) return;
 
@@ -111,7 +111,7 @@ var instance = {
     return response.length > 0 ? response.join(', ') : null;
   },
 
-  validFrameRsv: function(frame: IFrame) {
+  validFrameRsv: function(frame: number) {
     var allowed = { rsv1: false, rsv2: false, rsv3: false },
         ext;
 
@@ -129,15 +129,15 @@ var instance = {
            (allowed.rsv3 || !frame.rsv3);
   },
 
-  processIncomingMessage: function(message: any, callback: any, context: any) {
+  processIncomingMessage: function(message: string, callback: Function, context: any) {
     this._pipeline.processIncomingMessage(message, callback, context);
   },
 
-  processOutgoingMessage: function(message: IMessage, callback: any, context: any) {
+  processOutgoingMessage: function(message: any, callback: Function, context: any) {
     this._pipeline.processOutgoingMessage(message, callback, context);
   },
 
-  close: function(callback: any, context: any) {
+  close: function(callback: Function, context: any) {
     if (!this._pipeline) return callback.call(context);
     this._pipeline.close(callback, context);
   },

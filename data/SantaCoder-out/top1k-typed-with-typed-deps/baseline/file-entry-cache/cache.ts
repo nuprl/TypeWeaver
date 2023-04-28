@@ -43,7 +43,7 @@ module.exports = {
        * @param  {Buffer} buffer   buffer to calculate hash on
        * @return {String}          content hash digest
        */
-      getHash: function (buffer: Uint8Array) {
+      getHash: function (buffer: Buffer) {
         return crypto.createHash('md5').update(buffer).digest('hex');
       },
 
@@ -53,7 +53,7 @@ module.exports = {
        * @param  {String}  file  the filepath to check
        * @return {Boolean}       wheter or not the file has changed
        */
-      hasFileChanged: function (file: string) {
+      hasFileChanged: function (file: File) {
         return this.getFileDescriptor(file).changed;
       },
 
@@ -76,7 +76,7 @@ module.exports = {
           notChangedFiles: [],
         };
 
-        me.normalizeEntries(files).forEach(function (entry: IFileEntry) {
+        me.normalizeEntries(files).forEach(function (entry: any) {
           if (entry.changed) {
             res.changedFiles.push(entry.key);
             return;
@@ -90,7 +90,7 @@ module.exports = {
         return res;
       },
 
-      getFileDescriptor: function (file: string) {
+      getFileDescriptor: function (file: File) {
         var fstat;
 
         try {
@@ -107,7 +107,7 @@ module.exports = {
         return this._getFileDescriptorUsingMtimeAndSize(file, fstat);
       },
 
-      _getFileDescriptorUsingMtimeAndSize: function (file: string, fstat: FS.Stats) {
+      _getFileDescriptorUsingMtimeAndSize: function (file: string, fstat: fs.Stats) {
         var meta = cache.getKey(file);
         var cacheExists = !!meta;
 
@@ -133,7 +133,7 @@ module.exports = {
         return nEntry;
       },
 
-      _getFileDescriptorUsingChecksum: function (file: IFile) {
+      _getFileDescriptorUsingChecksum: function (file: string) {
         var meta = cache.getKey(file);
         var cacheExists = !!meta;
 
@@ -170,16 +170,16 @@ module.exports = {
        * @param files {Array} the array of files to compare against the ones in the cache
        * @returns {Array}
        */
-      getUpdatedFiles: function (files: IFile[]) {
+      getUpdatedFiles: function (files: any) {
         var me = this;
         files = files || [];
 
         return me
           .normalizeEntries(files)
-          .filter(function (entry: IFileEntry) {
+          .filter(function (entry: any) {
             return entry.changed;
           })
-          .map(function (entry: IEntry) {
+          .map(function (entry: any) {
             return entry.key;
           });
       },
@@ -194,7 +194,7 @@ module.exports = {
         files = files || [];
 
         var me = this;
-        var nEntries = files.map(function (file: IFile) {
+        var nEntries = files.map(function (file: File) {
           return me.getFileDescriptor(file);
         });
 

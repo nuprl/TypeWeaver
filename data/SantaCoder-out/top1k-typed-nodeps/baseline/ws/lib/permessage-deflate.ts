@@ -465,7 +465,7 @@ module.exports = PerMessageDeflate;
  * @param {Buffer} chunk A chunk of data
  * @private
  */
-function deflateOnData(chunk: Uint8Array) {
+function deflateOnData(chunk: Buffer) {
   this[kBuffers].push(chunk);
   this[kTotalLength] += chunk.length;
 }
@@ -476,7 +476,7 @@ function deflateOnData(chunk: Uint8Array) {
  * @param {Buffer} chunk A chunk of data
  * @private
  */
-function inflateOnData(chunk: Uint8Array) {
+function inflateOnData(chunk: any) {
   this[kTotalLength] += chunk.length;
 
   if (

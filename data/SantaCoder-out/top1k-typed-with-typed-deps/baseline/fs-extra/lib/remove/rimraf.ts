@@ -6,7 +6,7 @@ const assert = require('assert')
 
 const isWindows = (process.platform === 'win32')
 
-function defaults (options: IOptions) {
+function defaults (options: Options) {
   const methods = [
     'unlink',
     'chmod',
@@ -24,7 +24,7 @@ function defaults (options: IOptions) {
   options.maxBusyTries = options.maxBusyTries || 3
 }
 
-function rimraf (p: string, options: RimrafOptions, cb: any) {
+function rimraf (p: string, options: any, cb: Function) {
   let busyTries = 0
 
   if (typeof options === 'function') {
@@ -40,7 +40,7 @@ function rimraf (p: string, options: RimrafOptions, cb: any) {
 
   defaults(options)
 
-  rimraf_(p, options, function CB (er: Error) {
+  rimraf_(p, options, function CB (er: any) {
     if (er) {
       if ((er.code === 'EBUSY' || er.code === 'ENOTEMPTY' || er.code === 'EPERM') &&
           busyTries < options.maxBusyTries) {
@@ -69,7 +69,7 @@ function rimraf (p: string, options: RimrafOptions, cb: any) {
 //
 // If anyone ever complains about this, then I guess the strategy could
 // be made configurable somehow.  But until then, YAGNI.
-function rimraf_ (p: string, options: RimrafOptions, cb: any) {
+function rimraf_ (p: string, options: rimraf.Options, cb: rimraf.Callback) {
   assert(p)
   assert(options)
   assert(typeof cb === 'function')
@@ -109,7 +109,7 @@ function rimraf_ (p: string, options: RimrafOptions, cb: any) {
   })
 }
 
-function fixWinEPERM (p: string, options: FixWinEPERMOptions, er: Error, cb: any) {
+function fixWinEPERM (p: string, options: FixWinEPERMOpts, er: any, cb: any) {
   assert(p)
   assert(options)
   assert(typeof cb === 'function')
@@ -131,7 +131,7 @@ function fixWinEPERM (p: string, options: FixWinEPERMOptions, er: Error, cb: any
   })
 }
 
-function fixWinEPERMSync (p: Path, options: Options, er: Error) {
+function fixWinEPERMSync (p: string, options: any, er: any) {
   let stats
 
   assert(p)
@@ -164,7 +164,7 @@ function fixWinEPERMSync (p: Path, options: Options, er: Error) {
   }
 }
 
-function rmdir (p: string, options: any, originalEr: Error, cb: any) {
+function rmdir (p: string, options: RmDirOptions, originalEr: any, cb: Function) {
   assert(p)
   assert(options)
   assert(typeof cb === 'function')
@@ -183,7 +183,7 @@ function rmdir (p: string, options: any, originalEr: Error, cb: any) {
   })
 }
 
-function rmkids (p: string, options: RmkidsOptions, cb: any) {
+function rmkids (p: string, options: RmOptions, cb: RmCallback) {
   assert(p)
   assert(options)
   assert(typeof cb === 'function')
@@ -213,7 +213,7 @@ function rmkids (p: string, options: RmkidsOptions, cb: any) {
 // this looks simpler, and is strictly *faster*, but will
 // tie up the JavaScript thread and fail on excessively
 // deep directory trees.
-function rimrafSync (p: string, options: RimrafOptions) {
+function rimrafSync (p: string, options: any) {
   let st
 
   options = options || {}
@@ -256,7 +256,7 @@ function rimrafSync (p: string, options: RimrafOptions) {
   }
 }
 
-function rmdirSync (p: string, options: any, originalEr: Error) {
+function rmdirSync (p: string, options: RmDirOptions, originalEr: any) {
   assert(p)
   assert(options)
 
@@ -273,7 +273,7 @@ function rmdirSync (p: string, options: any, originalEr: Error) {
   }
 }
 
-function rmkidsSync (p: string, options: RmkidsSyncOptions) {
+function rmkidsSync (p: string, options: RmOptions) {
   assert(p)
   assert(options)
   options.readdirSync(p).forEach(f => rimrafSync(path.join(p, f), options))

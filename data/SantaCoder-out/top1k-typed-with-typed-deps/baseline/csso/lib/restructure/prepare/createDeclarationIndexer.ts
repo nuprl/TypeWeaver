@@ -19,7 +19,7 @@ class Index {
 export default function createDeclarationIndexer() {
     const ids = new Index();
 
-    return function markDeclaration(node: Declaration) {
+    return function markDeclaration(node: Node) {
         const id = generate(node);
 
         node.id = ids.resolve(id);

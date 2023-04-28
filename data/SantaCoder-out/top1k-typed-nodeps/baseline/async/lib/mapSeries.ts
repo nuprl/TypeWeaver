@@ -21,7 +21,7 @@ import awaitify from './internal/awaitify.js'
  * transformed items from the `coll`. Invoked with (err, results).
  * @returns {Promise} a promise, if no callback is passed
  */
-function mapSeries (coll: any, iteratee: any, callback: any) {
+function mapSeries (coll: any[], iteratee: Function, callback: Function) {
     return _map(eachOfSeries, coll, iteratee, callback)
 }
 export default awaitify(mapSeries, 3);

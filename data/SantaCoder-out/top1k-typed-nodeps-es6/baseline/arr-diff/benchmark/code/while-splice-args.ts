@@ -1,6 +1,6 @@
 'use strict';
 
-export default function(arr: any[], arrays: any[]) {
+export default function(arr: Array<any>, arrays: Array<any>) {
   for (var i = 1; i < arguments.length; i++) {
     diff(arr, arguments[i]);
   }

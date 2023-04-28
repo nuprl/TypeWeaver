@@ -1,11 +1,11 @@
 // A stable array sort, because `Array#sort()` is not guaranteed stable.
 // This is an implementation of merge sort, without recursion.
 
-var stable = function (arr: string[], comp: string) {
+var stable = function (arr: any[], comp: any) {
   return exec(arr.slice(), comp)
 }
 
-stable.inplace = function (arr: string[], comp: string) {
+stable.inplace = function (arr: Array<T>, comp: any) {
   var result = exec(arr, comp)
 
   // This simply copies back if the result isn't in the original array,
@@ -21,7 +21,7 @@ stable.inplace = function (arr: string[], comp: string) {
 // Returns one of those two, containing the final result.
 function exec(arr: any[], comp: any) {
   if (typeof(comp) !== 'function') {
-    comp = function (a: string, b: string) {
+    comp = function (a: any, b: any) {
       return String(a).localeCompare(b)
     }
   }

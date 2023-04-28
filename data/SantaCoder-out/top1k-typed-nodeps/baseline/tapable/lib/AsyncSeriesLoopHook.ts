@@ -18,12 +18,12 @@ class AsyncSeriesLoopHookCodeFactory extends HookCodeFactory {
 
 const factory = new AsyncSeriesLoopHookCodeFactory();
 
-const COMPILE = function(options: IOptions) {
+const COMPILE = function(options: any) {
 	factory.setup(this, options);
 	return factory.create(options);
 };
 
-function AsyncSeriesLoopHook(args = []: any, name = undefined: string) {
+function AsyncSeriesLoopHook(args = []: any[], name = undefined: string) {
 	const hook = new Hook(args, name);
 	hook.constructor = AsyncSeriesLoopHook;
 	hook.compile = COMPILE;

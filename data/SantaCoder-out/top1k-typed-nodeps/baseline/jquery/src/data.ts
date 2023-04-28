@@ -42,7 +42,7 @@ function getData( data : string) {
 	return data;
 }
 
-function dataAttr( elem: HTMLElement, key: string, data : string) {
+function dataAttr( elem: HTMLElement, key: string, data : any) {
 	var name;
 
 	// If nothing was found internally, try to fetch any
@@ -74,17 +74,17 @@ jQuery.extend( {
 		return dataUser.access( elem, name, data );
 	},
 
-	removeData: function( elem: HTMLElement, name : string) {
+	removeData: function( elem: Element, name : string) {
 		dataUser.remove( elem, name );
 	},
 
 	// TODO: Now that all calls to _data and _removeData have been replaced
 	// with direct calls to dataPriv methods, these can be deprecated.
-	_data: function( elem: HTMLElement, name: string, data : any) {
+	_data: function( elem: JQuery, name: string, data : any) {
 		return dataPriv.access( elem, name, data );
 	},
 
-	_removeData: function( elem: HTMLElement, name : string) {
+	_removeData: function( elem: Element, name : string) {
 		dataPriv.remove( elem, name );
 	}
 } );

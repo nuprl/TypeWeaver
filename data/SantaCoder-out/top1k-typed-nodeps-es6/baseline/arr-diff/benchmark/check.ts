@@ -9,11 +9,11 @@ import path from 'path';
  * result. Otherwise benchmarks are (even more) useless
  */
 
-fs.readdirSync(__dirname + '/code').forEach(function(fp: Function) {
+fs.readdirSync(__dirname + '/code').forEach(function(fp: string) {
   var fn = require(path.resolve(__dirname, 'code', fp));
   var name = path.basename(fp, path.extname(fp));
 
-  fs.readdirSync(__dirname + '/fixtures').forEach(function(fixture: Fixture<TestComponentWithAsyncDeps>) {
+  fs.readdirSync(__dirname + '/fixtures').forEach(function(fixture: any) {
     fixture = path.resolve(__dirname, 'fixtures', fixture);
     if (/\.js$/.test(fixture)) {
       console.log(bold(name) + ':', fn.apply(null, require(fixture)).length);

@@ -8,7 +8,7 @@ var xmlFile = path.resolve(__dirname, 'shopping.xml')
 var util = require('util')
 var http = require('http')
 
-fs.readFile(xmlFile, function (er: Error, d: any) {
+fs.readFile(xmlFile, function (er: Error, d: string) {
   http.createServer(function (req: Request, res: Response) {
     if (er) throw er
     var xmlstr = d.toString('utf8')

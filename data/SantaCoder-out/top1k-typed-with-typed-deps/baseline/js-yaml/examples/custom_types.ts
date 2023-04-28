@@ -18,7 +18,7 @@ function Point(x: number, y: number, z: number) {
 }
 
 
-function Space(height: number, width: number, points: number) {
+function Space(height: number, width: number, points: Point[]) {
   if (points) {
     if (!points.every(function (point: Point) { return point instanceof Point; })) {
       throw new Error('A non-Point inside a points array!');
@@ -57,7 +57,7 @@ var PointYamlType = new yaml.Type('!point', {
   instanceOf: Point,
 
   // Dumper must represent Point objects as three-element sequence in YAML.
-  represent: function (point: Point3d) {
+  represent: function (point: Point) {
     return [ point.x, point.y, point.z ];
   }
 });

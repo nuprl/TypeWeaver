@@ -1,6 +1,6 @@
 "use strict";
 
-module.exports = function( Release: Release, files: ReleaseFiles, complete : any) {
+module.exports = function( Release: Release, files: Array<string>, complete : Function) {
 
 	const fs = require( "fs" ).promises;
 	const shell = require( "shelljs" );

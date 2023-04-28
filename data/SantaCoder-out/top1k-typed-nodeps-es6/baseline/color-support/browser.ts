@@ -1,6 +1,6 @@
 export default colorSupport({ alwaysReturn: true }, colorSupport);
 
-function colorSupport(options: ColorSupportOptions, obj: any) {
+function colorSupport(options: any, obj: any) {
   obj = obj || {}
   options = options || {}
   obj.level = 0

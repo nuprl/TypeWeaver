@@ -83,7 +83,7 @@ const hasOwnProperty = Object.prototype.hasOwnProperty
  * @param {boolean} [isDeep] Specify a deep clone.
  * @returns {Object} Returns the initialized clone.
  */
-function initCloneByTag(object: any, tag: string, isDeep: boolean) {
+function initCloneByTag(object: any, tag: any, isDeep: any) {
   const Ctor = object.constructor
   switch (tag) {
     case arrayBufferTag:
@@ -126,7 +126,7 @@ function initCloneByTag(object: any, tag: string, isDeep: boolean) {
  * @param {Array} array The array to clone.
  * @returns {Array} Returns the initialized clone.
  */
-function initCloneArray(array: any) {
+function initCloneArray(array: any[]) {
   const { length } = array
   const result = new array.constructor(length)
 
@@ -154,7 +154,7 @@ function initCloneArray(array: any) {
  * @param {Object} [stack] Tracks traversed objects and their clone counterparts.
  * @returns {*} Returns the cloned value.
  */
-function baseClone(value: any, bitmask: number, customizer: Function, key: string, object: any, stack: any) {
+function baseClone(value: any, bitmask: boolean, customizer: Function, key: string, object: any, stack: any) {
   let result
   const isDeep = bitmask & CLONE_DEEP_FLAG
   const isFlat = bitmask & CLONE_FLAT_FLAG

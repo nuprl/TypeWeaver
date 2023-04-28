@@ -23,7 +23,7 @@ var runAsync = function (func: Function, cb: Function) {
 
     var args = arguments;
 
-    var promise = new Promise(function (resolve: any, reject: any) {
+    var promise = new Promise(function (resolve: Function, reject: Function) {
       var resolved = false;
       const wrappedResolve = function (value: any) {
         if (resolved) {
@@ -53,7 +53,7 @@ var runAsync = function (func: Function, cb: Function) {
             return function() {};
           }
           if (callbackConflict) {
-            console.warn('Run-async wrapped function (async: boolean) returned a promise.\nCalls to async() callback can have unexpected results.');
+            console.warn('Run-async wrapped function (async: Function) returned a promise.\nCalls to async() callback can have unexpected results.');
           }
           usingCallback = true;
           return function (err: Error, value: any) {
@@ -89,7 +89,7 @@ var runAsync = function (func: Function, cb: Function) {
 
 export default runAsync;
 
-runAsync.cb = function (func: Function, cb: any) {
+runAsync.cb = function (func: Function, cb: Function) {
   return runAsync(function () {
     var args = Array.prototype.slice.call(arguments);
     if (args.length === func.length - 1) {

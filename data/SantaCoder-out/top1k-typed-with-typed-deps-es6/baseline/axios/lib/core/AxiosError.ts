@@ -13,7 +13,7 @@ import utils from '../utils.js';
  *
  * @returns {Error} The created error.
  */
-function AxiosError(message: AxiosError, code: AxiosError.Code, config: AxiosRequestConfig, request: AxiosRequestConfig, response: AxiosResponse) {
+function AxiosError(message: string, code: string, config: AxiosRequestConfig, request: AxiosRequestConfig, response: AxiosResponse) {
   Error.call(this);
 
   if (Error.captureStackTrace) {

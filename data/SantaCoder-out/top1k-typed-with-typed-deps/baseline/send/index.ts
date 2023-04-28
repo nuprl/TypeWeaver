@@ -80,7 +80,7 @@ module.exports.mime = mime
  * @public
  */
 
-function send (req: AxiosRequestConfig, path: string, options: AxiosRequestOptions) {
+function send (req: Request, path: string, options: Options) {
   return new SendStream(req, path, options)
 }
 
@@ -93,7 +93,7 @@ function send (req: AxiosRequestConfig, path: string, options: AxiosRequestOptio
  * @private
  */
 
-function SendStream (req: AxiosRequestConfig, path: string, options: AxiosRequestConfig) {
+function SendStream (req: IncomingMessage, path: string, options: SendStreamOptions) {
   Stream.call(this)
 
   var opts = options || {}
@@ -331,7 +331,7 @@ SendStream.prototype.isPreconditionFailure = function isPreconditionFailure () {
   var match = req.headers['if-match']
   if (match) {
     var etag = res.getHeader('ETag')
-    return !etag || (match !== '*' && parseTokenList(match).every(function (match: RegExpMatchArray) {
+    return !etag || (match !== '*' && parseTokenList(match).every(function (match: RegExpExecArray) {
       return match !== etag && match !== 'W/' + etag && 'W/' + match !== etag
     }))
   }
@@ -503,7 +503,7 @@ SendStream.prototype.redirect = function redirect (path: string) {
  * @api public
  */
 
-SendStream.prototype.pipe = function pipe (res: any) {
+SendStream.prototype.pipe = function pipe (res: Response) {
   // root path
   var root = this._root
 
@@ -714,7 +714,7 @@ SendStream.prototype.sendFile = function sendFile (path: string) {
   var self = this
 
   debug('stat "%s"', path)
-  fs.stat(path, function onstat (err: Error, stat: Fs.Stats) {
+  fs.stat(path, function onstat (err: any, stat: any) {
     if (err && err.code === 'ENOENT' && !extname(path) && path[path.length - 1] !== sep) {
       // not found, check extensions
       return next(err)
@@ -735,7 +735,7 @@ SendStream.prototype.sendFile = function sendFile (path: string) {
     var p = path + '.' + self._extensions[i++]
 
     debug('stat "%s"', p)
-    fs.stat(p, function (err: Error, stat: fs.Stats) {
+    fs.stat(p, function (err: any, stat: any) {
       if (err) return next(err)
       if (stat.isDirectory()) return next()
       self.emit('file', p, stat)
@@ -754,7 +754,7 @@ SendStream.prototype.sendIndex = function sendIndex (path: string) {
   var i = -1
   var self = this
 
-  function next (err: Error) {
+  function next (err: any) {
     if (++i >= self._index.length) {
       if (err) return self.onStatError(err)
       return self.error(404)
@@ -763,7 +763,7 @@ SendStream.prototype.sendIndex = function sendIndex (path: string) {
     var p = join(path, self._index[i])
 
     debug('stat "%s"', p)
-    fs.stat(p, function (err: Error, stat: fs.Stats) {
+    fs.stat(p, function (err: any, stat: any) {
       if (err) return next(err)
       if (stat.isDirectory()) return next()
       self.emit('file', p, stat)
@@ -782,7 +782,7 @@ SendStream.prototype.sendIndex = function sendIndex (path: string) {
  * @api private
  */
 
-SendStream.prototype.stream = function stream (path: string, options: ReadableOptions) {
+SendStream.prototype.stream = function stream (path: string, options: any) {
   var self = this
   var res = this.res
 
@@ -941,7 +941,7 @@ function containsDotFile (parts: string[]) {
  * @param {array} [range]
  */
 
-function contentRange (type: 'content', size: number, range: number) {
+function contentRange (type: string, size: number, range: string) {
   return type + ' ' + (range ? range.start + '-' + range.end : '*') + '/' + size
 }
 
@@ -1010,7 +1010,7 @@ function decode (path: string) {
  * @private
  */
 
-function getHeaderNames (res: Response) {
+function getHeaderNames (res: IncomingMessage) {
   return typeof res.getHeaderNames !== 'function'
     ? Object.keys(res._headers || {})
     : res.getHeaderNames()
@@ -1133,7 +1133,7 @@ function parseTokenList (str: string) {
  * @private
  */
 
-function setHeaders (res: Response, headers: any) {
+function setHeaders (res: ServerResponse, headers: any) {
   var keys = Object.keys(headers)
 
   for (var i = 0; i < keys.length; i++) {

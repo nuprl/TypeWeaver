@@ -4,7 +4,7 @@
 // This makes sure that own properties are retained, so that
 // decorations and such are not lost along the way.
 module.exports = wrappy
-function wrappy (fn: any, cb: any) {
+function wrappy (fn: Function, cb: Function) {
   if (fn && cb) return wrappy(fn)(cb)
 
   if (typeof fn !== 'function')

@@ -6,7 +6,7 @@ var slice = Array.prototype.slice
 
 export default duplex;
 
-function forEach (arr: any[], fn: any) {
+function forEach (arr: any[], fn: Function) {
     if (arr.forEach) {
         return arr.forEach(fn)
     }
@@ -16,7 +16,7 @@ function forEach (arr: any[], fn: any) {
     }
 }
 
-function duplex(writer: Writable, reader: Readable) {
+function duplex(writer: Stream, reader: Stream) {
     var stream = new Stream()
     var ended = false
 

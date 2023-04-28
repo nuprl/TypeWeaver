@@ -56,6 +56,6 @@ function abbrev (list: string[]) {
   return abbrevs
 }
 
-function lexSort (a: LexSortKey, b: LexSortKey) {
+function lexSort (a: string, b: string) {
   return a === b ? 0 : a > b ? 1 : -1
 }

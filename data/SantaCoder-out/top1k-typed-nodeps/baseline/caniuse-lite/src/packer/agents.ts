@@ -9,7 +9,7 @@ const invertObj = require('../util/invertObj')
 
 const browsers = invertObj(browsersData)
 
-function relevantKeys(agents: Agent[], versions: Version[], fullAgents: Agent[]) {
+function relevantKeys(agents: Agents, versions: Versions, fullAgents: FullAgents) {
   let versionsInverted = invertObj(versions)
 
   return fromEntries(
@@ -48,7 +48,7 @@ function relevantKeys(agents: Agent[], versions: Version[], fullAgents: Agent[])
   )
 }
 
-function packBrowserVersions(agents: Agent[]) {
+function packBrowserVersions(agents: string[]) {
   let browserVersions = Object.values(agents)
     .reduce((map, agent) => {
       let versions = Object.keys(agent.usage_global)

@@ -10,7 +10,7 @@
 /** @typedef {import("./Resolver").ResolveStepHook} ResolveStepHook */
 /** @typedef {{[k: string]: any}} Cache */
 
-function getCacheId(type: CacheType, request: CacheRequest, withContext: boolean) {
+function getCacheId(type: string, request: Request, withContext: boolean) {
 	return JSON.stringify({
 		type,
 		context: withContext ? request.context : "",

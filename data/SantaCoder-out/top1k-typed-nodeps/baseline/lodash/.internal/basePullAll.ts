@@ -13,7 +13,7 @@ import copyArray from './copyArray.js'
  * @param {Function} [comparator] The comparator invoked per element.
  * @returns {Array} Returns `array`.
  */
-function basePullAll(array: Array<any>, values: Array<any>, iteratee: any, comparator: any) {
+function basePullAll(array: any[], values: any[], iteratee: any, comparator: any) {
   const indexOf = comparator ? baseIndexOfWith : baseIndexOf
   const length = values.length
 

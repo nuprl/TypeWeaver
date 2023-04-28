@@ -19,7 +19,7 @@ jQuery.fn.extend( {
 } );
 
 jQuery.extend( {
-	attr: function( elem: HTMLElement, name: string, value : string) {
+	attr: function( elem: HTMLElement, name: string, value : any) {
 		var ret, hooks,
 			nType = elem.nodeType;
 
@@ -101,7 +101,7 @@ if ( isIE ) {
 
 jQuery.each( jQuery.expr.match.bool.source.match( /\w+/g ), function( _i: number, name : string) {
 	jQuery.attrHooks[ name ] = {
-		get: function( elem : jQuery.Element) {
+		get: function( elem : Element) {
 			var ret,
 				isXML = jQuery.isXMLDoc( elem ),
 				lowercaseName = name.toLowerCase();
@@ -114,7 +114,7 @@ jQuery.each( jQuery.expr.match.bool.source.match( /\w+/g ), function( _i: number
 			return ret;
 		},
 
-		set: function( elem: HTMLElement, value: string, name : string) {
+		set: function( elem: HTMLElement, value: any, name : string) {
 			if ( value === false ) {
 
 				// Remove boolean attributes when set to false

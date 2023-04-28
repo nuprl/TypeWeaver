@@ -1,13 +1,13 @@
 "use strict";
 
-function makeException(ErrorType: string, message: string, options: IExceptionOptions) {
+function makeException(ErrorType: any, message: string, options: any) {
   if (options.globals) {
     ErrorType = options.globals[ErrorType.name];
   }
   return new ErrorType(`${options.context ? options.context : "Value"} ${message}.`);
 }
 
-function toNumber(value: string, options: ParseOptions) {
+function toNumber(value: any, options: any) {
   if (typeof value === "bigint") {
     throw makeException(TypeError, "is a BigInt which cannot be converted to a number", options);
   }
@@ -59,7 +59,7 @@ function censorNegativeZero(x: number) {
   return x === 0 ? 0 : x;
 }
 
-function createIntegerConversion(bitLength: number, { unsigned }: any) {
+function createIntegerConversion(bitLength: number, { unsigned }: IntegerType) {
   let lowerBound, upperBound;
   if (unsigned) {
     lowerBound = 0;
@@ -120,7 +120,7 @@ function createIntegerConversion(bitLength: number, { unsigned }: any) {
   };
 }
 
-function createLongLongConversion(bitLength: number, { unsigned }: any) {
+function createLongLongConversion(bitLength: number, { unsigned }: boolean) {
   const upperBound = Number.MAX_SAFE_INTEGER;
   const lowerBound = unsigned ? 0 : Number.MIN_SAFE_INTEGER;
   const asBigIntN = unsigned ? BigInt.asUintN : BigInt.asIntN;
@@ -305,7 +305,7 @@ const sabByteLengthGetter =
       Object.getOwnPropertyDescriptor(SharedArrayBuffer.prototype, "byteLength").get :
       null;
 
-function isNonSharedArrayBuffer(value: any) {
+function isNonSharedArrayBuffer(value: unknown) {
   try {
     // This will throw on SharedArrayBuffers, but not detached ArrayBuffers.
     // (The spec says it should throw, but the spec conflicts with implementations: https://github.com/tc39/ecma262/issues/678)
@@ -317,7 +317,7 @@ function isNonSharedArrayBuffer(value: any) {
   }
 }
 
-function isSharedArrayBuffer(value: any) {
+function isSharedArrayBuffer(value: unknown) {
   try {
     sabByteLengthGetter.call(value);
     return true;

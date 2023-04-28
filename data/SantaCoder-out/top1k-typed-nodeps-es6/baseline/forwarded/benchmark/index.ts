@@ -43,7 +43,7 @@ suite.add({
   fn: 'var addrs = forwarded(req5)'
 })
 
-suite.on('cycle', function onCycle (event: BenchmarkEvent) {
+suite.on('cycle', function onCycle (event: Event) {
   benchmarks.add(event.target)
 })
 
@@ -53,7 +53,7 @@ suite.on('complete', function onComplete () {
 
 suite.run({ async: false })
 
-function fakerequest (headers: AxiosRequestConfig['headers']) {
+function fakerequest (headers: any) {
   return {
     headers: headers,
     connection: {

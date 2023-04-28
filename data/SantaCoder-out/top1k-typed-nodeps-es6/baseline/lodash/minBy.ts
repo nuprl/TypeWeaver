@@ -17,7 +17,7 @@ import isSymbol from './isSymbol.js'
  * minBy(objects, ({ n }) => n)
  * // => { 'n': 1 }
  */
-function minBy(array: Array<T>, iteratee: any) {
+function minBy(array: any[], iteratee: any) {
   let result
   if (array == null) {
     return result

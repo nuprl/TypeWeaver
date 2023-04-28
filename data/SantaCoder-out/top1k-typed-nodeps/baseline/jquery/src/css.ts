@@ -43,7 +43,7 @@ function setPositiveNumber( _elem: HTMLElement, value: number, subtract : boolea
 		value;
 }
 
-function boxModelAdjustment( elem: HTMLElement, dimension: string, box: BoxModel, isBorderBox: boolean, styles: CSSProperties, computedVal : number) {
+function boxModelAdjustment( elem: HTMLElement, dimension: string, box: BoxModel, isBorderBox: boolean, styles: any, computedVal : any) {
 	var i = dimension === "width" ? 1 : 0,
 		extra = 0,
 		delta = 0;
@@ -111,7 +111,7 @@ function boxModelAdjustment( elem: HTMLElement, dimension: string, box: BoxModel
 	return delta;
 }
 
-function getWidthOrHeight( elem: HTMLElement, dimension: "width", extra : "px") {
+function getWidthOrHeight( elem: HTMLElement, dimension: string, extra : string) {
 
 	// Start with computed style
 	var styles = getStyles( elem ),
@@ -193,7 +193,7 @@ jQuery.extend( {
 	cssHooks: {},
 
 	// Get and set the style property on a DOM Node
-	style: function( elem: HTMLElement, name: string, value: string, extra : string[]) {
+	style: function( elem: HTMLElement, name: string, value: any, extra : any) {
 
 		// Don't set styles on text and comment nodes
 		if ( !elem || elem.nodeType === 3 || elem.nodeType === 8 || !elem.style ) {
@@ -309,9 +309,9 @@ jQuery.extend( {
 	}
 } );
 
-jQuery.each( [ "height", "width" ], function( _i: number, dimension : number) {
+jQuery.each( [ "height", "width" ], function( _i: number, dimension : Dimension) {
 	jQuery.cssHooks[ dimension ] = {
-		get: function( elem: HTMLElement, computed: boolean, extra : any) {
+		get: function( elem: HTMLElement, computed: CSSStyleDeclaration, extra : CSSStyleDeclaration) {
 			if ( computed ) {
 
 				// Certain elements can have dimension info if we invisibly show them
@@ -332,7 +332,7 @@ jQuery.each( [ "height", "width" ], function( _i: number, dimension : number) {
 			}
 		},
 
-		set: function( elem: HTMLElement, value: string, extra : any) {
+		set: function( elem: JQuery, value: any, extra : any) {
 			var matches,
 				styles = getStyles( elem ),
 
@@ -392,7 +392,7 @@ jQuery.each( {
 
 jQuery.fn.extend( {
 	css: function( name: string, value : any) {
-		return access( this, function( elem: HTMLElement, name: string, value : string) {
+		return access( this, function( elem: HTMLElement, name: string, value : any) {
 			var styles, len,
 				map = {},
 				i = 0;

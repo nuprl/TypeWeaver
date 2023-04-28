@@ -31,7 +31,7 @@ function expectSync( elem: HTMLElement, type : string) {
 	return ( elem === document.activeElement ) === ( type === "focus" );
 }
 
-function on( elem: HTMLElement, types: string, selector: string, data: any, fn: Function, one : boolean) {
+function on( elem: HTMLElement, types: string, selector: string, data: any, fn: any, one : any) {
 	var origFn, type;
 
 	// Types can be a map of types/handlers
@@ -98,7 +98,7 @@ function on( elem: HTMLElement, types: string, selector: string, data: any, fn: 
  */
 jQuery.event = {
 
-	add: function( elem: HTMLElement, types: string[], handler: Function, data: any, selector : string) {
+	add: function( elem: HTMLElement, types: string, handler: Function, data: any, selector : string) {
 
 		var handleObjIn, eventHandle, tmp,
 			events, t, handleObj,
@@ -210,7 +210,7 @@ jQuery.event = {
 	},
 
 	// Detach an event or set of events from an element
-	remove: function( elem: HTMLElement, types: string[], handler: Function, selector: string, mappedTypes : any) {
+	remove: function( elem: HTMLElement, types: string, handler: Function, selector: string, mappedTypes : any[]) {
 
 		var j, origCount, tmp,
 			events, t, handleObj,
@@ -351,7 +351,7 @@ jQuery.event = {
 		return event.result;
 	},
 
-	handlers: function( event: Event, handlers : IEventHandler<any>) {
+	handlers: function( event: Event, handlers : Array<Function>) {
 		var i, handleObj, sel, matchedHandlers, matchedSelectors,
 			handlerQueue = [],
 			delegateCount = handlers.delegateCount,
@@ -405,7 +405,7 @@ jQuery.event = {
 		return handlerQueue;
 	},
 
-	addProp: function( name: string, hook : IHook) {
+	addProp: function( name: string, hook : Function) {
 		Object.defineProperty( jQuery.Event.prototype, name, {
 			enumerable: true,
 			configurable: true,
@@ -433,7 +433,7 @@ jQuery.event = {
 		} );
 	},
 
-	fix: function( originalEvent : MouseEvent) {
+	fix: function( originalEvent : JQueryEventObject) {
 		return originalEvent[ jQuery.expando ] ?
 			originalEvent :
 			new jQuery.Event( originalEvent );
@@ -484,7 +484,7 @@ jQuery.event = {
 
 			// For cross-browser consistency, suppress native .click() on links
 			// Also prevent it if we're currently inside a leveraged native-event stack
-			_default: function( event : MouseEvent) {
+			_default: function( event : Event) {
 				var target = event.target;
 				return rcheckableType.test( target.type ) &&
 					target.click && nodeName( target, "input" ) &&
@@ -525,7 +525,7 @@ function leverageNative( el: HTMLElement, type: string, expectSync : boolean) {
 	dataPriv.set( el, type, false );
 	jQuery.event.add( el, type, {
 		namespace: false,
-		handler: function( event : IEvent) {
+		handler: function( event : Event) {
 			var notAsync, result,
 				saved = dataPriv.get( this, type );
 
@@ -600,7 +600,7 @@ function leverageNative( el: HTMLElement, type: string, expectSync : boolean) {
 	} );
 }
 
-jQuery.removeEvent = function( elem: HTMLElement, type: string, handle : Function) {
+jQuery.removeEvent = function( elem: HTMLElement, type: string, handle : EventListenerOrEventListenerObject) {
 
 	// This "if" is needed for plain objects
 	if ( elem.removeEventListener ) {
@@ -789,13 +789,13 @@ jQuery.each( {
 
 jQuery.fn.extend( {
 
-	on: function( types: IType[], selector: ISelector, data: any, fn : any) {
+	on: function( types: string, selector: string, data: any, fn : any) {
 		return on( this, types, selector, data, fn );
 	},
-	one: function( types: IType[], selector: ISelector, data: IData, fn : any) {
+	one: function( types: string, selector: string, data: any, fn : Function) {
 		return on( this, types, selector, data, fn, 1 );
 	},
-	off: function( types: Array<string>, selector: string, fn : Function) {
+	off: function( types: string, selector: string, fn : Function) {
 		var handleObj, type;
 		if ( types && types.preventDefault && types.handleObj ) {
 

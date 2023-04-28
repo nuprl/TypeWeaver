@@ -9,15 +9,15 @@ var write = require('./lib/write')
 var URL = 'https://www.iana.org/assignments/http-status-codes/http-status-codes-1.csv'
 var HEADERS = { 'User-Agent': 'nodejs/' + process.version + ' (' + process.platform + ', npm:statuses)' }
 
-https.get(URL, { headers: HEADERS }, function onResponse (res: Response) {
-  toArray(res.pipe(parser()), function (err: Error, rows: any) {
+https.get(URL, { headers: HEADERS }, function onResponse (res: IncomingMessage) {
+  toArray(res.pipe(parser()), function (err: any, rows: any) {
     if (err) throw err
 
     var codes = {}
     var headers = rows.shift().map(normalizeHeader)
     var reduceRows = generateRowMapper(headers)
 
-    rows.forEach(function (row: any) {
+    rows.forEach(function (row: any[]) {
       var obj = row.reduce(reduceRows, {})
 
       // skip unassigned codes

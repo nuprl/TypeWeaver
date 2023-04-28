@@ -21,7 +21,7 @@
 
 'use strict';
 
-var stringifyPrimitive = function(v: string) {
+var stringifyPrimitive = function(v: any) {
   switch (typeof v) {
     case 'string':
       return v;
@@ -37,7 +37,7 @@ var stringifyPrimitive = function(v: string) {
   }
 };
 
-module.exports = function(obj: any, sep: string, eq: any, name: string) {
+module.exports = function(obj: any, sep: string, eq: string, name: string) {
   sep = sep || '&';
   eq = eq || '=';
   if (obj === null) {
@@ -48,7 +48,7 @@ module.exports = function(obj: any, sep: string, eq: any, name: string) {
     return map(objectKeys(obj), function(k: string) {
       var ks = encodeURIComponent(stringifyPrimitive(k)) + eq;
       if (isArray(obj[k])) {
-        return map(obj[k], function(v: any) {
+        return map(obj[k], function(v: number) {
           return ks + encodeURIComponent(stringifyPrimitive(v));
         }).join(sep);
       } else {
@@ -63,11 +63,11 @@ module.exports = function(obj: any, sep: string, eq: any, name: string) {
          encodeURIComponent(stringifyPrimitive(obj));
 };
 
-var isArray = Array.isArray || function (xs: number[]) {
+var isArray = Array.isArray || function (xs: List<A>) {
   return Object.prototype.toString.call(xs) === '[object Array]';
 };
 
-function map (xs: any, f: any) {
+function map (xs: Array<T>, f: any) {
   if (xs.map) return xs.map(f);
   var res = [];
   for (var i = 0; i < xs.length; i++) {

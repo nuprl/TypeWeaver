@@ -227,7 +227,7 @@ Int64.prototype = {
    * @param {Buffer} targetBuffer       Buffer to copy into.
    * @param {number} [targetOffset=0]   Offset into target buffer.
    */
-  copy: function(targetBuffer: ArrayBuffer, targetOffset: number) {
+  copy: function(targetBuffer: Buffer, targetOffset: number) {
     this.buffer.copy(targetBuffer, targetOffset || 0, this.offset, this.offset + 8);
   },
 
@@ -237,7 +237,7 @@ Int64.prototype = {
    *
    * @param {Int64} other  Other Int64 to compare.
    */
-  compare: function(other: BigNumber) {
+  compare: function(other: BigRational) {
 
     // If sign bits differ ...
     if ((this.buffer[this.offset] & 0x80) != (other.buffer[other.offset] & 0x80)) {
@@ -258,7 +258,7 @@ Int64.prototype = {
    *
    * @param {Int64} other  Other Int64 to compare.
    */
-  equals: function(other: IComparable<T>) {
+  equals: function(other: T) {
     return this.compare(other) === 0;
   },
 

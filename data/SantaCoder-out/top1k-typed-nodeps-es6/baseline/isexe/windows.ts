@@ -24,15 +24,15 @@ function checkPathExt (path: string, options: Options) {
   return false
 }
 
-function checkStat (stat: Stat, path: string, options: Options) {
+function checkStat (stat: any, path: string, options: any) {
   if (!stat.isSymbolicLink() && !stat.isFile()) {
     return false
   }
   return checkPathExt(path, options)
 }
 
-function isexe (path: string, options: IsexeOptions, cb: any) {
-  fs.stat(path, function (er: Error, stat: fs.Stats) {
+function isexe (path: string, options: Options, cb: any) {
+  fs.stat(path, function (er: Error, stat: Stats) {
     cb(er, er ? false : checkStat(stat, path, options))
   })
 }

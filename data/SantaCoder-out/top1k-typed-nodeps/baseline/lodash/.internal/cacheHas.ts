@@ -6,7 +6,7 @@
  * @param {string} key The key of the entry to check.
  * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
  */
-function cacheHas(cache: Cache<any>, key: any) {
+function cacheHas(cache: Cache, key: string) {
   return cache.has(key)
 }
 

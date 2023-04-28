@@ -62,7 +62,7 @@ export default {
   },
 };
 
-function hasAppropriateSiblings(path: NodePath<Node>) {
+function hasAppropriateSiblings(path: NodePath<t.JSXElement>) {
   const {parent, index} = path;
 
   if (parent.type !== 'Alternative') {

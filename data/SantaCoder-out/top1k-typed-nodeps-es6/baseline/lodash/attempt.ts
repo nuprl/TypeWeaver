@@ -19,7 +19,7 @@ import isError from './isError.js'
  *   elements = []
  * }
  */
-function attempt(func: any, ...args: any[]) {
+function attempt(func: Function, ...args: any[]) {
   try {
     return func(...args)
   } catch (e) {

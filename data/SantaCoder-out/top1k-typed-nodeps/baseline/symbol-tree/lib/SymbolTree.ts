@@ -13,7 +13,7 @@ function returnTrue() {
         return true;
 }
 
-function reverseArrayIndex(array: number[], reverseIndex: number) {
+function reverseArrayIndex(array: any[], reverseIndex: number) {
         return array[array.length - 1 - reverseIndex]; // no need to check `index >= 0`
 }
 

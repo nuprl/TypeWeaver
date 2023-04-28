@@ -5,11 +5,11 @@ module.exports = function (_require: any) {
   else return main ? main.filename : process.cwd()
 }
 
-function isIISNode (main: any) {
+function isIISNode (main: string) {
   return /\\iisnode\\/.test(main.filename)
 }
 
-function handleIISNode (main: IISNode) {
+function handleIISNode (main: Vinyl) {
   if (!main.children.length) {
     return main.filename
   } else {

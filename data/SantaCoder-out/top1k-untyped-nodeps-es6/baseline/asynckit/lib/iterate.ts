@@ -17,7 +17,7 @@ function iterate(list: any[], iterator: any, state: any, callback: any)
   // store current index
   var key = state['keyedList'] ? state['keyedList'][state.index] : state.index;
 
-  state.jobs[key] = runJob(iterator, key, list[key], function(error: Error, output: any)
+  state.jobs[key] = runJob(iterator, key, list[key], function(error: any, output: any)
   {
     // don't repeat yourself
     // skip secondary callbacks
@@ -55,7 +55,7 @@ function iterate(list: any[], iterator: any, state: any, callback: any)
  * @param   {function} callback - invoked after iterator is done with the job
  * @returns {function|mixed} - job abort function or something else
  */
-function runJob(iterator: Iterator<any>, key: string, item: any, callback: Function)
+function runJob(iterator: Iterator<any>, key: string, item: any, callback: any)
 {
   var aborter;
 

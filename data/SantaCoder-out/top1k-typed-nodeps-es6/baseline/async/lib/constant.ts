@@ -16,7 +16,7 @@
  *
  * async.waterfall([
  *     async.constant(42),
- *     function (value: number, next: number) {
+ *     function (value: number, next: Function) {
  *         // value === 42
  *     },
  *     //...
@@ -25,7 +25,7 @@
  * async.waterfall([
  *     async.constant(filename, "utf8"),
  *     fs.readFile,
- *     function (fileData: string, next: any) {
+ *     function (fileData: any, next: Function) {
  *         //...
  *     }
  *     //...
@@ -34,14 +34,14 @@
  * async.auto({
  *     hostname: async.constant("https://server.net/"),
  *     port: findFreePort,
- *     launchServer: ["hostname", "port", function (options: IOptions, cb: any) {
+ *     launchServer: ["hostname", "port", function (options: any, cb: any) {
  *         startServer(options, cb);
  *     }],
  *     //...
  * }, callback);
  */
 export default function(...args: any[]) {
-    return function (...ignoredArgs/*: any[], callback*/: any) {
+    return function (...ignoredArgs/*: any[], callback*/: Function) {
         var callback = ignoredArgs.pop();
         return callback(null, ...args);
     };

@@ -2,7 +2,7 @@
 
 export default cliWidth;
 
-function normalizeOpts(options: IOptions) {
+function normalizeOpts(options: Options) {
   const defaultOpts = {
     defaultWidth: 0,
     output: process.stdout,
@@ -22,7 +22,7 @@ function normalizeOpts(options: IOptions) {
   return options;
 }
 
-function cliWidth(options: CLIOptions) {
+function cliWidth(options: CliWidthOptions) {
   const opts = normalizeOpts(options);
 
   if (opts.output.getWindowSize) {

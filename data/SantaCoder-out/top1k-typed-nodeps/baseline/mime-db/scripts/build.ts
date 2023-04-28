@@ -40,7 +40,7 @@ require('./lib/write-db')('db.json', db)
 /**
  * Add mime data to the db, marked as a given source.
  */
-function addData (db: IDatabase, mime: string, source: string) {
+function addData (db: any, mime: string, source: any) {
   Object.keys(mime).forEach(function (key: string) {
     var data = mime[key]
     var type = key.toLowerCase()
@@ -71,7 +71,7 @@ function appendExtension (obj: any, extension: string) {
 /**
  * Append extensions to an object.
  */
-function appendExtensions (obj: any, extensions: any) {
+function appendExtensions (obj: any, extensions: any[]) {
   if (!extensions) {
     return
   }

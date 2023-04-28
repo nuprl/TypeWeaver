@@ -22,7 +22,7 @@ module.exports = {
 
 //------------------------------------------------------------------------------
 
-function InternalCodec(codecOptions: ICodecOptions, iconv: IIconv) {
+function InternalCodec(codecOptions: any, iconv: any) {
     this.enc = codecOptions.encodingName;
     this.bomAware = codecOptions.bomAware;
 
@@ -54,7 +54,7 @@ if (!StringDecoder.prototype.end) // Node v0.8 doesn't have this method.
     StringDecoder.prototype.end = function() {};
 
 
-function InternalDecoder(options: IDecoderOptions, codec: ICodec<any>) {
+function InternalDecoder(options: any, codec: any) {
     this.decoder = new StringDecoder(codec.enc);
 }
 
@@ -74,7 +74,7 @@ InternalDecoder.prototype.end = function() {
 //------------------------------------------------------------------------------
 // Encoder is mostly trivial
 
-function InternalEncoder(options: IEncoderOptions, codec: IEncoder) {
+function InternalEncoder(options: any, codec: any) {
     this.enc = codec.enc;
 }
 
@@ -89,7 +89,7 @@ InternalEncoder.prototype.end = function() {
 //------------------------------------------------------------------------------
 // Except base64 encoder, which must keep its state.
 
-function InternalEncoderBase64(options: IEncoderOptions, codec: IEncoder) {
+function InternalEncoderBase64(options: any, codec: any) {
     this.prevStr = '';
 }
 
@@ -110,7 +110,7 @@ InternalEncoderBase64.prototype.end = function() {
 //------------------------------------------------------------------------------
 // CESU-8 encoder is also special.
 
-function InternalEncoderCesu8(options: IEncoderOptions, codec: IEncoderCesu8) {
+function InternalEncoderCesu8(options: any, codec: any) {
 }
 
 InternalEncoderCesu8.prototype.write = function(str: string) {
@@ -202,7 +202,7 @@ InternalDecoderCesu8.prototype.end = function() {
 //------------------------------------------------------------------------------
 // check the chunk boundaries for surrogate pair
 
-function InternalEncoderUtf8(options: IEncoderOptions, codec: IEncoder) {
+function InternalEncoderUtf8(options: any, codec: any) {
     this.highSurrogate = '';
 }
 

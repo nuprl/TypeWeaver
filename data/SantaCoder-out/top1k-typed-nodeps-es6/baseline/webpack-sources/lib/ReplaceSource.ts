@@ -121,7 +121,7 @@ class ReplaceSource extends Source {
 	_sortReplacements() {
 		if (this._isSorted) return;
 		if (hasStableSort) {
-			this._replacements.sort(function (a: IRange, b: IRange) {
+			this._replacements.sort(function (a: IToken, b: IToken) {
 				const diff1 = a.start - b.start;
 				if (diff1 !== 0) return diff1;
 				const diff2 = a.end - b.end;
@@ -130,7 +130,7 @@ class ReplaceSource extends Source {
 			});
 		} else {
 			this._replacements.forEach((repl, i) => (repl.index = i));
-			this._replacements.sort(function (a: ITextChange, b: ITextChange) {
+			this._replacements.sort(function (a: IToken, b: IToken) {
 				const diff1 = a.start - b.start;
 				if (diff1 !== 0) return diff1;
 				const diff2 = a.end - b.end;

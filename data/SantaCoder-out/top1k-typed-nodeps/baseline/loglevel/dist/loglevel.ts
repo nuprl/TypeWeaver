@@ -78,7 +78,7 @@
 
     // These private functions always need `this` to be set properly
 
-    function replaceLoggingMethods(level: LogLevel, loggerName: string) {
+    function replaceLoggingMethods(level: string, loggerName: string) {
         /*jshint validthis:true */
         for (var i = 0; i < logMethods.length; i++) {
             var methodName = logMethods[i];
@@ -104,13 +104,13 @@
 
     // By default, we use closely bound real methods wherever possible, and
     // otherwise we wait for a console to appear, and then try again.
-    function defaultMethodFactory(methodName: string, level: LogLevel, loggerName: string) {
+    function defaultMethodFactory(methodName: string, level: number, loggerName: string) {
         /*jshint validthis:true */
         return realMethod(methodName) ||
                enableLoggingWhenConsoleArrives.apply(this, arguments);
     }
 
-    function Logger(name: string, defaultLevel: LogLevel, factory: LogLevelFactory) {
+    function Logger(name: string, defaultLevel: string, factory: LoggerFactory) {
       var self = this;
       var currentLevel;
       defaultLevel = defaultLevel == null ? "WARN" : defaultLevel;
@@ -220,7 +220,7 @@
           }
       };
 
-      self.setDefaultLevel = function (level: number) {
+      self.setDefaultLevel = function (level: LogLevel) {
           defaultLevel = level;
           if (!getPersistedLevel()) {
               self.setLevel(level, false);

@@ -22,7 +22,7 @@ import awaitify from './internal/awaitify.js'
  * properties are arrays of values which returned the corresponding key.
  * @returns {Promise} a promise, if no callback is passed
  */
-function groupByLimit(coll: any, limit: number, iteratee: any, callback: any) {
+function groupByLimit(coll: any[], limit: number, iteratee: any, callback: any) {
     var _iteratee = wrapAsync(iteratee);
     return mapLimit(coll, limit, (val, iterCb) => {
         _iteratee(val, (err, key) => {

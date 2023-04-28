@@ -41,7 +41,7 @@ exports.eraseLine = function eraseLine () {
   return prefix + 'K'
 }
 
-exports.goto = function (x: string, y: string) {
+exports.goto = function (x: number, y: number) {
   return prefix + y + ';' + x + 'H'
 }
 

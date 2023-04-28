@@ -21,7 +21,7 @@ import { isAsync } from './internal/wrapAsync.js'
  * signature as the function passed in.
  * @example
  *
- * function sometimesAsync(arg: any, callback: any) {
+ * function sometimesAsync(arg: any, callback: Function) {
  *     if (cache[arg]) {
  *         return callback(null, cache[arg]); // this would be synchronous!!
  *     } else {

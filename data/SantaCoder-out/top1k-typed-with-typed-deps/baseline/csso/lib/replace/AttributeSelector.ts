@@ -11,7 +11,7 @@ function canUnquote(value: string) {
     return !blockUnquoteRx.test(value);
 }
 
-export default function(node: Node) {
+export default function(node: HTMLInputElement) {
     const attrValue = node.value;
 
     if (!attrValue || attrValue.type !== 'String') {

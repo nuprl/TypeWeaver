@@ -38,12 +38,12 @@ import awaitify from './internal/awaitify.js'
  * const withMissingFileList = ['dir1/file1.txt', 'dir4/file2.txt'];
  *
  * // asynchronous function that deletes a file
- * const deleteFile = function(file: string, callback: any) {
+ * const deleteFile = function(file: string, callback: Function) {
  *     fs.unlink(file, callback);
  * };
  *
  * // Using callbacks
- * async.each(fileList, deleteFile, function(err: Error) {
+ * async.each(fileList, deleteFile, function(err: any) {
  *     if( err ) {
  *         console.log(err);
  *     } else {
@@ -52,7 +52,7 @@ import awaitify from './internal/awaitify.js'
  * });
  *
  * // Error Handling
- * async.each(withMissingFileList, deleteFile, function(err: Error){
+ * async.each(withMissingFileList, deleteFile, function(err: any){
  *     console.log(err);
  *     // [ Error: ENOENT: no such file or directory ]
  *     // since dir4/file2.txt does not exist
@@ -102,7 +102,7 @@ import awaitify from './internal/awaitify.js'
  * }
  *
  */
-function eachLimit(coll: any, iteratee: any, callback: any) {
+function eachLimit(coll: any[], iteratee: any, callback: any) {
     return eachOf(coll, withoutIndex(wrapAsync(iteratee)), callback);
 }
 

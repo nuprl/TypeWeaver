@@ -1,7 +1,7 @@
 import breakLoop from './breakLoop.js'
 import wrapAsync from './wrapAsync.js'
 
-export default function _createTester(check: any, getResult: any) {
+export default function _createTester(check: Function, getResult: Function) {
     return (eachfn, arr, _iteratee, cb) => {
         var testPassed = false;
         var testResult;

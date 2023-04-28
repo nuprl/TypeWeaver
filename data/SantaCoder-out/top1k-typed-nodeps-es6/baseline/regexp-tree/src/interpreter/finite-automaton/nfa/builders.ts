@@ -50,7 +50,7 @@ function e() {
  *
  * [in-a] --a--> [out-a] --ε--> [in-b] --b--> [out-b]
  */
-function altPair(first: Alt<T1>, second: Alt<T2>) {
+function altPair(first: Node, second: Node) {
   first.out.accepting = false;
   second.out.accepting = true;
 
@@ -64,7 +64,7 @@ function altPair(first: Alt<T1>, second: Alt<T2>) {
  *
  * Creates a alteration NFA for (at least) two NFA-fragments.
  */
-function alt(first: T, ...fragments: T[]) {
+function alt(first: any, ...fragments: any[]) {
   for (let fragment of fragments) {
     first = altPair(first, fragment);
   }
@@ -99,7 +99,7 @@ function orPair(first: NFAState, second: NFAState) {
  *
  * Creates a disjunction NFA for (at least) two NFA-fragments.
  */
-function or(first: any, ...fragments: any[]) {
+function or(first: Function, ...fragments: Function[]) {
   for (let fragment of fragments) {
     first = orPair(first, fragment);
   }
@@ -114,7 +114,7 @@ function or(first: any, ...fragments: any[]) {
  *
  * a*
  */
-function repExplicit(fragment: string) {
+function repExplicit(fragment: Fragment) {
   const inState = new NFAState();
   const outState = new NFAState({
     accepting: true,

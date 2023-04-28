@@ -15,7 +15,7 @@ var UNDEFINED = valuePromise(undefined);
 var ZERO = valuePromise(0);
 var EMPTYSTRING = valuePromise('');
 
-function valuePromise(value: any) {
+function valuePromise(value: T) {
   var p = new Promise(Promise._noop);
   p._state = 1;
   p._value = value;
@@ -46,7 +46,7 @@ Promise.resolve = function (value: any) {
   return valuePromise(value);
 };
 
-var iterableToArray = function (iterable: Iterable<T>) {
+var iterableToArray = function (iterable: any) {
   if (typeof Array.from === 'function') {
     // ES2015+, iterables exist
     iterableToArray = Array.from;
@@ -61,10 +61,10 @@ var iterableToArray = function (iterable: Iterable<T>) {
 Promise.all = function (arr: any[]) {
   var args = iterableToArray(arr);
 
-  return new Promise(function (resolve: any, reject: any) {
+  return new Promise(function (resolve: Function, reject: Function) {
     if (args.length === 0) return resolve([]);
     var remaining = args.length;
-    function res(i: number, val: any) {
+    function res(i: number, val: number) {
       if (val && (typeof val === 'object' || typeof val === 'function')) {
         if (val instanceof Promise && val.then === Promise.prototype.then) {
           while (val._state === 3) {
@@ -98,13 +98,13 @@ Promise.all = function (arr: any[]) {
   });
 };
 
-function onSettledFulfill(value: any) {
+function onSettledFulfill(value: T) {
   return { status: 'fulfilled', value: value };
 }
 function onSettledReject(reason: any) {
   return { status: 'rejected', reason: reason };
 }
-function mapAllSettled(item: Promise<any>) {
+function mapAllSettled(item: any) {
   if(item && (typeof item === 'object' || typeof item === 'function')){
     if(item instanceof Promise && item.then === Promise.prototype.then){
       return item.then(onSettledFulfill, onSettledReject);
@@ -129,7 +129,7 @@ Promise.reject = function (value: any) {
 
 Promise.race = function (values: any) {
   return new Promise(function (resolve: any, reject: any) {
-    iterableToArray(values).forEach(function(value: any){
+    iterableToArray(values).forEach(function(value: number){
       Promise.resolve(value).then(resolve, reject);
     });
   });

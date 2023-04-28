@@ -163,9 +163,9 @@ prelude.gcd = Num.gcd;
 prelude.lcm = Num.lcm;
 prelude.VERSION = '1.2.1';
 module.exports = prelude;
-function curry$(f: Function, bound: any){
+function curry$(f: Function, bound: Array){
   var context,
-  _curry = function(args: any) {
+  _curry = function(args: any[]) {
     return f.length > 1 ? function(){
       var params = args ? args.concat() : [];
       context = bound ? context || this : this;

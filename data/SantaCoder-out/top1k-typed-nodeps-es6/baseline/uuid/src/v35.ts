@@ -16,8 +16,8 @@ function stringToBytes(str: string) {
 export const DNS = '6ba7b810-9dad-11d1-80b4-00c04fd430c8';
 export const URL = '6ba7b811-9dad-11d1-80b4-00c04fd430c8';
 
-export default function v35(name: string, version: number, hashfunc: any) {
-  function generateUUID(value: string, namespace: string, buf: Uint8Array, offset: number) {
+export default function v35(name: string, version: string, hashfunc: string) {
+  function generateUUID(value: string, namespace: string, buf: Buffer, offset: number) {
     if (typeof value === 'string') {
       value = stringToBytes(value);
     }

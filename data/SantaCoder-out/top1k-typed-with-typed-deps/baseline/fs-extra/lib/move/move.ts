@@ -8,7 +8,7 @@ const mkdirp = require('../mkdirs').mkdirp
 const pathExists = require('../path-exists').pathExists
 const stat = require('../util/stat')
 
-function move (src: string, dest: string, opts: MoveOptions, cb: any) {
+function move (src: string, dest: string, opts: any, cb: Function) {
   if (typeof opts === 'function') {
     cb = opts
     opts = {}

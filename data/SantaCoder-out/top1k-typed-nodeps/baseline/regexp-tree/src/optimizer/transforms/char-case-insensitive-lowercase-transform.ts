@@ -54,14 +54,14 @@ module.exports = {
   }
 };
 
-function isAZClassRange(classRange: ClassRange) {
+function isAZClassRange(classRange: string) {
   const {from, to} = classRange;
   // A-Z
   return from.codePoint >= UPPER_A_CP && from.codePoint <= UPPER_Z_CP &&
     to.codePoint >= UPPER_A_CP && to.codePoint <= UPPER_Z_CP;
 }
 
-function displaySymbolAsValue(symbol: Symbol, node: Node) {
+function displaySymbolAsValue(symbol: ts.Symbol, node: ts.Node) {
   const codePoint = symbol.codePointAt(0);
   if (node.kind === 'decimal') {
     return '\\' + codePoint;

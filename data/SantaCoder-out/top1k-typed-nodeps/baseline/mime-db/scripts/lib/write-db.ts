@@ -13,7 +13,7 @@ module.exports = function writeDatabaseSync (fileName: string, obj: any) {
 
   fs.writeSync(fd, '{\n')
 
-  keys.forEach(function (key: string, i: number, arr: any[]) {
+  keys.forEach(function (key: string, i: number, arr: string[]) {
     fs.writeSync(fd, '  ' + JSON.stringify(key) + ': {')
 
     var end = endLine.apply(this, arguments)
@@ -26,7 +26,7 @@ module.exports = function writeDatabaseSync (fileName: string, obj: any) {
     }
 
     fs.writeSync(fd, '\n')
-    keys.forEach(function (key: string, i: number, arr: any[]) {
+    keys.forEach(function (key: string, i: number, arr: string[]) {
       var end = endLine.apply(this, arguments)
       var val = data[key]
 

@@ -55,7 +55,7 @@ jQuery.fn.extend( {
 		return this;
 	},
 
-	removeClass: function( value : string) {
+	removeClass: function( value : any) {
 		var classNames, cur, curValue, className, i, finalValue;
 
 		if ( typeof value === "function" ) {

@@ -3,7 +3,7 @@
 
 var object = {};
 var hasOwnProperty = object.hasOwnProperty;
-var merge = function merge(options: MergeOptions, defaults: MergeOptions) {
+var merge = function merge(options: any, defaults: any) {
 	if (!options) {
 		return defaults;
 	}
@@ -22,7 +22,7 @@ var regexAlwaysEscape = /['"\\]/;
 var regexExcessiveSpaces = /(^|\\+)?(\\[A-F0-9]{1,6})\x20(?![a-fA-F0-9\x20])/g;
 
 // https://mathiasbynens.be/notes/css-escapes#css
-var cssesc = function cssesc(string: string, options: CSSEscOptions) {
+var cssesc = function cssesc(string: string, options: Options) {
 	options = merge(options, cssesc.options);
 	if (options.quotes != 'single' && options.quotes != 'double') {
 		options.quotes = 'single';
@@ -82,7 +82,7 @@ var cssesc = function cssesc(string: string, options: CSSEscOptions) {
 	// Remove spaces after `\HEX` escapes that are not followed by a hex digit,
 	// since they’re redundant. Note that this is only possible if the escape
 	// sequence isn’t preceded by an odd number of backslashes.
-	output = output.replace(regexExcessiveSpaces, function ($0: number, $1: number, $2: number) {
+	output = output.replace(regexExcessiveSpaces, function ($0: string, $1: string, $2: string) {
 		if ($1 && $1.length % 2) {
 			// It’s not safe to remove the space, so don’t.
 			return $0;

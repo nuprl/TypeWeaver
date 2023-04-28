@@ -5,7 +5,7 @@ import {
   reject,
 } from './-internal';
 
-function makeObject(_: any, argumentNames: string[]) {
+function makeObject(_: string, argumentNames: string[]) {
   let obj = {};
 
   for (let i = 0; i < argumentNames.length; i++) {
@@ -16,7 +16,7 @@ function makeObject(_: any, argumentNames: string[]) {
   return obj;
 }
 
-function arrayResult(_: any) {
+function arrayResult(_: any[]) {
   let length = _.length;
   let args = new Array(length - 1);
 
@@ -27,7 +27,7 @@ function arrayResult(_: any) {
   return args;
 }
 
-function wrapThenable(then: Thenable<any>, promise: Promise<any>) {
+function wrapThenable(then: any, promise: any) {
   return {
     then(onFulFillment, onRejection) {
       return then.call(promise, onFulFillment, onRejection);
@@ -44,7 +44,7 @@ function wrapThenable(then: Thenable<any>, promise: Promise<any>) {
   ```javascript
   let fs = require('fs');
 
-  fs.readFile('myfile.txt', function(err: any, data: any){
+  fs.readFile('myfile.txt', function(err: Error, data: any){
     if (err) return handleError(err);
     handleData(data);
   });
@@ -65,7 +65,7 @@ function wrapThenable(then: Thenable<any>, promise: Promise<any>) {
   ```javascript
   let request = denodeify(require('request'));
 
-  request('http://example.com').then(function(res: AxiosResponse) {
+  request('http://example.com').then(function(res: any) {
     // ...
   });
   ```
@@ -110,7 +110,7 @@ function wrapThenable(then: Thenable<any>, promise: Promise<any>) {
   let request = denodeify(require('request')),
       cookieJar = request.jar(); // <- Inheritance is used here
 
-  request('http://example.com', {jar: cookieJar}).then(function(res: AxiosResponse) {
+  request('http://example.com', {jar: cookieJar}).then(function(res: any) {
     // cookieJar.cookies holds now the cookies returned by example.com
   });
   ```
@@ -153,7 +153,7 @@ function wrapThenable(then: Thenable<any>, promise: Promise<any>) {
   @param {Function} nodeFunc a 'node-style' function that takes a callback as
   its last argument. The callback expects an error to be passed as its first
   argument (if an error occurred, otherwise null), and the value from the
-  operation as its second argument ('function(err: Error, value: any){ }').
+  operation as its second argument ('function(err: any, value: any){ }').
   @param {Boolean|Array} [options] An optional paramter that if set
   to `true` causes the promise to fulfill with the callback's success arguments
   as an array. This is useful if the node function has multiple success
@@ -198,7 +198,7 @@ export default function denodeify(nodeFunc: Function, options: Options) {
 
     let promise = new Promise(noop);
 
-    args[l] = function(err: Error, val: any) {
+    args[l] = function(err: any, val: any) {
       if (err) {
         reject(promise, err);
       } else if (options === undefined) {
@@ -224,7 +224,7 @@ export default function denodeify(nodeFunc: Function, options: Options) {
   return fn;
 }
 
-function handleValueInput(promise: Promise<any>, args: any, nodeFunc: any, self: any) {
+function handleValueInput(promise: Promise<any>, args: any[], nodeFunc: Function, self: any) {
   try {
     nodeFunc.apply(self, args);
   } catch (error) {
@@ -233,7 +233,7 @@ function handleValueInput(promise: Promise<any>, args: any, nodeFunc: any, self:
   return promise;
 }
 
-function handlePromiseInput(promise: Promise<any>, args: any[], nodeFunc: any, self: any){
+function handlePromiseInput(promise: Promise<any>, args: any[], nodeFunc: Function, self: any){
   return Promise.all(args)
     .then(args => handleValueInput(promise, args, nodeFunc, self));
 }

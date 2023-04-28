@@ -363,7 +363,7 @@
    * @param {number|Fraction=} a
    * @param {number=} b
    */
-  function Fraction(a: string, b: string) {
+  function Fraction(a: number, b: number) {
 
     parse(a, b);
 
@@ -531,7 +531,7 @@
      *
      * Ex: new Fraction(5,8).lcm(3,7) => 15
      */
-    "lcm": function(a: string, b: number) {
+    "lcm": function(a: string, b: string) {
 
       parse(a, b);
 
@@ -737,7 +737,7 @@
      *
      * Ex: new Fraction("1.'3'").toFraction(true) => "4 1/3"
      **/
-    'toFraction': function(excludeWhole: boolean) {
+    'toFraction': function(excludeWhole: Boolean) {
 
       var whole, str = "";
       var n = this["n"];
@@ -826,7 +826,7 @@
      *
      * Ex: new Fraction("100.'91823'").toString() => "100.(91823)"
      **/
-    'toString': function(dec: number) {
+    'toString': function(dec: any) {
 
       var N = this["n"];
       var D = this["d"];

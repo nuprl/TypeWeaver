@@ -14,7 +14,7 @@ const handler = {
     }
     return function () {
       return new Promise((resolve, reject) => {
-        Reflect.get(target, prop, receiver).apply(target, [...arguments, function (err: Error, result: any) {
+        Reflect.get(target, prop, receiver).apply(target, [...arguments, function (err: any, result: any) {
           if (err) {
             return reject(err)
           }
@@ -25,7 +25,7 @@ const handler = {
   }
 }
 
-module.exports = function (thingToPromisify: any) {
+module.exports = function (thingToPromisify: Function) {
   if (typeof thingToPromisify === 'function') {
     return promisify(thingToPromisify)
   }

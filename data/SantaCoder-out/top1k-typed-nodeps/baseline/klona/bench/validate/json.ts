@@ -1,6 +1,6 @@
 const assert = require('uvu/assert');
 
-module.exports = function (input: any, output: any) {
+module.exports = function (input: string, output: string) {
 	assert.equal(output, input, 'initial copy');
 
 	output[0].age++;

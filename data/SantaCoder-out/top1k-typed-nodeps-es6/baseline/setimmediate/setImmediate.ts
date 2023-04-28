@@ -11,7 +11,7 @@
     var doc = global.document;
     var registerImmediate;
 
-    function setImmediate(callback: Function) {
+    function setImmediate(callback: any) {
       // Callback can either be a function or a string
       if (typeof callback !== "function") {
         callback = new Function("" + callback);
@@ -54,7 +54,7 @@
         }
     }
 
-    function runIfPresent(handle: any) {
+    function runIfPresent(handle: number) {
         // From the spec: "Wait until any invocations of this algorithm started before this one have completed."
         // So if we're currently running a task, we'll need to delay this invocation.
         if (currentlyRunningATask) {
@@ -76,7 +76,7 @@
     }
 
     function installNextTickImplementation() {
-        registerImmediate = function(handle: string) {
+        registerImmediate = function(handle: number) {
             process.nextTick(function () { runIfPresent(handle); });
         };
     }
@@ -102,7 +102,7 @@
         // * http://www.whatwg.org/specs/web-apps/current-work/multipage/comms.html#crossDocumentMessages
 
         var messagePrefix = "setImmediate$" + Math.random() + "$";
-        var onGlobalMessage = function(event: IWebExtEvent<any>) {
+        var onGlobalMessage = function(event: MessageEvent) {
             if (event.source === global &&
                 typeof event.data === "string" &&
                 event.data.indexOf(messagePrefix) === 0) {
@@ -123,19 +123,19 @@
 
     function installMessageChannelImplementation() {
         var channel = new MessageChannel();
-        channel.port1.onmessage = function(event: IMessageEvent) {
+        channel.port1.onmessage = function(event: MessageEvent) {
             var handle = event.data;
             runIfPresent(handle);
         };
 
-        registerImmediate = function(handle: number) {
+        registerImmediate = function(handle: any) {
             channel.port2.postMessage(handle);
         };
     }
 
     function installReadyStateChangeImplementation() {
         var html = doc.documentElement;
-        registerImmediate = function(handle: string) {
+        registerImmediate = function(handle: number) {
             // Create a <script> element; its readystatechange event will be fired asynchronously once it is inserted
             // into the document. Do so, thus queuing up the task. Remember to clean up once it's been called.
             var script = doc.createElement("script");
@@ -150,7 +150,7 @@
     }
 
     function installSetTimeoutImplementation() {
-        registerImmediate = function(handle: number) {
+        registerImmediate = function(handle: any) {
             setTimeout(runIfPresent, 0, handle);
         };
     }

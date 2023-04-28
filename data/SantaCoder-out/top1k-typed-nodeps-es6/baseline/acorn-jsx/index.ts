@@ -9,7 +9,7 @@ const decimalNumber = /^\d+$/;
 const acornJsxMap = new WeakMap();
 
 // Get the original tokens for the given `acorn` namespace object.
-function getJsxTokens(acorn: Acorn) {
+function getJsxTokens(acorn: any) {
   acorn = acorn.Parser.acorn || acorn;
   let acornJsx = acornJsxMap.get(acorn);
   if (!acornJsx) {
@@ -36,7 +36,7 @@ function getJsxTokens(acorn: Acorn) {
       this.context.push(tc_oTag); // start opening tag context
       this.exprAllowed = false;
     };
-    tokTypes.jsxTagEnd.updateContext = function(prevType: number) {
+    tokTypes.jsxTagEnd.updateContext = function(prevType: string) {
       let out = this.context.pop();
       if (out === tc_oTag && prevType === tt.slash || out === tc_cTag) {
         this.context.pop();
@@ -70,9 +70,9 @@ function getQualifiedJSXName(object: any) {
     getQualifiedJSXName(object.property);
 }
 
-export default function(options: IOptions) {
+export default function(options: any) {
   options = options || {};
-  return function(Parser: Parser) {
+  return function(Parser: any) {
     return plugin({
       allowNamespaces: options.allowNamespaces !== false,
       allowNamespacedObjects: !!options.allowNamespacedObjects
@@ -90,7 +90,7 @@ Object.defineProperty(module.exports, "tokTypes", {
   enumerable: true
 });
 
-function plugin(options: PluginOptions, Parser: ParserClass) {
+function plugin(options: Options, Parser: any) {
   const acorn = Parser.acorn || require("acorn");
   const acornJsx = getJsxTokens(acorn);
   const tt = acorn.tokTypes;

@@ -1,5 +1,5 @@
-;(function (sax: SaxParser) { // wrapper for non-node envs
-  sax.parser = function (strict: boolean, opt: any) { return new SAXParser(strict, opt) }
+;(function (sax: any) { // wrapper for non-node envs
+  sax.parser = function (strict: boolean, opt: Options) { return new SAXParser(strict, opt) }
   sax.SAXParser = SAXParser
   sax.SAXStream = SAXStream
   sax.createStream = createStream
@@ -165,11 +165,11 @@
     Stream = function () {}
   }
 
-  var streamWraps = sax.EVENTS.filter(function (ev: Event) {
+  var streamWraps = sax.EVENTS.filter(function (ev: string) {
     return ev !== 'error' && ev !== 'end'
   })
 
-  function createStream (strict: boolean, opt: IStreamOptions) {
+  function createStream (strict: boolean, opt: Options) {
     return new SAXStream(strict, opt)
   }
 
@@ -205,7 +205,7 @@
         get: function () {
           return me._parser['on' + ev]
         },
-        set: function (h: number) {
+        set: function (h: any) {
           if (!h) {
             me.removeAllListeners(ev)
             me._parser['on' + ev] = h
@@ -241,7 +241,7 @@
     return true
   }
 
-  SAXStream.prototype.end = function (chunk: Uint8Array) {
+  SAXStream.prototype.end = function (chunk: Buffer) {
     if (chunk && chunk.length) {
       this.write(chunk)
     }
@@ -624,7 +624,7 @@
     parser[event] && parser[event](data)
   }
 
-  function emitNode (parser: Parser, nodeType: number, data: any) {
+  function emitNode (parser: Parser, nodeType: string, data: any) {
     if (parser.textNode) closeText(parser)
     emit(parser, nodeType, data)
   }
@@ -635,7 +635,7 @@
     parser.textNode = ''
   }
 
-  function textopts (opt: TextOpts, text: string) {
+  function textopts (opt: string, text: string) {
     if (opt.trim) text = text.trim()
     if (opt.normalize) text = text.replace(/\s+/g, ' ')
     return text
@@ -669,7 +669,7 @@
     return parser
   }
 
-  function strictFail (parser: Parser, message: string) {
+  function strictFail (parser: Parser<any>, message: string) {
     if (typeof parser !== 'object' || !(parser instanceof SAXParser)) {
       throw new Error('bad call to strictFail')
     }
@@ -777,7 +777,7 @@
 
       var parent = parser.tags[parser.tags.length - 1] || parser
       if (tag.ns && parent.ns !== tag.ns) {
-        Object.keys(tag.ns).forEach(function (p: IParser) {
+        Object.keys(tag.ns).forEach(function (p: Node) {
           emitNode(parser, 'onopennamespace', {
             prefix: p,
             uri: tag.ns[p]
@@ -962,7 +962,7 @@
     return result
   }
 
-  function write (chunk: string) {
+  function write (chunk: any) {
     var parser = this
     if (this.error) {
       throw this.error

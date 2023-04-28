@@ -8,7 +8,7 @@ import is from './is';
 
 var objHasOwnProperty = Object.prototype.hasOwnProperty, invalidItemsLimit = 3;
 
-export default function (value/*: number, options*/: number) {
+export default function (value/*: any, options*/: any) {
 	var options = arguments[1];
 	var mainErrorMessage =
 		options && options.name

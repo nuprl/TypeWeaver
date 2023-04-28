@@ -19,7 +19,7 @@ import isIndex from './.internal/isIndex.js'
  * nth(array, -2)
  * // => 'c'
  */
-function nth(array: number[], n: number) {
+function nth(array: Array<any>, n: number) {
   const length = array == null ? 0 : array.length
   if (!length) {
     return

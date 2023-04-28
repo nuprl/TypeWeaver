@@ -15,7 +15,7 @@ import eq from './eq.js'
  * sortedLastIndexOf([4, 5, 5, 5, 6], 5)
  * // => 3
  */
-function sortedLastIndexOf(array: Array<T>, value: T) {
+function sortedLastIndexOf(array: any[], value: any) {
   const length = array == null ? 0 : array.length
   if (length) {
     const index = baseSortedIndex(array, value, true) - 1

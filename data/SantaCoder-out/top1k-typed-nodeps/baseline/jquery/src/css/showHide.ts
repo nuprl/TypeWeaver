@@ -4,7 +4,7 @@ import isHiddenWithinTree from "../css/var/isHiddenWithinTree.js";
 
 var defaultDisplayMap = {};
 
-function getDefaultDisplay( elem : Element) {
+function getDefaultDisplay( elem : HTMLElement) {
 	var temp,
 		doc = elem.ownerDocument,
 		nodeName = elem.nodeName,
@@ -27,7 +27,7 @@ function getDefaultDisplay( elem : Element) {
 	return display;
 }
 
-function showHide( elements: string[], show : boolean) {
+function showHide( elements: HTMLElement[], show : boolean) {
 	var display, elem,
 		values = [],
 		index = 0,

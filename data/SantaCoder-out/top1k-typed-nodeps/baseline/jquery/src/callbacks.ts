@@ -3,9 +3,9 @@ import toType from "./core/toType.js";
 import rnothtmlwhite from "./var/rnothtmlwhite.js";
 
 // Convert String-formatted options into Object-formatted ones
-function createOptions( options : IOptions) {
+function createOptions( options : any) {
 	var object = {};
-	jQuery.each( options.match( rnothtmlwhite ) || [], function( _: any, flag : string) {
+	jQuery.each( options.match( rnothtmlwhite ) || [], function( _: object, flag : string) {
 		object[ flag ] = true;
 	} );
 	return object;
@@ -33,7 +33,7 @@ function createOptions( options : IOptions) {
  *	stopOnFalse:	interrupt callings when a callback returns false
  *
  */
-jQuery.Callbacks = function( options : IOptions) {
+jQuery.Callbacks = function( options : any) {
 
 	// Convert options from String-formatted to Object-formatted if needed
 	// (we check in cache first)
@@ -200,7 +200,7 @@ jQuery.Callbacks = function( options : IOptions) {
 			},
 
 			// Call all callbacks with the given context and arguments
-			fireWith: function( context: Context, args : any[]) {
+			fireWith: function( context: any, args : any[]) {
 				if ( !locked ) {
 					args = args || [];
 					args = [ context, args.slice ? args.slice() : args ];

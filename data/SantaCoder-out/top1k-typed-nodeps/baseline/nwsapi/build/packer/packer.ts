@@ -56,7 +56,7 @@ var Words = Collection.extend({
     return word;
   },
 
-  sort: function(sorter: SorterFunction<any>) {
+  sort: function(sorter: any) {
     return this.base(sorter || function(word1: string, word2: string) {
       // sort by frequency
       return (word2.count - word1.count) || (word1.index - word2.index);
@@ -79,7 +79,7 @@ var Words = Collection.extend({
 // =========================================================================
 
 var Encoder = Base.extend({
-  constructor: function(pattern: string, encoder: any, ignore: boolean) {
+  constructor: function(pattern: string, encoder: string, ignore: string) {
     this.parser = new Parser(ignore);
     if (pattern) this.parser.put(pattern, "");
     this.encoder = encoder;
@@ -88,7 +88,7 @@ var Encoder = Base.extend({
   parser: null,
   encoder: Undefined,
 
-  search: function(script: string) {
+  search: function(script: Script) {
     var words = new Words;
     this.parser.putAt(-1, function(word: string) {
       words.add(word);
@@ -170,7 +170,7 @@ var Base62 = Encoder.extend({
     });
 
     // sort by encoding
-    words.sort(function(word1: Word, word2: Word) {
+    words.sort(function(word1: any, word2: any) {
       return word1.index - word2.index;
     });
 
@@ -192,19 +192,19 @@ var Base62 = Encoder.extend({
     return format(Base62.UNPACK, p,a,c,k,e,d);
   },
   
-  search: function(script: string) {
+  search: function(script: any) {
     var words = new Words;
     forEach (script.match(Base62.WORDS), words.add, words);
     return words;
   },
 
-  escape: function(script: string) {
+  escape: function(script: Script) {
     // Single quotes wrap the final string so escape them.
     // Also, escape new lines (required by conditional comments).
     return script.replace(/([\\'])/g, "\\$1").replace(/[\r\n]+/g, "\\n");
   },
 
-  getCount: function(words: string[]) {
+  getCount: function(words: Set<string>) {
     return words.size() || 1;
   },
 
@@ -259,7 +259,7 @@ var Base62 = Encoder.extend({
     return pattern;
   },
 
-  getEncoder: function(words: any) {
+  getEncoder: function(words: List<String>) {
     var size = words.size();
     return Base62["ENCODE" + (size > 10 ? size > 36 ? 62 : 36 : 10)];
   },
@@ -276,10 +276,10 @@ var Base62 = Encoder.extend({
   WORDS: /\b[\da-zA-Z]\b|\w{2,}/g,
 
   ENCODE10: "String",
-  ENCODE36: "function(c: string){return c.toString(36)}",
-  ENCODE62: "function(c: string){return(c<62?'':e(parseInt(c/62)))+((c=c%62)>35?String.fromCharCode(c+29):c.toString(36))}",
+  ENCODE36: "function(c: number){return c.toString(36)}",
+  ENCODE62: "function(c: number){return(c<62?'':e(parseInt(c/62)))+((c=c%62)>35?String.fromCharCode(c+29):c.toString(36))}",
 
-  UNPACK: "eval(function(p: number,a: number,c: number,k: number,e: number,r: number){e=%5;if('0'.replace(0,e)==0){while(c--)r[e(c)]=k[c];" +
+  UNPACK: "eval(function(p: any,a: any,c: any,k: any,e: any,r: any){e=%5;if('0'.replace(0,e)==0){while(c--)r[e(c)]=k[c];" +
     "k=[function(e){return r[e]||e}];e=function(){return'%6'};c=1};while(c--)if(k[c])p=p." +
     "replace(new RegExp('\\\\b'+e(c)+'\\\\b','g'),k[c]);return p}('%1',%2,%3,'%4'.split('|'),0,{}))"
 });
@@ -322,7 +322,7 @@ global.Packer = Base.extend({
     "(OPERATOR)\\s*(REGEXP)": "$1$2"
   }),
 
-  encode52: function(c: string) {
+  encode52: function(c: number) {
     // Base52 encoding (a-Z)
     function encode(c: string) {
       return (c < 52 ? '' : encode(parseInt(c / 52))) +
@@ -391,10 +391,10 @@ var Minifier = Base.extend({
   },
 
   concat: {
-    "(STRING1)\\+(STRING1)": function(match: Match, a: string, $2: string, b: string) {
+    "(STRING1)\\+(STRING1)": function(match: RegExpMatchArray, a: string, $2: string, b: string) {
       return a.slice(0, -1) + b.slice(1);
     },
-    "(STRING2)\\+(STRING2)": function(match: RegExpMatchArray, a: string, $2: string, b: string) {
+    "(STRING2)\\+(STRING2)": function(match: string, a: string, $2: string, b: string) {
       return a.slice(0, -1) + b.slice(1);
     }
   },
@@ -420,16 +420,16 @@ var Minifier = Base.extend({
 // =========================================================================
 
 var Shrinker = Base.extend({
-  decodeData: function(script: string) {
+  decodeData: function(script: Script) {
     // put strings and regular expressions back
     var data = this._data; // encoded strings and regular expressions
     delete this._data;
-    return script.replace(Shrinker.ENCODED_DATA, function(match: RegExpMatchArray, index: number) {
+    return script.replace(Shrinker.ENCODED_DATA, function(match: string, index: number) {
       return data[index];
     });
   },
 
-  encodeData: function(script: string) {
+  encodeData: function(script: Script) {
     // encode strings and regular expressions
     var data = this._data = []; // encoded strings and regular expressions
     return Packer.data.exec(script, function(match: RegExpMatchArray, operator: string, regexp: RegExp) {
@@ -452,7 +452,7 @@ var Shrinker = Base.extend({
       return new RegExp(regexp.source, "g");
     };
         
-    // identify blocks, particularly identify function blocks (which define scope: block)
+    // identify blocks, particularly identify function blocks (which define scope: `{...}`)
     var BLOCK         = /((catch|do|if|while|with|function)\b[^~{};]*(\(\s*[^{};]*\s*\))\s*)?(\{[^{}]*\})/;
     var BLOCK_g       = global(BLOCK);
     var BRACKETS      = /\{[^{}]*\}|\[[^\[\]]*\]|\([^\(\)]*\)|~[^~]+~/;
@@ -468,10 +468,10 @@ var Shrinker = Base.extend({
     var blocks = []; // store program blocks (anything between braces {})
     var total = 0;
     // encoder for program blocks
-    function encodeBlocks($: any, prefix: string, blockType: string, args: any[], block: Block) {
+    function encodeBlocks($: string, prefix: string, blockType: string, args: any[], block: any) {
       if (!prefix) prefix = "";
       if (blockType == "function") {
-        // decode the function block (THIS IS THE IMPORTANT BIT: DO)
+        // decode the function block (THIS IS THE IMPORTANT BIT: any)
         // We are retrieving all sub-blocks and will re-parse them in light
         // of newly shrunk variables
         block = args + decodeBlocks(block, SCOPED);
@@ -522,9 +522,9 @@ var Shrinker = Base.extend({
     };
 
     // decoder for program blocks
-    function decodeBlocks(script: string, encoded: string) {
+    function decodeBlocks(script: Buffer, encoded: Buffer) {
       while (encoded.test(script)) {
-        script = script.replace(global(encoded), function(match: Match, index: number) {
+        script = script.replace(global(encoded), function(match: RegExpMatchArray, index: number) {
           return blocks[index];
         });
       }

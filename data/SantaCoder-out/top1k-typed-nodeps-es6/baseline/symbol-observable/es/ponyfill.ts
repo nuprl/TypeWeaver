@@ -1,4 +1,4 @@
-export default function symbolObservablePonyfill(root: Observable<any>) {
+export default function symbolObservablePonyfill(root: any) {
 	var result;
 	var Symbol = root.Symbol;
 

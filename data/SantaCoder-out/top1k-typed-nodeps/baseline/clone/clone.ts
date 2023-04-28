@@ -49,7 +49,7 @@ try {
  *    should be cloned as well. Non-enumerable properties on the prototype
  *    chain will be ignored. (optional - false by default)
 */
-function clone(parent: any, circular: boolean, depth: number, prototype: any, includeNonEnumerable: boolean) {
+function clone(parent: any, circular: any, depth: any, prototype: any, includeNonEnumerable: boolean) {
   if (typeof circular === 'object') {
     depth = circular.depth;
     prototype = circular.prototype;
@@ -89,7 +89,7 @@ function clone(parent: any, circular: boolean, depth: number, prototype: any, in
     } else if (_instanceof(parent, nativeSet)) {
       child = new nativeSet();
     } else if (_instanceof(parent, nativePromise)) {
-      child = new nativePromise(function (resolve: any, reject: any) {
+      child = new nativePromise(function (resolve: Function, reject: Function) {
         parent.then(function(value: any) {
           resolve(_clone(value, depth - 1));
         }, function(err: any) {
@@ -144,7 +144,7 @@ function clone(parent: any, circular: boolean, depth: number, prototype: any, in
       });
     }
     if (_instanceof(parent, nativeSet)) {
-      parent.forEach(function(value: number) {
+      parent.forEach(function(value: string) {
         var entryChild = _clone(value, depth - 1);
         child.add(entryChild);
       });

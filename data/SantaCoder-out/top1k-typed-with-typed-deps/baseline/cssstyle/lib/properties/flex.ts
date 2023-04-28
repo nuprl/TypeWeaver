@@ -12,12 +12,12 @@ var shorthand_for = {
 
 var myShorthandSetter = shorthandSetter('flex', shorthand_for);
 
-module.exports.isValid = function isValid(v: any) {
+module.exports.isValid = function isValid(v: string) {
   return shorthandParser(v, shorthand_for) !== undefined;
 };
 
 module.exports.definition = {
-  set: function(v: string) {
+  set: function(v: any) {
     var normalizedValue = String(v)
       .trim()
       .toLowerCase();

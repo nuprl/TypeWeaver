@@ -32,7 +32,7 @@
 
     'use strict';
 
-    function cssbeautify(style: string, opt: CssBeautifyOptions) {
+    function cssbeautify(style: string, opt: any) {
 
         var options, index = 0, length = style.length, blocks, formatted = '',
             ch, ch2, str, state, State, depth, quote, comment,

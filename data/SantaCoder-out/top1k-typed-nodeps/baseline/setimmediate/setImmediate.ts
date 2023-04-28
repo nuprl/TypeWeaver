@@ -54,7 +54,7 @@
         }
     }
 
-    function runIfPresent(handle: Function) {
+    function runIfPresent(handle: any) {
         // From the spec: "Wait until any invocations of this algorithm started before this one have completed."
         // So if we're currently running a task, we'll need to delay this invocation.
         if (currentlyRunningATask) {
@@ -123,12 +123,12 @@
 
     function installMessageChannelImplementation() {
         var channel = new MessageChannel();
-        channel.port1.onmessage = function(event: IMessageEvent) {
+        channel.port1.onmessage = function(event: MessageEvent) {
             var handle = event.data;
             runIfPresent(handle);
         };
 
-        registerImmediate = function(handle: number) {
+        registerImmediate = function(handle: any) {
             channel.port2.postMessage(handle);
         };
     }

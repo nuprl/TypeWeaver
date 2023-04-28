@@ -10,7 +10,7 @@ const { EMPTY_BUFFER } = require('./constants');
  * @return {Buffer} The resulting buffer
  * @public
  */
-function concat(list: number[], totalLength: number) {
+function concat(list: Array<any>, totalLength: number) {
   if (list.length === 0) return EMPTY_BUFFER;
   if (list.length === 1) return list[0];
 
@@ -38,7 +38,7 @@ function concat(list: number[], totalLength: number) {
  * @param {Number} length The number of bytes to mask.
  * @public
  */
-function _mask(source: string, mask: string, output: string, offset: number, length: number) {
+function _mask(source: string, mask: string, output: string, offset: maskOffset, length: maskLength) {
   for (let i = 0; i < length; i++) {
     output[offset + i] = source[i] ^ mask[i & 3];
   }
@@ -51,7 +51,7 @@ function _mask(source: string, mask: string, output: string, offset: number, len
  * @param {Buffer} mask The mask to use
  * @public
  */
-function _unmask(buffer: Uint8Array, mask: Uint8Array) {
+function _unmask(buffer: Buffer, mask: Buffer) {
   for (let i = 0; i < buffer.length; i++) {
     buffer[i] ^= mask[i & 3];
   }
@@ -64,7 +64,7 @@ function _unmask(buffer: Uint8Array, mask: Uint8Array) {
  * @return {ArrayBuffer} Converted buffer
  * @public
  */
-function toArrayBuffer(buf: ArrayBuffer) {
+function toArrayBuffer(buf: Buffer) {
   if (buf.byteLength === buf.buffer.byteLength) {
     return buf.buffer;
   }
@@ -112,12 +112,12 @@ if (!process.env.WS_NO_BUFFER_UTIL) {
   try {
     const bufferUtil = require('bufferutil');
 
-    module.exports.mask = function (source: string, mask: string, output: string, offset: number, length: number) {
+    module.exports.mask = function (source: Uint8Array, mask: Uint8Array, output: Uint8Array, offset: number, length: number) {
       if (length < 48) _mask(source, mask, output, offset, length);
       else bufferUtil.mask(source, mask, output, offset, length);
     };
 
-    module.exports.unmask = function (buffer: Uint8Array, mask: number) {
+    module.exports.unmask = function (buffer: Buffer, mask: string) {
       if (buffer.length < 32) _unmask(buffer, mask);
       else bufferUtil.unmask(buffer, mask);
     };

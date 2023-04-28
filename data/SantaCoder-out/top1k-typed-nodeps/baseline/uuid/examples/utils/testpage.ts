@@ -1,4 +1,4 @@
-export default function test(callback: any) {
+export default function test(callback: Function) {
   const style = document.createElement('style');
   style.appendChild(
     document.createTextNode(

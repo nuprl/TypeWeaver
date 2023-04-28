@@ -52,7 +52,7 @@ function EventSource (url: string, eventSourceInitDict: EventSourceInitDict) {
   self.reconnectInterval = 1000
   self.connectionInProgress = false
 
-  function onConnectionClosed (message: any) {
+  function onConnectionClosed (message: string) {
     if (readyState === EventSource.CLOSED) return
     readyState = EventSource.CONNECTING
     _emit('error', new Event('error', {message: message}))
@@ -143,7 +143,7 @@ function EventSource (url: string, eventSourceInitDict: EventSourceInitDict) {
       options.withCredentials = eventSourceInitDict.withCredentials
     }
 
-    req = (isSecure ? https : http).request(options, function (res: IConnectionResponse) {
+    req = (isSecure ? https : http).request(options, function (res: any) {
       self.connectionInProgress = false
       // Handle HTTP errors
       if (res.statusCode === 500 || res.statusCode === 502 || res.statusCode === 503 || res.statusCode === 504) {
@@ -197,7 +197,7 @@ function EventSource (url: string, eventSourceInitDict: EventSourceInitDict) {
       var newBufferSize = 0
       var bytesUsed = 0
 
-      res.on('data', function (chunk: Uint8Array) {
+      res.on('data', function (chunk: Buffer) {
         if (!buf) {
           buf = chunk
           if (hasBom(buf)) {
@@ -271,7 +271,7 @@ function EventSource (url: string, eventSourceInitDict: EventSourceInitDict) {
       })
     })
 
-    req.on('error', function (err: Error) {
+    req.on('error', function (err: any) {
       self.connectionInProgress = false
       onConnectionClosed(err.message)
     })
@@ -295,7 +295,7 @@ function EventSource (url: string, eventSourceInitDict: EventSourceInitDict) {
     if (req.xhr && req.xhr.abort) req.xhr.abort()
   }
 
-  function parseEventStreamLine (buf: Uint8Array, pos: number, fieldLength: number, lineLength: number) {
+  function parseEventStreamLine (buf: Buffer, pos: number, fieldLength: number, lineLength: number) {
     if (lineLength === 0) {
       if (data.length > 0) {
         var type = eventName || 'message'
@@ -365,7 +365,7 @@ EventSource.prototype.constructor = EventSource; // make stacktraces readable
      * @return {Mixed} the set function or undefined
      * @api private
      */
-    set: function set (listener: string) {
+    set: function set (listener: Function) {
       this.removeAllListeners(method)
       this.addEventListener(method, listener)
     }
@@ -402,7 +402,7 @@ EventSource.prototype.close = function () {
  * @see http://dev.w3.org/html5/websockets/#the-websocket-interface
  * @api public
  */
-EventSource.prototype.addEventListener = function addEventListener (type: string, listener: EventListener) {
+EventSource.prototype.addEventListener = function addEventListener (type: string, listener: EventListenerOrEventListenerObject) {
   if (typeof listener === 'function') {
     // store a reference so we can return the original function again
     listener._listener = listener
@@ -434,7 +434,7 @@ EventSource.prototype.dispatchEvent = function dispatchEvent (event: Event) {
  * @see http://dev.w3.org/html5/websockets/#the-websocket-interface
  * @api public
  */
-EventSource.prototype.removeEventListener = function removeEventListener (type: string, listener: EventListener) {
+EventSource.prototype.removeEventListener = function removeEventListener (type: string, listener: EventListenerOrEventListenerObject) {
   if (typeof listener === 'function') {
     listener._listener = undefined
     this.removeListener(type, listener)
@@ -464,7 +464,7 @@ function Event (type: string, optionalProperties: any) {
  * @see http://www.w3.org/TR/webmessaging/#event-definitions
  * @api private
  */
-function MessageEvent (type: string, eventInitDict: MessageEventInitDict) {
+function MessageEvent (type: string, eventInitDict: MessageEventInit) {
   Object.defineProperty(this, 'type', { writable: false, value: type, enumerable: true })
   for (var f in eventInitDict) {
     if (eventInitDict.hasOwnProperty(f)) {
@@ -480,7 +480,7 @@ function MessageEvent (type: string, eventInitDict: MessageEventInitDict) {
  * @return {Object} a new object of headers
  * @api private
  */
-function removeUnsafeHeaders (headers: any) {
+function removeUnsafeHeaders (headers: Headers) {
   var safe = {}
   for (var key in headers) {
     if (reUnsafeHeader.test(key)) {

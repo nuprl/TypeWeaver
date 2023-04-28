@@ -7,7 +7,7 @@ const versions = require('./browserVersions').browserVersions
 
 const MATH2LOG = Math.log(2)
 
-function unpackSupport(cipher: Cipher) {
+function unpackSupport(cipher: string) {
   // bit flags
   let stats = Object.keys(supported).reduce((list, support) => {
     if (cipher & supported[support]) list.push(support)
@@ -26,7 +26,7 @@ function unpackSupport(cipher: Cipher) {
   return stats.concat(notesArray).join(' ')
 }
 
-function unpackFeature(packed: any) {
+function unpackFeature(packed: string) {
   let unpacked = { status: statuses[packed.B], title: packed.C }
   unpacked.stats = Object.keys(packed.A).reduce((browserStats, key) => {
     let browser = packed.A[key]

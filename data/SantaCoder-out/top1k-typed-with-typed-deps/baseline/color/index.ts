@@ -442,7 +442,7 @@ function roundToPlace(places: number) {
 	};
 }
 
-function getset(model: Model, channel: Channel, modifier: Modifier) {
+function getset(model: Model, channel: string, modifier: string) {
 	model = Array.isArray(model) ? model : [model];
 
 	for (const m of model) {
@@ -483,7 +483,7 @@ function assertArray(value: any) {
 	return Array.isArray(value) ? value : [value];
 }
 
-function zeroArray(array: number[], length: number) {
+function zeroArray(array: any[], length: number) {
 	for (let i = 0; i < length; i++) {
 		if (typeof array[i] !== 'number') {
 			array[i] = 0;

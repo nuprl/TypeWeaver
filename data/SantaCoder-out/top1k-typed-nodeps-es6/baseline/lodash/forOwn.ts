@@ -18,12 +18,12 @@
  *
  * Foo.prototype.c = 3
  *
- * forOwn(new Foo, function(value: number, key: string) {
+ * forOwn(new Foo, function(value: any, key: string) {
  *   console.log(key)
  * })
  * // => Logs 'a' then 'b' (iteration order is not guaranteed).
  */
-function forOwn(object: Object, iteratee: any) {
+function forOwn(object: Object, iteratee: Function) {
   object = Object(object)
   Object.keys(object).forEach((key) => iteratee(object[key], key, object))
 }

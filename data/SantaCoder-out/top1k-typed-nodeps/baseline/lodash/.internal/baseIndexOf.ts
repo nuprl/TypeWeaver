@@ -11,7 +11,7 @@ import strictIndexOf from './strictIndexOf.js'
  * @param {number} fromIndex The index to search from.
  * @returns {number} Returns the index of the matched value, else `-1`.
  */
-function baseIndexOf(array: Array<any>, value: any, fromIndex: number) {
+function baseIndexOf(array: any[], value: any, fromIndex: number) {
   return value === value
     ? strictIndexOf(array, value, fromIndex)
     : baseFindIndex(array, baseIsNaN, fromIndex)

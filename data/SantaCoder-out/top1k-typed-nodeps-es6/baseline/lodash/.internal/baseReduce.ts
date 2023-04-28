@@ -11,7 +11,7 @@
  * @param {Function} eachFunc The function to iterate over `collection`.
  * @returns {*} Returns the accumulated value.
  */
-function baseReduce(collection: Collection<any>, iteratee: any, accumulator: any, initAccum: any, eachFunc: any) {
+function baseReduce(collection: any[], iteratee: any, accumulator: any, initAccum: any, eachFunc: any) {
   eachFunc(collection, (value, index, collection) => {
     accumulator = initAccum
       ? (initAccum = false, value)

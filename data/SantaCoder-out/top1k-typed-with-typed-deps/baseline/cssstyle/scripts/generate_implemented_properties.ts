@@ -54,7 +54,7 @@ statements.push(
 );
 
 out_file.write(generate(t.program(statements)).code + '\n');
-out_file.end(function(err: Error) {
+out_file.end(function(err: any) {
   if (err) {
     throw err;
   }

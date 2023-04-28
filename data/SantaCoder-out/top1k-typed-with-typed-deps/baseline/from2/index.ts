@@ -8,7 +8,7 @@ from2.obj = obj
 
 var Proto = ctor()
 
-function toFunction(list: Array<any>) {
+function toFunction(list: any[]) {
   list = list.slice()
   return function (_: any, cb: any) {
     var err = null
@@ -22,7 +22,7 @@ function toFunction(list: Array<any>) {
   }
 }
 
-function from2(opts: ReadOptions, read: any) {
+function from2(opts: Options, read: any) {
   if (typeof opts !== 'object' || Array.isArray(opts)) {
     read = opts
     opts = {}
@@ -33,7 +33,7 @@ function from2(opts: ReadOptions, read: any) {
   return rs
 }
 
-function ctor(opts: IReadOptions, read: any) {
+function ctor(opts: any, read: any) {
   if (typeof opts === 'function') {
     read = opts
     opts = {}
@@ -52,7 +52,7 @@ function ctor(opts: IReadOptions, read: any) {
     var self = this
     var hwm = this._readableState.highWaterMark
 
-    function check(err: Error, data: any) {
+    function check(err: Error, data: Buffer) {
       if (self.destroyed) return
       if (err) return self.destroy(err)
       if (data === null) return self.push(null)
@@ -82,7 +82,7 @@ function ctor(opts: IReadOptions, read: any) {
   return Class
 }
 
-function obj(opts: IReadOptions, read: any) {
+function obj(opts: any, read: any) {
   if (typeof opts === 'function' || Array.isArray(opts)) {
     read = opts
     opts = {}
@@ -97,7 +97,7 @@ function obj(opts: IReadOptions, read: any) {
 
 function noop () {}
 
-function defaults(opts: IOptions) {
+function defaults(opts: any) {
   opts = opts || {}
   return opts
 }

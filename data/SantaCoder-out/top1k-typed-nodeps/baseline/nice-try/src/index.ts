@@ -5,7 +5,7 @@
  * @param {Function} fn - Function that might or might not throw an error.
  * @returns {?*} Return-value of the function when no error occurred.
  */
-module.exports = function(fn: any) {
+module.exports = function(fn: Function) {
 
 	try { return fn() } catch (e) {}
 

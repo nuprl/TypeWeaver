@@ -21,12 +21,12 @@ for (var z = 1; z < 100; z++)
 suite
 // add tests
 
-.add('async.map', function(deferred: Deferred<any>)
+.add('async.map', function(deferred: any)
 {
   var total = 0;
 
   async.map(source,
-  function(i: number, cb: any)
+  function(i: number, cb: Function)
   {
     setImmediate(function()
     {
@@ -34,7 +34,7 @@ suite
       cb(null, total);
     });
   },
-  function(err: Error, result: Schema$Operation)
+  function(err: any, result: any)
   {
     assert.ifError(err);
     assert.equal(result[result.length - 1], expected);
@@ -43,12 +43,12 @@ suite
 }, {'defer': true})
 
 
-.add('asynckit.parallel', function(deferred: Deferred<any>)
+.add('asynckit.parallel', function(deferred: asynckit.Deferred<any>)
 {
   var total = 0;
 
   asynckit.parallel(source,
-  function(i: number, cb: any)
+  function(i: number, cb: Function)
   {
     setImmediate(function()
     {
@@ -66,7 +66,7 @@ suite
 
 
 // add listeners
-.on('cycle', function(ev: MouseEvent)
+.on('cycle', function(ev: Event)
 {
   console.log(String(ev.target));
 })

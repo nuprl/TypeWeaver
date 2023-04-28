@@ -13,7 +13,7 @@ const {
 
 import { default as testpage } from '../utils/testpage';
 
-testpage(function (addTest: any, done: any) {
+testpage(function (addTest: Function, done: Function) {
   addTest('Named exports');
 
   addTest('uuidv1()', uuidv1());

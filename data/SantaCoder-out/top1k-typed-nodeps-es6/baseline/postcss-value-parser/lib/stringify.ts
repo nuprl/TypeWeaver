@@ -1,4 +1,4 @@
-function stringifyNode(node: Node, custom: CustomNodeSerializer) {
+function stringifyNode(node: Node, custom: string[]) {
   var type = node.type;
   var value = node.value;
   var buf;
