@@ -1,2 +1,2 @@
-declare function times(n: number, iteratee: any): any[];
+declare function times(n: number, iteratee: Function): any[];
 export default times;

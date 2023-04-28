@@ -6,7 +6,7 @@ export default function cargo(worker: Worker, concurrency: number, payload: any)
     };
     [Symbol.iterator](): Generator<any, void, unknown>;
     concurrency: number;
-    payload: any;
+    payload: any[];
     buffer: number;
     started: boolean;
     paused: boolean;

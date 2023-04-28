@@ -9,8 +9,8 @@ declare class AsyncSeriesBailHookCodeFactory extends HookCodeFactory {
     }): any;
 }
 declare const factory: AsyncSeriesBailHookCodeFactory;
-declare const COMPILE: (options: IOptions) => any;
-declare function AsyncSeriesBailHook(args: any[], any: any, name: any, string: any): any;
+declare const COMPILE: (options: any) => any;
+declare function AsyncSeriesBailHook(args: any[], any: any, []: Iterable<any>, name: any, string: any): any;
 declare namespace AsyncSeriesBailHook {
     var prototype: any;
 }

@@ -19,7 +19,7 @@ declare const baseMinusTMin: number;
 declare const floor: (x: number) => number;
 declare const stringFromCharCode: (...codes: number[]) => string;
 declare function error(type: string): void;
-declare function map(array: any[], fn: any): any[];
+declare function map(array: any[], fn: Function): any[];
 declare function mapDomain(string: string, fn: any): string;
 declare function ucs2decode(string: string): any[];
 declare const ucs2encode: (array: any) => string;
@@ -27,7 +27,7 @@ declare const basicToDigit: (codePoint: number) => number;
 declare const digitToBasic: (digit: number, flag: number) => number;
 declare const adapt: (delta: number, numPoints: number, firstTime: boolean) => number;
 declare const decode: (input: string) => string;
-declare const encode: (input: string) => string;
+declare const encode: (input: number) => string;
 declare const toUnicode: (input: string) => string;
 declare const toASCII: (input: string) => string;
 declare const punycode: {
@@ -37,7 +37,7 @@ declare const punycode: {
         encode: (array: any) => string;
     };
     decode: (input: string) => string;
-    encode: (input: string) => string;
+    encode: (input: number) => string;
     toASCII: (input: string) => string;
     toUnicode: (input: string) => string;
 };

@@ -9,4 +9,4 @@ export default class Enumerator {
     _setResultAt(state: any, i: any, value: any, firstPass: any): void;
     _willSettleAt(promise: any, i: any, firstPass: any): void;
 }
-export declare function setSettledResult(state: Promise<any>, i: number, value: any): void;
+export declare function setSettledResult(state: any, i: number, value: any): void;

@@ -1,1 +1,1 @@
-export default function (uniq: boolean): string;
+export default function (uniq: string): string;

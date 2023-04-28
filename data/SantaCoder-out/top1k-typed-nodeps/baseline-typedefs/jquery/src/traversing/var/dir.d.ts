@@ -1,1 +1,1 @@
-export default function (elem: Node, dir: string, until: Node): any[];
+export default function (elem: HTMLElement, dir: string, until: HTMLElement): any[];

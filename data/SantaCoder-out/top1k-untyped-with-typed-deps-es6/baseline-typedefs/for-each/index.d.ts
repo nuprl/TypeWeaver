@@ -1,2 +1,2 @@
-declare var forEach: (list: ArrayLike<T>, iterator: any, thisArg: any) => void;
+declare var forEach: (list: any[], iterator: Function, thisArg: any) => void;
 export default forEach;

@@ -1,34 +1,60 @@
-rbtree.ts(8,24): error TS2304: Cannot find name 'Color'.
-rbtree.ts(8,62): error TS2749: 'RBNode' refers to a value, but is being used as a type here. Did you mean 'typeof RBNode'?
-rbtree.ts(8,77): error TS2749: 'RBNode' refers to a value, but is being used as a type here. Did you mean 'typeof RBNode'?
+rbtree.ts(8,61): error TS2749: 'RBNode' refers to a value, but is being used as a type here. Did you mean 'typeof RBNode'?
+rbtree.ts(8,76): error TS2749: 'RBNode' refers to a value, but is being used as a type here. Did you mean 'typeof RBNode'?
 rbtree.ts(18,26): error TS2339: Property '_color' does not exist on type 'Node'.
 rbtree.ts(18,39): error TS2339: Property 'key' does not exist on type 'Node'.
 rbtree.ts(18,49): error TS2339: Property 'value' does not exist on type 'Node'.
 rbtree.ts(18,61): error TS2339: Property 'left' does not exist on type 'Node'.
 rbtree.ts(18,72): error TS2339: Property 'right' does not exist on type 'Node'.
 rbtree.ts(18,84): error TS2339: Property '_count' does not exist on type 'Node'.
-rbtree.ts(22,33): error TS2339: Property 'key' does not exist on type 'Node'.
-rbtree.ts(22,43): error TS2339: Property 'value' does not exist on type 'Node'.
-rbtree.ts(22,55): error TS2339: Property 'left' does not exist on type 'Node'.
-rbtree.ts(22,66): error TS2339: Property 'right' does not exist on type 'Node'.
-rbtree.ts(22,78): error TS2339: Property '_count' does not exist on type 'Node'.
+rbtree.ts(22,21): error TS2345: Argument of type 'string' is not assignable to parameter of type 'boolean'.
+rbtree.ts(22,33): error TS2339: Property 'key' does not exist on type 'HTMLElement'.
+rbtree.ts(22,43): error TS2339: Property 'value' does not exist on type 'HTMLElement'.
+rbtree.ts(22,55): error TS2339: Property 'left' does not exist on type 'HTMLElement'.
+rbtree.ts(22,66): error TS2339: Property 'right' does not exist on type 'HTMLElement'.
+rbtree.ts(22,78): error TS2339: Property '_count' does not exist on type 'HTMLElement'.
 rbtree.ts(26,8): error TS2339: Property '_count' does not exist on type 'Node'.
 rbtree.ts(26,27): error TS2339: Property 'left' does not exist on type 'Node'.
 rbtree.ts(26,39): error TS2339: Property 'left' does not exist on type 'Node'.
 rbtree.ts(26,64): error TS2339: Property 'right' does not exist on type 'Node'.
 rbtree.ts(26,77): error TS2339: Property 'right' does not exist on type 'Node'.
-rbtree.ts(84,32): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+rbtree.ts(84,27): error TS2345: Argument of type 'number' is not assignable to parameter of type 'boolean'.
 rbtree.ts(108,30): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 rbtree.ts(136,30): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 rbtree.ts(169,29): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 rbtree.ts(197,29): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
-rbtree.ts(233,29): error TS2304: Cannot find name 'IVisitFull'.
-rbtree.ts(233,47): error TS2552: Cannot find name 'INode'. Did you mean 'Node'?
+rbtree.ts(233,29): error TS2304: Cannot find name 'Visit'.
+rbtree.ts(234,11): error TS2339: Property 'left' does not exist on type 'Node'.
+rbtree.ts(235,37): error TS2339: Property 'left' does not exist on type 'Node'.
+rbtree.ts(238,22): error TS2339: Property 'key' does not exist on type 'Node'.
+rbtree.ts(238,32): error TS2339: Property 'value' does not exist on type 'Node'.
+rbtree.ts(240,11): error TS2339: Property 'right' does not exist on type 'Node'.
+rbtree.ts(241,36): error TS2339: Property 'right' does not exist on type 'Node'.
+rbtree.ts(282,61): error TS2304: Cannot find name 'rbTree'.
+rbtree.ts(282,73): error TS2304: Cannot find name 'rbTree'.
+rbtree.ts(362,26): error TS2304: Cannot find name 'K'.
+rbtree.ts(383,26): error TS2304: Cannot find name 'K'.
+rbtree.ts(404,26): error TS2304: Cannot find name 'K'.
+rbtree.ts(425,26): error TS2304: Cannot find name 'K'.
+rbtree.ts(447,28): error TS2304: Cannot find name 'K'.
+rbtree.ts(467,30): error TS2304: Cannot find name 'K'.
+rbtree.ts(476,27): error TS2304: Cannot find name 'K'.
 rbtree.ts(494,37): error TS2749: 'RedBlackTree' refers to a value, but is being used as a type here. Did you mean 'typeof RedBlackTree'?
-rbtree.ts(494,63): error TS2304: Cannot find name 'RedBlackTreeIteratorStack'.
-rbtree.ts(525,22): error TS2315: Type 'Node' is not generic.
-rbtree.ts(525,36): error TS2315: Type 'Node' is not generic.
-rbtree.ts(535,32): error TS2304: Cannot find name 'Stack'.
+rbtree.ts(494,64): error TS2304: Cannot find name 'RedBlackTreeNode'.
+rbtree.ts(494,81): error TS2304: Cannot find name 'T'.
+rbtree.ts(526,5): error TS2339: Property 'key' does not exist on type 'Node'.
+rbtree.ts(526,13): error TS2339: Property 'key' does not exist on type 'Node'.
+rbtree.ts(527,5): error TS2339: Property 'value' does not exist on type 'Node'.
+rbtree.ts(527,15): error TS2339: Property 'value' does not exist on type 'Node'.
+rbtree.ts(528,5): error TS2339: Property 'left' does not exist on type 'Node'.
+rbtree.ts(528,14): error TS2339: Property 'left' does not exist on type 'Node'.
+rbtree.ts(529,5): error TS2339: Property 'right' does not exist on type 'Node'.
+rbtree.ts(529,15): error TS2339: Property 'right' does not exist on type 'Node'.
+rbtree.ts(530,5): error TS2339: Property '_color' does not exist on type 'Node'.
+rbtree.ts(530,16): error TS2339: Property '_color' does not exist on type 'Node'.
+rbtree.ts(531,5): error TS2339: Property '_count' does not exist on type 'Node'.
+rbtree.ts(531,16): error TS2339: Property '_count' does not exist on type 'Node'.
+rbtree.ts(535,32): error TS2315: Type 'Node' is not generic.
+rbtree.ts(535,37): error TS2304: Cannot find name 'T'.
 rbtree.ts(601,29): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 rbtree.ts(605,29): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 rbtree.ts(690,28): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.

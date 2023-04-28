@@ -1,7 +1,7 @@
 declare function percentDecodeBytes(input: string): Uint8Array;
 declare function percentDecodeString(input: string): Uint8Array;
 declare function isC0ControlPercentEncode(c: number): boolean;
-declare function isFragmentPercentEncode(c: string): boolean;
+declare function isFragmentPercentEncode(c: number): boolean;
 declare function isQueryPercentEncode(c: string): boolean;
 declare function isSpecialQueryPercentEncode(c: string): boolean;
 declare function isPathPercentEncode(c: string): boolean;

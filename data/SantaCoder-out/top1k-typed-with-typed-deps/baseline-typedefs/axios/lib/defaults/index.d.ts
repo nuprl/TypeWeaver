@@ -5,7 +5,7 @@ declare const defaults: {
         clarifyTimeoutError: boolean;
     };
     adapter: any;
-    transformRequest: ((data: AxiosRequestConfig, headers: AxiosRequestConfig.headers) => any)[];
+    transformRequest: ((data: any, headers: any) => any)[];
     transformResponse: ((data: any) => any)[];
     timeout: number;
     xsrfCookieName: string;

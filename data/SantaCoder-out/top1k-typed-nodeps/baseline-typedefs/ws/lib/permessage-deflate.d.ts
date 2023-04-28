@@ -24,6 +24,6 @@ declare class PerMessageDeflate {
     _decompress(data: any, fin: any, callback: any): void;
     _compress(data: any, fin: any, callback: any): void;
 }
-declare function deflateOnData(chunk: Uint8Array): void;
-declare function inflateOnData(chunk: Uint8Array): void;
+declare function deflateOnData(chunk: Buffer): void;
+declare function inflateOnData(chunk: any): void;
 declare function inflateOnError(err: Error): void;

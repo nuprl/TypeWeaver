@@ -1,2 +1,2 @@
-declare function initial(array: number[]): any[];
+declare function initial(array: Array<number>): any[];
 export default initial;

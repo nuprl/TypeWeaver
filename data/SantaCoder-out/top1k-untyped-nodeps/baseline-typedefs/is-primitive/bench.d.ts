@@ -10,7 +10,7 @@ declare const array: {
 declare const object: string[];
 declare const values: {}[];
 declare function current(val: any): boolean;
-declare function negation(val: boolean): boolean;
+declare function negation(val: any): boolean;
 declare function isPrimitiveEquals(val: any): boolean;
 declare function isPrimitiveEqualsNot(val: any): boolean;
 declare function isPrimitiveIf(val: any): boolean;

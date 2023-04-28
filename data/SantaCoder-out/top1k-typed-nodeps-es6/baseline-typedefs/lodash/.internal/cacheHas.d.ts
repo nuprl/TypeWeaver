@@ -1,2 +1,2 @@
-declare function cacheHas(cache: Cache<any>, key: any): any;
+declare function cacheHas(cache: Cache, key: string): any;
 export default cacheHas;

@@ -1,2 +1,2 @@
-declare function pullAllBy(array: Array<any>, values: Array<any>, iteratee: any): any[];
+declare function pullAllBy(array: any[], values: any[], iteratee: Function): any[];
 export default pullAllBy;

@@ -1,3 +1,4 @@
+Gruntfile.ts(1,34): error TS2503: Cannot find namespace 'grunt'.
 coverage/prettify.ts(1,8): error TS2339: Property 'PR_SHOULD_USE_CONTINUATION' does not exist on type 'Window & typeof globalThis'.
 coverage/prettify.ts(1,6196): error TS2339: Property 'decorations' does not exist on type '{ sourceCode: any; basePos: any; }'.
 coverage/prettify.ts(1,11501): error TS2403: Subsequent variable declarations must have the same type.  Variable 'W' must be of type 'any', but here has type 'number'.
@@ -36,24 +37,15 @@ coverage/prettify.ts(1,17526): error TS2304: Cannot find name 'PR'.
 cssesc.ts(4,5): error TS2451: Cannot redeclare block-scoped variable 'object'.
 cssesc.ts(5,5): error TS2451: Cannot redeclare block-scoped variable 'hasOwnProperty'.
 cssesc.ts(6,5): error TS2451: Cannot redeclare block-scoped variable 'merge'.
-cssesc.ts(6,37): error TS2304: Cannot find name 'MergeOptions'.
-cssesc.ts(6,61): error TS2304: Cannot find name 'MergeOptions'.
 cssesc.ts(19,5): error TS2451: Cannot redeclare block-scoped variable 'regexAnySingleEscape'.
 cssesc.ts(20,5): error TS2451: Cannot redeclare block-scoped variable 'regexSingleEscape'.
 cssesc.ts(21,5): error TS2451: Cannot redeclare block-scoped variable 'regexAlwaysEscape'.
 cssesc.ts(22,5): error TS2451: Cannot redeclare block-scoped variable 'regexExcessiveSpaces'.
-cssesc.ts(25,55): error TS2304: Cannot find name 'CSSEscOptions'.
-cssesc.ts(26,34): error TS2339: Property 'options' does not exist on type '(string: string, options: CSSEscOptions) => string'.
+cssesc.ts(25,55): error TS2304: Cannot find name 'Options'.
+cssesc.ts(26,34): error TS2339: Property 'options' does not exist on type '(string: string, options: Options) => string'.
 cssesc.ts(39,29): error TS2554: Expected 1 arguments, but got 0.
-cssesc.ts(85,48): error TS2769: No overload matches this call.
-  The last overload gave the following error.
-    Argument of type '($0: number, $1: number, $2: number) => any' is not assignable to parameter of type '(substring: string, ...args: any[]) => string'.
-      Types of parameters '$0' and 'substring' are incompatible.
-        Type 'string' is not assignable to type 'number'.
-cssesc.ts(86,16): error TS2339: Property 'length' does not exist on type 'number'.
-cssesc.ts(91,10): error TS2365: Operator '+' cannot be applied to types 'string | number' and 'number'.
-cssesc.ts(101,8): error TS2339: Property 'options' does not exist on type '(string: string, options: CSSEscOptions) => string'.
-cssesc.ts(108,8): error TS2339: Property 'version' does not exist on type '(string: string, options: CSSEscOptions) => string'.
+cssesc.ts(101,8): error TS2339: Property 'options' does not exist on type '(string: string, options: Options) => string'.
+cssesc.ts(108,8): error TS2339: Property 'version' does not exist on type '(string: string, options: Options) => string'.
 src/cssesc.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'object'.
 src/cssesc.ts(5,7): error TS2451: Cannot redeclare block-scoped variable 'hasOwnProperty'.
 src/cssesc.ts(6,7): error TS2451: Cannot redeclare block-scoped variable 'merge'.
@@ -61,14 +53,7 @@ src/cssesc.ts(21,7): error TS2451: Cannot redeclare block-scoped variable 'regex
 src/cssesc.ts(22,7): error TS2451: Cannot redeclare block-scoped variable 'regexSingleEscape'.
 src/cssesc.ts(23,7): error TS2451: Cannot redeclare block-scoped variable 'regexAlwaysEscape'.
 src/cssesc.ts(24,7): error TS2451: Cannot redeclare block-scoped variable 'regexExcessiveSpaces'.
-src/cssesc.ts(28,34): error TS2339: Property 'options' does not exist on type '(string: string, options: CSSEscOptions) => string'.
-src/cssesc.ts(96,48): error TS2769: No overload matches this call.
-  The last overload gave the following error.
-    Argument of type '($0: number, $1: number, $2: number) => any' is not assignable to parameter of type '(substring: string, ...args: any[]) => string'.
-      Types of parameters '$0' and 'substring' are incompatible.
-        Type 'string' is not assignable to type 'number'.
-src/cssesc.ts(97,16): error TS2339: Property 'length' does not exist on type 'number'.
-src/cssesc.ts(102,10): error TS2365: Operator '+' cannot be applied to types 'string | number' and 'number'.
-src/cssesc.ts(112,8): error TS2339: Property 'options' does not exist on type '(string: string, options: CSSEscOptions) => string'.
-src/cssesc.ts(119,8): error TS2339: Property 'version' does not exist on type '(string: string, options: CSSEscOptions) => string'.
+src/cssesc.ts(28,34): error TS2339: Property 'options' does not exist on type '(string: string, options: Options) => string'.
+src/cssesc.ts(112,8): error TS2339: Property 'options' does not exist on type '(string: string, options: Options) => string'.
+src/cssesc.ts(119,8): error TS2339: Property 'version' does not exist on type '(string: string, options: Options) => string'.
 

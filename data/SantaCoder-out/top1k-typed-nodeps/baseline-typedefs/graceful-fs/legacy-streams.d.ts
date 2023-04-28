@@ -1,5 +1,5 @@
 declare var Stream: any;
-declare function legacy(fs: FileSystem): {
-    ReadStream: (path: string, options: ReadableOptions) => any;
-    WriteStream: (path: string, options: IWriteStreamOptions) => any;
+declare function legacy(fs: any): {
+    ReadStream: (path: string, options: ReadStreamOptions) => any;
+    WriteStream: (path: string, options: WriteStreamOptions) => any;
 };

@@ -189,12 +189,12 @@ lib/ReplaceSource.ts(112,16): error TS2551: Property '_source' does not exist on
 lib/ReplaceSource.ts(118,15): error TS2551: Property '_source' does not exist on type 'ReplaceSource'. Did you mean 'source'?
 lib/ReplaceSource.ts(122,12): error TS2339: Property '_isSorted' does not exist on type 'ReplaceSource'.
 lib/ReplaceSource.ts(124,9): error TS2551: Property '_replacements' does not exist on type 'ReplaceSource'. Did you mean 'getReplacements'?
-lib/ReplaceSource.ts(124,41): error TS2552: Cannot find name 'IRange'. Did you mean 'Range'?
-lib/ReplaceSource.ts(124,52): error TS2552: Cannot find name 'IRange'. Did you mean 'Range'?
+lib/ReplaceSource.ts(124,41): error TS2304: Cannot find name 'IToken'.
+lib/ReplaceSource.ts(124,52): error TS2304: Cannot find name 'IToken'.
 lib/ReplaceSource.ts(132,9): error TS2551: Property '_replacements' does not exist on type 'ReplaceSource'. Did you mean 'getReplacements'?
 lib/ReplaceSource.ts(133,9): error TS2551: Property '_replacements' does not exist on type 'ReplaceSource'. Did you mean 'getReplacements'?
-lib/ReplaceSource.ts(133,41): error TS2304: Cannot find name 'ITextChange'.
-lib/ReplaceSource.ts(133,57): error TS2304: Cannot find name 'ITextChange'.
+lib/ReplaceSource.ts(133,41): error TS2304: Cannot find name 'IToken'.
+lib/ReplaceSource.ts(133,52): error TS2304: Cannot find name 'IToken'.
 lib/ReplaceSource.ts(141,8): error TS2339: Property '_isSorted' does not exist on type 'ReplaceSource'.
 lib/ReplaceSource.ts(146,22): error TS2551: Property '_replacements' does not exist on type 'ReplaceSource'. Did you mean 'getReplacements'?
 lib/ReplaceSource.ts(176,9): error TS2551: Property '_source' does not exist on type 'ReplaceSource'. Did you mean 'source'?

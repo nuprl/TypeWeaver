@@ -12,8 +12,8 @@ declare class SyncBailHookCodeFactory extends HookCodeFactory {
 declare const factory: SyncBailHookCodeFactory;
 declare const TAP_ASYNC: () => never;
 declare const TAP_PROMISE: () => never;
-declare const COMPILE: (options: IOptions) => any;
-declare function SyncBailHook(args: any[], SyncBailHookArgs: any, name: any, string: any): any;
+declare const COMPILE: (options: any) => any;
+declare function SyncBailHook(args: any[], any: any, []: Iterable<any>, name: any, string: any): any;
 declare namespace SyncBailHook {
     var prototype: any;
 }

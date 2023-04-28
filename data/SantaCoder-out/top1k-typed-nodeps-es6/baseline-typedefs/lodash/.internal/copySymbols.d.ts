@@ -1,2 +1,2 @@
-declare function copySymbols(source: any, object: any): any;
+declare function copySymbols(source: object, object: object): any;
 export default copySymbols;

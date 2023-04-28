@@ -1,1 +1,1 @@
-export default function doUntil(iteratee: any, test: any, callback: any): any;
+export default function doUntil(iteratee: Function, test: Function, callback: Function): any;

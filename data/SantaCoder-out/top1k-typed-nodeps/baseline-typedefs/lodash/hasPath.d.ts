@@ -1,2 +1,2 @@
-declare function hasPath(object: any, path: string[]): boolean;
+declare function hasPath(object: any, path: string): boolean;
 export default hasPath;

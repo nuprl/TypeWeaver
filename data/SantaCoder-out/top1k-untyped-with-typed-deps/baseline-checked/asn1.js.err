@@ -2,35 +2,30 @@ lib/asn1.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'asn1'.
 lib/asn1/api.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'encoders'.
 lib/asn1/api.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'decoders'.
 lib/asn1/api.ts(5,7): error TS2451: Cannot redeclare block-scoped variable 'inherits'.
-lib/asn1/api.ts(13,37): error TS2304: Cannot find name 'EntityBody'.
-lib/asn1/api.ts(13,37): error TS4078: Parameter 'body' of exported function has or is using private name 'EntityBody'.
+lib/asn1/api.ts(10,27): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'String'.
+  Type 'Function' is missing the following properties from type 'String': charAt, charCodeAt, concat, indexOf, and 43 more.
 lib/asn1/api.ts(24,30): error TS2749: 'Entity' refers to a value, but is being used as a type here. Did you mean 'typeof Entity'?
 lib/asn1/api.ts(28,64): error TS2749: 'Entity' refers to a value, but is being used as a type here. Did you mean 'typeof Entity'?
-lib/asn1/api.ts(43,83): error TS2552: Cannot find name 'DecodeOptions'. Did you mean 'TextDecodeOptions'?
+lib/asn1/api.ts(43,79): error TS2304: Cannot find name 'Options'.
 lib/asn1/api.ts(55,92): error TS2749: 'Reporter' refers to a value, but is being used as a type here. Did you mean 'typeof Reporter'?
 lib/asn1/base/buffer.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'inherits'.
 lib/asn1/base/buffer.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'Reporter'.
 lib/asn1/base/buffer.ts(5,7): error TS2451: Cannot redeclare block-scoped variable 'Buffer'.
+lib/asn1/base/buffer.ts(7,30): error TS2749: 'Buffer' refers to a value, but is being used as a type here. Did you mean 'typeof Buffer'?
+lib/asn1/base/buffer.ts(7,30): error TS4078: Parameter 'base' of exported function has or is using private name 'Buffer'.
 lib/asn1/base/buffer.ts(7,47): error TS2552: Cannot find name 'DecoderOptions'. Did you mean 'TextDecoderOptions'?
 lib/asn1/base/buffer.ts(7,47): error TS4078: Parameter 'options' of exported function has or is using private name 'DecoderOptions'.
-lib/asn1/base/buffer.ts(16,22): error TS2339: Property 'length' does not exist on type 'number'.
+lib/asn1/base/buffer.ts(46,58): error TS2304: Cannot find name 'Save'.
 lib/asn1/base/buffer.ts(48,15): error TS2554: Expected 2 arguments, but got 1.
-lib/asn1/base/buffer.ts(49,21): error TS2339: Property 'offset' does not exist on type 'boolean'.
-lib/asn1/base/buffer.ts(52,22): error TS2339: Property 'offset' does not exist on type 'boolean'.
-lib/asn1/base/buffer.ts(53,46): error TS2339: Property 'reporter' does not exist on type 'boolean'.
 lib/asn1/base/buffer.ts(73,15): error TS2554: Expected 2 arguments, but got 1.
 lib/asn1/base/buffer.ts(85,38): error TS2339: Property 'offset' does not exist on type 'true'.
 lib/asn1/base/buffer.ts(88,46): error TS2749: 'Reporter' refers to a value, but is being used as a type here. Did you mean 'typeof Reporter'?
 lib/asn1/base/buffer.ts(88,46): error TS4078: Parameter 'reporter' of exported function has or is using private name 'Reporter'.
-lib/asn1/base/buffer.ts(91,43): error TS2304: Cannot find name 'IEncoderBuffer'.
 lib/asn1/base/buffer.ts(93,16): error TS2350: Only a void function can be called with the 'new' keyword.
-lib/asn1/base/buffer.ts(138,39): error TS2304: Cannot find name 'IItem'.
-lib/asn1/base/buffer.ts(144,7): error TS2542: Index signature in type 'String' only permits reading.
-lib/asn1/base/buffer.ts(146,11): error TS2339: Property 'write' does not exist on type 'string'.
+lib/asn1/base/buffer.ts(138,39): error TS2304: Cannot find name 'T'.
+lib/asn1/base/buffer.ts(146,11): error TS2339: Property 'write' does not exist on type 'Uint8Array'.
 lib/asn1/base/node.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'Reporter'.
 lib/asn1/base/node.ts(32,10): error TS2300: Duplicate identifier 'Node'.
-lib/asn1/base/node.ts(32,20): error TS2304: Cannot find name 'Encoding'.
-lib/asn1/base/node.ts(32,20): error TS4078: Parameter 'enc' of exported function has or is using private name 'Encoding'.
 lib/asn1/base/node.ts(36,9): error TS2339: Property 'name' does not exist on type '{}'.
 lib/asn1/base/node.ts(37,9): error TS2339: Property 'enc' does not exist on type '{}'.
 lib/asn1/base/node.ts(39,9): error TS2339: Property 'parent' does not exist on type '{}'.
@@ -54,14 +49,14 @@ lib/asn1/base/node.ts(72,16): error TS2339: Property 'clone' does not exist on t
 lib/asn1/base/node.ts(78,43): error TS2339: Property 'parent' does not exist on type '{}'.
 lib/asn1/base/node.ts(83,16): error TS2339: Property '_wrap' does not exist on type 'Node'.
 lib/asn1/base/node.ts(94,16): error TS2339: Property '_init' does not exist on type 'Node'.
-lib/asn1/base/node.ts(101,58): error TS2304: Cannot find name 'IBaseState'.
+lib/asn1/base/node.ts(98,8): error TS2339: Property 'call' does not exist on type 'string'.
+lib/asn1/base/node.ts(101,58): error TS2304: Cannot find name 'State'.
 lib/asn1/base/node.ts(107,16): error TS2339: Property '_useArgs' does not exist on type 'Node'.
-lib/asn1/base/node.ts(123,38): error TS2304: Cannot find name 'IBaseChild'.
+lib/asn1/base/node.ts(124,13): error TS2339: Property '_baseState' does not exist on type 'Node'.
 lib/asn1/base/node.ts(135,32): error TS2345: Argument of type '(key: number) => void' is not assignable to parameter of type '(value: string, index: number, array: string[]) => void'.
   Types of parameters 'key' and 'value' are incompatible.
     Type 'string' is not assignable to type 'number'.
 lib/asn1/base/node.ts(175,16): error TS2339: Property 'use' does not exist on type 'Node'.
-lib/asn1/base/node.ts(175,41): error TS2304: Cannot find name 'IItem'.
 lib/asn1/base/node.ts(185,16): error TS2339: Property 'optional' does not exist on type 'Node'.
 lib/asn1/base/node.ts(193,16): error TS2339: Property 'def' does not exist on type 'Node'.
 lib/asn1/base/node.ts(203,16): error TS2339: Property 'explicit' does not exist on type 'Node'.
@@ -70,29 +65,29 @@ lib/asn1/base/node.ts(221,16): error TS2339: Property 'obj' does not exist on ty
 lib/asn1/base/node.ts(233,16): error TS2339: Property 'key' does not exist on type 'Node'.
 lib/asn1/base/node.ts(242,16): error TS2339: Property 'any' does not exist on type 'Node'.
 lib/asn1/base/node.ts(250,16): error TS2339: Property 'choice' does not exist on type 'Node'.
-lib/asn1/base/node.ts(250,46): error TS2304: Cannot find name 'Choice'.
+lib/asn1/base/node.ts(262,51): error TS2304: Cannot find name 'T'.
 lib/asn1/base/node.ts(275,16): error TS2339: Property '_decode' does not exist on type 'Node'.
-lib/asn1/base/node.ts(275,66): error TS2552: Cannot find name 'DecodeOptions'. Did you mean 'TextDecodeOptions'?
-lib/asn1/base/node.ts(280,18): error TS2339: Property 'wrapResult' does not exist on type 'string'.
-lib/asn1/base/node.ts(287,21): error TS2339: Property 'enterKey' does not exist on type 'string'.
-lib/asn1/base/node.ts(301,26): error TS2339: Property 'save' does not exist on type 'string'.
-lib/asn1/base/node.ts(311,13): error TS2339: Property 'restore' does not exist on type 'string'.
-lib/asn1/base/node.ts(315,17): error TS2339: Property 'isError' does not exist on type 'string'.
-lib/asn1/base/node.ts(323,21): error TS2339: Property 'enterObject' does not exist on type 'string'.
-lib/asn1/base/node.ts(329,17): error TS2339: Property 'isError' does not exist on type 'string'.
-lib/asn1/base/node.ts(334,25): error TS2339: Property 'offset' does not exist on type 'string'.
-lib/asn1/base/node.ts(340,22): error TS2339: Property 'save' does not exist on type 'string'.
-lib/asn1/base/node.ts(346,17): error TS2339: Property 'isError' does not exist on type 'string'.
-lib/asn1/base/node.ts(350,24): error TS2339: Property 'raw' does not exist on type 'string'.
-lib/asn1/base/node.ts(356,27): error TS2339: Property 'path' does not exist on type 'string'.
-lib/asn1/base/node.ts(359,27): error TS2339: Property 'path' does not exist on type 'string'.
-lib/asn1/base/node.ts(359,41): error TS2339: Property 'offset' does not exist on type 'string'.
-lib/asn1/base/node.ts(370,15): error TS2339: Property 'isError' does not exist on type 'string'.
+lib/asn1/base/node.ts(275,70): error TS2304: Cannot find name 'Options'.
+lib/asn1/base/node.ts(280,18): error TS2339: Property 'wrapResult' does not exist on type 'Uint8Array'.
+lib/asn1/base/node.ts(287,21): error TS2339: Property 'enterKey' does not exist on type 'Uint8Array'.
+lib/asn1/base/node.ts(301,26): error TS2339: Property 'save' does not exist on type 'Uint8Array'.
+lib/asn1/base/node.ts(311,13): error TS2339: Property 'restore' does not exist on type 'Uint8Array'.
+lib/asn1/base/node.ts(315,17): error TS2339: Property 'isError' does not exist on type 'Uint8Array'.
+lib/asn1/base/node.ts(323,21): error TS2339: Property 'enterObject' does not exist on type 'Uint8Array'.
+lib/asn1/base/node.ts(329,17): error TS2339: Property 'isError' does not exist on type 'Uint8Array'.
+lib/asn1/base/node.ts(334,25): error TS2339: Property 'offset' does not exist on type 'Uint8Array'.
+lib/asn1/base/node.ts(340,22): error TS2339: Property 'save' does not exist on type 'Uint8Array'.
+lib/asn1/base/node.ts(346,17): error TS2339: Property 'isError' does not exist on type 'Uint8Array'.
+lib/asn1/base/node.ts(350,24): error TS2339: Property 'raw' does not exist on type 'Uint8Array'.
+lib/asn1/base/node.ts(356,27): error TS2339: Property 'path' does not exist on type 'Uint8Array'.
+lib/asn1/base/node.ts(359,27): error TS2339: Property 'path' does not exist on type 'Uint8Array'.
+lib/asn1/base/node.ts(359,41): error TS2339: Property 'offset' does not exist on type 'Uint8Array'.
+lib/asn1/base/node.ts(370,15): error TS2339: Property 'isError' does not exist on type 'Uint8Array'.
 lib/asn1/base/node.ts(384,20): error TS2554: Expected 2 arguments, but got 1.
-lib/asn1/base/node.ts(385,51): error TS2339: Property '_reporterState' does not exist on type 'string'.
-lib/asn1/base/node.ts(392,20): error TS2339: Property 'leaveObject' does not exist on type 'string'.
-lib/asn1/base/node.ts(396,11): error TS2339: Property 'leaveKey' does not exist on type 'string'.
-lib/asn1/base/node.ts(398,11): error TS2339: Property 'exitKey' does not exist on type 'string'.
+lib/asn1/base/node.ts(385,51): error TS2339: Property '_reporterState' does not exist on type 'Uint8Array'.
+lib/asn1/base/node.ts(392,20): error TS2339: Property 'leaveObject' does not exist on type 'Uint8Array'.
+lib/asn1/base/node.ts(396,11): error TS2339: Property 'leaveKey' does not exist on type 'Uint8Array'.
+lib/asn1/base/node.ts(398,11): error TS2339: Property 'exitKey' does not exist on type 'Uint8Array'.
 lib/asn1/base/node.ts(403,16): error TS2339: Property '_decodeGeneric' does not exist on type 'Node'.
 lib/asn1/base/node.ts(403,97): error TS2552: Cannot find name 'DecodeOptions'. Did you mean 'TextDecodeOptions'?
 lib/asn1/base/node.ts(406,7): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
@@ -114,33 +109,18 @@ lib/asn1/base/node.ts(431,18): error TS2339: Property 'error' does not exist on 
 lib/asn1/base/node.ts(435,16): error TS2339: Property '_getUse' does not exist on type 'Node'.
 lib/asn1/base/node.ts(435,51): error TS2749: 'Entity' refers to a value, but is being used as a type here. Did you mean 'typeof Entity'?
 lib/asn1/base/node.ts(449,16): error TS2339: Property '_decodeChoice' does not exist on type 'Node'.
-lib/asn1/base/node.ts(449,78): error TS2304: Cannot find name 'IChoiceOptions'.
-lib/asn1/base/node.ts(455,24): error TS2339: Property 'save' does not exist on type 'string'.
-lib/asn1/base/node.ts(459,17): error TS2339: Property 'isError' does not exist on type 'string'.
-lib/asn1/base/node.ts(465,13): error TS2339: Property 'restore' does not exist on type 'string'.
-lib/asn1/base/node.ts(472,18): error TS2339: Property 'error' does not exist on type 'string'.
+lib/asn1/base/node.ts(449,82): error TS2552: Cannot find name 'DecodeOptions'. Did you mean 'TextDecodeOptions'?
+lib/asn1/base/node.ts(455,24): error TS2339: Property 'save' does not exist on type 'Uint8Array'.
+lib/asn1/base/node.ts(459,17): error TS2339: Property 'isError' does not exist on type 'Uint8Array'.
+lib/asn1/base/node.ts(465,13): error TS2339: Property 'restore' does not exist on type 'Uint8Array'.
+lib/asn1/base/node.ts(472,18): error TS2339: Property 'error' does not exist on type 'Uint8Array'.
 lib/asn1/base/node.ts(481,16): error TS2339: Property '_createEncoderBuffer' does not exist on type 'Node'.
 lib/asn1/base/node.ts(482,10): error TS2350: Only a void function can be called with the 'new' keyword.
 lib/asn1/base/node.ts(485,16): error TS2339: Property '_encode' does not exist on type 'Node'.
-lib/asn1/base/node.ts(485,63): error TS2749: 'Reporter' refers to a value, but is being used as a type here. Did you mean 'typeof Reporter'?
 lib/asn1/base/node.ts(500,16): error TS2551: Property '_encodeValue' does not exist on type 'Node'. Did you mean 'nodeValue'?
-lib/asn1/base/node.ts(500,68): error TS2749: 'Reporter' refers to a value, but is being used as a type here. Did you mean 'typeof Reporter'?
-lib/asn1/base/node.ts(533,17): error TS2339: Property '_baseState' does not exist on type 'ReactNode'.
-  Property '_baseState' does not exist on type 'string'.
-lib/asn1/base/node.ts(534,22): error TS2339: Property '_encode' does not exist on type 'ReactNode'.
-  Property '_encode' does not exist on type 'string'.
-lib/asn1/base/node.ts(536,17): error TS2339: Property '_baseState' does not exist on type 'ReactNode'.
-  Property '_baseState' does not exist on type 'string'.
-lib/asn1/base/node.ts(538,47): error TS2339: Property '_baseState' does not exist on type 'ReactNode'.
-  Property '_baseState' does not exist on type 'string'.
-lib/asn1/base/node.ts(543,25): error TS2339: Property '_encode' does not exist on type 'ReactNode'.
-  Property '_encode' does not exist on type 'string'.
-lib/asn1/base/node.ts(543,44): error TS2339: Property '_baseState' does not exist on type 'ReactNode'.
-  Property '_baseState' does not exist on type 'string'.
-lib/asn1/base/node.ts(547,37): error TS2304: Cannot find name 'IChild'.
+lib/asn1/base/node.ts(562,67): error TS2304: Cannot find name 'T'.
 lib/asn1/base/node.ts(596,16): error TS2339: Property '_encodeChoice' does not exist on type 'Node'.
-lib/asn1/base/node.ts(596,60): error TS2304: Cannot find name 'Choice'.
-lib/asn1/base/node.ts(596,78): error TS2749: 'Reporter' refers to a value, but is being used as a type here. Did you mean 'typeof Reporter'?
+lib/asn1/base/node.ts(596,75): error TS2749: 'Reporter' refers to a value, but is being used as a type here. Did you mean 'typeof Reporter'?
 lib/asn1/base/node.ts(609,16): error TS2339: Property '_encodePrimitive' does not exist on type 'Node'.
 lib/asn1/base/node.ts(612,19): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 lib/asn1/base/node.ts(614,12): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
@@ -158,8 +138,6 @@ lib/asn1/base/reporter.ts(3,7): error TS2451: Cannot redeclare block-scoped vari
 lib/asn1/base/reporter.ts(5,10): error TS2451: Cannot redeclare block-scoped variable 'Reporter'.
 lib/asn1/base/reporter.ts(5,28): error TS2304: Cannot find name 'ReporterOptions'.
 lib/asn1/base/reporter.ts(5,28): error TS4078: Parameter 'options' of exported function has or is using private name 'ReporterOptions'.
-lib/asn1/base/reporter.ts(25,53): error TS2304: Cannot find name 'ReporterState'.
-lib/asn1/base/reporter.ts(62,61): error TS2304: Cannot find name 'ReporterState'.
 lib/asn1/base/reporter.ts(74,21): error TS2358: The left-hand side of an 'instanceof' expression must be of type 'any', an object type or a type parameter.
 lib/asn1/base/reporter.ts(80,22): error TS2339: Property 'message' does not exist on type 'string'.
 lib/asn1/base/reporter.ts(80,38): error TS2554: Expected 2 arguments, but got 3.
@@ -176,83 +154,49 @@ lib/asn1/decoders/der.ts(3,7): error TS2451: Cannot redeclare block-scoped varia
 lib/asn1/decoders/der.ts(7,7): error TS2451: Cannot redeclare block-scoped variable 'Node'.
 lib/asn1/decoders/der.ts(10,7): error TS2451: Cannot redeclare block-scoped variable 'der'.
 lib/asn1/decoders/der.ts(12,10): error TS2451: Cannot redeclare block-scoped variable 'DERDecoder'.
-lib/asn1/decoders/der.ts(14,22): error TS2339: Property 'name' does not exist on type 'string'.
 lib/asn1/decoders/der.ts(18,15): error TS2554: Expected 1 arguments, but got 0.
-lib/asn1/decoders/der.ts(19,26): error TS2339: Property 'body' does not exist on type 'string'.
-lib/asn1/decoders/der.ts(23,70): error TS2304: Cannot find name 'DecodeOptions'.
-lib/asn1/decoders/der.ts(25,30): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+lib/asn1/decoders/der.ts(23,53): error TS2749: 'Buffer' refers to a value, but is being used as a type here. Did you mean 'typeof Buffer'?
+lib/asn1/decoders/der.ts(23,70): error TS2304: Cannot find name 'Options'.
 lib/asn1/decoders/der.ts(33,10): error TS2393: Duplicate function implementation.
 lib/asn1/decoders/der.ts(38,55): error TS2749: 'Buffer' refers to a value, but is being used as a type here. Did you mean 'typeof Buffer'?
 lib/asn1/decoders/der.ts(43,43): error TS2345: Argument of type 'string' is not assignable to parameter of type 'boolean'.
-lib/asn1/decoders/der.ts(50,5): error TS2367: This comparison appears to be unintentional because the types 'string' and 'number' have no overlap.
+lib/asn1/decoders/der.ts(53,59): error TS2749: 'Buffer' refers to a value, but is being used as a type here. Did you mean 'typeof Buffer'?
 lib/asn1/decoders/der.ts(55,5): error TS2345: Argument of type 'string' is not assignable to parameter of type 'boolean'.
-lib/asn1/decoders/der.ts(56,14): error TS2339: Property 'isError' does not exist on type 'Uint8Array'.
 lib/asn1/decoders/der.ts(61,5): error TS2345: Argument of type 'string' is not assignable to parameter of type 'boolean'.
-lib/asn1/decoders/der.ts(64,14): error TS2339: Property 'isError' does not exist on type 'Uint8Array'.
 lib/asn1/decoders/der.ts(70,7): error TS2367: This comparison appears to be unintentional because the types 'string' and 'number' have no overlap.
-lib/asn1/decoders/der.ts(71,19): error TS2339: Property 'error' does not exist on type 'Uint8Array'.
-lib/asn1/decoders/der.ts(75,19): error TS2339: Property 'skip' does not exist on type 'Uint8Array'.
-lib/asn1/decoders/der.ts(78,24): error TS2339: Property 'save' does not exist on type 'Uint8Array'.
-lib/asn1/decoders/der.ts(82,14): error TS2339: Property 'isError' does not exist on type 'Uint8Array'.
-lib/asn1/decoders/der.ts(85,16): error TS2339: Property 'offset' does not exist on type 'Uint8Array'.
-lib/asn1/decoders/der.ts(86,10): error TS2339: Property 'restore' does not exist on type 'Uint8Array'.
-lib/asn1/decoders/der.ts(87,17): error TS2339: Property 'skip' does not exist on type 'Uint8Array'.
-lib/asn1/decoders/der.ts(90,65): error TS2304: Cannot find name 'Readable'.
-lib/asn1/decoders/der.ts(131,7): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
-lib/asn1/decoders/der.ts(132,27): error TS2339: Property 'readUInt8' does not exist on type 'Uint8Array'.
-lib/asn1/decoders/der.ts(133,16): error TS2339: Property 'isError' does not exist on type 'Uint8Array'.
-lib/asn1/decoders/der.ts(135,43): error TS2339: Property 'raw' does not exist on type 'Uint8Array'.
-lib/asn1/decoders/der.ts(136,14): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
-lib/asn1/decoders/der.ts(137,24): error TS2339: Property 'raw' does not exist on type 'Uint8Array'.
-lib/asn1/decoders/der.ts(139,21): error TS2339: Property 'error' does not exist on type 'Uint8Array'.
-lib/asn1/decoders/der.ts(146,14): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
-lib/asn1/decoders/der.ts(147,27): error TS2339: Property 'raw' does not exist on type 'Uint8Array'.
-lib/asn1/decoders/der.ts(149,21): error TS2339: Property 'error' does not exist on type 'Uint8Array'.
-lib/asn1/decoders/der.ts(153,14): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
-lib/asn1/decoders/der.ts(154,19): error TS2339: Property 'raw' does not exist on type 'Uint8Array'.
-lib/asn1/decoders/der.ts(155,14): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
-lib/asn1/decoders/der.ts(156,19): error TS2339: Property 'raw' does not exist on type 'Uint8Array'.
-lib/asn1/decoders/der.ts(157,14): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
-lib/asn1/decoders/der.ts(158,29): error TS2339: Property 'raw' does not exist on type 'Uint8Array'.
-lib/asn1/decoders/der.ts(160,21): error TS2339: Property 'error' does not exist on type 'Uint8Array'.
-lib/asn1/decoders/der.ts(164,26): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
-lib/asn1/decoders/der.ts(165,19): error TS2339: Property 'raw' does not exist on type 'Uint8Array'.
-lib/asn1/decoders/der.ts(167,19): error TS2339: Property 'error' does not exist on type 'Uint8Array'.
-lib/asn1/decoders/der.ts(176,18): error TS2339: Property 'isEmpty' does not exist on type 'Uint8Array'.
-lib/asn1/decoders/der.ts(177,23): error TS2339: Property 'readUInt8' does not exist on type 'Uint8Array'.
-lib/asn1/decoders/der.ts(208,22): error TS2339: Property 'raw' does not exist on type 'Uint8Array'.
+lib/asn1/decoders/der.ts(90,65): error TS2749: 'Buffer' refers to a value, but is being used as a type here. Did you mean 'typeof Buffer'?
+lib/asn1/decoders/der.ts(130,59): error TS2749: 'Buffer' refers to a value, but is being used as a type here. Did you mean 'typeof Buffer'?
+lib/asn1/decoders/der.ts(171,63): error TS2749: 'Buffer' refers to a value, but is being used as a type here. Did you mean 'typeof Buffer'?
+lib/asn1/decoders/der.ts(207,61): error TS2749: 'Buffer' refers to a value, but is being used as a type here. Did you mean 'typeof Buffer'?
 lib/asn1/decoders/der.ts(216,7): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
 lib/asn1/decoders/der.ts(223,14): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
-lib/asn1/decoders/der.ts(235,19): error TS2339: Property 'error' does not exist on type 'Uint8Array'.
 lib/asn1/decoders/der.ts(245,61): error TS2749: 'Buffer' refers to a value, but is being used as a type here. Did you mean 'typeof Buffer'?
-lib/asn1/decoders/der.ts(255,22): error TS2339: Property 'raw' does not exist on type 'Uint8Array'.
+lib/asn1/decoders/der.ts(253,59): error TS2749: 'Buffer' refers to a value, but is being used as a type here. Did you mean 'typeof Buffer'?
 lib/asn1/decoders/der.ts(264,47): error TS2749: 'Entity' refers to a value, but is being used as a type here. Did you mean 'typeof Entity'?
 lib/asn1/decoders/der.ts(272,28): error TS2749: 'Buffer' refers to a value, but is being used as a type here. Did you mean 'typeof Buffer'?
 lib/asn1/decoders/der.ts(272,28): error TS4078: Parameter 'buf' of exported function has or is using private name 'Buffer'.
-lib/asn1/decoders/der.ts(306,17): error TS2339: Property 'readUInt8' does not exist on type 'Uint8Array'.
-lib/asn1/decoders/der.ts(307,11): error TS2339: Property 'isError' does not exist on type 'Uint8Array'.
-lib/asn1/decoders/der.ts(323,16): error TS2339: Property 'error' does not exist on type 'Uint8Array'.
-lib/asn1/decoders/der.ts(328,19): error TS2339: Property 'readUInt8' does not exist on type 'Uint8Array'.
-lib/asn1/decoders/der.ts(329,13): error TS2339: Property 'isError' does not exist on type 'Uint8Array'.
+lib/asn1/decoders/der.ts(305,28): error TS2749: 'Buffer' refers to a value, but is being used as a type here. Did you mean 'typeof Buffer'?
+lib/asn1/decoders/der.ts(305,28): error TS4078: Parameter 'buf' of exported function has or is using private name 'Buffer'.
 lib/asn1/decoders/index.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'decoders'.
 lib/asn1/decoders/pem.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'inherits'.
 lib/asn1/decoders/pem.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'Buffer'.
 lib/asn1/decoders/pem.ts(6,7): error TS2451: Cannot redeclare block-scoped variable 'DERDecoder'.
-lib/asn1/decoders/pem.ts(15,74): error TS2304: Cannot find name 'DecodeOptions'.
+lib/asn1/decoders/pem.ts(15,53): error TS2749: 'Buffer' refers to a value, but is being used as a type here. Did you mean 'typeof Buffer'?
+lib/asn1/decoders/pem.ts(15,70): error TS2304: Cannot find name 'DecodeOptions'.
 lib/asn1/encoders/der.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'inherits'.
 lib/asn1/encoders/der.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'Buffer'.
 lib/asn1/encoders/der.ts(5,7): error TS2451: Cannot redeclare block-scoped variable 'Node'.
 lib/asn1/encoders/der.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'der'.
 lib/asn1/encoders/der.ts(10,10): error TS2451: Cannot redeclare block-scoped variable 'DEREncoder'.
-lib/asn1/encoders/der.ts(10,29): error TS2749: 'Entity' refers to a value, but is being used as a type here. Did you mean 'typeof Entity'?
-lib/asn1/encoders/der.ts(10,29): error TS4078: Parameter 'entity' of exported function has or is using private name 'Entity'.
 lib/asn1/encoders/der.ts(16,15): error TS2554: Expected 1 arguments, but got 0.
 lib/asn1/encoders/der.ts(21,68): error TS2749: 'Reporter' refers to a value, but is being used as a type here. Did you mean 'typeof Reporter'?
 lib/asn1/encoders/der.ts(27,10): error TS2393: Duplicate function implementation.
-lib/asn1/encoders/der.ts(27,26): error TS2749: 'DERNode' refers to a value, but is being used as a type here. Did you mean 'typeof DERNode'?
 lib/asn1/encoders/der.ts(64,44): error TS2339: Property 'unused' does not exist on type 'string'.
 lib/asn1/encoders/der.ts(64,60): error TS2339: Property 'data' does not exist on type 'string'.
-lib/asn1/encoders/der.ts(97,59): error TS2304: Cannot find name 'ObjectID'.
+lib/asn1/encoders/der.ts(103,21): error TS2339: Property 'split' does not exist on type 'number'.
+lib/asn1/encoders/der.ts(104,28): error TS2339: Property 'length' does not exist on type 'number'.
+lib/asn1/encoders/der.ts(107,5): error TS2322: Type 'any[]' is not assignable to type 'number'.
+lib/asn1/encoders/der.ts(108,28): error TS2339: Property 'length' does not exist on type 'number'.
 lib/asn1/encoders/der.ts(154,7): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
 lib/asn1/encoders/der.ts(164,14): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
 lib/asn1/encoders/der.ts(198,26): error TS2339: Property 'toArray' does not exist on type 'never'.
@@ -262,22 +206,23 @@ lib/asn1/encoders/der.ts(207,13): error TS2339: Property 'length' does not exist
 lib/asn1/encoders/der.ts(211,9): error TS2339: Property 'copy' does not exist on type 'number'.
 lib/asn1/encoders/der.ts(212,13): error TS2339: Property 'length' does not exist on type 'number'.
 lib/asn1/encoders/der.ts(243,47): error TS2749: 'Entity' refers to a value, but is being used as a type here. Did you mean 'typeof Entity'?
-lib/asn1/encoders/der.ts(243,60): error TS2304: Cannot find name 'EntityObject'.
 lib/asn1/encoders/der.ts(249,67): error TS2749: 'Buffer' refers to a value, but is being used as a type here. Did you mean 'typeof Buffer'?
 lib/asn1/encoders/der.ts(249,85): error TS2749: 'Reporter' refers to a value, but is being used as a type here. Did you mean 'typeof Reporter'?
-lib/asn1/encoders/der.ts(249,103): error TS2749: 'Reporter' refers to a value, but is being used as a type here. Did you mean 'typeof Reporter'?
-lib/asn1/encoders/der.ts(271,77): error TS2749: 'Reporter' refers to a value, but is being used as a type here. Did you mean 'typeof Reporter'?
-lib/asn1/encoders/der.ts(271,77): error TS4078: Parameter 'reporter' of exported function has or is using private name 'Reporter'.
-lib/asn1/encoders/der.ts(292,30): error TS2538: Type 'true' cannot be used as an index type.
+lib/asn1/encoders/der.ts(271,58): error TS2304: Cannot find name 'Class'.
+lib/asn1/encoders/der.ts(271,58): error TS4078: Parameter 'cls' of exported function has or is using private name 'Class'.
+lib/asn1/encoders/der.ts(271,80): error TS2749: 'Reporter' refers to a value, but is being used as a type here. Did you mean 'typeof Reporter'?
+lib/asn1/encoders/der.ts(271,80): error TS4078: Parameter 'reporter' of exported function has or is using private name 'Reporter'.
 lib/asn1/encoders/index.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'encoders'.
 lib/asn1/encoders/pem.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'inherits'.
 lib/asn1/encoders/pem.ts(5,7): error TS2451: Cannot redeclare block-scoped variable 'DEREncoder'.
-lib/asn1/encoders/pem.ts(14,67): error TS2304: Cannot find name 'EncodeOptions'.
+lib/asn1/encoders/pem.ts(7,29): error TS2304: Cannot find name 'PEMEntity'.
+lib/asn1/encoders/pem.ts(7,29): error TS4078: Parameter 'entity' of exported function has or is using private name 'PEMEntity'.
 rfc/2560/index.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'asn1'.
 rfc/2560/index.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'rfc5280'.
 rfc/2560/index.ts(34,7): error TS2451: Cannot redeclare block-scoped variable 'Request'.
 rfc/5280/index.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'asn1'.
 rfc/5280/index.ts(9,7): error TS2451: Cannot redeclare block-scoped variable 'rfc5280'.
+rfc/5280/index.ts(186,59): error TS2304: Cannot find name 'X509Extension'.
 ../../../../node_modules/@types/assert-plus/index.d.ts(14,32): error TS2749: 'Buffer' refers to a value, but is being used as a type here. Did you mean 'typeof Buffer'?
 ../../../../node_modules/@types/assert-plus/index.d.ts(38,36): error TS2749: 'Buffer' refers to a value, but is being used as a type here. Did you mean 'typeof Buffer'?
 ../../../../node_modules/@types/assert-plus/index.d.ts(62,40): error TS2749: 'Buffer' refers to a value, but is being used as a type here. Did you mean 'typeof Buffer'?

@@ -5,9 +5,6 @@ dangerous.ts(46,17): error TS2339: Property 'allocUnsafeSlow' does not exist on 
 dangerous.ts(47,14): error TS2339: Property 'allocUnsafeSlow' does not exist on type '{}'.
 safer.ts(8,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'safer' must be of type 'any', but here has type '{}'.
 safer.ts(18,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'Safer' must be of type 'any', but here has type '{}'.
-safer.ts(32,31): error TS2339: Property 'length' does not exist on type 'never'.
-safer.ts(40,65): error TS2304: Cannot find name 'Encoding'.
-safer.ts(48,23): error TS2339: Property 'length' does not exist on type 'number'.
 safer.ts(61,38): error TS2339: Property 'binding' does not exist on type 'Process'.
 ../../../../node_modules/@types/node/buffer.d.ts(98,14): error TS2661: Cannot export 'Buffer'. Only local declarations can be exported from a module.
 ../../../../node_modules/@types/node/buffer.d.ts(2208,13): error TS2403: Subsequent variable declarations must have the same type.  Variable 'Buffer' must be of type 'any', but here has type 'BufferConstructor'.

@@ -1,2 +1,2 @@
-declare function pull(array: Array<any>, ...values: Array<any>): any[];
+declare function pull(array: any[], ...values: any[]): any[];
 export default pull;

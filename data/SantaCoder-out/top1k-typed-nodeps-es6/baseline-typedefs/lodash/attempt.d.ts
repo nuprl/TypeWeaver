@@ -1,2 +1,2 @@
-declare function attempt(func: any, ...args: any[]): any;
+declare function attempt(func: Function, ...args: any[]): any;
 export default attempt;

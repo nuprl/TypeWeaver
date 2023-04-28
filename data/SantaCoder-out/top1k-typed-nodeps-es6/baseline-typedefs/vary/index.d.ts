@@ -6,4 +6,4 @@
 declare var FIELD_NAME_REGEXP: RegExp;
 declare function append(header: string, field: string): string;
 declare function parse(header: string): any[];
-declare function vary(res: Response, field: string): void;
+declare function vary(res: any, field: string): void;

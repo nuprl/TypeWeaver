@@ -1,2 +1,2 @@
-declare function after(n: number, func: any): (...args: any[]) => any;
+declare function after(n: number, func: Function): (...args: any[]) => any;
 export default after;

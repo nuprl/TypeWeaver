@@ -1,1 +1,1 @@
-export default function ensureAsync(fn: any): any;
+export default function ensureAsync(fn: Function): Function;

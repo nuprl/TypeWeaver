@@ -1,2 +1,2 @@
-declare function sortedUniq(array: number[]): any[];
+declare function sortedUniq(array: any[]): any[];
 export default sortedUniq;

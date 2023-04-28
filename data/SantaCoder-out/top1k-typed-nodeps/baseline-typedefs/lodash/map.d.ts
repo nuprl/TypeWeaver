@@ -1,2 +1,2 @@
-declare function map(array: any[], iteratee: any): any[];
+declare function map(array: any[], iteratee: Function): any[];
 export default map;

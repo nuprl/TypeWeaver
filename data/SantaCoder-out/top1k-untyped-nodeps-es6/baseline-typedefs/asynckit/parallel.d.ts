@@ -1,2 +1,2 @@
 export default parallel;
-declare function parallel(list: any[], iterator: any, callback: any): any;
+declare function parallel(list: Array<any>, iterator: Function, callback: Function): any;

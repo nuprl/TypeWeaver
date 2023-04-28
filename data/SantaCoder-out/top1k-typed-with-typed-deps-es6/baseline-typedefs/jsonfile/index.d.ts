@@ -1,5 +1,5 @@
-declare function readFileSync(file: string, options: {}, ReadFileSyncOptions: any): any;
-declare function writeFileSync(file: string, obj: any, options: {}, any: any): any;
+declare function readFileSync(file: string, options: {}, Options: any): any;
+declare function writeFileSync(file: string, obj: any, options: {}, WriteOptions: any): any;
 declare const jsonfile: {
     readFile: (...args: any[]) => void | Promise<any>;
     readFileSync: typeof readFileSync;

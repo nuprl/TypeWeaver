@@ -1,2 +1,2 @@
-declare function someValues(object: any, predicate: any): boolean;
+declare function someValues(object: Object, predicate: any): boolean;
 export default someValues;

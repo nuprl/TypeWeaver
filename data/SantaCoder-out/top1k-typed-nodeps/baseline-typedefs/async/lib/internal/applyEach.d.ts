@@ -1,1 +1,1 @@
-export default function (eachfn: any): (fns: any, ...callArgs: any[]) => (...args: any[]) => any;
+export default function (eachfn: Function): (fns: Function[], ...callArgs: any[]) => (...args: any[]) => any;

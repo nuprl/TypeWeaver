@@ -1,3 +1,2 @@
-/// <reference types="node" />
-declare function delay(func: any, wait: number, ...args: any[]): NodeJS.Timeout;
+declare function delay(func: Function, wait: number, ...args: any[]): number;
 export default delay;

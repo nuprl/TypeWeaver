@@ -1,4 +1,4 @@
-declare function ValueParser(value: string): any;
+declare function ValueParser(value: any): any;
 declare namespace ValueParser {
     var unit: any;
     var walk: typeof import("./walk").default;

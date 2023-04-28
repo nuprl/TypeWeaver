@@ -10,8 +10,8 @@ declare class SyncHookCodeFactory extends HookCodeFactory {
 declare const factory: SyncHookCodeFactory;
 declare const TAP_ASYNC: () => never;
 declare const TAP_PROMISE: () => never;
-declare const COMPILE: (options: IOptions) => any;
-declare function SyncHook(args: any[], any: any, name: any, string: any): any;
+declare const COMPILE: (options: any) => any;
+declare function SyncHook(args: any[], string: any, []: Iterable<any>, name: any, string: any): any;
 declare namespace SyncHook {
     var prototype: any;
 }

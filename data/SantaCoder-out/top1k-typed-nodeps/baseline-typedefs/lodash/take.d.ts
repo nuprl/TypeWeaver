@@ -1,2 +1,2 @@
-declare function take(array: Array<any>, n: number, number: any): any[];
+declare function take(array: any[], n: number, number: any): any[];
 export default take;

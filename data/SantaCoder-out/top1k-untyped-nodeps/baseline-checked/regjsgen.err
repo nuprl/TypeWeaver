@@ -1,29 +1,42 @@
 regjsgen.ts(22,71): error TS2339: Property 'nodeType' does not exist on type 'NodeModule'.
-regjsgen.ts(79,18): error TS2339: Property 'test' does not exist on type 'string'.
 regjsgen.ts(90,21): error TS2339: Property 'type' does not exist on type 'Node'.
+regjsgen.ts(102,24): error TS2339: Property 'length' does not exist on type 'number'.
 regjsgen.ts(126,17): error TS2349: This expression is not callable.
-  Type 'Generator<any, any, unknown>' has no call signatures.
+  Type 'Generator<number, any, unknown>' has no call signatures.
 regjsgen.ts(135,21): error TS2339: Property 'type' does not exist on type 'Node'.
 regjsgen.ts(137,12): error TS2554: Expected 3 arguments, but got 2.
 regjsgen.ts(137,48): error TS2339: Property 'body' does not exist on type 'Node'.
 regjsgen.ts(141,21): error TS2339: Property 'type' does not exist on type 'Node'.
 regjsgen.ts(143,18): error TS2339: Property 'kind' does not exist on type 'Node'.
-regjsgen.ts(159,31): error TS2304: Cannot find name 'IAtomNode'.
-regjsgen.ts(165,41): error TS2304: Cannot find name 'CharacterClassNode'.
-regjsgen.ts(173,24): error TS2345: Argument of type '(node: ClassAtomNode) => any' is not assignable to parameter of type 'Generator<any, any, unknown>'.
-regjsgen.ts(177,47): error TS2304: Cannot find name 'CharacterClassExpression'.
-regjsgen.ts(183,46): error TS2304: Cannot find name 'CharacterClassRangeNode'.
-regjsgen.ts(196,36): error TS2304: Cannot find name 'ClassAtomNode'.
-regjsgen.ts(202,39): error TS2552: Cannot find name 'ClassDeclaration'. Did you mean 'ClassDecorator'?
-regjsgen.ts(205,38): error TS2345: Argument of type '(node: ClassDeclaration) => string' is not assignable to parameter of type 'Generator<any, any, unknown>'.
-regjsgen.ts(208,38): error TS2552: Cannot find name 'ClassDeclaration'. Did you mean 'ClassDecorator'?
+regjsgen.ts(160,21): error TS2339: Property 'type' does not exist on type 'Node'.
+regjsgen.ts(166,21): error TS2339: Property 'type' does not exist on type 'Node'.
+regjsgen.ts(168,21): error TS2339: Property 'kind' does not exist on type 'Node'.
+regjsgen.ts(172,13): error TS2339: Property 'negative' does not exist on type 'Node'.
+regjsgen.ts(173,24): error TS2345: Argument of type '(node: t.ClassDeclaration) => any' is not assignable to parameter of type 'Generator<number, any, unknown>'.
+regjsgen.ts(173,48): error TS2339: Property 'body' does not exist on type 'Node'.
+regjsgen.ts(178,21): error TS2339: Property 'type' does not exist on type 'Node'.
+regjsgen.ts(180,24): error TS2339: Property 'value' does not exist on type 'Node'.
+regjsgen.ts(184,21): error TS2339: Property 'type' does not exist on type 'Node'.
+regjsgen.ts(186,20): error TS2339: Property 'min' does not exist on type 'Node'.
+regjsgen.ts(187,20): error TS2339: Property 'max' does not exist on type 'Node'.
+regjsgen.ts(196,36): error TS2503: Cannot find namespace 't'.
+regjsgen.ts(203,21): error TS2339: Property 'type' does not exist on type 'Node'.
+regjsgen.ts(205,38): error TS2345: Argument of type '(node: Node) => string' is not assignable to parameter of type 'Generator<number, any, unknown>'.
+regjsgen.ts(205,64): error TS2339: Property 'strings' does not exist on type 'Node'.
+regjsgen.ts(209,21): error TS2339: Property 'type' does not exist on type 'Node'.
 regjsgen.ts(211,12): error TS2554: Expected 3 arguments, but got 2.
+regjsgen.ts(211,44): error TS2339: Property 'characters' does not exist on type 'Node'.
 regjsgen.ts(215,21): error TS2339: Property 'type' does not exist on type 'Node'.
-regjsgen.ts(217,29): error TS2345: Argument of type '(node: Node) => any' is not assignable to parameter of type 'Generator<any, any, unknown>'.
+regjsgen.ts(217,29): error TS2345: Argument of type '(node: Node) => any' is not assignable to parameter of type 'Generator<number, any, unknown>'.
 regjsgen.ts(217,44): error TS2339: Property 'body' does not exist on type 'Node'.
-regjsgen.ts(221,30): error TS2304: Cannot find name 'DotNode'.
-regjsgen.ts(227,32): error TS2304: Cannot find name 'GroupNode'.
+regjsgen.ts(222,21): error TS2339: Property 'type' does not exist on type 'Node'.
+regjsgen.ts(228,21): error TS2339: Property 'type' does not exist on type 'Node'.
+regjsgen.ts(232,18): error TS2339: Property 'behavior' does not exist on type 'Node'.
+regjsgen.ts(234,18): error TS2339: Property 'name' does not exist on type 'Node'.
+regjsgen.ts(235,52): error TS2339: Property 'name' does not exist on type 'Node'.
+regjsgen.ts(254,50): error TS2339: Property 'behaviour' does not exist on type 'Node'.
 regjsgen.ts(257,15): error TS2554: Expected 3 arguments, but got 2.
+regjsgen.ts(257,47): error TS2339: Property 'body' does not exist on type 'Node'.
 regjsgen.ts(263,21): error TS2339: Property 'type' does not exist on type 'Node'.
 regjsgen.ts(265,17): error TS2339: Property 'value' does not exist on type 'Node'.
 regjsgen.ts(269,21): error TS2339: Property 'type' does not exist on type 'Node'.
@@ -37,9 +50,7 @@ regjsgen.ts(302,26): error TS2339: Property 'matchIndex' does not exist on type 
 regjsgen.ts(304,14): error TS2339: Property 'name' does not exist on type 'Node'.
 regjsgen.ts(305,47): error TS2339: Property 'name' does not exist on type 'Node'.
 regjsgen.ts(312,21): error TS2339: Property 'type' does not exist on type 'Node'.
-regjsgen.ts(318,21): error TS2339: Property 'type' does not exist on type 'Node'.
-regjsgen.ts(320,25): error TS2339: Property 'negative' does not exist on type 'Node'.
-regjsgen.ts(320,60): error TS2339: Property 'value' does not exist on type 'Node'.
+regjsgen.ts(317,48): error TS2503: Cannot find namespace 't'.
 regjsgen.ts(324,21): error TS2339: Property 'type' does not exist on type 'Node'.
 regjsgen.ts(326,21): error TS2339: Property 'kind' does not exist on type 'Node'.
 regjsgen.ts(327,26): error TS2339: Property 'codePoint' does not exist on type 'Node'.

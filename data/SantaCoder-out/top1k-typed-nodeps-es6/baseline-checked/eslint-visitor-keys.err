@@ -1,17 +1,17 @@
 tools/build-keys-from-ts.ts(17,53): error TS2554: Expected 2 arguments, but got 1.
-tools/build-keys-from-ts.ts(25,49): error TS2345: Argument of type '{ ExperimentalRestProperty: string[]; ExperimentalSpreadProperty: string[]; }' is not assignable to parameter of type 'IKeyInterface[]'.
-  Type '{ ExperimentalRestProperty: string[]; ExperimentalSpreadProperty: string[]; }' is missing the following properties from type 'IKeyInterface[]': length, pop, push, concat, and 29 more.
+tools/build-keys-from-ts.ts(25,49): error TS2345: Argument of type '{ ExperimentalRestProperty: string[]; ExperimentalSpreadProperty: string[]; }' is not assignable to parameter of type 'NodeInterface[]'.
+  Type '{ ExperimentalRestProperty: string[]; ExperimentalSpreadProperty: string[]; }' is missing the following properties from type 'NodeInterface[]': length, pop, push, concat, and 29 more.
 tools/get-keys-from-ts.ts(15,32): error TS2307: Cannot find module '@typescript-eslint/parser' or its corresponding type declarations.
 tools/get-keys-from-ts.ts(16,21): error TS2307: Cannot find module 'esquery' or its corresponding type declarations.
 tools/get-keys-from-ts.ts(67,22): error TS2339: Property 'type' does not exist on type 'string'.
 tools/get-keys-from-ts.ts(68,29): error TS2339: Property 'types' does not exist on type 'string'.
 tools/get-keys-from-ts.ts(70,25): error TS2339: Property 'literal' does not exist on type 'string'.
-tools/get-keys-from-ts.ts(92,49): error TS2304: Cannot find name 'IKeyInterface'.
-tools/get-keys-from-ts.ts(92,49): error TS4078: Parameter 'initialNodes' of exported function has or is using private name 'IKeyInterface'.
-tools/get-keys-from-ts.ts(154,36): error TS2304: Cannot find name 'DeclarationNode'.
-tools/get-keys-from-ts.ts(189,48): error TS2304: Cannot find name 'DeclarationNode'.
-tools/get-keys-from-ts.ts(189,64): error TS2552: Cannot find name 'PropertyDeclaration'. Did you mean 'PropertyDecorator'?
-tools/get-keys-from-ts.ts(289,65): error TS2304: Cannot find name 'IPropertyWithTsAnnotation'.
+tools/get-keys-from-ts.ts(92,49): error TS2304: Cannot find name 'NodeInterface'.
+tools/get-keys-from-ts.ts(92,49): error TS4078: Parameter 'initialNodes' of exported function has or is using private name 'NodeInterface'.
+tools/get-keys-from-ts.ts(157,38): error TS2339: Property 'extends' does not exist on type 'Node'.
+tools/get-keys-from-ts.ts(189,48): error TS2503: Cannot find namespace 'ts'.
+tools/get-keys-from-ts.ts(289,60): error TS2304: Cannot find name 'Property'.
+tools/get-keys-from-ts.ts(292,13): error TS2304: Cannot find name 'property'.
 tools/get-keys-from-ts.ts(377,54): error TS2339: Property 'type' does not exist on type 'string'.
 tools/get-keys-from-ts.ts(382,28): error TS2339: Property 'type' does not exist on type 'string'.
 tools/get-keys-from-ts.ts(383,35): error TS2339: Property 'elementTypes' does not exist on type 'string'.
@@ -21,12 +21,14 @@ tools/get-keys-from-ts.ts(390,28): error TS2339: Property 'typeName' does not ex
 tools/get-keys-from-ts.ts(391,35): error TS2339: Property 'typeParameters' does not exist on type 'string'.
 tools/get-keys-from-ts.ts(395,52): error TS2339: Property 'typeName' does not exist on type 'string'.
 tools/get-keys-from-ts.ts(400,49): error TS2339: Property 'typeName' does not exist on type 'string'.
+tools/get-keys-from-ts.ts(414,65): error TS2503: Cannot find namespace 'ts'.
+tools/get-keys-from-ts.ts(414,96): error TS2503: Cannot find namespace 'ts'.
 tools/get-keys-from-ts.ts(483,9): error TS2554: Expected 3 arguments, but got 2.
 tools/get-keys-from-ts.ts(485,54): error TS2345: Argument of type '{}' is not assignable to parameter of type 'Node'.
   Type '{}' is missing the following properties from type 'Node': baseURI, childNodes, firstChild, isConnected, and 46 more.
 tools/get-keys-from-ts.ts(485,61): error TS2556: A spread argument must either have a tuple type or be passed to a rest parameter.
-tools/get-keys-from-ts.ts(488,44): error TS2345: Argument of type '{}' is not assignable to parameter of type 'IKeyInterface[]'.
-  Type '{}' is missing the following properties from type 'IKeyInterface[]': length, pop, push, concat, and 29 more.
+tools/get-keys-from-ts.ts(488,44): error TS2345: Argument of type '{}' is not assignable to parameter of type 'NodeInterface[]'.
+  Type '{}' is missing the following properties from type 'NodeInterface[]': length, pop, push, concat, and 29 more.
 tools/get-keys-from-ts.ts(536,57): error TS2304: Cannot find name 'GetKeysFromTsFileOptions'.
 tools/get-keys-from-ts.ts(536,57): error TS4078: Parameter 'options' of exported function has or is using private name 'GetKeysFromTsFileOptions'.
 

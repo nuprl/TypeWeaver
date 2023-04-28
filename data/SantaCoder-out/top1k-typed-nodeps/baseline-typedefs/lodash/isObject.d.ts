@@ -1,2 +1,2 @@
-declare function isObject(value: any): boolean;
+declare function isObject(value: unknown): boolean;
 export default isObject;

@@ -1,16 +1,16 @@
 declare const _default: {
-    ArgumentParser: string;
+    ArgumentParser: any;
     ArgumentError: (...args: any[]) => any;
     ArgumentTypeError: (...args: any[]) => any;
-    BooleanOptionalAction: string;
+    BooleanOptionalAction: any;
     FileType: (...args: any[]) => any;
-    HelpFormatter: string;
-    ArgumentDefaultsHelpFormatter: string;
-    RawDescriptionHelpFormatter: string;
-    RawTextHelpFormatter: string;
-    MetavarTypeHelpFormatter: string;
+    HelpFormatter: any;
+    ArgumentDefaultsHelpFormatter: any;
+    RawDescriptionHelpFormatter: any;
+    RawTextHelpFormatter: any;
+    MetavarTypeHelpFormatter: any;
     Namespace: (...args: any[]) => any;
-    Action: string;
+    Action: any;
     ONE_OR_MORE: string;
     OPTIONAL: string;
     PARSER: string;

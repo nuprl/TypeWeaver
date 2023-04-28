@@ -1,2 +1,2 @@
-declare function compareAscending(value: number, other: number): 0 | 1 | -1;
+declare function compareAscending(value: any, other: any): 0 | 1 | -1;
 export default compareAscending;

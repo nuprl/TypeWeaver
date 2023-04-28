@@ -1,3 +1,3 @@
 /// <reference types="node" />
-declare function md5(bytes: Uint8Array): Buffer;
+declare function md5(bytes: Array<number>): Buffer;
 export default md5;

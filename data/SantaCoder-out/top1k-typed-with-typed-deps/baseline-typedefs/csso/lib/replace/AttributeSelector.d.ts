@@ -1,1 +1,1 @@
-export default function (node: Node): void;
+export default function (node: HTMLInputElement): void;

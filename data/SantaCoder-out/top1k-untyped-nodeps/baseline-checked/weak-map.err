@@ -8,18 +8,18 @@ bench.ts(35,5): error TS2304: Cannot find name 'bench'.
 weak-map.ts(102,14): error TS2304: Cannot find name 'ses'.
 weak-map.ts(102,37): error TS2304: Cannot find name 'ses'.
 weak-map.ts(102,48): error TS2304: Cannot find name 'ses'.
-weak-map.ts(120,42): error TS2314: Generic type 'WeakMap<K, V>' requires 2 type argument(s).
 weak-map.ts(126,14): error TS2304: Cannot find name 'ses'.
 weak-map.ts(127,5): error TS2304: Cannot find name 'ses'.
+weak-map.ts(224,50): error TS2749: 'u8' refers to a value, but is being used as a type here. Did you mean 'typeof u8'?
 weak-map.ts(261,16): error TS2349: This expression is not callable.
   Type '{}' has no call signatures.
-weak-map.ts(515,53): error TS2304: Cannot find name 'T'.
+weak-map.ts(558,35): error TS2304: Cannot find name 'K'.
 weak-map.ts(605,29): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
 weak-map.ts(605,45): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
 weak-map.ts(608,34): error TS2554: Expected 1 arguments, but got 2.
 weak-map.ts(613,27): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
-weak-map.ts(619,22): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
-weak-map.ts(620,27): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
+weak-map.ts(618,32): error TS2304: Cannot find name 'K'.
+weak-map.ts(618,42): error TS2304: Cannot find name 'V'.
 weak-map.ts(621,35): error TS2350: Only a void function can be called with the 'new' keyword.
 weak-map.ts(630,26): error TS2345: Argument of type 'string' is not assignable to parameter of type 'object'.
 weak-map.ts(632,37): error TS2350: Only a void function can be called with the 'new' keyword.

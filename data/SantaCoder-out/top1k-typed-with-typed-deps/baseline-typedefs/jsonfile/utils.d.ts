@@ -1,10 +1,8 @@
-declare function stringify(obj: any, { EOL, EOL2, finalEOL, EOL3, replacer, EOL4, spaces }: {
-    EOL?: string;
-    EOL2: any;
-    finalEOL?: boolean;
-    EOL3: any;
+declare function stringify(obj: any, { EOL, EOL, finalEOL, finalEOL, replacer, no, spaces }: {
+    EOL: any;
+    finalEOL: any;
     replacer?: any;
-    EOL4: any;
+    no: any;
     spaces: any;
-}, EOL4: any): string;
+}, string: any): string;
 declare function stripBom(content: string): string;

@@ -1,2 +1,2 @@
-declare function unzipWith(array: any[], iteratee: any): any[];
+declare function unzipWith(array: Array<any>, iteratee: Function): any[];
 export default unzipWith;

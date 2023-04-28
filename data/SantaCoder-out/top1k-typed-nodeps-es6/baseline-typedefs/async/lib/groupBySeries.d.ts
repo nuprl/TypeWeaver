@@ -1,1 +1,1 @@
-export default function groupBySeries(coll: any, iteratee: any, callback: any): any;
+export default function groupBySeries(coll: Array<any>, iteratee: Function, callback: Function): any;

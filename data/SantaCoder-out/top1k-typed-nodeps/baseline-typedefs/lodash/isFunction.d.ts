@@ -1,2 +1,2 @@
-declare function isFunction(value: any): boolean;
+declare function isFunction(value: unknown): boolean;
 export default isFunction;

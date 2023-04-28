@@ -1,4 +1,3 @@
-decimal.ts(1,26): error TS2304: Cannot find name 'GlobalScope'.
 decimal.ts(200,5): error TS2339: Property 'absoluteValue' does not exist on type '{ toStringTag: string; }'.
 decimal.ts(200,23): error TS2339: Property 'abs' does not exist on type '{ toStringTag: string; }'.
 decimal.ts(203,12): error TS2554: Expected 4 arguments, but got 1.
@@ -37,12 +36,15 @@ decimal.ts(481,12): error TS2554: Expected 4 arguments, but got 3.
 decimal.ts(481,21): error TS2554: Expected 6 arguments, but got 5.
 decimal.ts(489,5): error TS2339: Property 'equals' does not exist on type '{ toStringTag: string; }'.
 decimal.ts(489,16): error TS2339: Property 'eq' does not exist on type '{ toStringTag: string; }'.
+decimal.ts(489,34): error TS2304: Cannot find name 'T'.
 decimal.ts(499,5): error TS2339: Property 'floor' does not exist on type '{ toStringTag: string; }'.
 decimal.ts(500,12): error TS2554: Expected 4 arguments, but got 3.
 decimal.ts(509,5): error TS2339: Property 'greaterThan' does not exist on type '{ toStringTag: string; }'.
 decimal.ts(509,21): error TS2339: Property 'gt' does not exist on type '{ toStringTag: string; }'.
+decimal.ts(509,39): error TS2304: Cannot find name 'T'.
 decimal.ts(519,5): error TS2339: Property 'greaterThanOrEqualTo' does not exist on type '{ toStringTag: string; }'.
 decimal.ts(519,30): error TS2339: Property 'gte' does not exist on type '{ toStringTag: string; }'.
+decimal.ts(519,49): error TS2304: Cannot find name 'T'.
 decimal.ts(550,5): error TS2339: Property 'hyperbolicCosine' does not exist on type '{ toStringTag: string; }'.
 decimal.ts(550,26): error TS2339: Property 'cosh' does not exist on type '{ toStringTag: string; }'.
 decimal.ts(623,5): error TS2339: Property 'hyperbolicSine' does not exist on type '{ toStringTag: string; }'.
@@ -79,20 +81,16 @@ decimal.ts(1069,20): error TS2339: Property 'isPos' does not exist on type '{ to
 decimal.ts(1078,5): error TS2339: Property 'isZero' does not exist on type '{ toStringTag: string; }'.
 decimal.ts(1087,5): error TS2339: Property 'lessThan' does not exist on type '{ toStringTag: string; }'.
 decimal.ts(1087,18): error TS2339: Property 'lt' does not exist on type '{ toStringTag: string; }'.
+decimal.ts(1087,36): error TS2304: Cannot find name 'T'.
 decimal.ts(1096,5): error TS2339: Property 'lessThanOrEqualTo' does not exist on type '{ toStringTag: string; }'.
 decimal.ts(1096,27): error TS2339: Property 'lte' does not exist on type '{ toStringTag: string; }'.
+decimal.ts(1096,46): error TS2304: Cannot find name 'T'.
 decimal.ts(1131,5): error TS2339: Property 'logarithm' does not exist on type '{ toStringTag: string; }'.
 decimal.ts(1131,19): error TS2339: Property 'log' does not exist on type '{ toStringTag: string; }'.
-decimal.ts(1145,16): error TS2339: Property 'd' does not exist on type 'string'.
-decimal.ts(1148,16): error TS2339: Property 's' does not exist on type 'string'.
-decimal.ts(1148,45): error TS2339: Property 'eq' does not exist on type 'string'.
-decimal.ts(1150,23): error TS2339: Property 'eq' does not exist on type 'string'.
 decimal.ts(1174,30): error TS2554: Expected 3 arguments, but got 2.
-decimal.ts(1174,72): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 decimal.ts(1177,9): error TS2554: Expected 6 arguments, but got 4.
 decimal.ts(1193,9): error TS2554: Expected 4 arguments, but got 3.
 decimal.ts(1198,34): error TS2554: Expected 3 arguments, but got 2.
-decimal.ts(1198,76): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 decimal.ts(1199,13): error TS2554: Expected 6 arguments, but got 4.
 decimal.ts(1205,17): error TS2554: Expected 4 arguments, but got 3.
 decimal.ts(1210,16): error TS2554: Expected 4 arguments, but got 3.
@@ -225,6 +223,7 @@ decimal.ts(2364,12): error TS2554: Expected 4 arguments, but got 3.
 decimal.ts(2379,5): error TS2339: Property 'toPrecision' does not exist on type '{ toStringTag: string; }'.
 decimal.ts(2385,13): error TS2554: Expected 3 arguments, but got 2.
 decimal.ts(2387,18): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+decimal.ts(2390,23): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 decimal.ts(2392,11): error TS2554: Expected 4 arguments, but got 3.
 decimal.ts(2393,66): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 decimal.ts(2414,5): error TS2339: Property 'toSignificantDigits' does not exist on type '{ toStringTag: string; }'.
@@ -236,7 +235,6 @@ decimal.ts(2452,19): error TS2339: Property 'trunc' does not exist on type '{ to
 decimal.ts(2453,12): error TS2554: Expected 4 arguments, but got 3.
 decimal.ts(2462,17): error TS2339: Property 'toJSON' does not exist on type '{ toStringTag: string; }'.
 decimal.ts(2465,13): error TS2554: Expected 3 arguments, but got 2.
-decimal.ts(2522,27): error TS2339: Property 'length' does not exist on type 'number'.
 decimal.ts(2644,11): error TS2339: Property 'isZero' does not exist on type 'number'.
 decimal.ts(2650,13): error TS2339: Property 'd' does not exist on type 'number'.
 decimal.ts(2659,10): error TS2339: Property 'precision' does not exist on type 'Function'.
@@ -289,14 +287,10 @@ decimal.ts(3116,13): error TS2339: Property 'e' does not exist on type 'number'.
 decimal.ts(3117,30): error TS2339: Property 'd' does not exist on type 'number'.
 decimal.ts(3127,22): error TS2339: Property 'e' does not exist on type 'number'.
 decimal.ts(3127,46): error TS2339: Property 'e' does not exist on type 'number'.
-decimal.ts(3157,9): error TS2365: Operator '>' cannot be applied to types 'string' and 'number'.
-decimal.ts(3161,20): error TS2339: Property 'precision' does not exist on type 'Function'.
-decimal.ts(3164,25): error TS2351: This expression is not constructable.
+decimal.ts(3170,25): error TS2351: This expression is not constructable.
   Type 'Function' has no construct signatures.
-decimal.ts(3164,37): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
-decimal.ts(3175,20): error TS2339: Property 'length' does not exist on type 'number'.
-decimal.ts(3210,15): error TS2351: This expression is not constructable.
-  Type 'Function' has no construct signatures.
+decimal.ts(3208,44): error TS2503: Cannot find namespace 'mcl'.
+decimal.ts(3208,57): error TS2503: Cannot find namespace 'mcl'.
 decimal.ts(3233,13): error TS2339: Property 'times' does not exist on type 'number'.
 decimal.ts(3234,18): error TS2339: Property 'd' does not exist on type 'number'.
 decimal.ts(3244,14): error TS2339: Property 'd' does not exist on type 'number'.
@@ -525,14 +519,16 @@ decimal.ts(4491,40): error TS2339: Property 'e' does not exist on type 'number'.
 decimal.ts(4597,27): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type 'any[]'.
   Type 'IArguments' is missing the following properties from type 'any[]': pop, push, concat, join, and 27 more.
 decimal.ts(4608,27): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type 'any[]'.
-decimal.ts(4633,19): error TS2552: Cannot find name 'BigNumber'. Did you mean 'Number'?
-decimal.ts(4633,33): error TS2552: Cannot find name 'BigNumber'. Did you mean 'Number'?
 decimal.ts(4693,23): error TS2339: Property 'randomBytes' does not exist on type 'Crypto'.
 decimal.ts(4696,18): error TS2339: Property 'randomBytes' does not exist on type 'Crypto'.
 decimal.ts(4705,18): error TS2339: Property 'randomBytes' does not exist on type 'Crypto'.
 decimal.ts(4765,12): error TS2554: Expected 4 arguments, but got 3.
 decimal.ts(4765,40): error TS2339: Property 'e' does not exist on type 'number'.
-decimal.ts(4780,20): error TS2552: Cannot find name 'BigNumber'. Did you mean 'Number'?
+decimal.ts(4782,14): error TS2339: Property 'd' does not exist on type 'bigint'.
+decimal.ts(4782,21): error TS2339: Property 'd' does not exist on type 'bigint'.
+decimal.ts(4782,30): error TS2339: Property 's' does not exist on type 'bigint'.
+decimal.ts(4782,40): error TS2339: Property 's' does not exist on type 'bigint'.
+decimal.ts(4782,47): error TS2339: Property 's' does not exist on type 'bigint'.
 decimal.ts(4853,12): error TS2554: Expected 4 arguments, but got 3.
 decimal.ts(4888,12): error TS2554: Expected 4 arguments, but got 3.
 decimal.ts(4888,40): error TS2339: Property 'e' does not exist on type 'number'.

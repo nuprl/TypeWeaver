@@ -1,2 +1,2 @@
-declare function baseAt(object: any, paths: string[]): any[];
+declare function baseAt(object: any[], paths: any[]): any[];
 export default baseAt;

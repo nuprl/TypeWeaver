@@ -262,4 +262,4 @@ declare function isGeneralCategoryValue(value: string): boolean;
 declare function isScriptCategoryValue(value: string): boolean;
 declare function isBinaryPropertyName(name: string): boolean;
 declare function getCanonicalName(name: string): any;
-declare function getCanonicalValue(value: any): any;
+declare function getCanonicalValue(value: string): any;

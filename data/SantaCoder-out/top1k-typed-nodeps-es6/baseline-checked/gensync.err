@@ -1,25 +1,17 @@
-index.ts(15,30): error TS2304: Cannot find name 'GenSyncOptions'.
-index.ts(31,47): error TS2345: Argument of type 'unknown' is not assignable to parameter of type 'Generator<any, any, unknown>'.
-  Type '{}' is missing the following properties from type 'Generator<any, any, unknown>': next, return, throw, [Symbol.iterator]
-index.ts(45,13): error TS2345: Argument of type 'unknown' is not assignable to parameter of type 'Generator<any, any, unknown>'.
+index.ts(18,7): error TS2741: Property '[Symbol.toStringTag]' is missing in type 'Function' but required in type 'GeneratorFunction'.
+index.ts(20,7): error TS2322: Type 'Function' is not assignable to type 'GeneratorFunction'.
 index.ts(63,56): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
-index.ts(66,29): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Generator<any, any, unknown>'.
-index.ts(68,29): error TS2304: Cannot find name 'ICommandArgs'.
 index.ts(71,56): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
-index.ts(75,25): error TS2345: Argument of type 'unknown' is not assignable to parameter of type 'Generator<any, any, unknown>'.
 index.ts(101,11): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 index.ts(134,24): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+index.ts(144,88): error TS2304: Cannot find name 'IOptions'.
 index.ts(147,3): error TS2554: Expected 4 arguments, but got 3.
 index.ts(153,7): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
-index.ts(184,27): error TS2304: Cannot find name 'ICommandArgs'.
-index.ts(205,92): error TS2304: Cannot find name 'OperationOptions'.
+index.ts(205,92): error TS2304: Cannot find name 'SyncAsync'.
 index.ts(206,30): error TS2345: Argument of type 'void' is not assignable to parameter of type 'string'.
-index.ts(210,19): error TS2552: Cannot find name 'sync'. Did you mean 'async'?
-index.ts(252,24): error TS2345: Argument of type 'Generator<any, any, unknown>' is not assignable to parameter of type 'number'.
-index.ts(262,28): error TS2345: Argument of type 'Generator<any, any, unknown>' is not assignable to parameter of type 'number'.
-index.ts(295,7): error TS2367: This comparison appears to be unintentional because the types 'number' and 'unique symbol' have no overlap.
+index.ts(206,36): error TS2304: Cannot find name 'arity'.
 index.ts(303,7): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
-index.ts(307,48): error TS2552: Cannot find name 'IAsyncGenerator'. Did you mean 'AsyncGenerator'?
-index.ts(307,75): error TS2552: Cannot find name 'IAsyncGenerator'. Did you mean 'AsyncGenerator'?
+index.ts(308,16): error TS2304: Cannot find name 'value'.
+index.ts(316,13): error TS2304: Cannot find name 'value'.
 index.ts(318,7): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 

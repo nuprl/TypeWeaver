@@ -6,31 +6,41 @@ example/fn.ts(5,13): error TS2554: Expected 4 arguments, but got 1.
 example/inspect.ts(10,13): error TS2554: Expected 4 arguments, but got 1.
 index.ts(33,74): error TS2367: This comparison appears to be unintentional because the types 'string' and 'boolean' have no overlap.
 index.ts(39,8): error TS2339: Property '__proto__' does not exist on type 'undefined[]'.
-index.ts(72,53): error TS2304: Cannot find name 'InspectOptions'.
-index.ts(72,53): error TS4078: Parameter 'options' of exported function has or is using private name 'InspectOptions'.
 index.ts(126,55): error TS2345: Argument of type 'bigint' is not assignable to parameter of type 'number'.
-index.ts(138,9): error TS2740: Type 'undefined[]' is missing the following properties from type 'Set<string>': add, clear, delete, has, and 2 more.
-index.ts(139,24): error TS2345: Argument of type 'Set<string>' is not assignable to parameter of type 'any[]'.
-  Type 'Set<string>' is missing the following properties from type 'any[]': length, pop, push, concat, and 24 more.
-index.ts(146,18): error TS2339: Property 'push' does not exist on type 'Set<string>'.
 index.ts(153,25): error TS2339: Property 'quoteStyle' does not exist on type '{ depth: any; }'.
-index.ts(184,43): error TS2345: Argument of type '{ base: any; prev: any; }' is not assignable to parameter of type 'number'.
+index.ts(162,36): error TS2345: Argument of type '(value: any, from: any, noIndent: boolean) => any' is not assignable to parameter of type 'boolean'.
+index.ts(182,34): error TS2345: Argument of type '(value: any, from: any, noIndent: boolean) => any' is not assignable to parameter of type 'boolean'.
+index.ts(184,43): error TS2345: Argument of type '{ base: any; prev: any; }' is not assignable to parameter of type 'string'.
+index.ts(189,37): error TS2345: Argument of type '(value: any, from: any, noIndent: boolean) => any' is not assignable to parameter of type 'boolean'.
 index.ts(191,87): error TS2554: Expected 3 arguments, but got 1.
 index.ts(206,62): error TS2554: Expected 3 arguments, but got 2.
-index.ts(208,65): error TS2345: Argument of type '{ base: any; prev: any; }' is not assignable to parameter of type 'number'.
+index.ts(208,65): error TS2345: Argument of type '{ base: any; prev: any; }' is not assignable to parameter of type 'string'.
 index.ts(213,27): error TS2554: Expected 3 arguments, but got 2.
-index.ts(215,65): error TS2345: Argument of type '{ base: any; prev: any; }' is not assignable to parameter of type 'number'.
+index.ts(215,65): error TS2345: Argument of type '{ base: any; prev: any; }' is not assignable to parameter of type 'string'.
 index.ts(227,26): error TS2554: Expected 3 arguments, but got 1.
 index.ts(230,26): error TS2554: Expected 3 arguments, but got 1.
 index.ts(236,26): error TS2554: Expected 3 arguments, but got 1.
-index.ts(247,49): error TS2345: Argument of type '{ base: any; prev: any; }' is not assignable to parameter of type 'number'.
-index.ts(254,60): error TS2304: Cannot find name 'IOptions'.
-index.ts(407,43): error TS2304: Cannot find name 'InspectStringOptions'.
+index.ts(239,34): error TS2345: Argument of type '(value: any, from: any, noIndent: boolean) => any' is not assignable to parameter of type 'boolean'.
+index.ts(247,49): error TS2345: Argument of type '{ base: any; prev: any; }' is not assignable to parameter of type 'string'.
+index.ts(254,60): error TS2304: Cannot find name 'Options'.
+index.ts(407,43): error TS2304: Cannot find name 'InspectOptions'.
 index.ts(446,21): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
-index.ts(453,26): error TS2304: Cannot find name 'IOptions'.
-index.ts(470,36): error TS2339: Property 'prev' does not exist on type 'number'.
-index.ts(470,50): error TS2339: Property 'base' does not exist on type 'number'.
-index.ts(471,74): error TS2339: Property 'prev' does not exist on type 'number'.
+index.ts(453,26): error TS2304: Cannot find name 'Options'.
+index.ts(470,36): error TS2339: Property 'prev' does not exist on type 'string'.
+index.ts(470,50): error TS2339: Property 'base' does not exist on type 'string'.
+index.ts(471,74): error TS2339: Property 'prev' does not exist on type 'string'.
 index.ts(480,30): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+index.ts(480,35): error TS2349: This expression is not callable.
+  Type 'Boolean' has no call signatures.
 index.ts(488,26): error TS2469: The '+' operator cannot be applied to type 'symbol'.
+index.ts(499,21): error TS2349: This expression is not callable.
+  Type 'Boolean' has no call signatures.
+index.ts(499,48): error TS2349: This expression is not callable.
+  Type 'Boolean' has no call signatures.
+index.ts(501,34): error TS2349: This expression is not callable.
+  Type 'Boolean' has no call signatures.
+index.ts(507,31): error TS2349: This expression is not callable.
+  Type 'Boolean' has no call signatures.
+index.ts(507,58): error TS2349: This expression is not callable.
+  Type 'Boolean' has no call signatures.
 

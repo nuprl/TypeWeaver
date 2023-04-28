@@ -1,2 +1,2 @@
-declare function slice(array: Array<any>, start: number, end: number): any[];
+declare function slice(array: any[], start: number, end: number): any[];
 export default slice;

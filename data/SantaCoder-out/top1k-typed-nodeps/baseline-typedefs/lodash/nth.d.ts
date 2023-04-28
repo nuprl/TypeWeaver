@@ -1,2 +1,2 @@
-declare function nth(array: number[], n: number): number;
+declare function nth(array: any[], n: number): any;
 export default nth;

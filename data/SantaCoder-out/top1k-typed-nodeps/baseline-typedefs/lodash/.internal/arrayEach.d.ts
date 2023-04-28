@@ -1,2 +1,2 @@
-declare function arrayEach(array: Array<any>, iteratee: any): any[];
+declare function arrayEach(array: any[], iteratee: Function): any[];
 export default arrayEach;

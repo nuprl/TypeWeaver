@@ -7,8 +7,12 @@ lib/DirectoryWatcher.ts(36,7): error TS2300: Duplicate identifier 'Watcher'.
 lib/DirectoryWatcher.ts(55,7): error TS2451: Cannot redeclare block-scoped variable 'DirectoryWatcher'.
 lib/DirectoryWatcher.ts(606,43): error TS2345: Argument of type 'unknown' is not assignable to parameter of type 'string'.
 lib/DirectoryWatcher.ts(609,30): error TS2488: Type 'unknown' must have a '[Symbol.iterator]()' method that returns an iterator.
-lib/DirectoryWatcher.ts(773,36): error TS2304: Cannot find name 'IEntry'.
-lib/DirectoryWatcher.ts(773,36): error TS4078: Parameter 'entry' of exported function has or is using private name 'IEntry'.
+lib/DirectoryWatcher.ts(773,36): error TS2304: Cannot find name 'Entry'.
+lib/DirectoryWatcher.ts(773,36): error TS4078: Parameter 'entry' of exported function has or is using private name 'Entry'.
+lib/DirectoryWatcher.ts(782,25): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/DirectoryWatcher.ts(783,31): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/DirectoryWatcher.ts(784,32): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/DirectoryWatcher.ts(785,33): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 lib/LinkResolver.ts(7,7): error TS2451: Cannot redeclare block-scoped variable 'fs'.
 lib/LinkResolver.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'path'.
 lib/LinkResolver.ts(16,7): error TS2451: Cannot redeclare block-scoped variable 'LinkResolver'.
@@ -78,8 +82,6 @@ lib/watchEventSource.ts(299,18): error TS2554: Expected 3 arguments, but got 0.
 lib/watchpack.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'LinkResolver'.
 lib/watchpack.ts(9,7): error TS2451: Cannot redeclare block-scoped variable 'EventEmitter'.
 lib/watchpack.ts(11,7): error TS2451: Cannot redeclare block-scoped variable 'watchEventSource'.
-lib/watchpack.ts(16,37): error TS2552: Cannot find name 'Watchers'. Did you mean 'Watcher'?
-lib/watchpack.ts(16,37): error TS4078: Parameter 'watchers' of exported function has or is using private name 'Watchers'.
 lib/watchpack.ts(69,8): error TS2339: Property 'files' does not exist on type 'WatchpackFileWatcher'.
 lib/watchpack.ts(70,8): error TS2339: Property 'watcher' does not exist on type 'WatchpackFileWatcher'.
 lib/watchpack.ts(72,28): error TS2339: Property 'files' does not exist on type 'WatchpackFileWatcher'.
@@ -103,14 +105,8 @@ lib/watchpack.ts(132,10): error TS2339: Property 'directories' does not exist on
 lib/watchpack.ts(135,9): error TS2339: Property 'directories' does not exist on type 'WatchpackDirectoryWatcher'.
 lib/watchpack.ts(140,8): error TS2339: Property 'watcher' does not exist on type 'WatchpackDirectoryWatcher'.
 lib/watchpack.ts(144,7): error TS2300: Duplicate identifier 'Watchpack'.
-lib/watchpack.ts(313,48): error TS2345: Argument of type 'Set<unknown>' is not assignable to parameter of type 'Set<Watcher>'.
-  Type '{}' is missing the following properties from type 'Watcher': checkStartTime, close
-lib/watchpack.ts(314,53): error TS2345: Argument of type 'Set<unknown>' is not assignable to parameter of type 'Set<Watcher>'.
 lib/watchpack.ts(317,20): error TS2339: Property 'getTimes' does not exist on type 'unknown'.
-lib/watchpack.ts(331,48): error TS2345: Argument of type 'Set<unknown>' is not assignable to parameter of type 'Set<Watcher>'.
-lib/watchpack.ts(332,53): error TS2345: Argument of type 'Set<unknown>' is not assignable to parameter of type 'Set<Watcher>'.
 lib/watchpack.ts(335,6): error TS2339: Property 'collectTimeInfoEntries' does not exist on type 'unknown'.
 playground/watch-folder.ts(3,5): error TS2451: Cannot redeclare block-scoped variable 'path'.
 playground/watch-folder.ts(4,5): error TS2300: Duplicate identifier 'Watchpack'.
-playground/watch-folder.ts(17,39): error TS2304: Cannot find name 'IChangeSet'.
 

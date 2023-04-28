@@ -1,3 +1,4 @@
+Gruntfile.ts(3,35): error TS2304: Cannot find name 'IGrunt'.
 dist/loglevel.min.ts(2,2): error TS1345: An expression of type 'void' cannot be tested for truthiness.
 dist/loglevel.min.ts(2,48): error TS2304: Cannot find name 'define'.
 dist/loglevel.min.ts(2,56): error TS2304: Cannot find name 'define'.
@@ -9,13 +10,12 @@ dist/loglevel.min.ts(2,3011): error TS2339: Property 'log' does not exist on typ
 dist/loglevel.ts(4,16): error TS2304: Cannot find name 'define'.
 dist/loglevel.ts(4,41): error TS2304: Cannot find name 'define'.
 dist/loglevel.ts(5,9): error TS2304: Cannot find name 'define'.
-dist/loglevel.ts(81,43): error TS2304: Cannot find name 'LogLevel'.
+dist/loglevel.ts(85,33): error TS2365: Operator '<' cannot be applied to types 'number' and 'string'.
 dist/loglevel.ts(96,73): error TS2304: Cannot find name 'LogLevel'.
-dist/loglevel.ts(107,62): error TS2304: Cannot find name 'LogLevel'.
-dist/loglevel.ts(113,49): error TS2304: Cannot find name 'LogLevel'.
-dist/loglevel.ts(113,68): error TS2304: Cannot find name 'LogLevelFactory'.
+dist/loglevel.ts(113,66): error TS2304: Cannot find name 'LoggerFactory'.
 dist/loglevel.ts(206,62): error TS2339: Property 'toUpperCase' does not exist on type 'never'.
 dist/loglevel.ts(207,41): error TS2339: Property 'toUpperCase' does not exist on type 'never'.
+dist/loglevel.ts(223,47): error TS2304: Cannot find name 'LogLevel'.
 dist/loglevel.ts(257,25): error TS2554: Expected 3 arguments, but got 0.
 dist/loglevel.ts(274,59): error TS2339: Property 'log' does not exist on type 'Window & typeof globalThis'.
 dist/loglevel.ts(277,23): error TS2339: Property 'log' does not exist on type 'Window & typeof globalThis'.
@@ -23,13 +23,12 @@ dist/loglevel.ts(278,20): error TS2339: Property 'log' does not exist on type 'W
 lib/loglevel.ts(9,16): error TS2304: Cannot find name 'define'.
 lib/loglevel.ts(9,41): error TS2304: Cannot find name 'define'.
 lib/loglevel.ts(10,9): error TS2304: Cannot find name 'define'.
-lib/loglevel.ts(86,43): error TS2304: Cannot find name 'LogLevel'.
+lib/loglevel.ts(90,33): error TS2365: Operator '<' cannot be applied to types 'number' and 'string'.
 lib/loglevel.ts(101,73): error TS2304: Cannot find name 'LogLevel'.
-lib/loglevel.ts(112,62): error TS2304: Cannot find name 'LogLevel'.
-lib/loglevel.ts(118,49): error TS2304: Cannot find name 'LogLevel'.
-lib/loglevel.ts(118,68): error TS2304: Cannot find name 'LogLevelFactory'.
+lib/loglevel.ts(118,66): error TS2304: Cannot find name 'LoggerFactory'.
 lib/loglevel.ts(211,62): error TS2339: Property 'toUpperCase' does not exist on type 'never'.
 lib/loglevel.ts(212,41): error TS2339: Property 'toUpperCase' does not exist on type 'never'.
+lib/loglevel.ts(228,47): error TS2304: Cannot find name 'LogLevel'.
 lib/loglevel.ts(262,25): error TS2554: Expected 3 arguments, but got 0.
 lib/loglevel.ts(279,59): error TS2339: Property 'log' does not exist on type 'Window & typeof globalThis'.
 lib/loglevel.ts(282,23): error TS2339: Property 'log' does not exist on type 'Window & typeof globalThis'.

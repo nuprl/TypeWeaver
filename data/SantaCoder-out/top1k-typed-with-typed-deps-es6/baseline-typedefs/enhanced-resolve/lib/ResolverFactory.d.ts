@@ -1,1 +1,1 @@
-export declare const createResolver: (options: IOptions) => any;
+export declare const createResolver: (options: any) => any;

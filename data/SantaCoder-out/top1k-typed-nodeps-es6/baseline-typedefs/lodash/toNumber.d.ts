@@ -1,2 +1,2 @@
-declare function toNumber(value: any): any;
+declare function toNumber(value: unknown): number;
 export default toNumber;

@@ -1,2 +1,2 @@
-declare function overArgs(func: Function, transforms: any[]): (...args: any[]) => any;
+declare function overArgs(func: Function, transforms: Function[]): (...args: any[]) => any;
 export default overArgs;

@@ -1,11 +1,4 @@
 index.ts(1,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'crypto' must be of type 'Crypto', but here has type 'any'.
 index.ts(4,17): error TS2339: Property 'createHmac' does not exist on type 'Crypto'.
 index.ts(8,17): error TS2339: Property 'createSign' does not exist on type 'Crypto'.
-index.ts(58,9): error TS2345: Argument of type '(a: number, b: number) => 0 | 1 | -1' is not assignable to parameter of type '(a: string[], b: string[]) => number'.
-  Types of parameters 'a' and 'a' are incompatible.
-    Type 'string[]' is not assignable to type 'number'.
-index.ts(64,8): error TS2345: Argument of type '(p: string) => any' is not assignable to parameter of type '(value: string[], index: number, array: string[][]) => any'.
-  Types of parameters 'p' and 'value' are incompatible.
-    Type 'string[]' is not assignable to type 'string'.
-index.ts(64,40): error TS2339: Property 'join' does not exist on type 'string'.
 

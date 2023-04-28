@@ -1,2 +1,2 @@
-declare function dropRightWhile(array: any[], predicate: any): any[];
+declare function dropRightWhile(array: any[], predicate: Function): any[];
 export default dropRightWhile;

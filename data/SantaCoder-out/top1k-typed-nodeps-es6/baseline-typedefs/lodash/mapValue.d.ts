@@ -1,2 +1,2 @@
-declare function mapValue(object: any, iteratee: any): {};
+declare function mapValue(object: any, iteratee: Function): {};
 export default mapValue;

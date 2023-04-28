@@ -1,2 +1,2 @@
-declare function invertBy(object: Object, iteratee: any): {};
+declare function invertBy(object: Object, iteratee: Function): {};
 export default invertBy;

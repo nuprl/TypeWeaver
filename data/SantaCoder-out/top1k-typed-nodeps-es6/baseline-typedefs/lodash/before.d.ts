@@ -1,2 +1,2 @@
-declare function before(n: number, func: any): (...args: any[]) => any;
+declare function before(n: number, func: Function): (...args: any[]) => any;
 export default before;

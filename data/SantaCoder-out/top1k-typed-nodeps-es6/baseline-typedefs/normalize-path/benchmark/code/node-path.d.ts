@@ -1,1 +1,1 @@
-export default function (fp: any, stripTrailing: boolean): any;
+export default function (fp: string, stripTrailing: boolean): string;

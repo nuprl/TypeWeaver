@@ -1,2 +1,2 @@
-declare function forOwnRight(object: Object, iteratee: any): void;
+declare function forOwnRight(object: any, iteratee: Function): void;
 export default forOwnRight;

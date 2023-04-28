@@ -1,2 +1,2 @@
-declare function assocIndexOf(array: Array<any>, key: any): number;
+declare function assocIndexOf(array: any[], key: any): number;
 export default assocIndexOf;

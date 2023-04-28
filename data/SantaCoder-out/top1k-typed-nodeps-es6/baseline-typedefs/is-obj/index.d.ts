@@ -1,1 +1,1 @@
-export default function isObject(value: any): boolean;
+export default function isObject(value: unknown): boolean;

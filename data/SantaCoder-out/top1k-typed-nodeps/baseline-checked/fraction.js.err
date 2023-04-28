@@ -49,9 +49,6 @@ bigfraction.ts(271,9): error TS2322: Type 'number' is not assignable to type 'bi
 bigfraction.ts(271,36): error TS2345: Argument of type 'bigint' is not assignable to parameter of type 'string'.
 bigfraction.ts(272,9): error TS2322: Type 'number' is not assignable to type 'bigint'.
 bigfraction.ts(272,36): error TS2345: Argument of type 'bigint' is not assignable to parameter of type 'string'.
-bigfraction.ts(297,22): error TS2552: Cannot find name 'BigNumber'. Did you mean 'Number'?
-bigfraction.ts(297,36): error TS2552: Cannot find name 'BigNumber'. Did you mean 'Number'?
-bigfraction.ts(297,50): error TS2552: Cannot find name 'BigNumber'. Did you mean 'Number'?
 bigfraction.ts(311,12): error TS2365: Operator '%' cannot be applied to types 'number' and 'bigint'.
 bigfraction.ts(312,7): error TS2365: Operator '/=' cannot be applied to types 'number' and 'bigint'.
 bigfraction.ts(315,12): error TS2365: Operator '%' cannot be applied to types 'number' and 'bigint'.
@@ -59,15 +56,12 @@ bigfraction.ts(316,7): error TS2365: Operator '/=' cannot be applied to types 'n
 bigfraction.ts(319,9): error TS2367: This comparison appears to be unintentional because the types 'number' and 'bigint' have no overlap.
 bigfraction.ts(327,15): error TS2365: Operator '%' cannot be applied to types 'bigint' and 'number'.
 bigfraction.ts(331,13): error TS2365: Operator '%' cannot be applied to types 'bigint' and 'number'.
+bigfraction.ts(342,30): error TS2345: Argument of type 'number' is not assignable to parameter of type 'bigint'.
 bigfraction.ts(350,14): error TS2365: Operator '%' cannot be applied to types 'bigint' and 'number'.
 bigfraction.ts(351,14): error TS2365: Operator '%' cannot be applied to types 'bigint' and 'number'.
-bigfraction.ts(382,11): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
-bigfraction.ts(385,7): error TS2322: Type 'number' is not assignable to type 'string'.
 bigfraction.ts(385,15): error TS2345: Argument of type 'bigint' is not assignable to parameter of type 'number'.
-bigfraction.ts(387,19): error TS2365: Operator '/' cannot be applied to types 'bigint' and 'string'.
-bigfraction.ts(387,28): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-bigfraction.ts(388,19): error TS2365: Operator '/' cannot be applied to types 'bigint' and 'string'.
-bigfraction.ts(388,28): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+bigfraction.ts(387,19): error TS2365: Operator '/' cannot be applied to types 'bigint' and 'number'.
+bigfraction.ts(388,19): error TS2365: Operator '/' cannot be applied to types 'bigint' and 'number'.
 bigfraction.ts(390,26): error TS2345: Argument of type 'bigint' is not assignable to parameter of type 'number'.
 bigfraction.ts(429,24): error TS2749: 'Fraction' refers to a value, but is being used as a type here. Did you mean 'typeof Fraction'?
 bigfraction.ts(429,37): error TS2749: 'Fraction' refers to a value, but is being used as a type here. Did you mean 'typeof Fraction'?
@@ -80,7 +74,8 @@ bigfraction.ts(447,9): error TS2345: Argument of type 'bigint' is not assignable
 bigfraction.ts(457,24): error TS2749: 'Fraction' refers to a value, but is being used as a type here. Did you mean 'typeof Fraction'?
 bigfraction.ts(457,37): error TS2749: 'Fraction' refers to a value, but is being used as a type here. Did you mean 'typeof Fraction'?
 bigfraction.ts(461,9): error TS2345: Argument of type 'bigint' is not assignable to parameter of type 'number'.
-bigfraction.ts(473,13): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+bigfraction.ts(471,24): error TS2749: 'Fraction' refers to a value, but is being used as a type here. Did you mean 'typeof Fraction'?
+bigfraction.ts(471,37): error TS2749: 'Fraction' refers to a value, but is being used as a type here. Did you mean 'typeof Fraction'?
 bigfraction.ts(475,9): error TS2345: Argument of type 'bigint' is not assignable to parameter of type 'number'.
 bigfraction.ts(497,63): error TS2345: Argument of type 'bigint' is not assignable to parameter of type 'number'.
 bigfraction.ts(501,11): error TS2367: This comparison appears to be unintentional because the types 'number' and 'bigint' have no overlap.
@@ -114,13 +109,9 @@ bigfraction.ts(651,29): error TS2363: The right-hand side of an arithmetic opera
 bigfraction.ts(661,7): error TS2322: Type 'bigint' is not assignable to type 'number'.
 bigfraction.ts(661,16): error TS2791: Exponentiation cannot be performed on 'bigint' values unless the 'target' option is set to 'es2016' or later.
 bigfraction.ts(663,26): error TS2365: Operator '+' cannot be applied to types 'number' and 'bigint'.
+bigfraction.ts(675,7): error TS2322: Type 'bigint' is not assignable to type 'number'.
 bigfraction.ts(675,16): error TS2791: Exponentiation cannot be performed on 'bigint' values unless the 'target' option is set to 'es2016' or later.
-bigfraction.ts(675,32): error TS2345: Argument of type '0 | BigInt' is not assignable to parameter of type 'string | number | bigint | boolean'.
-  Type 'BigInt' is not assignable to type 'string | number | bigint | boolean'.
 bigfraction.ts(677,26): error TS2365: Operator '-' cannot be applied to types 'number' and 'bigint'.
-bigfraction.ts(677,38): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-bigfraction.ts(678,10): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-bigfraction.ts(679,9): error TS2345: Argument of type 'BigInt' is not assignable to parameter of type 'number'.
 bigfraction.ts(689,7): error TS2322: Type 'bigint' is not assignable to type 'number'.
 bigfraction.ts(689,16): error TS2791: Exponentiation cannot be performed on 'bigint' values unless the 'target' option is set to 'es2016' or later.
 bigfraction.ts(706,26): error TS2365: Operator '+' cannot be applied to types 'number' and 'bigint'.
@@ -131,12 +122,10 @@ bigfraction.ts(873,42): error TS2345: Argument of type 'bigint' is not assignabl
 bigfraction.ts(886,14): error TS2304: Cannot find name 'define'.
 bigfraction.ts(886,39): error TS2304: Cannot find name 'define'.
 bigfraction.ts(887,5): error TS2304: Cannot find name 'define'.
-examples/hesse-convergence.ts(54,22): error TS2304: Cannot find name 'Matrix4'.
-examples/hesse-convergence.ts(54,22): error TS4078: Parameter 'm' of exported function has or is using private name 'Matrix4'.
-examples/hesse-convergence.ts(54,34): error TS2304: Cannot find name 'Vector3'.
-examples/hesse-convergence.ts(54,34): error TS4078: Parameter 'v' of exported function has or is using private name 'Vector3'.
-examples/hesse-convergence.ts(95,19): error TS2345: Argument of type 'number' is not assignable to parameter of type 'number[]'.
-examples/hesse-convergence.ts(111,11): error TS2345: Argument of type 'number[]' is not assignable to parameter of type 'number'.
+examples/hesse-convergence.ts(63,20): error TS2749: 'Fraction' refers to a value, but is being used as a type here. Did you mean 'typeof Fraction'?
+examples/hesse-convergence.ts(63,20): error TS4078: Parameter 'a' of exported function has or is using private name 'Fraction'.
+examples/hesse-convergence.ts(63,35): error TS2749: 'Fraction' refers to a value, but is being used as a type here. Did you mean 'typeof Fraction'?
+examples/hesse-convergence.ts(63,35): error TS4078: Parameter 'b' of exported function has or is using private name 'Fraction'.
 examples/tape-measure.ts(17,32): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 examples/toFraction.ts(31,19): error TS2339: Property 'n' does not exist on type 'string'.
 examples/toFraction.ts(31,34): error TS2339: Property 'd' does not exist on type 'string'.
@@ -155,6 +144,9 @@ fraction.min.ts(9,193): error TS2339: Property 'match' does not exist on type 'n
 fraction.min.ts(9,289): error TS2339: Property 'length' does not exist on type 'number'.
 fraction.min.ts(9,393): error TS2339: Property 'length' does not exist on type 'number'.
 fraction.min.ts(10,240): error TS2339: Property 'length' does not exist on type 'number'.
+fraction.min.ts(11,374): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+fraction.min.ts(11,435): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+fraction.min.ts(11,448): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 fraction.min.ts(13,120): error TS2350: Only a void function can be called with the 'new' keyword.
 fraction.min.ts(13,120): error TS2554: Expected 2 arguments, but got 1.
 fraction.min.ts(14,15): error TS2350: Only a void function can be called with the 'new' keyword.
@@ -198,10 +190,6 @@ fraction.ts(253,32): error TS2345: Argument of type 'number' is not assignable t
 fraction.ts(254,36): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 fraction.ts(255,36): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 fraction.ts(259,19): error TS2339: Property 'length' does not exist on type 'number'.
-fraction.ts(368,11): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
-fraction.ts(371,7): error TS2322: Type 'number' is not assignable to type 'string'.
-fraction.ts(373,28): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-fraction.ts(374,28): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 fraction.ts(415,24): error TS2749: 'Fraction' refers to a value, but is being used as a type here. Did you mean 'typeof Fraction'?
 fraction.ts(415,37): error TS2749: 'Fraction' refers to a value, but is being used as a type here. Did you mean 'typeof Fraction'?
 fraction.ts(429,24): error TS2749: 'Fraction' refers to a value, but is being used as a type here. Did you mean 'typeof Fraction'?
@@ -228,6 +216,7 @@ fraction.ts(684,13): error TS2345: Argument of type 'string' is not assignable t
 fraction.ts(686,14): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 fraction.ts(686,24): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 fraction.ts(721,13): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+fraction.ts(868,18): error TS2403: Subsequent variable declarations must have the same type.  Variable 'i' must be of type 'number', but here has type 'any'.
 fraction.ts(878,14): error TS2304: Cannot find name 'define'.
 fraction.ts(878,39): error TS2304: Cannot find name 'define'.
 fraction.ts(879,5): error TS2304: Cannot find name 'define'.

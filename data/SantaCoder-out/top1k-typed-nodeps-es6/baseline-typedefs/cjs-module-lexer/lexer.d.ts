@@ -1,4 +1,4 @@
-declare function parseCJS(source: string, name: string, : any): {
+declare function parseCJS(source: string, name: string, string: any): {
     exports: any[];
     reexports: any[];
 };

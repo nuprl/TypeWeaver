@@ -1,9 +1,10 @@
-esrecurse.ts(40,31): error TS2304: Cannot find name 'VisitorInterface'.
-esrecurse.ts(40,58): error TS2304: Cannot find name 'VisitorOptions'.
+esrecurse.ts(33,56): error TS2339: Property 'type' does not exist on type 'Node'.
+esrecurse.ts(40,31): error TS2749: 'Visitor' refers to a value, but is being used as a type here. Did you mean 'typeof Visitor'?
+esrecurse.ts(40,49): error TS2304: Cannot find name 'VisitorOptions'.
 esrecurse.ts(65,21): error TS2339: Property 'type' does not exist on type 'Node'.
 esrecurse.ts(102,21): error TS2339: Property 'type' does not exist on type 'Node'.
-esrecurse.ts(112,52): error TS2304: Cannot find name 'NodeVisitor'.
-esrecurse.ts(112,80): error TS2304: Cannot find name 'NodeVisitorOptions'.
+esrecurse.ts(112,52): error TS2749: 'Visitor' refers to a value, but is being used as a type here. Did you mean 'typeof Visitor'?
+esrecurse.ts(112,70): error TS2304: Cannot find name 'VisitOptions'.
 gulpfile.babel.ts(23,18): error TS2307: Cannot find module 'gulp' or its corresponding type declarations.
 gulpfile.babel.ts(24,19): error TS2307: Cannot find module 'gulp-mocha' or its corresponding type declarations.
 gulpfile.babel.ts(25,20): error TS2307: Cannot find module 'gulp-eslint' or its corresponding type declarations.

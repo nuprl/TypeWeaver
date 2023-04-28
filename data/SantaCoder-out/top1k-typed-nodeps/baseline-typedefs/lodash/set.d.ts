@@ -1,2 +1,2 @@
-declare function set(object: any, path: string, value: any): any;
+declare function set(object: Object, path: Array<string>, value: any): any;
 export default set;

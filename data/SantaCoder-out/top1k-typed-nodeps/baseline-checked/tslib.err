@@ -1,72 +1,56 @@
 modules/index.ts(1,19): error TS2306: File 'tslib.ts' is not a module.
 tslib.es6.ts(33,5): error TS2322: Type '{ <T extends {}, U>(target: T, source: U): T & U; <T extends {}, U, V>(target: T, source1: U, source2: V): T & U & V; <T extends {}, U, V, W>(target: T, source1: U, source2: V, source3: W): T & ... 2 more ... & W; (target: object, ...sources: any[]): any; }' is not assignable to type '() => any'.
-tslib.es6.ts(45,74): error TS2339: Property 'indexOf' does not exist on type 'number'.
 tslib.es6.ts(48,25): error TS2403: Subsequent variable declarations must have the same type.  Variable 'p' must be of type 'string', but here has type 'symbol[]'.
-tslib.es6.ts(49,19): error TS2339: Property 'indexOf' does not exist on type 'number'.
 tslib.es6.ts(57,55): error TS2339: Property 'decorate' does not exist on type 'typeof Reflect'.
 tslib.es6.ts(57,92): error TS2339: Property 'decorate' does not exist on type 'typeof Reflect'.
-tslib.es6.ts(62,56): error TS2304: Cannot find name 'Decorator'.
-tslib.es6.ts(62,56): error TS4078: Parameter 'decorator' of exported function has or is using private name 'Decorator'.
 tslib.es6.ts(67,55): error TS2339: Property 'metadata' does not exist on type 'typeof Reflect'.
 tslib.es6.ts(67,95): error TS2339: Property 'metadata' does not exist on type 'typeof Reflect'.
 tslib.es6.ts(73,35): error TS2304: Cannot find name 'T'.
-tslib.es6.ts(84,23): error TS2304: Cannot find name 'Operation'.
+tslib.es6.ts(74,34): error TS2304: Cannot find name 'T'.
+tslib.es6.ts(75,46): error TS2304: Cannot find name 'T'.
 tslib.es6.ts(95,111): error TS2322: Type 'number' is not assignable to type '{ label: number; sent: () => any; trys: any[]; ops: any[]; }'.
 tslib.es6.ts(121,90): error TS2554: Expected 4 arguments, but got 3.
 tslib.es6.ts(156,24): error TS2554: Expected 2 arguments, but got 1.
 tslib.es6.ts(180,59): error TS2350: Only a void function can be called with the 'new' keyword.
-tslib.es6.ts(187,75): error TS2345: Argument of type '(a: number, b: number) => void' is not assignable to parameter of type '(resolve: (value: unknown) => void, reject: (reason?: any) => void) => void'.
-  Types of parameters 'a' and 'resolve' are incompatible.
-    Type '(value: unknown) => void' is not assignable to type 'number'.
-tslib.es6.ts(190,43): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+tslib.es6.ts(190,29): error TS2304: Cannot find name 'T'.
+tslib.es6.ts(190,41): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 tslib.es6.ts(191,42): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 tslib.es6.ts(197,20): error TS2554: Expected 2 arguments, but got 1.
 tslib.es6.ts(197,76): error TS2554: Expected 2 arguments, but got 1.
-tslib.es6.ts(201,34): error TS2552: Cannot find name '__AsyncIterable'. Did you mean 'AsyncIterable'?
-tslib.es6.ts(201,34): error TS4078: Parameter 'o' of exported function has or is using private name '__AsyncIterable'.
-tslib.es6.ts(201,50): error TS2304: Cannot find name 'T'.
-tslib.es6.ts(201,50): error TS4078: Parameter 'o' of exported function has or is using private name 'T'.
-tslib.es6.ts(210,104): error TS2339: Property 'raw' does not exist on type 'string'.
+tslib.es6.ts(206,82): error TS2304: Cannot find name 'T'.
+tslib.es6.ts(210,104): error TS2339: Property 'raw' does not exist on type 'string[]'.
 tslib.es6.ts(223,110): error TS2554: Expected 4 arguments, but got 3.
-tslib.es6.ts(233,9): error TS2367: This comparison appears to be unintentional because the types '"get"' and '"a"' have no overlap.
-tslib.es6.ts(235,12): error TS2367: This comparison appears to be unintentional because the types '"get"' and '"m"' have no overlap.
-tslib.es6.ts(235,31): error TS2367: This comparison appears to be unintentional because the types '"get"' and '"a"' have no overlap.
-tslib.ts(41,21): error TS2552: Cannot find name 'IFactory'. Did you mean 'IDBFactory'?
 tslib.ts(43,16): error TS2304: Cannot find name 'define'.
 tslib.ts(43,41): error TS2304: Cannot find name 'define'.
 tslib.ts(44,9): error TS2304: Cannot find name 'define'.
 tslib.ts(44,93): error TS2554: Expected 2 arguments, but got 1.
 tslib.ts(47,38): error TS2554: Expected 2 arguments, but got 1.
 tslib.ts(50,17): error TS2554: Expected 2 arguments, but got 1.
-tslib.ts(64,22): error TS2304: Cannot find name 'IExporter'.
+tslib.ts(64,22): error TS2304: Cannot find name 'Exporter'.
 tslib.ts(87,23): error TS2407: The right-hand side of a 'for...in' statement must be of type 'any', an object type or a type parameter, but here has type 'string'.
-tslib.ts(87,78): error TS2339: Property 'indexOf' does not exist on type 'number'.
+tslib.ts(87,78): error TS2339: Property 'indexOf' does not exist on type 'Event'.
 tslib.ts(90,29): error TS2403: Subsequent variable declarations must have the same type.  Variable 'p' must be of type 'string', but here has type 'symbol[]'.
-tslib.ts(91,23): error TS2339: Property 'indexOf' does not exist on type 'number'.
+tslib.ts(91,23): error TS2339: Property 'indexOf' does not exist on type 'Event'.
+tslib.ts(97,40): error TS2304: Cannot find name 'Decorator'.
 tslib.ts(99,59): error TS2339: Property 'decorate' does not exist on type 'typeof Reflect'.
 tslib.ts(99,96): error TS2339: Property 'decorate' does not exist on type 'typeof Reflect'.
-tslib.ts(104,56): error TS2304: Cannot find name 'IDecorator'.
 tslib.ts(109,59): error TS2339: Property 'metadata' does not exist on type 'typeof Reflect'.
 tslib.ts(109,99): error TS2339: Property 'metadata' does not exist on type 'typeof Reflect'.
 tslib.ts(115,39): error TS2304: Cannot find name 'T'.
-tslib.ts(125,70): error TS2345: Argument of type 'any[]' is not assignable to parameter of type 'number'.
-tslib.ts(130,31): error TS2322: Type 'any[]' is not assignable to type 'number'.
-tslib.ts(134,51): error TS2322: Type 'number[]' is not assignable to type 'number'.
 tslib.ts(137,115): error TS2322: Type 'number' is not assignable to type '{ label: number; sent: () => any; trys: any[]; ops: any[]; }'.
-tslib.ts(145,27): error TS2322: Type 'any[]' is not assignable to type 'number'.
-tslib.ts(183,37): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
-tslib.ts(213,30): error TS2322: Type 'string' is not assignable to type 'object'.
-tslib.ts(229,79): error TS2345: Argument of type '(a: number, b: number) => void' is not assignable to parameter of type '(resolve: (value: unknown) => void, reject: (reason?: any) => void) => void'.
-  Types of parameters 'a' and 'resolve' are incompatible.
-    Type '(value: unknown) => void' is not assignable to type 'number'.
-tslib.ts(232,47): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+tslib.ts(211,35): error TS2304: Cannot find name 'Route'.
+tslib.ts(211,48): error TS2304: Cannot find name 'Route'.
+tslib.ts(232,33): error TS2304: Cannot find name 'T'.
+tslib.ts(232,45): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 tslib.ts(233,46): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 tslib.ts(239,24): error TS2554: Expected 2 arguments, but got 1.
 tslib.ts(239,80): error TS2554: Expected 2 arguments, but got 1.
+tslib.ts(240,58): error TS2304: Cannot find name 'T'.
+tslib.ts(248,86): error TS2304: Cannot find name 'T'.
 tslib.ts(252,108): error TS2339: Property 'raw' does not exist on type 'string'.
-tslib.ts(270,38): error TS2304: Cannot find name 'IModule'.
-tslib.ts(275,13): error TS2367: This comparison appears to be unintentional because the types '"return"' and '"a"' have no overlap.
-tslib.ts(277,16): error TS2367: This comparison appears to be unintentional because the types '"return"' and '"m"' have no overlap.
-tslib.ts(277,35): error TS2367: This comparison appears to be unintentional because the types '"return"' and '"a"' have no overlap.
-tslib.ts(287,46): error TS2304: Cannot find name 'State'.
+tslib.ts(280,50): error TS2304: Cannot find name 'Any'.
+tslib.ts(280,62): error TS2304: Cannot find name 'Any'.
+tslib.ts(280,74): error TS2304: Cannot find name 'Any'.
+tslib.ts(280,85): error TS2304: Cannot find name 'Any'.
+tslib.ts(280,93): error TS2304: Cannot find name 'Any'.
 

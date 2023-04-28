@@ -5,4 +5,4 @@ declare const regexAnySingleEscape: RegExp;
 declare const regexSingleEscape: RegExp;
 declare const regexAlwaysEscape: RegExp;
 declare const regexExcessiveSpaces: RegExp;
-declare const cssesc: (string: string, options: CSSEscOptions) => string;
+declare const cssesc: (string: string, options: Options) => string;

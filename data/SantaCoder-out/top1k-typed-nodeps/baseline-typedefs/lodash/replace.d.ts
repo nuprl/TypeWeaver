@@ -1,2 +1,2 @@
-declare function replace(...args: string[]): string;
+declare function replace(...args: any[]): string;
 export default replace;

@@ -1,1 +1,1 @@
-export default function mapValuesSeries(obj: any, iteratee: any, callback: any): any;
+export default function mapValuesSeries(obj: any, iteratee: Function, callback: Function): any;

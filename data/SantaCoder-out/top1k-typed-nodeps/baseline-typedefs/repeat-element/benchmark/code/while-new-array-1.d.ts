@@ -1,1 +1,1 @@
-declare function repeat(ele: string, num: number): any[];
+declare function repeat(ele: any, num: number): any[];

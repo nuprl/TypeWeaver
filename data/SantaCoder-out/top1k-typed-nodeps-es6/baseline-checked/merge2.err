@@ -1,16 +1,13 @@
 index.ts(37,24): error TS2348: Value of type 'typeof PassThrough' is not callable. Did you mean to include 'new'?
 index.ts(72,28): error TS2552: Cannot find name 'Readable'. Did you mean '_Readable'?
 index.ts(119,47): error TS2552: Cannot find name 'Readable'. Did you mean '_Readable'?
-index.ts(130,52): error TS2304: Cannot find name 'PauseStreamsOptions'.
+index.ts(130,39): error TS2552: Cannot find name 'Readable'. Did you mean '_Readable'?
 index.ts(133,18): error TS2339: Property '_readableState' does not exist on type 'never'.
 index.ts(133,44): error TS2339: Property 'pipe' does not exist on type 'never'.
 index.ts(134,25): error TS2339: Property 'pipe' does not exist on type 'never'.
 index.ts(134,30): error TS2348: Value of type 'typeof PassThrough' is not callable. Did you mean to include 'new'?
-index.ts(136,18): error TS2339: Property '_readableState' does not exist on type 'internal[]'.
-index.ts(136,45): error TS2339: Property 'pause' does not exist on type 'internal[]'.
-index.ts(136,63): error TS2339: Property 'pipe' does not exist on type 'internal[]'.
-index.ts(139,13): error TS2339: Property 'pause' does not exist on type 'internal[]'.
-index.ts(142,7): error TS2740: Type 'internal[]' is missing the following properties from type 'internal': pipe, addListener, on, once, and 12 more.
-index.ts(142,33): error TS2345: Argument of type 'internal' is not assignable to parameter of type 'internal[]'.
-  Type 'internal' is missing the following properties from type 'internal[]': length, pop, push, concat, and 29 more.
+index.ts(136,18): error TS2339: Property '_readableState' does not exist on type 'Readable[]'.
+index.ts(136,45): error TS2339: Property 'pause' does not exist on type 'Readable[]'.
+index.ts(136,63): error TS2339: Property 'pipe' does not exist on type 'Readable[]'.
+index.ts(139,13): error TS2339: Property 'pause' does not exist on type 'Readable[]'.
 

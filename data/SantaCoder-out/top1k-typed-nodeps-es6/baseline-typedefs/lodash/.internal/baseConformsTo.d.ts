@@ -1,2 +1,2 @@
-declare function baseConformsTo(object: any, source: any, props: string[]): boolean;
+declare function baseConformsTo(object: any, source: any, props: any): boolean;
 export default baseConformsTo;

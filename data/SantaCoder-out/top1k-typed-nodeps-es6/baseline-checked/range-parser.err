@@ -1,6 +1,9 @@
-index.ts(27,59): error TS2552: Cannot find name 'RangeParserOptions'. Did you mean 'AnalyserOptions'?
-index.ts(27,59): error TS4078: Parameter 'options' of exported function has or is using private name 'RangeParserOptions'.
+index.ts(27,59): error TS2304: Cannot find name 'Options'.
+index.ts(27,59): error TS4078: Parameter 'options' of exported function has or is using private name 'Options'.
 index.ts(43,10): error TS2339: Property 'type' does not exist on type 'any[]'.
+index.ts(93,28): error TS2345: Argument of type '(range: number, index: number) => { start: any; end: any; index: number; }' is not assignable to parameter of type '(value: Range, index: number, array: Range[]) => { start: any; end: any; index: number; }'.
+  Types of parameters 'range' and 'value' are incompatible.
+    Type 'Range' is not assignable to type 'number'.
 index.ts(93,47): error TS2345: Argument of type '(a: Range, b: Range) => number' is not assignable to parameter of type '(a: { start: any; end: any; index: number; }, b: { start: any; end: any; index: number; }) => number'.
   Types of parameters 'a' and 'a' are incompatible.
     Type '{ start: any; end: any; index: number; }' is not assignable to type 'Range'.
@@ -12,8 +15,8 @@ index.ts(113,53): error TS2345: Argument of type '(range: Range) => { start: any
     Type '{ start: any; end: any; index: number; }' is not assignable to type 'Range'.
 index.ts(116,12): error TS2339: Property 'type' does not exist on type '{ start: any; end: any; }[]'.
 index.ts(116,26): error TS2339: Property 'type' does not exist on type 'Range[]'.
-index.ts(126,31): error TS2315: Type 'Range' is not generic.
-index.ts(126,37): error TS2304: Cannot find name 'T'.
+index.ts(128,18): error TS2339: Property 'start' does not exist on type 'number'.
+index.ts(129,16): error TS2339: Property 'end' does not exist on type 'number'.
 index.ts(141,18): error TS2339: Property 'start' does not exist on type 'Range'.
 index.ts(142,16): error TS2339: Property 'end' does not exist on type 'Range'.
 index.ts(152,12): error TS2339: Property 'index' does not exist on type 'Range'.

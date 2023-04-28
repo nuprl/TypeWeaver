@@ -1,13 +1,12 @@
-example/bakery.ts(18,78): error TS2304: Cannot find name 'Action'.
 lib/gntp.ts(2,5): error TS2403: Subsequent variable declarations must have the same type.  Variable 'crypto' must be of type 'Crypto', but here has type 'any'.
 lib/gntp.ts(15,10): error TS2300: Duplicate identifier 'GNTP'.
-lib/gntp.ts(15,35): error TS2552: Cannot find name 'GNTPOptions'. Did you mean 'GainOptions'?
-lib/gntp.ts(15,35): error TS4078: Parameter 'opts' of exported function has or is using private name 'GNTPOptions'.
-lib/gntp.ts(47,43): error TS2304: Cannot find name 'AxiosResponse'.
+lib/gntp.ts(15,35): error TS2304: Cannot find name 'GNTPOpts'.
+lib/gntp.ts(15,35): error TS4078: Parameter 'opts' of exported function has or is using private name 'GNTPOpts'.
 lib/gntp.ts(53,12): error TS2339: Property 'state' does not exist on type '{}'.
 lib/gntp.ts(55,9): error TS2322: Type 'string[]' is not assignable to type 'string'.
 lib/gntp.ts(86,21): error TS2339: Property 'createHash' does not exist on type 'Crypto'.
-lib/gntp.ts(157,46): error TS2552: Cannot find name 'IResponse'. Did you mean 'Response'?
+lib/gntp.ts(158,30): error TS2551: Property 'header' does not exist on type 'Response'. Did you mean 'headers'?
+lib/gntp.ts(159,30): error TS2339: Property 'file' does not exist on type 'Response'.
 lib/gntp.ts(174,18): error TS2339: Property 'state' does not exist on type 'string'.
 lib/gntp.ts(174,44): error TS2339: Property 'state' does not exist on type 'string'.
 lib/growly.ts(1,5): error TS2300: Duplicate identifier 'GNTP'.
@@ -21,6 +20,4 @@ lib/growly.ts(105,48): error TS2339: Property 'enabled' does not exist on type '
 lib/growly.ts(106,45): error TS2339: Property 'label' does not exist on type 'Notification'.
 lib/growly.ts(107,53): error TS2339: Property 'dispname' does not exist on type 'Notification'.
 lib/growly.ts(108,48): error TS2339: Property 'enabled' does not exist on type 'Notification'.
-lib/growly.ts(145,56): error TS2304: Cannot find name 'ITextFileOptions'.
-lib/growly.ts(180,42): error TS2304: Cannot find name 'AxiosResponse'.
 

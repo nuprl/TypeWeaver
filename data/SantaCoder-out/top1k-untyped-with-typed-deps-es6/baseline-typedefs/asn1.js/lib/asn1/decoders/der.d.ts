@@ -1,2 +1,2 @@
-declare function DERDecoder(entity: string): void;
+declare function DERDecoder(entity: any): void;
 export default DERDecoder;

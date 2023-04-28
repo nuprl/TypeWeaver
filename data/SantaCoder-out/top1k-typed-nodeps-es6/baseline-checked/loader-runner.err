@@ -1,27 +1,17 @@
-lib/LoaderRunner.ts(11,25): error TS2554: Expected 0 arguments, but got 1.
-lib/LoaderRunner.ts(75,15): error TS2339: Property 'loader' does not exist on type 'never'.
-lib/LoaderRunner.ts(77,22): error TS2339: Property 'loader' does not exist on type 'never'.
-lib/LoaderRunner.ts(78,26): error TS2339: Property 'fragment' does not exist on type 'never'.
+lib/LoaderRunner.ts(47,37): error TS2304: Cannot find name 'Loader'.
 lib/LoaderRunner.ts(79,9): error TS2339: Property 'type' does not exist on type '{ path: any; query: any; fragment: any; options: any; ident: any; normal: any; pitch: any; raw: any; data: any; pitchExecuted: boolean; normalExecuted: boolean; }'.
-lib/LoaderRunner.ts(79,22): error TS2339: Property 'type' does not exist on type 'never'.
-lib/LoaderRunner.ts(80,25): error TS2339: Property 'options' does not exist on type 'never'.
-lib/LoaderRunner.ts(81,23): error TS2339: Property 'ident' does not exist on type 'never'.
 lib/LoaderRunner.ts(97,6): error TS2339: Property 'request' does not exist on type '{ path: any; query: any; fragment: any; options: any; ident: any; normal: any; pitch: any; raw: any; data: any; pitchExecuted: boolean; normalExecuted: boolean; }'.
 lib/LoaderRunner.ts(166,3): error TS2322: Type 'Buffer' is not assignable to type 'string'.
-lib/LoaderRunner.ts(169,42): error TS2304: Cannot find name 'PitchingLoaderOptions'.
-lib/LoaderRunner.ts(215,35): error TS2304: Cannot find name 'IProcessResourceOptions'.
-lib/LoaderRunner.ts(232,40): error TS2304: Cannot find name 'WebpackOptions'.
-lib/LoaderRunner.ts(232,71): error TS2304: Cannot find name 'WebpackContext'.
-lib/LoaderRunner.ts(232,93): error TS2304: Cannot find name 'WebpackOptions'.
-lib/LoaderRunner.ts(232,119): error TS2304: Cannot find name 'WebpackCallback'.
+lib/LoaderRunner.ts(169,42): error TS2304: Cannot find name 'LoaderOptions'.
+lib/LoaderRunner.ts(169,72): error TS2304: Cannot find name 'LoaderContext'.
+lib/LoaderRunner.ts(232,40): error TS2304: Cannot find name 'LoaderContext'.
+lib/LoaderRunner.ts(232,70): error TS2304: Cannot find name 'LoaderContext'.
 lib/LoaderRunner.ts(260,57): error TS2304: Cannot find name 'Resource'.
-lib/LoaderRunner.ts(265,56): error TS2304: Cannot find name 'WebpackOptions'.
-lib/LoaderRunner.ts(307,78): error TS2304: Cannot find name 'Context'.
-lib/LoaderRunner.ts(310,78): error TS2304: Cannot find name 'Context'.
-lib/LoaderRunner.ts(345,49): error TS2304: Cannot find name 'IRequest'.
-lib/LoaderRunner.ts(355,86): error TS2304: Cannot find name 'IRequest'.
-lib/loadLoader.ts(5,12): error TS2339: Property 'type' does not exist on type 'string'.
-lib/loadLoader.ts(8,45): error TS2339: Property 'path' does not exist on type 'string'.
-lib/loadLoader.ts(19,32): error TS2339: Property 'path' does not exist on type 'string'.
+lib/LoaderRunner.ts(310,78): error TS2304: Cannot find name 'BuildContext'.
+lib/LoaderRunner.ts(336,59): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+lib/loadLoader.ts(4,44): error TS2304: Cannot find name 'Loader'.
+lib/loadLoader.ts(4,44): error TS4078: Parameter 'loader' of exported function has or is using private name 'Loader'.
 lib/loadLoader.ts(23,31): error TS2339: Property 'code' does not exist on type 'Error'.
+lib/loadLoader.ts(39,31): error TS2304: Cannot find name 'LoaderContext'.
+lib/loadLoader.ts(39,54): error TS2304: Cannot find name 'Module'.
 

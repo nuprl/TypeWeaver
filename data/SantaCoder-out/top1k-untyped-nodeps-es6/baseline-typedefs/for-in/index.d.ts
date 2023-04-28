@@ -4,4 +4,4 @@
  * Copyright (c) 2014-2017, Jon Schlinkert.
  * Released under the MIT License.
  */
-export default function forIn(obj: Object, fn: any, thisArg: any): void;
+export default function forIn(obj: Object, fn: Function, thisArg: any): void;

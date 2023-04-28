@@ -7,7 +7,7 @@ declare class AsyncParallelHookCodeFactory extends HookCodeFactory {
     }): any;
 }
 declare const factory: AsyncParallelHookCodeFactory;
-declare const COMPILE: (options: IOptions) => any;
+declare const COMPILE: (options: any) => any;
 declare function AsyncParallelHook(args: any[], any: any, []: Iterable<any>, name: any, string: any): any;
 declare namespace AsyncParallelHook {
     var prototype: any;

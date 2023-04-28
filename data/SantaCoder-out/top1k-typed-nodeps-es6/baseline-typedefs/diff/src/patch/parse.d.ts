@@ -1,1 +1,1 @@
-export declare function parsePatch(uniDiff: string, options: {}, ParsePatchOptions: any): any[];
+export declare function parsePatch(uniDiff: string, options: {}, Options: any): any[];

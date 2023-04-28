@@ -1,1 +1,1 @@
-export default function union(init: any[]): any;
+export default function union(init: any[][]): any;

@@ -1,2 +1,2 @@
-declare function sampleSize(array: number[], n: number): any[];
+declare function sampleSize(array: any[], n: number): any[];
 export default sampleSize;

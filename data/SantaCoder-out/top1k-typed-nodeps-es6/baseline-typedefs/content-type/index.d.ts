@@ -12,5 +12,5 @@ declare var TYPE_REGEXP: RegExp;
 declare function format(obj: any): any;
 declare function parse(string: string): any;
 declare function getcontenttype(obj: any): string;
-declare function qstring(val: string): string;
+declare function qstring(val: any): string;
 declare function ContentType(type: string): void;

@@ -1,2 +1,2 @@
-declare var traverse: (schema: Schema, opts: SchemaOptions, cb: any) => void;
+declare var traverse: (schema: any, opts: any, cb: any) => void;
 export default traverse;

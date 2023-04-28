@@ -1,4 +1,4 @@
-declare const _default: ({
+declare const _default_1: ({
     input: string;
     output: ({
         file: string;
@@ -21,4 +21,4 @@ declare const _default: ({
     }[];
     plugins: any[];
 })[];
-export default _default;
+export default _default_1;

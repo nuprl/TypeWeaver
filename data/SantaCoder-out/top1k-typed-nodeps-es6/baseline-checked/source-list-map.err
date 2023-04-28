@@ -68,7 +68,7 @@ lib/SourceListMap.ts(29,10): error TS2339: Property 'children' does not exist on
 lib/SourceListMap.ts(29,24): error TS2339: Property 'children' does not exist on type 'SourceListMap'.
 lib/SourceListMap.ts(31,10): error TS2339: Property 'children' does not exist on type 'SourceListMap'.
 lib/SourceListMap.ts(34,9): error TS2339: Property 'children' does not exist on type 'SourceListMap'.
-lib/SourceListMap.ts(36,49): error TS2304: Cannot find name 'IScriptLine'.
+lib/SourceListMap.ts(36,49): error TS2304: Cannot find name 'Solution'.
 lib/SourceListMap.ts(47,10): error TS2339: Property 'children' does not exist on type 'SourceListMap'.
 lib/SourceListMap.ts(47,27): error TS2554: Expected 4 arguments, but got 3.
 lib/SourceListMap.ts(48,19): error TS2339: Property 'children' does not exist on type 'SourceListMap'.
@@ -78,17 +78,17 @@ lib/SourceListMap.ts(49,10): error TS2339: Property 'children' does not exist on
 lib/SourceListMap.ts(49,24): error TS2339: Property 'children' does not exist on type 'SourceListMap'.
 lib/SourceListMap.ts(51,10): error TS2339: Property 'children' does not exist on type 'SourceListMap'.
 lib/SourceListMap.ts(54,9): error TS2339: Property 'children' does not exist on type 'SourceListMap'.
-lib/SourceListMap.ts(56,67): error TS2304: Cannot find name 'IScriptLine'.
+lib/SourceListMap.ts(56,67): error TS2304: Cannot find name 'Solution'.
 lib/SourceListMap.ts(66,8): error TS2339: Property 'children' does not exist on type 'SourceListMap'.
 lib/SourceListMap.ts(67,8): error TS2339: Property 'getNormalizedNodes' does not exist on type 'string'.
-lib/SourceListMap.ts(72,41): error TS2304: Cannot find name 'IScriptLine'.
+lib/SourceListMap.ts(72,41): error TS2304: Cannot find name 'Solution'.
 lib/SourceListMap.ts(86,10): error TS2554: Expected 3 arguments, but got 1.
 lib/SourceListMap.ts(90,15): error TS2339: Property 'children' does not exist on type 'SourceListMap'.
-lib/SourceListMap.ts(90,42): error TS2304: Cannot find name 'IScriptLine'.
+lib/SourceListMap.ts(90,42): error TS2304: Cannot find name 'Solution'.
 lib/SourceListMap.ts(97,23): error TS2339: Property 'children' does not exist on type 'SourceListMap'.
-lib/SourceListMap.ts(97,50): error TS2304: Cannot find name 'IScriptLine'.
+lib/SourceListMap.ts(97,50): error TS2304: Cannot find name 'Solution'.
 lib/SourceListMap.ts(100,25): error TS2339: Property 'children' does not exist on type 'SourceListMap'.
-lib/SourceListMap.ts(100,52): error TS2304: Cannot find name 'IScriptLine'.
+lib/SourceListMap.ts(100,52): error TS2304: Cannot find name 'Solution'.
 lib/SourceListMap.ts(110,37): error TS2339: Property 'hasSourceContent' does not exist on type 'MappingsContext'.
 lib/SourceNode.ts(7,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/SantaCoder-out/top1k-typed-nodeps-es6/baseline/source-list-map/lib/base64-vlq"' has no default export.
 lib/SourceNode.ts(16,8): error TS2551: Property 'generatedCode' does not exist on type 'SourceNode'. Did you mean 'getGeneratedCode'?
@@ -138,12 +138,11 @@ lib/base64-vlq.ts(160,20): error TS2339: Property 'decode' does not exist on typ
 lib/base64-vlq.ts(167,13): error TS2551: Property 'value' does not exist on type 'number[]'. Did you mean 'values'?
 lib/base64-vlq.ts(168,13): error TS2339: Property 'rest' does not exist on type 'number[]'.
 lib/fromStringWithSourceMap.ts(7,8): error TS1192: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/SantaCoder-out/top1k-typed-nodeps-es6/baseline/source-list-map/lib/base64-vlq"' has no default export.
-lib/fromStringWithSourceMap.ts(12,68): error TS2304: Cannot find name 'SourceMap'.
-lib/fromStringWithSourceMap.ts(12,68): error TS4078: Parameter 'map' of exported function has or is using private name 'SourceMap'.
+lib/fromStringWithSourceMap.ts(13,22): error TS2339: Property 'sources' does not exist on type 'string'.
+lib/fromStringWithSourceMap.ts(14,29): error TS2339: Property 'sourcesContent' does not exist on type 'string'.
+lib/fromStringWithSourceMap.ts(15,23): error TS2339: Property 'mappings' does not exist on type 'string'.
 lib/fromStringWithSourceMap.ts(35,16): error TS2339: Property 'source' does not exist on type 'SourceNode'.
-lib/fromStringWithSourceMap.ts(46,37): error TS2304: Cannot find name 'IMapping'.
-lib/fromStringWithSourceMap.ts(55,40): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+lib/fromStringWithSourceMap.ts(46,37): error TS2304: Cannot find name 'Mapping'.
 lib/fromStringWithSourceMap.ts(67,9): error TS2554: Expected 3 arguments, but got 1.
-lib/fromStringWithSourceMap.ts(68,35): error TS2304: Cannot find name 'IMapping'.
-lib/fromStringWithSourceMap.ts(98,14): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+lib/fromStringWithSourceMap.ts(68,35): error TS2304: Cannot find name 'Mapping'.
 

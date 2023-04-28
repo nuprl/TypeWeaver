@@ -1,1 +1,1 @@
-export default function (elem: HTMLElement): CSSStyleDeclaration;
+export default function (elem: Element): CSSStyleDeclaration;

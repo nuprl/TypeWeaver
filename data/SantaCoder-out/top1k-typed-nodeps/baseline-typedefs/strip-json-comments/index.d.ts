@@ -1,5 +1,4 @@
-export default function stripJsonComments(jsonString: string, { whitespace, any, trailingCommas }: {
-    whitespace?: boolean;
-    any: any;
+export default function stripJsonComments(jsonString: string, { whitespace, whitespace, trailingCommas }: {
+    whitespace: any;
     trailingCommas?: boolean;
-}, {}: {}): string;
+}, Options: any): string;

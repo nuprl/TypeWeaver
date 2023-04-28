@@ -24,5 +24,5 @@
  * IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-declare var deepExtend: (any: any) => any;
+declare var deepExtend: (any: any, []: Iterable<any>) => any;
 export default deepExtend;

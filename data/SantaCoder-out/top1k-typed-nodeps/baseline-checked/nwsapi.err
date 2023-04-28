@@ -1,67 +1,54 @@
 build/packer/base2.ts(21,1): error TS2554: Expected 1 arguments, but got 0.
+build/packer/base2.ts(21,27): error TS2304: Cannot find name 'bool'.
 build/packer/base2.ts(27,17): error TS2554: Expected 1 arguments, but got 0.
-build/packer/base2.ts(27,47): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'number'.
-build/packer/base2.ts(27,64): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'number'.
 build/packer/base2.ts(37,24): error TS2345: Argument of type '() => any' is not assignable to parameter of type 'string'.
 build/packer/base2.ts(39,36): error TS2554: Expected 0 arguments, but got 1.
 build/packer/base2.ts(40,28): error TS2345: Argument of type '(number: number) => boolean' is not assignable to parameter of type 'string'.
 build/packer/base2.ts(45,1): error TS2554: Expected 4 arguments, but got 0.
-build/packer/base2.ts(92,14): error TS2339: Property 'init' does not exist on type '{ (): any; ancestor: any; base: () => number; prototype: any; "#implements": any[]; "#implemented_by": any[]; }'.
-build/packer/base2.ts(92,27): error TS2339: Property 'init' does not exist on type '{ (): any; ancestor: any; base: () => number; prototype: any; "#implements": any[]; "#implemented_by": any[]; }'.
+build/packer/base2.ts(92,14): error TS2339: Property 'init' does not exist on type '{ (): any; ancestor: any; base: () => T; prototype: any; "#implements": any[]; "#implemented_by": any[]; }'.
+build/packer/base2.ts(92,27): error TS2339: Property 'init' does not exist on type '{ (): any; ancestor: any; base: () => T; prototype: any; "#implements": any[]; "#implemented_by": any[]; }'.
 build/packer/base2.ts(112,11): error TS2554: Expected 2 arguments, but got 1.
-build/packer/base2.ts(114,31): error TS2304: Cannot find name 'Class'.
-build/packer/base2.ts(120,41): error TS2552: Cannot find name 'Block'. Did you mean 'Lock'?
-build/packer/base2.ts(120,57): error TS2304: Cannot find name 'BlockExecutionContext'.
-build/packer/base2.ts(144,35): error TS2304: Cannot find name 'IExtendable'.
-build/packer/base2.ts(144,57): error TS2304: Cannot find name 'IExtendable'.
 build/packer/base2.ts(151,45): error TS2554: Expected 1 arguments, but got 3.
 build/packer/base2.ts(151,64): error TS2339: Property 'slice' does not exist on type '() => any'.
 build/packer/base2.ts(158,33): error TS2339: Property 'reduce' does not exist on type '() => any'.
-build/packer/base2.ts(159,25): error TS2345: Argument of type 'string' is not assignable to parameter of type 'string[]'.
-build/packer/base2.ts(159,41): error TS2345: Argument of type 'string' is not assignable to parameter of type 'string[]'.
 build/packer/base2.ts(160,58): error TS2554: Expected 1 arguments, but got 2.
-build/packer/base2.ts(160,65): error TS2345: Argument of type 'ReferenceErrorConstructor' is not assignable to parameter of type 'Error'.
-  Property 'message' is missing in type 'ReferenceErrorConstructor' but required in type 'Error'.
 build/packer/base2.ts(166,33): error TS2339: Property 'reduce' does not exist on type '() => any'.
 build/packer/base2.ts(173,33): error TS2339: Property 'slice' does not exist on type '() => any'.
-build/packer/base2.ts(177,33): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 build/packer/base2.ts(177,51): error TS2554: Expected 1 arguments, but got 3.
-build/packer/base2.ts(179,45): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 build/packer/base2.ts(179,70): error TS2554: Expected 1 arguments, but got 3.
-build/packer/base2.ts(187,21): error TS2339: Property 'split' does not exist on type 'string[]'.
+build/packer/base2.ts(187,7): error TS2322: Type 'string[]' is not assignable to type 'string'.
 build/packer/base2.ts(206,49): error TS2554: Expected 1 arguments, but got 3.
 build/packer/base2.ts(215,27): error TS2554: Expected 1 arguments, but got 2.
 build/packer/base2.ts(215,49): error TS2339: Property 'slice' does not exist on type '() => any'.
-build/packer/base2.ts(238,32): error TS2304: Cannot find name 'IInterface'.
-build/packer/base2.ts(238,53): error TS2304: Cannot find name 'IStatic'.
-build/packer/base2.ts(244,25): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
-build/packer/base2.ts(258,28): error TS2503: Cannot find namespace 'Blockly'.
-build/packer/base2.ts(258,52): error TS2503: Cannot find namespace 'Blockly'.
-build/packer/base2.ts(266,35): error TS2304: Cannot find name 'IInterface'.
+build/packer/base2.ts(258,28): error TS2552: Cannot find name 'Block'. Did you mean 'Lock'?
+build/packer/base2.ts(258,44): error TS2304: Cannot find name 'Context'.
 build/packer/base2.ts(301,35): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Function'.
 build/packer/base2.ts(313,18): error TS2554: Expected 0 arguments, but got 1.
-build/packer/base2.ts(335,32): error TS2749: 'Module' refers to a value, but is being used as a type here. Did you mean 'typeof Module'?
 build/packer/base2.ts(351,7): error TS2554: Expected 4 arguments, but got 2.
 build/packer/base2.ts(353,28): error TS2304: Cannot find name 'StopIteration'.
 build/packer/base2.ts(356,20): error TS2304: Cannot find name 'StopIteration'.
 build/packer/base2.ts(375,48): error TS2339: Property 'apply' does not exist on type 'never'.
 build/packer/base2.ts(383,5): error TS2554: Expected 4 arguments, but got 2.
+build/packer/base2.ts(384,27): error TS2339: Property 'call' does not exist on type 'Object'.
 build/packer/base2.ts(397,5): error TS2554: Expected 4 arguments, but got 2.
-build/packer/base2.ts(442,28): error TS2503: Cannot find namespace 'Blockly'.
-build/packer/base2.ts(442,52): error TS2503: Cannot find namespace 'Blockly'.
+build/packer/base2.ts(422,33): error TS2304: Cannot find name 'T'.
+build/packer/base2.ts(442,28): error TS2552: Cannot find name 'Block'. Did you mean 'Lock'?
+build/packer/base2.ts(442,44): error TS2304: Cannot find name 'Context'.
+build/packer/base2.ts(470,33): error TS2304: Cannot find name 'T'.
 build/packer/base2.ts(472,5): error TS2554: Expected 4 arguments, but got 3.
+build/packer/base2.ts(472,42): error TS2304: Cannot find name 'T'.
 build/packer/base2.ts(473,7): error TS2554: Expected 4 arguments, but got 3.
-build/packer/base2.ts(501,39): error TS2304: Cannot find name 'Test'.
-build/packer/base2.ts(501,54): error TS2304: Cannot find name 'TestContext'.
-build/packer/base2.ts(528,33): error TS2749: 'Array2' refers to a value, but is being used as a type here. Did you mean 'typeof Array2'?
+build/packer/base2.ts(528,39): error TS2304: Cannot find name 'T'.
 build/packer/base2.ts(529,19): error TS2350: Only a void function can be called with the 'new' keyword.
 build/packer/base2.ts(536,5): error TS2554: Expected 3 arguments, but got 2.
-build/packer/base2.ts(551,28): error TS2503: Cannot find namespace 'Blockly'.
-build/packer/base2.ts(551,52): error TS2503: Cannot find namespace 'Blockly'.
+build/packer/base2.ts(551,28): error TS2552: Cannot find name 'Block'. Did you mean 'Lock'?
+build/packer/base2.ts(551,44): error TS2304: Cannot find name 'Context'.
 build/packer/base2.ts(573,5): error TS2554: Expected 3 arguments, but got 2.
 build/packer/base2.ts(574,5): error TS2554: Expected 3 arguments, but got 2.
+build/packer/base2.ts(584,36): error TS2304: Cannot find name 'T'.
 build/packer/base2.ts(597,5): error TS2554: Expected 3 arguments, but got 2.
 build/packer/base2.ts(630,30): error TS2554: Expected 0 arguments, but got 1.
+build/packer/base2.ts(692,33): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 build/packer/base2.ts(703,36): error TS2322: Type 'number' is not assignable to type 'boolean'.
 build/packer/base2.ts(704,75): error TS2769: No overload matches this call.
   The last overload gave the following error.
@@ -71,32 +58,35 @@ build/packer/base2.ts(704,75): error TS2769: No overload matches this call.
 build/packer/base2.ts(728,33): error TS2339: Property 'source' does not exist on type 'string'.
 build/packer/base2.ts(730,23): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type 'any[]'.
   Type 'IArguments' is missing the following properties from type 'any[]': pop, push, concat, join, and 27 more.
-build/packer/base2.ts(740,42): error TS2304: Cannot find name 'IItem'.
-build/packer/base2.ts(742,74): error TS2304: Cannot find name 'Match'.
+build/packer/base2.ts(742,58): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type '(match: RegExpExecArray, index: number) => string' is not assignable to parameter of type '(substring: string, ...args: any[]) => string'.
+      Types of parameters 'match' and 'substring' are incompatible.
+        Type 'string' is not assignable to type 'RegExpExecArray'.
 build/packer/base2.ts(753,5): error TS2554: Expected 4 arguments, but got 3.
-build/packer/base2.ts(754,50): error TS2304: Cannot find name 'Expression'.
+build/packer/base2.ts(756,37): error TS2339: Property 'source' does not exist on type 'string'.
 build/packer/base2.ts(758,27): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type 'any[]'.
 build/packer/base2.ts(766,28): error TS2339: Property 'replacement' does not exist on type 'string'.
 build/packer/base2.ts(766,75): error TS2339: Property 'replacement' does not exist on type 'string'.
 build/packer/base2.ts(774,11): error TS2322: Type 'number' is not assignable to type 'string'.
 build/packer/base2.ts(786,11): error TS2322: Type 'Function' is not assignable to type 'string'.
-build/packer/base2.ts(792,25): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
-build/packer/base2.ts(799,31): error TS2304: Cannot find name 'Expression'.
-build/packer/base2.ts(823,15): error TS2351: This expression is not constructable.
-  Not all constituents of type 'Error | ErrorConstructor' are constructable.
-    Type 'Error' has no construct signatures.
 build/packer/base2.ts(828,35): error TS2339: Property 'callee' does not exist on type 'any[]'.
+build/packer/base2.ts(866,17): error TS2339: Property 'base' does not exist on type 'Object'.
 build/packer/base2.ts(897,22): error TS2554: Expected 0 arguments, but got 1.
-build/packer/base2.ts(946,26): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 build/packer/base2.ts(955,12): error TS2304: Cannot find name 'StopIteration'.
 build/packer/base2.ts(956,3): error TS2304: Cannot find name 'StopIteration'.
-build/packer/base2.ts(978,47): error TS2552: Cannot find name 'Block'. Did you mean 'Lock'?
-build/packer/base2.ts(978,63): error TS2304: Cannot find name 'Context'.
+build/packer/base2.ts(965,30): error TS2339: Property 'forEach' does not exist on type 'Object'.
+build/packer/base2.ts(965,62): error TS2339: Property 'forEach' does not exist on type 'Object'.
+build/packer/base2.ts(967,14): error TS2339: Property 'forEach' does not exist on type 'Object'.
+build/packer/base2.ts(969,30): error TS2339: Property 'length' does not exist on type 'Object'.
+build/packer/base2.ts(971,22): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'any[]'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+    Type 'Object' is missing the following properties from type 'any[]': length, pop, push, concat, and 29 more.
 build/packer/base2.ts(979,3): error TS2554: Expected 4 arguments, but got 3.
-build/packer/base2.ts(982,47): error TS2304: Cannot find name 'Block'.
 build/packer/base2.ts(983,3): error TS2554: Expected 4 arguments, but got 2.
 build/packer/base2.ts(985,18): error TS2554: Expected 0 arguments, but got 1.
 build/packer/base2.ts(985,33): error TS2554: Expected 4 arguments, but got 2.
+build/packer/base2.ts(998,33): error TS2339: Property 'charAt' does not exist on type 'never'.
 build/packer/base2.ts(1023,3): error TS2630: Cannot assign to '_Function_forEach' because it is a function.
 build/packer/base2.ts(1152,11): error TS2554: Expected 3 arguments, but got 2.
 build/packer/base2.ts(1154,50): error TS2554: Expected 1 arguments, but got 3.
@@ -111,26 +101,37 @@ build/packer/base2.ts(1191,18): error TS2339: Property 'setYear' does not exist 
 build/packer/base2.ts(1201,11): error TS2554: Expected 3 arguments, but got 2.
 build/packer/base2.ts(1202,45): error TS2554: Expected 2 arguments, but got 3.
 build/packer/base2.ts(1203,30): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type 'any[]'.
-build/packer/base2.ts(1227,21): error TS2769: No overload matches this call.
-  The last overload gave the following error.
-    Argument of type '() => number' is not assignable to parameter of type '(substring: string, ...args: any[]) => string'.
-      Type 'number' is not assignable to type 'string'.
-build/packer/base2.ts(1227,23): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 build/packer/base2.ts(1228,39): error TS2554: Expected 2 arguments, but got 3.
 build/packer/base2.ts(1231,21): error TS2322: Type '() => string' is not assignable to type 'string'.
 build/packer/base2.ts(1232,26): error TS2339: Property 'apply' does not exist on type 'never'.
 build/packer/base2.ts(1247,15): error TS2554: Expected 4 arguments, but got 5.
 build/packer/base2.ts(1251,21): error TS2339: Property 'reduce' does not exist on type '() => any'.
+build/packer/base2.ts(1252,14): error TS2538: Type 'String' cannot be used as an index type.
+build/packer/base2.ts(1252,28): error TS2538: Type 'Number' cannot be used as an index type.
+build/packer/base2.ts(1257,31): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 build/packer/base2.ts(1258,21): error TS2339: Property 'indexOf' does not exist on type '() => any'.
+build/packer/base2.ts(1261,33): error TS2304: Cannot find name 'T'.
 build/packer/base2.ts(1263,30): error TS2554: Expected 0 arguments, but got 1.
+build/packer/base2.ts(1267,36): error TS2304: Cannot find name 'T'.
 build/packer/base2.ts(1269,21): error TS2339: Property 'reduce' does not exist on type '() => any'.
 build/packer/base2.ts(1270,20): error TS2339: Property 'like' does not exist on type '() => any'.
 build/packer/base2.ts(1271,18): error TS2339: Property 'reduce' does not exist on type '() => any'.
+build/packer/base2.ts(1281,30): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
+build/packer/base2.ts(1294,37): error TS2304: Cannot find name 'T'.
+build/packer/base2.ts(1294,62): error TS2304: Cannot find name 'T'.
 build/packer/base2.ts(1295,14): error TS2339: Property 'splice' does not exist on type '() => any'.
+build/packer/base2.ts(1299,33): error TS2304: Cannot find name 'T'.
+build/packer/base2.ts(1304,40): error TS2304: Cannot find name 'T'.
+build/packer/base2.ts(1304,50): error TS2304: Cannot find name 'T'.
+build/packer/base2.ts(1317,26): error TS2314: Generic type 'Array<T>' requires 1 type argument(s).
 build/packer/base2.ts(1319,14): error TS2339: Property 'forEach' does not exist on type '() => any'.
+build/packer/base2.ts(1325,35): error TS2304: Cannot find name 'T'.
+build/packer/base2.ts(1325,45): error TS2304: Cannot find name 'T'.
 build/packer/base2.ts(1326,26): error TS2339: Property 'indexOf' does not exist on type '() => any'.
 build/packer/base2.ts(1327,31): error TS2339: Property 'removeAt' does not exist on type '() => any'.
+build/packer/base2.ts(1330,37): error TS2304: Cannot find name 'T'.
 build/packer/base2.ts(1331,14): error TS2339: Property 'splice' does not exist on type '() => any'.
+build/packer/base2.ts(1334,33): error TS2304: Cannot find name 'T'.
 build/packer/base2.ts(1345,8): error TS2339: Property 'reduce' does not exist on type '() => any'.
 build/packer/base2.ts(1347,8): error TS2339: Property 'like' does not exist on type '() => any'.
 build/packer/base2.ts(1389,67): error TS2339: Property 'parse' does not exist on type '() => any'.
@@ -147,11 +148,7 @@ build/packer/base2.ts(1421,35): error TS2356: An arithmetic operand must be of t
 build/packer/base2.ts(1423,9): error TS2365: Operator '>=' cannot be applied to types 'string' and 'number'.
 build/packer/base2.ts(1423,56): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
 build/packer/base2.ts(1467,16): error TS2339: Property 'forEach' does not exist on type '() => any'.
-build/packer/base2.ts(1485,41): error TS2769: No overload matches this call.
-  The last overload gave the following error.
-    Argument of type '(match: RegExpMatchArray, index: number) => any' is not assignable to parameter of type '(substring: string, ...args: any[]) => string'.
-      Types of parameters 'match' and 'substring' are incompatible.
-        Type 'string' is not assignable to type 'RegExpMatchArray'.
+build/packer/base2.ts(1530,15): error TS2304: Cannot find name 'T'.
 build/packer/base2.ts(1541,35): error TS2538: Type 'Function' cannot be used as an index type.
 build/packer/base2.ts(1545,35): error TS2538: Type 'Function' cannot be used as an index type.
 build/packer/base2.ts(1569,34): error TS2339: Property 'swap' does not exist on type '() => any'.
@@ -171,7 +168,6 @@ build/packer/packer.ts(48,13): error TS2304: Cannot find name 'Collection'.
 build/packer/packer.ts(52,15): error TS2551: Property 'index' does not exist on type 'string'. Did you mean 'indexOf'?
 build/packer/packer.ts(53,12): error TS2551: Property 'index' does not exist on type 'string'. Did you mean 'indexOf'?
 build/packer/packer.ts(55,10): error TS2339: Property 'count' does not exist on type 'string'.
-build/packer/packer.ts(59,26): error TS2304: Cannot find name 'SorterFunction'.
 build/packer/packer.ts(62,21): error TS2339: Property 'count' does not exist on type 'string'.
 build/packer/packer.ts(62,35): error TS2339: Property 'count' does not exist on type 'string'.
 build/packer/packer.ts(62,52): error TS2551: Property 'index' does not exist on type 'string'. Did you mean 'indexOf'?
@@ -179,6 +175,7 @@ build/packer/packer.ts(62,66): error TS2551: Property 'index' does not exist on 
 build/packer/packer.ts(68,23): error TS2304: Cannot find name 'K'.
 build/packer/packer.ts(81,15): error TS2304: Cannot find name 'Base'.
 build/packer/packer.ts(89,12): error TS2304: Cannot find name 'Undefined'.
+build/packer/packer.ts(91,28): error TS2304: Cannot find name 'Script'.
 build/packer/packer.ts(104,5): error TS2304: Cannot find name 'forEach'.
 build/packer/packer.ts(105,12): error TS2339: Property 'encoded' does not exist on type 'string'.
 build/packer/packer.ts(121,20): error TS2304: Cannot find name 'Packer'.
@@ -194,15 +191,16 @@ build/packer/packer.ts(166,12): error TS2339: Property 'replacement' does not ex
 build/packer/packer.ts(166,26): error TS2304: Cannot find name 'Packer'.
 build/packer/packer.ts(166,47): error TS2551: Property 'index' does not exist on type 'string'. Did you mean 'indexOf'?
 build/packer/packer.ts(167,16): error TS2339: Property 'replacement' does not exist on type 'string'.
-build/packer/packer.ts(173,32): error TS2304: Cannot find name 'Word'.
-build/packer/packer.ts(173,45): error TS2304: Cannot find name 'Word'.
 build/packer/packer.ts(192,12): error TS2304: Cannot find name 'format'.
 build/packer/packer.ts(197,5): error TS2304: Cannot find name 'forEach'.
-build/packer/packer.ts(208,18): error TS2339: Property 'size' does not exist on type 'string[]'.
+build/packer/packer.ts(201,28): error TS2304: Cannot find name 'Script'.
+build/packer/packer.ts(208,18): error TS2349: This expression is not callable.
+  Type 'Number' has no call signatures.
 build/packer/packer.ts(213,20): error TS2304: Cannot find name 'RegGrp'.
 build/packer/packer.ts(220,40): error TS2339: Property 'replacement' does not exist on type 'string'.
 build/packer/packer.ts(228,22): error TS2339: Property 'size' does not exist on type 'string[]'.
 build/packer/packer.ts(231,15): error TS2304: Cannot find name 'Packer'.
+build/packer/packer.ts(262,31): error TS2304: Cannot find name 'List'.
 build/packer/packer.ts(272,5): error TS2322: Type 'string' is not assignable to type 'string[]'.
 build/packer/packer.ts(291,17): error TS2304: Cannot find name 'Base'.
 build/packer/packer.ts(328,15): error TS2365: Operator '<' cannot be applied to types 'string' and 'number'.
@@ -213,25 +211,23 @@ build/packer/packer.ts(329,11): error TS2322: Type 'number' is not assignable to
 build/packer/packer.ts(329,15): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 build/packer/packer.ts(329,50): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 build/packer/packer.ts(329,80): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
+build/packer/packer.ts(331,26): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 build/packer/packer.ts(341,16): error TS2304: Cannot find name 'Base'.
 build/packer/packer.ts(356,49): error TS2304: Cannot find name 'Packer'.
 build/packer/packer.ts(357,5): error TS2304: Cannot find name 'extend'.
 build/packer/packer.ts(365,5): error TS2304: Cannot find name 'forEach'.
 build/packer/packer.ts(366,20): error TS2304: Cannot find name 'Packer'.
-build/packer/packer.ts(394,46): error TS2304: Cannot find name 'Match'.
 build/packer/packer.ts(422,16): error TS2304: Cannot find name 'Base'.
-build/packer/packer.ts(427,50): error TS2769: No overload matches this call.
-  The last overload gave the following error.
-    Argument of type '(match: RegExpMatchArray, index: number) => any' is not assignable to parameter of type '(substring: string, ...args: any[]) => string'.
-      Types of parameters 'match' and 'substring' are incompatible.
-        Type 'string' is not assignable to type 'RegExpMatchArray'.
+build/packer/packer.ts(423,32): error TS2304: Cannot find name 'Script'.
+build/packer/packer.ts(432,32): error TS2304: Cannot find name 'Script'.
 build/packer/packer.ts(435,12): error TS2304: Cannot find name 'Packer'.
 build/packer/packer.ts(439,9): error TS2740: Type 'RegExp' is missing the following properties from type 'RegExpMatchArray': 0, length, pop, push, and 30 more.
-build/packer/packer.ts(471,90): error TS2304: Cannot find name 'Block'.
-build/packer/packer.ts(477,44): error TS2345: Argument of type 'RegExp' is not assignable to parameter of type 'string'.
+build/packer/packer.ts(477,17): error TS2365: Operator '+' cannot be applied to types 'any[]' and 'Buffer'.
+build/packer/packer.ts(477,44): error TS2345: Argument of type 'RegExp' is not assignable to parameter of type 'Buffer'.
+  Type 'RegExp' is missing the following properties from type 'Buffer': write, toJSON, equals, compare, and 97 more.
 build/packer/packer.ts(483,13): error TS2367: This comparison appears to be unintentional because the types 'any[]' and 'string' have no overlap.
 build/packer/packer.ts(484,22): error TS2304: Cannot find name 'match'.
-build/packer/packer.ts(490,37): error TS2345: Argument of type 'RegExp' is not assignable to parameter of type 'string'.
+build/packer/packer.ts(490,37): error TS2345: Argument of type 'RegExp' is not assignable to parameter of type 'Buffer'.
 build/packer/packer.ts(493,13): error TS2367: This comparison appears to be unintentional because the types 'any[]' and 'string' have no overlap.
 build/packer/packer.ts(495,21): error TS2304: Cannot find name 'match'.
 build/packer/packer.ts(498,13): error TS2304: Cannot find name 'id'.
@@ -242,10 +238,12 @@ build/packer/packer.ts(501,20): error TS2304: Cannot find name 'rescape'.
 build/packer/packer.ts(501,28): error TS2304: Cannot find name 'id'.
 build/packer/packer.ts(504,51): error TS2304: Cannot find name 'id'.
 build/packer/packer.ts(508,53): error TS2304: Cannot find name 'id'.
-build/packer/packer.ts(526,22): error TS2339: Property 'test' does not exist on type 'string'.
-build/packer/packer.ts(527,40): error TS2345: Argument of type 'string' is not assignable to parameter of type 'RegExp'.
-build/packer/packer.ts(527,66): error TS2304: Cannot find name 'Match'.
-build/packer/packer.ts(540,35): error TS2345: Argument of type 'RegExp' is not assignable to parameter of type 'string'.
+build/packer/packer.ts(526,22): error TS2339: Property 'test' does not exist on type 'Buffer'.
+build/packer/packer.ts(527,25): error TS2339: Property 'replace' does not exist on type 'Buffer'.
+build/packer/packer.ts(527,40): error TS2345: Argument of type 'Buffer' is not assignable to parameter of type 'RegExp'.
+  Type 'Buffer' is missing the following properties from type 'RegExp': exec, test, source, global, and 13 more.
+build/packer/packer.ts(540,5): error TS2322: Type 'Buffer' is not assignable to type 'string'.
+build/packer/packer.ts(540,27): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Buffer'.
 build/packer/packer.ts(545,20): error TS2304: Cannot find name 'Packer'.
 build/scripts/nwpacker.ts(16,1): error TS2304: Cannot find name 'load'.
 build/scripts/nwpacker.ts(17,1): error TS2304: Cannot find name 'load'.
@@ -258,29 +256,19 @@ src/modules/nwsapi-jquery.ts(27,22): error TS2304: Cannot find name 'NW'.
 src/modules/nwsapi-jquery.ts(27,38): error TS2304: Cannot find name 'NW'.
 src/modules/nwsapi-jquery.ts(29,74): error TS2304: Cannot find name 'NW'.
 src/modules/nwsapi-jquery.ts(29,90): error TS2304: Cannot find name 'NW'.
-src/modules/nwsapi-jquery.ts(74,6): error TS2345: Argument of type 'typeof globalThis' is not assignable to parameter of type 'Global'.
-  The types of 'URL.createObjectURL' are incompatible between these types.
-    Type '(obj: Blob | MediaSource) => string' is not assignable to type '(blob: Blob) => string'.
-      Types of parameters 'obj' and 'blob' are incompatible.
-        Type 'Blob' is not assignable to type 'Blob | MediaSource'.
-          Property 'prototype' is missing in type 'import("buffer").Blob' but required in type 'Blob'.
 src/modules/nwsapi-jquery.ts(77,1): error TS2304: Cannot find name 'NW'.
 src/modules/nwsapi-jquery.ts(85,22): error TS2304: Cannot find name 'NW'.
 src/modules/nwsapi-jquery.ts(85,38): error TS2304: Cannot find name 'NW'.
 src/modules/nwsapi-jquery.ts(87,74): error TS2304: Cannot find name 'NW'.
 src/modules/nwsapi-jquery.ts(87,90): error TS2304: Cannot find name 'NW'.
-src/modules/nwsapi-traversal.ts(21,67): error TS2304: Cannot find name 'Expression'.
-src/modules/nwsapi-traversal.ts(45,24): error TS2304: Cannot find name 'IElement'.
-src/modules/nwsapi-traversal.ts(45,40): error TS2304: Cannot find name 'IExpression'.
-src/modules/nwsapi-traversal.ts(63,30): error TS2304: Cannot find name 'IElement'.
-src/modules/nwsapi-traversal.ts(63,46): error TS2304: Cannot find name 'IExpression'.
+src/modules/nwsapi-traversal.ts(25,7): error TS2322: Type 'number' is not assignable to type 'string'.
+src/modules/nwsapi-traversal.ts(31,13): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
 src/modules/nwsapi-traversal.ts(75,7): error TS2740: Type 'ChildNode' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 230 more.
 src/modules/nwsapi-traversal.ts(79,56): error TS2367: This comparison appears to be unintentional because the types 'string' and 'number' have no overlap.
 src/modules/nwsapi-traversal.ts(90,4): error TS2304: Cannot find name 'NW'.
 src/nwsapi.ts(24,21): error TS2304: Cannot find name 'define'.
 src/nwsapi.ts(24,45): error TS2304: Cannot find name 'define'.
 src/nwsapi.ts(25,5): error TS2304: Cannot find name 'define'.
-src/nwsapi.ts(240,23): error TS2304: Cannot find name 'Context'.
 src/nwsapi.ts(374,18): error TS2304: Cannot find name 'i'.
 src/nwsapi.ts(374,25): error TS2304: Cannot find name 'l'.
 src/nwsapi.ts(374,52): error TS2304: Cannot find name 'l'.
@@ -288,14 +276,13 @@ src/nwsapi.ts(374,56): error TS2304: Cannot find name 'i'.
 src/nwsapi.ts(374,61): error TS2304: Cannot find name 'i'.
 src/nwsapi.ts(375,21): error TS2304: Cannot find name 'i'.
 src/nwsapi.ts(375,58): error TS2304: Cannot find name 'i'.
-src/nwsapi.ts(439,26): error TS2339: Property 'getAttributeNames' does not exist on type 'Event'.
 src/nwsapi.ts(440,7): error TS2322: Type 'RegExp' is not assignable to type 'string'.
 src/nwsapi.ts(442,18): error TS2339: Property 'test' does not exist on type 'string'.
 src/nwsapi.ts(452,11): error TS2367: This comparison appears to be unintentional because the types 'string' and 'number' have no overlap.
 src/nwsapi.ts(495,11): error TS2367: This comparison appears to be unintentional because the types 'string' and 'number' have no overlap.
 src/nwsapi.ts(541,27): error TS2339: Property 'indexOf' does not exist on type 'unknown'.
 src/nwsapi.ts(542,15): error TS2339: Property 'createElement' does not exist on type 'Node'.
-src/nwsapi.ts(547,22): error TS2749: 'Option' refers to a value, but is being used as a type here. Did you mean 'typeof Option'?
+src/nwsapi.ts(550,21): error TS2407: The right-hand side of a 'for...in' statement must be of type 'any', an object type or a type parameter, but here has type 'never'.
 src/nwsapi.ts(697,16): error TS2339: Property 'id' does not exist on type '{ treestruct: RegExp; structural: RegExp; linguistic: RegExp; useraction: RegExp; inputstate: RegExp; inputvalue: RegExp; locationpc: RegExp; ... 9 more ...; namespace: RegExp; }'.
 src/nwsapi.ts(698,16): error TS2339: Property 'tagName' does not exist on type '{ treestruct: RegExp; structural: RegExp; linguistic: RegExp; useraction: RegExp; inputstate: RegExp; inputvalue: RegExp; locationpc: RegExp; ... 9 more ...; namespace: RegExp; }'.
 src/nwsapi.ts(699,16): error TS2339: Property 'className' does not exist on type '{ treestruct: RegExp; structural: RegExp; linguistic: RegExp; useraction: RegExp; inputstate: RegExp; inputvalue: RegExp; locationpc: RegExp; ... 9 more ...; namespace: RegExp; }'.
@@ -321,31 +308,22 @@ src/nwsapi.ts(1297,17): error TS2554: Expected 2 arguments, but got 1.
 src/nwsapi.ts(1302,17): error TS2554: Expected 2 arguments, but got 1.
 src/nwsapi.ts(1310,11): error TS2554: Expected 2 arguments, but got 1.
 src/nwsapi.ts(1317,11): error TS2554: Expected 2 arguments, but got 1.
-src/nwsapi.ts(1332,24): error TS2339: Property 'replace' does not exist on type 'string[]'.
-src/nwsapi.ts(1342,28): error TS2345: Argument of type 'string[]' is not assignable to parameter of type 'string'.
 src/nwsapi.ts(1363,38): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'string'.
-src/nwsapi.ts(1373,37): error TS2538: Type 'string[]' cannot be used as an index type.
-src/nwsapi.ts(1374,44): error TS2538: Type 'string[]' cannot be used as an index type.
 src/nwsapi.ts(1384,9): error TS2554: Expected 2 arguments, but got 1.
-src/nwsapi.ts(1390,9): error TS2322: Type 'string' is not assignable to type 'string[]'.
-src/nwsapi.ts(1393,28): error TS2345: Argument of type 'string[]' is not assignable to parameter of type 'string'.
-src/nwsapi.ts(1399,9): error TS2339: Property 'replace' does not exist on type 'string[]'.
 src/nwsapi.ts(1410,11): error TS2554: Expected 2 arguments, but got 1.
 src/nwsapi.ts(1414,9): error TS2554: Expected 2 arguments, but got 1.
-src/nwsapi.ts(1418,22): error TS2538: Type 'string[]' cannot be used as an index type.
-src/nwsapi.ts(1420,42): error TS2538: Type 'string[]' cannot be used as an index type.
-src/nwsapi.ts(1431,38): error TS2304: Cannot find name 'T'.
 src/nwsapi.ts(1486,9): error TS2554: Expected 2 arguments, but got 1.
 src/nwsapi.ts(1489,23): error TS2554: Expected 2 arguments, but got 1.
-src/nwsapi.ts(1498,29): error TS2345: Argument of type 'string' is not assignable to parameter of type 'string[]'.
+src/nwsapi.ts(1498,40): error TS2345: Argument of type 'Node' is not assignable to parameter of type 'HTMLElement'.
+  Type 'Node' is missing the following properties from type 'HTMLElement': accessKey, accessKeyLabel, autocapitalize, dir, and 234 more.
 src/nwsapi.ts(1514,11): error TS2554: Expected 2 arguments, but got 1.
 src/nwsapi.ts(1518,9): error TS2554: Expected 2 arguments, but got 1.
-src/nwsapi.ts(1533,39): error TS2304: Cannot find name 'IToken'.
-src/nwsapi.ts(1544,25): error TS2304: Cannot find name 'Selector'.
+src/nwsapi.ts(1523,57): error TS2345: Argument of type 'Node' is not assignable to parameter of type 'Element'.
+  Type 'Node' is missing the following properties from type 'Element': attributes, classList, className, clientHeight, and 114 more.
+src/nwsapi.ts(1533,39): error TS2304: Cannot find name 'Token'.
+src/nwsapi.ts(1555,13): error TS2542: Index signature in type 'String' only permits reading.
 src/nwsapi.ts(1563,44): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'string'.
 src/nwsapi.ts(1567,11): error TS2304: Cannot find name 'result'.
 src/nwsapi.ts(1642,32): error TS2339: Property 'localName' does not exist on type 'EventTarget'.
 src/nwsapi.ts(1643,67): error TS2339: Property 'contentDocument' does not exist on type 'EventTarget'.
-src/nwsapi.ts(1775,26): error TS2304: Cannot find name 'Operator'.
-src/nwsapi.ts(1775,46): error TS2304: Cannot find name 'Resolver'.
 

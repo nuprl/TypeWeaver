@@ -1,1 +1,1 @@
-export default function createDeclarationIndexer(): (node: Declaration) => Declaration;
+export default function createDeclarationIndexer(): (node: Node) => Node;

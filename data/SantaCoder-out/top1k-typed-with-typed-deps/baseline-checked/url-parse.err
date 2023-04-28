@@ -1,20 +1,25 @@
 index.ts(68,26): error TS2339: Property 'protocol' does not exist on type 'string'.
+index.ts(114,23): error TS2339: Property 'protocol' does not exist on type 'string'.
 index.ts(115,24): error TS2350: Only a void function can be called with the 'new' keyword.
 index.ts(115,24): error TS2554: Expected 3 arguments, but got 2.
+index.ts(115,45): error TS2339: Property 'pathname' does not exist on type 'string'.
 index.ts(117,24): error TS2350: Only a void function can be called with the 'new' keyword.
 index.ts(117,24): error TS2554: Expected 3 arguments, but got 2.
+index.ts(120,17): error TS2407: The right-hand side of a 'for...in' statement must be of type 'any', an object type or a type parameter, but here has type 'string'.
 index.ts(125,26): error TS2339: Property 'slashes' does not exist on type '{}'.
 index.ts(126,24): error TS2339: Property 'slashes' does not exist on type '{}'.
-index.ts(170,3): error TS2322: Type 'string | {}' is not assignable to type 'string'.
-  Type '{}' is not assignable to type 'string'.
-index.ts(206,54): error TS2339: Property 'protocol' does not exist on type 'string'.
+index.ts(126,51): error TS2339: Property 'href' does not exist on type 'string'.
+index.ts(170,3): error TS2322: Type 'Location | {}' is not assignable to type 'Location'.
+  Type '{}' is missing the following properties from type 'Location': ancestorOrigins, hash, host, hostname, and 9 more.
 index.ts(268,59): error TS2304: Cannot find name 'Parser'.
 index.ts(268,59): error TS4078: Parameter 'parser' of exported function has or is using private name 'Parser'.
 index.ts(270,12): error TS2350: Only a void function can be called with the 'new' keyword.
 index.ts(297,3): error TS2740: Type '{}' is missing the following properties from type 'Location': ancestorOrigins, hash, host, hostname, and 9 more.
-index.ts(302,46): error TS2345: Argument of type 'Location' is not assignable to parameter of type 'string'.
+index.ts(297,24): error TS2345: Argument of type 'Location' is not assignable to parameter of type 'string'.
 index.ts(304,59): error TS2339: Property 'slashes' does not exist on type 'Location'.
 index.ts(378,17): error TS2339: Property 'slashes' does not exist on type 'Location'.
 index.ts(561,10): error TS2384: Overload signatures must all be ambient or non-ambient.
+index.ts(606,43): error TS2349: This expression is not callable.
+  Type 'Boolean' has no call signatures.
 ../../../../../src/weaver/src/node_modules/typescript/lib/lib.dom.d.ts(17967,18): error TS2394: This overload signature is not compatible with its implementation signature.
 

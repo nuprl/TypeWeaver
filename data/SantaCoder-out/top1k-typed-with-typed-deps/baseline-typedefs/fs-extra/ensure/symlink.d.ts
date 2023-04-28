@@ -1,0 +1,17 @@
+declare const u: any;
+declare const path: any;
+declare const fs: any;
+declare const _mkdirs: any;
+declare const mkdirs: any;
+declare const mkdirsSync: any;
+declare const _symlinkPaths: any;
+declare const symlinkPaths: any;
+declare const symlinkPathsSync: any;
+declare const _symlinkType: any;
+declare const symlinkType: any;
+declare const symlinkTypeSync: any;
+declare const pathExists: any;
+declare const areIdentical: any;
+declare function createSymlink(srcpath: string, dstpath: string, type: string, callback: Function): void;
+declare function _createSymlink(srcpath: string, dstpath: string, type: string, callback: Function): void;
+declare function createSymlinkSync(srcpath: string, dstpath: string, type: string): any;

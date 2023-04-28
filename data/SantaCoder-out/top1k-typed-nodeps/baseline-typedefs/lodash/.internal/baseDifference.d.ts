@@ -1,2 +1,2 @@
-declare function baseDifference(array: Array<any>, values: Array<any>, iteratee: any, comparator: any): any[];
+declare function baseDifference(array: any[], values: any[], iteratee: Function, comparator: Function): any[];
 export default baseDifference;

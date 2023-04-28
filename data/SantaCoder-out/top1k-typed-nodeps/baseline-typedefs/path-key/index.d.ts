@@ -1,1 +1,1 @@
-export default function pathKey(options: {}, IPathKeyOptions: any): string;
+export default function pathKey(options: {}, Options: any): string;

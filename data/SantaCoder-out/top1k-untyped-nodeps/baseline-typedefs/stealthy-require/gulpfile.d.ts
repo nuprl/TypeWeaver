@@ -13,8 +13,8 @@ declare var paths: {
     eslintrc: string;
 };
 declare function lint(): any;
-declare function cleanCoverage(done: any): void;
-declare function cleanResults(done: any): void;
+declare function cleanCoverage(done: Function): void;
+declare function cleanResults(done: Function): void;
 declare function instrument(): any;
 declare function runTest(): any;
 declare function test(): any;

@@ -1,2 +1,2 @@
-declare function baseIndexOf(array: Array<any>, value: any, fromIndex: number): number;
+declare function baseIndexOf(array: any[], value: any, fromIndex: number): number;
 export default baseIndexOf;

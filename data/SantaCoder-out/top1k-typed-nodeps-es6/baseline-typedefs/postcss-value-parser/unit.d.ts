@@ -1,4 +1,4 @@
-export default function (value: number): false | {
-    number: any;
-    unit: any;
+export default function (value: string): false | {
+    number: string;
+    unit: string;
 };

@@ -1,2 +1,2 @@
 export default ReadableParallel;
-declare function ReadableParallel(list: any[], iterator: any, callback: any): any;
+declare function ReadableParallel(list: Array<any>, iterator: Function, callback: Function): any;

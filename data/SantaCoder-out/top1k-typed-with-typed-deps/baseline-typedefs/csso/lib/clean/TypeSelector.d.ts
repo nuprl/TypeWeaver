@@ -1,1 +1,1 @@
-export default function cleanTypeSelector(node: Node, item: Node, list: Node[]): void;
+export default function cleanTypeSelector(node: Node, item: Node, list: Node): void;

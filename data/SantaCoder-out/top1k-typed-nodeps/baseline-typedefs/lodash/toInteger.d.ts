@@ -1,2 +1,2 @@
-declare function toInteger(value: number): number;
+declare function toInteger(value: any): any;
 export default toInteger;

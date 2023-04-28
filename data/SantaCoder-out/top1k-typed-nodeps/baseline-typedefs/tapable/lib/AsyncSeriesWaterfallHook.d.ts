@@ -8,7 +8,7 @@ declare class AsyncSeriesWaterfallHookCodeFactory extends HookCodeFactory {
     }): any;
 }
 declare const factory: AsyncSeriesWaterfallHookCodeFactory;
-declare const COMPILE: (options: IOptions) => any;
+declare const COMPILE: (options: any) => any;
 declare function AsyncSeriesWaterfallHook(args: any[], any: any, []: Iterable<any>, name: any, string: any): any;
 declare namespace AsyncSeriesWaterfallHook {
     var prototype: any;

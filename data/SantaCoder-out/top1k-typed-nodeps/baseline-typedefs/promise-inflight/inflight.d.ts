@@ -1,6 +1,6 @@
 declare let Bluebird: any;
 declare const active: {};
-declare function inflight(unique: string, doFly: boolean): any;
+declare function inflight(unique: string, doFly: Function): any;
 declare namespace inflight {
     var active: {};
 }

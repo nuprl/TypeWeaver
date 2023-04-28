@@ -1,11 +1,7 @@
 index.ts(38,46): error TS2304: Cannot find name 'ServeStaticOptions'.
 index.ts(38,46): error TS4078: Parameter 'options' of exported function has or is using private name 'ServeStaticOptions'.
-index.ts(72,67): error TS2552: Cannot find name 'NextFunction'. Did you mean 'Function'?
-index.ts(79,11): error TS2339: Property 'statusCode' does not exist on type 'Response'.
-index.ts(80,11): error TS2339: Property 'setHeader' does not exist on type 'Response'.
-index.ts(81,11): error TS2339: Property 'setHeader' does not exist on type 'Response'.
-index.ts(82,11): error TS2339: Property 'end' does not exist on type 'Response'.
-index.ts(116,33): error TS2339: Property 'statusCode' does not exist on type 'Error'.
+index.ts(72,37): error TS2304: Cannot find name 'IncomingMessage'.
+index.ts(72,59): error TS2304: Cannot find name 'ServerResponse'.
 index.ts(202,9): error TS2339: Property 'statusCode' does not exist on type 'Response'.
 index.ts(203,9): error TS2339: Property 'setHeader' does not exist on type 'Response'.
 index.ts(204,9): error TS2339: Property 'setHeader' does not exist on type 'Response'.

@@ -1,2 +1,2 @@
-declare function baseGet(object: any, path: string): any;
+declare function baseGet(object: any, path: any[]): any;
 export default baseGet;

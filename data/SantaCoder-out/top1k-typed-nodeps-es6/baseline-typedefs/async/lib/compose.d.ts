@@ -1,1 +1,1 @@
-export default function compose(...args: any[]): (...args: any[]) => any;
+export default function compose(...args: Array<Function>): (...args: any[]) => any;

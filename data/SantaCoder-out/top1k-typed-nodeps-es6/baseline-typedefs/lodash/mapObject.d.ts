@@ -1,2 +1,2 @@
-declare function mapObject(object: any, iteratee: any): any[];
+declare function mapObject(object: any, iteratee: Function): any[];
 export default mapObject;

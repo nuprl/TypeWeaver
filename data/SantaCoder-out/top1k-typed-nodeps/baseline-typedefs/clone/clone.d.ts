@@ -1,5 +1,5 @@
 declare var clone: {
-    (parent: any, circular: boolean, depth: number, prototype: any, includeNonEnumerable: boolean): any;
+    (parent: any, circular: any, depth: any, prototype: any, includeNonEnumerable: boolean): any;
     clonePrototype(parent: any): any;
     __objToStr: (o: any) => any;
     __isDate: (o: any) => boolean;

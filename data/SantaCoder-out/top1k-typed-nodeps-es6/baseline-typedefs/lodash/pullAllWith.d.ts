@@ -1,2 +1,2 @@
-declare function pullAllWith(array: Array<any>, values: Array<any>, comparator: any): any[];
+declare function pullAllWith(array: any[], values: any[], comparator: any): any[];
 export default pullAllWith;

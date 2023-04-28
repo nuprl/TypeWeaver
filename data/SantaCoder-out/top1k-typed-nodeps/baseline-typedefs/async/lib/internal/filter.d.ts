@@ -1,1 +1,1 @@
-export default function _filter(eachfn: any, coll: any, iteratee: any, callback: any): void;
+export default function _filter(eachfn: Function, coll: any, iteratee: Function, callback: Function): void;

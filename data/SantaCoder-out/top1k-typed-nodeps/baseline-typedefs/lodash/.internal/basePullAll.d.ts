@@ -1,2 +1,2 @@
-declare function basePullAll(array: Array<any>, values: Array<any>, iteratee: any, comparator: any): any[];
+declare function basePullAll(array: any[], values: any[], iteratee: any, comparator: any): any[];
 export default basePullAll;

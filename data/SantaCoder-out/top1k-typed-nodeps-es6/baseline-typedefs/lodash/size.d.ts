@@ -1,2 +1,2 @@
-declare function size(collection: any): any;
+declare function size(collection: any[]): any;
 export default size;

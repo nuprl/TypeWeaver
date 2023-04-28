@@ -1,18 +1,24 @@
 index.ts(64,26): error TS2339: Property 'protocol' does not exist on type 'string'.
+index.ts(110,23): error TS2339: Property 'protocol' does not exist on type 'string'.
 index.ts(111,24): error TS2350: Only a void function can be called with the 'new' keyword.
 index.ts(111,24): error TS2554: Expected 3 arguments, but got 2.
+index.ts(111,45): error TS2339: Property 'pathname' does not exist on type 'string'.
 index.ts(113,24): error TS2350: Only a void function can be called with the 'new' keyword.
 index.ts(113,24): error TS2554: Expected 3 arguments, but got 2.
+index.ts(116,17): error TS2407: The right-hand side of a 'for...in' statement must be of type 'any', an object type or a type parameter, but here has type 'string'.
 index.ts(121,26): error TS2339: Property 'slashes' does not exist on type '{}'.
 index.ts(122,24): error TS2339: Property 'slashes' does not exist on type '{}'.
-index.ts(166,3): error TS2322: Type 'string | {}' is not assignable to type 'string'.
-  Type '{}' is not assignable to type 'string'.
-index.ts(202,54): error TS2339: Property 'protocol' does not exist on type 'string'.
-index.ts(264,59): error TS2304: Cannot find name 'UrlParser'.
-index.ts(264,59): error TS4078: Parameter 'parser' of exported function has or is using private name 'UrlParser'.
+index.ts(122,51): error TS2339: Property 'href' does not exist on type 'string'.
+index.ts(166,3): error TS2322: Type 'Location | {}' is not assignable to type 'Location'.
+  Type '{}' is missing the following properties from type 'Location': ancestorOrigins, hash, host, hostname, and 9 more.
+index.ts(264,59): error TS2304: Cannot find name 'Parser'.
+index.ts(264,59): error TS4078: Parameter 'parser' of exported function has or is using private name 'Parser'.
 index.ts(266,12): error TS2350: Only a void function can be called with the 'new' keyword.
 index.ts(293,3): error TS2740: Type '{}' is missing the following properties from type 'Location': ancestorOrigins, hash, host, hostname, and 9 more.
-index.ts(298,46): error TS2345: Argument of type 'Location' is not assignable to parameter of type 'string'.
+index.ts(293,24): error TS2345: Argument of type 'Location' is not assignable to parameter of type 'string'.
 index.ts(300,59): error TS2339: Property 'slashes' does not exist on type 'Location'.
 index.ts(374,17): error TS2339: Property 'slashes' does not exist on type 'Location'.
+index.ts(558,54): error TS2322: Type '(obj: object, prefix?: string | boolean) => string' is not assignable to type 'boolean'.
+index.ts(602,43): error TS2349: This expression is not callable.
+  Type 'Boolean' has no call signatures.
 

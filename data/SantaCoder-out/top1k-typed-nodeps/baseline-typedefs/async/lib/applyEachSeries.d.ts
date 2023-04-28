@@ -1,2 +1,2 @@
-declare const _default: (fns: any, ...callArgs: any[]) => (...args: any[]) => any;
+declare const _default: (fns: Function[], ...callArgs: any[]) => (...args: any[]) => any;
 export default _default;

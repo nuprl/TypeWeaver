@@ -1,13 +1,7 @@
 src/merge-strategy.ts(14,7): error TS2451: Cannot redeclare block-scoped variable 'MergeStrategy'.
 src/object-schema.ts(11,9): error TS2451: Cannot redeclare block-scoped variable 'MergeStrategy'.
 src/object-schema.ts(12,9): error TS2451: Cannot redeclare block-scoped variable 'ValidationStrategy'.
-src/object-schema.ts(40,18): error TS2339: Property 'schema' does not exist on type 'string'.
-src/object-schema.ts(41,29): error TS2339: Property 'schema' does not exist on type 'string'.
-src/object-schema.ts(48,25): error TS2339: Property 'merge' does not exist on type 'string'.
-src/object-schema.ts(49,24): error TS2339: Property 'merge' does not exist on type 'string'.
-src/object-schema.ts(52,46): error TS2339: Property 'merge' does not exist on type 'string'.
-src/object-schema.ts(56,25): error TS2339: Property 'validate' does not exist on type 'string'.
-src/object-schema.ts(57,24): error TS2339: Property 'validate' does not exist on type 'string'.
-src/object-schema.ts(60,46): error TS2339: Property 'validate' does not exist on type 'string'.
+src/object-schema.ts(37,53): error TS2304: Cannot find name 'Strategy'.
+src/object-schema.ts(37,53): error TS4078: Parameter 'strategy' of exported function has or is using private name 'Strategy'.
 src/validation-strategy.ts(14,7): error TS2451: Cannot redeclare block-scoped variable 'ValidationStrategy'.
 

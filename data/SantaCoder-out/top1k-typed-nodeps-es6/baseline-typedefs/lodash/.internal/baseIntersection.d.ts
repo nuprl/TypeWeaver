@@ -1,2 +1,2 @@
-declare function baseIntersection(arrays: Array<any>, iteratee: any, comparator: any): any[];
+declare function baseIntersection(arrays: any[], iteratee: Function, comparator: Function): any[];
 export default baseIntersection;

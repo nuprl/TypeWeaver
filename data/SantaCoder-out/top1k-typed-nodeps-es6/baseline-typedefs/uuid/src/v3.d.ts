@@ -1,5 +1,6 @@
+/// <reference types="node" />
 declare const v3: {
-    (value: string, namespace: string, buf: Uint8Array, offset: number): string | Uint8Array;
+    (value: string, namespace: string, buf: Buffer, offset: number): string | Buffer;
     name: string;
     DNS: string;
     URL: string;

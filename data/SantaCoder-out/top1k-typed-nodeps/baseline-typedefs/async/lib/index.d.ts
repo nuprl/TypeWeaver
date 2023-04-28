@@ -76,8 +76,8 @@ import waterfall from './waterfall';
 import whilst from './whilst';
 declare const _default: {
     apply: typeof apply;
-    applyEach: (fns: any, ...callArgs: any[]) => (...args: any[]) => any;
-    applyEachSeries: (fns: any, ...callArgs: any[]) => (...args: any[]) => any;
+    applyEach: (fns: Function[], ...callArgs: any[]) => (...args: any[]) => any;
+    applyEachSeries: (fns: Function[], ...callArgs: any[]) => (...args: any[]) => any;
     asyncify: typeof asyncify;
     auto: typeof auto;
     autoInject: typeof autoInject;

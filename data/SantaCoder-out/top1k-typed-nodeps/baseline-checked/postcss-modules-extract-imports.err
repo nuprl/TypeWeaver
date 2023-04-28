@@ -14,10 +14,12 @@ src/topologicalSort.ts(4,41): error TS4078: Parameter 'graph' of exported functi
 src/topologicalSort.ts(12,6): error TS2339: Property 'nodes' does not exist on type 'Error'.
 src/topologicalSort.ts(17,39): error TS2304: Cannot find name 'Graph'.
 src/topologicalSort.ts(17,39): error TS4078: Parameter 'graph' of exported function has or is using private name 'Graph'.
-src/topologicalSort.ts(17,53): error TS2304: Cannot find name 'WalkState'.
-src/topologicalSort.ts(17,53): error TS4078: Parameter 'state' of exported function has or is using private name 'WalkState'.
-src/topologicalSort.ts(17,72): error TS2304: Cannot find name 'WalkResult'.
-src/topologicalSort.ts(17,72): error TS4078: Parameter 'result' of exported function has or is using private name 'WalkResult'.
+src/topologicalSort.ts(17,53): error TS2304: Cannot find name 'State'.
+src/topologicalSort.ts(17,53): error TS4078: Parameter 'state' of exported function has or is using private name 'State'.
+src/topologicalSort.ts(17,68): error TS2304: Cannot find name 'Result'.
+src/topologicalSort.ts(17,68): error TS4078: Parameter 'result' of exported function has or is using private name 'Result'.
 src/topologicalSort.ts(48,10): error TS2451: Cannot redeclare block-scoped variable 'topologicalSort'.
+src/topologicalSort.ts(48,33): error TS2304: Cannot find name 'Graph'.
+src/topologicalSort.ts(48,33): error TS4078: Parameter 'graph' of exported function has or is using private name 'Graph'.
 src/topologicalSort.ts(56,26): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Node'.
 

@@ -1,2 +1,2 @@
-declare function baseClone(value: any, bitmask: number, customizer: any, key: string, object: any, stack: any): any;
+declare function baseClone(value: any, bitmask: number, customizer: Function, key: string, object: Object, stack: string[]): any;
 export default baseClone;

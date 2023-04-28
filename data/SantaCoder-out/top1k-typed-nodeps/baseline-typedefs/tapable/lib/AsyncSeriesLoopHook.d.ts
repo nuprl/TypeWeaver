@@ -7,8 +7,8 @@ declare class AsyncSeriesLoopHookCodeFactory extends HookCodeFactory {
     }): any;
 }
 declare const factory: AsyncSeriesLoopHookCodeFactory;
-declare const COMPILE: (options: IOptions) => any;
-declare function AsyncSeriesLoopHook(args: any[], any: any, name: any, string: any): any;
+declare const COMPILE: (options: any) => any;
+declare function AsyncSeriesLoopHook(args: any[], any: any, []: Iterable<any>, name: any, string: any): any;
 declare namespace AsyncSeriesLoopHook {
     var prototype: any;
 }

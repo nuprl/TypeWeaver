@@ -7,34 +7,40 @@ index.ts(24,24): error TS2554: Expected 3 arguments, but got 2.
 index.ts(28,29): error TS2554: Expected 3 arguments, but got 2.
 index.ts(32,34): error TS2554: Expected 3 arguments, but got 2.
 index.ts(36,26): error TS2554: Expected 3 arguments, but got 2.
-index.ts(42,39): error TS2304: Cannot find name 'AxiosRequestConfig'.
+index.ts(42,39): error TS2304: Cannot find name 'Options'.
 index.ts(44,3): error TS2684: The 'this' context of type 'typeof Writable' is not assignable to method's 'this' of type 'Function'.
   Types of property 'once' are incompatible.
     Type '{ (emitter: _NodeEventTarget, eventName: string | symbol, options?: StaticEventEmitterOptions): Promise<any[]>; (emitter: _DOMEventTarget, eventName: string, options?: StaticEventEmitterOptions): Promise<...>; }' is not assignable to type '() => Function & FnProps<any>'.
-index.ts(61,48): error TS2304: Cannot find name 'AxiosResponse'.
 index.ts(79,11): error TS2554: Expected 1 arguments, but got 0.
 index.ts(107,24): error TS2554: Expected 1 arguments, but got 0.
 index.ts(157,37): error TS2304: Cannot find name 'Socket'.
 index.ts(164,31): error TS2304: Cannot find name 'Socket'.
-index.ts(234,69): error TS2304: Cannot find name 'AxiosRequestConfig'.
 index.ts(305,15): error TS2554: Expected 1 arguments, but got 0.
-index.ts(332,70): error TS2304: Cannot find name 'AxiosResponse'.
+index.ts(334,29): error TS2339: Property 'statusCode' does not exist on type 'Response'.
+index.ts(351,35): error TS2339: Property 'location' does not exist on type 'Headers'.
+index.ts(354,14): error TS2339: Property 'responseUrl' does not exist on type 'Response'.
+index.ts(355,14): error TS2551: Property 'redirects' does not exist on type 'Response'. Did you mean 'redirected'?
+index.ts(366,12): error TS2339: Property 'destroy' does not exist on type 'Response'.
 index.ts(371,24): error TS2554: Expected 1 arguments, but got 0.
+index.ts(381,22): error TS2339: Property 'req' does not exist on type 'Response'.
 index.ts(422,9): error TS2554: Expected 0 arguments, but got 2.
-index.ts(467,26): error TS2304: Cannot find name 'Protocol'.
-index.ts(482,29): error TS2304: Cannot find name 'AxiosRequestConfig'.
-index.ts(482,58): error TS2304: Cannot find name 'AxiosRequestConfig'.
-index.ts(482,88): error TS2304: Cannot find name 'AxiosRequestCallback'.
-index.ts(482,109): error TS2304: Cannot find name 'AxiosResponse'.
+index.ts(487,41): error TS2345: Argument of type 'RequestInfo' is not assignable to parameter of type 'string'.
+  Type 'Request' is not assignable to type 'string'.
+index.ts(491,30): error TS2345: Argument of type 'RequestInfo' is not assignable to parameter of type 'string'.
+  Type 'Request' is not assignable to type 'string'.
+index.ts(499,9): error TS2322: Type '{ protocol: string; hostname: string; hash: string; search: string; pathname: string; path: string; href: string; }' is not assignable to type 'RequestInfo'.
+index.ts(503,9): error TS2322: Type 'RequestInfo' is not assignable to type 'RequestInit'.
+  Type 'string' has no properties in common with type 'RequestInit'.
+index.ts(504,19): error TS2322: Type '{ protocol: string; }' is not assignable to type 'RequestInfo'.
+  Object literal may only specify known properties, and 'protocol' does not exist in type 'Request'.
+index.ts(516,15): error TS2339: Property 'nativeProtocols' does not exist on type 'RequestInit'.
+index.ts(517,29): error TS2339: Property 'host' does not exist on type 'RequestInit'.
+index.ts(517,56): error TS2339: Property 'hostname' does not exist on type 'RequestInit'.
+index.ts(518,17): error TS2339: Property 'hostname' does not exist on type 'RequestInit'.
+index.ts(521,28): error TS2339: Property 'protocol' does not exist on type 'RequestInit'.
 index.ts(522,13): error TS2554: Expected 0 arguments, but got 2.
-index.ts(527,42): error TS2304: Cannot find name 'IGetOptions'.
 index.ts(560,13): error TS2339: Property 'port' does not exist on type '{ protocol: string; hostname: string; hash: string; search: string; pathname: string; path: string; href: string; }'.
-index.ts(579,36): error TS2304: Cannot find name 'ICustomErrorProperties'.
-index.ts(587,31): error TS2351: This expression is not constructable.
-  Not all constituents of type 'Error | ErrorConstructor' are constructable.
-    Type 'Error' has no construct signatures.
-index.ts(595,13): error TS2339: Property 'removeListener' does not exist on type 'XMLHttpRequest'.
-index.ts(597,11): error TS2339: Property 'on' does not exist on type 'XMLHttpRequest'.
-index.ts(620,25): error TS2345: Argument of type '{ http: typeof http; https: typeof https; }' is not assignable to parameter of type 'Protocol[]'.
-  Object literal may only specify known properties, and 'http' does not exist in type 'Protocol[]'.
+index.ts(595,13): error TS2339: Property 'removeListener' does not exist on type 'Request'.
+index.ts(597,11): error TS2339: Property 'on' does not exist on type 'Request'.
+index.ts(598,11): error TS2339: Property 'abort' does not exist on type 'Request'.
 

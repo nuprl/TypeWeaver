@@ -1,2 +1,2 @@
-declare function getHolder(func: any): any;
+declare function getHolder(func: Function): any;
 export default getHolder;

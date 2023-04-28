@@ -1,2 +1,2 @@
-declare function transform(object: any, iteratee: any, accumulator: any): any;
+declare function transform(object: any, iteratee: Function, accumulator: any): any;
 export default transform;

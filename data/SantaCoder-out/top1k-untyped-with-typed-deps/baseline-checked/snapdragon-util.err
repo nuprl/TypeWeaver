@@ -1,9 +1,7 @@
 index.ts(21,44): error TS2339: Property 'isNode' does not exist on type 'Node'.
-index.ts(37,16): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Node'.
 index.ts(55,19): error TS2339: Property 'value' does not exist on type 'Node'.
 index.ts(56,17): error TS2339: Property 'value' does not exist on type 'Node'.
 index.ts(58,15): error TS2339: Property 'val' does not exist on type 'Node'.
-index.ts(97,18): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Node'.
 index.ts(120,10): error TS2339: Property 'nodes' does not exist on type 'Node'.
 index.ts(122,17): error TS2339: Property 'nodes' does not exist on type 'Node'.
 index.ts(123,10): error TS2339: Property 'type' does not exist on type 'Node'.
@@ -14,8 +12,9 @@ index.ts(176,3): error TS2554: Expected 3 arguments, but got 2.
 index.ts(177,23): error TS2339: Property 'nodes' does not exist on type 'Node'.
 index.ts(179,28): error TS2339: Property 'nodes' does not exist on type 'Node'.
 index.ts(180,22): error TS2339: Property 'nodes' does not exist on type 'Node'.
-index.ts(213,44): error TS2552: Cannot find name 'NodeConstructor'. Did you mean 'DateConstructor'?
 index.ts(214,3): error TS2554: Expected 3 arguments, but got 2.
+index.ts(223,18): error TS2351: This expression is not constructable.
+  Type 'Node' has no construct signatures.
 index.ts(223,36): error TS2339: Property 'type' does not exist on type 'Node'.
 index.ts(224,22): error TS2339: Property 'unshift' does not exist on type 'Node'.
 index.ts(224,38): error TS2339: Property 'unshiftNode' does not exist on type 'Node'.
@@ -24,11 +23,18 @@ index.ts(273,19): error TS2351: This expression is not constructable.
 index.ts(273,37): error TS2339: Property 'type' does not exist on type 'Node'.
 index.ts(274,19): error TS2339: Property 'push' does not exist on type 'Node'.
 index.ts(274,32): error TS2339: Property 'pushNode' does not exist on type 'Node'.
-index.ts(293,46): error TS2552: Cannot find name 'NodeConstructor'. Did you mean 'DateConstructor'?
-index.ts(318,35): error TS2304: Cannot find name 'IContainerNode'.
-index.ts(318,57): error TS2552: Cannot find name 'INode'. Did you mean 'Node'?
-index.ts(348,38): error TS2304: Cannot find name 'ITreeNode'.
-index.ts(348,60): error TS2304: Cannot find name 'ITreeNode'.
+index.ts(322,21): error TS2339: Property 'push' does not exist on type 'Node'.
+index.ts(323,19): error TS2339: Property 'push' does not exist on type 'Node'.
+index.ts(326,8): error TS2339: Property 'define' does not exist on type 'Node'.
+index.ts(327,10): error TS2339: Property 'nodes' does not exist on type 'Node'.
+index.ts(327,25): error TS2339: Property 'nodes' does not exist on type 'Node'.
+index.ts(328,10): error TS2339: Property 'nodes' does not exist on type 'Node'.
+index.ts(352,21): error TS2339: Property 'unshift' does not exist on type 'Node'.
+index.ts(353,19): error TS2339: Property 'unshift' does not exist on type 'Node'.
+index.ts(356,8): error TS2339: Property 'define' does not exist on type 'Node'.
+index.ts(357,10): error TS2339: Property 'nodes' does not exist on type 'Node'.
+index.ts(357,25): error TS2339: Property 'nodes' does not exist on type 'Node'.
+index.ts(358,10): error TS2339: Property 'nodes' does not exist on type 'Node'.
 index.ts(383,19): error TS2339: Property 'pop' does not exist on type 'Node'.
 index.ts(384,17): error TS2339: Property 'pop' does not exist on type 'Node'.
 index.ts(386,15): error TS2339: Property 'nodes' does not exist on type 'Node'.
@@ -84,26 +90,9 @@ index.ts(756,56): error TS2339: Property 'nodes' does not exist on type 'Node'.
 index.ts(758,19): error TS2339: Property 'isClose' does not exist on type 'Node'.
 index.ts(759,17): error TS2339: Property 'isClose' does not exist on type 'Node'.
 index.ts(761,29): error TS2339: Property 'type' does not exist on type 'Node'.
-index.ts(811,33): error TS2304: Cannot find name 'State'.
-index.ts(815,19): error TS2339: Property 'parent' does not exist on type 'Node'.
-index.ts(816,12): error TS2339: Property 'parent' does not exist on type 'Node'.
-index.ts(817,12): error TS2339: Property 'type' does not exist on type 'Node'.
-index.ts(851,36): error TS2304: Cannot find name 'State'.
-index.ts(855,19): error TS2339: Property 'parent' does not exist on type 'Node'.
-index.ts(856,12): error TS2339: Property 'parent' does not exist on type 'Node'.
-index.ts(857,12): error TS2339: Property 'type' does not exist on type 'Node'.
 index.ts(883,27): error TS2339: Property 'nodes' does not exist on type 'Node'.
 index.ts(890,12): error TS2339: Property 'nodes' does not exist on type 'Node'.
 index.ts(894,28): error TS2339: Property 'nodes' does not exist on type 'Node'.
-index.ts(922,38): error TS2304: Cannot find name 'State'.
-index.ts(956,34): error TS2304: Cannot find name 'State'.
-index.ts(969,21): error TS2339: Property 'parent' does not exist on type 'Node'.
-index.ts(975,39): error TS2339: Property 'test' does not exist on type 'never'.
-index.ts(986,62): error TS2339: Property 'test' does not exist on type 'never'.
 index.ts(1009,29): error TS2339: Property 'nodes' does not exist on type 'Node'.
 index.ts(1009,54): error TS2339: Property 'nodes' does not exist on type 'Node'.
-index.ts(1100,27): error TS2304: Cannot find name 'Compiler'.
-index.ts(1100,27): error TS4078: Parameter 'compiler' of exported function has or is using private name 'Compiler'.
-index.ts(1114,49): error TS2304: Cannot find name 'Class'.
-index.ts(1114,49): error TS4078: Parameter 'Node' of exported function has or is using private name 'Class'.
 

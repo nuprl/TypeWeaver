@@ -7,40 +7,37 @@ events.ts(37,15): error TS2769: No overload matches this call.
   Overload 2 of 2, '(...items: (string | ConcatArray<string>)[]): string[]', gave the following error.
     Argument of type 'symbol[]' is not assignable to parameter of type 'string | ConcatArray<string>'.
       Type 'symbol[]' is not assignable to type 'ConcatArray<string>'.
-events.ts(70,34): error TS2304: Cannot find name 'IListener'.
-events.ts(70,34): error TS4078: Parameter 'listener' of exported function has or is using private name 'IListener'.
+events.ts(70,34): error TS2304: Cannot find name 'Listener'.
+events.ts(70,34): error TS4078: Parameter 'listener' of exported function has or is using private name 'Listener'.
 events.ts(110,33): error TS2709: Cannot use namespace 'EventEmitter' as a type.
 events.ts(110,33): error TS4078: Parameter 'that' of exported function has or is using private name 'EventEmitter'.
 events.ts(112,25): error TS2339: Property 'defaultMaxListeners' does not exist on type 'typeof EventEmitter'.
 events.ts(143,9): error TS2339: Property 'context' does not exist on type 'Error'.
-events.ts(171,19): error TS2339: Property '_events' does not exist on type 'EventTarget'.
-events.ts(173,21): error TS2339: Property '_events' does not exist on type 'EventTarget'.
-events.ts(174,12): error TS2339: Property '_eventsCount' does not exist on type 'EventTarget'.
-events.ts(179,14): error TS2339: Property 'emit' does not exist on type 'EventTarget'.
-events.ts(180,28): error TS2339: Property 'listener' does not exist on type 'EventListener'.
-events.ts(180,48): error TS2339: Property 'listener' does not exist on type 'EventListener'.
-events.ts(184,23): error TS2339: Property '_events' does not exist on type 'EventTarget'.
-events.ts(192,14): error TS2339: Property '_eventsCount' does not exist on type 'EventTarget'.
+events.ts(171,19): error TS2339: Property '_events' does not exist on type 'HTMLElement'.
+events.ts(173,21): error TS2339: Property '_events' does not exist on type 'HTMLElement'.
+events.ts(174,12): error TS2339: Property '_eventsCount' does not exist on type 'HTMLElement'.
+events.ts(179,14): error TS2339: Property 'emit' does not exist on type 'HTMLElement'.
+events.ts(180,28): error TS2339: Property 'listener' does not exist on type 'EventListenerOrEventListenerObject'.
+  Property 'listener' does not exist on type 'EventListener'.
+events.ts(180,48): error TS2339: Property 'listener' does not exist on type 'EventListenerOrEventListenerObject'.
+  Property 'listener' does not exist on type 'EventListener'.
+events.ts(184,23): error TS2339: Property '_events' does not exist on type 'HTMLElement'.
+events.ts(192,14): error TS2339: Property '_eventsCount' does not exist on type 'HTMLElement'.
 events.ts(216,9): error TS2339: Property 'emitter' does not exist on type 'Error'.
 events.ts(217,9): error TS2339: Property 'type' does not exist on type 'Error'.
 events.ts(218,9): error TS2339: Property 'count' does not exist on type 'Error'.
-events.ts(219,26): error TS2345: Argument of type 'Error' is not assignable to parameter of type 'string'.
-events.ts(234,39): error TS2345: Argument of type 'Function' is not assignable to parameter of type 'EventListener'.
-  Type 'Function' provides no match for the signature '(evt: Event): void'.
-events.ts(247,28): error TS2709: Cannot use namespace 'EventEmitter' as a type.
-events.ts(247,28): error TS4078: Parameter 'target' of exported function has or is using private name 'EventEmitter'.
-events.ts(399,48): error TS2709: Cannot use namespace 'EventEmitter' as a type.
-events.ts(441,31): error TS2304: Cannot find name 'IListener'.
-events.ts(441,31): error TS4078: Parameter 'arr' of exported function has or is using private name 'IListener'.
+events.ts(233,54): error TS2304: Cannot find name 'Listener'.
+events.ts(255,69): error TS2304: Cannot find name 'Listener'.
+events.ts(375,23): error TS2339: Property '_events' does not exist on type 'EventTarget'.
+events.ts(399,48): error TS2304: Cannot find name 'Emitter'.
 events.ts(449,24): error TS2709: Cannot use namespace 'EventEmitter' as a type.
 events.ts(449,24): error TS4078: Parameter 'emitter' of exported function has or is using private name 'EventEmitter'.
 events.ts(463,61): error TS2345: Argument of type '{ once: boolean; }' is not assignable to parameter of type 'number'.
 events.ts(465,61): error TS2345: Argument of type '{ once: boolean; }' is not assignable to parameter of type 'number'.
 events.ts(470,49): error TS2709: Cannot use namespace 'EventEmitter' as a type.
 events.ts(470,49): error TS4078: Parameter 'emitter' of exported function has or is using private name 'EventEmitter'.
-events.ts(477,22): error TS2339: Property 'on' does not exist on type 'EventTarget'.
+events.ts(476,50): error TS2709: Cannot use namespace 'EventEmitter' as a type.
+events.ts(476,50): error TS4078: Parameter 'emitter' of exported function has or is using private name 'EventEmitter'.
 events.ts(478,15): error TS2339: Property 'once' does not exist on type 'number'.
-events.ts(479,15): error TS2339: Property 'once' does not exist on type 'EventTarget'.
-events.ts(481,15): error TS2339: Property 'on' does not exist on type 'EventTarget'.
 events.ts(489,17): error TS2339: Property 'once' does not exist on type 'number'.
 

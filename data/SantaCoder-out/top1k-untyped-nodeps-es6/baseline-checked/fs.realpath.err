@@ -3,43 +3,22 @@ index.ts(17,19): error TS2339: Property 'syscall' does not exist on type 'Error'
 index.ts(18,8): error TS2339: Property 'code' does not exist on type 'Error'.
 index.ts(19,8): error TS2339: Property 'code' does not exist on type 'Error'.
 index.ts(20,8): error TS2339: Property 'code' does not exist on type 'Error'.
-index.ts(26,28): error TS2769: No overload matches this call.
+index.ts(26,12): error TS2769: No overload matches this call.
   Overload 1 of 4, '(path: PathLike, options: EncodingOption, callback: (err: ErrnoException, resolvedPath: string) => void): void', gave the following error.
-    Argument of type 'Cache' is not assignable to parameter of type 'EncodingOption'.
+    Argument of type 'Function' is not assignable to parameter of type '(err: ErrnoException, resolvedPath: string) => void'.
+      Type 'Function' provides no match for the signature '(err: ErrnoException, resolvedPath: string): void'.
   Overload 2 of 4, '(path: PathLike, options: BufferEncodingOption, callback: (err: ErrnoException, resolvedPath: Buffer) => void): void', gave the following error.
-    Argument of type 'Cache' is not assignable to parameter of type 'BufferEncodingOption'.
+    Argument of type 'Object' is not assignable to parameter of type 'BufferEncodingOption'.
+      The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
   Overload 3 of 4, '(path: PathLike, options: EncodingOption, callback: (err: ErrnoException, resolvedPath: string | Buffer) => void): void', gave the following error.
-    Argument of type 'Cache' is not assignable to parameter of type 'EncodingOption'.
-index.ts(33,19): error TS2769: No overload matches this call.
-  Overload 1 of 4, '(path: PathLike, options: EncodingOption, callback: (err: ErrnoException, resolvedPath: string) => void): void', gave the following error.
-    Argument of type 'Cache' is not assignable to parameter of type 'EncodingOption'.
-  Overload 2 of 4, '(path: PathLike, options: BufferEncodingOption, callback: (err: ErrnoException, resolvedPath: Buffer) => void): void', gave the following error.
-    Argument of type 'Cache' is not assignable to parameter of type 'BufferEncodingOption'.
-  Overload 3 of 4, '(path: PathLike, options: EncodingOption, callback: (err: ErrnoException, resolvedPath: string | Buffer) => void): void', gave the following error.
-    Argument of type 'Cache' is not assignable to parameter of type 'EncodingOption'.
-index.ts(33,55): error TS2304: Cannot find name 'IResult'.
-index.ts(44,32): error TS2769: No overload matches this call.
-  Overload 1 of 3, '(path: PathLike, options?: EncodingOption): string', gave the following error.
-    Argument of type 'Cache' is not assignable to parameter of type 'EncodingOption'.
-  Overload 2 of 3, '(path: PathLike, options: BufferEncodingOption): Buffer', gave the following error.
-    Argument of type 'Cache' is not assignable to parameter of type 'BufferEncodingOption'.
-  Overload 3 of 3, '(path: PathLike, options?: EncodingOption): string | Buffer', gave the following error.
-    Argument of type 'Cache' is not assignable to parameter of type 'EncodingOption'.
-index.ts(48,32): error TS2769: No overload matches this call.
-  Overload 1 of 3, '(path: PathLike, options?: EncodingOption): string', gave the following error.
-    Argument of type 'Cache' is not assignable to parameter of type 'EncodingOption'.
-  Overload 2 of 3, '(path: PathLike, options: BufferEncodingOption): Buffer', gave the following error.
-    Argument of type 'Cache' is not assignable to parameter of type 'BufferEncodingOption'.
-  Overload 3 of 3, '(path: PathLike, options?: EncodingOption): string | Buffer', gave the following error.
-    Argument of type 'Cache' is not assignable to parameter of type 'EncodingOption'.
+    Argument of type 'Function' is not assignable to parameter of type '(err: ErrnoException, resolvedPath: string | Buffer) => void'.
+      Type 'Function' provides no match for the signature '(err: ErrnoException, resolvedPath: string | Buffer): void'.
 index.ts(59,3): error TS2739: Type 'typeof realpath' is missing the following properties from type 'typeof realpath': __promisify__, native
-index.ts(60,3): error TS2741: Property 'native' is missing in type '(p: string, cache: Cache) => any' but required in type 'typeof realpathSync'.
+index.ts(60,3): error TS2741: Property 'native' is missing in type '(p: string, cache: Object) => any' but required in type 'typeof realpathSync'.
 old.ts(54,19): error TS2551: Property 'throwDeprecation' does not exist on type 'Process'. Did you mean 'traceDeprecation'?
 old.ts(56,25): error TS2339: Property 'noDeprecation' does not exist on type 'Process'.
-old.ts(184,61): error TS2315: Type 'Cache' is not generic.
-old.ts(284,54): error TS2304: Cannot find name 'IStorageTarget'.
+old.ts(186,24): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'Function'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+    Type 'Object' is missing the following properties from type 'Function': apply, call, bind, prototype, and 6 more.
 old.ts(286,9): error TS2554: Expected 3 arguments, but got 2.
-old.ts(291,42): error TS2304: Cannot find name 'Target'.
-old.ts(291,56): error TS2304: Cannot find name 'Target'.
-old.ts(299,42): error TS2304: Cannot find name 'ResolvedLink'.
 

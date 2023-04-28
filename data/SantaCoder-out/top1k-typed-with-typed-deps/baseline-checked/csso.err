@@ -1,5 +1,4 @@
 .gh-pages/libs/base64.ts(2,615): error TS2403: Subsequent variable declarations must have the same type.  Variable 'cc' must be of type 'any', but here has type 'number'.
-.gh-pages/libs/cssbeautify.ts(35,46): error TS2304: Cannot find name 'CssBeautifyOptions'.
 .gh-pages/libs/cssbeautify.ts(445,52): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'number'.
 .gh-pages/libs/cssbeautify.ts(445,52): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
 .gh-pages/libs/cssbeautify.ts(467,16): error TS2339: Property 'cssbeautify' does not exist on type 'Window & typeof globalThis'.
@@ -14,31 +13,37 @@
 .gh-pages/libs/diff.ts(38,8243): error TS2339: Property 'hunks' does not exist on type '{}'.
 .gh-pages/libs/diff.ts(38,8345): error TS2339: Property 'hunks' does not exist on type '{}'.
 .gh-pages/libs/diff.ts(38,9526): error TS1313: The body of an 'if' statement cannot be the empty statement.
-lib/clean/Atrule.ts(4,43): error TS2503: Cannot find namespace 'AST'.
-lib/clean/Atrule.ts(4,43): error TS4078: Parameter 'node' of exported function has or is using private name 'AST'.
-lib/clean/Atrule.ts(4,61): error TS2503: Cannot find namespace 'AST'.
-lib/clean/Atrule.ts(4,61): error TS4078: Parameter 'item' of exported function has or is using private name 'AST'.
-lib/clean/Atrule.ts(4,77): error TS2503: Cannot find namespace 'AST'.
-lib/clean/Atrule.ts(4,77): error TS4078: Parameter 'list' of exported function has or is using private name 'AST'.
-lib/clean/Atrule.ts(40,54): error TS2304: Cannot find name 'IRule'.
-lib/clean/Comment.ts(1,59): error TS2304: Cannot find name 'CommentItem'.
-lib/clean/Comment.ts(1,59): error TS4078: Parameter 'item' of exported function has or is using private name 'CommentItem'.
-lib/clean/Comment.ts(1,78): error TS2304: Cannot find name 'CommentList'.
-lib/clean/Comment.ts(1,78): error TS4078: Parameter 'list' of exported function has or is using private name 'CommentList'.
-lib/clean/Declaration.ts(3,59): error TS2304: Cannot find name 'Declaration'.
-lib/clean/Declaration.ts(3,59): error TS4078: Parameter 'item' of exported function has or is using private name 'Declaration'.
-lib/clean/Declaration.ts(3,78): error TS2304: Cannot find name 'DeclarationList'.
-lib/clean/Declaration.ts(3,78): error TS4078: Parameter 'list' of exported function has or is using private name 'DeclarationList'.
+lib/clean/Atrule.ts(4,43): error TS2304: Cannot find name 'Atrule'.
+lib/clean/Atrule.ts(4,43): error TS4078: Parameter 'node' of exported function has or is using private name 'Atrule'.
+lib/clean/Atrule.ts(4,57): error TS2304: Cannot find name 'Atrule'.
+lib/clean/Atrule.ts(4,57): error TS4078: Parameter 'item' of exported function has or is using private name 'Atrule'.
+lib/clean/Atrule.ts(4,71): error TS2304: Cannot find name 'Atrule'.
+lib/clean/Atrule.ts(4,71): error TS4078: Parameter 'list' of exported function has or is using private name 'Atrule'.
+lib/clean/Atrule.ts(12,18): error TS2339: Property 'remove' does not exist on type 'Atrule[]'.
+lib/clean/Atrule.ts(20,22): error TS2339: Property 'remove' does not exist on type 'Atrule[]'.
+lib/clean/Atrule.ts(26,22): error TS2339: Property 'remove' does not exist on type 'Atrule[]'.
+lib/clean/Atrule.ts(34,22): error TS2339: Property 'remove' does not exist on type 'Atrule[]'.
+lib/clean/Atrule.ts(40,18): error TS2339: Property 'prevUntil' does not exist on type 'Atrule[]'.
+lib/clean/Atrule.ts(40,54): error TS2304: Cannot find name 'Rule'.
+lib/clean/Atrule.ts(48,22): error TS2339: Property 'remove' does not exist on type 'Atrule[]'.
+lib/clean/Atrule.ts(64,26): error TS2339: Property 'remove' does not exist on type 'Atrule[]'.
+lib/clean/Comment.ts(1,44): error TS2304: Cannot find name 'CommentData'.
+lib/clean/Comment.ts(1,44): error TS4078: Parameter 'data' of exported function has or is using private name 'CommentData'.
+lib/clean/Comment.ts(1,63): error TS2304: Cannot find name 'CommentItem'.
+lib/clean/Comment.ts(1,63): error TS4078: Parameter 'item' of exported function has or is using private name 'CommentItem'.
+lib/clean/Comment.ts(1,82): error TS2304: Cannot find name 'CommentList'.
+lib/clean/Comment.ts(1,82): error TS4078: Parameter 'list' of exported function has or is using private name 'CommentList'.
 lib/clean/Declaration.ts(4,14): error TS2339: Property 'value' does not exist on type 'Node'.
 lib/clean/Declaration.ts(4,37): error TS2339: Property 'value' does not exist on type 'Node'.
+lib/clean/Declaration.ts(5,14): error TS2339: Property 'remove' does not exist on type 'Node'.
 lib/clean/Declaration.ts(9,23): error TS2339: Property 'property' does not exist on type 'Node'.
 lib/clean/Declaration.ts(10,28): error TS2339: Property 'value' does not exist on type 'Node'.
 lib/clean/Declaration.ts(11,18): error TS2339: Property 'value' does not exist on type 'Node'.
 lib/clean/Declaration.ts(11,37): error TS2339: Property 'value' does not exist on type 'Node'.
-lib/clean/Raw.ts(3,52): error TS2304: Cannot find name 'RawItem'.
-lib/clean/Raw.ts(3,52): error TS4078: Parameter 'item' of exported function has or is using private name 'RawItem'.
-lib/clean/Raw.ts(3,67): error TS2304: Cannot find name 'RawList'.
-lib/clean/Raw.ts(3,67): error TS4078: Parameter 'list' of exported function has or is using private name 'RawList'.
+lib/clean/Raw.ts(5,45): error TS2345: Argument of type 'Node' is not assignable to parameter of type 'Node[]'.
+  Type 'Node' is missing the following properties from type 'Node[]': length, pop, push, concat, and 29 more.
+lib/clean/Raw.ts(6,40): error TS2345: Argument of type 'Node' is not assignable to parameter of type 'Node[]'.
+lib/clean/Raw.ts(7,14): error TS2339: Property 'remove' does not exist on type 'Node'.
 lib/clean/Rule.ts(7,57): error TS2304: Cannot find name 'UsageData'.
 lib/clean/Rule.ts(8,18): error TS2339: Property 'children' does not exist on type 'string[]'.
 lib/clean/Rule.ts(11,24): error TS2345: Argument of type '(this: WalkContext, node: Node) => void' is not assignable to parameter of type 'EnterOrLeaveFn<CssNode> | WalkOptions'.
@@ -59,70 +64,84 @@ lib/clean/Rule.ts(54,51): error TS2339: Property 'name' does not exist on type '
 lib/clean/Rule.ts(57,85): error TS2339: Property 'name' does not exist on type 'Node'.
 lib/clean/Rule.ts(62,84): error TS2339: Property 'name' does not exist on type 'Node'.
 lib/clean/Rule.ts(76,25): error TS2339: Property 'children' does not exist on type 'string[]'.
-lib/clean/Rule.ts(79,53): error TS2304: Cannot find name 'Rule'.
-lib/clean/Rule.ts(79,53): error TS4078: Parameter 'item' of exported function has or is using private name 'Rule'.
-lib/clean/Rule.ts(79,65): error TS2304: Cannot find name 'RuleList'.
-lib/clean/Rule.ts(79,65): error TS4078: Parameter 'list' of exported function has or is using private name 'RuleList'.
-lib/clean/Rule.ts(79,84): error TS2304: Cannot find name 'CleanOptions'.
-lib/clean/Rule.ts(79,84): error TS4078: Parameter 'options' of exported function has or is using private name 'CleanOptions'.
+lib/clean/Rule.ts(79,80): error TS2304: Cannot find name 'Options'.
+lib/clean/Rule.ts(79,80): error TS4078: Parameter 'options' of exported function has or is using private name 'Options'.
 lib/clean/Rule.ts(80,28): error TS2339: Property 'prelude' does not exist on type 'Node'.
 lib/clean/Rule.ts(80,59): error TS2339: Property 'block' does not exist on type 'Node'.
+lib/clean/Rule.ts(81,14): error TS2339: Property 'remove' does not exist on type 'Node'.
 lib/clean/Rule.ts(93,26): error TS2339: Property 'prelude' does not exist on type 'Node'.
 lib/clean/Rule.ts(95,32): error TS2339: Property 'prelude' does not exist on type 'Node'.
+lib/clean/Rule.ts(96,18): error TS2339: Property 'remove' does not exist on type 'Node'.
 lib/clean/TypeSelector.ts(3,23): error TS2339: Property 'data' does not exist on type 'Node'.
 lib/clean/TypeSelector.ts(11,27): error TS2339: Property 'next' does not exist on type 'Node'.
 lib/clean/TypeSelector.ts(11,40): error TS2339: Property 'next' does not exist on type 'Node'.
-lib/clean/TypeSelector.ts(17,14): error TS2339: Property 'remove' does not exist on type 'Node[]'.
-lib/clean/WhiteSpace.ts(2,10): error TS2339: Property 'remove' does not exist on type 'string[]'.
-lib/clean/index.ts(20,30): error TS2304: Cannot find name 'AST'.
-lib/clean/index.ts(20,30): error TS4078: Parameter 'ast' of exported function has or is using private name 'AST'.
-lib/clean/index.ts(20,44): error TS2304: Cannot find name 'Options'.
-lib/clean/index.ts(20,44): error TS4078: Parameter 'options' of exported function has or is using private name 'Options'.
-lib/clean/utils.ts(1,37): error TS2304: Cannot find name 'TreeNode'.
-lib/clean/utils.ts(1,37): error TS4078: Parameter 'node' of exported function has or is using private name 'TreeNode'.
-lib/clean/utils.ts(5,54): error TS2304: Cannot find name 'NodeChildrenList'.
-lib/clean/utils.ts(5,54): error TS4078: Parameter 'list' of exported function has or is using private name 'NodeChildrenList'.
+lib/clean/TypeSelector.ts(17,14): error TS2339: Property 'remove' does not exist on type 'Node'.
+lib/clean/WhiteSpace.ts(2,10): error TS2339: Property 'remove' does not exist on type 'Node[]'.
+lib/clean/index.ts(20,45): error TS2304: Cannot find name 'WalkOptions'.
+lib/clean/index.ts(20,45): error TS4078: Parameter 'options' of exported function has or is using private name 'WalkOptions'.
+lib/clean/index.ts(21,10): error TS2345: Argument of type 'Node' is not assignable to parameter of type 'CssNode'.
+lib/clean/utils.ts(2,27): error TS2339: Property 'children' does not exist on type 'Node'.
+lib/clean/utils.ts(2,44): error TS2339: Property 'children' does not exist on type 'Node'.
 lib/clean/utils.ts(6,34): error TS2339: Property 'children' does not exist on type 'Node'.
-lib/compress.ts(7,27): error TS2304: Cannot find name 'Readable'.
+lib/compress.ts(12,11): error TS2339: Property 'nextUntil' does not exist on type 'ReadableStream<any>'.
+lib/compress.ts(12,27): error TS2339: Property 'head' does not exist on type 'ReadableStream<any>'.
 lib/compress.ts(33,18): error TS2554: Expected 2 arguments, but got 1.
-lib/compress.ts(46,29): error TS2304: Cannot find name 'AST'.
+lib/compress.ts(46,70): error TS2749: 'num' refers to a value, but is being used as a type here. Did you mean 'typeof num'?
+lib/compress.ts(46,84): error TS2304: Cannot find name 'Options'.
+lib/compress.ts(51,13): error TS2339: Property 'type' does not exist on type 'Node'.
+lib/compress.ts(52,13): error TS2339: Property 'firstAtrulesAllowed' does not exist on type 'Node'.
+lib/compress.ts(53,13): error TS2339: Property 'id' does not exist on type 'Node'.
+lib/compress.ts(56,10): error TS2345: Argument of type 'Node' is not assignable to parameter of type 'CssNode'.
 lib/compress.ts(60,28): error TS2339: Property 'id' does not exist on type 'Block'.
 lib/compress.ts(71,18): error TS2554: Expected 1 arguments, but got 2.
 lib/compress.ts(82,37): error TS2304: Cannot find name 'CommentOptions'.
-lib/compress.ts(94,40): error TS2304: Cannot find name 'IRestructureOption'.
+lib/compress.ts(94,40): error TS2304: Cannot find name 'Options'.
 lib/compress.ts(102,27): error TS2304: Cannot find name 'Block'.
-lib/compress.ts(123,39): error TS2304: Cannot find name 'AST'.
-lib/compress.ts(123,39): error TS4078: Parameter 'ast' of exported function has or is using private name 'AST'.
-lib/compress.ts(123,53): error TS2304: Cannot find name 'CompressOptions'.
-lib/compress.ts(123,53): error TS4078: Parameter 'options' of exported function has or is using private name 'CompressOptions'.
+lib/compress.ts(128,32): error TS2339: Property 'logger' does not exist on type 'Object'.
+lib/compress.ts(128,64): error TS2339: Property 'logger' does not exist on type 'Object'.
+lib/compress.ts(130,42): error TS2339: Property 'forceMediaMerge' does not exist on type 'Object'.
+lib/compress.ts(131,24): error TS2339: Property 'usage' does not exist on type 'Object'.
+lib/compress.ts(131,51): error TS2339: Property 'usage' does not exist on type 'Object'.
+lib/compress.ts(141,17): error TS2339: Property 'clone' does not exist on type 'Object'.
+lib/compress.ts(142,21): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'CssNode'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+lib/compress.ts(145,13): error TS2339: Property 'type' does not exist on type 'Object'.
+lib/compress.ts(146,21): error TS2339: Property 'children' does not exist on type 'Object'.
+lib/compress.ts(147,13): error TS2339: Property 'children' does not exist on type 'Object'.
 lib/compress.ts(153,34): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'string[]'.
-lib/compress.ts(154,41): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'number'.
 lib/compress.ts(160,24): error TS2554: Expected 2 arguments, but got 1.
 lib/compress.ts(160,36): error TS2339: Property 'createItem' does not exist on type 'typeof List'.
 lib/compress.ts(166,20): error TS2554: Expected 2 arguments, but got 1.
 lib/compress.ts(166,32): error TS2339: Property 'createItem' does not exist on type 'typeof List'.
 lib/compress.ts(170,24): error TS2554: Expected 2 arguments, but got 1.
 lib/compress.ts(170,36): error TS2339: Property 'createItem' does not exist on type 'typeof List'.
-lib/index.ts(7,45): error TS2304: Cannot find name 'DebugOutputOptions'.
-lib/index.ts(15,37): error TS2304: Cannot find name 'LogLevel'.
 lib/index.ts(18,48): error TS2304: Cannot find name 'AST'.
-lib/index.ts(41,40): error TS2304: Cannot find name 'ICompressOptions'.
+lib/index.ts(25,13): error TS2365: Operator '>' cannot be applied to types 'string' and 'number'.
+lib/index.ts(29,17): error TS2367: This comparison appears to be unintentional because the types 'string' and 'number' have no overlap.
+lib/index.ts(41,40): error TS2304: Cannot find name 'CompressOptions'.
 lib/index.ts(51,26): error TS2304: Cannot find name 'AST'.
 lib/index.ts(51,40): error TS2304: Cannot find name 'Options'.
-lib/index.ts(51,59): error TS2304: Cannot find name 'Handler'.
-lib/index.ts(59,26): error TS2304: Cannot find name 'MinifyContext'.
-lib/index.ts(59,66): error TS2304: Cannot find name 'MinifyOptions'.
-lib/index.ts(113,52): error TS2304: Cannot find name 'MinifyOptions'.
-lib/index.ts(113,52): error TS4078: Parameter 'options' of exported function has or is using private name 'MinifyOptions'.
-lib/index.ts(117,47): error TS2304: Cannot find name 'MinifyOptions'.
-lib/index.ts(117,47): error TS4078: Parameter 'options' of exported function has or is using private name 'MinifyOptions'.
+lib/index.ts(51,59): error TS2304: Cannot find name 'Handlers'.
+lib/index.ts(113,52): error TS2304: Cannot find name 'Options'.
+lib/index.ts(113,52): error TS4078: Parameter 'options' of exported function has or is using private name 'Options'.
+lib/index.ts(117,47): error TS2304: Cannot find name 'Options'.
+lib/index.ts(117,47): error TS4078: Parameter 'options' of exported function has or is using private name 'Options'.
 lib/replace/Atrule.ts(6,29): error TS2339: Property 'name' does not exist on type 'Node'.
-lib/replace/AttributeSelector.ts(15,28): error TS2339: Property 'value' does not exist on type 'Node'.
-lib/replace/AttributeSelector.ts(22,14): error TS2339: Property 'value' does not exist on type 'Node'.
+lib/replace/AttributeSelector.ts(17,33): error TS2339: Property 'type' does not exist on type 'string'.
+lib/replace/AttributeSelector.ts(21,30): error TS2551: Property 'value' does not exist on type 'string'. Did you mean 'valueOf'?
+lib/replace/AttributeSelector.ts(22,9): error TS2322: Type '{ type: string; loc: any; name: any; }' is not assignable to type 'string'.
+lib/replace/AttributeSelector.ts(24,28): error TS2339: Property 'loc' does not exist on type 'string'.
+lib/replace/AttributeSelector.ts(25,29): error TS2551: Property 'value' does not exist on type 'string'. Did you mean 'valueOf'?
+lib/replace/Dimension.ts(32,61): error TS2304: Cannot find name 'Item'.
+lib/replace/Dimension.ts(32,61): error TS4078: Parameter 'item' of exported function has or is using private name 'Item'.
 lib/replace/Dimension.ts(33,19): error TS2554: Expected 2 arguments, but got 1.
+lib/replace/Dimension.ts(33,35): error TS2339: Property 'value' does not exist on type 'Node'.
+lib/replace/Dimension.ts(35,10): error TS2339: Property 'value' does not exist on type 'Node'.
 lib/replace/Dimension.ts(37,9): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
-lib/replace/Number.ts(14,33): error TS2339: Property 'prev' does not exist on type 'number'.
-lib/replace/Number.ts(14,87): error TS2339: Property 'prev' does not exist on type 'number'.
+lib/replace/Dimension.ts(38,27): error TS2339: Property 'unit' does not exist on type 'Node'.
+lib/replace/Dimension.ts(59,23): error TS2339: Property 'loc' does not exist on type 'Node'.
+lib/replace/Number.ts(12,49): error TS2304: Cannot find name 'Item'.
+lib/replace/Number.ts(12,49): error TS4078: Parameter 'item' of exported function has or is using private name 'Item'.
 lib/replace/Number.ts(27,5): error TS2322: Type 'string' is not assignable to type 'number'.
 lib/replace/Number.ts(29,9): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
 lib/replace/Number.ts(29,25): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
@@ -131,15 +150,14 @@ lib/replace/Number.ts(39,10): error TS2339: Property 'value' does not exist on t
 lib/replace/Number.ts(39,18): error TS2554: Expected 2 arguments, but got 1.
 lib/replace/Number.ts(39,34): error TS2339: Property 'value' does not exist on type 'Node'.
 lib/replace/Percentage.ts(1,10): error TS2305: Module '"css-tree"' has no exported member 'lexer'.
+lib/replace/Percentage.ts(20,62): error TS2304: Cannot find name 'Item'.
+lib/replace/Percentage.ts(20,62): error TS4078: Parameter 'item' of exported function has or is using private name 'Item'.
 lib/replace/Percentage.ts(21,10): error TS2339: Property 'value' does not exist on type 'Node'.
 lib/replace/Percentage.ts(21,18): error TS2554: Expected 2 arguments, but got 1.
 lib/replace/Percentage.ts(21,34): error TS2339: Property 'value' does not exist on type 'Node'.
 lib/replace/Percentage.ts(23,14): error TS2339: Property 'value' does not exist on type 'Node'.
-lib/replace/Percentage.ts(25,14): error TS2339: Property 'data' does not exist on type 'Node'.
 lib/replace/Percentage.ts(27,23): error TS2339: Property 'loc' does not exist on type 'Node'.
 lib/replace/Percentage.ts(28,25): error TS2339: Property 'value' does not exist on type 'Node'.
-lib/replace/Percentage.ts(32,67): error TS2339: Property 'data' does not exist on type 'Node'.
-lib/replace/Percentage.ts(34,18): error TS2339: Property 'data' does not exist on type 'Node'.
 lib/replace/Url.ts(3,10): error TS2339: Property 'value' does not exist on type 'Node'.
 lib/replace/Url.ts(3,23): error TS2339: Property 'value' does not exist on type 'Node'.
 lib/replace/atrule/keyframes.ts(2,10): error TS2339: Property 'block' does not exist on type 'Node'.
@@ -147,30 +165,32 @@ lib/replace/color.ts(1,10): error TS2305: Module '"css-tree"' has no exported me
 lib/replace/color.ts(241,5): error TS2322: Type 'string' is not assignable to type 'number'.
 lib/replace/color.ts(243,18): error TS2339: Property 'length' does not exist on type 'number'.
 lib/replace/color.ts(246,42): error TS2304: Cannot find name 'FunctionArgs'.
-lib/replace/color.ts(324,37): error TS2551: Property 'value' does not exist on type 'number'. Did you mean 'valueOf'?
-lib/replace/color.ts(326,21): error TS2339: Property 'type' does not exist on type 'number'.
+lib/replace/color.ts(356,52): error TS2304: Cannot find name 'Item'.
+lib/replace/color.ts(356,52): error TS4078: Parameter 'item' of exported function has or is using private name 'Item'.
 lib/replace/color.ts(357,29): error TS2339: Property 'name' does not exist on type 'Node'.
 lib/replace/color.ts(361,39): error TS2339: Property 'children' does not exist on type 'Node'.
-lib/replace/color.ts(361,52): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'number[]'.
+lib/replace/color.ts(361,52): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'string'.
 lib/replace/color.ts(369,29): error TS2556: A spread argument must either have a tuple type or be passed to a rest parameter.
 lib/replace/color.ts(370,18): error TS2339: Property 'name' does not exist on type 'Node'.
-lib/replace/color.ts(383,22): error TS2339: Property 'data' does not exist on type 'Node'.
 lib/replace/color.ts(385,31): error TS2339: Property 'loc' does not exist on type 'Node'.
 lib/replace/color.ts(395,18): error TS2339: Property 'children' does not exist on type 'Node'.
 lib/replace/color.ts(406,28): error TS2554: Expected 2 arguments, but got 1.
 lib/replace/color.ts(418,47): error TS2339: Property 'children' does not exist on type 'Node'.
-lib/replace/color.ts(418,60): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'number[]'.
+lib/replace/color.ts(418,60): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'string'.
 lib/replace/color.ts(426,25): error TS2556: A spread argument must either have a tuple type or be passed to a rest parameter.
 lib/replace/color.ts(431,47): error TS2339: Property 'children' does not exist on type 'Node'.
-lib/replace/color.ts(431,60): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'number[]'.
-lib/replace/color.ts(438,14): error TS2339: Property 'data' does not exist on type 'Node'.
+lib/replace/color.ts(431,60): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'string'.
 lib/replace/color.ts(440,23): error TS2339: Property 'loc' does not exist on type 'Node'.
 lib/replace/color.ts(441,20): error TS2365: Operator '+' cannot be applied to types 'string | number' and 'string | number'.
-lib/replace/color.ts(444,26): error TS2339: Property 'data' does not exist on type 'Node'.
 lib/replace/color.ts(453,22): error TS2339: Property 'name' does not exist on type 'Node'.
 lib/replace/color.ts(461,18): error TS2339: Property 'data' does not exist on type 'Node'.
 lib/replace/color.ts(463,27): error TS2339: Property 'loc' does not exist on type 'Node'.
 lib/replace/color.ts(473,18): error TS2339: Property 'name' does not exist on type 'Node'.
+lib/replace/color.ts(478,47): error TS2304: Cannot find name 'Item'.
+lib/replace/color.ts(478,47): error TS4078: Parameter 'item' of exported function has or is using private name 'Item'.
+lib/replace/color.ts(479,22): error TS2339: Property 'value' does not exist on type 'Node'.
+lib/replace/color.ts(492,23): error TS2339: Property 'loc' does not exist on type 'Node'.
+lib/replace/color.ts(496,14): error TS2339: Property 'value' does not exist on type 'Node'.
 lib/replace/index.ts(24,30): error TS2304: Cannot find name 'AST'.
 lib/replace/index.ts(24,30): error TS4078: Parameter 'ast' of exported function has or is using private name 'AST'.
 lib/replace/property/background.ts(28,10): error TS2339: Property 'children' does not exist on type 'Node'.
@@ -180,44 +200,50 @@ lib/replace/property/font-weight.ts(2,24): error TS2339: Property 'children' doe
 lib/replace/property/font-weight.ts(7,22): error TS2339: Property 'children' does not exist on type 'Node'.
 lib/replace/property/font-weight.ts(14,22): error TS2339: Property 'children' does not exist on type 'Node'.
 lib/replace/property/font.ts(2,23): error TS2339: Property 'children' does not exist on type 'Node'.
-lib/replace/property/font.ts(4,38): error TS2304: Cannot find name 'NodePath'.
-lib/replace/property/font.ts(4,47): error TS2304: Cannot find name 'Identifier'.
-lib/replace/property/font.ts(4,66): error TS2304: Cannot find name 'NodePath'.
-lib/replace/property/font.ts(4,75): error TS2304: Cannot find name 'Identifier'.
-lib/restructure/1-mergeAtrule.ts(25,31): error TS2304: Cannot find name 'AST'.
-lib/restructure/1-mergeAtrule.ts(25,45): error TS2304: Cannot find name 'RelocateAtrulesOptions'.
-lib/restructure/1-mergeAtrule.ts(29,41): error TS2304: Cannot find name 'AST_Node'.
-lib/restructure/1-mergeAtrule.ts(29,57): error TS2304: Cannot find name 'AST_Node'.
-lib/restructure/1-mergeAtrule.ts(29,73): error TS2304: Cannot find name 'AST_Node'.
-lib/restructure/1-mergeAtrule.ts(69,17): error TS2339: Property 'type' does not exist on type 'Node'.
-lib/restructure/1-mergeAtrule.ts(69,43): error TS2339: Property 'name' does not exist on type 'Node'.
-lib/restructure/1-mergeAtrule.ts(72,30): error TS2304: Cannot find name 'AST_Rule'.
-lib/restructure/1-mergeAtrule.ts(72,46): error TS2304: Cannot find name 'AST_Rule_Item'.
-lib/restructure/1-mergeAtrule.ts(72,67): error TS2304: Cannot find name 'AST_Rule_List'.
-lib/restructure/1-mergeAtrule.ts(98,43): error TS2304: Cannot find name 'AST'.
-lib/restructure/1-mergeAtrule.ts(98,43): error TS4078: Parameter 'ast' of exported function has or is using private name 'AST'.
-lib/restructure/1-mergeAtrule.ts(98,57): error TS2304: Cannot find name 'AtruleOptions'.
-lib/restructure/1-mergeAtrule.ts(98,57): error TS4078: Parameter 'options' of exported function has or is using private name 'AtruleOptions'.
-lib/restructure/2-initialMergeRuleset.ts(10,28): error TS2304: Cannot find name 'RuleNode'.
-lib/restructure/2-initialMergeRuleset.ts(10,44): error TS2304: Cannot find name 'RuleItem'.
-lib/restructure/2-initialMergeRuleset.ts(10,60): error TS2304: Cannot find name 'RuleList'.
-lib/restructure/2-initialMergeRuleset.ts(16,18): error TS2339: Property 'type' does not exist on type 'Node'.
-lib/restructure/2-initialMergeRuleset.ts(20,36): error TS2339: Property 'prelude' does not exist on type 'Node'.
-lib/restructure/2-initialMergeRuleset.ts(21,39): error TS2339: Property 'block' does not exist on type 'Node'.
-lib/restructure/2-initialMergeRuleset.ts(24,43): error TS2339: Property 'pseudoSignature' does not exist on type 'Node'.
-lib/restructure/2-initialMergeRuleset.ts(48,47): error TS2304: Cannot find name 'AST'.
-lib/restructure/2-initialMergeRuleset.ts(48,47): error TS4078: Parameter 'ast' of exported function has or is using private name 'AST'.
-lib/restructure/3-disjoinRuleset.ts(3,28): error TS2304: Cannot find name 'RuleNode'.
-lib/restructure/3-disjoinRuleset.ts(3,44): error TS2304: Cannot find name 'RuleItem'.
-lib/restructure/3-disjoinRuleset.ts(3,60): error TS2304: Cannot find name 'RuleList'.
+lib/replace/property/font.ts(5,18): error TS2339: Property 'type' does not exist on type 'Node'.
+lib/replace/property/font.ts(6,22): error TS2339: Property 'name' does not exist on type 'Node'.
+lib/replace/property/font.ts(9,31): error TS2339: Property 'loc' does not exist on type 'Node'.
+lib/replace/property/font.ts(12,29): error TS2339: Property 'name' does not exist on type 'Node'.
+lib/restructure/1-mergeAtrule.ts(29,9): error TS2339: Property 'children' does not exist on type 'Object'.
+lib/restructure/1-mergeAtrule.ts(30,18): error TS2339: Property 'type' does not exist on type 'Node'.
+lib/restructure/1-mergeAtrule.ts(31,46): error TS2339: Property 'name' does not exist on type 'Node'.
+lib/restructure/1-mergeAtrule.ts(39,33): error TS2339: Property 'forceMediaMerge' does not exist on type 'Object'.
+lib/restructure/1-mergeAtrule.ts(60,17): error TS2339: Property 'children' does not exist on type 'Object'.
+lib/restructure/1-mergeAtrule.ts(68,28): error TS2304: Cannot find name 'Rule'.
+lib/restructure/1-mergeAtrule.ts(77,23): error TS2339: Property 'prev' does not exist on type 'Node'.
+lib/restructure/1-mergeAtrule.ts(77,36): error TS2339: Property 'prev' does not exist on type 'Node'.
+lib/restructure/1-mergeAtrule.ts(84,14): error TS2339: Property 'prelude' does not exist on type 'Node'.
+lib/restructure/1-mergeAtrule.ts(86,14): error TS2339: Property 'prelude' does not exist on type 'Node'.
+lib/restructure/1-mergeAtrule.ts(87,45): error TS2339: Property 'block' does not exist on type 'Node'.
+lib/restructure/1-mergeAtrule.ts(88,14): error TS2339: Property 'remove' does not exist on type 'Node'.
+lib/restructure/1-mergeAtrule.ts(98,58): error TS2304: Cannot find name 'Options'.
+lib/restructure/1-mergeAtrule.ts(98,58): error TS4078: Parameter 'options' of exported function has or is using private name 'Options'.
+lib/restructure/1-mergeAtrule.ts(101,10): error TS2345: Argument of type 'Node' is not assignable to parameter of type 'CssNode'.
+lib/restructure/2-initialMergeRuleset.ts(10,40): error TS2304: Cannot find name 'RuleItem'.
+lib/restructure/2-initialMergeRuleset.ts(10,56): error TS2304: Cannot find name 'RuleList'.
+lib/restructure/2-initialMergeRuleset.ts(11,28): error TS2339: Property 'prelude' does not exist on type 'Node'.
+lib/restructure/2-initialMergeRuleset.ts(12,31): error TS2339: Property 'block' does not exist on type 'Node'.
+lib/restructure/2-initialMergeRuleset.ts(14,46): error TS2304: Cannot find name 'RuleSet'.
+lib/restructure/2-initialMergeRuleset.ts(24,18): error TS2339: Property 'pseudoSignature' does not exist on type 'Node'.
+lib/restructure/2-initialMergeRuleset.ts(49,10): error TS2345: Argument of type 'Node' is not assignable to parameter of type 'CssNode'.
+lib/restructure/3-disjoinRuleset.ts(3,40): error TS2304: Cannot find name 'RuleItem'.
+lib/restructure/3-disjoinRuleset.ts(3,56): error TS2304: Cannot find name 'RuleList'.
+lib/restructure/3-disjoinRuleset.ts(4,28): error TS2339: Property 'prelude' does not exist on type 'Node'.
 lib/restructure/3-disjoinRuleset.ts(16,22): error TS2554: Expected 2 arguments, but got 1.
+lib/restructure/3-disjoinRuleset.ts(20,23): error TS2339: Property 'loc' does not exist on type 'Node'.
+lib/restructure/3-disjoinRuleset.ts(23,27): error TS2339: Property 'prelude' does not exist on type 'Node'.
+lib/restructure/3-disjoinRuleset.ts(28,27): error TS2339: Property 'block' does not exist on type 'Node'.
+lib/restructure/3-disjoinRuleset.ts(29,32): error TS2339: Property 'block' does not exist on type 'Node'.
+lib/restructure/3-disjoinRuleset.ts(31,35): error TS2339: Property 'pseudoSignature' does not exist on type 'Node'.
 lib/restructure/3-disjoinRuleset.ts(36,42): error TS2304: Cannot find name 'AST'.
 lib/restructure/3-disjoinRuleset.ts(36,42): error TS4078: Parameter 'ast' of exported function has or is using private name 'AST'.
+lib/restructure/3-disjoinRuleset.ts(40,9): error TS2322: Type '(node: Node, item: RuleItem, list: RuleList) => void' is not assignable to type 'EnterOrLeaveFn<Rule>'.
+  Types of parameters 'node' and 'node' are incompatible.
+    Type 'Rule' is not assignable to type 'Node'.
 lib/restructure/4-restructShorthand.ts(66,14): error TS2339: Property 'name' does not exist on type 'TRBL'.
 lib/restructure/4-restructShorthand.ts(67,14): error TS2339: Property 'loc' does not exist on type 'TRBL'.
 lib/restructure/4-restructShorthand.ts(68,14): error TS2339: Property 'iehack' does not exist on type 'TRBL'.
 lib/restructure/4-restructShorthand.ts(69,14): error TS2339: Property 'sides' does not exist on type 'TRBL'.
-lib/restructure/4-restructShorthand.ts(80,116): error TS2304: Cannot find name 'IChild'.
 lib/restructure/4-restructShorthand.ts(145,25): error TS2339: Property 'iehack' does not exist on type 'TRBL'.
 lib/restructure/4-restructShorthand.ts(145,53): error TS2339: Property 'iehack' does not exist on type 'TRBL'.
 lib/restructure/4-restructShorthand.ts(149,14): error TS2339: Property 'iehack' does not exist on type 'TRBL'.
@@ -235,22 +261,16 @@ lib/restructure/4-restructShorthand.ts(320,23): error TS2339: Property 'loc' doe
 lib/restructure/4-restructShorthand.ts(321,29): error TS2339: Property 'sides' does not exist on type 'TRBL'.
 lib/restructure/4-restructShorthand.ts(322,28): error TS2339: Property 'name' does not exist on type 'TRBL'.
 lib/restructure/4-restructShorthand.ts(328,28): error TS2304: Cannot find name 'Rule'.
-lib/restructure/4-restructShorthand.ts(328,42): error TS2304: Cannot find name 'ShortDeclarations'.
-lib/restructure/4-restructShorthand.ts(328,80): error TS2749: 'shortDeclarations' refers to a value, but is being used as a type here. Did you mean 'typeof shortDeclarations'?
-lib/restructure/4-restructShorthand.ts(328,118): error TS2749: 'lastShortSelector' refers to a value, but is being used as a type here. Did you mean 'typeof lastShortSelector'?
 lib/restructure/4-restructShorthand.ts(332,60): error TS2304: Cannot find name 'Declaration'.
-lib/restructure/4-restructShorthand.ts(332,79): error TS2304: Cannot find name 'DeclarationItem'.
-lib/restructure/4-restructShorthand.ts(375,47): error TS2304: Cannot find name 'ShorthandDeclaration'.
-lib/restructure/4-restructShorthand.ts(375,88): error TS2304: Cannot find name 'MarkDeclaration'.
-lib/restructure/4-restructShorthand.ts(377,32): error TS2339: Property 'shorthand' does not exist on type 'string'.
-lib/restructure/4-restructShorthand.ts(383,18): error TS2339: Property 'operation' does not exist on type 'string'.
-lib/restructure/4-restructShorthand.ts(384,18): error TS2339: Property 'item' does not exist on type 'string'.
-lib/restructure/4-restructShorthand.ts(386,18): error TS2339: Property 'block' does not exist on type 'string'.
-lib/restructure/4-restructShorthand.ts(386,36): error TS2339: Property 'item' does not exist on type 'string'.
-lib/restructure/4-restructShorthand.ts(391,44): error TS2304: Cannot find name 'AST'.
-lib/restructure/4-restructShorthand.ts(391,44): error TS4078: Parameter 'ast' of exported function has or is using private name 'AST'.
-lib/restructure/4-restructShorthand.ts(391,58): error TS2304: Cannot find name 'BlockIndexer'.
-lib/restructure/4-restructShorthand.ts(391,58): error TS4078: Parameter 'indexer' of exported function has or is using private name 'BlockIndexer'.
+lib/restructure/4-restructShorthand.ts(332,79): error TS2304: Cannot find name 'Declaration'.
+lib/restructure/4-restructShorthand.ts(362,32): error TS2345: Argument of type '{ operation: any; block: any; item: Declaration; shorthand: any; }' is not assignable to parameter of type 'string'.
+lib/restructure/4-restructShorthand.ts(375,53): error TS2304: Cannot find name 'ShorthandDeclaration'.
+lib/restructure/4-restructShorthand.ts(375,93): error TS2304: Cannot find name 'MarkDeclaration'.
+lib/restructure/4-restructShorthand.ts(376,46): error TS2304: Cannot find name 'ShorthandItem'.
+lib/restructure/4-restructShorthand.ts(391,44): error TS2304: Cannot find name 'Block'.
+lib/restructure/4-restructShorthand.ts(391,44): error TS4078: Parameter 'ast' of exported function has or is using private name 'Block'.
+lib/restructure/4-restructShorthand.ts(391,60): error TS2304: Cannot find name 'Indexer'.
+lib/restructure/4-restructShorthand.ts(391,60): error TS4078: Parameter 'indexer' of exported function has or is using private name 'Indexer'.
 lib/restructure/4-restructShorthand.ts(400,34): error TS2339: Property 'pseudoSignature' does not exist on type 'Rule'.
 lib/restructure/4-restructShorthand.ts(400,78): error TS2339: Property 'children' does not exist on type 'Raw | SelectorList'.
   Property 'children' does not exist on type 'Raw'.
@@ -260,8 +280,7 @@ lib/restructure/4-restructShorthand.ts(408,42): error TS2339: Property 'id' does
   Property 'id' does not exist on type 'Block'.
 lib/restructure/4-restructShorthand.ts(410,52): error TS2339: Property 'id' does not exist on type 'Block | StyleSheet'.
   Property 'id' does not exist on type 'Block'.
-lib/restructure/6-restructBlock.ts(74,68): error TS2304: Cannot find name 'Declaration'.
-lib/restructure/6-restructBlock.ts(74,95): error TS2304: Cannot find name 'Fingerprints'.
+lib/restructure/6-restructBlock.ts(74,68): error TS2503: Cannot find namespace 'ts'.
 lib/restructure/6-restructBlock.ts(93,34): error TS2339: Property 'type' does not exist on type 'Node'.
 lib/restructure/6-restructBlock.ts(97,34): error TS2339: Property 'children' does not exist on type 'Node'.
 lib/restructure/6-restructBlock.ts(105,37): error TS2339: Property 'name' does not exist on type 'Node'.
@@ -269,16 +288,17 @@ lib/restructure/6-restructBlock.ts(129,35): error TS2339: Property 'name' does n
 lib/restructure/6-restructBlock.ts(140,55): error TS2339: Property 'children' does not exist on type 'Node'.
 lib/restructure/6-restructBlock.ts(152,34): error TS2339: Property 'children' does not exist on type 'Node'.
 lib/restructure/6-restructBlock.ts(158,37): error TS2339: Property 'unit' does not exist on type 'Node'.
-lib/restructure/6-restructBlock.ts(203,26): error TS2304: Cannot find name 'NeedlessProps'.
-lib/restructure/6-restructBlock.ts(203,54): error TS2304: Cannot find name 'Declaration'.
-lib/restructure/6-restructBlock.ts(203,81): error TS2304: Cannot find name 'Fingerprints'.
+lib/restructure/6-restructBlock.ts(204,50): error TS2339: Property 'property' does not exist on type 'Object'.
+lib/restructure/6-restructBlock.ts(210,87): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'string[]'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+    Type 'Object' is missing the following properties from type 'string[]': length, pop, push, concat, and 29 more.
+lib/restructure/6-restructBlock.ts(213,39): error TS2339: Property 'important' does not exist on type 'Object'.
 lib/restructure/6-restructBlock.ts(220,28): error TS2304: Cannot find name 'Rule'.
 lib/restructure/6-restructBlock.ts(220,40): error TS2304: Cannot find name 'Item'.
-lib/restructure/6-restructBlock.ts(220,52): error TS2304: Cannot find name 'List'.
-lib/restructure/6-restructBlock.ts(220,65): error TS2304: Cannot find name 'ItemProps'.
-lib/restructure/6-restructBlock.ts(220,90): error TS2304: Cannot find name 'Fingerprints'.
-lib/restructure/6-restructBlock.ts(223,53): error TS2304: Cannot find name 'Declaration'.
-lib/restructure/6-restructBlock.ts(223,83): error TS2304: Cannot find name 'DeclarationItem'.
+lib/restructure/6-restructBlock.ts(220,52): error TS2304: Cannot find name 'Item'.
+lib/restructure/6-restructBlock.ts(220,67): error TS2304: Cannot find name 'Props'.
+lib/restructure/6-restructBlock.ts(220,88): error TS2304: Cannot find name 'Fingerprints'.
+lib/restructure/6-restructBlock.ts(274,14): error TS2339: Property 'remove' does not exist on type 'Item[]'.
 lib/restructure/6-restructBlock.ts(278,44): error TS2304: Cannot find name 'AST'.
 lib/restructure/6-restructBlock.ts(278,44): error TS4078: Parameter 'ast' of exported function has or is using private name 'AST'.
 lib/restructure/6-restructBlock.ts(287,34): error TS2339: Property 'pseudoSignature' does not exist on type 'Rule'.
@@ -290,44 +310,72 @@ lib/restructure/6-restructBlock.ts(293,42): error TS2339: Property 'id' does not
   Property 'id' does not exist on type 'Block'.
 lib/restructure/6-restructBlock.ts(295,52): error TS2339: Property 'id' does not exist on type 'Block | StyleSheet'.
   Property 'id' does not exist on type 'Block'.
-lib/restructure/7-mergeRuleset.ts(16,28): error TS2304: Cannot find name 'RuleNode'.
-lib/restructure/7-mergeRuleset.ts(16,44): error TS2304: Cannot find name 'RuleItem'.
-lib/restructure/7-mergeRuleset.ts(16,60): error TS2304: Cannot find name 'RuleList'.
+lib/restructure/7-mergeRuleset.ts(17,28): error TS2339: Property 'prelude' does not exist on type 'Node'.
+lib/restructure/7-mergeRuleset.ts(18,31): error TS2339: Property 'block' does not exist on type 'Node'.
+lib/restructure/7-mergeRuleset.ts(22,10): error TS2339: Property 'nextUntil' does not exist on type 'Node'.
+lib/restructure/7-mergeRuleset.ts(22,25): error TS2339: Property 'next' does not exist on type 'Node'.
+lib/restructure/7-mergeRuleset.ts(24,18): error TS2339: Property 'type' does not exist on type 'Function'.
+lib/restructure/7-mergeRuleset.ts(28,18): error TS2339: Property 'pseudoSignature' does not exist on type 'Node'.
+lib/restructure/7-mergeRuleset.ts(28,43): error TS2339: Property 'pseudoSignature' does not exist on type 'Function'.
+lib/restructure/7-mergeRuleset.ts(32,40): error TS2339: Property 'prelude' does not exist on type 'Function'.
+lib/restructure/7-mergeRuleset.ts(33,39): error TS2339: Property 'block' does not exist on type 'Function'.
+lib/restructure/7-mergeRuleset.ts(45,22): error TS2339: Property 'remove' does not exist on type 'Node'.
+lib/restructure/7-mergeRuleset.ts(68,18): error TS2339: Property 'remove' does not exist on type 'Node'.
 lib/restructure/7-mergeRuleset.ts(81,40): error TS2304: Cannot find name 'AST'.
 lib/restructure/7-mergeRuleset.ts(81,40): error TS4078: Parameter 'ast' of exported function has or is using private name 'AST'.
+lib/restructure/7-mergeRuleset.ts(84,9): error TS2322: Type '(node: Node, item: Node, list: Node) => void' is not assignable to type 'EnterOrLeaveFn<Rule>'.
+  Types of parameters 'node' and 'node' are incompatible.
+    Type 'Rule' is not assignable to type 'Node'.
 lib/restructure/8-restructRuleset.ts(10,50): error TS2339: Property 'id' does not exist on type 'string'.
-lib/restructure/8-restructRuleset.ts(13,41): error TS2304: Cannot find name 'IToken'.
-lib/restructure/8-restructRuleset.ts(26,28): error TS2304: Cannot find name 'RuleNode'.
-lib/restructure/8-restructRuleset.ts(26,44): error TS2304: Cannot find name 'IRuleItem'.
-lib/restructure/8-restructRuleset.ts(26,61): error TS2304: Cannot find name 'IRuleList'.
+lib/restructure/8-restructRuleset.ts(13,41): error TS2304: Cannot find name 'Token'.
+lib/restructure/8-restructRuleset.ts(28,28): error TS2339: Property 'prelude' does not exist on type 'Node'.
+lib/restructure/8-restructRuleset.ts(29,24): error TS2339: Property 'block' does not exist on type 'Node'.
+lib/restructure/8-restructRuleset.ts(34,10): error TS2339: Property 'prevUntil' does not exist on type 'Node'.
+lib/restructure/8-restructRuleset.ts(34,25): error TS2339: Property 'prev' does not exist on type 'Node'.
 lib/restructure/8-restructRuleset.ts(34,46): error TS2304: Cannot find name 'Block'.
 lib/restructure/8-restructRuleset.ts(34,63): error TS2304: Cannot find name 'BlockItem'.
 lib/restructure/8-restructRuleset.ts(45,38): error TS2339: Property 'children' does not exist on type 'Raw | SelectorList'.
   Property 'children' does not exist on type 'Raw'.
-lib/restructure/8-restructRuleset.ts(121,63): error TS2345: Argument of type 'string' is not assignable to parameter of type 'string[]'.
-lib/restructure/8-restructRuleset.ts(170,43): error TS2503: Cannot find namespace 'AST'.
+lib/restructure/8-restructRuleset.ts(55,18): error TS2339: Property 'pseudoSignature' does not exist on type 'Node'.
+lib/restructure/8-restructRuleset.ts(73,18): error TS2339: Property 'remove' does not exist on type 'Node'.
+lib/restructure/8-restructRuleset.ts(88,26): error TS2339: Property 'remove' does not exist on type 'Node'.
+lib/restructure/8-restructRuleset.ts(127,46): error TS2339: Property 'createItem' does not exist on type 'Node'.
+lib/restructure/8-restructRuleset.ts(136,51): error TS2339: Property 'pseudoSignature' does not exist on type 'Node'.
+lib/restructure/8-restructRuleset.ts(143,34): error TS2339: Property 'insert' does not exist on type 'Node'.
+lib/restructure/8-restructRuleset.ts(145,34): error TS2339: Property 'insert' does not exist on type 'Node'.
+lib/restructure/8-restructRuleset.ts(170,43): error TS2304: Cannot find name 'AST'.
 lib/restructure/8-restructRuleset.ts(170,43): error TS4078: Parameter 'ast' of exported function has or is using private name 'AST'.
+lib/restructure/8-restructRuleset.ts(174,9): error TS2322: Type '(node: Node, item: Node, list: Node) => void' is not assignable to type 'EnterOrLeaveFn<Rule>'.
+  Types of parameters 'node' and 'node' are incompatible.
+    Type 'Rule' is not assignable to type 'Node'.
 lib/restructure/index.ts(10,30): error TS2304: Cannot find name 'AST'.
 lib/restructure/index.ts(10,30): error TS4078: Parameter 'ast' of exported function has or is using private name 'AST'.
-lib/restructure/index.ts(10,44): error TS2304: Cannot find name 'RestructOptions'.
-lib/restructure/index.ts(10,44): error TS4078: Parameter 'options' of exported function has or is using private name 'RestructOptions'.
+lib/restructure/index.ts(10,44): error TS2304: Cannot find name 'Options'.
+lib/restructure/index.ts(10,44): error TS4078: Parameter 'options' of exported function has or is using private name 'Options'.
 lib/restructure/prepare/createDeclarationIndexer.ts(5,14): error TS2339: Property 'map' does not exist on type 'Index'.
 lib/restructure/prepare/createDeclarationIndexer.ts(8,26): error TS2339: Property 'map' does not exist on type 'Index'.
 lib/restructure/prepare/createDeclarationIndexer.ts(11,26): error TS2339: Property 'map' does not exist on type 'Index'.
 lib/restructure/prepare/createDeclarationIndexer.ts(12,18): error TS2339: Property 'map' does not exist on type 'Index'.
-lib/restructure/prepare/createDeclarationIndexer.ts(22,43): error TS2304: Cannot find name 'Declaration'.
-lib/restructure/prepare/index.ts(5,38): error TS2304: Cannot find name 'AST'.
-lib/restructure/prepare/index.ts(5,38): error TS4078: Parameter 'ast' of exported function has or is using private name 'AST'.
-lib/restructure/prepare/index.ts(5,52): error TS2304: Cannot find name 'Options'.
-lib/restructure/prepare/index.ts(5,52): error TS4078: Parameter 'options' of exported function has or is using private name 'Options'.
+lib/restructure/prepare/createDeclarationIndexer.ts(23,29): error TS2345: Argument of type 'Node' is not assignable to parameter of type 'CssNode'.
+lib/restructure/prepare/createDeclarationIndexer.ts(25,14): error TS2339: Property 'id' does not exist on type 'Node'.
+lib/restructure/prepare/createDeclarationIndexer.ts(26,14): error TS2339: Property 'length' does not exist on type 'Node'.
+lib/restructure/prepare/createDeclarationIndexer.ts(27,14): error TS2339: Property 'fingerprint' does not exist on type 'Node'.
+lib/restructure/prepare/index.ts(8,10): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'CssNode'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
+lib/restructure/prepare/index.ts(11,41): error TS2345: Argument of type '(node: Node) => Node' is not assignable to parameter of type 'IteratorFn<CssNode, void, List<CssNode>>'.
+  Types of parameters 'node' and 'item' are incompatible.
+    Type 'CssNode' is not assignable to type 'Node'.
 lib/restructure/prepare/index.ts(12,29): error TS2345: Argument of type 'Rule' is not assignable to parameter of type 'Node'.
   Type 'Rule' is missing the following properties from type 'Node': baseURI, childNodes, firstChild, isConnected, and 46 more.
+lib/restructure/prepare/index.ts(12,43): error TS2339: Property 'usage' does not exist on type 'Object'.
+lib/restructure/prepare/index.ts(16,10): error TS2345: Argument of type 'Object' is not assignable to parameter of type 'CssNode'.
+  The 'Object' type is assignable to very few other types. Did you mean to use the 'any' type instead?
 lib/restructure/prepare/index.ts(20,30): error TS2339: Property 'id' does not exist on type 'AtrulePrelude | Raw'.
   Property 'id' does not exist on type 'AtrulePrelude'.
 lib/restructure/prepare/index.ts(21,30): error TS2339: Property 'id' does not exist on type 'AtrulePrelude | Raw'.
   Property 'id' does not exist on type 'AtrulePrelude'.
 lib/restructure/prepare/index.ts(27,28): error TS2339: Property 'avoidRulesMerge' does not exist on type 'Block'.
-lib/restructure/prepare/index.ts(29,60): error TS2304: Cannot find name 'IRule'.
+lib/restructure/prepare/index.ts(29,60): error TS2304: Cannot find name 'Rule'.
 lib/restructure/prepare/index.ts(31,40): error TS2339: Property 'compareMarker' does not exist on type 'string'.
 lib/restructure/prepare/index.ts(31,71): error TS2339: Property 'id' does not exist on type 'string'.
 lib/restructure/prepare/processSelector.ts(21,64): error TS2304: Cannot find name 'UsageData'.
@@ -354,16 +402,17 @@ lib/restructure/prepare/specificity.ts(5,27): error TS2339: Property 'value' doe
 lib/restructure/prepare/specificity.ts(21,51): error TS2304: Cannot find name 'SelectorList'.
 lib/restructure/prepare/specificity.ts(22,45): error TS2339: Property 'children' does not exist on type 'Node | CssNode'.
   Property 'children' does not exist on type 'Node'.
-lib/restructure/prepare/specificity.ts(23,42): error TS2345: Argument of type 'number[]' is not assignable to parameter of type 'number'.
-lib/restructure/prepare/specificity.ts(36,20): error TS2339: Property 'children' does not exist on type 'string'.
+lib/restructure/prepare/specificity.ts(23,42): error TS2345: Argument of type 'number[]' is not assignable to parameter of type 'string'.
+lib/restructure/prepare/specificity.ts(30,38): error TS2304: Cannot find name 'SimpleSelector'.
+lib/restructure/prepare/specificity.ts(30,38): error TS4078: Parameter 'simpleSelector' of exported function has or is using private name 'SimpleSelector'.
 lib/restructure/utils.ts(3,37): error TS2304: Cannot find name 'Selector'.
 lib/restructure/utils.ts(3,37): error TS4078: Parameter 'a' of exported function has or is using private name 'Selector'.
 lib/restructure/utils.ts(3,50): error TS2304: Cannot find name 'Selector'.
 lib/restructure/utils.ts(3,50): error TS4078: Parameter 'b' of exported function has or is using private name 'Selector'.
-lib/restructure/utils.ts(15,40): error TS2304: Cannot find name 'Declaration'.
-lib/restructure/utils.ts(15,40): error TS4078: Parameter 'a' of exported function has or is using private name 'Declaration'.
-lib/restructure/utils.ts(15,56): error TS2304: Cannot find name 'Declaration'.
-lib/restructure/utils.ts(15,56): error TS4078: Parameter 'b' of exported function has or is using private name 'Declaration'.
+lib/restructure/utils.ts(15,40): error TS2503: Cannot find namespace 't'.
+lib/restructure/utils.ts(15,40): error TS4078: Parameter 'a' of exported function has or is using private name 't'.
+lib/restructure/utils.ts(15,59): error TS2503: Cannot find namespace 't'.
+lib/restructure/utils.ts(15,59): error TS4078: Parameter 'b' of exported function has or is using private name 't'.
 lib/restructure/utils.ts(27,52): error TS2304: Cannot find name 'Declaration'.
 lib/restructure/utils.ts(27,52): error TS4078: Parameter 'declarations1' of exported function has or is using private name 'Declaration'.
 lib/restructure/utils.ts(27,82): error TS2304: Cannot find name 'Declaration'.
@@ -371,16 +420,8 @@ lib/restructure/utils.ts(27,82): error TS4078: Parameter 'declarations2' of expo
 lib/restructure/utils.ts(38,37): error TS2339: Property 'head' does not exist on type 'Declaration[]'.
 lib/restructure/utils.ts(42,37): error TS2339: Property 'head' does not exist on type 'Declaration[]'.
 lib/restructure/utils.ts(57,37): error TS2339: Property 'head' does not exist on type 'Declaration[]'.
-lib/restructure/utils.ts(76,12): error TS2339: Property 'forEach' does not exist on type 'string'.
-lib/restructure/utils.ts(78,27): error TS2339: Property 'head' does not exist on type 'string'.
-lib/restructure/utils.ts(94,14): error TS2339: Property 'insert' does not exist on type 'string'.
-lib/restructure/utils.ts(94,26): error TS2339: Property 'createItem' does not exist on type 'string'.
-lib/restructure/utils.ts(101,49): error TS2304: Cannot find name 'Selector'.
-lib/restructure/utils.ts(101,49): error TS4078: Parameter 'selectors1' of exported function has or is using private name 'Selector'.
-lib/restructure/utils.ts(101,73): error TS2304: Cannot find name 'Selector'.
-lib/restructure/utils.ts(101,73): error TS4078: Parameter 'selectors2' of exported function has or is using private name 'Selector'.
-lib/restructure/utils.ts(102,30): error TS2339: Property 'head' does not exist on type 'Selector[]'.
-lib/restructure/utils.ts(105,34): error TS2339: Property 'head' does not exist on type 'Selector[]'.
+lib/restructure/utils.ts(102,30): error TS2339: Property 'head' does not exist on type 'string[]'.
+lib/restructure/utils.ts(105,34): error TS2339: Property 'head' does not exist on type 'string[]'.
 lib/restructure/utils.ts(123,18): error TS2339: Property 'type' does not exist on type 'Node'.
 lib/restructure/utils.ts(126,45): error TS2339: Property 'prelude' does not exist on type 'Node'.
 lib/restructure/utils.ts(130,22): error TS2339: Property 'block' does not exist on type 'Node'.

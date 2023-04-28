@@ -6,7 +6,7 @@ export default function (worker: Worker, concurrency: number): {
     };
     [Symbol.iterator](): Generator<any, void, unknown>;
     concurrency: number;
-    payload: any;
+    payload: any[];
     buffer: number;
     started: boolean;
     paused: boolean;

@@ -1,20 +1,13 @@
-index.ts(3,34): error TS2304: Cannot find name 'Schema'.
-index.ts(3,48): error TS2304: Cannot find name 'SchemaOptions'.
 index.ts(14,3): error TS2554: Expected 10 arguments, but got 6.
-index.ts(21,10): error TS2339: Property 'keywords' does not exist on type '(schema: Schema, opts: SchemaOptions, cb: any) => void'.
-index.ts(33,10): error TS2339: Property 'arrayKeywords' does not exist on type '(schema: Schema, opts: SchemaOptions, cb: any) => void'.
-index.ts(40,10): error TS2339: Property 'propsKeywords' does not exist on type '(schema: Schema, opts: SchemaOptions, cb: any) => void'.
-index.ts(48,10): error TS2339: Property 'skipKeywords' does not exist on type '(schema: Schema, opts: SchemaOptions, cb: any) => void'.
-index.ts(70,26): error TS2304: Cannot find name 'SchemaTraverseOptions'.
-index.ts(70,54): error TS2304: Cannot find name 'SchemaTraverseOptions'.
-index.ts(70,83): error TS2304: Cannot find name 'SchemaTraverseOptions'.
-index.ts(70,114): error TS2304: Cannot find name 'Schema'.
-index.ts(70,151): error TS2304: Cannot find name 'Schema'.
-index.ts(70,219): error TS2304: Cannot find name 'Schema'.
-index.ts(76,29): error TS2339: Property 'arrayKeywords' does not exist on type '(schema: Schema, opts: SchemaOptions, cb: any) => void'.
-index.ts(80,34): error TS2339: Property 'propsKeywords' does not exist on type '(schema: Schema, opts: SchemaOptions, cb: any) => void'.
+index.ts(21,10): error TS2339: Property 'keywords' does not exist on type '(schema: any, opts: any, cb: any) => void'.
+index.ts(33,10): error TS2339: Property 'arrayKeywords' does not exist on type '(schema: any, opts: any, cb: any) => void'.
+index.ts(40,10): error TS2339: Property 'propsKeywords' does not exist on type '(schema: any, opts: any, cb: any) => void'.
+index.ts(48,10): error TS2339: Property 'skipKeywords' does not exist on type '(schema: any, opts: any, cb: any) => void'.
+index.ts(70,26): error TS2304: Cannot find name 'TraverseOpts'.
+index.ts(76,29): error TS2339: Property 'arrayKeywords' does not exist on type '(schema: any, opts: any, cb: any) => void'.
+index.ts(80,34): error TS2339: Property 'propsKeywords' does not exist on type '(schema: any, opts: any, cb: any) => void'.
 index.ts(83,134): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
-index.ts(85,34): error TS2339: Property 'keywords' does not exist on type '(schema: Schema, opts: SchemaOptions, cb: any) => void'.
-index.ts(85,81): error TS2339: Property 'skipKeywords' does not exist on type '(schema: Schema, opts: SchemaOptions, cb: any) => void'.
+index.ts(85,34): error TS2339: Property 'keywords' does not exist on type '(schema: any, opts: any, cb: any) => void'.
+index.ts(85,81): error TS2339: Property 'skipKeywords' does not exist on type '(schema: any, opts: any, cb: any) => void'.
 index.ts(86,9): error TS2554: Expected 10 arguments, but got 9.
 

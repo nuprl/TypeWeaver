@@ -4,12 +4,12 @@ declare const _default: {
     NFA: typeof NFA;
     DFA: typeof DFA;
     builders: {
-        alt: (first: T, ...fragments: T[]) => T;
+        alt: (first: any, ...fragments: any[]) => any;
         char: (c: string) => NFA;
         e: () => NFA;
-        or: (first: any, ...fragments: any[]) => any;
+        or: (first: Function, ...fragments: Function[]) => Function;
         rep: (fragment: string) => string;
-        repExplicit: (fragment: string) => NFA;
+        repExplicit: (fragment: Fragment) => NFA;
         plusRep: (fragment: string) => string;
         questionRep: (fragment: string) => string;
     };

@@ -3,4 +3,4 @@ export default function isInteractive({ stream }: {
     stream?: NodeJS.WriteStream & {
         fd: 1;
     };
-}, any: any): boolean;
+}, Options: any): boolean;

@@ -31,5 +31,5 @@ export default class Attribute extends Namespace {
     offsetOf(name: any): number;
     toString(): string;
 }
-declare function defaultAttrConcat(attrValue: string, attrSpaces: number): string;
+declare function defaultAttrConcat(attrValue: string, attrSpaces: string): string;
 export {};

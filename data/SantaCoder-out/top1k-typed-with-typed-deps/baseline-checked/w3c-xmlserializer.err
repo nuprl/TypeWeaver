@@ -5,10 +5,25 @@ lib/attributes.ts(100,11): error TS2554: Expected 1 arguments, but got 2.
 lib/attributes.ts(117,73): error TS2554: Expected 1 arguments, but got 2.
 lib/serialize.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'xnv'.
 lib/serialize.ts(6,9): error TS2451: Cannot redeclare block-scoped variable 'NAMESPACES'.
-lib/serialize.ts(25,46): error TS2552: Cannot find name 'IElement'. Did you mean 'Element'?
-lib/serialize.ts(25,46): error TS4078: Parameter 'element' of exported function has or is using private name 'IElement'.
-lib/serialize.ts(151,48): error TS2339: Property 'data' does not exist on type 'Node'.
-lib/serialize.ts(155,15): error TS2339: Property 'data' does not exist on type 'Node'.
+lib/serialize.ts(25,60): error TS2304: Cannot find name 'NamespaceMap'.
+lib/serialize.ts(25,60): error TS4078: Parameter 'map' of exported function has or is using private name 'NamespaceMap'.
+lib/serialize.ts(25,85): error TS2304: Cannot find name 'PrefixMap'.
+lib/serialize.ts(25,85): error TS4078: Parameter 'prefixMap' of exported function has or is using private name 'PrefixMap'.
+lib/serialize.ts(150,66): error TS2304: Cannot find name 'PrefixMap'.
+lib/serialize.ts(150,66): error TS4078: Parameter 'prefixMap' of exported function has or is using private name 'PrefixMap'.
+lib/serialize.ts(161,69): error TS2304: Cannot find name 'PrefixMap'.
+lib/serialize.ts(161,69): error TS4078: Parameter 'prefixMap' of exported function has or is using private name 'PrefixMap'.
+lib/serialize.ts(162,48): error TS2339: Property 'data' does not exist on type 'Node'.
+lib/serialize.ts(168,11): error TS2339: Property 'data' does not exist on type 'Node'.
+lib/serialize.ts(168,39): error TS2339: Property 'data' does not exist on type 'Node'.
+lib/serialize.ts(172,22): error TS2339: Property 'data' does not exist on type 'Node'.
 lib/serialize.ts(278,12): error TS2339: Property 'content' does not exist on type 'Element'.
 lib/serialize.ts(285,25): error TS2488: Type 'NodeListOf<ChildNode>' must have a '[Symbol.iterator]()' method that returns an iterator.
+lib/serialize.ts(310,9): error TS2345: Argument of type 'Node' is not assignable to parameter of type 'Element'.
+  Type 'Node' is missing the following properties from type 'Element': attributes, classList, className, clientHeight, and 114 more.
+lib/serialize.ts(327,28): error TS2345: Argument of type 'Node' is not assignable to parameter of type 'Text'.
+  Type 'Node' is missing the following properties from type 'Text': wholeText, splitText, data, length, and 12 more.
+lib/serialize.ts(338,9): error TS2345: Argument of type 'Node' is not assignable to parameter of type 'DocumentType'.
+  Type 'Node' is missing the following properties from type 'DocumentType': name, publicId, systemId, after, and 3 more.
+lib/serialize.ts(353,36): error TS2345: Argument of type 'Node' is not assignable to parameter of type 'CDATASection'.
 

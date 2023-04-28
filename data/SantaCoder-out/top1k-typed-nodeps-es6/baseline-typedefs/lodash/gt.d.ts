@@ -1,2 +1,2 @@
-declare function gt(value: number, other: number): boolean;
+declare function gt(value: any, other: any): boolean;
 export default gt;

@@ -1,5 +1,4 @@
-import Hook from './Hook';
-declare function AsyncSeriesHook(args: any[], any: any, name: any, string: any): Hook;
+declare function AsyncSeriesHook(args: any[], Array: any, : any, any: any): any;
 declare namespace AsyncSeriesHook {
     var prototype: any;
 }

@@ -1,1 +1,1 @@
-export default function (input: any, copy: any): void;
+export default function (input: string, copy: boolean): void;

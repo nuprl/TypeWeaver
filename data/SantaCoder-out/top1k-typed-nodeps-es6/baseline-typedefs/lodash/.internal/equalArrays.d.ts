@@ -1,2 +1,2 @@
-declare function equalArrays(array: any[], other: any[], bitmask: number, customizer: any, equalFunc: any, stack: any): boolean;
+declare function equalArrays(array: any[], other: any[], bitmask: boolean, customizer: Function, equalFunc: Function, stack: any): boolean;
 export default equalArrays;

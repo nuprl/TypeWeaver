@@ -1,9 +1,11 @@
+array-iterator.ts(6,43): error TS2304: Cannot find name 'T'.
+array-iterator.ts(6,43): error TS4078: Parameter 'iterable' of exported function has or is using private name 'T'.
 array-iterator.ts(19,22): error TS2554: Expected 3 arguments, but got 2.
-pop-iterate.ts(7,37): error TS2304: Cannot find name 'T'.
-pop-iterate.ts(7,37): error TS4078: Parameter 'iterable' of exported function has or is using private name 'T'.
+iteration.ts(4,27): error TS2304: Cannot find name 'T'.
+iteration.ts(4,27): error TS4078: Parameter 'value' of exported function has or is using private name 'T'.
 pop-iterate.ts(9,16): error TS2304: Cannot find name 'empty'.
-pop-iterate.ts(12,32): error TS2339: Property 'next' does not exist on type 'Iterable<T>'.
-pop-iterate.ts(14,32): error TS2339: Property 'iterate' does not exist on type 'Iterable<T>'.
-pop-iterate.ts(15,25): error TS2339: Property 'iterate' does not exist on type 'Iterable<T>'.
+pop-iterate.ts(12,32): error TS2339: Property 'next' does not exist on type 'Iterable<any>'.
+pop-iterate.ts(14,32): error TS2339: Property 'iterate' does not exist on type 'Iterable<any>'.
+pop-iterate.ts(15,25): error TS2339: Property 'iterate' does not exist on type 'Iterable<any>'.
 pop-iterate.ts(17,16): error TS2554: Expected 4 arguments, but got 1.
 

@@ -1,2 +1,2 @@
-declare function unionBy(...arrays: Array<Array<any>>): any[];
+declare function unionBy(...arrays: any[]): any[];
 export default unionBy;

@@ -1,2 +1,2 @@
-declare function lt(value: number, other: number): boolean;
+declare function lt(value: any, other: any): boolean;
 export default lt;

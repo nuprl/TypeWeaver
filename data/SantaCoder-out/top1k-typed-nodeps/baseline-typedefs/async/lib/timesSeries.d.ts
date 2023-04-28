@@ -1,1 +1,1 @@
-export default function timesSeries(n: number, iteratee: any, callback: any): any;
+export default function timesSeries(n: number, iteratee: Function, callback: Function): any;

@@ -1,8 +1,8 @@
 declare const _default: {
     input: string;
     output: {
-        format: any;
-        sourcemap: boolean;
+        format: string;
+        sourcemap: any;
         file: string;
         name: string;
         globals: {

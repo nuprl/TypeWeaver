@@ -1,1 +1,1 @@
-export default function repeat(val: number, num: number): string;
+export default function repeat(val: any, num: number): string;

@@ -1,67 +1,23 @@
-.internal/asciiSize.ts(8,32): error TS4078: Parameter '{ length }' of exported function has or is using private name 'AsciiSizeArgs'.
-.internal/baseEach.ts(12,31): error TS4078: Parameter 'collection' of exported function has or is using private name 'Collection'.
-.internal/baseEach.ts(12,42): error TS4078: Parameter 'collection' of exported function has or is using private name 'T'.
-.internal/baseForOwn.ts(12,29): error TS4078: Parameter 'object' of exported function has or is using private name 'T'.
-.internal/baseForRight.ts(11,31): error TS4078: Parameter 'object' of exported function has or is using private name 'T'.
-.internal/baseIsMatch.ts(18,59): error TS4078: Parameter 'matchData' of exported function has or is using private name 'MatchData'.
-.internal/baseMatchesProperty.ts(21,36): error TS4078: Parameter 'path' of exported function has or is using private name 'Path'.
-.internal/baseOrderBy.ts(18,34): error TS4078: Parameter 'collection' of exported function has or is using private name 'ICollection'.
-.internal/baseOrderBy.ts(18,63): error TS4078: Parameter 'iteratees' of exported function has or is using private name 'IIteratee'.
-.internal/baseOrderBy.ts(18,87): error TS4078: Parameter 'orders' of exported function has or is using private name 'IOrder'.
-.internal/baseSortedIndexBy.ts(20,35): error TS4078: Parameter 'array' of exported function has or is using private name 'T'.
-.internal/baseSortedIndexBy.ts(20,47): error TS4078: Parameter 'value' of exported function has or is using private name 'T'.
-.internal/baseSortedUniq.ts(11,32): error TS4078: Parameter 'array' of exported function has or is using private name 'T'.
-.internal/baseUniq.ts(20,32): error TS4078: Parameter 'array' of exported function has or is using private name 'T'.
+.internal/baseEachRight.ts(12,36): error TS4078: Parameter 'collection' of exported function has or is using private name 'List'.
+.internal/baseIndexOfWith.ts(11,83): error TS4078: Parameter 'comparator' of exported function has or is using private name 'Comparator'.
+.internal/baseIndexOfWith.ts(11,94): error TS4078: Parameter 'comparator' of exported function has or is using private name 'T'.
 .internal/cloneTypedArray.ts(11,38): error TS4078: Parameter 'typedArray' of exported function has or is using private name 'TypedArray'.
-.internal/equalByTag.ts(44,126): error TS4078: Parameter 'stack' of exported function has or is using private name 'Stack'.
-.internal/iteratorToArray.ts(8,45): error TS4078: Parameter 'iterator' of exported function has or is using private name 'T'.
-.internal/setToArray.ts(8,30): error TS4078: Parameter 'set' of exported function has or is using private name 'T'.
-.internal/strictLastIndexOf.ts(11,35): error TS4078: Parameter 'array' of exported function has or is using private name 'T'.
-.internal/strictLastIndexOf.ts(11,47): error TS4078: Parameter 'value' of exported function has or is using private name 'T'.
+.internal/createAssigner.ts(10,35): error TS4078: Parameter 'assigner' of exported function has or is using private name 'Assigner'.
+.internal/equalArrays.ts(22,93): error TS4078: Parameter 'customizer' of exported function has or is using private name 'T'.
+.internal/equalArrays.ts(22,121): error TS4078: Parameter 'equalFunc' of exported function has or is using private name 'T'.
+.internal/equalByTag.ts(44,101): error TS4078: Parameter 'customizer' of exported function has or is using private name 'T'.
+.internal/equalByTag.ts(44,129): error TS4078: Parameter 'equalFunc' of exported function has or is using private name 'T'.
 chunk.ts(22,38): error TS1005: ',' expected.
-cloneWith.ts(35,27): error TS4078: Parameter 'value' of exported function has or is using private name 'T'.
-countBy.ts(29,30): error TS4078: Parameter 'collection' of exported function has or is using private name 'Collection'.
-debounce.ts(65,58): error TS4078: Parameter 'options' of exported function has or is using private name 'DebounceOptions'.
-differenceBy.ts(26,36): error TS4078: Parameter 'array' of exported function has or is using private name 'T'.
-differenceBy.ts(26,57): error TS4078: Parameter 'values' of exported function has or is using private name 'T'.
-differenceWith.ts(27,32): error TS4078: Parameter 'array' of exported function has or is using private name 'T'.
-differenceWith.ts(27,48): error TS4078: Parameter 'values' of exported function has or is using private name 'T'.
+cond.ts(30,28): error TS4078: Parameter 'pairs' of exported function has or is using private name 'Pair'.
 drop.ts(26,32): error TS1005: ',' expected.
-dropRight.ts(26,42): error TS1005: ',' expected.
-filter.ts(24,30): error TS4078: Parameter 'array' of exported function has or is using private name 'T'.
-findLast.ts(20,31): error TS4078: Parameter 'collection' of exported function has or is using private name 'ICollection'.
-findLast.ts(20,43): error TS4078: Parameter 'collection' of exported function has or is using private name 'T'.
-findLastIndex.ts(26,31): error TS4078: Parameter 'array' of exported function has or is using private name 'T'.
-findLastKey.ts(26,30): error TS4078: Parameter 'object' of exported function has or is using private name 'IObject'.
-flatMapDeep.ts(26,34): error TS4078: Parameter 'collection' of exported function has or is using private name 'Collection'.
-forEach.ts(28,30): error TS4078: Parameter 'collection' of exported function has or is using private name 'Collection'.
-forEach.ts(28,41): error TS4078: Parameter 'collection' of exported function has or is using private name 'T'.
-groupBy.ts(24,30): error TS4078: Parameter 'collection' of exported function has or is using private name 'Collection'.
-intersectionBy.ts(23,48): error TS4078: Parameter 'arrays' of exported function has or is using private name 'T'.
-intersectionWith.ts(25,50): error TS4078: Parameter 'arrays' of exported function has or is using private name 'T'.
-isEqualWith.ts(33,29): error TS4078: Parameter 'value' of exported function has or is using private name 'T'.
-isEqualWith.ts(33,39): error TS4078: Parameter 'other' of exported function has or is using private name 'T'.
-lastIndexOf.ts(25,29): error TS4078: Parameter 'array' of exported function has or is using private name 'T'.
-lastIndexOf.ts(25,41): error TS4078: Parameter 'value' of exported function has or is using private name 'T'.
-over.ts(19,35): error TS4078: Parameter 'iteratees' of exported function has or is using private name 'T'.
-overEvery.ts(25,40): error TS4078: Parameter 'iteratees' of exported function has or is using private name 'T'.
-overSome.ts(25,39): error TS4078: Parameter 'iteratees' of exported function has or is using private name 'T'.
-reject.ts(25,29): error TS4078: Parameter 'collection' of exported function has or is using private name 'Collection'.
-reject.ts(25,40): error TS4078: Parameter 'collection' of exported function has or is using private name 'T'.
-remove.ts(28,30): error TS4078: Parameter 'array' of exported function has or is using private name 'T'.
-sortedLastIndex.ts(19,39): error TS4078: Parameter 'array' of exported function has or is using private name 'T'.
-sortedLastIndex.ts(19,50): error TS4078: Parameter 'value' of exported function has or is using private name 'T'.
-sortedLastIndexOf.ts(18,35): error TS4078: Parameter 'array' of exported function has or is using private name 'T'.
-sortedLastIndexOf.ts(18,47): error TS4078: Parameter 'value' of exported function has or is using private name 'T'.
-take.ts(25,37): error TS1005: ',' expected.
-takeRight.ts(25,33): error TS4078: Parameter 'array' of exported function has or is using private name 'T'.
-takeRight.ts(25,40): error TS1005: ',' expected.
-takeWhile.ts(24,27): error TS4078: Parameter 'array' of exported function has or is using private name 'T'.
-throttle.ts(52,58): error TS4078: Parameter 'options' of exported function has or is using private name 'ThrottleOptions'.
+dropRight.ts(26,37): error TS1005: ',' expected.
+negate.ts(19,28): error TS4078: Parameter 'predicate' of exported function has or is using private name 'Predicate'.
+negate.ts(19,38): error TS4078: Parameter 'predicate' of exported function has or is using private name 'T'.
+sample.ts(13,30): error TS4078: Parameter 'array' of exported function has or is using private name 'T'.
+shuffle.ts(16,25): error TS4078: Parameter 'array' of exported function has or is using private name 'T'.
+take.ts(25,32): error TS1005: ',' expected.
+takeRight.ts(25,37): error TS1005: ',' expected.
 truncate.ts(53,44): error TS4078: Parameter 'options' of exported function has or is using private name 'TruncateOptions'.
-unionWith.ts(26,43): error TS4078: Parameter 'arrays' of exported function has or is using private name 'T'.
-uniqBy.ts(21,30): error TS4078: Parameter 'array' of exported function has or is using private name 'T'.
-uniqWith.ts(22,26): error TS4078: Parameter 'array' of exported function has or is using private name 'T'.
+union.ts(20,27): error TS4078: Parameter 'arrays' of exported function has or is using private name 'T'.
 uniqueId.ts(20,36): error TS1005: ',' expected.
-xorWith.ts(25,41): error TS4078: Parameter 'arrays' of exported function has or is using private name 'T'.
 

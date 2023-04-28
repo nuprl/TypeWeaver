@@ -35,7 +35,7 @@ declare function extractTemplateExtensions(body: string): string[];
 declare function getTemplateBody(res: any): Generator<any, any, unknown>;
 declare function addSource(data: string, url: string): void;
 declare function appendToLine(line: string, str: string): string;
-declare function concat(a: Array<any>, b: Array<any>): any[];
+declare function concat(a: any[], b: any[]): any[];
 declare function generateRowMapper(headers: string[]): (obj: any, val: any, index: number) => any;
 declare function getRfcReferences(reference: string): any[];
 declare function getUrlReferences(reference: string): any[];

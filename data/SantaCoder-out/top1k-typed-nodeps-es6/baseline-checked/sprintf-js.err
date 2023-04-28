@@ -24,13 +24,11 @@ gulpfile.ts(11,23): error TS2307: Cannot find module 'gulp-benchmark' or its cor
 src/angular-sprintf.ts(3,2): error TS1345: An expression of type 'void' cannot be tested for truthiness.
 src/angular-sprintf.ts(6,5): error TS2304: Cannot find name 'angular'.
 src/angular-sprintf.ts(10,24): error TS2304: Cannot find name 'sprintf'.
-src/angular-sprintf.ts(13,53): error TS2304: Cannot find name 'IFilterService'.
+src/angular-sprintf.ts(13,53): error TS2304: Cannot find name 'sprintf'.
 src/angular-sprintf.ts(18,24): error TS2304: Cannot find name 'vsprintf'.
-src/angular-sprintf.ts(21,54): error TS2503: Cannot find namespace 'angular'.
 src/sprintf.ts(3,2): error TS1345: An expression of type 'void' cannot be tested for truthiness.
-src/sprintf.ts(26,51): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type 'string[]'.
-  Type 'IArguments' is missing the following properties from type 'string[]': pop, push, concat, join, and 27 more.
-src/sprintf.ts(33,41): error TS2552: Cannot find name 'ParseTreeNode'. Did you mean 'ParentNode'?
+src/sprintf.ts(26,51): error TS2345: Argument of type 'IArguments' is not assignable to parameter of type 'any[]'.
+  Type 'IArguments' is missing the following properties from type 'any[]': pop, push, concat, join, and 27 more.
 src/sprintf.ts(45,118): error TS2554: Expected 1 arguments, but got 3.
 src/sprintf.ts(62,92): error TS2554: Expected 1 arguments, but got 2.
 src/sprintf.ts(221,20): error TS2304: Cannot find name 'define'.

@@ -1,2 +1,2 @@
-declare function compact(array: number[]): any[];
+declare function compact(array: any[]): any[];
 export default compact;

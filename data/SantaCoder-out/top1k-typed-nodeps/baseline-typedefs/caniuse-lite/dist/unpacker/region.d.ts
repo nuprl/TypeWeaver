@@ -1,2 +1,2 @@
 declare const browsers: any;
-declare function unpackRegion(packed: number): {};
+declare function unpackRegion(packed: string): {};

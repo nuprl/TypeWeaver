@@ -2,12 +2,12 @@ index.ts(12,22): error TS2345: Argument of type 'string | 0' is not assignable t
   Type 'number' is not assignable to type 'string'.
 index.ts(13,22): error TS2345: Argument of type 'string | 0' is not assignable to parameter of type 'string'.
   Type 'number' is not assignable to type 'string'.
-index.ts(29,25): error TS2339: Property 'split' does not exist on type 'Range'.
-index.ts(34,26): error TS2345: Argument of type 'Range' is not assignable to parameter of type 'string'.
+index.ts(29,25): error TS2339: Property 'split' does not exist on type 'number[]'.
+index.ts(34,26): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 index.ts(55,23): error TS18047: 'specifierValue' is possibly 'null'.
-index.ts(56,21): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Range'.
+index.ts(56,21): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 index.ts(56,30): error TS18047: 'specifierValue' is possibly 'null'.
-index.ts(62,22): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Range'.
+index.ts(62,22): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 index.ts(65,18): error TS2732: Cannot find module './core.json'. Consider using '--resolveJsonModule' to import module with '.json' extension.
 index.ts(68,54): error TS2345: Argument of type 'unknown' is not assignable to parameter of type 'string'.
 

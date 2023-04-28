@@ -11,4 +11,4 @@ declare var styles: {};
 declare var proto: () => void;
 declare function applyStyle(): any;
 declare function init(): {};
-declare var sequencer: (map: any, str: string) => string;
+declare var sequencer: (map: Function, str: string) => string;

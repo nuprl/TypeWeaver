@@ -1,2 +1,2 @@
-declare function arrayIncludes(array: any[], value: any): boolean;
+declare function arrayIncludes(array: Array<any>, value: any): boolean;
 export default arrayIncludes;

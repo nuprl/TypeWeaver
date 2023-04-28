@@ -1,2 +1,2 @@
-declare function gte(value: number, other: number): boolean;
+declare function gte(value: any, other: any): boolean;
 export default gte;

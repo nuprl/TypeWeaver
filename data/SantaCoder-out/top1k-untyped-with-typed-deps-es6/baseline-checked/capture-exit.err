@@ -1,8 +1,8 @@
 example.ts(4,8): error TS2613: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/SantaCoder-out/top1k-untyped-with-typed-deps-es6/baseline/capture-exit/index"' has no default export. Did you mean to use 'import { exit } from "/work/arjunguha-research-group/mhyee/not-type-inference/data/SantaCoder-out/top1k-untyped-with-typed-deps-es6/baseline/capture-exit/index"' instead?
 index.ts(3,5): error TS2300: Duplicate identifier 'exit'.
+index.ts(11,41): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
 index.ts(63,3): error TS2322: Type '(code: number) => any' is not assignable to type '(code?: number) => never'.
   Type 'any' is not assignable to type 'never'.
-index.ts(119,34): error TS2304: Cannot find name 'IResult'.
 index.ts(148,14): error TS2300: Duplicate identifier 'exit'.
 process-exit-during-final-exit-subprocess.ts(4,8): error TS2613: Module '"/work/arjunguha-research-group/mhyee/not-type-inference/data/SantaCoder-out/top1k-untyped-with-typed-deps-es6/baseline/capture-exit/index"' has no default export. Did you mean to use 'import { captureExit } from "/work/arjunguha-research-group/mhyee/not-type-inference/data/SantaCoder-out/top1k-untyped-with-typed-deps-es6/baseline/capture-exit/index"' instead?
 

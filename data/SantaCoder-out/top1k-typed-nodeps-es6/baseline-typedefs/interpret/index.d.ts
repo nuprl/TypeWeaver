@@ -2,19 +2,19 @@ declare const _default: {
     extensions: {
         '.babel.js': {
             module: string;
-            register: (hook: IHook, config: IConfig) => void;
+            register: (hook: Hook, config: any) => void;
         };
         '.babel.jsx': {
             module: string;
-            register: (hook: Hook, config: Config) => void;
+            register: (hook: HookContext, config: any) => void;
         };
         '.babel.ts': {
             module: string;
-            register: (hook: Hook<any>, config: IConfig) => void;
+            register: (hook: Hook, config: any) => void;
         }[];
         '.babel.tsx': {
             module: string;
-            register: (hook: Hook, config: IConfig) => void;
+            register: (hook: HookContext, config: any) => void;
         };
         '.cjs': string;
         '.coffee': string;
@@ -25,7 +25,7 @@ declare const _default: {
         };
         '.esbuild.jsx': {
             module: string;
-            register: (mod: IModule, config: IConfig) => void;
+            register: (mod: any, config: any) => void;
         };
         '.esbuild.ts': {
             module: string;
@@ -33,7 +33,7 @@ declare const _default: {
         };
         '.esbuild.tsx': {
             module: string;
-            register: (mod: IModule, config: IConfiguration) => void;
+            register: (mod: any, config: any) => void;
         };
         '.esm.js': {
             module: string;
@@ -44,7 +44,7 @@ declare const _default: {
         '.json5': string;
         '.jsx': (string | {
             module: string;
-            register: (hook: IHook, config: IConfig) => void;
+            register: (hook: Hook, config: any) => void;
         })[];
         '.litcoffee': string;
         '.mdx': string;
@@ -52,35 +52,35 @@ declare const _default: {
         '.node': any;
         '.sucrase.js': {
             module: string;
-            register: (hook: IHook, config: IConfig) => void;
+            register: (hook: Hook, config: any) => void;
         };
         '.sucrase.jsx': {
             module: string;
-            register: (hook: Hook, config: Config) => void;
+            register: (hook: HookContext, config: any) => void;
         };
         '.sucrase.ts': {
             module: string;
-            register: (hook: Hook, config: IConfig) => void;
+            register: (hook: Hook, config: any) => void;
         };
         '.sucrase.tsx': {
             module: string;
-            register: (hook: IHook, config: IConfig) => void;
+            register: (hook: HookContext, config: any) => void;
         };
         '.swc.js': {
             module: string;
-            register: (hook: IHook, config: IConfig) => void;
+            register: (hook: Hook, config: any) => void;
         };
         '.swc.jsx': {
             module: string;
-            register: (hook: Hook, config: Config) => void;
+            register: (hook: HookContext, config: any) => void;
         };
         '.swc.ts': {
             module: string;
-            register: (hook: IHook, config: IConfig) => void;
+            register: (hook: HookContext, config: any) => void;
         };
         '.swc.tsx': {
             module: string;
-            register: (hook: IHook, config: IConfig) => void;
+            register: (hook: Hook, config: any) => void;
         };
         '.toml': {
             module: string;
@@ -88,16 +88,16 @@ declare const _default: {
         };
         '.ts': (string | {
             module: string;
-            register: (hook: IHook, config: IConfig) => void;
+            register: (hook: Hook, config: any) => void;
         })[];
         '.cts': string[];
         '.tsx': (string | {
             module: string;
-            register: (hook: Hook, config: Config) => void;
+            register: (hook: Hook, config: any) => void;
         })[];
         '.yaml': string;
         '.yml': string;
     };
-    jsVariants: IExtensionResult;
+    jsVariants: any;
 };
 export default _default;

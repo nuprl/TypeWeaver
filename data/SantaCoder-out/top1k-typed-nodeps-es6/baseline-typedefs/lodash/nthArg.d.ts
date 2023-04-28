@@ -1,2 +1,2 @@
-declare function nthArg(n: number): (...args: any[]) => number;
+declare function nthArg(n: number): (...args: any[]) => any;
 export default nthArg;

@@ -1,92 +1,77 @@
-karma.conf.ts(1,35): error TS2503: Cannot find namespace 'karma'.
 src/binding.ts(4,5): error TS2451: Cannot redeclare block-scoped variable 'assert'.
 src/binding.ts(31,10): error TS2393: Duplicate function implementation.
-src/binding.ts(301,116): error TS2304: Cannot find name 'Dictionary'.
-src/binding.ts(328,117): error TS2304: Cannot find name 'Dictionary'.
+src/binding.ts(81,42): error TS2304: Cannot find name 'Async'.
+src/binding.ts(81,56): error TS2304: Cannot find name 'Flush'.
 src/index.ts(3,7): error TS2451: Cannot redeclare block-scoped variable 'Buffer'.
 src/index.ts(7,7): error TS2451: Cannot redeclare block-scoped variable 'assert'.
+src/index.ts(75,37): error TS2552: Cannot find name 'DeflateOptions'. Did you mean 'DelayOptions'?
 src/index.ts(76,10): error TS2350: Only a void function can be called with the 'new' keyword.
 src/index.ts(80,10): error TS2350: Only a void function can be called with the 'new' keyword.
+src/index.ts(83,40): error TS2304: Cannot find name 'Options'.
 src/index.ts(84,10): error TS2350: Only a void function can be called with the 'new' keyword.
 src/index.ts(88,10): error TS2350: Only a void function can be called with the 'new' keyword.
 src/index.ts(92,10): error TS2350: Only a void function can be called with the 'new' keyword.
-src/index.ts(95,36): error TS2552: Cannot find name 'Readable'. Did you mean '_Readable'?
 src/index.ts(96,10): error TS2350: Only a void function can be called with the 'new' keyword.
 src/index.ts(100,10): error TS2350: Only a void function can be called with the 'new' keyword.
 src/index.ts(106,36): error TS2749: 'Buffer' refers to a value, but is being used as a type here. Did you mean 'typeof Buffer'?
-src/index.ts(106,50): error TS2304: Cannot find name 'IBufferReadOptions'.
 src/index.ts(111,21): error TS2350: Only a void function can be called with the 'new' keyword.
 src/index.ts(114,40): error TS2749: 'Buffer' refers to a value, but is being used as a type here. Did you mean 'typeof Buffer'?
-src/index.ts(114,54): error TS2304: Cannot find name 'IReadOptions'.
 src/index.ts(115,25): error TS2350: Only a void function can be called with the 'new' keyword.
 src/index.ts(118,33): error TS2749: 'Buffer' refers to a value, but is being used as a type here. Did you mean 'typeof Buffer'?
-src/index.ts(118,47): error TS2304: Cannot find name 'IOptions'.
 src/index.ts(123,21): error TS2350: Only a void function can be called with the 'new' keyword.
 src/index.ts(126,37): error TS2749: 'Buffer' refers to a value, but is being used as a type here. Did you mean 'typeof Buffer'?
-src/index.ts(126,51): error TS2552: Cannot find name 'IBufferOptions'. Did you mean 'AudioBufferOptions'?
 src/index.ts(127,25): error TS2350: Only a void function can be called with the 'new' keyword.
 src/index.ts(130,39): error TS2749: 'Buffer' refers to a value, but is being used as a type here. Did you mean 'typeof Buffer'?
-src/index.ts(130,53): error TS2304: Cannot find name 'IReadOptions'.
 src/index.ts(135,21): error TS2350: Only a void function can be called with the 'new' keyword.
 src/index.ts(138,43): error TS2749: 'Buffer' refers to a value, but is being used as a type here. Did you mean 'typeof Buffer'?
-src/index.ts(138,57): error TS2552: Cannot find name 'IBufferOptions'. Did you mean 'AudioBufferOptions'?
 src/index.ts(139,25): error TS2350: Only a void function can be called with the 'new' keyword.
-src/index.ts(142,52): error TS2304: Cannot find name 'IReadOptions'.
+src/index.ts(142,34): error TS2749: 'Buffer' refers to a value, but is being used as a type here. Did you mean 'typeof Buffer'?
 src/index.ts(147,21): error TS2350: Only a void function can be called with the 'new' keyword.
 src/index.ts(150,38): error TS2749: 'Buffer' refers to a value, but is being used as a type here. Did you mean 'typeof Buffer'?
-src/index.ts(150,52): error TS2304: Cannot find name 'IBufferReadOptions'.
 src/index.ts(151,25): error TS2350: Only a void function can be called with the 'new' keyword.
 src/index.ts(154,36): error TS2749: 'Buffer' refers to a value, but is being used as a type here. Did you mean 'typeof Buffer'?
-src/index.ts(154,50): error TS2304: Cannot find name 'IReadOptions'.
 src/index.ts(159,21): error TS2350: Only a void function can be called with the 'new' keyword.
-src/index.ts(162,58): error TS2304: Cannot find name 'IReadOptions'.
+src/index.ts(162,40): error TS2749: 'Buffer' refers to a value, but is being used as a type here. Did you mean 'typeof Buffer'?
 src/index.ts(163,25): error TS2350: Only a void function can be called with the 'new' keyword.
 src/index.ts(166,35): error TS2749: 'Buffer' refers to a value, but is being used as a type here. Did you mean 'typeof Buffer'?
-src/index.ts(166,49): error TS2304: Cannot find name 'IOptions'.
 src/index.ts(171,21): error TS2350: Only a void function can be called with the 'new' keyword.
 src/index.ts(174,39): error TS2749: 'Buffer' refers to a value, but is being used as a type here. Did you mean 'typeof Buffer'?
-src/index.ts(174,53): error TS2304: Cannot find name 'IBufferReadOptions'.
 src/index.ts(175,25): error TS2350: Only a void function can be called with the 'new' keyword.
-src/index.ts(178,57): error TS2304: Cannot find name 'IReadOptions'.
+src/index.ts(178,39): error TS2749: 'Buffer' refers to a value, but is being used as a type here. Did you mean 'typeof Buffer'?
 src/index.ts(183,21): error TS2350: Only a void function can be called with the 'new' keyword.
 src/index.ts(186,43): error TS2749: 'Buffer' refers to a value, but is being used as a type here. Did you mean 'typeof Buffer'?
-src/index.ts(186,57): error TS2304: Cannot find name 'IOptions'.
 src/index.ts(187,25): error TS2350: Only a void function can be called with the 'new' keyword.
-src/index.ts(190,29): error TS2503: Cannot find namespace 'zlib'.
-src/index.ts(190,29): error TS4078: Parameter 'engine' of exported function has or is using private name 'zlib'.
-src/index.ts(190,48): error TS2749: 'Buffer' refers to a value, but is being used as a type here. Did you mean 'typeof Buffer'?
-src/index.ts(190,48): error TS4078: Parameter 'buffer' of exported function has or is using private name 'Buffer'.
-src/index.ts(231,33): error TS2503: Cannot find namespace 'zlib'.
-src/index.ts(231,33): error TS4078: Parameter 'engine' of exported function has or is using private name 'zlib'.
-src/index.ts(245,24): error TS2304: Cannot find name 'IOptions'.
-src/index.ts(245,24): error TS4078: Parameter 'opts' of exported function has or is using private name 'IOptions'.
+src/index.ts(245,24): error TS2552: Cannot find name 'DeflateOptions'. Did you mean 'DelayOptions'?
+src/index.ts(245,24): error TS4078: Parameter 'opts' of exported function has or is using private name 'DeflateOptions'.
 src/index.ts(246,42): error TS2350: Only a void function can be called with the 'new' keyword.
-src/index.ts(250,24): error TS2304: Cannot find name 'IInflateOptions'.
-src/index.ts(250,24): error TS4078: Parameter 'opts' of exported function has or is using private name 'IInflateOptions'.
+src/index.ts(250,24): error TS2304: Cannot find name 'InflateOptions'.
+src/index.ts(250,24): error TS4078: Parameter 'opts' of exported function has or is using private name 'InflateOptions'.
 src/index.ts(251,42): error TS2350: Only a void function can be called with the 'new' keyword.
-src/index.ts(257,21): error TS2304: Cannot find name 'IOptions'.
-src/index.ts(257,21): error TS4078: Parameter 'opts' of exported function has or is using private name 'IOptions'.
+src/index.ts(257,21): error TS2552: Cannot find name 'GzipOptions'. Did you mean 'GainOptions'?
+src/index.ts(257,21): error TS4078: Parameter 'opts' of exported function has or is using private name 'GzipOptions'.
 src/index.ts(258,39): error TS2350: Only a void function can be called with the 'new' keyword.
 src/index.ts(262,23): error TS2304: Cannot find name 'GunzipOptions'.
 src/index.ts(262,23): error TS4078: Parameter 'opts' of exported function has or is using private name 'GunzipOptions'.
 src/index.ts(263,41): error TS2350: Only a void function can be called with the 'new' keyword.
-src/index.ts(269,27): error TS2304: Cannot find name 'IDeflateOptions'.
-src/index.ts(269,27): error TS4078: Parameter 'opts' of exported function has or is using private name 'IDeflateOptions'.
+src/index.ts(269,27): error TS2552: Cannot find name 'DeflateOptions'. Did you mean 'DelayOptions'?
+src/index.ts(269,27): error TS4078: Parameter 'opts' of exported function has or is using private name 'DeflateOptions'.
 src/index.ts(270,45): error TS2350: Only a void function can be called with the 'new' keyword.
-src/index.ts(274,27): error TS2304: Cannot find name 'IInflateRawOptions'.
-src/index.ts(274,27): error TS4078: Parameter 'opts' of exported function has or is using private name 'IInflateRawOptions'.
+src/index.ts(274,27): error TS2304: Cannot find name 'InflateOptions'.
+src/index.ts(274,27): error TS4078: Parameter 'opts' of exported function has or is using private name 'InflateOptions'.
 src/index.ts(275,45): error TS2350: Only a void function can be called with the 'new' keyword.
-src/index.ts(281,22): error TS2304: Cannot find name 'IUnzipOptions'.
-src/index.ts(281,22): error TS4078: Parameter 'opts' of exported function has or is using private name 'IUnzipOptions'.
+src/index.ts(281,22): error TS2304: Cannot find name 'UnzipOptions'.
+src/index.ts(281,22): error TS4078: Parameter 'opts' of exported function has or is using private name 'UnzipOptions'.
 src/index.ts(282,40): error TS2350: Only a void function can be called with the 'new' keyword.
 src/index.ts(300,10): error TS2393: Duplicate function implementation.
+src/index.ts(300,21): error TS2304: Cannot find name 'ZlibOptions'.
 src/index.ts(368,5): error TS2554: Expected 2 arguments, but got 1.
 src/index.ts(372,11): error TS2339: Property 'errno' does not exist on type 'Error'.
 src/index.ts(373,11): error TS2339: Property 'code' does not exist on type 'Error'.
 src/index.ts(449,5): error TS2322: Type 'string' is not assignable to type 'Function'.
 src/index.ts(474,25): error TS2304: Cannot find name 'Engine'.
 src/index.ts(474,25): error TS4078: Parameter 'engine' of exported function has or is using private name 'Engine'.
-src/index.ts(487,8): error TS2339: Property 'emit' does not exist on type 'WebSocket'.
+src/index.ts(486,28): error TS2304: Cannot find name 'Duplex'.
+src/index.ts(486,28): error TS4078: Parameter 'self' of exported function has or is using private name 'Duplex'.
 src/index.ts(490,45): error TS2749: 'Buffer' refers to a value, but is being used as a type here. Did you mean 'typeof Buffer'?
 src/index.ts(521,48): error TS2749: 'Buffer' refers to a value, but is being used as a type here. Did you mean 'typeof Buffer'?
 src/index.ts(555,7): error TS2554: Expected 2 arguments, but got 1.

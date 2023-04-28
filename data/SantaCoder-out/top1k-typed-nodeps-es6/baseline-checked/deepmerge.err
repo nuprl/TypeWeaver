@@ -1,16 +1,5 @@
 index.ts(1,38): error TS2307: Cannot find module 'is-mergeable-object' or its corresponding type declarations.
-index.ts(7,61): error TS2304: Cannot find name 'CloneOptions'.
-index.ts(13,63): error TS2304: Cannot find name 'MergeOptions'.
 index.ts(19,49): error TS2304: Cannot find name 'MergeOptions'.
-index.ts(29,49): error TS2769: No overload matches this call.
-  Overload 1 of 2, '(predicate: (value: symbol, index: number, array: symbol[]) => value is symbol, thisArg?: any): symbol[]', gave the following error.
-    Argument of type '(symbol: string) => any' is not assignable to parameter of type '(value: symbol, index: number, array: symbol[]) => value is symbol'.
-      Types of parameters 'symbol' and 'value' are incompatible.
-        Type 'symbol' is not assignable to type 'string'.
-  Overload 2 of 2, '(predicate: (value: symbol, index: number, array: symbol[]) => unknown, thisArg?: any): symbol[]', gave the following error.
-    Argument of type '(symbol: string) => any' is not assignable to parameter of type '(value: symbol, index: number, array: symbol[]) => unknown'.
-      Types of parameters 'symbol' and 'value' are incompatible.
-        Type 'symbol' is not assignable to type 'string'.
 index.ts(36,36): error TS2769: No overload matches this call.
   Overload 1 of 2, '(...items: ConcatArray<string>[]): string[]', gave the following error.
     Argument of type 'symbol[]' is not assignable to parameter of type 'ConcatArray<string>'.
@@ -20,10 +9,8 @@ index.ts(36,36): error TS2769: No overload matches this call.
   Overload 2 of 2, '(...items: (string | ConcatArray<string>)[]): string[]', gave the following error.
     Argument of type 'symbol[]' is not assignable to parameter of type 'string | ConcatArray<string>'.
       Type 'symbol[]' is not assignable to type 'ConcatArray<string>'.
-index.ts(54,57): error TS2304: Cannot find name 'MergeOptions'.
-index.ts(75,55): error TS2304: Cannot find name 'DeepMergeOptions'.
-index.ts(75,55): error TS4078: Parameter 'options' of exported function has or is using private name 'DeepMergeOptions'.
-index.ts(96,62): error TS2304: Cannot find name 'DeepMergeOptions'.
+index.ts(101,37): error TS2304: Cannot find name 'T'.
+index.ts(101,46): error TS2304: Cannot find name 'T'.
 rollup.config.ts(1,21): error TS2307: Cannot find module 'rollup-plugin-node-resolve' or its corresponding type declarations.
 rollup.config.ts(2,22): error TS2307: Cannot find module 'rollup-plugin-commonjs' or its corresponding type declarations.
 rollup.config.ts(3,17): error TS2732: Cannot find module './package.json'. Consider using '--resolveJsonModule' to import module with '.json' extension.

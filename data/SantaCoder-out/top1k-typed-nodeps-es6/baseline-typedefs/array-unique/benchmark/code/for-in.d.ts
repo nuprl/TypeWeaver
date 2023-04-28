@@ -1,1 +1,1 @@
-export default function (arr: number[]): any[];
+export default function (arr: Array<any>): any[];

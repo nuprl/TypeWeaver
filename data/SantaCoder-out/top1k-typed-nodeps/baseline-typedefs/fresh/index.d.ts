@@ -5,6 +5,6 @@
  * MIT Licensed
  */
 declare var CACHE_CONTROL_NO_CACHE_REGEXP: RegExp;
-declare function fresh(reqHeaders: any, resHeaders: any): boolean;
+declare function fresh(reqHeaders: Headers, resHeaders: Headers): boolean;
 declare function parseHttpDate(date: string): number;
 declare function parseTokenList(str: string): any[];

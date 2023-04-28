@@ -1,8 +1,6 @@
-index.ts(38,51): error TS2304: Cannot find name 'T'.
-index.ts(38,51): error TS4078: Parameter 'promise' of exported function has or is using private name 'T'.
-index.ts(38,64): error TS2304: Cannot find name 'TimeoutOptions'.
-index.ts(38,64): error TS4078: Parameter 'options' of exported function has or is using private name 'TimeoutOptions'.
-index.ts(83,23): error TS2339: Property 'cancel' does not exist on type 'Promise<T>'.
-index.ts(84,13): error TS2339: Property 'cancel' does not exist on type 'Promise<T>'.
+index.ts(38,66): error TS2304: Cannot find name 'TimeoutOptions'.
+index.ts(38,66): error TS4078: Parameter 'options' of exported function has or is using private name 'TimeoutOptions'.
+index.ts(83,23): error TS2339: Property 'cancel' does not exist on type 'Promise<any>'.
+index.ts(84,13): error TS2339: Property 'cancel' does not exist on type 'Promise<any>'.
 index.ts(101,20): error TS2339: Property 'clear' does not exist on type 'Promise<unknown>'.
 

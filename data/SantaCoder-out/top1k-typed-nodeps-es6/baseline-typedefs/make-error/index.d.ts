@@ -5,5 +5,5 @@ declare function BaseError(message: string): void;
 declare namespace BaseError {
     var prototype: any;
 }
-declare var setFunctionName: (fn: string, name: string) => string;
-declare function makeError(constructor: Function, super_: any): Function;
+declare var setFunctionName: (fn: Function, name: string) => Function;
+declare function makeError(constructor: Function, super_: Function): Function;

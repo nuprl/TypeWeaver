@@ -1,2 +1,2 @@
-declare function arrayEachRight(array: Array<any>, iteratee: any): any[];
+declare function arrayEachRight(array: any[], iteratee: Function): any[];
 export default arrayEachRight;

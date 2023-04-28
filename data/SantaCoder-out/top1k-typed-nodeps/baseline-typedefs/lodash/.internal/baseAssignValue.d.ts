@@ -1,2 +1,2 @@
-declare function baseAssignValue(object: Object, key: string, value: any): void;
+declare function baseAssignValue(object: any, key: string, value: any): void;
 export default baseAssignValue;

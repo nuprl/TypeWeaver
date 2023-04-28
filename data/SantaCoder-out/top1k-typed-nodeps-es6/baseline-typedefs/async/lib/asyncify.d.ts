@@ -1,1 +1,1 @@
-export default function asyncify(func: Function): (...args: any) => any;
+export default function asyncify(func: Function): (...args: Function) => any;

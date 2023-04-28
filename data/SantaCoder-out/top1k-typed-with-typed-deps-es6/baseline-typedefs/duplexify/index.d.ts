@@ -1,2 +1,2 @@
-declare var Duplexify: (writable: Writable, readable: Readable, opts: IStreamOptions) => any;
+declare var Duplexify: (writable: Writable, readable: Readable, opts: any) => any;
 export default Duplexify;

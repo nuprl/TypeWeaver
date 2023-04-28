@@ -1,2 +1,2 @@
-declare function intersection(...arrays: Array<any>): any[];
+declare function intersection(...arrays: number[][]): any[];
 export default intersection;

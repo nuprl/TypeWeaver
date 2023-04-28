@@ -1,1 +1,1 @@
-export default function times(n: number, iteratee: any, callback: any): any;
+export default function times(n: number, iteratee: Function, callback: Function): any;

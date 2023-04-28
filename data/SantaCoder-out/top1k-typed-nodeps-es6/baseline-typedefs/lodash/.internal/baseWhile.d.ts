@@ -1,2 +1,2 @@
-declare function baseWhile(array: any[], predicate: any, isDrop: boolean, fromRight: boolean): any[];
+declare function baseWhile(array: any[], predicate: any, isDrop: any, fromRight: any): any[];
 export default baseWhile;

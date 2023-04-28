@@ -1,2 +1,2 @@
-declare function stringSize(string: string): any;
+declare function stringSize(string: string): number;
 export default stringSize;

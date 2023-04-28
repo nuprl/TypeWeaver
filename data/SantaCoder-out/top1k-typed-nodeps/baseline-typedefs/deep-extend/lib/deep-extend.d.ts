@@ -27,6 +27,6 @@
 /// <reference types="node" />
 declare function isSpecificValue(val: any): boolean;
 declare function cloneSpecificValue(val: any): RegExp | Date | Buffer;
-declare function deepCloneArray(arr: any): any[];
+declare function deepCloneArray(arr: any[]): any[];
 declare function safeGetProperty(object: any, property: string): any;
-declare var deepExtend: (any: any) => any;
+declare var deepExtend: (any: any, []: Iterable<any>) => any;

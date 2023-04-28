@@ -1,2 +1,2 @@
-declare function baseValues(object: Object, props: string[]): any[];
+declare function baseValues(object: any, props: any[]): any[];
 export default baseValues;

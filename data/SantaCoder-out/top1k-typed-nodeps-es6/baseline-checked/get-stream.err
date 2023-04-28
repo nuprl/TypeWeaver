@@ -1,9 +1,16 @@
 buffer-stream.ts(41,9): error TS2339: Property 'getBufferedValue' does not exist on type 'PassThrough'.
 buffer-stream.ts(49,9): error TS2339: Property 'getBufferedLength' does not exist on type 'PassThrough'.
-index.ts(16,39): error TS2552: Cannot find name 'Readable'. Did you mean '_Readable'?
-index.ts(16,58): error TS2304: Cannot find name 'ReadableOptions'.
 index.ts(32,24): error TS2339: Property 'getBufferedLength' does not exist on type 'PassThrough'.
 index.ts(33,33): error TS2339: Property 'getBufferedValue' does not exist on type 'PassThrough'.
+index.ts(41,37): error TS2769: No overload matches this call.
+  Overload 1 of 7, '(source: PipelineSource<any>, destination: PassThrough, options?: PipelineOptions): Promise<void>', gave the following error.
+    Argument of type 'ReadableStream<any>' is not assignable to parameter of type 'PipelineSource<any>'.
+  Overload 2 of 7, '(streams: readonly (ReadableStream | ReadWriteStream | WritableStream)[], options?: PipelineOptions): Promise<void>', gave the following error.
+    Argument of type 'ReadableStream<any>' is not assignable to parameter of type 'readonly (ReadableStream | ReadWriteStream | WritableStream)[]'.
+      Type 'ReadableStream<any>' is missing the following properties from type 'readonly (ReadableStream | ReadWriteStream | WritableStream)[]': length, concat, join, slice, and 19 more.
+  Overload 3 of 7, '(stream1: ReadableStream, stream2: ReadWriteStream | WritableStream, ...streams: (ReadWriteStream | WritableStream | PipelineOptions)[]): Promise<...>', gave the following error.
+    Argument of type 'ReadableStream<any>' is not assignable to parameter of type 'ReadableStream'.
+      Type 'ReadableStream<any>' is missing the following properties from type 'ReadableStream': readable, read, setEncoding, pause, and 22 more.
 index.ts(42,5): error TS2794: Expected 1 arguments, but got 0. Did you forget to include 'void' in your type argument to 'Promise'?
 index.ts(49,15): error TS2339: Property 'getBufferedLength' does not exist on type 'PassThrough'.
 index.ts(55,16): error TS2339: Property 'getBufferedValue' does not exist on type 'PassThrough'.

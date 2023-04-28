@@ -1,1 +1,1 @@
-export default function (a: any, b: any): any;
+export default function (a: Object, b: Object): Object;

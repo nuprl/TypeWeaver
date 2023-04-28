@@ -14,34 +14,32 @@ index.ts(79,30): error TS2339: Property 'result' does not exist on type '{ min: 
 index.ts(81,11): error TS2339: Property 'result' does not exist on type '{ min: any; max: any; a: number; b: number; }'.
 index.ts(81,32): error TS2339: Property 'result' does not exist on type '{ min: any; max: any; a: number; b: number; }'.
 index.ts(85,16): error TS2339: Property 'result' does not exist on type '{ min: any; max: any; a: number; b: number; }'.
-index.ts(88,63): error TS2552: Cannot find name 'CollatorOptions'. Did you mean 'OscillatorOptions'?
+index.ts(88,63): error TS2304: Cannot find name 'Options'.
 index.ts(89,37): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'string[]'.
 index.ts(90,37): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'string[]'.
 index.ts(91,36): error TS2345: Argument of type 'boolean' is not assignable to parameter of type 'string[]'.
 index.ts(117,3): error TS2740: Type 'number[]' is missing the following properties from type 'Set<number>': add, clear, delete, has, and 2 more.
 index.ts(118,9): error TS2339: Property 'sort' does not exist on type 'Set<number>'.
-index.ts(129,63): error TS2552: Cannot find name 'PatternOptions'. Did you mean 'PannerOptions'?
-index.ts(134,20): error TS2345: Argument of type 'number' is not assignable to parameter of type 'number[]'.
-index.ts(160,74): error TS2304: Cannot find name 'ITokenOptions'.
+index.ts(129,63): error TS2304: Cannot find name 'RangeToPatternOptions'.
+index.ts(134,20): error TS2345: Argument of type 'number' is not assignable to parameter of type 'any[]'.
 index.ts(166,30): error TS2339: Property 'length' does not exist on type 'Set<number>'.
 index.ts(168,30): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 index.ts(171,14): error TS2339: Property 'isPadded' does not exist on type 'string'.
 index.ts(182,13): error TS2339: Property 'isPadded' does not exist on type 'string'.
 index.ts(183,7): error TS2322: Type 'string | number' is not assignable to type 'string'.
   Type 'number' is not assignable to type 'string'.
-index.ts(183,29): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 index.ts(186,9): error TS2339: Property 'string' does not exist on type '{ pattern: number; count: any[]; digits: number; } | { pattern: string; count: number[]; digits: number; }'.
   Property 'string' does not exist on type '{ pattern: number; count: any[]; digits: number; }'.
 index.ts(186,53): error TS2345: Argument of type 'any[] | number[]' is not assignable to parameter of type 'number'.
   Type 'any[]' is not assignable to type 'number'.
-index.ts(195,108): error TS2304: Cannot find name 'IntersectionOptions'.
 index.ts(199,11): error TS2339: Property 'string' does not exist on type 'String'.
 index.ts(202,36): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
 index.ts(207,34): error TS2345: Argument of type 'string' is not assignable to parameter of type 'any[]'.
 index.ts(241,7): error TS2488: Type 'number' must have a '[Symbol.iterator]()' method that returns an iterator.
-index.ts(248,30): error TS2304: Cannot find name 'CharacterClass'.
-index.ts(248,49): error TS2304: Cannot find name 'CharacterClass'.
-index.ts(248,74): error TS2304: Cannot find name 'CharacterClassOptions'.
-index.ts(257,12): error TS2339: Property 'isPadded' does not exist on type 'number'.
-index.ts(261,27): error TS2339: Property 'maxLen' does not exist on type 'number'.
+index.ts(248,58): error TS2304: Cannot find name 'Options'.
+index.ts(249,19): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+index.ts(249,23): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+index.ts(256,56): error TS2304: Cannot find name 'Options'.
+index.ts(257,12): error TS2339: Property 'isPadded' does not exist on type 'string'.
+index.ts(261,27): error TS2339: Property 'maxLen' does not exist on type 'string'.
 

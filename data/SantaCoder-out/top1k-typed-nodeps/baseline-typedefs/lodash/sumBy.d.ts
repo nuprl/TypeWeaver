@@ -1,2 +1,2 @@
-declare function sumBy(array: Array<number>, iteratee: any): any;
+declare function sumBy(array: any[], iteratee: any): any;
 export default sumBy;

@@ -1,2 +1,2 @@
 export default wrappy;
-declare function wrappy(fn: any, cb: any): any;
+declare function wrappy(fn: Function, cb: Function): any;

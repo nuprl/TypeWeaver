@@ -1,15 +1,11 @@
 Mime.ts(7,10): error TS2451: Cannot redeclare block-scoped variable 'Mime'.
-Mime.ts(39,43): error TS2304: Cannot find name 'ITypeMap'.
+Mime.ts(39,43): error TS2304: Cannot find name 'TypeMap'.
 cli.ts(6,5): error TS2451: Cannot redeclare block-scoped variable 'mime'.
 index.ts(3,5): error TS2451: Cannot redeclare block-scoped variable 'Mime'.
 index.ts(4,27): error TS2554: Expected 0 arguments, but got 2.
 lite.ts(3,5): error TS2451: Cannot redeclare block-scoped variable 'Mime'.
 lite.ts(4,27): error TS2554: Expected 0 arguments, but got 1.
 src/benchmark.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'mime'.
-src/build.ts(51,32): error TS2304: Cannot find name 'IType'.
-src/build.ts(51,32): error TS4078: Parameter 'types' of exported function has or is using private name 'IType'.
-src/build.ts(72,16): error TS2345: Argument of type '{}' is not assignable to parameter of type 'IType[]'.
-  Type '{}' is missing the following properties from type 'IType[]': length, pop, push, concat, and 29 more.
-src/build.ts(73,16): error TS2345: Argument of type '{}' is not assignable to parameter of type 'IType[]'.
-  Type '{}' is missing the following properties from type 'IType[]': length, pop, push, concat, and 29 more.
+src/build.ts(72,16): error TS2345: Argument of type '{}' is not assignable to parameter of type 'string'.
+src/build.ts(73,16): error TS2345: Argument of type '{}' is not assignable to parameter of type 'string'.
 

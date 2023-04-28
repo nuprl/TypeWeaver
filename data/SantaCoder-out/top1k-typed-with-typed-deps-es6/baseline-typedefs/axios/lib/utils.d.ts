@@ -1,9 +1,9 @@
 declare function isBuffer(val: any): any;
 declare function isArrayBufferView(val: any): any;
-declare function forEach(obj: any, fn: any, { allOwnKeys }: {
+declare function forEach(obj: any, fn: Function, { allOwnKeys }: {
     allOwnKeys?: boolean;
 }, any: any): void;
-declare function merge(any: any, []: Iterable<any>): {};
+declare function merge(Object: any, []: Iterable<any>): {};
 declare const _default: {
     isArray: (arg: any) => arg is any[];
     isArrayBuffer: (thing: any) => boolean;

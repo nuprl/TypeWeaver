@@ -7,29 +7,18 @@ index.ts(34,28): error TS2769: No overload matches this call.
   Overload 3 of 5, '(a: BigInteger): BigInteger', gave the following error.
     Argument of type 'Buffer' is not assignable to parameter of type 'BigInteger'.
       Type 'Buffer' is missing the following properties from type 'BigInteger': s, t, data, DB, and 73 more.
-index.ts(52,24): error TS2339: Property 'P' does not exist on type 'string'.
-index.ts(53,19): error TS2339: Property 'P' does not exist on type 'string'.
 lib/ec.ts(11,9): error TS2339: Property 'Barrett' does not exist on type 'BigInteger'.
-lib/ec.ts(27,30): error TS2552: Cannot find name 'BigNumber'. Did you mean 'Number'?
-lib/ec.ts(27,30): error TS4078: Parameter 'q' of exported function has or is using private name 'BigNumber'.
-lib/ec.ts(27,44): error TS2552: Cannot find name 'BigNumber'. Did you mean 'Number'?
-lib/ec.ts(27,44): error TS4078: Parameter 'x' of exported function has or is using private name 'BigNumber'.
-lib/ec.ts(47,52): error TS2339: Property 'toBigInteger' does not exist on type 'number'.
+lib/ec.ts(33,28): error TS2304: Cannot find name 'feFp'.
+lib/ec.ts(47,52): error TS2339: Property 'toBigInteger' does not exist on type 'bigint'.
 lib/ec.ts(50,26): error TS2749: 'ECFieldElementFp' refers to a value, but is being used as a type here. Did you mean 'typeof ECFieldElementFp'?
 lib/ec.ts(57,26): error TS2749: 'ECFieldElementFp' refers to a value, but is being used as a type here. Did you mean 'typeof ECFieldElementFp'?
 lib/ec.ts(68,24): error TS2749: 'ECFieldElementFp' refers to a value, but is being used as a type here. Did you mean 'typeof ECFieldElementFp'?
-lib/ec.ts(84,15): error TS2339: Property 'shiftLeft' does not exist on type 'number'.
+lib/ec.ts(83,52): error TS2552: Cannot find name 'BigNumber'. Did you mean 'Number'?
 lib/ec.ts(95,27): error TS2749: 'ECCurveFp' refers to a value, but is being used as a type here. Did you mean 'typeof ECCurveFp'?
 lib/ec.ts(95,27): error TS4078: Parameter 'curve' of exported function has or is using private name 'ECCurveFp'.
-lib/ec.ts(95,41): error TS2552: Cannot find name 'BigNumber'. Did you mean 'Number'?
-lib/ec.ts(95,41): error TS4078: Parameter 'x' of exported function has or is using private name 'BigNumber'.
-lib/ec.ts(95,55): error TS2552: Cannot find name 'BigNumber'. Did you mean 'Number'?
-lib/ec.ts(95,55): error TS4078: Parameter 'y' of exported function has or is using private name 'BigNumber'.
-lib/ec.ts(95,69): error TS2552: Cannot find name 'BigNumber'. Did you mean 'Number'?
-lib/ec.ts(95,69): error TS4078: Parameter 'z' of exported function has or is using private name 'BigNumber'.
 lib/ec.ts(128,31): error TS2304: Cannot find name 'PointFp'.
-lib/ec.ts(161,24): error TS2304: Cannot find name 'PointFp'.
-lib/ec.ts(279,29): error TS2552: Cannot find name 'BigNumber'. Did you mean 'Number'?
+lib/ec.ts(161,24): error TS2749: 'ECPointFp' refers to a value, but is being used as a type here. Did you mean 'typeof ECPointFp'?
+lib/ec.ts(279,29): error TS2304: Cannot find name 'Fp'.
 lib/ec.ts(307,9): error TS2339: Property 'bitLength' does not exist on type 'number'.
 lib/ec.ts(307,25): error TS2339: Property 'bitLength' does not exist on type 'number'.
 lib/ec.ts(307,44): error TS2339: Property 'bitLength' does not exist on type 'number'.
@@ -37,33 +26,21 @@ lib/ec.ts(308,14): error TS2339: Property 'bitLength' does not exist on type 'nu
 lib/ec.ts(314,11): error TS2339: Property 'testBit' does not exist on type 'number'.
 lib/ec.ts(315,13): error TS2339: Property 'testBit' does not exist on type 'number'.
 lib/ec.ts(321,13): error TS2339: Property 'testBit' does not exist on type 'number'.
-lib/ec.ts(345,23): error TS2552: Cannot find name 'BigNumber'. Did you mean 'Number'?
-lib/ec.ts(345,23): error TS4078: Parameter 'q' of exported function has or is using private name 'BigNumber'.
-lib/ec.ts(345,37): error TS2552: Cannot find name 'BigNumber'. Did you mean 'Number'?
-lib/ec.ts(345,37): error TS4078: Parameter 'a' of exported function has or is using private name 'BigNumber'.
-lib/ec.ts(345,51): error TS2304: Cannot find name 'BigNumber'.
-lib/ec.ts(345,51): error TS4078: Parameter 'b' of exported function has or is using private name 'BigNumber'.
 lib/ec.ts(349,19): error TS2554: Expected 4 arguments, but got 3.
 lib/ec.ts(365,31): error TS2304: Cannot find name 'CurveFp'.
-lib/ec.ts(376,35): error TS2304: Cannot find name 'BigNumber'.
 lib/ec.ts(384,35): error TS2304: Cannot find name 'Point'.
 lib/ec.ts(439,14): error TS2554: Expected 4 arguments, but got 3.
 lib/ec.ts(447,14): error TS2554: Expected 4 arguments, but got 3.
-lib/ec.ts(458,60): error TS2304: Cannot find name 'BigNumber'.
-lib/ec.ts(493,51): error TS2304: Cannot find name 'BigNumber'.
-lib/ec.ts(493,66): error TS2304: Cannot find name 'BigNumber'.
+lib/ec.ts(459,9): error TS2339: Property 'isInfinity' does not exist on type 'BigInteger'.
+lib/ec.ts(461,6): error TS2339: Property 'getX' does not exist on type 'BigInteger'.
+lib/ec.ts(470,8): error TS2339: Property 'getY' does not exist on type 'BigInteger'.
 lib/ec.ts(499,14): error TS2339: Property 'bitLength' does not exist on type 'number'.
 lib/ec.ts(500,17): error TS2339: Property 'shiftRight' does not exist on type 'number'.
 lib/ec.ts(501,17): error TS2339: Property 'subtract' does not exist on type 'number'.
 lib/ec.ts(507,14): error TS2339: Property 'compareTo' does not exist on type 'number'.
 lib/ec.ts(508,13): error TS2339: Property 'subtract' does not exist on type 'number'.
 lib/ec.ts(511,11): error TS2339: Property 'mod' does not exist on type 'number'.
-lib/ec.ts(572,56): error TS2304: Cannot find name 'BigNumber'.
-lib/ec.ts(572,70): error TS2304: Cannot find name 'BigNumber'.
-lib/ec.ts(572,84): error TS2304: Cannot find name 'BigNumber'.
 lib/sec.ts(7,10): error TS2614: Module '"./ec.js"' has no exported member 'ECCurveFp'. Did you mean to use 'import ECCurveFp from "./ec.js"' instead?
 lib/sec.ts(13,32): error TS2304: Cannot find name 'ECCurve'.
-lib/sec.ts(13,44): error TS2304: Cannot find name 'Point'.
-lib/sec.ts(13,54): error TS2304: Cannot find name 'BigNumber'.
-lib/sec.ts(13,68): error TS2304: Cannot find name 'BigNumber'.
+lib/sec.ts(13,44): error TS2304: Cannot find name 'ECPoint'.
 

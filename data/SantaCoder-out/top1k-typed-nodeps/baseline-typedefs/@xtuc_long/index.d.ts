@@ -5,7 +5,7 @@ declare namespace Long {
     var fromNumber: (value: number, unsigned: boolean) => any;
     var fromBits: (lowBits: number, highBits: number, unsigned: boolean) => any;
     var fromString: (str: string, unsigned: boolean, radix: number) => any;
-    var fromValue: (val: string, unsigned: boolean) => any;
+    var fromValue: (val: number, unsigned: boolean) => any;
     var ZERO: any;
     var UZERO: any;
     var ONE: any;

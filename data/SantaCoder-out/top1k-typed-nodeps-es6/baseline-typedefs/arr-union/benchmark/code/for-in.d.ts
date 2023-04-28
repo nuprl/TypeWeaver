@@ -1,1 +1,1 @@
-export default function unique(init: any): any;
+export default function unique(init: any[]): any[];

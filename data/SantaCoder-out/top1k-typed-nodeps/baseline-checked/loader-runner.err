@@ -1,33 +1,27 @@
-lib/LoaderRunner.ts(10,25): error TS2554: Expected 0 arguments, but got 1.
-lib/LoaderRunner.ts(74,15): error TS2339: Property 'loader' does not exist on type 'never'.
-lib/LoaderRunner.ts(76,22): error TS2339: Property 'loader' does not exist on type 'never'.
-lib/LoaderRunner.ts(77,26): error TS2339: Property 'fragment' does not exist on type 'never'.
+lib/LoaderRunner.ts(46,37): error TS2304: Cannot find name 'Loader'.
+lib/LoaderRunner.ts(46,37): error TS4078: Parameter 'loader' of exported function has or is using private name 'Loader'.
 lib/LoaderRunner.ts(78,9): error TS2339: Property 'type' does not exist on type '{ path: any; query: any; fragment: any; options: any; ident: any; normal: any; pitch: any; raw: any; data: any; pitchExecuted: boolean; normalExecuted: boolean; }'.
-lib/LoaderRunner.ts(78,22): error TS2339: Property 'type' does not exist on type 'never'.
-lib/LoaderRunner.ts(79,25): error TS2339: Property 'options' does not exist on type 'never'.
-lib/LoaderRunner.ts(80,23): error TS2339: Property 'ident' does not exist on type 'never'.
 lib/LoaderRunner.ts(96,6): error TS2339: Property 'request' does not exist on type '{ path: any; query: any; fragment: any; options: any; ident: any; normal: any; pitch: any; raw: any; data: any; pitchExecuted: boolean; normalExecuted: boolean; }'.
 lib/LoaderRunner.ts(165,3): error TS2322: Type 'Buffer' is not assignable to type 'string'.
-lib/LoaderRunner.ts(168,42): error TS2304: Cannot find name 'PitchingLoaderOptions'.
-lib/LoaderRunner.ts(168,42): error TS4078: Parameter 'options' of exported function has or is using private name 'PitchingLoaderOptions'.
-lib/LoaderRunner.ts(214,35): error TS2304: Cannot find name 'ProcessResourceOptions'.
-lib/LoaderRunner.ts(214,35): error TS4078: Parameter 'options' of exported function has or is using private name 'ProcessResourceOptions'.
-lib/LoaderRunner.ts(231,40): error TS2304: Cannot find name 'WebpackOptions'.
-lib/LoaderRunner.ts(231,40): error TS4078: Parameter 'options' of exported function has or is using private name 'WebpackOptions'.
-lib/LoaderRunner.ts(231,71): error TS2304: Cannot find name 'WebpackOptions'.
-lib/LoaderRunner.ts(231,71): error TS4078: Parameter 'loaderContext' of exported function has or is using private name 'WebpackOptions'.
-lib/LoaderRunner.ts(231,93): error TS2503: Cannot find namespace 'WebpackOptions'.
-lib/LoaderRunner.ts(231,93): error TS4078: Parameter 'args' of exported function has or is using private name 'WebpackOptions'.
-lib/LoaderRunner.ts(264,51): error TS2304: Cannot find name 'WebpackOptions'.
-lib/LoaderRunner.ts(264,77): error TS2304: Cannot find name 'WebpackCallback'.
-lib/LoaderRunner.ts(306,78): error TS2304: Cannot find name 'Context'.
-lib/LoaderRunner.ts(309,78): error TS2304: Cannot find name 'Context'.
-lib/LoaderRunner.ts(335,59): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
-lib/LoaderRunner.ts(344,49): error TS2552: Cannot find name 'IRequest'. Did you mean 'Request'?
-lib/LoaderRunner.ts(354,86): error TS2304: Cannot find name 'IRequest'.
-lib/LoaderRunner.ts(362,82): error TS2304: Cannot find name 'IRequest'.
+lib/LoaderRunner.ts(168,42): error TS2304: Cannot find name 'LoaderOptions'.
+lib/LoaderRunner.ts(168,42): error TS4078: Parameter 'options' of exported function has or is using private name 'LoaderOptions'.
+lib/LoaderRunner.ts(168,72): error TS2304: Cannot find name 'LoaderContext'.
+lib/LoaderRunner.ts(168,72): error TS4078: Parameter 'loaderContext' of exported function has or is using private name 'LoaderContext'.
+lib/LoaderRunner.ts(214,35): error TS2304: Cannot find name 'LoaderOptions'.
+lib/LoaderRunner.ts(214,35): error TS4078: Parameter 'options' of exported function has or is using private name 'LoaderOptions'.
+lib/LoaderRunner.ts(214,65): error TS2304: Cannot find name 'LoaderContext'.
+lib/LoaderRunner.ts(214,65): error TS4078: Parameter 'loaderContext' of exported function has or is using private name 'LoaderContext'.
+lib/LoaderRunner.ts(231,40): error TS2304: Cannot find name 'LoaderContext'.
+lib/LoaderRunner.ts(231,40): error TS4078: Parameter 'options' of exported function has or is using private name 'LoaderContext'.
+lib/LoaderRunner.ts(231,70): error TS2304: Cannot find name 'LoaderContext'.
+lib/LoaderRunner.ts(231,70): error TS4078: Parameter 'loaderContext' of exported function has or is using private name 'LoaderContext'.
+lib/LoaderRunner.ts(259,52): error TS2304: Cannot find name 'Resource'.
+lib/LoaderRunner.ts(309,78): error TS2304: Cannot find name 'BuildContext'.
 lib/loadLoader.ts(5,12): error TS2339: Property 'type' does not exist on type 'string'.
 lib/loadLoader.ts(8,45): error TS2339: Property 'path' does not exist on type 'string'.
+lib/loadLoader.ts(10,40): error TS2304: Cannot find name 'Module'.
 lib/loadLoader.ts(19,32): error TS2339: Property 'path' does not exist on type 'string'.
 lib/loadLoader.ts(23,31): error TS2339: Property 'code' does not exist on type 'Error'.
+lib/loadLoader.ts(39,31): error TS2304: Cannot find name 'LoaderContext'.
+lib/loadLoader.ts(39,31): error TS4078: Parameter 'loader' of exported function has or is using private name 'LoaderContext'.
 

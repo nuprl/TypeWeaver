@@ -1,1 +1,1 @@
-export default function repeat(ele: string, num: number): any[];
+export default function repeat(ele: any, num: number): any[];

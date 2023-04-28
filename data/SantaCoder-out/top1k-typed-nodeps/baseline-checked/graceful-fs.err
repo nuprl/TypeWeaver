@@ -8,73 +8,34 @@ graceful-fs.ts(24,48): error TS2304: Cannot find name 'Queue'.
 graceful-fs.ts(24,48): error TS4078: Parameter 'queue' of exported function has or is using private name 'Queue'.
 graceful-fs.ts(86,13): error TS2554: Expected 0 arguments, but got 1.
 graceful-fs.ts(102,10): error TS2393: Duplicate function implementation.
-graceful-fs.ts(102,21): error TS2304: Cannot find name 'FS'.
-graceful-fs.ts(111,45): error TS2304: Cannot find name 'ReadFileOptions'.
 graceful-fs.ts(115,12): error TS2554: Expected 4 arguments, but got 3.
-graceful-fs.ts(117,50): error TS2304: Cannot find name 'ReadFileOptions'.
-graceful-fs.ts(119,25): error TS2339: Property 'code' does not exist on type 'Error'.
-graceful-fs.ts(119,50): error TS2339: Property 'code' does not exist on type 'Error'.
-graceful-fs.ts(131,60): error TS2304: Cannot find name 'WriteFileOptions'.
 graceful-fs.ts(135,12): error TS2554: Expected 5 arguments, but got 4.
-graceful-fs.ts(137,62): error TS2304: Cannot find name 'WriteFileOptions'.
-graceful-fs.ts(139,25): error TS2339: Property 'code' does not exist on type 'Error'.
-graceful-fs.ts(139,50): error TS2339: Property 'code' does not exist on type 'Error'.
-graceful-fs.ts(152,61): error TS2304: Cannot find name 'IFileWriteOptions'.
 graceful-fs.ts(156,12): error TS2554: Expected 5 arguments, but got 4.
-graceful-fs.ts(158,66): error TS2304: Cannot find name 'AppendFileOptions'.
-graceful-fs.ts(160,25): error TS2339: Property 'code' does not exist on type 'Error'.
-graceful-fs.ts(160,50): error TS2339: Property 'code' does not exist on type 'Error'.
 graceful-fs.ts(178,12): error TS2554: Expected 5 arguments, but got 4.
-graceful-fs.ts(182,25): error TS2339: Property 'code' does not exist on type 'Error'.
-graceful-fs.ts(182,50): error TS2339: Property 'code' does not exist on type 'Error'.
+graceful-fs.ts(195,44): error TS2503: Cannot find namespace 'readdir'.
+graceful-fs.ts(195,65): error TS2503: Cannot find namespace 'readdir'.
 graceful-fs.ts(211,12): error TS2554: Expected 4 arguments, but got 3.
-graceful-fs.ts(213,57): error TS2304: Cannot find name 'fs$readdirCallbackOptions'.
-graceful-fs.ts(215,25): error TS2339: Property 'code' does not exist on type 'Error'.
-graceful-fs.ts(215,50): error TS2339: Property 'code' does not exist on type 'Error'.
+graceful-fs.ts(213,57): error TS2304: Cannot find name 'fs$readdirOptions'.
+graceful-fs.ts(213,80): error TS2749: 'fs$readdirCallback' refers to a value, but is being used as a type here. Did you mean 'typeof fs$readdirCallback'?
 graceful-fs.ts(236,5): error TS2630: Cannot assign to 'ReadStream' because it is a function.
 graceful-fs.ts(237,5): error TS2630: Cannot assign to 'WriteStream' because it is a function.
 graceful-fs.ts(257,7): error TS2630: Cannot assign to 'ReadStream' because it is a function.
 graceful-fs.ts(267,7): error TS2630: Cannot assign to 'WriteStream' because it is a function.
-graceful-fs.ts(280,7): error TS2322: Type 'string' is not assignable to type '{ (path: string, options: ReadableOptions): any; prototype: any; }'.
-graceful-fs.ts(291,7): error TS2322: Type 'string' is not assignable to type '{ (path: string, options: WriteStreamOptions): any; prototype: any; }'.
-graceful-fs.ts(297,47): error TS2304: Cannot find name 'ReadableOptions'.
-graceful-fs.ts(320,48): error TS2304: Cannot find name 'WriteStreamOptions'.
-graceful-fs.ts(340,53): error TS2304: Cannot find name 'ReadableOptions'.
-graceful-fs.ts(344,54): error TS2304: Cannot find name 'WriteFileOptions'.
+graceful-fs.ts(297,47): error TS2304: Cannot find name 'ReadStreamOptions'.
 graceful-fs.ts(354,12): error TS2554: Expected 5 arguments, but got 4.
-graceful-fs.ts(358,25): error TS2339: Property 'code' does not exist on type 'Error'.
-graceful-fs.ts(358,50): error TS2339: Property 'code' does not exist on type 'Error'.
 graceful-fs.ts(372,9): error TS2554: Expected 0 arguments, but got 3.
 graceful-fs.ts(416,11): error TS2554: Expected 0 arguments, but got 3.
 graceful-fs.ts(420,11): error TS2554: Expected 0 arguments, but got 3.
 graceful-fs.ts(435,13): error TS2554: Expected 0 arguments, but got 3.
 legacy-streams.ts(5,10): error TS2300: Duplicate identifier 'legacy'.
-legacy-streams.ts(11,47): error TS2304: Cannot find name 'ReadableOptions'.
+legacy-streams.ts(11,47): error TS2304: Cannot find name 'ReadStreamOptions'.
 legacy-streams.ts(12,47): error TS2350: Only a void function can be called with the 'new' keyword.
-legacy-streams.ts(62,8): error TS2339: Property 'open' does not exist on type 'FileSystem'.
-legacy-streams.ts(75,48): error TS2304: Cannot find name 'IWriteStreamOptions'.
+legacy-streams.ts(75,48): error TS2304: Cannot find name 'WriteStreamOptions'.
 legacy-streams.ts(76,48): error TS2350: Only a void function can be called with the 'new' keyword.
-legacy-streams.ts(113,23): error TS2339: Property 'open' does not exist on type 'FileSystem'.
 polyfills.ts(29,10): error TS2393: Duplicate function implementation.
-polyfills.ts(29,21): error TS2304: Cannot find name 'Fs'.
-polyfills.ts(98,29): error TS2503: Cannot find namespace 'fs'.
 polyfills.ts(104,22): error TS2339: Property 'code' does not exist on type 'Error'.
 polyfills.ts(104,46): error TS2339: Property 'code' does not exist on type 'Error'.
-polyfills.ts(107,45): error TS2304: Cannot find name 'Stater'.
-polyfills.ts(107,57): error TS2304: Cannot find name 'Stater'.
-polyfills.ts(134,24): error TS2339: Property 'code' does not exist on type 'Error'.
-polyfills.ts(165,29): error TS2304: Cannot find name 'FS'.
-polyfills.ts(208,30): error TS2304: Cannot find name 'FS'.
-polyfills.ts(211,69): error TS2503: Cannot find namespace 'fs'.
-polyfills.ts(249,28): error TS2503: Cannot find namespace 'fs'.
-polyfills.ts(259,32): error TS2503: Cannot find namespace 'fs'.
-polyfills.ts(274,19): error TS2339: Property 'call' does not exist on type 'string'.
-polyfills.ts(281,32): error TS2503: Cannot find namespace 'fs'.
+polyfills.ts(107,45): error TS2304: Cannot find name 'State'.
+polyfills.ts(107,56): error TS2304: Cannot find name 'State'.
 polyfills.ts(301,44): error TS2304: Cannot find name 'Stats'.
-polyfills.ts(308,29): error TS2339: Property 'call' does not exist on type 'string'.
-polyfills.ts(309,16): error TS2339: Property 'call' does not exist on type 'string'.
-polyfills.ts(313,31): error TS2503: Cannot find namespace 'fs'.
-polyfills.ts(344,12): error TS2339: Property 'code' does not exist on type 'Error'.
-polyfills.ts(349,14): error TS2339: Property 'code' does not exist on type 'Error'.
-polyfills.ts(349,38): error TS2339: Property 'code' does not exist on type 'Error'.
 

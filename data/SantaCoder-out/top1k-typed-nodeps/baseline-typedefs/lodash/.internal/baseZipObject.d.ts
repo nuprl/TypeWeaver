@@ -1,2 +1,2 @@
-declare function baseZipObject(props: any, values: any[], assignFunc: any): {};
+declare function baseZipObject(props: string[], values: any[], assignFunc: Function): {};
 export default baseZipObject;

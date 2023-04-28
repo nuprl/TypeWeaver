@@ -3,21 +3,21 @@ declare function normalize(data: any, warn: boolean, strict: boolean): void;
 declare namespace normalize {
     var fixer: {
         warn: () => void;
-        fixRepositoryField: (data: IRepository[]) => any;
+        fixRepositoryField: (data: any) => any;
         fixTypos: (data: any) => void;
         fixScriptsField: (data: any) => void;
-        fixFilesField: (data: IFileChangeData) => void;
-        fixBinField: (data: BinResponse) => void;
+        fixFilesField: (data: any) => void;
+        fixBinField: (data: any) => void;
         fixManField: (data: any) => void;
         fixBundleDependenciesField: (data: any) => void;
         fixDependencies: (data: any, strict: boolean) => void;
         fixModulesField: (data: any) => void;
-        fixKeywordsField: (data: IData) => void;
+        fixKeywordsField: (data: any) => void;
         fixVersionField: (data: any, strict: boolean) => boolean;
         fixPeople: (data: Person) => void;
-        fixNameField: (data: any, options: AxiosRequestConfig) => void;
+        fixNameField: (data: any, options: any) => void;
         fixDescriptionField: (data: any) => void;
-        fixReadmeField: (data: Readme) => void;
+        fixReadmeField: (data: any) => void;
         fixBugsField: (data: any) => void;
         fixHomepageField: (data: any) => boolean;
         fixLicenseField: (data: any) => any;

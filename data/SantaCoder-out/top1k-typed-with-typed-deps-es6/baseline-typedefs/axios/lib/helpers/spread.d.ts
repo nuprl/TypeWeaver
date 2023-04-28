@@ -1,1 +1,1 @@
-export default function spread(callback: any): (arr: any[]) => any;
+export default function spread(callback: Function): (arr: any[]) => any;

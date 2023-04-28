@@ -1,2 +1,2 @@
-declare function difference(array: number[], ...values: number[]): any[];
+declare function difference(array: any[], ...values: any[]): any[];
 export default difference;

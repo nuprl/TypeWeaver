@@ -1,5 +1,39 @@
-index.ts(5,34): error TS2552: Cannot find name 'Readable'. Did you mean '_Readable'?
-index.ts(9,39): error TS2552: Cannot find name 'Readable'. Did you mean '_Readable'?
-index.ts(13,28): error TS2552: Cannot find name 'Readable'. Did you mean '_Readable'?
-index.ts(13,44): error TS2304: Cannot find name 'ReadableOptions'.
+index.ts(6,16): error TS2339: Property 'setHeader' does not exist on type 'ReadableStream<any>'.
+index.ts(6,43): error TS2339: Property 'abort' does not exist on type 'ReadableStream<any>'.
+index.ts(10,16): error TS2339: Property 'stdio' does not exist on type 'ReadableStream<any>'.
+index.ts(10,46): error TS2339: Property 'stdio' does not exist on type 'ReadableStream<any>'.
+index.ts(10,63): error TS2339: Property 'stdio' does not exist on type 'ReadableStream<any>'.
+index.ts(17,18): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type 'Function' is not assignable to parameter of type '(...args: any[]) => unknown'.
+      Type 'Function' provides no match for the signature '(...args: any[]): unknown'.
+index.ts(19,18): error TS2339: Property '_writableState' does not exist on type 'ReadableStream<any>'.
+index.ts(20,18): error TS2339: Property '_readableState' does not exist on type 'ReadableStream<any>'.
+index.ts(21,69): error TS2339: Property 'readable' does not exist on type 'ReadableStream<any>'.
+index.ts(22,69): error TS2339: Property 'writable' does not exist on type 'ReadableStream<any>'.
+index.ts(26,15): error TS2339: Property 'writable' does not exist on type 'ReadableStream<any>'.
+index.ts(58,10): error TS2339: Property 'req' does not exist on type 'ReadableStream<any>'.
+index.ts(62,10): error TS2339: Property 'on' does not exist on type 'ReadableStream<any>'.
+index.ts(63,10): error TS2339: Property 'on' does not exist on type 'ReadableStream<any>'.
+index.ts(64,14): error TS2339: Property 'req' does not exist on type 'ReadableStream<any>'.
+index.ts(65,15): error TS2339: Property 'on' does not exist on type 'ReadableStream<any>'.
+index.ts(67,10): error TS2339: Property 'on' does not exist on type 'ReadableStream<any>'.
+index.ts(68,10): error TS2339: Property 'on' does not exist on type 'ReadableStream<any>'.
+index.ts(71,37): error TS2339: Property 'on' does not exist on type 'ReadableStream<any>'.
+index.ts(73,9): error TS2339: Property 'on' does not exist on type 'ReadableStream<any>'.
+index.ts(74,9): error TS2339: Property 'on' does not exist on type 'ReadableStream<any>'.
+index.ts(75,35): error TS2339: Property 'on' does not exist on type 'ReadableStream<any>'.
+index.ts(76,9): error TS2339: Property 'on' does not exist on type 'ReadableStream<any>'.
+index.ts(80,10): error TS2339: Property 'removeListener' does not exist on type 'ReadableStream<any>'.
+index.ts(81,10): error TS2339: Property 'removeListener' does not exist on type 'ReadableStream<any>'.
+index.ts(82,10): error TS2339: Property 'removeListener' does not exist on type 'ReadableStream<any>'.
+index.ts(83,14): error TS2339: Property 'req' does not exist on type 'ReadableStream<any>'.
+index.ts(83,26): error TS2339: Property 'req' does not exist on type 'ReadableStream<any>'.
+index.ts(84,10): error TS2339: Property 'removeListener' does not exist on type 'ReadableStream<any>'.
+index.ts(85,10): error TS2339: Property 'removeListener' does not exist on type 'ReadableStream<any>'.
+index.ts(86,10): error TS2339: Property 'removeListener' does not exist on type 'ReadableStream<any>'.
+index.ts(87,10): error TS2339: Property 'removeListener' does not exist on type 'ReadableStream<any>'.
+index.ts(88,10): error TS2339: Property 'removeListener' does not exist on type 'ReadableStream<any>'.
+index.ts(89,10): error TS2339: Property 'removeListener' does not exist on type 'ReadableStream<any>'.
+index.ts(90,10): error TS2339: Property 'removeListener' does not exist on type 'ReadableStream<any>'.
 

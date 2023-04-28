@@ -32,7 +32,6 @@ benchmark/code/switch.ts(92,10): error TS2393: Duplicate function implementation
 benchmark/code/switch.ts(96,10): error TS2393: Duplicate function implementation.
 benchmark/code/switch.ts(100,10): error TS2393: Duplicate function implementation.
 benchmark/code/switch.ts(111,10): error TS2393: Duplicate function implementation.
-benchmark/index.ts(11,25): error TS2304: Cannot find name 'WebpackStats'.
 browser.ts(1,107): error TS2304: Cannot find name 'define'.
 browser.ts(1,128): error TS2304: Cannot find name 'define'.
 browser.ts(1,140): error TS2304: Cannot find name 'define'.
@@ -48,6 +47,9 @@ browser.ts(59,10): error TS2678: Type '"[object Map Iterator]"' is not comparabl
 browser.ts(60,10): error TS2678: Type '"[object Set Iterator]"' is not comparable to type '"string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function"'.
 browser.ts(61,10): error TS2678: Type '"[object String Iterator]"' is not comparable to type '"string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function"'.
 browser.ts(62,10): error TS2678: Type '"[object Array Iterator]"' is not comparable to type '"string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function"'.
+browser.ts(84,21): error TS2339: Property 'toDateString' does not exist on type 'unknown'.
+browser.ts(85,19): error TS2339: Property 'getDate' does not exist on type 'unknown'.
+browser.ts(86,19): error TS2339: Property 'setDate' does not exist on type 'unknown'.
 index.ts(1,5): error TS2300: Duplicate identifier 'toString'.
 index.ts(56,10): error TS2678: Type '"[object Object]"' is not comparable to type '"string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function"'.
 index.ts(58,10): error TS2678: Type '"[object Map Iterator]"' is not comparable to type '"string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function"'.
@@ -55,6 +57,9 @@ index.ts(59,10): error TS2678: Type '"[object Set Iterator]"' is not comparable 
 index.ts(60,10): error TS2678: Type '"[object String Iterator]"' is not comparable to type '"string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function"'.
 index.ts(61,10): error TS2678: Type '"[object Array Iterator]"' is not comparable to type '"string" | "number" | "bigint" | "boolean" | "symbol" | "undefined" | "object" | "function"'.
 index.ts(68,10): error TS2393: Duplicate function implementation.
+index.ts(83,21): error TS2339: Property 'toDateString' does not exist on type 'unknown'.
+index.ts(84,19): error TS2339: Property 'getDate' does not exist on type 'unknown'.
+index.ts(85,19): error TS2339: Property 'setDate' does not exist on type 'unknown'.
 index.ts(96,10): error TS2393: Duplicate function implementation.
 index.ts(100,10): error TS2393: Duplicate function implementation.
 index.ts(124,10): error TS2393: Duplicate function implementation.

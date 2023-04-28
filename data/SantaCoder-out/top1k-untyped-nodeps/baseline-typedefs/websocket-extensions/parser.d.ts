@@ -2,6 +2,6 @@ declare var TOKEN: RegExp, NOTOKEN: RegExp, QUOTED: RegExp, PARAM: RegExp, EXT: 
 declare var hasOwnProperty: (v: PropertyKey) => boolean;
 declare var Parser: {
     parseHeader: (header: string) => any;
-    serializeParams: (name: string, params: any) => string;
+    serializeParams: (name: string, params: any[]) => string;
 };
 declare var Offers: () => void;

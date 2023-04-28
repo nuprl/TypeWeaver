@@ -1,15 +1,13 @@
 bench/colors.ts(1,7): error TS2451: Cannot redeclare block-scoped variable 'chalk'.
 bench/colors.ts(4,7): error TS2451: Cannot redeclare block-scoped variable 'colors'.
 bench/colors.ts(5,7): error TS2451: Cannot redeclare block-scoped variable 'kleur'.
-bench/colors.ts(60,23): error TS2304: Cannot find name 'Lib'.
-bench/colors.ts(60,23): error TS4078: Parameter 'lib' of exported function has or is using private name 'Lib'.
 bench/dryrun.ts(8,7): error TS2451: Cannot redeclare block-scoped variable 'color'.
 bench/load.ts(2,7): error TS2451: Cannot redeclare block-scoped variable 'chalk'.
 bench/load.ts(6,7): error TS2451: Cannot redeclare block-scoped variable 'kleur'.
 bench/load.ts(10,7): error TS2451: Cannot redeclare block-scoped variable 'colors'.
 bench/load.ts(14,7): error TS2451: Cannot redeclare block-scoped variable 'color'.
-build/index.ts(3,26): error TS2552: Cannot find name 'IFile'. Did you mean 'File'?
-build/index.ts(3,26): error TS4078: Parameter 'file' of exported function has or is using private name 'IFile'.
-build/index.ts(3,39): error TS2304: Cannot find name 'ITransformCallback'.
-build/index.ts(3,39): error TS4078: Parameter 'next' of exported function has or is using private name 'ITransformCallback'.
+build/index.ts(3,26): error TS2304: Cannot find name 'Vinyl'.
+build/index.ts(3,26): error TS4078: Parameter 'file' of exported function has or is using private name 'Vinyl'.
+build/index.ts(13,24): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Function'.
+build/index.ts(14,25): error TS2345: Argument of type 'string' is not assignable to parameter of type 'Function'.
 

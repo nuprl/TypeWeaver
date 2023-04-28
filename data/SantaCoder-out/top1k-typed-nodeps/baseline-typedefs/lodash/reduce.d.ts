@@ -1,2 +1,2 @@
-declare function reduce(collection: any, iteratee: any, accumulator: any): any;
+declare function reduce(collection: any[], iteratee: Function, accumulator: any): any;
 export default reduce;

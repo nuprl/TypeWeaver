@@ -1,2 +1,2 @@
-declare var Cell: (tuple: any) => void;
+declare var Cell: (tuple: any[]) => void;
 export default Cell;

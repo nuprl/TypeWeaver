@@ -1,1 +1,1 @@
-export default function reject(eachfn: any, arr: any, _iteratee: any, callback: any): void;
+export default function reject(eachfn: Function, arr: any[], _iteratee: Function, callback: Function): void;

@@ -1,2 +1,2 @@
-declare function toLength(value: number): number;
+declare function toLength(value: any): any;
 export default toLength;

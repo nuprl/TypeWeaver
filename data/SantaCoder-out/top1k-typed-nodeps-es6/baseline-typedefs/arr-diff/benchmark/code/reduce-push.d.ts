@@ -1,1 +1,1 @@
-export default function diff(arr: Array<any>, arrays: Array<Array<any>>): any;
+export default function diff(arr: any[], arrays: any[][]): any;

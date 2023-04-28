@@ -1,15 +1,9 @@
 lib/ast.ts(30,22): error TS2339: Property 'type' does not exist on type 'Node'.
-lib/ast.ts(54,22): error TS2339: Property 'type' does not exist on type 'Node'.
+lib/ast.ts(52,41): error TS2503: Cannot find namespace 't'.
 lib/ast.ts(66,22): error TS2339: Property 'type' does not exist on type 'Node'.
 lib/ast.ts(91,56): error TS2339: Property 'type' does not exist on type 'Node'.
-lib/ast.ts(95,22): error TS2339: Property 'type' does not exist on type 'Node'.
-lib/ast.ts(97,22): error TS2339: Property 'alternate' does not exist on type 'Node'.
-lib/ast.ts(98,29): error TS2339: Property 'alternate' does not exist on type 'Node'.
-lib/ast.ts(100,25): error TS2339: Property 'consequent' does not exist on type 'Node'.
-lib/ast.ts(107,25): error TS2339: Property 'body' does not exist on type 'Node'.
-lib/ast.ts(115,18): error TS2339: Property 'type' does not exist on type 'Node'.
-lib/ast.ts(118,18): error TS2339: Property 'alternate' does not exist on type 'Node'.
-lib/ast.ts(121,24): error TS2339: Property 'consequent' does not exist on type 'Node'.
+lib/ast.ts(94,38): error TS2503: Cannot find namespace 'ts'.
+lib/ast.ts(112,45): error TS2503: Cannot find namespace 'ts'.
 lib/code.ts(47,16): error TS2365: Operator '<=' cannot be applied to types 'number' and 'string'.
 lib/code.ts(47,30): error TS2365: Operator '<=' cannot be applied to types 'string' and 'number'.
 lib/code.ts(51,16): error TS2365: Operator '<=' cannot be applied to types 'number' and 'string'.
@@ -28,53 +22,6 @@ lib/code.ts(71,76): error TS2367: This comparison appears to be unintentional be
 lib/code.ts(72,13): error TS2365: Operator '>=' cannot be applied to types 'string' and 'number'.
 lib/code.ts(112,16): error TS2365: Operator '<' cannot be applied to types 'string' and 'number'.
 lib/code.ts(112,101): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
-lib/code.ts(116,16): error TS2365: Operator '<' cannot be applied to types 'string' and 'number'.
-lib/code.ts(116,103): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 lib/code.ts(120,16): error TS2365: Operator '<' cannot be applied to types 'string' and 'number'.
 lib/code.ts(120,101): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
-lib/keyword.ts(32,14): error TS2678: Type 'string' is not comparable to type 'number'.
-lib/keyword.ts(33,14): error TS2678: Type 'string' is not comparable to type 'number'.
-lib/keyword.ts(34,14): error TS2678: Type 'string' is not comparable to type 'number'.
-lib/keyword.ts(35,14): error TS2678: Type 'string' is not comparable to type 'number'.
-lib/keyword.ts(36,14): error TS2678: Type 'string' is not comparable to type 'number'.
-lib/keyword.ts(37,14): error TS2678: Type 'string' is not comparable to type 'number'.
-lib/keyword.ts(38,14): error TS2678: Type 'string' is not comparable to type 'number'.
-lib/keyword.ts(39,14): error TS2678: Type 'string' is not comparable to type 'number'.
-lib/keyword.ts(51,29): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
-lib/keyword.ts(59,20): error TS2339: Property 'length' does not exist on type 'number'.
-lib/keyword.ts(61,21): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
-lib/keyword.ts(61,38): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
-lib/keyword.ts(61,55): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
-lib/keyword.ts(63,21): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
-lib/keyword.ts(63,39): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
-lib/keyword.ts(63,57): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
-lib/keyword.ts(63,75): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
-lib/keyword.ts(65,21): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
-lib/keyword.ts(65,40): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
-lib/keyword.ts(65,59): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
-lib/keyword.ts(66,18): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
-lib/keyword.ts(66,37): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
-lib/keyword.ts(66,56): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
-lib/keyword.ts(68,21): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
-lib/keyword.ts(68,41): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
-lib/keyword.ts(68,61): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
-lib/keyword.ts(69,18): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
-lib/keyword.ts(69,38): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
-lib/keyword.ts(69,58): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
-lib/keyword.ts(70,18): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
-lib/keyword.ts(70,38): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
-lib/keyword.ts(72,21): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
-lib/keyword.ts(72,42): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
-lib/keyword.ts(72,63): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
-lib/keyword.ts(73,18): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
-lib/keyword.ts(73,39): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
-lib/keyword.ts(73,60): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
-lib/keyword.ts(75,21): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
-lib/keyword.ts(75,43): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
-lib/keyword.ts(75,65): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
-lib/keyword.ts(77,21): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
-lib/keyword.ts(77,44): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
-lib/keyword.ts(77,67): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
-lib/keyword.ts(79,21): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
-lib/keyword.ts(90,81): error TS2345: Argument of type 'string' is not assignable to parameter of type 'number'.
 

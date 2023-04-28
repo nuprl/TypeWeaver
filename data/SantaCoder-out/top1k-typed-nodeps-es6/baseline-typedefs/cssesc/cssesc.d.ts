@@ -1,2 +1,2 @@
-declare var cssesc: (string: string, options: CSSEscOptions) => string;
+declare var cssesc: (string: string, options: Options) => string;
 export default cssesc;

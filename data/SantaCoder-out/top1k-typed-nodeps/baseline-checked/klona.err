@@ -1,14 +1,14 @@
 bench/fixtures/default.ts(3,8): error TS2339: Property 'value' does not exist on type 'Test'.
 bench/fixtures/default.ts(4,8): error TS2339: Property 'items' does not exist on type 'Test'.
 bench/fixtures/default.ts(7,15): error TS2339: Property 'value' does not exist on type 'Test'.
-bench/index.ts(82,2): error TS2345: Argument of type '{ 'JSON.stringify': (x: any) => any; lodash: any; rfdc: any; clone: any; 'clone/include': (x: any) => any; 'clone-deep': any; 'deep-copy': any; 'klona/full': any; klona: any; 'klona/lite': any; 'klona/json': any; }' is not assignable to parameter of type 'string[]'.
-  Object literal may only specify known properties, and ''JSON.stringify'' does not exist in type 'string[]'.
-bench/index.ts(96,2): error TS2345: Argument of type '{ lodash: any; clone: any; 'clone/include': (x: any) => any; 'clone-deep': any; 'klona/full': any; klona: any; 'klona/lite': any; }' is not assignable to parameter of type 'string[]'.
-  Object literal may only specify known properties, and ''lodash'' does not exist in type 'string[]'.
-bench/index.ts(106,2): error TS2345: Argument of type '{ lodash: any; clone: any; 'clone/include': (x: any) => any; 'klona/full': any; klona: any; }' is not assignable to parameter of type 'string[]'.
-  Object literal may only specify known properties, and ''lodash'' does not exist in type 'string[]'.
-bench/index.ts(115,2): error TS2345: Argument of type '{ lodash: any; 'clone/include': (x: any) => any; 'klona/full': any; }' is not assignable to parameter of type 'string[]'.
-  Object literal may only specify known properties, and ''lodash'' does not exist in type 'string[]'.
+bench/index.ts(82,2): error TS2345: Argument of type '{ 'JSON.stringify': (x: any) => any; lodash: any; rfdc: any; clone: any; 'clone/include': (x: any) => any; 'clone-deep': any; 'deep-copy': any; 'klona/full': any; klona: any; 'klona/lite': any; 'klona/json': any; }' is not assignable to parameter of type 'Function[]'.
+  Object literal may only specify known properties, and ''JSON.stringify'' does not exist in type 'Function[]'.
+bench/index.ts(96,2): error TS2345: Argument of type '{ lodash: any; clone: any; 'clone/include': (x: any) => any; 'clone-deep': any; 'klona/full': any; klona: any; 'klona/lite': any; }' is not assignable to parameter of type 'Function[]'.
+  Object literal may only specify known properties, and ''lodash'' does not exist in type 'Function[]'.
+bench/index.ts(106,2): error TS2345: Argument of type '{ lodash: any; clone: any; 'clone/include': (x: any) => any; 'klona/full': any; klona: any; }' is not assignable to parameter of type 'Function[]'.
+  Object literal may only specify known properties, and ''lodash'' does not exist in type 'Function[]'.
+bench/index.ts(115,2): error TS2345: Argument of type '{ lodash: any; 'clone/include': (x: any) => any; 'klona/full': any; }' is not assignable to parameter of type 'Function[]'.
+  Object literal may only specify known properties, and ''lodash'' does not exist in type 'Function[]'.
 bench/validate/default.ts(1,7): error TS2451: Cannot redeclare block-scoped variable 'assert'.
 bench/validate/default.ts(7,7): error TS2339: Property 'regexp' does not exist on type 'boolean'.
 bench/validate/default.ts(8,24): error TS2339: Property 'regexp' does not exist on type 'string'.
@@ -99,5 +99,18 @@ bench/validate/full.ts(80,34): error TS2339: Property 'secret' does not exist on
 bench/validate/full.ts(82,7): error TS2339: Property 'hidden2' does not exist on type 'boolean'.
 bench/validate/full.ts(83,21): error TS2339: Property 'hidden2' does not exist on type 'string'.
 bench/validate/json.ts(1,7): error TS2451: Cannot redeclare block-scoped variable 'assert'.
+bench/validate/json.ts(6,12): error TS2339: Property 'age' does not exist on type 'string'.
+bench/validate/json.ts(7,25): error TS2339: Property 'age' does not exist on type 'string'.
+bench/validate/json.ts(9,12): error TS2339: Property 'details' does not exist on type 'string'.
+bench/validate/json.ts(10,25): error TS2339: Property 'details' does not exist on type 'string'.
+bench/validate/json.ts(12,12): error TS2339: Property 'friends' does not exist on type 'string'.
+bench/validate/json.ts(13,21): error TS2339: Property 'friends' does not exist on type 'string'.
 bench/validate/lite.ts(1,7): error TS2451: Cannot redeclare block-scoped variable 'assert'.
+bench/validate/lite.ts(7,25): error TS2339: Property 'age' does not exist on type 'string'.
+bench/validate/lite.ts(10,25): error TS2339: Property 'details' does not exist on type 'string'.
+bench/validate/lite.ts(13,21): error TS2339: Property 'friends' does not exist on type 'string'.
+bench/validate/lite.ts(15,11): error TS2339: Property 'joined' does not exist on type 'string'.
+bench/validate/lite.ts(16,28): error TS2339: Property 'joined' does not exist on type 'string'.
+bench/validate/lite.ts(19,28): error TS2339: Property 'joined' does not exist on type 'string'.
+bench/validate/lite.ts(22,25): error TS2339: Property 'locales' does not exist on type 'string'.
 

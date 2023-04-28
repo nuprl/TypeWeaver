@@ -1,1 +1,1 @@
-export default function pTry(function_: any, ...arguments_: any[]): Promise<unknown>;
+export default function pTry(function_: Function, ...arguments_: any[]): Promise<unknown>;

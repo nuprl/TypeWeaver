@@ -6,7 +6,7 @@ declare const punycode: {
         encode: (array: any) => string;
     };
     decode: (input: string) => string;
-    encode: (input: number) => string;
+    encode: (input: string) => string;
     toASCII: (input: string) => string;
     toUnicode: (input: string) => string;
 };

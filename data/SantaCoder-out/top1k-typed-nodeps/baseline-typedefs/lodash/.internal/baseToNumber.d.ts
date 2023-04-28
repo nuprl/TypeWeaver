@@ -1,2 +1,2 @@
-declare function baseToNumber(value: string): number;
+declare function baseToNumber(value: unknown): number;
 export default baseToNumber;
