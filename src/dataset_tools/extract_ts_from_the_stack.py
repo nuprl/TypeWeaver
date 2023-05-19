@@ -27,11 +27,11 @@ REQUIRE_RE = re.compile("^.*\s+require\s*\(.+\)")
 EXPORT_RE = re.compile("export[^\w_$]")
 EXPORT_RE2 = re.compile("export[^\w_$]\s*(function|class|interface|type|enum|const|declare|default|async)")
 
-Language.build_library(
-    f"{Path(__file__).parent.parent}/build/languages.so",
-    [f"{Path(__file__).parent.parent}/tree-sitter-typescript/typescript"]
-)
-TS_LANGUAGE = Language(f"{Path(__file__).parent.parent}/build/languages.so", 'typescript')
+LANGUAGES_SO = f"{Path(__file__).parent.parent}/build/languages.so"
+TREE_SITTER_TS = f"{Path(__file__).parent.parent}/tree-sitter-typescript/typescript"
+
+Language.build_library(LANGUAGES_SO, [TREE_SITTER_TS])
+TS_LANGUAGE = Language(LANGUAGES_SO, 'typescript')
 PARSER = Parser()
 PARSER.set_language(TS_LANGUAGE)
 
@@ -100,6 +100,10 @@ def parse_args():
         nargs="?",
         const=DEFAULT_CUTOFF.strftime('%Y-%m-%d'),
         help=f"filter dataset for files after the specified cutoff date, in YYYY-MM-DD format; defaults to {DEFAULT_CUTOFF.strftime('%Y-%m-%d')}")
+    group.add_argument(
+        "--invert-cutoff",
+        action="store_true",
+        help="invert the cutoff to keep files before the cutoff date")
     group.add_argument(
         "--unannotate",
         action="store_true",
@@ -778,6 +782,7 @@ def main():
     from_hf = args.from_hf
     output_dir = args.output
     cutoff = args.cutoff
+    invert_cutoff = args.invert_cutoff
     sample = args.sample
 
     dataset = load(from_hf, dataset_dir, workers)
@@ -807,9 +812,14 @@ def main():
         dataset = filter_quality(dataset, args)
 
     if cutoff:
-        print(f"Filtering for files after the {cutoff.strftime('%Y-%m-%d')} cutoff", flush=True)
-        dataset = dataset.filter(lambda d: is_after_cutoff(d, cutoff),
-                                num_proc=workers)
+        if invert_cutoff:
+            print(f"Filtering for files before the {cutoff.strftime('%Y-%m-%d')} cutoff", flush=True)
+            dataset = dataset.filter(lambda d: not is_after_cutoff(d, cutoff),
+                                    num_proc=workers)
+        else:
+            print(f"Filtering for files after the {cutoff.strftime('%Y-%m-%d')} cutoff", flush=True)
+            dataset = dataset.filter(lambda d: is_after_cutoff(d, cutoff),
+                                    num_proc=workers)
         print("Size after filtering:", len(dataset))
 
     if args.unannotate:
