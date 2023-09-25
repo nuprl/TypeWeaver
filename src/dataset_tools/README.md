@@ -5,9 +5,13 @@ A collection of scripts and tools for building datasets.
 These are ad-hoc scripts written to automate tasks, and have not been tested for
 reusability. Nevertheless, they may still be helpful.
 
+* `bundle_dataset_projects.py`: transforms a dataset of JavaScript packages into
+  a dataset of single-file projects, by bundling each package into a single file.
+  * Uses `rollup` and the custom plugin `rollup-plugin-insert-filename.mjs`.
+
 * `check_dataset_in_definitely_typed.py`: checks a JavaScript dataset against
   the DefinitelyTyped repository, to determine if the package and its
-  dependencies have type definitions in DefinitelyTyped
+  dependencies have type definitions in DefinitelyTyped.
 
 * `check_dataset_with_tsc.py`: checks that a dataset (JavaScript or TypeScript)
   is syntactically valid, by using `tsc`. Does not perform type checking.
