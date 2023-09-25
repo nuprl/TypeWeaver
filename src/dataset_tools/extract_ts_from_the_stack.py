@@ -239,7 +239,18 @@ def run_tsc(key, content):
         tmpfile = Path(f.name)
 
         # Run tsc on temp file
-        args = [TSC_PATH, "--noEmit", "--lib", "es2021", tmpfile]
+        args = [
+            TSC_PATH,
+            "--noEmit",
+            "--esModuleInterop",
+            "--moduleResolution",
+            "node",
+            "--target",
+            "es6",
+            "--lib",
+            "es2021,dom",
+            tmpfile
+        ]
         result = subprocess.run(args, stdout=PIPE, stderr=PIPE, encoding="utf-8", cwd=tmpfile.parent)
 
         return key, result.returncode == 0
