@@ -1,7 +1,7 @@
 # TypeWeaver
 
 This is the code for the ECOOP 2023 paper:
-_Do Machine Learning Models Produce TypeScript Types that Type Check?_
+[_Do Machine Learning Models Produce TypeScript Types that Type Check?_](https://doi.org/10.4230/LIPIcs.ECOOP.2023.37)
 
 The [`main`](https://github.com/nuprl/TypeWeaver/tree/main) branch of this
 repository is the latest development branch.
