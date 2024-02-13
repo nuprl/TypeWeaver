@@ -494,7 +494,7 @@ error_codes_summary.csv <- error_codes_summary %>%
   format_numbers()
 stopifnot(nrow(error_codes_summary.csv) == 12)
 
-save.table(error_codes_summary.csv)
+save.csv(error_codes_summary.csv)
 
 ################################################################################
 # Graph: top 10 error codes
@@ -531,7 +531,7 @@ typecheck_comparison.csv <- typecheck_data_pre %>%
   pivot_data() %>%
   format_numbers()
 
-save.table(typecheck_comparison.csv)
+save.csv(typecheck_comparison.csv)
 
 ################################################################################
 # Table: percent of files with no errors, pre-es6 vs es6
@@ -549,7 +549,7 @@ errorfree_files_comparison.csv <-
   pivot_data() %>%
   format_numbers()
 
-save.table(errorfree_files_comparison.csv)
+save.csv(errorfree_files_comparison.csv)
 
 ################################################################################
 # Table: percent of correct type annotations, pre-es6 vs es6
@@ -565,7 +565,7 @@ accuracy_comparison.csv <- accuracy_data_full %>%
   pivot_data() %>%
   format_numbers()
 
-save.table(accuracy_comparison.csv)
+save.csv(accuracy_comparison.csv)
 
 ################################################################################
 # Graph: comparing type checking, before and after es6 transformation
