@@ -1,0 +1,20 @@
+export const mm: typeof import("minimatch");
+export const mi: {
+    (list: string | string[], patterns: string | string[], options: any): any[];
+    match: any;
+    matcher(pattern: string, options: any): Function;
+    isMatch(str: string, patterns: string | any[], options: any): boolean;
+    any: (str: string, patterns: string | any[], options: any) => boolean;
+    not(list: any[], patterns: string | any[], options?: any): any[];
+    contains(str: string, pattern: any, options: any): boolean;
+    matchKeys(obj: any, patterns: string | any[], options: any): any;
+    some(list: string | any[], patterns: string | any[], options: any): boolean;
+    every(list: string | any[], patterns: string | any[], options: any): boolean;
+    all(str: string | any[], patterns: string | any[], options: any): boolean;
+    capture(glob: string, input: string, options: any): any[];
+    makeRe(...args: any[]): RegExp;
+    scan(...args: any[]): any;
+    parse(patterns: any, options: any): any;
+    braces(pattern: string, options: any): any[];
+    braceExpand(pattern: any, options: any): any[];
+};

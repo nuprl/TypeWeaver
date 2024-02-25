@@ -1,0 +1,18 @@
+export function stringifyRequest(loaderContext: any, request: any): string;
+export function getImportInsertStyleElementCode(esModule: any, loaderContext: any): string;
+export function getImportInsertBySelectorCode(esModule: any, loaderContext: any, insertType: any, options: any): string;
+export function getImportStyleContentCode(esModule: any, loaderContext: any, request: any): string;
+export function getImportStyleDomAPICode(esModule: any, loaderContext: any, isSingleton: any, isAuto: any): string;
+export function getImportStyleAPICode(esModule: any, loaderContext: any): string;
+export function getImportLinkContentCode(esModule: any, loaderContext: any, request: any): string;
+export function getImportLinkAPICode(esModule: any, loaderContext: any): string;
+export function getStyleHmrCode(esModule: any, loaderContext: any, request: any, lazy: any): string;
+export function getLinkHmrCode(esModule: any, loaderContext: any, request: any): string;
+export function getdomAPI(isAuto: any): "isOldIE() ? domAPISingleton : domAPI" | "domAPI";
+export function getImportIsOldIECode(esModule: any, loaderContext: any): string;
+export function getStyleTagTransformFn(options: any, isSingleton: any): string;
+export function getExportStyleCode(esModule: any, loaderContext: any, request: any): string;
+export function getExportLazyStyleCode(esModule: any, loaderContext: any, request: any): string;
+export function getSetAttributesCode(esModule: any, loaderContext: any, options: any): string;
+export function getInsertOptionCode(insertType: any, options: any): string;
+export function getStyleTagTransformFnCode(esModule: any, loaderContext: any, options: any, isSingleton: any, styleTagTransformType: any): string;

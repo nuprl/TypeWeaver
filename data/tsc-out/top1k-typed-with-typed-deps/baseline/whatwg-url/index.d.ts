@@ -1,0 +1,1 @@
+export { parseURL, basicURLParse, serializeURL, serializePath, serializeHost, serializeInteger, serializeURLOrigin, setTheUsername, setThePassword, cannotHaveAUsernamePasswordPort, hasAnOpaquePath, percentDecodeString, percentDecodeBytes };

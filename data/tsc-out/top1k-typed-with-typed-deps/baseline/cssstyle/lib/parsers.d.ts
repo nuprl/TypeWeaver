@@ -1,0 +1,31 @@
+export namespace TYPES {
+    const INTEGER: number;
+    const NUMBER: number;
+    const LENGTH: number;
+    const PERCENT: number;
+    const URL: number;
+    const COLOR: number;
+    const STRING: number;
+    const ANGLE: number;
+    const KEYWORD: number;
+    const NULL_OR_EMPTY_STR: number;
+    const CALC: number;
+}
+export function valueType(val: any): number;
+export function parseInteger(val: any): any;
+export function parseNumber(val: any): any;
+export function parseLength(val: any): any;
+export function parsePercent(val: any): any;
+export function parseMeasurement(val: any): any;
+export function parseUrl(val: any): any;
+export function parseString(val: any): any;
+export function parseColor(val: any): any;
+export function parseAngle(val: any): any;
+export function parseKeyword(val: any, valid_keywords: any): any;
+export function shorthandParser(v: any, shorthand_for: any): {};
+export function shorthandSetter(property: any, shorthand_for: any): (v: any) => void;
+export function shorthandGetter(property: any, shorthand_for: any): () => any;
+export function implicitSetter(property_before: any, property_after: any, isValid: any, parser: any): (v: any) => string;
+export function subImplicitSetter(prefix: any, part: any, isValid: any, parser: any): (v: any) => any;
+export function camelToDashed(camel_case: any): any;
+export function dashedToCamelCase(dashed: any): string;

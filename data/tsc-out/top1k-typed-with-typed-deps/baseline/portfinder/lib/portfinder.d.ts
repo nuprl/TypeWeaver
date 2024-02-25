@@ -1,0 +1,13 @@
+export const basePort: any;
+export function setBasePort(port: any): void;
+export const highestPort: any;
+export function setHighestPort(port: any): void;
+export const basePath: "/tmp/portfinder";
+export function getPort(options: any, callback: any): any;
+export function getPortPromise(options: any): Promise<any>;
+export function getPorts(count: any, options: any, callback: any): void;
+export function getSocket(options: any, callback: any): void;
+export function nextPort(port: any): any;
+export function nextSocket(socketPath: any): string;
+export const _defaultHosts: string[];
+export { port as basePort, port as highestPort };

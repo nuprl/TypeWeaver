@@ -1,0 +1,11 @@
+export function isObject(val: any): boolean;
+export function hasRegexChars(str: any): any;
+export function isRegexChar(str: any): any;
+export function escapeRegex(str: any): any;
+export function toPosixSlashes(str: any): any;
+export function removeBackslashes(str: any): any;
+export function supportsLookbehinds(): boolean;
+export function isWindows(options: any): any;
+export function escapeLast(input: any, char: any, lastIdx: any): any;
+export function removePrefix(input: any, state?: {}): any;
+export function wrapOutput(input: any, state?: {}, options?: {}): string;

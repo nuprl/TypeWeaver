@@ -1,0 +1,16 @@
+export const encodings: any;
+export const defaultCharUnicode: string;
+export const defaultCharSingleByte: string;
+export function encode(str: any, encoding: any, options: any): any;
+export function decode(buf: any, encoding: any, options: any): any;
+export function encodingExists(enc: any): boolean;
+export function toEncoding(str: any, encoding: any, options: any): any;
+export function fromEncoding(buf: any, encoding: any, options: any): any;
+export const _codecDataCache: {};
+export function getCodec(encoding: any): any;
+export function _canonicalizeEncoding(encoding: any): string;
+export function getEncoder(encoding: any, options: any): any;
+export function getDecoder(encoding: any, options: any): any;
+export function enableStreamingAPI(stream_module: any): void;
+export function encodeStream(): never;
+export function decodeStream(): never;
