@@ -1,0 +1,20 @@
+lib/DirectoryWatcher.js(66,65): error TS1005: '>' expected.
+lib/DirectoryWatcher.js(114,18): error TS2339: Property 'on' does not exist on type 'Watcher | { close: () => void; }'.
+  Property 'on' does not exist on type '{ close: () => void; }'.
+lib/DirectoryWatcher.js(115,18): error TS2339: Property 'on' does not exist on type 'Watcher | { close: () => void; }'.
+  Property 'on' does not exist on type '{ close: () => void; }'.
+lib/DirectoryWatcher.js(197,4): error TS2345: Argument of type '{ safeTime: number; accuracy: number; timestamp: any; }' is not assignable to parameter of type '{ safeTime: number; timestamp: number; }'.
+  Object literal may only specify known properties, and 'accuracy' does not exist in type '{ safeTime: number; timestamp: number; }'.
+lib/LinkResolver.js(35,4): error TS4104: The type 'readonly string[]' is 'readonly' and cannot be assigned to the mutable type 'string[]'.
+lib/LinkResolver.js(93,4): error TS4104: The type 'readonly string[]' is 'readonly' and cannot be assigned to the mutable type 'string[]'.
+lib/reducePlan.d.ts(2,1): error TS2309: An export assignment cannot be used in a module with other exported elements.
+lib/reducePlan.d.ts(6,15): error TS2314: Generic type 'TreeNode' requires 1 type argument(s).
+lib/reducePlan.js(13,15): error TS2314: Generic type 'TreeNode' requires 1 type argument(s).
+lib/reducePlan.js(14,15): error TS2314: Generic type 'TreeNode' requires 1 type argument(s).
+lib/reducePlan.js(22,31): error TS1005: '>' expected.
+lib/watchEventSource.js(110,31): error TS2345: Argument of type 'string | Buffer' is not assignable to parameter of type 'string'.
+  Type 'Buffer' is not assignable to type 'string'.
+lib/watchEventSource.js(123,44): error TS2345: Argument of type 'string | Buffer' is not assignable to parameter of type 'string'.
+  Type 'Buffer' is not assignable to type 'string'.
+playground/watch-folder.js(4,25): error TS2307: Cannot find module '../' or its corresponding type declarations.
+

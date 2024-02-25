@@ -1,0 +1,11 @@
+export function isC0ControlPercentEncode(c: any): boolean;
+export function isFragmentPercentEncode(c: any): boolean;
+export function isQueryPercentEncode(c: any): boolean;
+export function isSpecialQueryPercentEncode(c: any): boolean;
+export function isPathPercentEncode(c: any): boolean;
+export function isUserinfoPercentEncode(c: any): boolean;
+export function isURLEncodedPercentEncode(c: any): boolean;
+export function percentDecodeString(input: any): Uint8Array;
+export function percentDecodeBytes(input: any): Uint8Array;
+export function utf8PercentEncodeString(input: any, percentEncodePredicate: any, spaceAsPlus?: boolean): string;
+export function utf8PercentEncodeCodePoint(codePoint: any, percentEncodePredicate: any): string;

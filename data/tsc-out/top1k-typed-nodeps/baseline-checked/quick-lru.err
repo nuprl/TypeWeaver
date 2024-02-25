@@ -1,0 +1,17 @@
+index.js(115,2): error TS2416: Property 'set' in type 'QuickLRU' is not assignable to the same property in base type 'Map<any, any>'.
+  Type '(key: any, value: any, { maxAge }?: { maxAge?: any; }) => void' is not assignable to type '(key: any, value: any) => this'.
+    Type 'void' is not assignable to type 'this'.
+      'this' could be instantiated with an arbitrary type which could be unrelated to 'void'.
+index.js(203,4): error TS2416: Property '[Symbol.iterator]' in type 'QuickLRU' is not assignable to the same property in base type 'Map<any, any>'.
+  Type '() => Generator<any[], void, unknown>' is not assignable to type '() => IterableIterator<[any, any]>'.
+    Call signature return types 'Generator<any[], void, unknown>' and 'IterableIterator<[any, any]>' are incompatible.
+      The types returned by 'next(...)' are incompatible between these types.
+        Type 'IteratorResult<any[], void>' is not assignable to type 'IteratorResult<[any, any], any>'.
+          Type 'IteratorYieldResult<any[]>' is not assignable to type 'IteratorResult<[any, any], any>'.
+            Type 'IteratorYieldResult<any[]>' is not assignable to type 'IteratorYieldResult<[any, any]>'.
+              Type 'any[]' is not assignable to type '[any, any]'.
+                Target requires 2 element(s) but source may have fewer.
+index.js(268,2): error TS2416: Property 'entries' in type 'QuickLRU' is not assignable to the same property in base type 'Map<any, any>'.
+  Type '() => Generator<any[], void, unknown>' is not assignable to type '() => IterableIterator<[any, any]>'.
+    Type 'Generator<any[], void, unknown>' is not assignable to type 'IterableIterator<[any, any]>'.
+

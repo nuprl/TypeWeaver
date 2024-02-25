@@ -1,0 +1,13 @@
+export const lexer: any;
+export const tokenize: any;
+export const parse: any;
+export const generate: any;
+export const walk: any;
+export const find: any;
+export const findLast: any;
+export const findAll: any;
+export const fromPlainObject: any;
+export const toPlainObject: any;
+import specificity from "./restructure/prepare/specificity.js";
+import compress from "./compress.js";
+export { specificity, compress };

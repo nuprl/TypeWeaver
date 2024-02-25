@@ -1,0 +1,55 @@
+index.js(8,26): error TS2307: Cannot find module './dist/regexp-tree' or its corresponding type declarations.
+scripts/build.js(6,24): error TS2307: Cannot find module 'colors' or its corresponding type declarations.
+scripts/build.js(7,23): error TS2307: Cannot find module 'shelljs' or its corresponding type declarations.
+src/compat-transpiler/index.js(50,5): error TS18048: 'result' is possibly 'undefined'.
+src/interpreter/finite-automaton/dfa/dfa-minimizer.js(31,5): error TS2322: Type 'number' is not assignable to type 'string'.
+src/interpreter/finite-automaton/nfa/nfa-from-regexp.js(37,16): error TS2556: A spread argument must either have a tuple type or be passed to a rest parameter.
+src/interpreter/finite-automaton/nfa/nfa-from-regexp.js(82,20): error TS2339: Property 'parse' does not exist on type 'typeof import("/work/arjunguha-research-group/mhyee/TypeWeaver/data/tsc-out/top1k-typed-nodeps/baseline/regexp-tree/src/parser/generated/regexp-tree")'.
+src/optimizer/index.js(46,20): error TS2339: Property 'parse' does not exist on type 'typeof import("/work/arjunguha-research-group/mhyee/TypeWeaver/data/tsc-out/top1k-typed-nodeps/baseline/regexp-tree/src/parser/generated/regexp-tree")'.
+src/optimizer/transforms/char-class-to-meta-transform.js(98,16): error TS2339: Property 'replace' does not exist on type 'never'.
+src/optimizer/transforms/char-class-to-meta-transform.js(106,21): error TS2339: Property 'remove' does not exist on type 'never'.
+src/optimizer/transforms/char-class-to-meta-transform.js(109,21): error TS2339: Property 'remove' does not exist on type 'never'.
+src/optimizer/transforms/char-class-to-meta-transform.js(111,20): error TS2339: Property 'remove' does not exist on type 'never'.
+src/optimizer/transforms/char-class-to-meta-transform.js(113,17): error TS2339: Property 'remove' does not exist on type 'never'.
+src/optimizer/transforms/char-class-to-meta-transform.js(116,17): error TS2339: Property 'remove' does not exist on type 'never'.
+src/optimizer/transforms/index.js(8,26): error TS2769: No overload matches this call.
+  Overload 1 of 4, '(iterable?: Iterable<readonly [string, typeof import("/work/arjunguha-research-group/mhyee/TypeWeaver/data/tsc-out/top1k-typed-nodeps/baseline/regexp-tree/src/optimizer/transforms/char-code-to-simple-char-transform")]>): Map<...>', gave the following error.
+    Argument of type '([string, typeof import("/work/arjunguha-research-group/mhyee/TypeWeaver/data/tsc-out/top1k-typed-nodeps/baseline/regexp-tree/src/optimizer/transforms/char-code-to-simple-char-transform")] | ... 6 more ... | [...])[]' is not assignable to parameter of type 'Iterable<readonly [string, typeof import("/work/arjunguha-research-group/mhyee/TypeWeaver/data/tsc-out/top1k-typed-nodeps/baseline/regexp-tree/src/optimizer/transforms/char-code-to-simple-char-transform")]>'.
+      The types returned by '[Symbol.iterator]().next(...)' are incompatible between these types.
+        Type 'IteratorResult<[string, typeof import("/work/arjunguha-research-group/mhyee/TypeWeaver/data/tsc-out/top1k-typed-nodeps/baseline/regexp-tree/src/optimizer/transforms/char-code-to-simple-char-transform")] | ... 6 more ... | [...], any>' is not assignable to type 'IteratorResult<readonly [string, typeof import("/work/arjunguha-research-group/mhyee/TypeWeaver/data/tsc-out/top1k-typed-nodeps/baseline/regexp-tree/src/optimizer/transforms/char-code-to-simple-char-transform")], any>'.
+          Type 'IteratorYieldResult<[string, typeof import("/work/arjunguha-research-group/mhyee/TypeWeaver/data/tsc-out/top1k-typed-nodeps/baseline/regexp-tree/src/optimizer/transforms/char-code-to-simple-char-transform")] | ... 6 more ... | [...]>' is not assignable to type 'IteratorResult<readonly [string, typeof import("/work/arjunguha-research-group/mhyee/TypeWeaver/data/tsc-out/top1k-typed-nodeps/baseline/regexp-tree/src/optimizer/transforms/char-code-to-simple-char-transform")], any>'.
+            Type 'IteratorYieldResult<[string, typeof import("/work/arjunguha-research-group/mhyee/TypeWeaver/data/tsc-out/top1k-typed-nodeps/baseline/regexp-tree/src/optimizer/transforms/char-code-to-simple-char-transform")] | ... 6 more ... | [...]>' is not assignable to type 'IteratorYieldResult<readonly [string, typeof import("/work/arjunguha-research-group/mhyee/TypeWeaver/data/tsc-out/top1k-typed-nodeps/baseline/regexp-tree/src/optimizer/transforms/char-code-to-simple-char-transform")]>'.
+              Type '[string, typeof import("/work/arjunguha-research-group/mhyee/TypeWeaver/data/tsc-out/top1k-typed-nodeps/baseline/regexp-tree/src/optimizer/transforms/char-code-to-simple-char-transform")] | ... 6 more ... | [...]' is not assignable to type 'readonly [string, typeof import("/work/arjunguha-research-group/mhyee/TypeWeaver/data/tsc-out/top1k-typed-nodeps/baseline/regexp-tree/src/optimizer/transforms/char-code-to-simple-char-transform")]'.
+                Type '[string, typeof import("/work/arjunguha-research-group/mhyee/TypeWeaver/data/tsc-out/top1k-typed-nodeps/baseline/regexp-tree/src/optimizer/transforms/char-class-remove-duplicates-transform")]' is not assignable to type 'readonly [string, typeof import("/work/arjunguha-research-group/mhyee/TypeWeaver/data/tsc-out/top1k-typed-nodeps/baseline/regexp-tree/src/optimizer/transforms/char-code-to-simple-char-transform")]'.
+                  Type at position 1 in source is not compatible with type at position 1 in target.
+                    Property 'Char' is missing in type 'typeof import("/work/arjunguha-research-group/mhyee/TypeWeaver/data/tsc-out/top1k-typed-nodeps/baseline/regexp-tree/src/optimizer/transforms/char-class-remove-duplicates-transform")' but required in type 'typeof import("/work/arjunguha-research-group/mhyee/TypeWeaver/data/tsc-out/top1k-typed-nodeps/baseline/regexp-tree/src/optimizer/transforms/char-code-to-simple-char-transform")'.
+src/parser/generated/regexp-tree.js(499,32): error TS2339: Property 'call' does not exist on type 'RegExp | (() => void)'.
+  Property 'call' does not exist on type 'RegExp'.
+src/parser/generated/regexp-tree.js(758,18): error TS2356: An arithmetic operand must be of type 'any', 'number', 'bigint' or an enum type.
+src/parser/generated/regexp-tree.js(784,11): error TS2349: This expression is not callable.
+  Not all constituents of type 'number | ((_1: any, _2: any, _3: any, _4: any, _1loc: any, _2loc: any, _3loc: any, _4loc: any) => void)' are callable.
+    Type 'number' has no call signatures.
+src/parser/index.js(13,43): error TS2339: Property 'parse' does not exist on type 'typeof import("/work/arjunguha-research-group/mhyee/TypeWeaver/data/tsc-out/top1k-typed-nodeps/baseline/regexp-tree/src/parser/generated/regexp-tree")'.
+src/parser/index.js(21,18): error TS2339: Property 'parse' does not exist on type 'typeof import("/work/arjunguha-research-group/mhyee/TypeWeaver/data/tsc-out/top1k-typed-nodeps/baseline/regexp-tree/src/parser/generated/regexp-tree")'.
+src/parser/index.js(26,18): error TS2339: Property 'setOptions' does not exist on type 'typeof import("/work/arjunguha-research-group/mhyee/TypeWeaver/data/tsc-out/top1k-typed-nodeps/baseline/regexp-tree/src/parser/generated/regexp-tree")'.
+src/regexp-tree.js(54,19): error TS2339: Property 'parse' does not exist on type 'typeof import("/work/arjunguha-research-group/mhyee/TypeWeaver/data/tsc-out/top1k-typed-nodeps/baseline/regexp-tree/src/parser/generated/regexp-tree")'.
+src/regexp-tree.js(115,23): error TS18048: 'compat' is possibly 'undefined'.
+src/regexp-tree.js(115,43): error TS18048: 'compat' is possibly 'undefined'.
+src/regexp-tree.js(126,32): error TS2525: Initializer provides no value for this binding element and the binding element has no default value.
+src/regexp-tree.js(151,21): error TS18048: 'compat' is possibly 'undefined'.
+src/regexp-tree.js(154,29): error TS18048: 'compat' is possibly 'undefined'.
+src/regexp-tree.js(155,18): error TS18048: 'compat' is possibly 'undefined'.
+src/regexp-tree.js(156,19): error TS18048: 'compat' is possibly 'undefined'.
+src/regexp-tree.js(160,14): error TS18048: 'compat' is possibly 'undefined'.
+src/transform/index.js(109,20): error TS2339: Property 'parse' does not exist on type 'typeof import("/work/arjunguha-research-group/mhyee/TypeWeaver/data/tsc-out/top1k-typed-nodeps/baseline/regexp-tree/src/parser/generated/regexp-tree")'.
+src/traverse/node-path.js(125,14): error TS2339: Property 'registry' does not exist on type 'typeof NodePath'.
+src/traverse/node-path.js(186,14): error TS2339: Property 'registry' does not exist on type 'typeof NodePath'.
+src/traverse/node-path.js(269,15): error TS2525: Initializer provides no value for this binding element and the binding element has no default value.
+src/traverse/node-path.js(269,23): error TS2525: Initializer provides no value for this binding element and the binding element has no default value.
+src/traverse/node-path.js(318,19): error TS2339: Property 'registry' does not exist on type 'typeof NodePath'.
+src/traverse/node-path.js(319,16): error TS2339: Property 'registry' does not exist on type 'typeof NodePath'.
+src/traverse/node-path.js(325,25): error TS2339: Property 'registry' does not exist on type 'typeof NodePath'.
+src/traverse/node-path.js(348,19): error TS2339: Property 'registry' does not exist on type 'typeof NodePath'.
+src/traverse/node-path.js(349,16): error TS2339: Property 'registry' does not exist on type 'typeof NodePath'.
+src/traverse/node-path.js(351,14): error TS2339: Property 'registry' does not exist on type 'typeof NodePath'.
+

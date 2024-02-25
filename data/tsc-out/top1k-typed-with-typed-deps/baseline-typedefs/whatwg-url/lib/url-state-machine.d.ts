@@ -1,0 +1,11 @@
+export function serializeURLOrigin(url: any): any;
+export function basicURLParse(input: any, options: any): any;
+export function setTheUsername(url: any, username: any): void;
+export function setThePassword(url: any, password: any): void;
+export function serializeInteger(integer: any): string;
+export function parseURL(input: any, options: any): any;
+export function serializeURL(url: any, excludeFragment: any): string;
+export function serializePath(url: any): any;
+export function serializeHost(host: any): any;
+export function cannotHaveAUsernamePasswordPort(url: any): boolean;
+export function hasAnOpaquePath(url: any): boolean;

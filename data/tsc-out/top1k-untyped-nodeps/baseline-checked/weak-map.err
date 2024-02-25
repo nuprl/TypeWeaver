@@ -1,0 +1,21 @@
+bench.js(10,1): error TS2582: Cannot find name 'suite'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
+bench.js(11,5): error TS2304: Cannot find name 'bench'.
+bench.js(13,23): error TS2350: Only a void function can be called with the 'new' keyword.
+bench.js(16,5): error TS2304: Cannot find name 'bench'.
+bench.js(22,5): error TS2304: Cannot find name 'bench'.
+bench.js(28,5): error TS2304: Cannot find name 'bench'.
+bench.js(35,5): error TS2304: Cannot find name 'bench'.
+weak-map.js(102,14): error TS2304: Cannot find name 'ses'.
+weak-map.js(102,37): error TS2304: Cannot find name 'ses'.
+weak-map.js(102,48): error TS2304: Cannot find name 'ses'.
+weak-map.js(126,14): error TS2304: Cannot find name 'ses'.
+weak-map.js(127,5): error TS2304: Cannot find name 'ses'.
+weak-map.js(166,9): error TS2322: Type 'WeakMapConstructor & Function' is not assignable to type '{ (): any; prototype: any; } | { (): any; prototype: any; } | { (): any; prototype: any; }'.
+  Type 'WeakMapConstructor & Function' is not assignable to type '{ (): any; prototype: any; }'.
+    Type 'WeakMapConstructor & Function' provides no match for the signature '(): any'.
+weak-map.js(261,16): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+weak-map.js(608,34): error TS2554: Expected 1 arguments, but got 2.
+weak-map.js(621,35): error TS2350: Only a void function can be called with the 'new' keyword.
+weak-map.js(632,37): error TS2350: Only a void function can be called with the 'new' keyword.
+

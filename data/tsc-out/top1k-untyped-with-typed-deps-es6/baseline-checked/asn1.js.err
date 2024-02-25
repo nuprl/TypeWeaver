@@ -1,0 +1,96 @@
+lib/asn1.js(7,37): error TS2339: Property 'define' does not exist on type 'typeof import("/work/arjunguha-research-group/mhyee/TypeWeaver/data/tsc-out/top1k-untyped-with-typed-deps-es6/baseline/asn1.js/lib/asn1/api")'.
+lib/asn1/base/buffer.js(4,10): error TS2305: Module '"../base/reporter"' has no exported member 'Reporter'.
+lib/asn1/base/buffer.js(10,10): error TS2339: Property 'error' does not exist on type 'DecoderBuffer'.
+lib/asn1/base/buffer.js(64,47): error TS2554: Expected 0-1 arguments, but got 2.
+lib/asn1/base/buffer.js(66,17): error TS2339: Property 'error' does not exist on type 'DecoderBuffer'.
+lib/asn1/base/buffer.js(71,17): error TS2339: Property 'error' does not exist on type 'DecoderBuffer'.
+lib/asn1/base/buffer.js(76,7): error TS2339: Property '_reporterState' does not exist on type 'DecoderBuffer'.
+lib/asn1/base/buffer.js(76,29): error TS2339: Property '_reporterState' does not exist on type 'DecoderBuffer'.
+lib/asn1/base/index.js(5,39): error TS2339: Property 'Reporter' does not exist on type 'typeof import("/work/arjunguha-research-group/mhyee/TypeWeaver/data/tsc-out/top1k-untyped-with-typed-deps-es6/baseline/asn1.js/lib/asn1/base/reporter")'.
+lib/asn1/base/index.js(6,42): error TS2339: Property 'DecoderBuffer' does not exist on type 'typeof import("/work/arjunguha-research-group/mhyee/TypeWeaver/data/tsc-out/top1k-untyped-with-typed-deps-es6/baseline/asn1.js/lib/asn1/base/buffer")'.
+lib/asn1/base/index.js(7,42): error TS2339: Property 'EncoderBuffer' does not exist on type 'typeof import("/work/arjunguha-research-group/mhyee/TypeWeaver/data/tsc-out/top1k-untyped-with-typed-deps-es6/baseline/asn1.js/lib/asn1/base/buffer")'.
+lib/asn1/base/node.js(3,10): error TS2305: Module '"../base/reporter"' has no exported member 'Reporter'.
+lib/asn1/base/node.js(4,10): error TS2305: Module '"../base/buffer"' has no exported member 'EncoderBuffer'.
+lib/asn1/base/node.js(5,10): error TS2305: Module '"../base/buffer"' has no exported member 'DecoderBuffer'.
+lib/asn1/base/node.js(78,19): error TS2351: This expression is not constructable.
+  Type 'Function' has no construct signatures.
+lib/asn1/base/node.js(87,25): error TS2351: This expression is not constructable.
+  Type 'Function' has no construct signatures.
+lib/asn1/base/node.js(136,13): error TS2367: This comparison appears to be unintentional because the types 'string' and 'number' have no overlap.
+lib/asn1/base/node.js(136,21): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/asn1/base/node.js(137,11): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/asn1/base/node.js(313,22): error TS2339: Property '_peekTag' does not exist on type 'Node'.
+lib/asn1/base/node.js(328,29): error TS2551: Property '_decodeTag' does not exist on type 'Node'. Did you mean '_decode'?
+lib/asn1/base/node.js(341,25): error TS2551: Property '_decodeTag' does not exist on type 'Node'. Did you mean '_decode'?
+lib/asn1/base/node.js(409,17): error TS2339: Property '_decodeList' does not exist on type 'Node'.
+lib/asn1/base/node.js(411,17): error TS2551: Property '_decodeStr' does not exist on type 'Node'. Did you mean '_decode'?
+lib/asn1/base/node.js(413,17): error TS2339: Property '_decodeObjid' does not exist on type 'Node'.
+lib/asn1/base/node.js(415,17): error TS2339: Property '_decodeObjid' does not exist on type 'Node'.
+lib/asn1/base/node.js(417,17): error TS2339: Property '_decodeTime' does not exist on type 'Node'.
+lib/asn1/base/node.js(419,17): error TS2339: Property '_decodeNull' does not exist on type 'Node'.
+lib/asn1/base/node.js(421,17): error TS2339: Property '_decodeBool' does not exist on type 'Node'.
+lib/asn1/base/node.js(423,17): error TS2551: Property '_decodeStr' does not exist on type 'Node'. Did you mean '_decode'?
+lib/asn1/base/node.js(425,17): error TS2551: Property '_decodeInt' does not exist on type 'Node'. Did you mean '_decode'?
+lib/asn1/base/node.js(439,27): error TS2551: Property '_use' does not exist on type 'Node'. Did you mean 'use'?
+lib/asn1/base/node.js(494,12): error TS2339: Property '_skipDefault' does not exist on type 'Node'.
+lib/asn1/base/node.js(585,23): error TS2339: Property '_encodeComposite' does not exist on type 'Node'.
+lib/asn1/base/node.js(591,19): error TS2339: Property '_encodeComposite' does not exist on type 'Node'.
+lib/asn1/base/node.js(613,17): error TS2551: Property '_encodeStr' does not exist on type 'Node'. Did you mean '_encode'?
+lib/asn1/base/node.js(615,17): error TS2339: Property '_encodeObjid' does not exist on type 'Node'.
+lib/asn1/base/node.js(617,17): error TS2339: Property '_encodeObjid' does not exist on type 'Node'.
+lib/asn1/base/node.js(619,17): error TS2339: Property '_encodeTime' does not exist on type 'Node'.
+lib/asn1/base/node.js(621,17): error TS2339: Property '_encodeNull' does not exist on type 'Node'.
+lib/asn1/base/node.js(623,17): error TS2551: Property '_encodeInt' does not exist on type 'Node'. Did you mean '_encode'?
+lib/asn1/base/node.js(625,17): error TS2339: Property '_encodeBool' does not exist on type 'Node'.
+lib/asn1/base/node.js(627,17): error TS2551: Property '_encodeStr' does not exist on type 'Node'. Did you mean '_encode'?
+lib/asn1/base/reporter.js(80,38): error TS2554: Expected 0-2 arguments, but got 3.
+lib/asn1/constants/der.js(9,9): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
+lib/asn1/constants/der.js(9,10): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/asn1/constants/der.js(10,7): error TS2322: Type 'number' is not assignable to type 'string'.
+lib/asn1/constants/der.js(10,13): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/asn1/constants/index.js(11,9): error TS2367: This comparison appears to be unintentional because the types 'number' and 'string' have no overlap.
+lib/asn1/constants/index.js(11,10): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/asn1/constants/index.js(12,7): error TS2322: Type 'number' is not assignable to type 'string'.
+lib/asn1/constants/index.js(12,13): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+lib/asn1/decoders/der.js(5,10): error TS2305: Module '"../base/buffer"' has no exported member 'DecoderBuffer'.
+lib/asn1/decoders/der.js(18,13): error TS2339: Property '_init' does not exist on type 'DERNode'.
+lib/asn1/decoders/der.js(27,20): error TS2339: Property '_decode' does not exist on type 'DERNode'.
+lib/asn1/decoders/der.js(80,55): error TS2339: Property 'tag' does not exist on type 'DERNode'.
+lib/asn1/decoders/der.js(147,15): error TS2339: Property '_isNumstr' does not exist on type 'DERNode'.
+lib/asn1/decoders/der.js(158,15): error TS2339: Property '_isPrintstr' does not exist on type 'DERNode'.
+lib/asn1/encoders/der.js(17,13): error TS2339: Property '_init' does not exist on type 'DERNode'.
+lib/asn1/encoders/der.js(22,20): error TS2339: Property '_encode' does not exist on type 'DERNode'.
+lib/asn1/encoders/der.js(36,58): error TS2339: Property 'reporter' does not exist on type 'DERNode'.
+lib/asn1/encoders/der.js(43,17): error TS2339: Property '_createEncoderBuffer' does not exist on type 'DERNode'.
+lib/asn1/encoders/der.js(59,15): error TS2339: Property '_createEncoderBuffer' does not exist on type 'DERNode'.
+lib/asn1/encoders/der.js(64,17): error TS2339: Property '_createEncoderBuffer' does not exist on type 'DERNode'.
+lib/asn1/encoders/der.js(70,17): error TS2339: Property '_createEncoderBuffer' does not exist on type 'DERNode'.
+lib/asn1/encoders/der.js(72,15): error TS2339: Property '_isNumstr' does not exist on type 'DERNode'.
+lib/asn1/encoders/der.js(73,19): error TS2339: Property 'reporter' does not exist on type 'DERNode'.
+lib/asn1/encoders/der.js(76,17): error TS2339: Property '_createEncoderBuffer' does not exist on type 'DERNode'.
+lib/asn1/encoders/der.js(78,15): error TS2339: Property '_isPrintstr' does not exist on type 'DERNode'.
+lib/asn1/encoders/der.js(79,19): error TS2339: Property 'reporter' does not exist on type 'DERNode'.
+lib/asn1/encoders/der.js(86,17): error TS2339: Property '_createEncoderBuffer' does not exist on type 'DERNode'.
+lib/asn1/encoders/der.js(88,17): error TS2339: Property '_createEncoderBuffer' does not exist on type 'DERNode'.
+lib/asn1/encoders/der.js(90,17): error TS2339: Property '_createEncoderBuffer' does not exist on type 'DERNode'.
+lib/asn1/encoders/der.js(92,17): error TS2339: Property 'reporter' does not exist on type 'DERNode'.
+lib/asn1/encoders/der.js(100,19): error TS2339: Property 'reporter' does not exist on type 'DERNode'.
+lib/asn1/encoders/der.js(102,19): error TS2339: Property 'reporter' does not exist on type 'DERNode'.
+lib/asn1/encoders/der.js(113,17): error TS2339: Property 'reporter' does not exist on type 'DERNode'.
+lib/asn1/encoders/der.js(119,19): error TS2339: Property 'reporter' does not exist on type 'DERNode'.
+lib/asn1/encoders/der.js(140,15): error TS2339: Property '_createEncoderBuffer' does not exist on type 'DERNode'.
+lib/asn1/encoders/der.js(175,10): error TS2339: Property 'reporter' does not exist on type 'DERNode'.
+lib/asn1/encoders/der.js(182,15): error TS2339: Property '_createEncoderBuffer' does not exist on type 'DERNode'.
+lib/asn1/encoders/der.js(188,19): error TS2339: Property 'reporter' does not exist on type 'DERNode'.
+lib/asn1/encoders/der.js(190,19): error TS2339: Property 'reporter' does not exist on type 'DERNode'.
+lib/asn1/encoders/der.js(214,17): error TS2339: Property '_createEncoderBuffer' does not exist on type 'DERNode'.
+lib/asn1/encoders/der.js(218,17): error TS2339: Property '_createEncoderBuffer' does not exist on type 'DERNode'.
+lib/asn1/encoders/der.js(221,17): error TS2339: Property '_createEncoderBuffer' does not exist on type 'DERNode'.
+lib/asn1/encoders/der.js(236,15): error TS2339: Property '_createEncoderBuffer' does not exist on type 'DERNode'.
+lib/asn1/encoders/der.js(240,15): error TS2339: Property '_createEncoderBuffer' does not exist on type 'DERNode'.
+lib/asn1/encoders/der.js(250,22): error TS2339: Property '_baseState' does not exist on type 'DERNode'.
+lib/asn1/encoders/der.js(257,32): error TS2339: Property '_encodeValue' does not exist on type 'DERNode'.
+rfc/2560/index.js(3,18): error TS2307: Cannot find module 'asn1.js' or its corresponding type declarations.
+rfc/2560/index.js(4,21): error TS2307: Cannot find module 'asn1.js-rfc5280' or its corresponding type declarations.
+rfc/5280/index.js(3,18): error TS2307: Cannot find module 'asn1.js' or its corresponding type declarations.
+

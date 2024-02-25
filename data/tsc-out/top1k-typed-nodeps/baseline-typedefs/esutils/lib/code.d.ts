@@ -1,0 +1,9 @@
+export function isDecimalDigit(ch: any): boolean;
+export function isHexDigit(ch: any): boolean;
+export function isOctalDigit(ch: any): boolean;
+export function isWhiteSpace(ch: any): boolean;
+export function isLineTerminator(ch: any): boolean;
+export function isIdentifierStartES5(ch: any): any;
+export function isIdentifierPartES5(ch: any): any;
+export function isIdentifierStartES6(ch: any): any;
+export function isIdentifierPartES6(ch: any): any;

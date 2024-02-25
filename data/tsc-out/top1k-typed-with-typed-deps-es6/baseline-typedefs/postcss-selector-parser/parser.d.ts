@@ -1,0 +1,58 @@
+export default class Parser {
+    constructor(rule: any, options?: {});
+    rule: any;
+    options: {
+        lossy: boolean;
+        safe: boolean;
+    };
+    position: number;
+    css: any;
+    tokens: any[][];
+    root: Root;
+    current: Selector;
+    _errorGenerator(): (message: any, errorOptions: any) => any;
+    attribute(): void;
+    parseWhitespaceEquivalentTokens(stopPosition: any): (Comment | Str)[];
+    convertWhitespaceNodesToSpace(nodes: any, requiredSpace?: boolean): {
+        space: string;
+        rawSpace: string;
+    };
+    isNamedCombinator(position?: number): boolean;
+    namedCombinator(): Combinator;
+    combinator(): any;
+    comma(): void;
+    comment(): void;
+    error(message: any, opts: any): void;
+    missingBackslash(): void;
+    missingParenthesis(): void;
+    missingSquareBracket(): void;
+    unexpected(): void;
+    namespace(): any;
+    nesting(): void;
+    parentheses(): void;
+    pseudo(): void;
+    space(): void;
+    spaces: any;
+    string(): void;
+    universal(namespace: any): any;
+    splitWord(namespace: any, firstCallback: any): void;
+    word(namespace: any): any;
+    loop(): Root;
+    parse(throwOnParenthesis: any): void;
+    expected(description: any, index: any, found: any): void;
+    requiredSpace(space: any): any;
+    optionalSpace(space: any): any;
+    lossySpace(space: any, required: any): any;
+    parseParenthesisToken(token: any): any;
+    newNode(node: any, namespace: any): import("./selectors/container").default;
+    content(token?: any[]): any;
+    get currToken(): any[];
+    get nextToken(): any[];
+    get prevToken(): any[];
+    locateNextMeaningfulToken(startPosition?: number): number;
+}
+import Root from "./selectors/root";
+import Selector from "./selectors/selector";
+import Comment from "./selectors/comment";
+import Str from "./selectors/string";
+import Combinator from "./selectors/combinator";

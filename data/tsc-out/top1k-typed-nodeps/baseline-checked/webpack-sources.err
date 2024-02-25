@@ -1,0 +1,43 @@
+lib/OriginalSource.js(51,13): error TS7014: Function type, which lacks return-type annotation, implicitly has an 'any' return type.
+lib/OriginalSource.js(52,13): error TS7014: Function type, which lacks return-type annotation, implicitly has an 'any' return type.
+lib/OriginalSource.js(83,4): error TS2322: Type '{ generatedLine: number; generatedColumn: number; source: any; }' is not assignable to type 'void'.
+lib/OriginalSource.js(100,4): error TS2322: Type '{ generatedLine?: undefined; generatedColumn?: undefined; source?: undefined; } | { generatedLine: number; generatedColumn: any; source: any; }' is not assignable to type 'void'.
+  Type '{ generatedLine?: undefined; generatedColumn?: undefined; source?: undefined; }' is not assignable to type 'void'.
+lib/OriginalSource.js(111,4): error TS2322: Type '{ generatedLine: number; generatedColumn: any; source: any; }' is not assignable to type 'void'.
+lib/RawSource.js(37,38): error TS2769: No overload matches this call.
+  Overload 1 of 4, '(arrayBuffer: WithImplicitCoercion<ArrayBuffer | SharedArrayBuffer>, byteOffset?: number, length?: number): Buffer', gave the following error.
+    Argument of type 'string | Buffer' is not assignable to parameter of type 'WithImplicitCoercion<ArrayBuffer | SharedArrayBuffer>'.
+      Type 'string' is not assignable to type 'WithImplicitCoercion<ArrayBuffer | SharedArrayBuffer>'.
+  Overload 2 of 4, '(str: WithImplicitCoercion<string> | { [Symbol.toPrimitive](hint: "string"): string; }, encoding?: BufferEncoding): Buffer', gave the following error.
+    Argument of type 'string | Buffer' is not assignable to parameter of type 'WithImplicitCoercion<string> | { [Symbol.toPrimitive](hint: "string"): string; }'.
+      Type 'Buffer' is not assignable to type 'WithImplicitCoercion<string> | { [Symbol.toPrimitive](hint: "string"): string; }'.
+        Type 'Buffer' is not assignable to type '{ valueOf(): string; }'.
+          The types returned by 'valueOf()' are incompatible between these types.
+            Type 'Uint8Array' is not assignable to type 'string'.
+lib/RawSource.js(49,13): error TS7014: Function type, which lacks return-type annotation, implicitly has an 'any' return type.
+lib/RawSource.js(50,13): error TS7014: Function type, which lacks return-type annotation, implicitly has an 'any' return type.
+lib/RawSource.js(55,18): error TS2769: No overload matches this call.
+  Overload 1 of 4, '(arrayBuffer: WithImplicitCoercion<ArrayBuffer | SharedArrayBuffer>, byteOffset?: number, length?: number): Buffer', gave the following error.
+    Argument of type 'string' is not assignable to parameter of type 'number'.
+  Overload 2 of 4, '(str: WithImplicitCoercion<string> | { [Symbol.toPrimitive](hint: "string"): string; }, encoding?: BufferEncoding): Buffer', gave the following error.
+    Argument of type 'Buffer' is not assignable to parameter of type 'WithImplicitCoercion<string> | { [Symbol.toPrimitive](hint: "string"): string; }'.
+lib/RawSource.js(63,3): error TS2322: Type '{ generatedLine?: undefined; generatedColumn?: undefined; source?: undefined; } | { generatedLine: number; generatedColumn: any; }' is not assignable to type 'void'.
+  Type '{ generatedLine?: undefined; generatedColumn?: undefined; source?: undefined; }' is not assignable to type 'void'.
+lib/RawSource.js(74,38): error TS2769: No overload matches this call.
+  Overload 1 of 4, '(arrayBuffer: WithImplicitCoercion<ArrayBuffer | SharedArrayBuffer>, byteOffset?: number, length?: number): Buffer', gave the following error.
+    Argument of type 'string | Buffer' is not assignable to parameter of type 'WithImplicitCoercion<ArrayBuffer | SharedArrayBuffer>'.
+  Overload 2 of 4, '(str: WithImplicitCoercion<string> | { [Symbol.toPrimitive](hint: "string"): string; }, encoding?: BufferEncoding): Buffer', gave the following error.
+    Argument of type 'string | Buffer' is not assignable to parameter of type 'WithImplicitCoercion<string> | { [Symbol.toPrimitive](hint: "string"): string; }'.
+lib/SizeOnlySource.d.ts(7,5): error TS2416: Property 'buffer' in type 'SizeOnlySource' is not assignable to the same property in base type 'Source'.
+  Type '() => void' is not assignable to type '() => Buffer'.
+    Type 'void' is not assignable to type 'Buffer'.
+lib/SizeOnlySource.js(29,2): error TS2416: Property 'buffer' in type 'SizeOnlySource' is not assignable to the same property in base type 'Source'.
+  Type '() => void' is not assignable to type '() => Buffer'.
+    Type 'void' is not assignable to type 'Buffer'.
+lib/Source.js(15,22): error TS2769: No overload matches this call.
+  Overload 1 of 4, '(arrayBuffer: WithImplicitCoercion<ArrayBuffer | SharedArrayBuffer>, byteOffset?: number, length?: number): Buffer', gave the following error.
+    Argument of type 'void' is not assignable to parameter of type 'WithImplicitCoercion<ArrayBuffer | SharedArrayBuffer>'.
+  Overload 2 of 4, '(str: WithImplicitCoercion<string> | { [Symbol.toPrimitive](hint: "string"): string; }, encoding?: BufferEncoding): Buffer', gave the following error.
+    Argument of type 'void' is not assignable to parameter of type 'WithImplicitCoercion<string> | { [Symbol.toPrimitive](hint: "string"): string; }'.
+lib/helpers/__mocks__/createMappingsSerializer.js(3,34): error TS2304: Cannot find name 'jest'.
+

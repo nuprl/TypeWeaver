@@ -1,0 +1,10 @@
+export const global: object;
+export const calledInOrder: typeof import("./called-in-order");
+export const className: typeof import("./class-name");
+export const deprecated: typeof import("./deprecated");
+export const every: typeof import("./every");
+export const functionName: typeof import("./function-name");
+export const orderByFirstCall: typeof import("./order-by-first-call");
+export const prototypes: typeof import("./prototypes");
+export const typeOf: typeof import("./type-of");
+export const valueToString: typeof import("./value-to-string");

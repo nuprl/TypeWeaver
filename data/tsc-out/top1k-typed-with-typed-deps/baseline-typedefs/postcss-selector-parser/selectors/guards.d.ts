@@ -1,0 +1,17 @@
+export function isNode(node: any): any;
+export function isPseudoElement(node: any): any;
+export function isPseudoClass(node: any): boolean;
+export function isContainer(node: any): boolean;
+export function isNamespace(node: any): any;
+export const isAttribute: any;
+export const isClassName: any;
+export const isCombinator: any;
+export const isComment: any;
+export const isIdentifier: any;
+export const isNesting: any;
+export const isPseudo: any;
+export const isRoot: any;
+export const isSelector: any;
+export const isString: any;
+export const isTag: any;
+export const isUniversal: any;

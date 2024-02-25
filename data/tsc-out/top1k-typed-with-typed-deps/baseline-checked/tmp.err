@@ -1,0 +1,39 @@
+docs/scripts/prettify/lang-css.js(1,1): error TS2304: Cannot find name 'PR'.
+docs/scripts/prettify/lang-css.js(1,24): error TS2304: Cannot find name 'PR'.
+docs/scripts/prettify/lang-css.js(2,184): error TS2304: Cannot find name 'PR'.
+docs/scripts/prettify/lang-css.js(2,207): error TS2304: Cannot find name 'PR'.
+docs/scripts/prettify/lang-css.js(2,309): error TS2304: Cannot find name 'PR'.
+docs/scripts/prettify/lang-css.js(2,332): error TS2304: Cannot find name 'PR'.
+docs/scripts/prettify/prettify.js(1,19): error TS2339: Property 'PR_SHOULD_USE_CONTINUATION' does not exist on type 'Window & typeof globalThis'.
+docs/scripts/prettify/prettify.js(2,505): error TS2403: Subsequent variable declarations must have the same type.  Variable 'a' must be of type 'any', but here has type 'any[]'.
+docs/scripts/prettify/prettify.js(16,101): error TS2403: Subsequent variable declarations must have the same type.  Variable 'm' must be of type 'any', but here has type 'RegExp'.
+docs/scripts/prettify/prettify.js(16,126): error TS2403: Subsequent variable declarations must have the same type.  Variable 'e' must be of type '{ a: string; c: any[]; }', but here has type 'number'.
+docs/scripts/prettify/prettify.js(16,147): error TS2403: Subsequent variable declarations must have the same type.  Variable 'h' must be of type 'string', but here has type 'number'.
+docs/scripts/prettify/prettify.js(16,168): error TS2403: Subsequent variable declarations must have the same type.  Variable 'a' must be of type 'any', but here has type 'number'.
+docs/scripts/prettify/prettify.js(16,397): error TS2403: Subsequent variable declarations must have the same type.  Variable 'b' must be of type 'any', but here has type 'number'.
+docs/scripts/prettify/prettify.js(19,272): error TS2403: Subsequent variable declarations must have the same type.  Variable 'w' must be of type '(string | (string | string[])[])[]', but here has type '(string | (string | (string | string[])[])[])[]'.
+docs/scripts/prettify/prettify.js(20,176): error TS2403: Subsequent variable declarations must have the same type.  Variable 'v' must be of type 'string[]', but here has type '(string | string[])[]'.
+docs/scripts/prettify/prettify.js(25,155): error TS2339: Property 'prettyPrintOne' does not exist on type 'Window & typeof globalThis'.
+docs/scripts/prettify/prettify.js(25,290): error TS2339: Property 'prettyPrint' does not exist on type 'Window & typeof globalThis'.
+docs/scripts/prettify/prettify.js(25,344): error TS2339: Property 'PR_SHOULD_USE_CONTINUATION' does not exist on type 'Window & typeof globalThis'.
+docs/scripts/prettify/prettify.js(27,215): error TS2403: Subsequent variable declarations must have the same type.  Variable 'e' must be of type 'HTMLCollectionOf<Element>[]', but here has type 'any'.
+docs/scripts/prettify/prettify.js(27,234): error TS2739: Type '{ now: () => number; }' is missing the following properties from type 'DateConstructor': prototype, parse, UTC
+docs/scripts/prettify/prettify.js(27,328): error TS2339: Property 'PR' does not exist on type 'Window & typeof globalThis'.
+lib/tmp.js(102,12): error TS2554: Expected 2 arguments, but got 1.
+lib/tmp.js(166,12): error TS2554: Expected 2 arguments, but got 1.
+lib/tmp.js(180,5): error TS2322: Type 'number' is not assignable to type 'string'.
+lib/tmp.js(221,12): error TS2554: Expected 2 arguments, but got 1.
+lib/tmp.js(229,5): error TS2322: Type 'Function' is not assignable to type 'fileCallback'.
+  Type 'Function' provides no match for the signature '(err: Error, name: string, fd: number, fn: cleanupCallback): any'.
+lib/tmp.js(297,30): error TS2554: Expected 4 arguments, but got 3.
+lib/tmp.js(298,67): error TS2345: Argument of type '(string | number)[]' is not assignable to parameter of type 'string'.
+lib/tmp.js(302,3): error TS2322: Type 'cleanupCallback' is not assignable to type 'fileCallback | fileCallbackSync'.
+  Type 'cleanupCallback' is not assignable to type 'fileCallback'.
+    Types of parameters 'next' and 'err' are incompatible.
+      Type 'Error' is not assignable to type 'simpleCallback'.
+        Type 'Error' provides no match for the signature '(): any'.
+lib/tmp.js(320,30): error TS2554: Expected 4 arguments, but got 3.
+lib/tmp.js(623,12): error TS2304: Cannot find name 'SystemError'.
+lib/tmp.js(663,14): error TS1003: Identifier expected.
+lib/tmp.js(752,12): error TS2554: Expected 1 arguments, but got 0.
+

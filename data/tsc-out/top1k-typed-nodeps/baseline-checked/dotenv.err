@@ -1,0 +1,18 @@
+lib/main.d.ts(1,10): error TS2300: Duplicate identifier 'config'.
+lib/main.d.ts(1,10): error TS2304: Cannot find name 'config'.
+lib/main.d.ts(1,18): error TS2300: Duplicate identifier 'parse'.
+lib/main.d.ts(1,18): error TS2304: Cannot find name 'parse'.
+lib/main.d.ts(1,25): error TS2300: Duplicate identifier 'config'.
+lib/main.d.ts(1,25): error TS2304: Cannot find name 'config'.
+lib/main.d.ts(1,33): error TS2300: Duplicate identifier 'parse'.
+lib/main.d.ts(1,33): error TS2304: Cannot find name 'parse'.
+lib/main.js(72,69): error TS2769: No overload matches this call.
+  Overload 1 of 3, '(path: PathOrFileDescriptor, options?: { encoding?: null; flag?: string; }): Buffer', gave the following error.
+    Type 'string' is not assignable to type 'null'.
+  Overload 2 of 3, '(path: PathOrFileDescriptor, options: { encoding: BufferEncoding; flag?: string; } | BufferEncoding): string', gave the following error.
+    Type 'string' is not assignable to type 'BufferEncoding'.
+  Overload 3 of 3, '(path: PathOrFileDescriptor, options?: BufferEncoding | (ObjectEncodingOptions & { flag?: string; })): string | Buffer', gave the following error.
+    Type 'string' is not assignable to type 'BufferEncoding'.
+lib/main.js(107,1): error TS2303: Circular definition of import alias 'config'.
+lib/main.js(108,1): error TS2303: Circular definition of import alias 'parse'.
+

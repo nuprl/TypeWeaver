@@ -1,0 +1,49 @@
+bench/impls/extend-minipass.js(1,22): error TS2307: Cannot find module 'minipass' or its corresponding type declarations.
+bench/impls/extend-through2.js(6,3): error TS2304: Cannot find name 's'.
+bench/impls/extend-through2.js(8,5): error TS2304: Cannot find name 's'.
+bench/impls/extend-through2.js(10,10): error TS2304: Cannot find name 's'.
+bench/impls/minipass-latest.js(1,24): error TS2307: Cannot find module 'minipass' or its corresponding type declarations.
+bench/impls/through2.js(6,3): error TS2304: Cannot find name 's'.
+bench/impls/through2.js(8,5): error TS2304: Cannot find name 's'.
+bench/impls/through2.js(10,10): error TS2304: Cannot find name 's'.
+bench/index.js(17,26): error TS2307: Cannot find module '@npmcli/promise-spawn' or its corresponding type declarations.
+bench/index.js(103,31): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(value: any, replacer?: (this: any, key: string, value: any) => any, space?: string | number): string', gave the following error.
+    Argument of type 'number' is not assignable to parameter of type '(this: any, key: string, value: any) => any'.
+  Overload 2 of 2, '(value: any, replacer?: (string | number)[], space?: string | number): string', gave the following error.
+    Argument of type 'number' is not assignable to parameter of type '(string | number)[]'.
+bench/index.js(106,39): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(value: any, replacer?: (this: any, key: string, value: any) => any, space?: string | number): string', gave the following error.
+    Argument of type 'number' is not assignable to parameter of type '(this: any, key: string, value: any) => any'.
+  Overload 2 of 2, '(value: any, replacer?: (string | number)[], space?: string | number): string', gave the following error.
+    Argument of type 'number' is not assignable to parameter of type '(string | number)[]'.
+bench/index.js(107,60): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(value: any, replacer?: (this: any, key: string, value: any) => any, space?: string | number): string', gave the following error.
+    Argument of type 'number' is not assignable to parameter of type '(this: any, key: string, value: any) => any'.
+  Overload 2 of 2, '(value: any, replacer?: (string | number)[], space?: string | number): string', gave the following error.
+    Argument of type 'number' is not assignable to parameter of type '(string | number)[]'.
+bench/index.js(163,27): error TS2554: Expected 0 arguments, but got 1.
+bench/index.js(167,27): error TS2554: Expected 0 arguments, but got 1.
+bench/index.js(171,27): error TS2554: Expected 0 arguments, but got 1.
+bench/index.js(175,27): error TS2554: Expected 0 arguments, but got 1.
+bench/index.js(179,27): error TS2554: Expected 0 arguments, but got 1.
+bench/index.js(180,28): error TS2554: Expected 0 arguments, but got 1.
+bench/index.js(204,33): error TS2339: Property 'resume' does not exist on type 'Src'.
+bench/index.js(207,10): error TS2339: Property 'resume' does not exist on type 'Src'.
+index.d.ts(27,5): error TS2416: Property 'addListener' in type 'Minipass' is not assignable to the same property in base type 'internal'.
+  Type '(ev: any, fn: any) => Minipass' is not assignable to type '(eventName: string | symbol, listener: (...args: any[]) => void) => this'.
+    Type 'Minipass' is not assignable to type 'this'.
+      'Minipass' is assignable to the constraint of type 'this', but 'this' could be instantiated with a different subtype of constraint 'Minipass'.
+index.d.ts(28,5): error TS2416: Property 'on' in type 'Minipass' is not assignable to the same property in base type 'internal'.
+  Type '(ev: any, fn: any) => Minipass' is not assignable to type '(eventName: string | symbol, listener: (...args: any[]) => void) => this'.
+    Type 'Minipass' is not assignable to type 'this'.
+      'Minipass' is assignable to the constraint of type 'this', but 'this' could be instantiated with a different subtype of constraint 'Minipass'.
+index.js(533,11): error TS2339: Property 'dataLength' does not exist on type 'any[]'.
+index.js(540,13): error TS2339: Property 'dataLength' does not exist on type 'any[]'.
+index.js(552,70): error TS2339: Property 'dataLength' does not exist on type 'any[]'.
+index.js(631,21): error TS2339: Property 'close' does not exist on type 'Minipass'.
+index.js(632,12): error TS2339: Property 'close' does not exist on type 'Minipass'.
+index.js(645,18): error TS2339: Property 'pipe' does not exist on type 'EventEmitter'.
+index.js(646,19): error TS2339: Property 'write' does not exist on type 'EventEmitter'.
+index.js(646,52): error TS2339: Property 'end' does not exist on type 'EventEmitter'.
+

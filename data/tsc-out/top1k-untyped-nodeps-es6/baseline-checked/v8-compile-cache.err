@@ -1,0 +1,28 @@
+bench/_measure.js(7,31): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+bench/_measure.js(23,34): error TS2345: Argument of type 'number' is not assignable to parameter of type 'string'.
+bench/require-babel-core.js(6,1): error TS2349: This expression is not callable.
+  Type 'typeof import("/work/arjunguha-research-group/mhyee/TypeWeaver/data/tsc-out/top1k-untyped-nodeps-es6/baseline/v8-compile-cache/bench/_measure")' has no call signatures.
+bench/require-babel-core.js(8,11): error TS2307: Cannot find module 'babel-core' or its corresponding type declarations.
+bench/require-flow-parser.js(6,1): error TS2349: This expression is not callable.
+  Type 'typeof import("/work/arjunguha-research-group/mhyee/TypeWeaver/data/tsc-out/top1k-untyped-nodeps-es6/baseline/v8-compile-cache/bench/_measure")' has no call signatures.
+bench/require-flow-parser.js(7,11): error TS2307: Cannot find module 'flow-parser' or its corresponding type declarations.
+bench/require-rxjs-bundle.js(6,1): error TS2349: This expression is not callable.
+  Type 'typeof import("/work/arjunguha-research-group/mhyee/TypeWeaver/data/tsc-out/top1k-untyped-nodeps-es6/baseline/v8-compile-cache/bench/_measure")' has no call signatures.
+bench/require-rxjs-bundle.js(7,11): error TS2307: Cannot find module 'rxjs/bundles/rxjs.umd.js' or its corresponding type declarations.
+bench/require-rxjs-module.js(6,1): error TS2349: This expression is not callable.
+  Type 'typeof import("/work/arjunguha-research-group/mhyee/TypeWeaver/data/tsc-out/top1k-untyped-nodeps-es6/baseline/v8-compile-cache/bench/_measure")' has no call signatures.
+bench/require-rxjs-module.js(7,11): error TS2307: Cannot find module 'rxjs' or its corresponding type declarations.
+bench/require-yarn.js(6,1): error TS2349: This expression is not callable.
+  Type 'typeof import("/work/arjunguha-research-group/mhyee/TypeWeaver/data/tsc-out/top1k-untyped-nodeps-es6/baseline/v8-compile-cache/bench/_measure")' has no call signatures.
+bench/require-yarn.js(8,11): error TS2307: Cannot find module 'yarn/lib/cli.js' or its corresponding type declarations.
+v8-compile-cache.js(75,39): error TS2345: Argument of type '{}' is not assignable to parameter of type 'readonly Uint8Array[]'.
+  Type '{}' is missing the following properties from type 'readonly Uint8Array[]': length, concat, join, slice, and 19 more.
+v8-compile-cache.js(99,36): error TS2345: Argument of type 'Buffer' is not assignable to parameter of type 'string'.
+v8-compile-cache.js(154,52): error TS2339: Property '_compile' does not exist on type 'Module'.
+v8-compile-cache.js(155,22): error TS2339: Property '_compile' does not exist on type 'Module'.
+v8-compile-cache.js(164,23): error TS2339: Property '_resolveFilename' does not exist on type 'typeof Module'.
+v8-compile-cache.js(172,25): error TS2339: Property '_resolveLookupPaths' does not exist on type 'typeof Module'.
+v8-compile-cache.js(179,35): error TS2339: Property '_extensions' does not exist on type 'typeof Module'.
+v8-compile-cache.js(180,30): error TS2339: Property '_cache' does not exist on type 'typeof Module'.
+v8-compile-cache.js(197,22): error TS2339: Property '_compile' does not exist on type 'Module'.
+

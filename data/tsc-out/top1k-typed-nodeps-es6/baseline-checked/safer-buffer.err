@@ -1,0 +1,8 @@
+dangerous.js(8,19): error TS2339: Property 'Buffer' does not exist on type 'typeof safer'.
+dangerous.js(19,18): error TS2739: Type '{}' is missing the following properties from type '{ allocUnsafe(size: any): any; allocUnsafeSlow(size: any): any; }': allocUnsafe, allocUnsafeSlow
+dangerous.js(42,12): error TS2348: Value of type 'BufferConstructor' is not callable. Did you mean to include 'new'?
+dangerous.js(54,12): error TS2348: Value of type '{ new (size: number): Buffer; prototype: Buffer; }' is not callable. Did you mean to include 'new'?
+safer.js(35,12): error TS2348: Value of type 'BufferConstructor' is not callable. Did you mean to include 'new'?
+safer.js(47,15): error TS2348: Value of type 'BufferConstructor' is not callable. Did you mean to include 'new'?
+safer.js(61,38): error TS2339: Property 'binding' does not exist on type 'Process'.
+

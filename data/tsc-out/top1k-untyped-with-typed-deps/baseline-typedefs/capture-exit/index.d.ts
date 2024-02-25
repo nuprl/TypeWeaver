@@ -1,0 +1,11 @@
+export function _reset(): void;
+export function releaseExit(): void;
+export function captureExit(): void;
+export { handlers as _handlers };
+export function _flush(lastTime: any, code: any): RSVP.default.Promise<void>;
+export function onExit(cb: any): void;
+export function offExit(cb: any): void;
+export function exit(...args: any[]): void;
+export function listenerCount(): number;
+declare var handlers: any[];
+import RSVP = require("rsvp");

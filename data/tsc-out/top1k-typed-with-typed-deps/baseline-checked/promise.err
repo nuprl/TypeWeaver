@@ -1,0 +1,49 @@
+build.js(5,21): error TS2307: Cannot find module 'acorn' or its corresponding type declarations.
+build.js(6,20): error TS2307: Cannot find module 'acorn/dist/walk' or its corresponding type declarations.
+core.js(3,26): error TS2307: Cannot find module './lib/core.js' or its corresponding type declarations.
+index.js(3,26): error TS2307: Cannot find module './lib' or its corresponding type declarations.
+polyfill-done.js(3,30): error TS2339: Property 'done' does not exist on type 'Promise<any>'.
+polyfill-done.js(4,21): error TS2339: Property 'done' does not exist on type 'Promise<any>'.
+polyfill.js(6,21): error TS2307: Cannot find module './lib/core.js' or its corresponding type declarations.
+polyfill.js(7,11): error TS2307: Cannot find module './lib/es6-extensions.js' or its corresponding type declarations.
+polyfill.js(10,9): error TS2306: File '/work/arjunguha-research-group/mhyee/TypeWeaver/data/tsc-out/top1k-typed-with-typed-deps/baseline/promise/polyfill-done.d.ts' is not a module.
+src/done.js(6,19): error TS2339: Property 'done' does not exist on type 'Promise'.
+src/es6-extensions.js(24,9): error TS2339: Property 'resolve' does not exist on type 'typeof Promise'.
+src/es6-extensions.js(61,9): error TS2339: Property 'all' does not exist on type 'typeof Promise'.
+src/es6-extensions.js(120,9): error TS2339: Property 'allSettled' does not exist on type 'typeof Promise'.
+src/es6-extensions.js(121,18): error TS2339: Property 'all' does not exist on type 'typeof Promise'.
+src/es6-extensions.js(124,9): error TS2339: Property 'reject' does not exist on type 'typeof Promise'.
+src/es6-extensions.js(130,9): error TS2339: Property 'race' does not exist on type 'typeof Promise'.
+src/es6-extensions.js(133,15): error TS2339: Property 'resolve' does not exist on type 'typeof Promise'.
+src/finally.js(6,19): error TS2550: Property 'finally' does not exist on type 'Promise'. Do you need to change your target library? Try changing the 'lib' compiler option to 'es2018' or later.
+src/finally.js(8,20): error TS2339: Property 'resolve' does not exist on type 'typeof Promise'.
+src/finally.js(12,20): error TS2339: Property 'resolve' does not exist on type 'typeof Promise'.
+src/node-extensions.js(13,9): error TS2339: Property 'denodeify' does not exist on type 'typeof Promise'.
+src/node-extensions.js(47,19): error TS2345: Argument of type 'string[]' is not assignable to parameter of type 'string'.
+src/node-extensions.js(91,5): error TS2345: Argument of type 'string[]' is not assignable to parameter of type 'string'.
+src/node-extensions.js(96,9): error TS2339: Property 'nodeify' does not exist on type 'typeof Promise'.
+src/node-extensions.js(118,19): error TS2339: Property 'nodeify' does not exist on type 'Promise'.
+src/rejection-tracking.js(15,11): error TS2540: Cannot assign to '_onHandle' because it is a read-only property.
+src/rejection-tracking.js(16,11): error TS2540: Cannot assign to '_onReject' because it is a read-only property.
+src/rejection-tracking.js(27,11): error TS2540: Cannot assign to '_onHandle' because it is a read-only property.
+src/rejection-tracking.js(40,11): error TS2540: Cannot assign to '_onReject' because it is a read-only property.
+src/synchronous.js(6,9): error TS2339: Property 'enableSynchronous' does not exist on type 'typeof Promise'.
+src/synchronous.js(7,21): error TS2339: Property 'isPending' does not exist on type 'Promise'.
+src/synchronous.js(8,17): error TS2339: Property 'getState' does not exist on type 'Promise'.
+src/synchronous.js(11,21): error TS2339: Property 'isFulfilled' does not exist on type 'Promise'.
+src/synchronous.js(12,17): error TS2339: Property 'getState' does not exist on type 'Promise'.
+src/synchronous.js(15,21): error TS2339: Property 'isRejected' does not exist on type 'Promise'.
+src/synchronous.js(16,17): error TS2339: Property 'getState' does not exist on type 'Promise'.
+src/synchronous.js(19,21): error TS2339: Property 'getValue' does not exist on type 'Promise'.
+src/synchronous.js(24,15): error TS2339: Property 'isFulfilled' does not exist on type 'Promise'.
+src/synchronous.js(31,21): error TS2339: Property 'getReason' does not exist on type 'Promise'.
+src/synchronous.js(36,15): error TS2339: Property 'isRejected' does not exist on type 'Promise'.
+src/synchronous.js(43,21): error TS2339: Property 'getState' does not exist on type 'Promise'.
+src/synchronous.js(55,9): error TS2339: Property 'disableSynchronous' does not exist on type 'typeof Promise'.
+src/synchronous.js(56,21): error TS2339: Property 'isPending' does not exist on type 'Promise'.
+src/synchronous.js(57,21): error TS2339: Property 'isFulfilled' does not exist on type 'Promise'.
+src/synchronous.js(58,21): error TS2339: Property 'isRejected' does not exist on type 'Promise'.
+src/synchronous.js(59,21): error TS2339: Property 'getValue' does not exist on type 'Promise'.
+src/synchronous.js(60,21): error TS2339: Property 'getReason' does not exist on type 'Promise'.
+src/synchronous.js(61,21): error TS2339: Property 'getState' does not exist on type 'Promise'.
+

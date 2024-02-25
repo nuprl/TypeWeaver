@@ -1,0 +1,85 @@
+index.js(3,10): error TS2305: Module '"./webidl2js-wrapper"' has no exported member 'URL'.
+index.js(3,10): error TS2395: Individual declarations in merged declaration 'URL' must be all exported or all local.
+index.js(3,15): error TS2305: Module '"./webidl2js-wrapper"' has no exported member 'URLSearchParams'.
+index.js(3,15): error TS2395: Individual declarations in merged declaration 'URLSearchParams' must be all exported or all local.
+index.js(8,1): error TS2448: Block-scoped variable 'URL' used before its declaration.
+index.js(9,1): error TS2448: Block-scoped variable 'URLSearchParams' used before its declaration.
+index.js(11,14): error TS2395: Individual declarations in merged declaration 'URL' must be all exported or all local.
+index.js(12,14): error TS2395: Individual declarations in merged declaration 'URLSearchParams' must be all exported or all local.
+index.js(13,41): error TS2339: Property 'parseURL' does not exist on type 'typeof import("/work/arjunguha-research-group/mhyee/TypeWeaver/data/tsc-out/top1k-typed-with-typed-deps-es6/baseline/whatwg-url/lib/url-state-machine")'.
+index.js(14,46): error TS2339: Property 'basicURLParse' does not exist on type 'typeof import("/work/arjunguha-research-group/mhyee/TypeWeaver/data/tsc-out/top1k-typed-with-typed-deps-es6/baseline/whatwg-url/lib/url-state-machine")'.
+index.js(15,45): error TS2339: Property 'serializeURL' does not exist on type 'typeof import("/work/arjunguha-research-group/mhyee/TypeWeaver/data/tsc-out/top1k-typed-with-typed-deps-es6/baseline/whatwg-url/lib/url-state-machine")'.
+index.js(16,46): error TS2339: Property 'serializePath' does not exist on type 'typeof import("/work/arjunguha-research-group/mhyee/TypeWeaver/data/tsc-out/top1k-typed-with-typed-deps-es6/baseline/whatwg-url/lib/url-state-machine")'.
+index.js(17,46): error TS2339: Property 'serializeHost' does not exist on type 'typeof import("/work/arjunguha-research-group/mhyee/TypeWeaver/data/tsc-out/top1k-typed-with-typed-deps-es6/baseline/whatwg-url/lib/url-state-machine")'.
+index.js(18,49): error TS2339: Property 'serializeInteger' does not exist on type 'typeof import("/work/arjunguha-research-group/mhyee/TypeWeaver/data/tsc-out/top1k-typed-with-typed-deps-es6/baseline/whatwg-url/lib/url-state-machine")'.
+index.js(19,51): error TS2339: Property 'serializeURLOrigin' does not exist on type 'typeof import("/work/arjunguha-research-group/mhyee/TypeWeaver/data/tsc-out/top1k-typed-with-typed-deps-es6/baseline/whatwg-url/lib/url-state-machine")'.
+index.js(20,47): error TS2339: Property 'setTheUsername' does not exist on type 'typeof import("/work/arjunguha-research-group/mhyee/TypeWeaver/data/tsc-out/top1k-typed-with-typed-deps-es6/baseline/whatwg-url/lib/url-state-machine")'.
+index.js(21,47): error TS2339: Property 'setThePassword' does not exist on type 'typeof import("/work/arjunguha-research-group/mhyee/TypeWeaver/data/tsc-out/top1k-typed-with-typed-deps-es6/baseline/whatwg-url/lib/url-state-machine")'.
+index.js(22,64): error TS2339: Property 'cannotHaveAUsernamePasswordPort' does not exist on type 'typeof import("/work/arjunguha-research-group/mhyee/TypeWeaver/data/tsc-out/top1k-typed-with-typed-deps-es6/baseline/whatwg-url/lib/url-state-machine")'.
+index.js(23,48): error TS2339: Property 'hasAnOpaquePath' does not exist on type 'typeof import("/work/arjunguha-research-group/mhyee/TypeWeaver/data/tsc-out/top1k-typed-with-typed-deps-es6/baseline/whatwg-url/lib/url-state-machine")'.
+lib/URL-impl.js(4,29): error TS2307: Cannot find module './URLSearchParams' or its corresponding type declarations.
+lib/URL-impl.js(13,24): error TS2339: Property 'basicURLParse' does not exist on type 'typeof import("/work/arjunguha-research-group/mhyee/TypeWeaver/data/tsc-out/top1k-typed-with-typed-deps-es6/baseline/whatwg-url/lib/url-state-machine")'.
+lib/URL-impl.js(19,27): error TS2339: Property 'basicURLParse' does not exist on type 'typeof import("/work/arjunguha-research-group/mhyee/TypeWeaver/data/tsc-out/top1k-typed-with-typed-deps-es6/baseline/whatwg-url/lib/url-state-machine")'.
+lib/URL-impl.js(35,16): error TS2339: Property 'serializeURL' does not exist on type 'typeof import("/work/arjunguha-research-group/mhyee/TypeWeaver/data/tsc-out/top1k-typed-with-typed-deps-es6/baseline/whatwg-url/lib/url-state-machine")'.
+lib/URL-impl.js(39,27): error TS2339: Property 'basicURLParse' does not exist on type 'typeof import("/work/arjunguha-research-group/mhyee/TypeWeaver/data/tsc-out/top1k-typed-with-typed-deps-es6/baseline/whatwg-url/lib/url-state-machine")'.
+lib/URL-impl.js(54,16): error TS2339: Property 'serializeURLOrigin' does not exist on type 'typeof import("/work/arjunguha-research-group/mhyee/TypeWeaver/data/tsc-out/top1k-typed-with-typed-deps-es6/baseline/whatwg-url/lib/url-state-machine")'.
+lib/URL-impl.js(62,9): error TS2339: Property 'basicURLParse' does not exist on type 'typeof import("/work/arjunguha-research-group/mhyee/TypeWeaver/data/tsc-out/top1k-typed-with-typed-deps-es6/baseline/whatwg-url/lib/url-state-machine")'.
+lib/URL-impl.js(70,13): error TS2339: Property 'cannotHaveAUsernamePasswordPort' does not exist on type 'typeof import("/work/arjunguha-research-group/mhyee/TypeWeaver/data/tsc-out/top1k-typed-with-typed-deps-es6/baseline/whatwg-url/lib/url-state-machine")'.
+lib/URL-impl.js(74,9): error TS2339: Property 'setTheUsername' does not exist on type 'typeof import("/work/arjunguha-research-group/mhyee/TypeWeaver/data/tsc-out/top1k-typed-with-typed-deps-es6/baseline/whatwg-url/lib/url-state-machine")'.
+lib/URL-impl.js(82,13): error TS2339: Property 'cannotHaveAUsernamePasswordPort' does not exist on type 'typeof import("/work/arjunguha-research-group/mhyee/TypeWeaver/data/tsc-out/top1k-typed-with-typed-deps-es6/baseline/whatwg-url/lib/url-state-machine")'.
+lib/URL-impl.js(86,9): error TS2339: Property 'setThePassword' does not exist on type 'typeof import("/work/arjunguha-research-group/mhyee/TypeWeaver/data/tsc-out/top1k-typed-with-typed-deps-es6/baseline/whatwg-url/lib/url-state-machine")'.
+lib/URL-impl.js(97,18): error TS2339: Property 'serializeHost' does not exist on type 'typeof import("/work/arjunguha-research-group/mhyee/TypeWeaver/data/tsc-out/top1k-typed-with-typed-deps-es6/baseline/whatwg-url/lib/url-state-machine")'.
+lib/URL-impl.js(100,19): error TS2339: Property 'serializeHost' does not exist on type 'typeof import("/work/arjunguha-research-group/mhyee/TypeWeaver/data/tsc-out/top1k-typed-with-typed-deps-es6/baseline/whatwg-url/lib/url-state-machine")'.
+lib/URL-impl.js(100,50): error TS2339: Property 'serializeInteger' does not exist on type 'typeof import("/work/arjunguha-research-group/mhyee/TypeWeaver/data/tsc-out/top1k-typed-with-typed-deps-es6/baseline/whatwg-url/lib/url-state-machine")'.
+lib/URL-impl.js(104,13): error TS2339: Property 'hasAnOpaquePath' does not exist on type 'typeof import("/work/arjunguha-research-group/mhyee/TypeWeaver/data/tsc-out/top1k-typed-with-typed-deps-es6/baseline/whatwg-url/lib/url-state-machine")'.
+lib/URL-impl.js(108,9): error TS2339: Property 'basicURLParse' does not exist on type 'typeof import("/work/arjunguha-research-group/mhyee/TypeWeaver/data/tsc-out/top1k-typed-with-typed-deps-es6/baseline/whatwg-url/lib/url-state-machine")'.
+lib/URL-impl.js(116,16): error TS2339: Property 'serializeHost' does not exist on type 'typeof import("/work/arjunguha-research-group/mhyee/TypeWeaver/data/tsc-out/top1k-typed-with-typed-deps-es6/baseline/whatwg-url/lib/url-state-machine")'.
+lib/URL-impl.js(120,13): error TS2339: Property 'hasAnOpaquePath' does not exist on type 'typeof import("/work/arjunguha-research-group/mhyee/TypeWeaver/data/tsc-out/top1k-typed-with-typed-deps-es6/baseline/whatwg-url/lib/url-state-machine")'.
+lib/URL-impl.js(124,9): error TS2339: Property 'basicURLParse' does not exist on type 'typeof import("/work/arjunguha-research-group/mhyee/TypeWeaver/data/tsc-out/top1k-typed-with-typed-deps-es6/baseline/whatwg-url/lib/url-state-machine")'.
+lib/URL-impl.js(132,16): error TS2339: Property 'serializeInteger' does not exist on type 'typeof import("/work/arjunguha-research-group/mhyee/TypeWeaver/data/tsc-out/top1k-typed-with-typed-deps-es6/baseline/whatwg-url/lib/url-state-machine")'.
+lib/URL-impl.js(136,13): error TS2339: Property 'cannotHaveAUsernamePasswordPort' does not exist on type 'typeof import("/work/arjunguha-research-group/mhyee/TypeWeaver/data/tsc-out/top1k-typed-with-typed-deps-es6/baseline/whatwg-url/lib/url-state-machine")'.
+lib/URL-impl.js(143,11): error TS2339: Property 'basicURLParse' does not exist on type 'typeof import("/work/arjunguha-research-group/mhyee/TypeWeaver/data/tsc-out/top1k-typed-with-typed-deps-es6/baseline/whatwg-url/lib/url-state-machine")'.
+lib/URL-impl.js(148,16): error TS2339: Property 'serializePath' does not exist on type 'typeof import("/work/arjunguha-research-group/mhyee/TypeWeaver/data/tsc-out/top1k-typed-with-typed-deps-es6/baseline/whatwg-url/lib/url-state-machine")'.
+lib/URL-impl.js(152,13): error TS2339: Property 'hasAnOpaquePath' does not exist on type 'typeof import("/work/arjunguha-research-group/mhyee/TypeWeaver/data/tsc-out/top1k-typed-with-typed-deps-es6/baseline/whatwg-url/lib/url-state-machine")'.
+lib/URL-impl.js(157,9): error TS2339: Property 'basicURLParse' does not exist on type 'typeof import("/work/arjunguha-research-group/mhyee/TypeWeaver/data/tsc-out/top1k-typed-with-typed-deps-es6/baseline/whatwg-url/lib/url-state-machine")'.
+lib/URL-impl.js(179,9): error TS2339: Property 'basicURLParse' does not exist on type 'typeof import("/work/arjunguha-research-group/mhyee/TypeWeaver/data/tsc-out/top1k-typed-with-typed-deps-es6/baseline/whatwg-url/lib/url-state-machine")'.
+lib/URL-impl.js(203,9): error TS2339: Property 'basicURLParse' does not exist on type 'typeof import("/work/arjunguha-research-group/mhyee/TypeWeaver/data/tsc-out/top1k-typed-with-typed-deps-es6/baseline/whatwg-url/lib/url-state-machine")'.
+lib/percent-encoding.js(2,10): error TS2614: Module '"./infra"' has no exported member 'isASCIIHex'. Did you mean to use 'import isASCIIHex from "./infra"' instead?
+lib/percent-encoding.js(3,10): error TS2614: Module '"./encoding"' has no exported member 'utf8Encode'. Did you mean to use 'import utf8Encode from "./encoding"' instead?
+lib/url-state-machine.js(4,10): error TS2614: Module '"./encoding"' has no exported member 'utf8DecodeWithoutBOM'. Did you mean to use 'import utf8DecodeWithoutBOM from "./encoding"' instead?
+lib/url-state-machine.js(7,3): error TS2614: Module '"./percent-encoding"' has no exported member 'percentDecodeString'. Did you mean to use 'import percentDecodeString from "./percent-encoding"' instead?
+lib/url-state-machine.js(8,3): error TS2614: Module '"./percent-encoding"' has no exported member 'utf8PercentEncodeCodePoint'. Did you mean to use 'import utf8PercentEncodeCodePoint from "./percent-encoding"' instead?
+lib/url-state-machine.js(9,3): error TS2614: Module '"./percent-encoding"' has no exported member 'utf8PercentEncodeString'. Did you mean to use 'import utf8PercentEncodeString from "./percent-encoding"' instead?
+lib/url-state-machine.js(10,3): error TS2614: Module '"./percent-encoding"' has no exported member 'isC0ControlPercentEncode'. Did you mean to use 'import isC0ControlPercentEncode from "./percent-encoding"' instead?
+lib/url-state-machine.js(11,3): error TS2614: Module '"./percent-encoding"' has no exported member 'isFragmentPercentEncode'. Did you mean to use 'import isFragmentPercentEncode from "./percent-encoding"' instead?
+lib/url-state-machine.js(12,3): error TS2614: Module '"./percent-encoding"' has no exported member 'isQueryPercentEncode'. Did you mean to use 'import isQueryPercentEncode from "./percent-encoding"' instead?
+lib/url-state-machine.js(13,3): error TS2614: Module '"./percent-encoding"' has no exported member 'isSpecialQueryPercentEncode'. Did you mean to use 'import isSpecialQueryPercentEncode from "./percent-encoding"' instead?
+lib/url-state-machine.js(14,3): error TS2614: Module '"./percent-encoding"' has no exported member 'isPathPercentEncode'. Did you mean to use 'import isPathPercentEncode from "./percent-encoding"' instead?
+lib/url-state-machine.js(15,3): error TS2614: Module '"./percent-encoding"' has no exported member 'isUserinfoPercentEncode'. Did you mean to use 'import isUserinfoPercentEncode from "./percent-encoding"' instead?
+lib/urlencoded.js(2,10): error TS2614: Module '"./encoding"' has no exported member 'utf8Encode'. Did you mean to use 'import utf8Encode from "./encoding"' instead?
+lib/urlencoded.js(2,22): error TS2614: Module '"./encoding"' has no exported member 'utf8DecodeWithoutBOM'. Did you mean to use 'import utf8DecodeWithoutBOM from "./encoding"' instead?
+lib/urlencoded.js(3,10): error TS2614: Module '"./percent-encoding"' has no exported member 'percentDecodeBytes'. Did you mean to use 'import percentDecodeBytes from "./percent-encoding"' instead?
+lib/urlencoded.js(3,30): error TS2614: Module '"./percent-encoding"' has no exported member 'utf8PercentEncodeString'. Did you mean to use 'import utf8PercentEncodeString from "./percent-encoding"' instead?
+lib/urlencoded.js(3,55): error TS2614: Module '"./percent-encoding"' has no exported member 'isURLEncodedPercentEncode'. Did you mean to use 'import isURLEncodedPercentEncode from "./percent-encoding"' instead?
+live-viewer/live-viewer.js(11,75): error TS2551: Property 'contentDocument' does not exist on type 'Element'. Did you mean 'ownerDocument'?
+live-viewer/live-viewer.js(49,14): error TS2339: Property 'hidden' does not exist on type 'Element'.
+live-viewer/live-viewer.js(50,13): error TS2339: Property 'hidden' does not exist on type 'Element'.
+live-viewer/live-viewer.js(53,14): error TS2339: Property 'hidden' does not exist on type 'Element'.
+live-viewer/live-viewer.js(54,13): error TS2339: Property 'hidden' does not exist on type 'Element'.
+live-viewer/live-viewer.js(91,36): error TS2339: Property 'value' does not exist on type 'Element'.
+live-viewer/live-viewer.js(97,35): error TS2339: Property 'value' does not exist on type 'Element'.
+live-viewer/live-viewer.js(98,34): error TS2339: Property 'value' does not exist on type 'Element'.
+live-viewer/live-viewer.js(108,18): error TS2304: Cannot find name 'whatwgURL'.
+live-viewer/live-viewer.js(108,41): error TS2339: Property 'value' does not exist on type 'Element'.
+live-viewer/live-viewer.js(108,58): error TS2339: Property 'value' does not exist on type 'Element'.
+live-viewer/live-viewer.js(115,52): error TS2339: Property 'value' does not exist on type 'Element'.
+live-viewer/live-viewer.js(115,92): error TS2339: Property 'value' does not exist on type 'Element'.
+live-viewer/live-viewer.js(125,16): error TS2339: Property 'value' does not exist on type 'Element'.
+live-viewer/live-viewer.js(132,17): error TS2339: Property 'value' does not exist on type 'Element'.
+scripts/benchmark.js(3,23): error TS2307: Cannot find module 'benchmark' or its corresponding type declarations.
+scripts/benchmark.js(4,22): error TS2732: Cannot find module '../test/web-platform-tests/resources/urltestdata.json'. Consider using '--resolveJsonModule' to import module with '.json' extension.
+scripts/get-latest-platform-tests.js(11,17): error TS2307: Cannot find module 'got' or its corresponding type declarations.
+scripts/transform.js(3,23): error TS2307: Cannot find module 'webidl2js' or its corresponding type declarations.
+webidl2js-wrapper.js(3,17): error TS2307: Cannot find module './lib/URL' or its corresponding type declarations.
+webidl2js-wrapper.js(4,29): error TS2307: Cannot find module './lib/URLSearchParams' or its corresponding type declarations.
+

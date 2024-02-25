@@ -1,0 +1,19 @@
+lib/CachedInputFileSystem.js(446,27): error TS2554: Expected 2 arguments, but got 1.
+lib/ExportsFieldPlugin.js(62,11): error TS2322: Type 'string | number | boolean | object' is not assignable to type 'ExportsField'.
+  Type 'number' is not assignable to type 'ExportsField'.
+lib/ImportsFieldPlugin.js(65,11): error TS2322: Type 'string | number | boolean | object' is not assignable to type 'ImportsField'.
+  Type 'string' is not assignable to type 'ImportsField'.
+lib/ResolverFactory.js(213,3): error TS2322: Type 'FileSystem | SyncAsyncFileSystemDecorator' is not assignable to type 'FileSystem'.
+  Type 'SyncAsyncFileSystemDecorator' is not assignable to type 'FileSystem'.
+    Types of property 'readFile' are incompatible.
+      Type '(arg: any, options: any, callback: any) => any' is not assignable to type '((arg0: string, arg1: FileSystemCallback<string | Buffer>) => void) & ((arg0: string, arg1: object, arg2: FileSystemCallback<string | Buffer>) => void)'.
+        Type '(arg: any, options: any, callback: any) => any' is not assignable to type '(arg0: string, arg1: FileSystemCallback<string | Buffer>) => void'.
+lib/ResolverFactory.js(324,17): error TS2339: Property 'newInteralResolve' does not exist on type '{ resolveStep: SyncHook<[ResolveStepHook, ResolveRequest], void, UnsetAdditionalOptions>; noResolve: SyncHook<...>; resolve: ResolveStepHook; result: AsyncSeriesHook<...>; }'.
+lib/ResolverFactory.js(324,52): error TS2339: Property 'newInternalResolve' does not exist on type '{ resolveStep: SyncHook<[ResolveStepHook, ResolveRequest], void, UnsetAdditionalOptions>; noResolve: SyncHook<...>; resolve: ResolveStepHook; result: AsyncSeriesHook<...>; }'.
+lib/ResolverFactory.js(641,54): error TS2551: Property 'resolved' does not exist on type '{ resolveStep: SyncHook<[ResolveStepHook, ResolveRequest], void, UnsetAdditionalOptions>; noResolve: SyncHook<...>; resolve: ResolveStepHook; result: AsyncSeriesHook<...>; }'. Did you mean 'resolve'?
+lib/ResolverFactory.js(643,47): error TS2551: Property 'resolved' does not exist on type '{ resolveStep: SyncHook<[ResolveStepHook, ResolveRequest], void, UnsetAdditionalOptions>; noResolve: SyncHook<...>; resolve: ResolveStepHook; result: AsyncSeriesHook<...>; }'. Did you mean 'resolve'?
+lib/SyncAsyncFileSystemDecorator.js(37,55): error TS2554: Expected 2 arguments, but got 1.
+lib/SyncAsyncFileSystemDecorator.js(48,16): error TS2554: Expected 2 arguments, but got 1.
+lib/SyncAsyncFileSystemDecorator.js(59,16): error TS2554: Expected 2 arguments, but got 1.
+lib/SyncAsyncFileSystemDecorator.js(70,16): error TS2554: Expected 2 arguments, but got 1.
+

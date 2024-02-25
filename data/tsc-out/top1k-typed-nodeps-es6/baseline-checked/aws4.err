@@ -1,0 +1,8 @@
+aws4.js(130,7): error TS2322: Type 'number' is not assignable to type 'string | string[]'.
+browser/index.js(1,18): error TS2307: Cannot find module 'aws4' or its corresponding type declarations.
+example.js(2,18): error TS2307: Cannot find module '.' or its corresponding type declarations.
+example.js(17,1): error TS2739: Type '{ host: string; path: string; }' is missing the following properties from type '{ host: string; path: string; service: string; region: string; }': service, region
+example.js(20,1): error TS2739: Type '{ host: string; path: string; signQuery: boolean; }' is missing the following properties from type '{ host: string; path: string; service: string; region: string; }': service, region
+example.js(23,1): error TS2741: Property 'host' is missing in type '{ service: string; region: string; path: string; }' but required in type '{ host: string; path: string; service: string; region: string; }'.
+example.js(26,1): error TS2739: Type '{ service: string; path: string; }' is missing the following properties from type '{ host: string; path: string; service: string; region: string; }': host, region
+

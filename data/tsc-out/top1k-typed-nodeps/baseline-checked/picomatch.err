@@ -1,0 +1,29 @@
+bench/first-match-minimatch.js(6,31): error TS2339: Property 'test' does not exist on type 'false | RegExp'.
+  Property 'test' does not exist on type 'false'.
+bench/glob-parent.js(3,27): error TS2307: Cannot find module 'benchmark' or its corresponding type declarations.
+bench/glob-parent.js(4,25): error TS2307: Cannot find module 'ansi-colors' or its corresponding type declarations.
+bench/glob-parent.js(5,22): error TS2307: Cannot find module 'minimist' or its corresponding type declarations.
+bench/glob-parent.js(6,24): error TS2307: Cannot find module 'glob-parent' or its corresponding type declarations.
+bench/index.js(3,27): error TS2307: Cannot find module 'benchmark' or its corresponding type declarations.
+bench/index.js(4,25): error TS2307: Cannot find module 'ansi-colors' or its corresponding type declarations.
+bench/index.js(5,26): error TS2307: Cannot find module 'minimist' or its corresponding type declarations.
+examples/option-ignore.js(5,20): error TS2339: Property 'matcher' does not exist on type '{ (glob: any, options?: any, returnState?: boolean): Function; test(input: string, regex: RegExp, options: any, { glob, posix }?: { glob: any; posix: any; }): any; matchBase(input: string, glob: string | RegExp, options: any, posix?: any): boolean; ... 6 more ...; constants: { ...; }; }'.
+examples/option-onIgnore.js(10,20): error TS2339: Property 'matcher' does not exist on type '{ (glob: any, options?: any, returnState?: boolean): Function; test(input: string, regex: RegExp, options: any, { glob, posix }?: { glob: any; posix: any; }): any; matchBase(input: string, glob: string | RegExp, options: any, posix?: any): boolean; ... 6 more ...; constants: { ...; }; }'.
+examples/option-onMatch.js(12,20): error TS2339: Property 'matcher' does not exist on type '{ (glob: any, options?: any, returnState?: boolean): Function; test(input: string, regex: RegExp, options: any, { glob, posix }?: { glob: any; posix: any; }): any; matchBase(input: string, glob: string | RegExp, options: any, posix?: any): boolean; ... 6 more ...; constants: { ...; }; }'.
+examples/option-onResult.js(9,20): error TS2339: Property 'matcher' does not exist on type '{ (glob: any, options?: any, returnState?: boolean): Function; test(input: string, regex: RegExp, options: any, { glob, posix }?: { glob: any; posix: any; }): any; matchBase(input: string, glob: string | RegExp, options: any, posix?: any): boolean; ... 6 more ...; constants: { ...; }; }'.
+examples/windows.js(25,6): error TS2540: Cannot assign to 'sep' because it is a read-only property.
+examples/windows.js(35,6): error TS2540: Cannot assign to 'sep' because it is a read-only property.
+lib/parse.js(308,9): error TS2367: This comparison appears to be unintentional because the types 'false' and 'true' have no overlap.
+lib/picomatch.js(26,27): error TS8024: JSDoc '@param' tag has name 'globs', but there is no parameter with that name.
+lib/picomatch.js(57,23): error TS2339: Property 'state' does not exist on type 'RegExp'.
+lib/picomatch.js(58,16): error TS2339: Property 'state' does not exist on type 'RegExp'.
+lib/picomatch.js(63,5): error TS2322: Type 'Function' is not assignable to type '() => boolean'.
+  Type 'Function' provides no match for the signature '(): boolean'.
+lib/picomatch.js(79,19): error TS2554: Expected 0 arguments, but got 1.
+lib/picomatch.js(117,44): error TS2525: Initializer provides no value for this binding element and the binding element has no default value.
+lib/picomatch.js(117,50): error TS2525: Initializer provides no value for this binding element and the binding element has no default value.
+lib/picomatch.js(140,7): error TS2322: Type 'RegExpExecArray' is not assignable to type 'boolean'.
+lib/picomatch.js(261,11): error TS2339: Property 'state' does not exist on type 'RegExp'.
+lib/picomatch.js(278,21): error TS8024: JSDoc '@param' tag has name 'state', but there is no parameter with that name.
+lib/scan.js(43,21): error TS8024: JSDoc '@param' tag has name 'str', but there is no parameter with that name.
+

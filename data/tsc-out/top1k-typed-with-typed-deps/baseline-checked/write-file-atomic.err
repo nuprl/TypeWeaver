@@ -1,0 +1,16 @@
+lib/index.js(114,37): error TS2345: Argument of type 'ArrayBufferView' is not assignable to parameter of type 'NodeJS.ArrayBufferView'.
+  Type 'ArrayBufferView' is missing the following properties from type 'BigUint64Array': BYTES_PER_ELEMENT, copyWithin, entries, every, and 24 more.
+lib/index.js(114,51): error TS2339: Property 'length' does not exist on type 'ArrayBufferView'.
+lib/index.js(116,13): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(fd: number, buffer?: ArrayBufferView, offset?: number, length?: number, position?: number): Promise<{ bytesWritten: number; buffer: ArrayBufferView; }>', gave the following error.
+    Argument of type 'string' is not assignable to parameter of type 'ArrayBufferView'.
+  Overload 2 of 2, '(fd: number, string: string, position?: number, encoding?: BufferEncoding): Promise<{ bytesWritten: number; buffer: string; }>', gave the following error.
+    Argument of type 'string' is not assignable to parameter of type 'BufferEncoding'.
+lib/index.js(221,24): error TS2345: Argument of type 'ArrayBufferView' is not assignable to parameter of type 'NodeJS.ArrayBufferView'.
+lib/index.js(221,38): error TS2339: Property 'length' does not exist on type 'ArrayBufferView'.
+lib/index.js(223,7): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(fd: number, buffer: ArrayBufferView, offset?: number, length?: number, position?: number): number', gave the following error.
+    Argument of type 'string' is not assignable to parameter of type 'ArrayBufferView'.
+  Overload 2 of 2, '(fd: number, string: string, position?: number, encoding?: BufferEncoding): number', gave the following error.
+    Argument of type 'string' is not assignable to parameter of type 'BufferEncoding'.
+

@@ -1,0 +1,13 @@
+export function noop(): void;
+export function handleMaybeThenable(promise: any, maybeThenable: any, then: any): void;
+export function resolve(promise: any, value: any): void;
+export function publishRejection(promise: any): void;
+export function fulfill(promise: any, value: any): void;
+export function reject(promise: any, reason: any): void;
+export function subscribe(parent: any, child: any, onFulfillment: any, onRejection: any): void;
+export function publish(promise: any): void;
+export function invokeCallback(state: any, promise: any, callback: any, result: any): void;
+export function initializePromise(promise: any, resolver: any): void;
+export const PENDING: any;
+export const FULFILLED: 1;
+export const REJECTED: 2;

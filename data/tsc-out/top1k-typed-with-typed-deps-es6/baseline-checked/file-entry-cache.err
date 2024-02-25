@@ -1,0 +1,9 @@
+cache.d.ts(31,42): error TS2304: Cannot find name 'type'.
+cache.d.ts(121,42): error TS2304: Cannot find name 'type'.
+cache.js(57,45): error TS2339: Property 'changed' does not exist on type '{ key: any; changed: boolean; meta: any; } | { key: any; notFound: boolean; err: any; }'.
+  Property 'changed' does not exist on type '{ key: any; notFound: boolean; err: any; }'.
+cache.js(67,20): error TS2304: Cannot find name 'type'.
+cache.js(90,9): error TS2322: Type '{ changedFiles: any[]; notFoundFiles: any[]; notChangedFiles: any[]; }' is not assignable to type '[type]'.
+cache.js(148,33): error TS2345: Argument of type 'string | Buffer' is not assignable to parameter of type 'Buffer'.
+  Type 'string' is not assignable to type 'Buffer'.
+

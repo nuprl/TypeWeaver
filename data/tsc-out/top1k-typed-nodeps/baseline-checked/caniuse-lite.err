@@ -1,0 +1,22 @@
+check-mdn-bcd.js(4,21): error TS2732: Cannot find module './package.json'. Consider using '--resolveJsonModule' to import module with '.json' extension.
+check.js(4,21): error TS2732: Cannot find module './package.json'. Consider using '--resolveJsonModule' to import module with '.json' extension.
+commit.js(3,21): error TS2732: Cannot find module './package.json'. Consider using '--resolveJsonModule' to import module with '.json' extension.
+copy-mdn.js(2,28): error TS2732: Cannot find module 'caniuse-db/data.json'. Consider using '--resolveJsonModule' to import module with '.json' extension.
+copy-mdn.js(3,21): error TS2307: Cannot find module '@mdn/browser-compat-data' or its corresponding type declarations.
+copy-mdn.js(45,33): error TS2339: Property 'version_added' does not exist on type 'string'.
+dist/unpacker/agents.js(18,12): error TS2339: Property 'usage_global' does not exist on type '{}'.
+dist/unpacker/agents.js(20,12): error TS2339: Property 'versions' does not exist on type '{}'.
+dist/unpacker/agents.js(29,12): error TS2339: Property 'prefix_exceptions' does not exist on type '{}'.
+dist/unpacker/agents.js(31,12): error TS2339: Property 'browser' does not exist on type '{}'.
+dist/unpacker/agents.js(33,12): error TS2339: Property 'release_date' does not exist on type '{}'.
+dist/unpacker/agents.js(42,12): error TS2339: Property 'prefix' does not exist on type '{}'.
+src/lib/generateCode.js(1,26): error TS2307: Cannot find module '@babel/generator' or its corresponding type declarations.
+src/lib/generateCode.js(2,19): error TS2307: Cannot find module '@babel/types' or its corresponding type declarations.
+src/lib/moduleExports.js(1,19): error TS2307: Cannot find module '@babel/types' or its corresponding type declarations.
+src/lib/stringifyObject.js(1,19): error TS2307: Cannot find module '@babel/types' or its corresponding type declarations.
+src/packer/browsers.js(22,25): error TS2732: Cannot find module 'caniuse-db/data.json'. Consider using '--resolveJsonModule' to import module with '.json' extension.
+src/packer/feature.js(3,19): error TS2307: Cannot find module '@babel/types' or its corresponding type declarations.
+src/packer/region.js(32,21): error TS2339: Property '_' does not exist on type '{}'.
+src/packer/region.js(33,19): error TS2339: Property '_' does not exist on type '{}'.
+src/packer/region.js(35,19): error TS2339: Property '_' does not exist on type '{}'.
+

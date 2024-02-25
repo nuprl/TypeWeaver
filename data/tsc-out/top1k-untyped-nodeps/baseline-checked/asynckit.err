@@ -1,0 +1,65 @@
+bench.js(9,25): error TS2307: Cannot find module 'benchmark' or its corresponding type declarations.
+lib/abort.js(20,11): error TS2304: Cannot find name 'state'.
+lib/iterate.js(55,14): error TS2304: Cannot find name 'mixed'.
+lib/iterate.js(57,23): error TS2304: Cannot find name 'mixed'.
+lib/readable_asynckit.js(14,20): error TS2339: Property 'super_' does not exist on type 'typeof ReadableAsyncKit'.
+lib/readable_asynckit.js(40,19): error TS2339: Property 'terminator' does not exist on type 'destroy'.
+lib/readable_asynckit.js(42,10): error TS2339: Property 'terminator' does not exist on type 'destroy'.
+lib/readable_asynckit.js(70,15): error TS2339: Property 'destroyed' does not exist on type '(Anonymous function)'.
+lib/readable_parallel.d.ts(10,98): error TS2503: Cannot find namespace 'stream'.
+lib/readable_parallel.js(12,14): error TS2503: Cannot find namespace 'stream'.
+lib/readable_parallel.js(12,29): error TS1127: Invalid character.
+lib/readable_parallel.js(18,12): error TS2350: Only a void function can be called with the 'new' keyword.
+lib/readable_parallel.js(22,20): error TS2339: Property 'super_' does not exist on type '(list: any, iterator: Function, callback: Function) => stream.Readable'.
+lib/readable_serial.d.ts(10,96): error TS2503: Cannot find namespace 'stream'.
+lib/readable_serial.js(12,14): error TS2503: Cannot find namespace 'stream'.
+lib/readable_serial.js(12,29): error TS1127: Invalid character.
+lib/readable_serial.js(18,12): error TS2350: Only a void function can be called with the 'new' keyword.
+lib/readable_serial.js(22,18): error TS2339: Property 'super_' does not exist on type '(list: any, iterator: Function, callback: Function) => stream.Readable'.
+lib/readable_serial_ordered.d.ts(11,125): error TS2503: Cannot find namespace 'stream'.
+lib/readable_serial_ordered.d.ts(13,14): error TS2304: Cannot find name 'ascending'.
+lib/readable_serial_ordered.d.ts(13,25): error TS2304: Cannot find name 'descending'.
+lib/readable_serial_ordered.js(16,14): error TS2503: Cannot find namespace 'stream'.
+lib/readable_serial_ordered.js(16,29): error TS1127: Invalid character.
+lib/readable_serial_ordered.js(22,12): error TS2350: Only a void function can be called with the 'new' keyword.
+lib/readable_serial_ordered.js(26,25): error TS2339: Property 'super_' does not exist on type 'typeof ReadableSerialOrdered'.
+lib/state.js(30,30): error TS2345: Argument of type 'Function' is not assignable to parameter of type '(a: string, b: string) => number'.
+  Type 'Function' provides no match for the signature '(a: string, b: string): number'.
+lib/streamify.d.ts(8,37): error TS2304: Cannot find name 'ReadableAsyncKit'.
+lib/streamify.d.ts(18,37): error TS2304: Cannot find name 'ReadableAsyncKit'.
+lib/streamify.js(12,13): error TS2304: Cannot find name 'ReadableAsyncKit'.
+lib/streamify.js(12,29): error TS1127: Invalid character.
+lib/streamify.js(48,13): error TS2304: Cannot find name 'ReadableAsyncKit'.
+lib/streamify.js(48,29): error TS1127: Invalid character.
+lib/streamify.js(69,13): error TS2304: Cannot find name 'ReadableAsyncKit'.
+lib/streamify.js(69,29): error TS1127: Invalid character.
+lib/streamify.js(97,11): error TS2304: Cannot find name 'ReadableAsyncKit'.
+lib/streamify.js(97,27): error TS1127: Invalid character.
+lib/streamify.js(98,12): error TS2304: Cannot find name 'mixed'.
+lib/streamify.js(99,12): error TS2304: Cannot find name 'mixed'.
+lib/streamify.js(125,11): error TS2304: Cannot find name 'ReadableAsyncKit'.
+lib/streamify.js(125,27): error TS1127: Invalid character.
+lib/streamify.js(126,12): error TS2304: Cannot find name 'mixed'.
+lib/streamify.js(127,12): error TS2304: Cannot find name 'mixed'.
+lib/terminator.d.ts(8,35): error TS2304: Cannot find name 'AsyncKitState'.
+lib/terminator.d.ts(16,17): error TS2681: A constructor cannot have a 'this' parameter.
+lib/terminator.d.ts(16,23): error TS2304: Cannot find name 'AsyncKitState'.
+lib/terminator.js(11,11): error TS2304: Cannot find name 'AsyncKitState'.
+lib/terminator.js(11,24): error TS1127: Invalid character.
+parallel.js(19,15): error TS2554: Expected 2 arguments, but got 1.
+parallel.js(21,16): error TS2339: Property 'index' does not exist on type 'object'.
+parallel.js(32,29): error TS2339: Property 'jobs' does not exist on type 'object'.
+parallel.js(34,30): error TS2339: Property 'results' does not exist on type 'object'.
+parallel.js(39,11): error TS2339: Property 'index' does not exist on type 'object'.
+serialOrdered.d.ts(22,31): error TS2304: Cannot find name 'mixed'.
+serialOrdered.d.ts(22,41): error TS2304: Cannot find name 'mixed'.
+serialOrdered.d.ts(30,32): error TS2304: Cannot find name 'mixed'.
+serialOrdered.d.ts(30,42): error TS2304: Cannot find name 'mixed'.
+serialOrdered.js(33,11): error TS2339: Property 'index' does not exist on type 'object'.
+serialOrdered.js(36,15): error TS2339: Property 'index' does not exist on type 'object'.
+serialOrdered.js(43,26): error TS2339: Property 'results' does not exist on type 'object'.
+serialOrdered.js(56,14): error TS2304: Cannot find name 'mixed'.
+serialOrdered.js(57,14): error TS2304: Cannot find name 'mixed'.
+serialOrdered.js(68,14): error TS2304: Cannot find name 'mixed'.
+serialOrdered.js(69,14): error TS2304: Cannot find name 'mixed'.
+

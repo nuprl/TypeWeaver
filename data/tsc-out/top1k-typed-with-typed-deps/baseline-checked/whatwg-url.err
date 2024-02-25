@@ -1,0 +1,41 @@
+index.d.ts(1,10): error TS2304: Cannot find name 'parseURL'.
+index.d.ts(1,20): error TS2304: Cannot find name 'basicURLParse'.
+index.d.ts(1,35): error TS2304: Cannot find name 'serializeURL'.
+index.d.ts(1,49): error TS2304: Cannot find name 'serializePath'.
+index.d.ts(1,64): error TS2304: Cannot find name 'serializeHost'.
+index.d.ts(1,79): error TS2304: Cannot find name 'serializeInteger'.
+index.d.ts(1,97): error TS2304: Cannot find name 'serializeURLOrigin'.
+index.d.ts(1,117): error TS2304: Cannot find name 'setTheUsername'.
+index.d.ts(1,133): error TS2304: Cannot find name 'setThePassword'.
+index.d.ts(1,149): error TS2304: Cannot find name 'cannotHaveAUsernamePasswordPort'.
+index.d.ts(1,182): error TS2304: Cannot find name 'hasAnOpaquePath'.
+index.d.ts(1,199): error TS2304: Cannot find name 'percentDecodeString'.
+index.d.ts(1,220): error TS2304: Cannot find name 'percentDecodeBytes'.
+index.js(8,5): error TS2339: Property 'install' does not exist on type '{ new (url: string | URL, base?: string | URL): URL; prototype: URL; createObjectURL(obj: Blob | MediaSource): string; revokeObjectURL(url: string): void; }'.
+index.js(9,17): error TS2339: Property 'install' does not exist on type '{ new (init?: string | Record<string, string> | URLSearchParams | string[][]): URLSearchParams; prototype: URLSearchParams; toString(): string; }'.
+lib/URL-impl.js(4,33): error TS2307: Cannot find module './URLSearchParams' or its corresponding type declarations.
+live-viewer/live-viewer.js(11,75): error TS2551: Property 'contentDocument' does not exist on type 'Element'. Did you mean 'ownerDocument'?
+live-viewer/live-viewer.js(49,14): error TS2339: Property 'hidden' does not exist on type 'Element'.
+live-viewer/live-viewer.js(50,13): error TS2339: Property 'hidden' does not exist on type 'Element'.
+live-viewer/live-viewer.js(53,14): error TS2339: Property 'hidden' does not exist on type 'Element'.
+live-viewer/live-viewer.js(54,13): error TS2339: Property 'hidden' does not exist on type 'Element'.
+live-viewer/live-viewer.js(91,36): error TS2339: Property 'value' does not exist on type 'Element'.
+live-viewer/live-viewer.js(97,35): error TS2339: Property 'value' does not exist on type 'Element'.
+live-viewer/live-viewer.js(98,34): error TS2339: Property 'value' does not exist on type 'Element'.
+live-viewer/live-viewer.js(108,18): error TS2304: Cannot find name 'whatwgURL'.
+live-viewer/live-viewer.js(108,41): error TS2339: Property 'value' does not exist on type 'Element'.
+live-viewer/live-viewer.js(108,58): error TS2339: Property 'value' does not exist on type 'Element'.
+live-viewer/live-viewer.js(115,52): error TS2339: Property 'value' does not exist on type 'Element'.
+live-viewer/live-viewer.js(115,92): error TS2339: Property 'value' does not exist on type 'Element'.
+live-viewer/live-viewer.js(125,16): error TS2339: Property 'value' does not exist on type 'Element'.
+live-viewer/live-viewer.js(132,17): error TS2339: Property 'value' does not exist on type 'Element'.
+scripts/benchmark.js(2,9): error TS2305: Module '"../"' has no exported member 'URL'.
+scripts/benchmark.js(3,27): error TS2307: Cannot find module 'benchmark' or its corresponding type declarations.
+scripts/benchmark.js(4,26): error TS2732: Cannot find module '../test/web-platform-tests/resources/urltestdata.json'. Consider using '--resolveJsonModule' to import module with '.json' extension.
+scripts/get-latest-platform-tests.js(12,21): error TS2307: Cannot find module 'got' or its corresponding type declarations.
+scripts/transform.js(3,27): error TS2307: Cannot find module 'webidl2js' or its corresponding type declarations.
+webidl2js-wrapper.d.ts(1,10): error TS2661: Cannot export 'URL'. Only local declarations can be exported from a module.
+webidl2js-wrapper.d.ts(1,15): error TS2661: Cannot export 'URLSearchParams'. Only local declarations can be exported from a module.
+webidl2js-wrapper.js(3,21): error TS2307: Cannot find module './lib/URL' or its corresponding type declarations.
+webidl2js-wrapper.js(4,33): error TS2307: Cannot find module './lib/URLSearchParams' or its corresponding type declarations.
+

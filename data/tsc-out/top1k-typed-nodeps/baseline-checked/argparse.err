@@ -1,0 +1,98 @@
+argparse.js(204,30): error TS2367: This comparison appears to be unintentional because the types '(...args: any[]) => any' and '{ [x: number]: (...args: any[]) => any; }' have no overlap.
+argparse.js(359,44): error TS2345: Argument of type 'typeof inspect' is not assignable to parameter of type '(value: string, index: number, array: string[]) => string'.
+  Types of parameters 'showHidden' and 'index' are incompatible.
+    Type 'number' is not assignable to type 'boolean'.
+argparse.js(473,35): error TS2339: Property '_Section' does not exist on type 'HelpFormatter'.
+argparse.js(503,28): error TS2339: Property '_Section' does not exist on type 'HelpFormatter'.
+argparse.js(790,51): error TS2554: Expected 2 arguments, but got 3.
+argparse.js(1178,81): error TS2345: Argument of type 'FunctionConstructor' is not assignable to parameter of type 'ObjectConstructor'.
+  Type 'FunctionConstructor' is missing the following properties from type 'ObjectConstructor': getPrototypeOf, getOwnPropertyDescriptor, getOwnPropertyNames, create, and 17 more.
+argparse.js(1270,5): error TS2416: Property '_get_kwargs' in type 'Action' is not assignable to the same property in base type '_AttributeHolder'.
+  Type '() => any[][]' is not assignable to type '() => [string, any][]'.
+    Type 'any[][]' is not assignable to type '[string, any][]'.
+      Type 'any[]' is not assignable to type '[string, any]'.
+        Target requires 2 element(s) but source may have fewer.
+argparse.js(1450,67): error TS2507: Type '(...args: any[]) => any' is not a constructor function type.
+argparse.js(1479,69): error TS2507: Type '(...args: any[]) => any' is not a constructor function type.
+argparse.js(1812,19): error TS2350: Only a void function can be called with the 'new' keyword.
+argparse.js(1847,61): error TS2507: Type '(...args: any[]) => any' is not a constructor function type.
+argparse.js(1849,45): error TS2339: Property 'dest' does not exist on type '_ExtendAction'.
+argparse.js(1852,33): error TS2339: Property 'dest' does not exist on type '_ExtendAction'.
+argparse.js(1941,19): error TS2350: Only a void function can be called with the 'new' keyword.
+argparse.js(1962,60): error TS2345: Argument of type 'typeof inspect' is not assignable to parameter of type '(value: any, index: number, array: any[]) => string'.
+  Types of parameters 'showHidden' and 'index' are incompatible.
+    Type 'number' is not assignable to type 'boolean'.
+argparse.js(2170,22): error TS2349: This expression is not callable.
+  Type '{}' has no call signatures.
+argparse.js(2398,15): error TS2350: Only a void function can be called with the 'new' keyword.
+argparse.js(2468,81): error TS2507: Type '(...args: any[]) => any' is not a constructor function type.
+argparse.js(2490,14): error TS2339: Property '_group_actions' does not exist on type '_MutuallyExclusiveGroup'.
+argparse.js(2496,28): error TS2339: Property '_group_actions' does not exist on type '_MutuallyExclusiveGroup'.
+argparse.js(2598,34): error TS2339: Property 'add_argument_group' does not exist on type 'ArgumentParser'.
+argparse.js(2599,32): error TS2339: Property 'add_argument_group' does not exist on type 'ArgumentParser'.
+argparse.js(2606,14): error TS2339: Property 'register' does not exist on type 'ArgumentParser'.
+argparse.js(2607,14): error TS2339: Property 'register' does not exist on type 'ArgumentParser'.
+argparse.js(2608,14): error TS2339: Property 'register' does not exist on type 'ArgumentParser'.
+argparse.js(2609,14): error TS2339: Property 'register' does not exist on type 'ArgumentParser'.
+argparse.js(2616,14): error TS2339: Property 'register' does not exist on type 'ArgumentParser'.
+argparse.js(2623,14): error TS2339: Property 'register' does not exist on type 'ArgumentParser'.
+argparse.js(2625,14): error TS2339: Property 'register' does not exist on type 'ArgumentParser'.
+argparse.js(2633,18): error TS2339: Property 'add_argument' does not exist on type 'ArgumentParser'.
+argparse.js(2645,18): error TS2339: Property 'add_argument' does not exist on type 'ArgumentParser'.
+argparse.js(2651,35): error TS2339: Property 'version' does not exist on type 'ArgumentParser'.
+argparse.js(2660,18): error TS2339: Property '_add_container_actions' does not exist on type 'ArgumentParser'.
+argparse.js(2661,32): error TS2339: Property '_defaults' does not exist on type 'ArgumentParser'.
+argparse.js(2668,5): error TS2416: Property '_get_kwargs' in type 'ArgumentParser' is not assignable to the same property in base type '_AttributeHolder'.
+  Type '() => any[][]' is not assignable to type '() => [string, any][]'.
+    Type 'any[][]' is not assignable to type '[string, any][]'.
+argparse.js(2702,37): error TS2339: Property 'add_argument_group' does not exist on type 'ArgumentParser'.
+argparse.js(2712,31): error TS2339: Property '_mutually_exclusive_groups' does not exist on type 'ArgumentParser'.
+argparse.js(2718,34): error TS2339: Property '_pop_action_class' does not exist on type 'ArgumentParser'.
+argparse.js(2737,21): error TS2339: Property '_actions' does not exist on type 'ArgumentParser'.
+argparse.js(2741,21): error TS2339: Property '_actions' does not exist on type 'ArgumentParser'.
+argparse.js(2764,25): error TS2350: Only a void function can be called with the 'new' keyword.
+argparse.js(2768,33): error TS2339: Property '_actions' does not exist on type 'ArgumentParser'.
+argparse.js(2779,43): error TS2339: Property '_defaults' does not exist on type 'ArgumentParser'.
+argparse.js(2781,47): error TS2339: Property '_defaults' does not exist on type 'ArgumentParser'.
+argparse.js(2791,36): error TS2339: Property 'message' does not exist on type '{}'.
+argparse.js(2817,38): error TS2339: Property '_mutually_exclusive_groups' does not exist on type 'ArgumentParser'.
+argparse.js(2878,31): error TS2350: Only a void function can be called with the 'new' keyword.
+argparse.js(2917,38): error TS2339: Property 'prefix_chars' does not exist on type 'ArgumentParser'.
+argparse.js(2923,50): error TS2339: Property '_option_string_actions' does not exist on type 'ArgumentParser'.
+argparse.js(2929,35): error TS2350: Only a void function can be called with the 'new' keyword.
+argparse.js(2944,31): error TS2350: Only a void function can be called with the 'new' keyword.
+argparse.js(3042,33): error TS2339: Property '_actions' does not exist on type 'ArgumentParser'.
+argparse.js(3068,32): error TS2339: Property '_mutually_exclusive_groups' does not exist on type 'ArgumentParser'.
+argparse.js(3144,19): error TS2350: Only a void function can be called with the 'new' keyword.
+argparse.js(3176,19): error TS2339: Property 'prefix_chars' does not exist on type 'ArgumentParser'.
+argparse.js(3181,32): error TS2339: Property '_option_string_actions' does not exist on type 'ArgumentParser'.
+argparse.js(3182,31): error TS2339: Property '_option_string_actions' does not exist on type 'ArgumentParser'.
+argparse.js(3194,39): error TS2339: Property '_option_string_actions' does not exist on type 'ArgumentParser'.
+argparse.js(3195,35): error TS2339: Property '_option_string_actions' does not exist on type 'ArgumentParser'.
+argparse.js(3221,18): error TS2339: Property '_negative_number_matcher' does not exist on type 'ArgumentParser'.
+argparse.js(3222,23): error TS2339: Property '_has_negative_number_optionals' does not exist on type 'ArgumentParser'.
+argparse.js(3242,26): error TS2339: Property 'prefix_chars' does not exist on type 'ArgumentParser'.
+argparse.js(3252,60): error TS2339: Property '_option_string_actions' does not exist on type 'ArgumentParser'.
+argparse.js(3254,43): error TS2339: Property '_option_string_actions' does not exist on type 'ArgumentParser'.
+argparse.js(3270,56): error TS2339: Property '_option_string_actions' does not exist on type 'ArgumentParser'.
+argparse.js(3272,39): error TS2339: Property '_option_string_actions' does not exist on type 'ArgumentParser'.
+argparse.js(3276,39): error TS2339: Property '_option_string_actions' does not exist on type 'ArgumentParser'.
+argparse.js(3375,32): error TS2339: Property '_mutually_exclusive_groups' does not exist on type 'ArgumentParser'.
+argparse.js(3427,40): error TS2339: Property '_mutually_exclusive_groups' does not exist on type 'ArgumentParser'.
+argparse.js(3438,40): error TS2339: Property '_mutually_exclusive_groups' does not exist on type 'ArgumentParser'.
+argparse.js(3515,30): error TS2339: Property '_registry_get' does not exist on type 'ArgumentParser'.
+argparse.js(3518,19): error TS2350: Only a void function can be called with the 'new' keyword.
+argparse.js(3543,31): error TS2339: Property 'message' does not exist on type '{}'.
+argparse.js(3544,23): error TS2350: Only a void function can be called with the 'new' keyword.
+argparse.js(3551,23): error TS2350: Only a void function can be called with the 'new' keyword.
+argparse.js(3565,72): error TS2345: Argument of type 'typeof inspect' is not assignable to parameter of type '(value: any, index: number, array: any[]) => string'.
+argparse.js(3567,19): error TS2350: Only a void function can be called with the 'new' keyword.
+argparse.js(3576,46): error TS2339: Property '_actions' does not exist on type 'ArgumentParser'.
+argparse.js(3577,34): error TS2339: Property '_mutually_exclusive_groups' does not exist on type 'ArgumentParser'.
+argparse.js(3585,46): error TS2339: Property '_actions' does not exist on type 'ArgumentParser'.
+argparse.js(3586,34): error TS2339: Property '_mutually_exclusive_groups' does not exist on type 'ArgumentParser'.
+argparse.js(3589,33): error TS2339: Property 'description' does not exist on type 'ArgumentParser'.
+argparse.js(3592,39): error TS2339: Property '_action_groups' does not exist on type 'ArgumentParser'.
+lib/textwrap.js(419,20): error TS18048: 'margin' is possibly 'undefined'.
+lib/textwrap.js(427,30): error TS18048: 'margin' is possibly 'undefined'.
+

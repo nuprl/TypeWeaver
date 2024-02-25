@@ -1,0 +1,4 @@
+assert.js(28,9): error TS2345: Argument of type '{ message: string; actual: any; expected: any; operator: any; stackStartFunction: Function; }' is not assignable to parameter of type '{ message?: string; actual?: unknown; expected?: unknown; operator?: string; stackStartFn?: Function; }'.
+  Object literal may only specify known properties, but 'stackStartFunction' does not exist in type '{ message?: string; actual?: unknown; expected?: unknown; operator?: string; stackStartFn?: Function; }'. Did you mean to write 'stackStartFn'?
+assert.js(207,9): error TS2339: Property '_setExports' does not exist on type '(arg: any, msg: any) => void'.
+

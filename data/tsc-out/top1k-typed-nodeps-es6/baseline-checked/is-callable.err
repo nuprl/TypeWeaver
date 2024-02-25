@@ -1,0 +1,10 @@
+index.js(16,49): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(target: (this: any, ...args: readonly any[]) => any, thisArgument: any, argumentsList: readonly any[]): any', gave the following error.
+    Argument of type '{}' is not assignable to parameter of type 'readonly any[]'.
+      Type '{}' is missing the following properties from type 'readonly any[]': length, concat, join, slice, and 19 more.
+  Overload 2 of 2, '(target: Function, thisArgument: any, argumentsList: ArrayLike<any>): any', gave the following error.
+    Argument of type '{}' is not assignable to parameter of type 'ArrayLike<any>'.
+      Property 'length' is missing in type '{}' but required in type 'ArrayLike<any>'.
+index.js(76,13): error TS2554: Expected 0 arguments, but got 1.
+index.js(88,13): error TS2554: Expected 0 arguments, but got 1.
+

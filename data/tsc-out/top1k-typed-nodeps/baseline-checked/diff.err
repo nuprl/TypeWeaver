@@ -1,0 +1,24 @@
+Gruntfile.js(3,21): error TS2732: Cannot find module './package.json'. Consider using '--resolveJsonModule' to import module with '.json' extension.
+Gruntfile.js(4,23): error TS2307: Cannot find module 'rollup-plugin-babel' or its corresponding type declarations.
+Gruntfile.js(128,8): error TS2339: Property 'registerTask' does not exist on type '{ exports: (grunt: any) => void; }'.
+Gruntfile.js(129,8): error TS2339: Property 'registerTask' does not exist on type '{ exports: (grunt: any) => void; }'.
+Gruntfile.js(130,8): error TS2339: Property 'registerTask' does not exist on type '{ exports: (grunt: any) => void; }'.
+Gruntfile.js(132,8): error TS2339: Property 'registerTask' does not exist on type '{ exports: (grunt: any) => void; }'.
+examples/node_example.js(1,9): error TS2307: Cannot find module 'colors' or its corresponding type declarations.
+examples/node_example.js(2,20): error TS2307: Cannot find module '../' or its corresponding type declarations.
+rollup.config.js(1,19): error TS2307: Cannot find module 'rollup-plugin-babel' or its corresponding type declarations.
+rollup.config.js(2,17): error TS2732: Cannot find module './package.json'. Consider using '--resolveJsonModule' to import module with '.json' extension.
+runtime.js(1,9): error TS2307: Cannot find module '@babel/register' or its corresponding type declarations.
+src/diff/base.js(82,89): error TS2339: Property 'useLongestToken' does not exist on type 'Diff'.
+src/diff/json.js(10,10): error TS2339: Property 'useLongestToken' does not exist on type 'Diff'.
+src/diff/json.js(14,10): error TS2339: Property 'undefinedReplacement' does not exist on type '{}'.
+src/diff/json.js(14,32): error TS2339: Property 'stringifyReplacer' does not exist on type '{}'.
+src/diff/line.js(18,32): error TS2339: Property 'newlineIsToken' does not exist on type '{}'.
+src/diff/line.js(21,24): error TS2339: Property 'ignoreWhitespace' does not exist on type '{}'.
+src/diff/word.js(28,20): error TS2339: Property 'ignoreCase' does not exist on type '{}'.
+src/diff/word.js(32,42): error TS2339: Property 'ignoreWhitespace' does not exist on type '{}'.
+src/patch/merge.js(214,20): error TS2339: Property 'merged' does not exist on type 'any[] | { merged: any[]; changes: any[]; }'.
+  Property 'merged' does not exist on type 'any[]'.
+src/patch/merge.js(215,38): error TS2339: Property 'merged' does not exist on type 'any[] | { merged: any[]; changes: any[]; }'.
+  Property 'merged' does not exist on type 'any[]'.
+

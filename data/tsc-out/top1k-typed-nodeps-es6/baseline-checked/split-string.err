@@ -1,0 +1,6 @@
+example.js(7,13): error TS2554: Expected 3 arguments, but got 1.
+index.js(93,12): error TS2339: Property 'stash' does not exist on type '{ type: string; nodes: undefined[]; }'.
+index.js(94,12): error TS2339: Property 'parent' does not exist on type '{ type: string; nodes: undefined[]; }'.
+index.js(96,18): error TS2345: Argument of type '{ type: string; nodes: undefined[]; }' is not assignable to parameter of type '{ type: string; nodes: any[]; stash: string[]; }'.
+  Property 'stash' is missing in type '{ type: string; nodes: undefined[]; }' but required in type '{ type: string; nodes: any[]; stash: string[]; }'.
+

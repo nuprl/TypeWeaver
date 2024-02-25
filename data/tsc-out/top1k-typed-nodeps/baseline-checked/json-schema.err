@@ -1,0 +1,17 @@
+lib/links.js(6,16): error TS2304: Cannot find name 'define'.
+lib/links.js(6,41): error TS2304: Cannot find name 'define'.
+lib/links.js(8,9): error TS2304: Cannot find name 'define'.
+lib/validate.js(15,16): error TS2304: Cannot find name 'define'.
+lib/validate.js(15,41): error TS2304: Cannot find name 'define'.
+lib/validate.js(17,9): error TS2304: Cannot find name 'define'.
+lib/validate.js(27,14): error TS2339: Property 'jsonSchema' does not exist on type '{ (instance: any, schema: any): any; Integer: { type: string; }; validate: (instance: any, schema: any) => any; checkPropertyChange: (value: any, schema: any, property: any) => any; _validate: (instance: any, schema: any, options: any) => { ...; }; mustBeValid: (result: any) => void; }'.
+lib/validate.js(31,9): error TS2339: Property 'Integer' does not exist on type '(instance: any, schema: any) => any'.
+lib/validate.js(40,9): error TS2339: Property 'validate' does not exist on type '(instance: any, schema: any) => any'.
+lib/validate.js(41,10): error TS2300: Duplicate identifier 'validate'.
+lib/validate.js(54,37): error TS2554: Expected 0-2 arguments, but got 3.
+lib/validate.js(56,9): error TS2339: Property 'checkPropertyChange' does not exist on type '(instance: any, schema: any) => any'.
+lib/validate.js(64,34): error TS2554: Expected 0-2 arguments, but got 3.
+lib/validate.js(66,5): error TS2300: Duplicate identifier 'validate'.
+lib/validate.js(66,24): error TS2339: Property '_validate' does not exist on type '(instance: any, schema: any) => any'.
+lib/validate.js(261,9): error TS2339: Property 'mustBeValid' does not exist on type '(instance: any, schema: any) => any'.
+

@@ -1,0 +1,49 @@
+lib/filesize.es6.js(10,9): error TS2304: Cannot find name 'define'.
+lib/filesize.es6.js(10,34): error TS2304: Cannot find name 'define'.
+lib/filesize.es6.js(10,47): error TS2304: Cannot find name 'define'.
+lib/filesize.es6.js(11,3): error TS2322: Type 'typeof globalThis | { (arg: Mixed, { bits, pad, base, round, locale, localeOptions, separator, spacer, symbols, standard, output, fullform, fullforms, exponent, roundingMethod, precision }?: any): string; partial(opt: any): (arg: any) => string; }' is not assignable to type '{ (arg: Mixed, { bits, pad, base, round, locale, localeOptions, separator, spacer, symbols, standard, output, fullform, fullforms, exponent, roundingMethod, precision }?: any): string; partial(opt: any): (arg: any) => string; }'.
+  Property 'partial' is missing in type 'typeof globalThis' but required in type '{ (arg: Mixed, { bits, pad, base, round, locale, localeOptions, separator, spacer, symbols, standard, output, fullform, fullforms, exponent, roundingMethod, precision }?: any): string; partial(opt: any): (arg: any) => string; }'.
+lib/filesize.es6.js(11,84): error TS2339: Property 'filesize' does not exist on type '{ (arg: Mixed, { bits, pad, base, round, locale, localeOptions, separator, spacer, symbols, standard, output, fullform, fullforms, exponent, roundingMethod, precision }?: any): string; partial(opt: any): (arg: any) => string; }'.
+lib/filesize.es6.js(57,14): error TS2304: Cannot find name 'Mixed'.
+lib/filesize.es6.js(200,3): error TS2322: Type 'string | any[] | { value: any; symbol: any; exponent: any; unit: string; }' is not assignable to type 'string'.
+  Type 'any[]' is not assignable to type 'string'.
+lib/filesize.es6.min.js(5,2): error TS1345: An expression of type 'void' cannot be tested for truthiness.
+lib/filesize.es6.min.js(5,107): error TS2304: Cannot find name 'define'.
+lib/filesize.es6.min.js(5,115): error TS2304: Cannot find name 'define'.
+lib/filesize.es6.min.js(5,126): error TS2304: Cannot find name 'define'.
+lib/filesize.es6.min.js(5,137): error TS2322: Type 'typeof globalThis | { (r: any, { bits: l, pad: s, base: a, round: f, locale: u, localeOptions: p, separator: c, spacer: d, symbols: g, standard: h, output: y, fullform: B, fullforms: m, exponent: M, roundingMethod: T, precision: w }?: { bits?: boolean; pad?: boolean; base?: number; round?: number; locale?: string; l...' is not assignable to type '{ (r: any, { bits: l, pad: s, base: a, round: f, locale: u, localeOptions: p, separator: c, spacer: d, symbols: g, standard: h, output: y, fullform: B, fullforms: m, exponent: M, roundingMethod: T, precision: w }?: { bits?: boolean; pad?: boolean; base?: number; round?: number; locale?: string; localeOptions?: {}; s...'.
+  Property 'partial' is missing in type 'typeof globalThis' but required in type '{ (r: any, { bits: l, pad: s, base: a, round: f, locale: u, localeOptions: p, separator: c, spacer: d, symbols: g, standard: h, output: y, fullform: B, fullforms: m, exponent: M, roundingMethod: T, precision: w }?: { bits?: boolean; pad?: boolean; base?: number; round?: number; locale?: string; localeOptions?: {}; s...'.
+lib/filesize.es6.min.js(5,190): error TS2339: Property 'filesize' does not exist on type 'typeof globalThis | { (r: any, { bits: l, pad: s, base: a, round: f, locale: u, localeOptions: p, separator: c, spacer: d, symbols: g, standard: h, output: y, fullform: B, fullforms: m, exponent: M, roundingMethod: T, precision: w }?: { bits?: boolean; pad?: boolean; base?: number; round?: number; locale?: string; l...'.
+  Property 'filesize' does not exist on type 'typeof globalThis'.
+lib/filesize.es6.min.js(5,1733): error TS2367: This comparison appears to be unintentional because the types 'boolean' and 'string' have no overlap.
+lib/filesize.esm.js(51,13): error TS2304: Cannot find name 'Mixed'.
+lib/filesize.esm.js(194,2): error TS2322: Type 'string | any[] | { value: any; symbol: any; exponent: any; unit: string; }' is not assignable to type 'string'.
+  Type 'any[]' is not assignable to type 'string'.
+lib/filesize.esm.min.js(5,1521): error TS2367: This comparison appears to be unintentional because the types 'boolean' and 'string' have no overlap.
+lib/filesize.js(10,10): error TS2304: Cannot find name 'define'.
+lib/filesize.js(10,35): error TS2304: Cannot find name 'define'.
+lib/filesize.js(10,48): error TS2304: Cannot find name 'define'.
+lib/filesize.js(11,4): error TS2322: Type 'typeof globalThis | { (arg: Mixed, ...args: any[]): string; partial(opt: any): (arg: any) => string; }' is not assignable to type '{ (arg: Mixed, ...args: any[]): string; partial(opt: any): (arg: any) => string; }'.
+  Property 'partial' is missing in type 'typeof globalThis' but required in type '{ (arg: Mixed, ...args: any[]): string; partial(opt: any): (arg: any) => string; }'.
+lib/filesize.js(11,85): error TS2339: Property 'filesize' does not exist on type '{ (arg: Mixed, ...args: any[]): string; partial(opt: any): (arg: any) => string; }'.
+lib/filesize.js(17,12): error TS2630: Cannot assign to '_typeof' because it is a function.
+lib/filesize.js(67,15): error TS2304: Cannot find name 'Mixed'.
+lib/filesize.js(68,24): error TS8029: JSDoc '@param' tag has name 'descriptor', but there is no parameter with that name. It would match 'arguments' if it had an array type.
+lib/filesize.js(226,5): error TS2322: Type 'string | any[] | { value: any; symbol: any; exponent: any; unit: string; }' is not assignable to type 'string'.
+  Type 'any[]' is not assignable to type 'string'.
+lib/filesize.min.js(5,2): error TS1345: An expression of type 'void' cannot be tested for truthiness.
+lib/filesize.min.js(5,107): error TS2304: Cannot find name 'define'.
+lib/filesize.min.js(5,115): error TS2304: Cannot find name 'define'.
+lib/filesize.min.js(5,126): error TS2304: Cannot find name 'define'.
+lib/filesize.min.js(5,137): error TS2322: Type 'typeof globalThis | { (g: any, ...args: any[]): any; partial(i: any): (t: any) => any; }' is not assignable to type '{ (g: any, ...args: any[]): any; partial(i: any): (t: any) => any; }'.
+  Property 'partial' is missing in type 'typeof globalThis' but required in type '{ (g: any, ...args: any[]): any; partial(i: any): (t: any) => any; }'.
+lib/filesize.min.js(5,190): error TS2339: Property 'filesize' does not exist on type 'typeof globalThis | { (g: any, ...args: any[]): any; partial(i: any): (t: any) => any; }'.
+  Property 'filesize' does not exist on type 'typeof globalThis'.
+lib/filesize.min.js(5,255): error TS2630: Cannot assign to 'i' because it is a function.
+rollup.config.js(1,19): error TS2307: Cannot find module 'rollup-plugin-babel' or its corresponding type declarations.
+rollup.config.js(2,24): error TS2307: Cannot find module 'rollup-plugin-terser' or its corresponding type declarations.
+rollup.config.js(3,17): error TS2732: Cannot find module './package.json'. Consider using '--resolveJsonModule' to import module with '.json' extension.
+src/filesize.js(32,13): error TS2304: Cannot find name 'Mixed'.
+src/filesize.js(175,2): error TS2322: Type 'string | any[] | { value: any; symbol: any; exponent: any; unit: ""; }' is not assignable to type 'string'.
+  Type 'any[]' is not assignable to type 'string'.
+

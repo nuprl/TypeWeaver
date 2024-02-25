@@ -1,0 +1,15 @@
+rollup.config.js(2,25): error TS2307: Cannot find module 'rollup-plugin-node-resolve' or its corresponding type declarations.
+rollup.config.js(3,19): error TS2307: Cannot find module 'rollup-plugin-babel' or its corresponding type declarations.
+rollup.config.js(4,22): error TS2307: Cannot find module 'rollup-plugin-commonjs' or its corresponding type declarations.
+rollup.config.js(5,24): error TS2307: Cannot find module 'rollup-plugin-terser' or its corresponding type declarations.
+rollup.config.js(6,17): error TS2732: Cannot find module './package.json'. Consider using '--resolveJsonModule' to import module with '.json' extension.
+src/index.js(82,32): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(...items: ConcatArray<string>[]): string[]', gave the following error.
+    Argument of type 'symbol[]' is not assignable to parameter of type 'ConcatArray<string>'.
+      The types returned by 'slice(...)' are incompatible between these types.
+        Type 'symbol[]' is not assignable to type 'string[]'.
+          Type 'symbol' is not assignable to type 'string'.
+  Overload 2 of 2, '(...items: (string | ConcatArray<string>)[]): string[]', gave the following error.
+    Argument of type 'symbol[]' is not assignable to parameter of type 'string | ConcatArray<string>'.
+      Type 'symbol[]' is not assignable to type 'ConcatArray<string>'.
+

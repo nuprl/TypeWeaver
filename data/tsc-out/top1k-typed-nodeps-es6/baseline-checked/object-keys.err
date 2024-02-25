@@ -1,0 +1,8 @@
+implementation.js(83,21): error TS2349: This expression is not callable.
+  Type 'typeof import("/work/arjunguha-research-group/mhyee/TypeWeaver/data/tsc-out/top1k-typed-nodeps-es6/baseline/object-keys/isArguments")' has no call signatures.
+index.js(9,10): error TS2339: Property 'shim' does not exist on type '((o: any) => string[]) | typeof import("/work/arjunguha-research-group/mhyee/TypeWeaver/data/tsc-out/top1k-typed-nodeps-es6/baseline/object-keys/implementation")'.
+  Property 'shim' does not exist on type '(o: any) => string[]'.
+index.js(25,3): error TS2322: Type '((o: any) => string[]) | typeof import("/work/arjunguha-research-group/mhyee/TypeWeaver/data/tsc-out/top1k-typed-nodeps-es6/baseline/object-keys/implementation")' is not assignable to type '{ (o: object): string[]; (o: {}): string[]; }'.
+  Type 'typeof import("/work/arjunguha-research-group/mhyee/TypeWeaver/data/tsc-out/top1k-typed-nodeps-es6/baseline/object-keys/implementation")' is not assignable to type '{ (o: object): string[]; (o: {}): string[]; }'.
+    Type 'typeof import("/work/arjunguha-research-group/mhyee/TypeWeaver/data/tsc-out/top1k-typed-nodeps-es6/baseline/object-keys/implementation")' provides no match for the signature '(o: object): string[]'.
+

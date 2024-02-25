@@ -1,0 +1,83 @@
+export function createResolver(options: UserResolveOptions): Resolver;
+export type AliasOptionEntry = import("./AliasPlugin").AliasOption;
+export type ExtensionAliasOption = import("./ExtensionAliasPlugin").ExtensionAliasOption;
+export type PnpApi = import("./PnpPlugin").PnpApiImpl;
+export type FileSystem = import("./Resolver").FileSystem;
+export type ResolveRequest = import("./Resolver").ResolveRequest;
+export type SyncFileSystem = import("./Resolver").SyncFileSystem;
+export type AliasOptionNewRequest = string | string[] | false;
+export type AliasOptions = {
+    [k: string]: AliasOptionNewRequest;
+};
+export type ExtensionAliasOptions = {
+    [k: string]: string | string[];
+};
+export type Plugin = {
+    apply: (arg0: Resolver) => void;
+} | ((this: Resolver, arg1: Resolver) => void);
+export type UserResolveOptions = {
+    alias?: (AliasOptions | AliasOptionEntry[]) | undefined;
+    fallback?: (AliasOptions | AliasOptionEntry[]) | undefined;
+    extensionAlias?: ExtensionAliasOptions | undefined;
+    aliasFields?: (string | string[])[] | undefined;
+    cachePredicate?: ((arg0: ResolveRequest) => boolean) | undefined;
+    cacheWithContext?: boolean | undefined;
+    descriptionFiles?: string[] | undefined;
+    conditionNames?: string[] | undefined;
+    enforceExtension?: boolean | undefined;
+    exportsFields?: (string | string[])[] | undefined;
+    importsFields?: (string | string[])[] | undefined;
+    extensions?: string[] | undefined;
+    fileSystem: FileSystem;
+    unsafeCache?: (object | boolean) | undefined;
+    symlinks?: boolean | undefined;
+    resolver?: Resolver | undefined;
+    modules?: (string[] | string) | undefined;
+    mainFields?: (string | string[] | {
+        name: string | string[];
+        forceRelative: boolean;
+    })[] | undefined;
+    mainFiles?: string[] | undefined;
+    plugins?: Plugin[] | undefined;
+    pnpApi?: (PnpApi | null) | undefined;
+    roots?: string[] | undefined;
+    fullySpecified?: boolean | undefined;
+    resolveToContext?: boolean | undefined;
+    restrictions?: (string | RegExp)[] | undefined;
+    useSyncFileSystemCalls?: boolean | undefined;
+    preferRelative?: boolean | undefined;
+    preferAbsolute?: boolean | undefined;
+};
+export type ResolveOptions = {
+    alias: AliasOptionEntry[];
+    fallback: AliasOptionEntry[];
+    aliasFields: Set<string | string[]>;
+    extensionAlias: ExtensionAliasOption[];
+    cachePredicate: ((arg0: ResolveRequest) => boolean);
+    cacheWithContext: boolean;
+    conditionNames: Set<string>;
+    descriptionFiles: string[];
+    enforceExtension: boolean;
+    exportsFields: Set<string | string[]>;
+    importsFields: Set<string | string[]>;
+    extensions: Set<string>;
+    fileSystem: FileSystem;
+    unsafeCache: object | false;
+    symlinks: boolean;
+    resolver?: Resolver | undefined;
+    modules: Array<string | string[]>;
+    mainFields: {
+        name: string[];
+        forceRelative: boolean;
+    }[];
+    mainFiles: Set<string>;
+    plugins: Plugin[];
+    pnpApi: PnpApi | null;
+    roots: Set<string>;
+    fullySpecified: boolean;
+    resolveToContext: boolean;
+    restrictions: Set<string | RegExp>;
+    preferRelative: boolean;
+    preferAbsolute: boolean;
+};
+import Resolver from "./Resolver";

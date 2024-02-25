@@ -1,0 +1,42 @@
+export = Receiver;
+declare class Receiver extends Writable {
+    constructor(options?: {
+        binaryType?: string;
+        extensions?: any;
+        isServer?: boolean;
+        maxPayload?: number;
+        skipUTF8Validation?: boolean;
+    });
+    _binaryType: string;
+    _extensions: any;
+    _isServer: boolean;
+    _maxPayload: number;
+    _skipUTF8Validation: boolean;
+    _bufferedBytes: number;
+    _buffers: any[];
+    _compressed: boolean;
+    _payloadLength: number;
+    _mask: Buffer;
+    _fragmented: number;
+    _masked: boolean;
+    _fin: boolean;
+    _opcode: number;
+    _totalPayloadLength: number;
+    _messageLength: number;
+    _fragments: any[];
+    _state: number;
+    _loop: boolean;
+    private _write;
+    private consume;
+    private startLoop;
+    private getInfo;
+    private getPayloadLength16;
+    private getPayloadLength64;
+    private haveLength;
+    private getMask;
+    private getData;
+    private decompress;
+    private dataMessage;
+    private controlMessage;
+}
+import { Writable } from "stream";

@@ -1,0 +1,24 @@
+index.js(12,26): error TS2732: Cannot find module './db.json'. Consider using '--resolveJsonModule' to import module with '.json' extension.
+scripts/build.js(11,21): error TS2732: Cannot find module '../src/iana-types.json'. Consider using '--resolveJsonModule' to import module with '.json' extension.
+scripts/build.js(14,21): error TS2732: Cannot find module '../src/apache-types.json'. Consider using '--resolveJsonModule' to import module with '.json' extension.
+scripts/build.js(17,21): error TS2732: Cannot find module '../src/nginx-types.json'. Consider using '--resolveJsonModule' to import module with '.json' extension.
+scripts/build.js(20,21): error TS2732: Cannot find module '../src/custom-types.json'. Consider using '--resolveJsonModule' to import module with '.json' extension.
+scripts/build.js(23,20): error TS2732: Cannot find module '../src/custom-suffix.json'. Consider using '--resolveJsonModule' to import module with '.json' extension.
+scripts/fetch-apache.js(14,23): error TS2307: Cannot find module 'raw-body' or its corresponding type declarations.
+scripts/fetch-apache.js(41,20): error TS2339: Property 'index' does not exist on type 'RegExp'.
+scripts/fetch-iana.js(14,18): error TS2307: Cannot find module 'co' or its corresponding type declarations.
+scripts/fetch-iana.js(15,26): error TS2307: Cannot find module 'raw-body' or its corresponding type declarations.
+scripts/fetch-iana.js(16,22): error TS2307: Cannot find module 'cogent' or its corresponding type declarations.
+scripts/fetch-iana.js(17,22): error TS2307: Cannot find module 'csv-parse' or its corresponding type declarations.
+scripts/fetch-iana.js(18,23): error TS2307: Cannot find module 'stream-to-array' or its corresponding type declarations.
+scripts/fetch-iana.js(191,3): error TS2322: Type 'string' is not assignable to type 'RegExpExecArray'.
+scripts/fetch-iana.js(192,3): error TS2322: Type 'string' is not assignable to type 'RegExpExecArray'.
+scripts/fetch-iana.js(198,7): error TS2367: This comparison appears to be unintentional because the types 'string[]' and 'string' have no overlap.
+scripts/fetch-iana.js(200,5): error TS2739: Type 'string[]' is missing the following properties from type 'RegExpExecArray': index, input, 0
+scripts/fetch-iana.js(302,49): error TS2367: This comparison appears to be unintentional because the types 'string' and 'number' have no overlap.
+scripts/fetch-iana.js(349,22): error TS2339: Property 'index' does not exist on type 'RegExp'.
+scripts/fetch-iana.js(362,22): error TS2339: Property 'index' does not exist on type 'RegExp'.
+scripts/fetch-iana.js(372,25): error TS2307: Cannot find module 'bluebird' or its corresponding type declarations.
+scripts/fetch-nginx.js(14,23): error TS2307: Cannot find module 'raw-body' or its corresponding type declarations.
+scripts/fetch-nginx.js(39,20): error TS2339: Property 'index' does not exist on type 'RegExp'.
+

@@ -1,0 +1,165 @@
+bench/parser.benchmark.js(3,27): error TS2307: Cannot find module 'benchmark' or its corresponding type declarations.
+bench/parser.benchmark.js(8,28): error TS2339: Property 'Receiver' does not exist on type 'typeof WebSocket'.
+bench/parser.benchmark.js(9,26): error TS2339: Property 'Sender' does not exist on type 'typeof WebSocket'.
+bench/sender.benchmark.js(3,27): error TS2307: Cannot find module 'benchmark' or its corresponding type declarations.
+bench/speed.js(12,13): error TS2339: Property 'isMaster' does not exist on type 'typeof import("cluster")'.
+bench/speed.js(14,29): error TS2339: Property 'Server' does not exist on type 'typeof WebSocket'.
+bench/speed.js(27,59): error TS2339: Property 'fork' does not exist on type 'typeof import("cluster")'.
+bench/speed.js(29,11): error TS2339: Property 'on' does not exist on type 'typeof import("cluster")'.
+bench/speed.js(63,42): error TS2345: Argument of type 'number | boolean' is not assignable to parameter of type 'number'.
+  Type 'boolean' is not assignable to type 'number'.
+bench/speed.js(75,7): error TS2345: Argument of type '{ maxPayload: number; }' is not assignable to parameter of type 'string | string[]'.
+  Object literal may only specify known properties, and 'maxPayload' does not exist in type 'string[]'.
+bench/speed.js(82,15): error TS2551: Property 'worker' does not exist on type 'typeof import("cluster")'. Did you mean 'Worker'?
+bench/speed.js(93,7): error TS2322: Type 'number' is not assignable to type '[number, number]'.
+bench/speed.js(100,19): error TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+bench/speed.js(101,46): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+bench/speed.js(110,46): error TS2551: Property 'worker' does not exist on type 'typeof import("cluster")'. Did you mean 'Worker'?
+bench/speed.js(112,17): error TS2345: Argument of type '() => any' is not assignable to parameter of type 'number | boolean'.
+examples/express-session-parse/index.js(3,25): error TS2307: Cannot find module 'express-session' or its corresponding type declarations.
+examples/express-session-parse/index.js(4,25): error TS2307: Cannot find module 'express' or its corresponding type declarations.
+examples/express-session-parse/index.js(6,22): error TS2307: Cannot find module 'uuid' or its corresponding type declarations.
+examples/express-session-parse/index.js(8,9): error TS2305: Module '"../.."' has no exported member 'WebSocketServer'.
+examples/express-session-parse/index.js(65,18): error TS2339: Property 'session' does not exist on type 'IncomingMessage'.
+examples/express-session-parse/public/app.js(19,9): error TS2339: Property 'onclick' does not exist on type 'Element'.
+examples/express-session-parse/public/app.js(28,10): error TS2339: Property 'onclick' does not exist on type 'Element'.
+examples/express-session-parse/public/app.js(39,12): error TS2339: Property 'onclick' does not exist on type 'Element'.
+examples/express-session-parse/public/app.js(58,16): error TS2339: Property 'onclick' does not exist on type 'Element'.
+examples/server-stats/index.js(3,25): error TS2307: Cannot find module 'express' or its corresponding type declarations.
+examples/server-stats/index.js(7,9): error TS2305: Module '"../.."' has no exported member 'WebSocketServer'.
+examples/ssl.js(6,9): error TS2595: 'WebSocket' can only be imported by using a default import.
+examples/ssl.js(6,20): error TS2305: Module '".."' has no exported member 'WebSocketServer'.
+examples/ssl.js(30,64): error TS2339: Property 'port' does not exist on type 'string | AddressInfo'.
+  Property 'port' does not exist on type 'string'.
+index.js(5,11): error TS2339: Property 'createWebSocketStream' does not exist on type 'typeof WebSocket'.
+index.js(6,11): error TS2339: Property 'Server' does not exist on type 'typeof WebSocket'.
+index.js(7,11): error TS2339: Property 'Receiver' does not exist on type 'typeof WebSocket'.
+index.js(8,11): error TS2339: Property 'Sender' does not exist on type 'typeof WebSocket'.
+index.js(10,11): error TS2339: Property 'WebSocket' does not exist on type 'typeof WebSocket'.
+index.js(11,11): error TS2339: Property 'WebSocketServer' does not exist on type 'typeof WebSocket'.
+index.js(11,39): error TS2339: Property 'Server' does not exist on type 'typeof WebSocket'.
+lib/buffer-util.d.ts(48,10): error TS2484: Export declaration conflicts with exported declaration of 'mask'.
+lib/buffer-util.d.ts(48,25): error TS2484: Export declaration conflicts with exported declaration of 'unmask'.
+lib/buffer-util.js(84,12): error TS2339: Property 'readOnly' does not exist on type '(data: any) => Buffer'.
+lib/buffer-util.js(96,14): error TS2339: Property 'readOnly' does not exist on type '(data: any) => Buffer'.
+lib/buffer-util.js(113,32): error TS2307: Cannot find module 'bufferutil' or its corresponding type declarations.
+lib/permessage-deflate.js(345,18): error TS2339: Property 'Z_DEFAULT_WINDOWBITS' does not exist on type 'typeof import("zlib")'.
+lib/permessage-deflate.js(379,25): error TS2339: Property '_readableState' does not exist on type 'InflateRaw'.
+lib/permessage-deflate.js(410,18): error TS2339: Property 'Z_DEFAULT_WINDOWBITS' does not exist on type 'typeof import("zlib")'.
+lib/permessage-deflate.js(491,16): error TS2339: Property 'code' does not exist on type 'RangeError'.
+lib/permessage-deflate.js(493,8): error TS2339: Property 'removeListener' does not exist on type 'inflateOnData'.
+lib/permessage-deflate.js(494,8): error TS2339: Property 'reset' does not exist on type 'inflateOnData'.
+lib/receiver.d.ts(7,15): error TS2415: Class 'Receiver' incorrectly extends base class 'Writable'.
+  Property '_write' is private in type 'Receiver' but not in type 'Writable'.
+lib/receiver.js(27,7): error TS2415: Class 'Receiver' incorrectly extends base class 'Writable'.
+  Property '_write' is private in type 'Receiver' but not in type 'Writable'.
+lib/receiver.js(611,5): error TS2554: Expected 0 arguments, but got 1.
+lib/receiver.js(615,7): error TS2339: Property 'code' does not exist on type 'Error | RangeError'.
+  Property 'code' does not exist on type 'Error'.
+lib/sender.d.ts(45,39): error TS2503: Cannot find namespace 'tls'.
+lib/sender.js(24,30): error TS2694: Namespace '"tls"' has no exported member 'Socket'.
+lib/sender.js(197,22): error TS2345: Argument of type '(string | Buffer)[]' is not assignable to parameter of type 'Buffer[]'.
+  Type 'string | Buffer' is not assignable to type 'Buffer'.
+    Type 'string' is not assignable to type 'Buffer'.
+lib/sender.js(219,27): error TS2339: Property 'readOnly' does not exist on type '(data: any) => Buffer'.
+lib/sender.js(240,22): error TS2345: Argument of type '(string | Buffer)[]' is not assignable to parameter of type 'Buffer[]'.
+lib/sender.js(262,27): error TS2339: Property 'readOnly' does not exist on type '(data: any) => Buffer'.
+lib/sender.js(283,22): error TS2345: Argument of type '(string | Buffer)[]' is not assignable to parameter of type 'Buffer[]'.
+lib/sender.js(317,27): error TS2339: Property 'readOnly' does not exist on type '(data: any) => Buffer'.
+lib/sender.js(360,9): error TS2345: Argument of type '(string | Buffer)[]' is not assignable to parameter of type 'Buffer[]'.
+lib/sender.js(361,11): error TS2345: Argument of type '{ [kByteLength]: any; fin: boolean; generateMask: Function; mask: boolean; maskBuffer: Buffer; opcode: number; readOnly: any; rsv1: false; }' is not assignable to parameter of type '{ fin?: boolean; generateMask?: Function; mask?: boolean; maskBuffer?: Buffer; opcode: number; readOnly?: boolean; rsv1?: boolean; }'.
+  Object literal may only specify known properties, and '[kByteLength]' does not exist in type '{ fin?: boolean; generateMask?: Function; mask?: boolean; maskBuffer?: Buffer; opcode: number; readOnly?: boolean; rsv1?: boolean; }'.
+lib/sender.js(398,28): error TS1016: A required parameter cannot follow an optional parameter.
+lib/sender.js(400,22): error TS2345: Argument of type '(string | Buffer)[]' is not assignable to parameter of type 'Buffer[]'.
+lib/sender.js(429,22): error TS2345: Argument of type '(string | Buffer)[]' is not assignable to parameter of type 'Buffer[]'.
+lib/stream.js(60,6): error TS2339: Property 'on' does not exist on type 'WebSocket'.
+lib/stream.js(62,27): error TS2339: Property '_readableState' does not exist on type 'Duplex'.
+lib/stream.js(64,32): error TS2339: Property 'pause' does not exist on type 'WebSocket'.
+lib/stream.js(67,6): error TS2339: Property 'once' does not exist on type 'WebSocket'.
+lib/stream.js(83,6): error TS2339: Property 'once' does not exist on type 'WebSocket'.
+lib/stream.js(98,8): error TS2339: Property 'once' does not exist on type 'WebSocket'.
+lib/stream.js(103,8): error TS2339: Property 'once' does not exist on type 'WebSocket'.
+lib/stream.js(108,32): error TS2339: Property 'terminate' does not exist on type 'WebSocket'.
+lib/stream.js(113,10): error TS2339: Property 'once' does not exist on type 'WebSocket'.
+lib/stream.js(123,12): error TS2339: Property '_socket' does not exist on type 'WebSocket'.
+lib/stream.js(125,12): error TS2339: Property '_socket' does not exist on type 'WebSocket'.
+lib/stream.js(127,18): error TS2339: Property '_readableState' does not exist on type 'Duplex'.
+lib/stream.js(129,10): error TS2339: Property '_socket' does not exist on type 'WebSocket'.
+lib/stream.js(140,12): error TS2339: Property 'isPaused' does not exist on type 'WebSocket'.
+lib/stream.js(140,25): error TS2339: Property 'resume' does not exist on type 'WebSocket'.
+lib/stream.js(145,10): error TS2339: Property 'once' does not exist on type 'WebSocket'.
+lib/stream.js(151,20): error TS2554: Expected 1 arguments, but got 2.
+lib/validation.d.ts(21,10): error TS2484: Export declaration conflicts with exported declaration of 'isValidUTF8'.
+lib/validation.js(117,33): error TS2307: Cannot find module 'utf-8-validate' or its corresponding type declarations.
+lib/websocket-server.d.ts(108,75): error TS2503: Cannot find namespace 'tls'.
+lib/websocket-server.js(72,7): error TS2322: Type 'Function | typeof WebSocket' is not assignable to type 'Function'.
+  Type 'typeof WebSocket' is not assignable to type 'Function'.
+    Types of property 'once' are incompatible.
+      Type '{ (emitter: _NodeEventTarget, eventName: string | symbol, options?: StaticEventEmitterOptions): Promise<any[]>; (emitter: _DOMEventTarget, eventName: string, options?: StaticEventEmitterOptions): Promise<...>; }' is not assignable to type '() => Function & FnProps<any>'.
+lib/websocket-server.js(101,9): error TS2345: Argument of type 'Function' is not assignable to parameter of type '() => void'.
+  Type 'Function' provides no match for the signature '(): void'.
+lib/websocket-server.js(166,32): error TS2345: Argument of type 'Function' is not assignable to parameter of type '(...args: any[]) => void'.
+  Type 'Function' provides no match for the signature '(...args: any[]): void'.
+lib/websocket-server.js(224,30): error TS2694: Namespace '"tls"' has no exported member 'Socket'.
+lib/websocket-server.js(313,31): error TS2339: Property 'authorized' does not exist on type 'Socket'.
+lib/websocket-server.js(313,56): error TS2339: Property 'encrypted' does not exist on type 'Socket'.
+lib/websocket-server.js(349,30): error TS2694: Namespace '"tls"' has no exported member 'Socket'.
+lib/websocket-server.js(382,20): error TS2351: This expression is not constructable.
+  Type 'Function' has no construct signatures.
+lib/websocket-server.js(464,10): error TS2339: Property '_state' does not exist on type 'EventEmitter'.
+lib/websocket-server.js(480,28): error TS2694: Namespace '"tls"' has no exported member 'Socket'.
+lib/websocket-server.js(521,28): error TS2694: Namespace '"tls"' has no exported member 'Socket'.
+lib/websocket.js(186,17): error TS2551: Property '_url' does not exist on type 'WebSocket'. Did you mean 'url'?
+lib/websocket.js(192,30): error TS2694: Namespace '"tls"' has no exported member 'Socket'.
+lib/websocket.js(285,40): error TS2339: Property '_req' does not exist on type 'WebSocket'.
+lib/websocket.js(291,53): error TS2339: Property '_writableState' does not exist on type 'Receiver'.
+lib/websocket.js(311,24): error TS2339: Property '_writableState' does not exist on type 'Receiver'.
+lib/websocket.js(421,25): error TS2339: Property '_writableState' does not exist on type 'Receiver'.
+lib/websocket.js(480,40): error TS2339: Property '_req' does not exist on type 'WebSocket'.
+lib/websocket.js(668,15): error TS2551: Property '_url' does not exist on type 'WebSocket'. Did you mean 'url'?
+lib/websocket.js(676,15): error TS2551: Property '_url' does not exist on type 'WebSocket'. Did you mean 'url'?
+lib/websocket.js(710,8): error TS2339: Property 'defaultPort' does not exist on type '{ createConnection: any; socketPath: any; hostname: any; protocol: any; timeout: any; method: string; host: any; path: any; port: any; followRedirects: boolean; generateMask?: Function; handshakeTimeout?: number; ... 5 more ...; skipUTF8Validation: boolean; }'.
+lib/websocket.js(710,27): error TS2339: Property 'defaultPort' does not exist on type '{ createConnection: any; socketPath: any; hostname: any; protocol: any; timeout: any; method: string; host: any; path: any; port: any; followRedirects: boolean; generateMask?: Function; handshakeTimeout?: number; ... 5 more ...; skipUTF8Validation: boolean; }'.
+lib/websocket.js(715,8): error TS2339: Property 'headers' does not exist on type '{ createConnection: any; socketPath: any; hostname: any; protocol: any; timeout: any; method: string; host: any; path: any; port: any; followRedirects: boolean; generateMask?: Function; handshakeTimeout?: number; ... 5 more ...; skipUTF8Validation: boolean; }'.
+lib/websocket.js(716,13): error TS2339: Property 'headers' does not exist on type '{ createConnection: any; socketPath: any; hostname: any; protocol: any; timeout: any; method: string; host: any; path: any; port: any; followRedirects: boolean; generateMask?: Function; handshakeTimeout?: number; ... 5 more ...; skipUTF8Validation: boolean; }'.
+lib/websocket.js(731,10): error TS2339: Property 'headers' does not exist on type '{ createConnection: any; socketPath: any; hostname: any; protocol: any; timeout: any; method: string; host: any; path: any; port: any; followRedirects: boolean; generateMask?: Function; handshakeTimeout?: number; ... 5 more ...; skipUTF8Validation: boolean; }'.
+lib/websocket.js(750,10): error TS2339: Property 'headers' does not exist on type '{ createConnection: any; socketPath: any; hostname: any; protocol: any; timeout: any; method: string; host: any; path: any; port: any; followRedirects: boolean; generateMask?: Function; handshakeTimeout?: number; ... 5 more ...; skipUTF8Validation: boolean; }'.
+lib/websocket.js(754,12): error TS2339: Property 'headers' does not exist on type '{ createConnection: any; socketPath: any; hostname: any; protocol: any; timeout: any; method: string; host: any; path: any; port: any; followRedirects: boolean; generateMask?: Function; handshakeTimeout?: number; ... 5 more ...; skipUTF8Validation: boolean; }'.
+lib/websocket.js(756,12): error TS2339: Property 'headers' does not exist on type '{ createConnection: any; socketPath: any; hostname: any; protocol: any; timeout: any; method: string; host: any; path: any; port: any; followRedirects: boolean; generateMask?: Function; handshakeTimeout?: number; ... 5 more ...; skipUTF8Validation: boolean; }'.
+lib/websocket.js(760,10): error TS2339: Property 'auth' does not exist on type '{ createConnection: any; socketPath: any; hostname: any; protocol: any; timeout: any; method: string; host: any; path: any; port: any; followRedirects: boolean; generateMask?: Function; handshakeTimeout?: number; ... 5 more ...; skipUTF8Validation: boolean; }'.
+lib/websocket.js(774,17): error TS2339: Property '_originalUnixSocket' does not exist on type 'WebSocket'.
+lib/websocket.js(775,17): error TS2339: Property '_originalSecure' does not exist on type 'WebSocket'.
+lib/websocket.js(776,17): error TS2339: Property '_originalHostOrSocketPath' does not exist on type 'WebSocket'.
+lib/websocket.js(780,42): error TS2339: Property 'headers' does not exist on type '{ followRedirects?: boolean; generateMask?: Function; handshakeTimeout?: number; maxPayload?: number; maxRedirects?: number; origin?: string; perMessageDeflate?: any; protocolVersion?: number; skipUTF8Validation?: boolean; }'.
+lib/websocket.js(786,31): error TS2322: Type '{ headers: {}; followRedirects?: boolean; generateMask?: Function; handshakeTimeout?: number; maxPayload?: number; maxRedirects?: number; origin?: string; perMessageDeflate?: any; protocolVersion?: number; skipUTF8Validation?: boolean; }' is not assignable to type '{ followRedirects?: boolean; generateMask?: Function; handshakeTimeout?: number; maxPayload?: number; maxRedirects?: number; origin?: string; perMessageDeflate?: any; protocolVersion?: number; skipUTF8Validation?: boolean; }'.
+  Object literal may only specify known properties, and 'headers' does not exist in type '{ followRedirects?: boolean; generateMask?: Function; handshakeTimeout?: number; maxPayload?: number; maxRedirects?: number; origin?: string; perMessageDeflate?: any; protocolVersion?: number; skipUTF8Validation?: boolean; }'.
+lib/websocket.js(790,19): error TS2339: Property 'headers' does not exist on type '{ followRedirects?: boolean; generateMask?: Function; handshakeTimeout?: number; maxPayload?: number; maxRedirects?: number; origin?: string; perMessageDeflate?: any; protocolVersion?: number; skipUTF8Validation?: boolean; }'.
+lib/websocket.js(795,21): error TS2339: Property '_originalUnixSocket' does not exist on type 'WebSocket'.
+lib/websocket.js(796,43): error TS2339: Property '_originalHostOrSocketPath' does not exist on type 'WebSocket'.
+lib/websocket.js(798,21): error TS2339: Property '_originalUnixSocket' does not exist on type 'WebSocket'.
+lib/websocket.js(800,40): error TS2339: Property '_originalHostOrSocketPath' does not exist on type 'WebSocket'.
+lib/websocket.js(802,37): error TS2339: Property '_originalSecure' does not exist on type 'WebSocket'.
+lib/websocket.js(807,21): error TS2339: Property 'headers' does not exist on type '{ createConnection: any; socketPath: any; hostname: any; protocol: any; timeout: any; method: string; host: any; path: any; port: any; followRedirects: boolean; generateMask?: Function; handshakeTimeout?: number; ... 5 more ...; skipUTF8Validation: boolean; }'.
+lib/websocket.js(808,21): error TS2339: Property 'headers' does not exist on type '{ createConnection: any; socketPath: any; hostname: any; protocol: any; timeout: any; method: string; host: any; path: any; port: any; followRedirects: boolean; generateMask?: Function; handshakeTimeout?: number; ... 5 more ...; skipUTF8Validation: boolean; }'.
+lib/websocket.js(810,38): error TS2339: Property 'headers' does not exist on type '{ createConnection: any; socketPath: any; hostname: any; protocol: any; timeout: any; method: string; host: any; path: any; port: any; followRedirects: boolean; generateMask?: Function; handshakeTimeout?: number; ... 5 more ...; skipUTF8Validation: boolean; }'.
+lib/websocket.js(812,14): error TS2339: Property 'auth' does not exist on type '{ createConnection: any; socketPath: any; hostname: any; protocol: any; timeout: any; method: string; host: any; path: any; port: any; followRedirects: boolean; generateMask?: Function; handshakeTimeout?: number; ... 5 more ...; skipUTF8Validation: boolean; }'.
+lib/websocket.js(821,14): error TS2339: Property 'auth' does not exist on type '{ createConnection: any; socketPath: any; hostname: any; protocol: any; timeout: any; method: string; host: any; path: any; port: any; followRedirects: boolean; generateMask?: Function; handshakeTimeout?: number; ... 5 more ...; skipUTF8Validation: boolean; }'.
+lib/websocket.js(821,31): error TS2339: Property 'headers' does not exist on type '{ followRedirects?: boolean; generateMask?: Function; handshakeTimeout?: number; maxPayload?: number; maxRedirects?: number; origin?: string; perMessageDeflate?: any; protocolVersion?: number; skipUTF8Validation?: boolean; }'.
+lib/websocket.js(822,15): error TS2339: Property 'headers' does not exist on type '{ followRedirects?: boolean; generateMask?: Function; handshakeTimeout?: number; maxPayload?: number; maxRedirects?: number; origin?: string; perMessageDeflate?: any; protocolVersion?: number; skipUTF8Validation?: boolean; }'.
+lib/websocket.js(823,37): error TS2339: Property 'auth' does not exist on type '{ createConnection: any; socketPath: any; hostname: any; protocol: any; timeout: any; method: string; host: any; path: any; port: any; followRedirects: boolean; generateMask?: Function; handshakeTimeout?: number; ... 5 more ...; skipUTF8Validation: boolean; }'.
+lib/websocket.js(826,21): error TS2339: Property '_req' does not exist on type 'WebSocket'.
+lib/websocket.js(841,21): error TS2339: Property '_req' does not exist on type 'WebSocket'.
+lib/websocket.js(853,21): error TS2339: Property '_req' does not exist on type 'WebSocket'.
+lib/websocket.js(903,21): error TS2339: Property '_req' does not exist on type 'WebSocket'.
+lib/websocket.js(983,15): error TS2341: Property 'setSocket' is private and only accessible within class 'WebSocket'.
+lib/websocket.js(997,19): error TS8024: JSDoc '@param' tag has name 'The', but there is no parameter with that name.
+lib/websocket.js(1003,13): error TS2341: Property 'emitClose' is private and only accessible within class 'WebSocket'.
+lib/websocket.js(1039,47): error TS2694: Namespace '"tls"' has no exported member 'Socket'.
+lib/websocket.js(1067,36): error TS2341: Property 'emitClose' is private and only accessible within class 'WebSocket'.
+lib/websocket.js(1173,39): error TS8024: JSDoc '@param' tag has name '', but there is no parameter with that name.
+lib/websocket.js(1173,39): error TS1005: '}' expected.
+lib/websocket.js(1222,8): error TS2339: Property 'removeListener' does not exist on type 'socketOnClose'.
+lib/websocket.js(1223,8): error TS2339: Property 'removeListener' does not exist on type 'socketOnClose'.
+lib/websocket.js(1224,8): error TS2339: Property 'removeListener' does not exist on type 'socketOnClose'.
+lib/websocket.js(1240,11): error TS2339: Property '_readableState' does not exist on type 'socketOnClose'.
+

@@ -1,0 +1,15 @@
+export const isBuffer: (obj: any) => obj is Buffer;
+export function isArray(arg: any): boolean;
+export function isBoolean(arg: any): boolean;
+export function isNull(arg: any): boolean;
+export function isNullOrUndefined(arg: any): boolean;
+export function isNumber(arg: any): boolean;
+export function isString(arg: any): boolean;
+export function isSymbol(arg: any): boolean;
+export function isUndefined(arg: any): boolean;
+export function isRegExp(re: any): boolean;
+export function isObject(arg: any): boolean;
+export function isDate(d: any): boolean;
+export function isError(e: any): boolean;
+export function isFunction(arg: any): boolean;
+export function isPrimitive(arg: any): boolean;

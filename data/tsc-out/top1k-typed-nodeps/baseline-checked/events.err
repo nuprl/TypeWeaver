@@ -1,0 +1,21 @@
+events.js(37,15): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(...items: ConcatArray<string>[]): string[]', gave the following error.
+    Argument of type 'symbol[]' is not assignable to parameter of type 'ConcatArray<string>'.
+      The types returned by 'slice(...)' are incompatible between these types.
+        Type 'symbol[]' is not assignable to type 'string[]'.
+          Type 'symbol' is not assignable to type 'string'.
+  Overload 2 of 2, '(...items: (string | ConcatArray<string>)[]): string[]', gave the following error.
+    Argument of type 'symbol[]' is not assignable to parameter of type 'string | ConcatArray<string>'.
+      Type 'symbol[]' is not assignable to type 'ConcatArray<string>'.
+events.js(143,9): error TS2339: Property 'context' does not exist on type 'Error'.
+events.js(216,9): error TS2339: Property 'emitter' does not exist on type 'Error'.
+events.js(217,9): error TS2339: Property 'type' does not exist on type 'Error'.
+events.js(218,9): error TS2339: Property 'count' does not exist on type 'Error'.
+events.js(239,10): error TS2339: Property 'target' does not exist on type 'onceWrapper'.
+events.js(239,37): error TS2339: Property 'type' does not exist on type 'onceWrapper'.
+events.js(239,48): error TS2339: Property 'wrapFn' does not exist on type 'onceWrapper'.
+events.js(242,19): error TS2339: Property 'listener' does not exist on type 'onceWrapper'.
+events.js(242,38): error TS2339: Property 'target' does not exist on type 'onceWrapper'.
+events.js(243,17): error TS2339: Property 'listener' does not exist on type 'onceWrapper'.
+events.js(243,37): error TS2339: Property 'target' does not exist on type 'onceWrapper'.
+

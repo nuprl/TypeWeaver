@@ -1,0 +1,56 @@
+tools/build-keys-from-ts.js(17,53): error TS2554: Expected 2 arguments, but got 1.
+tools/get-keys-from-ts.d.ts(21,56): error TS2304: Cannot find name 'KeysStrict'.
+tools/get-keys-from-ts.d.ts(21,69): error TS2304: Cannot find name 'KeysStrict'.
+tools/get-keys-from-ts.d.ts(30,5): error TS2304: Cannot find name 'VisitorKeysExport'.
+tools/get-keys-from-ts.d.ts(53,13): error TS2304: Cannot find name 'VisitorKeysExport'.
+tools/get-keys-from-ts.js(15,32): error TS2307: Cannot find module '@typescript-eslint/parser' or its corresponding type declarations.
+tools/get-keys-from-ts.js(16,21): error TS2307: Cannot find module 'esquery' or its corresponding type declarations.
+tools/get-keys-from-ts.js(67,22): error TS2339: Property 'type' does not exist on type 'Node'.
+tools/get-keys-from-ts.js(68,29): error TS2339: Property 'types' does not exist on type 'Node'.
+tools/get-keys-from-ts.js(70,25): error TS2339: Property 'literal' does not exist on type 'Node'.
+tools/get-keys-from-ts.js(89,12): error TS2304: Cannot find name 'KeysStrict'.
+tools/get-keys-from-ts.js(90,14): error TS2304: Cannot find name 'KeysStrict'.
+tools/get-keys-from-ts.js(103,65): error TS2345: Argument of type '([typeA]: string, [typeB]: string) => 1 | -1' is not assignable to parameter of type '(a: [string, any], b: [string, any]) => number'.
+  Types of parameters '__0' and 'a' are incompatible.
+    Type '[string, any]' is not assignable to type 'string'.
+tools/get-keys-from-ts.js(108,19): error TS2300: Duplicate identifier 'string'.
+tools/get-keys-from-ts.js(108,27): error TS2300: Duplicate identifier 'string'.
+tools/get-keys-from-ts.js(157,38): error TS2339: Property 'extends' does not exist on type 'Node'.
+tools/get-keys-from-ts.js(190,52): error TS2339: Property 'body' does not exist on type 'Node'.
+tools/get-keys-from-ts.js(211,14): error TS2304: Cannot find name 'VisitorKeysExport'.
+tools/get-keys-from-ts.js(213,30): error TS2463: A binding pattern parameter cannot be optional in an implementation signature.
+tools/get-keys-from-ts.js(213,30): error TS2741: Property 'supplementaryDeclarations' is missing in type '{}' but required in type '{ supplementaryDeclarations: Node[]; }'.
+tools/get-keys-from-ts.js(217,9): error TS2322: Type '{ allTsInterfaceDeclarations: undefined[]; exportedTsInterfaceDeclarations: undefined[]; tsTypeDeclarations: undefined[]; }' is not assignable to type 'Node[]'.
+  Object literal may only specify known properties, and 'allTsInterfaceDeclarations' does not exist in type 'Node[]'.
+tools/get-keys-from-ts.js(236,37): error TS2339: Property 'allTsInterfaceDeclarations' does not exist on type 'Node[]'.
+tools/get-keys-from-ts.js(247,37): error TS2339: Property 'exportedTsInterfaceDeclarations' does not exist on type 'Node[]'.
+tools/get-keys-from-ts.js(258,37): error TS2339: Property 'tsTypeDeclarations' does not exist on type 'Node[]'.
+tools/get-keys-from-ts.js(290,45): error TS2339: Property 'type' does not exist on type 'Node'.
+tools/get-keys-from-ts.js(298,44): error TS2339: Property 'literal' does not exist on type 'Node'.
+tools/get-keys-from-ts.js(299,52): error TS2339: Property 'literal' does not exist on type 'Node'.
+tools/get-keys-from-ts.js(306,37): error TS2339: Property 'types' does not exist on type 'Node'.
+tools/get-keys-from-ts.js(325,17): error TS2322: Type 'boolean' is not assignable to type 'void'.
+tools/get-keys-from-ts.js(332,27): error TS2339: Property 'typeAnnotation' does not exist on type 'Node'.
+tools/get-keys-from-ts.js(333,21): error TS2322: Type 'false | void' is not assignable to type 'void'.
+  Type 'boolean' is not assignable to type 'void'.
+tools/get-keys-from-ts.js(333,59): error TS2339: Property 'typeAnnotation' does not exist on type 'Node'.
+tools/get-keys-from-ts.js(335,53): error TS2339: Property 'typeAnnotation' does not exist on type 'Node'.
+tools/get-keys-from-ts.js(338,29): error TS2339: Property 'typeAnnotation' does not exist on type 'Node'.
+tools/get-keys-from-ts.js(363,13): error TS2322: Type 'boolean' is not assignable to type 'void'.
+tools/get-keys-from-ts.js(366,9): error TS2322: Type 'boolean' is not assignable to type 'void'.
+tools/get-keys-from-ts.js(377,54): error TS2339: Property 'type' does not exist on type 'Node'.
+tools/get-keys-from-ts.js(382,28): error TS2339: Property 'type' does not exist on type 'Node'.
+tools/get-keys-from-ts.js(383,35): error TS2339: Property 'elementTypes' does not exist on type 'Node'.
+tools/get-keys-from-ts.js(386,28): error TS2339: Property 'type' does not exist on type 'Node'.
+tools/get-keys-from-ts.js(387,35): error TS2339: Property 'types' does not exist on type 'Node'.
+tools/get-keys-from-ts.js(390,28): error TS2339: Property 'typeName' does not exist on type 'Node'.
+tools/get-keys-from-ts.js(391,35): error TS2339: Property 'typeParameters' does not exist on type 'Node'.
+tools/get-keys-from-ts.js(395,52): error TS2339: Property 'typeName' does not exist on type 'Node'.
+tools/get-keys-from-ts.js(400,13): error TS1345: An expression of type 'void' cannot be tested for truthiness.
+tools/get-keys-from-ts.js(400,49): error TS2339: Property 'typeName' does not exist on type 'Node'.
+tools/get-keys-from-ts.js(483,9): error TS2554: Expected 3 arguments, but got 2.
+tools/get-keys-from-ts.js(485,61): error TS2556: A spread argument must either have a tuple type or be passed to a rest parameter.
+tools/get-keys-from-ts.js(520,8): error TS1131: Property or signature expected.
+tools/get-keys-from-ts.js(534,22): error TS2304: Cannot find name 'VisitorKeysExport'.
+tools/get-keys-from-ts.js(539,26): error TS2345: Argument of type 'Buffer' is not assignable to parameter of type 'string'.
+

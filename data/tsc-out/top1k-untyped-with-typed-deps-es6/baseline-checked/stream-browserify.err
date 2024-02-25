@@ -1,0 +1,28 @@
+index.js(28,27): error TS2307: Cannot find module 'readable-stream/lib/_stream_readable.js' or its corresponding type declarations.
+index.js(29,27): error TS2307: Cannot find module 'readable-stream/lib/_stream_writable.js' or its corresponding type declarations.
+index.js(30,25): error TS2307: Cannot find module 'readable-stream/lib/_stream_duplex.js' or its corresponding type declarations.
+index.js(31,28): error TS2307: Cannot find module 'readable-stream/lib/_stream_transform.js' or its corresponding type declarations.
+index.js(32,30): error TS2307: Cannot find module 'readable-stream/lib/_stream_passthrough.js' or its corresponding type declarations.
+index.js(33,27): error TS2307: Cannot find module 'readable-stream/lib/internal/streams/end-of-stream.js' or its corresponding type declarations.
+index.js(34,27): error TS2307: Cannot find module 'readable-stream/lib/internal/streams/pipeline.js' or its corresponding type declarations.
+index.js(45,3): error TS2684: The 'this' context of type 'typeof EventEmitter' is not assignable to method's 'this' of type 'Function'.
+  Types of property 'once' are incompatible.
+    Type '{ (emitter: _NodeEventTarget, eventName: string | symbol, options?: StaticEventEmitterOptions): Promise<any[]>; (emitter: _DOMEventTarget, eventName: string, options?: StaticEventEmitterOptions): Promise<...>; }' is not assignable to type '() => Function & FnProps<any>'.
+index.js(53,49): error TS2339: Property 'pause' does not exist on type 'Stream'.
+index.js(54,16): error TS2339: Property 'pause' does not exist on type 'Stream'.
+index.js(59,10): error TS2339: Property 'on' does not exist on type 'Stream'.
+index.js(62,16): error TS2339: Property 'readable' does not exist on type 'Stream'.
+index.js(62,35): error TS2339: Property 'resume' does not exist on type 'Stream'.
+index.js(63,14): error TS2339: Property 'resume' does not exist on type 'Stream'.
+index.js(72,12): error TS2339: Property 'on' does not exist on type 'Stream'.
+index.js(73,12): error TS2339: Property 'on' does not exist on type 'Stream'.
+index.js(100,10): error TS2339: Property 'on' does not exist on type 'Stream'.
+index.js(105,12): error TS2339: Property 'removeListener' does not exist on type 'Stream'.
+index.js(108,12): error TS2339: Property 'removeListener' does not exist on type 'Stream'.
+index.js(109,12): error TS2339: Property 'removeListener' does not exist on type 'Stream'.
+index.js(111,12): error TS2339: Property 'removeListener' does not exist on type 'Stream'.
+index.js(114,12): error TS2339: Property 'removeListener' does not exist on type 'Stream'.
+index.js(115,12): error TS2339: Property 'removeListener' does not exist on type 'Stream'.
+index.js(120,10): error TS2339: Property 'on' does not exist on type 'Stream'.
+index.js(121,10): error TS2339: Property 'on' does not exist on type 'Stream'.
+

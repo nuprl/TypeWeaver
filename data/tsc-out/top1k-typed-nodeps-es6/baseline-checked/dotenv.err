@@ -1,0 +1,16 @@
+config.js(6,7): error TS2349: This expression is not callable.
+  Type 'typeof import("/work/arjunguha-research-group/mhyee/TypeWeaver/data/tsc-out/top1k-typed-nodeps-es6/baseline/dotenv/lib/cli-options")' has no call signatures.
+lib/main.d.ts(14,18): error TS2383: Overload signatures must all be exported or non-exported.
+lib/main.d.ts(21,18): error TS2383: Overload signatures must all be exported or non-exported.
+lib/main.js(8,10): error TS2300: Duplicate identifier 'parse'.
+lib/main.js(55,10): error TS2300: Duplicate identifier 'config'.
+lib/main.js(72,69): error TS2769: No overload matches this call.
+  Overload 1 of 3, '(path: PathOrFileDescriptor, options?: { encoding?: null; flag?: string; }): Buffer', gave the following error.
+    Type 'string' is not assignable to type 'null'.
+  Overload 2 of 3, '(path: PathOrFileDescriptor, options: { encoding: BufferEncoding; flag?: string; } | BufferEncoding): string', gave the following error.
+    Type 'string' is not assignable to type 'BufferEncoding'.
+  Overload 3 of 3, '(path: PathOrFileDescriptor, options?: BufferEncoding | (ObjectEncodingOptions & { flag?: string; })): string | Buffer', gave the following error.
+    Type 'string' is not assignable to type 'BufferEncoding'.
+lib/main.js(107,14): error TS2300: Duplicate identifier 'config'.
+lib/main.js(108,14): error TS2300: Duplicate identifier 'parse'.
+

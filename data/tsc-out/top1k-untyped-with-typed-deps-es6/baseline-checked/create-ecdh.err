@@ -1,0 +1,11 @@
+browser.js(72,58): error TS2769: No overload matches this call.
+  Overload 1 of 5, '(compact: boolean, enc: "hex"): string', gave the following error.
+    Argument of type 'true' is not assignable to parameter of type '"hex"'.
+  Overload 2 of 5, '(compact: boolean, enc: "array"): number[]', gave the following error.
+    Argument of type 'true' is not assignable to parameter of type '"array"'.
+browser.js(75,7): error TS2322: Type 'number' is not assignable to type 'never'.
+browser.js(77,7): error TS2322: Type 'number' is not assignable to type 'never'.
+browser.js(92,13): error TS2339: Property '_importPublic' does not exist on type 'KeyPair'.
+browser.js(103,3): error TS2322: Type 'string' is not assignable to type 'BN'.
+browser.js(105,13): error TS2339: Property '_importPrivate' does not exist on type 'KeyPair'.
+
