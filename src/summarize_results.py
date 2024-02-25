@@ -18,6 +18,7 @@ from tree_sitter import Language, Parser, Node, Tree
 import argparse, json, os, re, shutil, subprocess
 
 SYSTEMS = {
+    "tsc": "tsc",
     "DeepTyper": "dt",
     "LambdaNet": "ln",
     "InCoder": "ic",
