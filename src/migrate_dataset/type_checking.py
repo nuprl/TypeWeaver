@@ -1,4 +1,5 @@
 from concurrent import futures
+from itertools import chain
 from pathlib import Path
 from subprocess import PIPE
 import os, subprocess
@@ -52,8 +53,10 @@ class TypeChecker:
         conditions.
         """
         def should_skip(package):
+            ts_files = package.rglob("*.ts")
+            js_files = package.rglob("*.js")
             input_timestamps = sorted([f.stat().st_mtime
-                                       for f in package.rglob("*.ts")
+                                       for f in chain(ts_files, js_files)
                                        if f.is_file], reverse=True)
             input_latest = input_timestamps[0] if input_timestamps else None
 
@@ -102,10 +105,21 @@ class TypeChecker:
         else:
             emit_opts = ["--noEmit"]
 
-        if self.containers:
-            ts_files = [util.containerized_path(f, self.directory) for f in package.rglob("*.ts") if f.is_file()]
+        # If the model is tsc, type checking is different.
+        # Need to glob *.js and pass some extra arguments to the compiler
+        if self.model == "tsc":
+            glob = "*.js"
+            # --allowJs     // allow JavaScript files to be part of project
+            # --checkJs     // Report errors in JavaScript files
+            js_args = ["--allowJs", "--checkJs"]
         else:
-            ts_files = [f.relative_to(package) for f in package.rglob("*.ts") if f.is_file()]
+            glob = "*.ts"
+            js_args = []
+
+        if self.containers:
+            files = [util.containerized_path(f, self.directory) for f in package.rglob(glob) if f.is_file()]
+        else:
+            files = [f.relative_to(package) for f in package.rglob(glob) if f.is_file()]
 
         # Set some compiler flags; these appear to be reasonable defaults for the entire dataset
         # But individual projects may need different flags
@@ -113,7 +127,7 @@ class TypeChecker:
         #   --moduleResolution node   // make the default option explicit, use Node.js module resolution
         #   --target es6              // enable es6 features; some libraries use features not supported in the default es3 target
         #   --lib es2021,dom          // include default es2021 library definitions and browser DOM definitions
-        args = [self.path, "--esModuleInterop", "--moduleResolution", "node", "--target", "es6", "--lib", "es2021,dom", *emit_opts, *ts_files]
+        args = [self.path, "--esModuleInterop", "--moduleResolution", "node", "--target", "es6", "--lib", "es2021,dom", *emit_opts, *js_args, *files]
 
         if self.containers:
             my_env = os.environ.copy()
