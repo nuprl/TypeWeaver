@@ -5,6 +5,7 @@ suppressMessages(library(extrafont))
 suppressMessages(loadfonts())
 
 SYSTEMS = list(
+  tsc="tsc",
   DeepTyper="dt",
   LambdaNet="ln",
   InCoder="ic",
@@ -105,6 +106,8 @@ rename_datasets <- function(tbl) {
 rename_system <- function(tbl) {
   tbl %>%
     mutate(System=case_when(str_equal(System, "SantaCoder") ~ "StarCoder",
+                            .default = System)) %>%
+    mutate(System=case_when(str_equal(System, "tsc") ~ "TypeScript",
                             .default = System))
 }
 
