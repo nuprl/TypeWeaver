@@ -4,12 +4,21 @@ suppressMessages(library(tidyverse))
 suppressMessages(library(extrafont))
 suppressMessages(loadfonts())
 
-SYSTEMS = list(
+# The csv files use old names, e.g. SantaCoder instead of StarCoder
+INPUT_SYSTEMS = list(
   tsc="tsc",
   DeepTyper="dt",
   LambdaNet="ln",
   InCoder="ic",
   SantaCoder="sc"
+)
+
+SYSTEMS = list(
+  TypeScript="tsc",
+  DeepTyper="dt",
+  LambdaNet="ln",
+  InCoder="ic",
+  StarCoderBase="sc"
 )
 
 data_dir <- "../../data"
@@ -49,8 +58,8 @@ read_summary_csv <- function(prefix, ...) {
       cat("Reading file:", path, "\n")
       tbl <- read_csv(path, show_col_types=FALSE, ...)
     }
-  }, SYSTEMS)
-  bind_rows(tbls)
+  }, INPUT_SYSTEMS)
+  bind_rows(tbls) %>% rename_system()
 }
 
 # constants.tex <- paste0(figures_dir, "/", "constants.tex")
@@ -105,7 +114,7 @@ rename_datasets <- function(tbl) {
 
 rename_system <- function(tbl) {
   tbl %>%
-    mutate(System=case_when(str_equal(System, "SantaCoder") ~ "StarCoder",
+    mutate(System=case_when(str_equal(System, "SantaCoder") ~ "StarCoderBase",
                             .default = System)) %>%
     mutate(System=case_when(str_equal(System, "tsc") ~ "TypeScript",
                             .default = System))
@@ -140,7 +149,6 @@ format_numbers <- function(tbl) {
 
 percent_bar_graph <- function(data, name.y) {
   data %>%
-    rename_system() %>%
     ggplot(aes(x=System, y=Percent, fill=Dataset)) +
       geom_bar(stat="identity", position=position_dodge()) +
       theme(axis.title.x=element_blank()) +
@@ -256,6 +264,14 @@ save.graph(typecheck_summary.pdf)
 # Table: number/percent of files with no errors
 ################################################################################
 
+# tsc migration generates .d.ts files, not .ts files
+# So rename .ts to .d.ts
+fix_tsc_names <- function(tbl) {
+  tbl %>%
+    mutate(File=case_when(str_equal(System, "tsc") ~ str_replace(File, ".ts", ".d.ts"),
+                          .default = File))
+}
+
 compute_errors_per_file <- function(error_data, typecheck_data) {
   # expand_grid gets every file for every system, then left_join gets the files
   # that we attempted to type check, and we full_join that with the error count
@@ -270,7 +286,8 @@ compute_errors_per_file <- function(error_data, typecheck_data) {
     replace_na(list(Errors=0)) %>%
     select(!(`Lines of code`:`Type checks`)) %>%
     arrange(System, Dataset, Package, File) %>%
-    reorder_systems()
+    reorder_systems() %>%
+    fix_tsc_names()
 }
 
 compute_errorfree_files_summary <- function(errors_per_file) {
@@ -339,7 +356,6 @@ errorfree_per_package <- errors_per_file %>%
   reorder_systems()
 
 errorfree_per_package.pdf <- errorfree_per_package %>%
-  rename_system() %>%
   ggplot(aes(x=Percent)) +
   geom_histogram(binwidth=20, position=position_dodge()) +
   facet_grid(cols=vars(System)) +
@@ -390,9 +406,8 @@ annotations_per_file_summary.tex <- annotations_per_file_summary %>%
 
 save.table(annotations_per_file_summary.tex)
 
-annotations_per_file_summary.pdf <-
-  percent_bar_graph(annotations_per_file_summary) +
-  labs(y="Annotations")
+annotations_per_file_summary.pdf <- annotations_per_file_summary %>%
+  percent_bar_graph() + labs(y="Annotations")
 
 save.graph(annotations_per_file_summary.pdf)
 
@@ -449,7 +464,6 @@ errors_per_package <- errors_per_file %>%
   summarize(.groups="drop", Errors=sum(Errors))
 
 package_errors_cdf.pdf <- errors_per_package %>%
-  rename_system() %>%
   ggplot(aes(x=Errors, color=System, linetype=System)) +
   scale_x_continuous(breaks=seq(0, 2500, by=500), labels=scales::label_comma()) +
   scale_y_continuous(name="Packages", breaks=seq(0, 1, by=0.2), labels=scales::percent) +
@@ -522,7 +536,6 @@ error_codes_graph <- error_codes_summary %>%
   reorder_systems()
 
 error_codes.pdf <- error_codes_graph %>%
-  rename_system() %>%
   ggplot(aes(x=`Error code`, y=Count)) +
   geom_bar(stat="identity") +
   facet_grid(cols=vars(System)) +
@@ -606,11 +619,11 @@ typechecks_before_after$typechecks <- factor(typechecks_before_after$typechecks,
                                              levels=c("Both type check", "Type checks before", "Type checks after"))
 
 typechecks_before_after.pdf <- typechecks_before_after %>%
-  rename_system() %>%
   ggplot(aes(x=System, y=Packages, fill=typechecks)) +
   geom_bar(stat="identity", position=position_dodge()) +
   facet_wrap(vars(Dataset), ncol=2) +
-  theme(axis.title.x=element_blank()) +
+  theme(axis.title.x=element_blank(),
+        axis.text.x=element_text(angle=30, vjust=0.5)) +
   scale_fill_brewer(palette=brewer, direction=-1)
 
 save.graph(typechecks_before_after.pdf)
