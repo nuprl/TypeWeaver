@@ -269,6 +269,7 @@ save.graph(typecheck_summary.pdf)
 fix_tsc_names <- function(tbl) {
   tbl %>%
     mutate(File=case_when(str_equal(System, "tsc") ~ str_replace(File, ".ts", ".d.ts"),
+                          str_equal(System, "TypeScript") ~ str_replace(File, ".ts", ".d.ts"),
                           .default = File))
 }
 
