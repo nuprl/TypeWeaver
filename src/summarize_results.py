@@ -113,9 +113,11 @@ class Summarizer:
 
     def _errors_per_package(self, file_prefix, system, ts_dataset, package):
         # Regex for matching error messages
-        #   <filename.ts>(row,col): error <TScode>
+        #   <filename.[jt]s>(row,col): error <TScode>
+        # Allow .js because we need to support tsc migration,
+        # which copies .js files over and type checks them, so those files might have errors
         # negative lookahead so we don't match if file starts with .., but we want to match .
-        ERROR_CODES_RE = re.compile("^((?!\.\.).*\.ts)\(\d+,\d+\): error (TS\d+):")
+        ERROR_CODES_RE = re.compile("^((?!\.\.).*\.[jt]s)\(\d+,\d+\): error (TS\d+):")
 
         dataset = ts_dataset.parts[-2]
         output_file = f"{file_prefix}.{SYSTEMS[system]}.csv"
