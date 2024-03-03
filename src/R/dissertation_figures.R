@@ -14,7 +14,7 @@ INPUT_SYSTEMS = list(
 )
 
 SYSTEMS = list(
-  TypeScript="tsc",
+  tsc="tsc",
   DeepTyper="dt",
   LambdaNet="ln",
   InCoder="ic",
@@ -115,8 +115,6 @@ rename_datasets <- function(tbl) {
 rename_system <- function(tbl) {
   tbl %>%
     mutate(System=case_when(str_equal(System, "SantaCoder") ~ "StarCoderBase",
-                            .default = System)) %>%
-    mutate(System=case_when(str_equal(System, "tsc") ~ "TypeScript",
                             .default = System))
 }
 
@@ -264,12 +262,12 @@ save.graph(typecheck_summary.pdf)
 # Table: number/percent of files with no errors
 ################################################################################
 
-# tsc migration generates .d.ts files, not .ts files
-# So rename .ts to .d.ts
-fix_tsc_names <- function(tbl) {
+# With the tsc migration, errors are in the .js files.
+# The workaround is to map .js to .ts, as if the migration generated .ts files.
+# This way, an error in .js is "blamed" on .ts.
+fix_tsc_names1 <- function(tbl) {
   tbl %>%
-    mutate(File=case_when(str_equal(System, "tsc") ~ str_replace(File, "\\.ts$", ".d.ts"),
-                          str_equal(System, "TypeScript") ~ str_replace(File, "\\.ts$", ".d.ts"),
+    mutate(File=case_when(str_equal(System, "tsc") ~ str_replace(File, "\\.js$", ".ts"),
                           .default = File))
 }
 
@@ -278,6 +276,7 @@ compute_errors_per_file <- function(error_data, typecheck_data) {
   # that we attempted to type check, and we full_join that with the error count
   # (since the error count doesn't include files with 0 errors)
   errors_per_file <- error_data %>%
+    fix_tsc_names1() %>%
     group_by(System, Dataset, Package, File) %>%
     summarize(.groups="drop", Errors=sum(Count)) %>%
     full_join(left_join(typecheck_data,
@@ -287,8 +286,7 @@ compute_errors_per_file <- function(error_data, typecheck_data) {
     replace_na(list(Errors=0)) %>%
     select(!(`Lines of code`:`Type checks`)) %>%
     arrange(System, Dataset, Package, File) %>%
-    reorder_systems() %>%
-    fix_tsc_names()
+    reorder_systems()
 }
 
 compute_errorfree_files_summary <- function(errors_per_file) {
@@ -370,9 +368,18 @@ save.graph(errorfree_per_package.pdf, height=3.75)
 # Graph: number/percent of "any" annotations, for files that type check
 ################################################################################
 
+# With the tsc migration, the type annotations are in the .d.ts files.
+# The workaround is to map .d.ts to .ts, as if the migration generated .ts files.
+fix_tsc_names2 <- function(tbl) {
+  tbl %>%
+    mutate(File=case_when(str_equal(System, "tsc") ~ str_replace(File, "\\.d\\.ts$", ".ts"),
+                          .default = File))
+}
+
 compute_annotations_per_file_summary <- function(annotations_data, errors_per_file) {
   # Annotations per file, given that the file has no errors
   annotations_per_file <- annotations_data %>%
+    fix_tsc_names2() %>%
     transmute(System, Dataset, Package, File, Trivial=as.integer(rowSums(.[5:7])), `Total annotations`) %>%
     inner_join(errors_per_file, by=c("System", "Dataset", "Package", "File")) %>%
     filter(Errors==0) %>%
