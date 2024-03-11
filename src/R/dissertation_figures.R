@@ -126,6 +126,12 @@ filter_pre_es6_renamed <- function(tbl) {
   tbl %>% filter(!str_ends(Dataset, "es6")) %>% rename_datasets()
 }
 
+# tsc doesn't always make sense in an experiment (because its output cannot be
+# type checked), so remove those entries
+remove_tsc_rows <- function(tbl) {
+  tbl %>% filter(System != "tsc")
+}
+
 reorder_systems <- function(tbl) {
   tbl$System <- factor(tbl$System,
                        levels=names(SYSTEMS))
@@ -214,7 +220,7 @@ compute_typecheck_summary <- function(typecheck_data) {
     mutate(Dataset="Overall") %>%
     reorder_systems()
 
-  typecheck_summary %>% bind_rows(typecheck_overall)
+  typecheck_summary %>% bind_rows(typecheck_overall) %>% remove_tsc_rows()
 }
 
 typecheck_data_full <- read_summary_csv("typecheck", col_types="ccci")
@@ -301,7 +307,7 @@ compute_errorfree_files_summary <- function(errors_per_file) {
     mutate(Dataset="Overall") %>%
     reorder_systems()
 
-  errorfree_files_summary %>% bind_rows(errorfree_files_overall)
+  errorfree_files_summary %>% bind_rows(errorfree_files_overall) %>% remove_tsc_rows()
 }
 
 error_data_full <- read_summary_csv("error", col_types="ccccci")
@@ -352,7 +358,8 @@ save.graph(errorfree_files_summary.pdf)
 errorfree_per_package <- errors_per_file %>%
   group_by(System, Dataset, Package) %>%
   summarize(.groups="drop", `No errors`=sum(Errors==0), n=n(), Percent=`No errors` / n * 100) %>%
-  reorder_systems()
+  reorder_systems() %>%
+  remove_tsc_rows()
 
 errorfree_per_package.pdf <- errorfree_per_package %>%
   ggplot(aes(x=Percent)) +
@@ -469,7 +476,8 @@ save.graph(accuracy_summary.pdf)
 
 errors_per_package <- errors_per_file %>%
   group_by(System, Dataset, Package) %>%
-  summarize(.groups="drop", Errors=sum(Errors))
+  summarize(.groups="drop", Errors=sum(Errors)) %>%
+  remove_tsc_rows()
 
 package_errors_cdf.pdf <- errors_per_package %>%
   ggplot(aes(x=Errors, color=System, linetype=System)) +
@@ -529,6 +537,7 @@ error_codes_summary.tex <- error_codes_summary %>%
   add_row(error_codes.total) %>%
   inner_join(error_codes_desc, by="Error code") %>%
   select(`Error code`, Description, names(SYSTEMS)) %>%
+  select(!tsc) %>%
   format_numbers()
 stopifnot(nrow(error_codes_summary.tex) == 12)
 
@@ -540,6 +549,7 @@ save.table(error_codes_summary.tex)
 
 error_codes_graph <- error_codes_summary %>%
   select(-Total) %>%
+  select(-tsc) %>%
   pivot_longer(cols=-1, names_to="System", values_to="Count") %>%
   reorder_systems()
 
@@ -596,6 +606,7 @@ save.table(errorfree_files_comparison.tex)
 accuracy_comparison.tex <- accuracy_data_full %>%
   filter_pre_es6_renamed() %>%
   compute_accuracy_summary() %>%
+  remove_tsc_rows() %>%
   inner_join(accuracy_summary,
              by=c("System", "Dataset"),
              suffix=c(".pre", ".es6")) %>%
@@ -620,7 +631,8 @@ typechecks_before_after <-
                                 typechecks == "10" ~ "Type checks before",
                                 typechecks == "01" ~ "Type checks after")) %>%
   group_by(System, Dataset, typechecks) %>%
-  summarize(.groups="drop", Packages=n())
+  summarize(.groups="drop", Packages=n()) %>%
+  remove_tsc_rows()
 
 # Reorder typechecks column
 typechecks_before_after$typechecks <- factor(typechecks_before_after$typechecks,
@@ -630,8 +642,7 @@ typechecks_before_after.pdf <- typechecks_before_after %>%
   ggplot(aes(x=System, y=Packages, fill=typechecks)) +
   geom_bar(stat="identity", position=position_dodge()) +
   facet_wrap(vars(Dataset), ncol=2) +
-  theme(axis.title.x=element_blank(),
-        axis.text.x=element_text(angle=30, vjust=0.5)) +
+  theme(axis.title.x=element_blank()) +
   scale_fill_brewer(palette=brewer, direction=-1)
 
 save.graph(typechecks_before_after.pdf)
